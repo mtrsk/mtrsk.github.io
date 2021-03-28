@@ -1,0 +1,13 @@
+* Blog
+#+html: <a href="https://github.com/mtrsk/mtrsk.github.io/actions/workflows/docker-emacs.yml/badge.svg"> <img alt="pipeline status" src="https://github.com/mtrsk/mtrsk.github.io/actions/workflows/docker-emacs.yml/badge.svg" /></a>
+
+An Org-based personal page and blog.
+
+** How to build this
+
+#+BEGIN_SRC bash
+  touch .env
+  echo "ENVIRONMENT=development" > .env
+  make fa-setup
+  make publish
+#+END_SRC
