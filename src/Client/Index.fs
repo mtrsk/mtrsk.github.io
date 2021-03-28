@@ -123,7 +123,10 @@ let buildView =
         Hero.body [ ] [
           Container.container [
             Container.IsFluid
-            Container.Modifiers [ Modifier.TextAlignment (Screen.All, TextAlignment.Centered) ]
+            Container.Modifiers [
+              Modifier.TextAlignment (Screen.All, TextAlignment.Centered)
+              Modifier.BackgroundColor IsGreyLighter
+            ]
           ] [
             Heading.h3 [ ] [ str "My Name" ]
             Heading.h4 [ Heading.IsSubtitle ] [ str "Software Developer" ]
@@ -135,7 +138,7 @@ let buildView =
 let buildFooter =
   Footer.footer [ Modifiers [ Modifier.BackgroundColor IsLight ] ]
     [ Content.content [ Content.Modifiers [ Modifier.TextAlignment (Screen.All, TextAlignment.Centered) ] ]
-    [ p [ ] [ str "Proudly built with F# and the SAFE Stack. Source code availiable at" ] ] ]
+    [ p [ ] [ str "Proudly built with F# and the SAFE Stack. " ] ] ]
 
 
 let view (model : Model) (dispatch : Msg -> unit) =
@@ -144,6 +147,7 @@ let view (model : Model) (dispatch : Msg -> unit) =
       Container.Modifiers [
         Modifier.TextAlignment (Screen.All, TextAlignment.Centered)
         Modifier.BackgroundColor IsLight
+        Modifier.Spacing (Spacing.PaddingLeftAndRight, Spacing.Is6)
       ]
     ] [
       buildView
