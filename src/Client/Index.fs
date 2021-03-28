@@ -105,7 +105,7 @@ let createNavBar =
         ]
 
 
-let view (model : Model) (dispatch : Msg -> unit) =
+let buildView =
     Hero.hero [
         Hero.Color IsLight
         Hero.IsFullHeight
@@ -128,6 +128,24 @@ let view (model : Model) (dispatch : Msg -> unit) =
             Heading.h3 [ ] [ str "My Name" ]
             Heading.h4 [ Heading.IsSubtitle ] [ str "Software Developer" ]
           ]
-
         ]
+    ]
+
+
+let buildFooter =
+  Footer.footer [ Modifiers [ Modifier.BackgroundColor IsLight ] ]
+    [ Content.content [ Content.Modifiers [ Modifier.TextAlignment (Screen.All, TextAlignment.Centered) ] ]
+    [ p [ ] [ str "Proudly built with F# and the SAFE Stack. Source code availiable at" ] ] ]
+
+
+let view (model : Model) (dispatch : Msg -> unit) =
+    Container.container [
+      Container.IsFluid
+      Container.Modifiers [
+        Modifier.TextAlignment (Screen.All, TextAlignment.Centered)
+        Modifier.BackgroundColor IsLight
+      ]
+    ] [
+      buildView
+      buildFooter
     ]
