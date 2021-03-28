@@ -1,19 +1,21 @@
-# F#
-lib/debug
-lib/release
-Debug
-*.suo
-*.user
-obj
-bin
-/build/
-*.exe
-!.paket/paket.bootstrapper.exe
+.fable/
+.fake/
+.farmer/
+.idea/
 .ionide/
-
-## Paket dependency manager
-.paket/
+.vs/
+deploy/
+obj/
+bin/
+packages/
 paket-files/
+node_modules/
+release.cmd
+release.sh
+*.orig
+*.DotSettings.user
 
 # Nix
 .envrc
+.direnv
+direnv
