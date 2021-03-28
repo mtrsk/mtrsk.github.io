@@ -1,0 +1,9 @@
+* Posts
+
+#+NAME: list-posts
+#+BEGIN_SRC elisp :cache yes :exports results
+  (file-expand-wildcards "./posts/*")
+#+END_SRC
+
+#+RESULTS[9f7cd855416cd7d4d408d486d6055478bb8b342d]: list-posts
+| ./posts/2018-08-17-switched-to-nixos.org |
