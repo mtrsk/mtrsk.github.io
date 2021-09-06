@@ -22,7 +22,7 @@ Here's a non-exaustive list of my current interests:
 
 ** Contact me
 
-You may also find me elsewhere in cyberpace, under the following aliases:
+You may also find me elsewhere in cyberspace, under the following aliases:
 
 #+BEGIN_export html
 <div class="flex-container">
