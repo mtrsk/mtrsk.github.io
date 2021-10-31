@@ -1,9 +1,11 @@
 * Posts
 
 #+NAME: list-posts
-#+BEGIN_SRC elisp :cache yes :exports results
-  (file-expand-wildcards "./posts/*")
+#+BEGIN_SRC elisp :cache yes :exports results :results EXPORT html
+  (apply (lambda (path) (concat "<li><a href=./posts/" (file-name-base path) ".html" ">" (file-name-base path) "</a></li>")) (file-expand-wildcards "./posts/*"))
 #+END_SRC
 
-#+RESULTS[9f7cd855416cd7d4d408d486d6055478bb8b342d]: list-posts
-| ./posts/2018-08-17-switched-to-nixos.org |
+#+RESULTS[0f7c61954b5b9f6564e464bca98ff348566a14b8]: list-posts
+#+begin_export html
+<li><a href=./posts/2018-08-17-switched-to-nixos.html>2018-08-17-switched-to-nixos</a></li>
+#+end_export

@@ -1,6 +1,6 @@
 * About
 
-Hello! I'm Marcos Vinicius Moreira Serra Benevides, a developer from São Luís,
+Hello! I'm *Marcos Vinicius Moreira Serra Benevides*, a developer from São Luís,
 MA - Brazil. You're going to find my posts, projects and tutorials here, and
 probably some random rambling about byzantine history.
 
