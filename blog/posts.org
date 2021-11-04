@@ -2,10 +2,19 @@
 
 #+NAME: list-posts
 #+BEGIN_SRC elisp :cache yes :exports results :results EXPORT html
-  (apply (lambda (path) (concat "<li><a href=./posts/" (file-name-base path) ".html" ">" (file-name-base path) "</a></li>")) (file-expand-wildcards "./posts/*"))
+  (defun pretify (filename) (substring filename 11))
+  (defun generate-html (path)
+    (concat "<li><a href=./posts/" (file-name-base path) ".html" ">" (pretify (file-name-base path)) "</a></li>"))
+  
+  (defun build-list (path)
+    (mapcar #'generate-html (file-expand-wildcards path)))
+
+  (setq posts (mapcar #'generate-html (file-expand-wildcards "./posts/*.org")))
+  
+  (mapconcat 'identity posts "\n")
 #+END_SRC
 
-#+RESULTS[0f7c61954b5b9f6564e464bca98ff348566a14b8]: list-posts
+#+RESULTS[80b0c7650ac2c7943677f0a2cb632c8e17b481ec]: list-posts
 #+begin_export html
-<li><a href=./posts/2018-08-17-switched-to-nixos.html>2018-08-17-switched-to-nixos</a></li>
+<li><a href=./posts/2018-08-17-switched-to-nixos.html>switched-to-nixos</a></li>
 #+end_export
