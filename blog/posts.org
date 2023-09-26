@@ -19,4 +19,5 @@
 #+RESULTS[b1c5b278d55c2bd9aec799d5ab51f21c59b26fac]: list-posts
 #+begin_export html
 <li><a href=./posts/2018-08-17-switched-to-nixos.html>2018-08-17: switched-to-nixos</a></li>
+<li><a href=./posts/2023-09-27-using-private-neovim-plugins-on-nixos.html>2023-09-27: using-private-neovim-plugins-on-nixos</a></li>
 #+end_export

@@ -8,6 +8,6 @@ An Org-based personal page and blog.
 #+BEGIN_SRC bash
   touch .env
   echo "ENVIRONMENT=development" > .env
-  make fa-setup
+  make setup-fa
   make publish
 #+END_SRC
