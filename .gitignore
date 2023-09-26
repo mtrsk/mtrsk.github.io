@@ -52,3 +52,4 @@ flycheck_*.el
 static
 public
 *env*
+*zip
