@@ -7,7 +7,7 @@
 ;;; * M-x site-publish
 ;;;
 
-(require 'org)
+(require 'org :ensure org-plus-contrib)
 (require 'ox-publish)
 (require 'ox-html)
 

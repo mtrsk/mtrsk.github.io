@@ -1,4 +1,6 @@
-* How to use private neovim plugins on NixOS
+#+TITLE: How to use private NeoVim plugins on NixOS
+#+AUTHOR: Marcos Benevides
+#+DATE:<2023-09-17 Fri> 
 
 Over time my config changed a lot since the early days, as of now I'm using a
 combination of [[https://nixos.wiki/wiki/Flakes][Flakes]] and [[https://github.com/nix-community/home-manager][home-manager]] to manage my workstations. I try not to overthink

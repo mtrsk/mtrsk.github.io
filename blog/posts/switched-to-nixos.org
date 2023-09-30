@@ -1,4 +1,6 @@
-* I've Switched to Nixos
+#+TITLE: I've Switched to NixOS
+#+AUTHOR: Marcos Benevides
+#+DATE:<2018-08-17 Fri> 
 
 After quite some time being a Debian user I've decided to become a full time
 meme distro user. At first I was following some of the manuals in an attempt to
@@ -7,11 +9,11 @@ try it out for real, so why not?
 
 It's kinda weird to adapt, in Debian I was accostumed to just run a command here
 and there and have a bunch of config files across my system, with [[https://nixos.org/nix][Nix]] (the
-configuration language) one can have a single file (`configuration.nix`) to
+configuration language) one can have a single file (~configuration.nix~) to
 manager everything and, since Nix is also a programming language, you can
 modularize it to make things easier to manage. NixOS is also quite forgiving
 when it comes to experimenting, you can always rollback your entire system to a
-previous generation if something explodes. The `#nixos` community on both
+previous generation if something explodes. The ~#nixos~ community on both
 freenode and [[https://discourse.nixos.org/][discourse]] is also very helpful.
 
 If you wanna see my crappy config just take a look [[https://github.com/mtrsk/nixos-config][here]].
