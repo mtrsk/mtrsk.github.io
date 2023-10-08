@@ -1,23 +1,6 @@
-* Posts
 
-#+NAME: list-posts
-#+BEGIN_SRC elisp :cache yes :exports results :results EXPORT html
-  (defun remove-date (filename) (substring filename 11))
-  (defun remove-title (filename) (substring filename 0 10))
-  (defun pretify (filename) (concat (remove-title filename) ": " (remove-date filename)))
-  (defun generate-html (path)
-    (concat "<li><a href=./posts/" (file-name-base path) ".html" ">" (pretify (file-name-base path)) "</a></li>"))
-  
-  (defun build-list (path)
-    (mapcar #'generate-html (file-expand-wildcards path)))
-
-  (setq posts (mapcar #'generate-html (file-expand-wildcards "./posts/*.org")))
-  
-  (mapconcat 'identity posts "\n")
-#+END_SRC
-
-#+RESULTS[b1c5b278d55c2bd9aec799d5ab51f21c59b26fac]: list-posts
-#+begin_export html
-<li><a href=./posts/2018-08-17-switched-to-nixos.html>2018-08-17: switched-to-nixos</a></li>
-<li><a href=./posts/2023-09-27-using-private-neovim-plugins-on-nixos.html>2023-09-27: using-private-neovim-plugins-on-nixos</a></li>
-#+end_export
+        #+begin_export html
+        <li><a href=./posts/using-private-neovim-plugins-on-nixos.html>How to use private NeoVim plugins on NixOS</a></li>
+<li><a href=./posts/switched-to-nixos.html>I've Switched to NixOS</a></li>
+        #+end_export
+    
