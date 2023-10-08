@@ -7,7 +7,7 @@
 ;;; * M-x site-publish
 ;;;
 
-(require 'org :ensure org-plus-contrib)
+(require 'org)
 (require 'ox-publish)
 (require 'ox-html)
 
@@ -32,7 +32,7 @@
 (setq-default website-html-preamble (apply 'format (concat "<header class='header'>\n"
                                                            "  <a href=\"%s/index.html\">Home</a>\n"
                                                            "  <nav>\n"
-                                                           "    <a href=\"%s/notes.html\">Notes</a>\n"
+                                                           "    <a href=\"https://mtrsk.github.io/Organon/\">Notes</a>\n"
                                                            "    <a href=\"%s/posts.html\">Posts</a>\n"
                                                            "  </nav>\n"
                                                            "</header>\n")

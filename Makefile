@@ -6,10 +6,12 @@ MATHJAX_URL := "https://github.com/mathjax/MathJax.git"
 
 .POSIX:
 .SUFFIXES:
+.DEFAULT_GOAL = publish
 
 # Include extra environment variables, mostly for development purposes
 include .env
 export
+
 
 setup-fa:
 	@curl $(FA_URL) --output fa.zip
@@ -28,6 +30,12 @@ setup-mathjax:
 	@npm run compile
 	@npm run make-components
 
+.PHONY: clean
+clean:
+	rm -rf content
+	rm -rf public
+	rm -rf site.tar.gz
+
 publish: publish.el
 	@echo "ENVIRONMENT=$(ENVIRONMENT)"
 	@([[ -d ./public ]] && rm -rf ./public) || echo "Skipping directory creation..."
@@ -38,24 +46,4 @@ publish: publish.el
 	@cp -r css ./public
 	@cp -r static ./public
 	@cp ./images/nixos.gif ./public/images
-
-
-.PHONY: all
-all: clean public
-
-.PHONY: clean
-clean:
-	rm -rf content
-	rm -rf public
-	rm -rf site.tar.gz
-
-content:
-	emacs $(pwd) --batch -load export.el
-
-public: content
-	hugo
-
-.PHONY: run
-run: clean content
-	hugo server --buildDrafts --buildFuture
 

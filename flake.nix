@@ -22,8 +22,10 @@
         customEmacs = (emacsPackagesFor emacs-nox).emacsWithPackages
           (epkgs: with epkgs.melpaPackages; [
             citeproc
-            ox-hugo
             ox-rss
+            evil
+            evil-collection
+            htmlize
           ]
           ++ (with epkgs.elpaPackages; [
             org
