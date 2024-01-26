@@ -33,7 +33,7 @@ You may also find me elsewhere in cyberspace, under the following aliases:
     <a href="https://gitlab.com/mtrsk" title="My Gitlab profile"><i class="fab fa-gitlab fa-w-14 fa-3x"></i></a>
   </div>
   <div class="flex-item">
-    <a href="https://www.linkedin.com/in/marcos-schonfinkel" title="My Linkedin profile"><i class="fab fa-linkedin fa-w-14 fa-3x"></i></a>
+    <a href="https://www.linkedin.com/in/schonfinkel" title="My Linkedin profile"><i class="fab fa-linkedin fa-w-14 fa-3x"></i></a>
   </div>
   <div class="flex-item">
     <a href="mailto:marcos.schonfinkel@gmail.com" title="My personal email"><i class="fas fa-envelope-square fa-w-14 fa-3x"></i></a>
