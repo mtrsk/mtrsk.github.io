@@ -4,13 +4,18 @@ open System
 open System.IO
 
 open Giraffe.ViewEngine
-
+    
 type Page =
-    { Head: Head }
+    { Head: Head
+      Paths: Paths }
 and Head =
     { Title: string
       Metadata: Metadata list }
 and Metadata = { Name: string; Content: string }
+and Paths =
+    { Assets: string
+      Images: string
+      Styles: string }
 
 [<RequireQualifiedAccess>]
 module Index =
@@ -46,11 +51,17 @@ module Index =
                      _href $"https://unpkg.com/boxicons@{version}/css/boxicons.min.css" ] ]
         (highlightJs "11.9.0") @ mathJax @ (boxIcons "2.1.4")
     
+    let addCss (page: Page) =
+        [ link
+            [ _rel "stylesheet"
+              _href $"{page.Paths.Styles}/site.css"
+              _type "style/css" ] ]
+    
     let headView (page: Page) =
         let metadata = addMetadata page.Head.Metadata
         head [] ([
             title [] [ str page.Head.Title ]
-        ] @ metadata @ jsLibraries)
+        ] @ metadata @ jsLibraries @ addCss page)
         
     let menu (page: Page) =
         [ div [] [
