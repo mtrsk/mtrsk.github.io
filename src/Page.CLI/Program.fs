@@ -28,7 +28,11 @@ let main args =
           Paths =
             { Assets = assetsPath
               Images = imagesPath
-              Styles = stylesPath } }
+              Styles = stylesPath
+              Outputs =
+                  { Root = solutionRoot
+                    Posts = "posts"
+                    Notes = "notes" } } }
         
     let indexFileName = System.IO.Path.Combine(solutionRoot, "index.html")
     let indexHtml = (Index.index data) |> RenderView.AsString.htmlDocument

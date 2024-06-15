@@ -15,7 +15,12 @@ and Metadata = { Name: string; Content: string }
 and Paths =
     { Assets: string
       Images: string
-      Styles: string }
+      Styles: string
+      Outputs: Outputs }
+and Outputs =
+    { Root: string
+      Posts: string
+      Notes: string }
 
 [<RequireQualifiedAccess>]
 module Index =
@@ -52,29 +57,29 @@ module Index =
         (highlightJs "11.9.0") @ mathJax @ (boxIcons "2.1.4")
     
     let addCss (page: Page) =
+        let site = Path.Combine(page.Paths.Styles, "site.css")
         [ link
             [ _rel "stylesheet"
-              _href $"{page.Paths.Styles}/site.css"
+              _href site
               _type "style/css" ] ]
     
-    let headView (page: Page) =
+    let createHeader (page: Page) =
         let metadata = addMetadata page.Head.Metadata
         head [] ([
             title [] [ str page.Head.Title ]
         ] @ metadata @ jsLibraries @ addCss page)
         
     let menu (page: Page) =
-        [ div [] [
-              header [ _class "header" ] [
-                  a [ _href "./index.html" ] [ str "Home" ]
-                  nav [] [
-                      a [ _href "./notes.html" ] [ str "Notes" ]
-                      a [ _href "./posts.html" ] [ str "Posts" ]
-                  ]
-                  h1 [ _class "title" ] [ str page.Head.Title ]
-              ]
-          ]
+        div [] [
+            header [ _class "header" ] [
+                a [ _href "./index.html" ] [ str "Home" ]
+                nav [] [
+                    a [ _href "./notes.html" ] [ str "Notes" ]
+                    a [ _href "./posts.html" ] [ str "Posts" ]
+                ]
+            ]
         ]
+        
     
     let profiles =
         [ p [] [ str "You may also find me elsewhere in cyberspace, under the following aliases:" ]
@@ -101,7 +106,8 @@ module Index =
           ]
         ]
 
-    let aboutView =
+    let aboutView (page: Page) =
+        let nixGif = Path.Combine(page.Paths.Images, "nixos.gif")
         let interests =
             [ "Backend Development"
               "Infrastructure"
@@ -118,7 +124,7 @@ module Index =
           p [] [ str "Here's a non-exhaustive list of my current interests:" ]
           ul [] interests
           figure [] [
-              img [ _src "./assets/nixos.gif"
+              img [ _src nixGif
                     _alt "nixos.gif"
                     _width "25%"
                     _height "25%" ]
@@ -135,7 +141,7 @@ module Index =
             let builtWith =
                 String.Join (", ", [|
                     "<a href=\"https://fsharp.org/\">F#</a>"
-                    "<a href=\"https://github.com/mtrsk/craft\">Craft</a>"
+                    //"<a href=\"https://github.com/mtrsk/craft\">Craft</a>"
                     "<a href=\"https://orgmode.org/\">Orgmode</a>"
                 |]) + " and <a href=\"https://nixos.org/\">Nix</a>"
             $"Last updated at {format}.<br> Built with {builtWith}. Source code available {source repo}."
@@ -145,11 +151,19 @@ module Index =
             ]
         ]
 
-    let indexBodyView (page: Page) =
-        body [] (menu page @ aboutView @ [ footerView ])
+    let createBody (page: Page) (content: XmlNode list) =
+        let banner =
+            h1 [ _class "title" ] [ str page.Head.Title ]
+        body [] [
+            menu page
+            div [ _class "content" ] ([
+                banner
+            ] @ content)
+        ] 
     
     let index (page: Page) =
+        let content = (aboutView page) @ [ footerView ]
         html [] [
-            headView page
-            indexBodyView page
+            createHeader page
+            createBody page content
         ]
