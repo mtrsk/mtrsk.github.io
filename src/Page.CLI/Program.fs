@@ -11,6 +11,21 @@ let rec getParentDirectoryAt (path: String) (level: uint) =
     | n ->
         let parent = path |> Directory.GetParent |> string
         getParentDirectoryAt parent (n - 1u)
+        
+let createOutputDirectory (p: Page.Views.Paths) =
+    if Directory.Exists p.Outputs.Root then ()
+    else Directory.CreateDirectory(p.Outputs.Root) |> ignore
+    for dir in p.Outputs.Directories do
+        let mutable path = Path.Combine(p.Outputs.Root, dir)
+        if Directory.Exists path then ()
+        else Directory.CreateDirectory(path) |> ignore
+    done
+    
+    let assetsPath = Path.Combine(p.Outputs.Root, "assets")
+    if Directory.Exists assetsPath then
+        Directory.Delete(assetsPath, true)
+    else
+        Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory(p.Assets, assetsPath)
 
 let solutionRoot = getParentDirectoryAt __SOURCE_DIRECTORY__ 2u
 
@@ -30,11 +45,11 @@ let main args =
               Images = imagesPath
               Styles = stylesPath
               Outputs =
-                  { Root = solutionRoot
-                    Posts = "posts"
-                    Notes = "notes" } } }
-        
-    let indexFileName = System.IO.Path.Combine(solutionRoot, "index.html")
+                  { Root = Path.Combine(solutionRoot, "public")
+                    Directories = [ "notes"; "posts" ] } } }
+ 
+    createOutputDirectory data.Paths
+    let indexFileName = System.IO.Path.Combine(data.Paths.Outputs.Root, "index.html")
     let indexHtml = (Index.index data) |> RenderView.AsString.htmlDocument
     File.WriteAllText(indexFileName, indexHtml)
     

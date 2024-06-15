@@ -19,8 +19,7 @@ and Paths =
       Outputs: Outputs }
 and Outputs =
     { Root: string
-      Posts: string
-      Notes: string }
+      Directories: string list }
 
 [<RequireQualifiedAccess>]
 module Index =
@@ -57,11 +56,12 @@ module Index =
         (highlightJs "11.9.0") @ mathJax @ (boxIcons "2.1.4")
     
     let addCss (page: Page) =
-        let site = Path.Combine(page.Paths.Styles, "site.css")
+        let publicPath = Path.Combine(page.Paths.Outputs.Root, "assets")
+        let site = Path.Combine(publicPath, "site.css")
         [ link
             [ _rel "stylesheet"
               _href site
-              _type "style/css" ] ]
+              _type "text/css" ] ]
     
     let createHeader (page: Page) =
         let metadata = addMetadata page.Head.Metadata
@@ -70,12 +70,15 @@ module Index =
         ] @ metadata @ jsLibraries @ addCss page)
         
     let menu (page: Page) =
+        let home = Path.Combine(page.Paths.Outputs.Root, "index.html")
+        let notes = Path.Combine(page.Paths.Outputs.Root, "notes.html")
+        let posts = Path.Combine(page.Paths.Outputs.Root, "posts.html")
         div [] [
             header [ _class "header" ] [
-                a [ _href "./index.html" ] [ str "Home" ]
+                a [ _href home ] [ str "Home" ]
                 nav [] [
-                    a [ _href "./notes.html" ] [ str "Notes" ]
-                    a [ _href "./posts.html" ] [ str "Posts" ]
+                    a [ _href notes ] [ str "Notes" ]
+                    a [ _href posts ] [ str "Posts" ]
                 ]
             ]
         ]
