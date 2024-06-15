@@ -9,6 +9,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Page.CLI", "src\Page.CLI\Pa
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Page.Views", "src\Page.Views\Page.Views.fsproj", "{3F48443A-BAF7-4B2D-8FEC-895DC501128A}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Page.Org", "src\Page.Org\Page.Org.fsproj", "{91E600F9-C68C-4E2E-8E9A-32397D77DEB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{0D85B54C-B015-4B69-86A6-7A38F740BB57} = {66FE4663-79A3-414C-A413-0AE7BD25EC18}
 		{3F48443A-BAF7-4B2D-8FEC-895DC501128A} = {66FE4663-79A3-414C-A413-0AE7BD25EC18}
+		{91E600F9-C68C-4E2E-8E9A-32397D77DEB8} = {66FE4663-79A3-414C-A413-0AE7BD25EC18}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{0D85B54C-B015-4B69-86A6-7A38F740BB57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -30,5 +33,9 @@ Global
 		{3F48443A-BAF7-4B2D-8FEC-895DC501128A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F48443A-BAF7-4B2D-8FEC-895DC501128A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F48443A-BAF7-4B2D-8FEC-895DC501128A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91E600F9-C68C-4E2E-8E9A-32397D77DEB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91E600F9-C68C-4E2E-8E9A-32397D77DEB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91E600F9-C68C-4E2E-8E9A-32397D77DEB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91E600F9-C68C-4E2E-8E9A-32397D77DEB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
