@@ -10,6 +10,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Page.Org\Page.Org.fsproj" />
       <ProjectReference Include="..\Page.Views\Page.Views.fsproj" />
     </ItemGroup>
 

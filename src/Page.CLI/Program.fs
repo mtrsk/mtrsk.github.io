@@ -51,7 +51,13 @@ let main args =
     createOutputDirectory data.Paths
     let indexFileName = System.IO.Path.Combine(data.Paths.Outputs.Root, "index.html")
     let indexHtml = (Index.index data) |> RenderView.AsString.htmlDocument
-    File.WriteAllText(indexFileName, indexHtml)
+    //File.WriteAllText(indexFileName, indexHtml)
+    
+    let orgFile = System.IO.Path.Combine(solutionRoot, "test.org")
+    let htmlOutput = System.IO.Path.Combine(solutionRoot, "test.html")
+    let content = File.ReadAllText(orgFile)
+    Page.Org.Combinators.execute content
+    |> printfn "%A"
     
     //let orgFile = System.IO.Path.Combine(solutionRoot, "test.org")
     //let htmlOutput = System.IO.Path.Combine(solutionRoot, "test.html")
