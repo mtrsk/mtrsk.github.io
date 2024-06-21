@@ -2,10 +2,19 @@
 
 open System
 
-type Exporters =
+type Keywords =
     { Title: string
       Author: string
       Date: DateTime option }
+    static member fromParser (input: (string * string) * string) =
+        let (title, author), time = input
+        let status, date =
+            time
+            |> (_.Substring(1, 10))
+            |> DateTime.TryParse
+        { Title = title
+          Author = author
+          Date = if status then Some date else None }
 
 type Section =
     { Level: uint
@@ -20,29 +29,23 @@ type Section =
         { Level = level |> List.length |> uint
           Title = title
           Content = content }
-
-
+ 
 [<RequireQualifiedAccess>]
 module Combinators =
     open FParsec
     
-    let exporter (field: string) =
+    let keyword (field: string) =
         skipString "#+"
         .>> (pstring (field.ToUpper()) <|> pstring (field.ToLower()))
         .>> skipChar ':'
         .>>? skipChar ' '
         >>. restOfLine true
  
-    let exporters =
-        parse {
-            let! title = exporter "title"
-            let! author = exporter "author"
-            let! status, date =
-                exporter "date"
-                |>> (_.Substring(1, 10))
-                |>> DateTime.TryParse
-            return { Title = title; Author = author; Date = if status then Some date else None }
-        }
+    let keywords =
+        keyword "title"
+        .>>. keyword "author"
+        .>>. keyword "date"
+        |>> Keywords.fromParser
         
     let sectionContent =
         manyTill (spaces >>. restOfLine true .>> spaces) (nextCharSatisfies (fun c -> c = '*') <|> eof)
@@ -59,7 +62,7 @@ module Combinators =
     let manyContained popen pclose psep p = between popen pclose <| sepBy p psep
         
     let parser =
-        exporters
+        keywords
         .>> spaces
         .>>. sections
 
