@@ -1,5 +1,6 @@
 namespace Page.Org
 
+type Keyword = Keyword of string * string
 type Status = TODO | DONE
 type ListType = Bulleted | Numbered | Plussed
 
@@ -32,3 +33,18 @@ type Block =
     | Paragraph of Words
 
 type Tag = Tag of string
+
+type Org =
+    { Metadata: Metadata
+      Document: Document }
+and Metadata = Map<string, string>
+and Document =
+    { Block: Block list
+      Section: Section list }
+and Section =
+    { Status: Status option
+      Header: Words option
+      Tags: Tag list
+      Properties: Map<string, string>
+      Document: Document }
+
