@@ -1,6 +1,6 @@
 #+TITLE: Test Title
 #+AUTHOR: Myself
-#+DATE: <2018-08-17 Fri> 
+#+DATE: <2018-08-17 Fri>
 
 Zero Section Example
 
@@ -24,3 +24,4 @@ Text!
 
 More text!
 
+** Heading 4

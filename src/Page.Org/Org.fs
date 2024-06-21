@@ -1,10 +1,10 @@
 namespace Page.Org
 
-type Keyword = Keyword of string * string
+type Keyword = string * string
 type Status = TODO | DONE
 type ListType = Bulleted | Numbered | Plussed
 
-type Words =
+type Word =
     | Bold of string
     | Italic of string
     | Highlight of string
@@ -19,7 +19,7 @@ type Words =
 type Row =
     | Break
     | Column of Column list
-and Column = Words option
+and Column = Word option
 and Table = Row list
 
 type Language = Language of string
@@ -30,9 +30,10 @@ type Block =
     | Code of Language: Language option * Content: string
     | ListItems of string list
     | Table of Table
-    | Paragraph of Words
+    | Paragraph of Word
 
 type Tag = Tag of string
+type Title = Title of Word list
 
 type Org =
     { Metadata: Metadata
@@ -43,8 +44,9 @@ and Document =
       Section: Section list }
 and Section =
     { Status: Status option
-      Header: Words option
+      Header: Word option
       Tags: Tag list
       Properties: Map<string, string>
+      Title: Title
       Document: Document }
 

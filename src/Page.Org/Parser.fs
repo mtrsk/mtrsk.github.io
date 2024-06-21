@@ -3,38 +3,14 @@
 open System
 
 
-//type Keywords =
-//    { Title: string
-//      Author: string
-//      Date: DateTime option }
-//    static member fromParser (input: (string * string) * string) =
-//        let (title, author), time = input
-//        let status, date =
-//            time
-//            |> (_.Substring(1, 10))
-//            |> DateTime.TryParse
-//        { Title = title
-//          Author = author
-//          Date = if status then Some date else None }
-//
-//type Section =
-//    { Level: uint
-//      Title: string
-//      Content: string option }
-//    static member fromParser (input: (char list * string) * string list) =
-//        let (level, title), text = input
-//        let content =
-//            match text with
-//            | [] -> None
-//            | l -> String.concat "\n" l |> Some
-//        { Level = level |> List.length |> uint
-//          Title = title
-//          Content = content }
- 
 [<RequireQualifiedAccess>]
 module Combinators =
     open FParsec
     
+    type Item =
+        | Keyword of Keyword
+        | Block of string
+
     let manyContained popen pclose psep p = between popen pclose <| sepBy p psep
         
     // Applies popen, then pchar repeatedly until pclose succeeds,
@@ -45,32 +21,40 @@ module Combinators =
     let anyStringBetween popen pclose = manyCharsBetween popen pclose anyChar
     
     let endsWith (c: Char) = nextCharSatisfies (fun s -> s = c) <|> eof
+    
+    let removeSpaces (p: Parser<'a, 'b>): Parser<'a, 'b> =
+        spaces
+        >>. p
+        .>> spaces
 
     // Parse all the data with the shape
     // #+<KEY>:<VALUE>
     let keyword =
         anyStringBetween (pstring "#+") (pchar ':')
-        .>>? skipChar ' '
+        .>> spaces
         .>>. restOfLine true
         |>> Keyword
-        
+
+    // Consume as many keywords as you can
     let keywords = manyTill keyword newline
     
     // Parse Blocks
     let block =
-        spaces
-        >>. restOfLine true
-        .>> spaces
-        
+        removeSpaces (restOfLine true)
+        |>> Item.Block
+
     let blocks = manyTill block (endsWith '*')
         
     // Parse Sections
+    let groupAsterisks = many (pchar '*')
+
     let section =
-        spaces
-        >>. many (pchar '*')
-        .>> spaces
+        removeSpaces groupAsterisks
         .>>. restOfLine true
-        .>>. blocks
+        .>>. choice [
+            keywords
+            blocks
+        ]
  
     let sections = manyTill section eof
 
