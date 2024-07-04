@@ -9,7 +9,7 @@ module Combinators =
     
     type Item =
         | Keyword of Keyword
-        | Block of string
+        | Block of Block 
 
     let manyContained popen pclose psep p = between popen pclose <| sepBy p psep
         
@@ -20,12 +20,46 @@ module Combinators =
     // Parses any string between popen and pclose
     let anyStringBetween popen pclose = manyCharsBetween popen pclose anyChar
     
-    let endsWith (c: Char) = nextCharSatisfies (fun s -> s = c) <|> eof
+    //let endsWith (c: Char) = nextCharSatisfies (fun s -> s = c) <|> eof
+    let nextCharMatches (c: Char) = nextCharSatisfies (fun x -> x = c)
+    let endsWith (c: Char) = nextCharMatches c <|> eof
     
     let removeSpaces (p: Parser<'a, 'b>): Parser<'a, 'b> =
-        spaces
+        unicodeSpaces
         >>. p
-        .>> spaces
+        .>> unicodeSpaces
+
+    // Parse Words
+    let bold: Parser<Block,unit> =
+        anyStringBetween (nextCharMatches '*') (nextCharMatches '*')
+        |>> Word.Bold
+        |>> Paragraph
+
+    let strike: Parser<Block,unit> =
+        anyStringBetween (nextCharMatches '~') (nextCharMatches '~')
+        |>> Word.Strike
+        |>> Paragraph
+
+    let italic: Parser<Block,unit> =
+        anyStringBetween (pchar '/') (pchar '/')
+        |>> Word.Italic
+        |>> Paragraph
+
+    let plain: Parser<Block,unit> =
+        anyStringBetween (unicodeNewline <|> pchar ' ' <|> lookAhead (anyChar)) (unicodeNewline <|> pchar ' ')
+        |>> Word.Plain
+        |>> Paragraph
+    
+    let text =
+        choice [
+            bold
+            strike
+            italic
+            plain
+        ]
+    let readLine =
+        manyTill text newline
+        |>> List.map Block
 
     // Parse all the data with the shape
     // #+<KEY>:<VALUE>
@@ -39,11 +73,14 @@ module Combinators =
     let keywords = manyTill keyword newline
     
     // Parse Blocks
-    let block =
-        removeSpaces (restOfLine true)
-        |>> Item.Block
+    //let block =
+    //    removeSpaces (restOfLine true)
+    //    |>> Item.Block
+    let block = removeSpaces readLine
 
-    let blocks = manyTill block (endsWith '*')
+    let blocks =
+        manyTill block (endsWith '*')
+        |>> List.concat
         
     // Parse Sections
     let groupAsterisks = many (pchar '*')
@@ -60,8 +97,10 @@ module Combinators =
 
     let parser =
         attempt keywords
-        .>>. attempt blocks
+        .>>. blocks
         .>>. sections
 
     let execute (content: string) =
+        let x = run parser content
         run parser content
+        

@@ -19,6 +19,8 @@ Another paragraph!
 * Heading 2 with /Bold/
 
 Text!
+*Text!*
+-Text!-
 
 * Heading 3
 
