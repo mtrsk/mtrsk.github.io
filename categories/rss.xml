@@ -6,8 +6,15 @@
     <description>Recent content in Categories on Benevide&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Jun 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mtrsk.github.io/categories/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes</title>
+      <link>https://mtrsk.github.io/categories/notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/categories/notes/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Blog</title>
       <link>https://mtrsk.github.io/categories/blog/</link>
