@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       d89285be-d7a9-46a1-8a10-e14e73b66935
+:END:
+#+title: Monoid
+#+STARTUP: latexpreview
+#+ROAM_TAGS: "algebra"
+#+Html_MATHJAX: align: left indent: 5em tagside: left
+
+* Definition
+
+A monoid is triple $\left (\mathbb{M}, \cdot, 1 \right)$ such that:
+
++ $\mathbb{M}$ is an non-empty set
++ $\cdot : \mathbb{M} \times \mathbb{M} \rightarrow \mathbb{M}$ is an associative mapping, i.e., $\forall
+  t_1, t_2, t_3 \in \mathbb{M}, (t_1 \cdot t_2) \cdot t_3 = t_1 \cdot (t_2 \cdot t_3)$.
++ $1 \in \mathbb{M}$ is the /unit/ satisfying $1 \cdot t = t = t \cdot 1, \forall t \in \mathbb{M}$.

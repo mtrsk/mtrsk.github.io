@@ -1,0 +1,55 @@
+:PROPERTIES:
+:ID:       d7efb05f-fb8f-438c-b09d-ea91dc24ebc3
+:END:
+#+title: Distributed-Systems
+
+Readings from the following books:
+
+- Michael L. Perry's "The Art of Immutable Architecture".
+
+Properties of a reliable application
+
++ Idempotence
++ Immutability
++ Local Independence
++ Versioning
+
+* Why Immutable Architecture
+
+#+BEGIN_QUOTE
+..if you are in architecture, you are responsible for cutting the Gordian Knot
+of possible failures and mitigations. This is the fragile process by which we
+build the systems that run our society. 
+#+END_QUOTE
+
+** The Problems with Immutability
++ It's not how machines actually operate, i.e, we need find a way to represent
+  fixed mutable memory
++ Modelling mutable actions that need to be solved by our immutable system
+
+** The Fallacies of Distributed Computing
+1. The network is reliable
+2. Latency is zero
+3. Bandwidth is infinite
+4. The network is secure
+5. Topology doesn't change
+6. There is one administrator
+7. Transport cost is zero
+8. The network is homogenous
+
+** Changing Assumptions
+
+#+BEGIN_QUOTE
+The tools that we use and the patterns that we follow today all evolved from a
+time during which assumptions of high reliability, zero latency, and topological
+consistency were not fallacies. (...) When we apply the languages and patterns
+of the past to the problems of modern distributed systems, it is no wonder that
+programmers will make incorrect assumptions.
+#+END_QUOTE
+
+** Structural Sharing
+
+A common optimization for immutable data structures that is enabled by immutable
+data structures.
+
+** The Two Generals' Problem

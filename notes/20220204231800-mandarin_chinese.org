@@ -1,0 +1,34 @@
+:PROPERTIES:
+:ID:       e699d35b-f546-4607-b444-d2be225d2574
+:END:
+#+title: mandarin-chinese
+
+Notes from the following courses:
+
+* Basic Mandarin
+
++ [[https://www.coursera.org/learn/mandarin-chinese-1][Mandarin Chinese 1]]
++ Basic Mandarin at CII
+
+** Pictograms
+
+| Character | Pronunciation | Kind | Meaning            |
+|-----------+---------------+------+--------------------|
+| 木        | mù            | noun | tree, wood, coffin |
+| 火        | huǒ           |      | fire, hot, urgent  |
+
+
+** Useful words
+
+| Character | Pronunciation | Kind  | Meaning                   |
+|-----------+---------------+-------+---------------------------|
+| 你        | nǐ            | pron. | you                       |
+| 好        | hǎo           | adj.  | good                      |
+| 我        | wǒ            | pron. | I, me                     |
+| 是        | shì           | v.    | to be, is, are, was, were |
+| 呢        | ne            | part. |                           |
+| 叫        | jiào          | v.    | to be called              |
+| 很        | hěn           | adv.  | very                      |
+| 高兴      | gāoxìng       | adj.  | happy, joyful             |
+| 认识      | rènshi        | v.    | to know, to recognize     |
+| 也        | yě            | adv.  | too, as well              |

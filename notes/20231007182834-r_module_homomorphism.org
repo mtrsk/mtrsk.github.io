@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       e41608f8-fcf2-4b02-b502-9441c0aee369
+:END:
+#+title: R-Module Homomorphism
+

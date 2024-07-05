@@ -1,0 +1,57 @@
+:PROPERTIES:
+:ID:       10d70300-3c11-48f7-af3b-d5d07d5a5f39
+:END:
+#+TITLE: Hypermedia Systems
+
+* Chapter 01 - Hypermedia: A Reintroduction
+** What Is Hypermedia?
+
+#+BEGIN_QUOTE
+Hypermedia is a media, for example a text, that includes non-linear branching
+from one location in the media to another, via, for example, hyperlinks embedded
+in the media.
+#+END_QUOTE
+
+** A Brief History of Hypermedia
+
+Where did the idea of hypermedia come from?
+
++ The 1945 article [[id:22759a84-3a09-464f-b0f7-e5d0a7bf5295][As We May Think]], from Vanevar Bush
++ Ted Nelson's work on the "Hypertext Editing System" at Brown University and who later created the File Retrieval and Editing System (FRESS)
++ Douglas Engelbart's thesis on the "[[id:116d7265-e46f-4b42-b5ef-af1e913e2c12][The Mother of All Demos]]"
+
+** Modern Implementation  
+
++ Tim Berners-Lee's "World Wide Web"
++ Roy Fielding's "[[id:f922bff8-f1ab-4322-a0af-b6eba02b2811][Architectural Styles and the Design of Network-based Software Architectures]]"
+  
+** The World’s Most Successful Hypertext: HTML
+*** The Essence of HTML as a Hypermedia
+**** Anchor tags
+#+BEGIN_SRC html
+<a href="https://hypermedia.systems/">
+  Hypermedia Systems
+</a>
+#+END_SRC
+#+BEGIN_QUOTE
+An anchor tag consists of the tag itself, ~<a></a>~, as well as the attributes
+and content within the tag. Of particular interest is the href attribute, which
+specifies a hypertext reference to another document or document fragment. It is
+this attribute that makes the anchor tag a hypermedia control.
+#+END_QUOTE
+
+**** Form tags
+#+BEGIN_SRC html
+<form action="/signup" method="post">
+  <input type="text" name="email" placeholder="Enter Email To Sign Up..."/>
+  <button>Sign Up</button>
+</form>
+#+END_SRC
+#+BEGIN_QUOTE
+This mechanism allows the user to issue requests to update the state of
+resources on the server. Note that despite this new type of request the
+communication between client and server is still done entirely with hypermedia.
+
+It is the form tag that makes Hypermedia-Driven Applications possible.
+#+END_QUOTE
+
