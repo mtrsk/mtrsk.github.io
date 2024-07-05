@@ -1,6 +1,0 @@
-
-        #+begin_export html
-        <li><a href=./posts/using-private-neovim-plugins-on-nixos.html>How to use private NeoVim plugins on NixOS</a></li>
-<li><a href=./posts/switched-to-nixos.html>I've Switched to NixOS</a></li>
-        #+end_export
-    

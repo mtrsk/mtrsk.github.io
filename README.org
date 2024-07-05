@@ -6,8 +6,5 @@ An Org-based personal page and blog.
 ** How to build this
 
 #+BEGIN_SRC bash
-  touch .env
-  echo "ENVIRONMENT=development" > .env
-  make setup-fa
-  make publish
+  just public
 #+END_SRC
