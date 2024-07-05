@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>homepage title on Benevide&#39;s Blog</title>
+    <link>https://mtrsk.github.io/</link>
+    <description>Recent content in homepage title on Benevide&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 17 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mtrsk.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to use private NeoVim plugins on NixOS</title>
+      <link>https://mtrsk.github.io/blog/2023/how-to-use-private-neovim-plugins-on-nixos/</link>
+      <pubDate>Sun, 17 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/blog/2023/how-to-use-private-neovim-plugins-on-nixos/</guid>
+      <description>Over time my config changed a lot since the early days, as of now I&amp;rsquo;m using a combination of Flakes and home-manager to manage my workstations. I try not to overthink too much when it comes to Nix, my current Neovim setup is pretty simple, lua-based, yet, fully nixified.&#xA;dotfiles ├── (...) ├── nvim │ ├── files.lua │ ├── line.lua │ ├── lsp.lua │ ├── settings.lua │ ├── tabs.lua │ └── treesitter.</description>
+    </item>
+    <item>
+      <title>I&#39;ve Switched to NixOS</title>
+      <link>https://mtrsk.github.io/blog/2018/ive-switched-to-nixos/</link>
+      <pubDate>Fri, 17 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/blog/2018/ive-switched-to-nixos/</guid>
+      <description>After quite some time being a Debian user I&amp;rsquo;ve decided to become a full time meme distro user. At first I was following some of the manuals in an attempt to recreate my config in virtualbox. A day later this distro seemed too cool not to try it out for real, so why not?&#xA;It&amp;rsquo;s kinda weird to adapt, in Debian I was accostumed to just run a command here and there and have a bunch of config files across my system, with Nix (the configuration language) one can have a single file (configuration.</description>
+    </item>
+  </channel>
+</rss>
