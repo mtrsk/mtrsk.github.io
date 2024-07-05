@@ -1,10 +1,20 @@
 * Blog
-#+html: <a href="https://github.com/mtrsk/mtrsk.github.io/actions/workflows/docker-emacs.yml/badge.svg"> <img alt="pipeline status" src="https://github.com/mtrsk/mtrsk.github.io/actions/workflows/docker-emacs.yml/badge.svg" /></a>
+#+html: <a href="https://builtwithnix.org"> <img alt="pipeline status" src="https://builtwithnix.org/badge.svg" /></a>
+#+html: <a href="https://github.com/mtrsk/mtrsk.github.io/actions/workflows/deploy.yml/badge.svg"> <img alt="pipeline status" src="https://github.com/mtrsk/mtrsk.github.io/actions/workflows/deploy.yml/badge.svg" /></a>
 
 An Org-based personal page and blog.
 
-** How to build this
+** Usage
+
+*** Development
 
 #+BEGIN_SRC bash
-  just public
+nix develop
+#+END_SRC
+
+*** Build & Publish
+
+#+BEGIN_SRC bash
+build
+run
 #+END_SRC

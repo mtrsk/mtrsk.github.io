@@ -52,8 +52,16 @@
               ({ pkgs, lib, ... }: {
                 packages = [ customEmacs ] ++ tooling;
 
+                scripts = {
+                  build.exec = "just build";
+                  publish.exec = "just publish";
+                  run.exec = "just run";
+                  clean.exec = "just clean";
+                };
+
                 enterShell = ''
                   echo "Starting environment..."
+                  hugo version
                 '';
               })
             ];

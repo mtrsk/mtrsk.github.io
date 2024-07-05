@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+    <head>
+        <title>~benevides's feed</title>
+    </head>
+    <body>
+        <outline title="Blogs" text="Blogs I personally like to read">
+            <outline
+                title="Victor's blog"
+                text=""
+                type="rss"
+                xmlUrl="https://gluer.org/rss.xml"
+                htmlUrl="https://gluer.org" />
+
+	    <outline
+                title="Eduardo's blog"
+                text=""
+                type="atom"
+                xmlUrl="https://ebellani.github.io/blog/atom.xml"
+                htmlUrl="https://ebellani.github.io/blog/" />
+
+	    <outline
+                title="Lemos' blog"
+                text=""
+                type="atom"
+                xmlUrl=""
+                htmlUrl="https://duing.dev/" />
+
+	    <outline
+                title="Magueta's Blog"
+                text=""
+                type="atom"
+                xmlUrl=""
+                htmlUrl="https://marcosmagueta.com/blog" />
+        </outline>
+
+        <outline title="Open Source Projects" text="Projects to watch closely">
+            <outline
+                title="NixOS News"
+                text=""
+                type="rss"
+                xmlUrl="https://nixos.org/blog/announcements-rss.xml"
+                htmlUrl="https://nixos.org/news.html" />
+        </outline>
+    </body>
+</opml>
