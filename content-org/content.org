@@ -58,6 +58,26 @@ This page is a rendered version of my [[https://en.wikipedia.org/wiki/OPML][OPML
 
 #+INCLUDE: "../blog/notes.org"
 
+** Distributed Systems
+:PROPERTIES:
+:EXPORT_FILE_NAME: distributed-systems
+:EXPORT_DATE: 2021-11-20
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug distributed-systems
+:CUSTOM_ID: distributed-systems
+:END:
+
+#+INCLUDE: "../notes/20211202213813-distributed_systems.org"
+
+** History of Logic: From Aristotle to Taski
+:PROPERTIES:
+:EXPORT_FILE_NAME: history-of-logic-from-aristotle-to-taski
+:EXPORT_DATE: 2021-11-11
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug history-of-logic-from-aristotle-to-taski
+:CUSTOM_ID: history-of-logic-from-aristotle-to-taski
+:END:
+
+#+INCLUDE: "../notes/20211104221056-history_of_logic.org"
+
 ** Left R-Module
 :PROPERTIES:
 :EXPORT_FILE_NAME: left-r-module

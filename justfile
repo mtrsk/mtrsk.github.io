@@ -17,7 +17,7 @@ public: build
     hugo
 
 # Run Hugo server with drafts
-run:
+run: build
 	hugo server --buildDrafts --buildFuture
 
 # Build for CI
