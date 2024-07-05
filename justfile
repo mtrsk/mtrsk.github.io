@@ -8,12 +8,12 @@ SOURCES := `echo {{ BLOG_SRC }}/*.org`
 default:
   just --list
 
-# Generate Markdown files
-content:
+# Generate the Markdown files
+build:
     emacs $(pwd) --batch --load export.el
 
 # Publish content
-public: content
+public: build
     hugo
 
 # Run Hugo server with drafts

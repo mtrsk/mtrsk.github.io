@@ -18,6 +18,14 @@
 
 #+INCLUDE: "../blog/home.org"
 
+** Blogroll
+:PROPERTIES:
+:EXPORT_TITLE: Blogroll
+:EXPORT_FILE_NAME: blogroll
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description A rendered version of my OPML file. :layout blogroll
+:END:
+This page is a rendered version of my [[https://en.wikipedia.org/wiki/OPML][OPML]] file.
+
 * Blog  :@blog:
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: blog
@@ -47,3 +55,45 @@
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: notes
 :END:
+
+#+INCLUDE: "../blog/notes.org"
+
+** Left R-Module
+:PROPERTIES:
+:EXPORT_FILE_NAME: left-r-module
+:EXPORT_DATE: 2023-10-07
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug left-r-module
+:CUSTOM_ID: left-r-module
+:END:
+
+#+INCLUDE: "../notes/20231007165834-left_r_module.org"
+
+** Managing a Programming Project
+:PROPERTIES:
+:EXPORT_FILE_NAME: managing-a-programming-project
+:EXPORT_DATE: 2023-04-11
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug managing-a-programming-project
+:CUSTOM_ID: managing-a-programming-project
+:END:
+
+#+INCLUDE: "../notes/20230411100120-managing_a_programming_project.org"
+
+** Monad
+:PROPERTIES:
+:EXPORT_FILE_NAME: monad
+:EXPORT_DATE: 2024-06-19
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug monad
+:CUSTOM_ID: monad
+:END:
+
+#+INCLUDE: "../notes/20240619115816-monad.org"
+
+** Monoid
+:PROPERTIES:
+:EXPORT_FILE_NAME: monoid
+:EXPORT_DATE: 2023-10-08
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug monoid
+:CUSTOM_ID: monoid
+:END:
+
+#+INCLUDE: "../notes/20231008214945-monoid.org"
