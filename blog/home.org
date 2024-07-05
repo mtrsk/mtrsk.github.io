@@ -29,22 +29,24 @@ You may also find me elsewhere in cyberspace, under the following aliases:
 
 #+BEGIN_export html
 <div>
-  <div>
-    <a href="https://github.com/mtrsk" title="My Github profile"><i class="fab fa-github-square fa-w-14 fa-3x"></i></a>
-  </div>
-  <div>
-    <a href="https://gitlab.com/mtrsk" title="My Gitlab profile"><i class="fab fa-gitlab fa-w-14 fa-3x"></i></a>
-  </div>
-  <div>
-    <a href="https://www.linkedin.com/in/schonfinkel" title="My Linkedin profile"><i class="fab fa-linkedin fa-w-14 fa-3x"></i></a>
-  </div>
-  <div>
-    <a href="mailto:marcos.schonfinkel@gmail.com" title="My personal email"><i class="fas fa-envelope-square fa-w-14 fa-3x"></i></a>
-  </div>
-</div>
-<div>
-  <div>
-    <a href="https://stackexchange.com/users/5858235/aristu"><img src="https://stackexchange.com/users/flair/5858235.png" alt="profile for Aristu on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Aristu on Stack Exchange, a network of free, community-driven Q&amp;A sites" /></a>
-  </div>
+  <table style="width:80%">
+    <tr>
+        <td>
+        <a href="https://github.com/mtrsk" title="My Github profile"><i class='bx bxl-github bx-lg'></i></a>
+        </td>
+        <td>
+        <a href="https://gitlab.com/mtrsk" title="My Gitlab profile"><i class='bx bxl-gitlab bx-lg' ></i></a>
+        </td>
+        <td>
+        <a href="https://www.linkedin.com/in/schonfinkel" title="My Linkedin profile"><i class='bx bxl-linkedin-square bx-lg' ></i></a>
+        </td>
+        <td>
+        <a href="mailto:marcos.schonfinkel@gmail.com" title="My personal email"><i class='bx bx-envelope bx-lg' ></i></a>
+        </td>
+        <td>
+        <a href="https://stackexchange.com/users/5858235/aristu"><img src="https://stackexchange.com/users/flair/5858235.png" alt="profile for Aristu on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Aristu on Stack Exchange, a network of free, community-driven Q&amp;A sites" /></a>
+        </td>
+    </tr>
+  </table>
 </div>
 #+END_export

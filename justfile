@@ -27,6 +27,7 @@ ci-build: clean public
 remove-org:
     #!/usr/bin/env bash
     find . -iname "#*.org#" | xargs rm -r 
+    echo "Finished!"
 
 # Cleans the current environment
 clean: remove-org
