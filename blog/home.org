@@ -1,0 +1,52 @@
+# metadata for [[https://www.freecodecamp.org/news/what-is-open-graph-and-how-can-i-use-it-for-my-website/][open graph]] metadata
+#+begin_description
+Marcos's blog description
+#+end_description
+
+Hello! I'm *Marcos Benevides*, a developer from São Luís, MA - Brazil. You're
+going to find my posts, projects and tutorials here, and probably some random
+rambling about byzantine history.
+
+*** Interests
+
+Here's a non-exaustive list of my current interests:
+
+- Backend Development
+- Infrastructure
+- Functional Programming
+- GNU/Linux & FOSS
+- Logic
+- Philosophy
+
+#+CAPTION: btw, I use [[https://nixos.org/][NixOS]]...
+#+NAME:   fig:
+#+ATTR_HTML: :width 25% :height 25%
+[[../static/img/nixos.gif]]
+
+*** Contact me
+
+You may also find me elsewhere in cyberspace, under the following aliases:
+
+#+BEGIN_export html
+<div>
+  <table style="width:80%">
+    <tr>
+        <td>
+        <a href="https://github.com/mtrsk" title="My Github profile"><i class='bx bxl-github bx-lg'></i></a>
+        </td>
+        <td>
+        <a href="https://gitlab.com/mtrsk" title="My Gitlab profile"><i class='bx bxl-gitlab bx-lg' ></i></a>
+        </td>
+        <td>
+        <a href="https://www.linkedin.com/in/schonfinkel" title="My Linkedin profile"><i class='bx bxl-linkedin-square bx-lg' ></i></a>
+        </td>
+        <td>
+        <a href="mailto:marcos.schonfinkel@gmail.com" title="My personal email"><i class='bx bx-envelope bx-lg' ></i></a>
+        </td>
+        <td>
+        <a href="https://stackexchange.com/users/5858235/aristu"><img src="https://stackexchange.com/users/flair/5858235.png" alt="profile for Aristu on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Aristu on Stack Exchange, a network of free, community-driven Q&amp;A sites" /></a>
+        </td>
+    </tr>
+  </table>
+</div>
+#+END_export

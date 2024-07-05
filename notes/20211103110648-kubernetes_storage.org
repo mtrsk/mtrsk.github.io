@@ -1,0 +1,99 @@
+:PROPERTIES:
+:ID:       1369d5e6-2858-4fc5-b59c-942326890b40
+:END:
+#+title: Kubernetes-Storage
+
+* Volume Types
+
+** emptyDir
+Empty directory for storing data ephemeral data from the Pods
+
+#+BEGIN_SRC yaml
+  apiVersion: v1
+  kind: Pod
+  spec:
+    volumes:
+      - name: html
+        emptyDir: {}
+    containers:
+      - name: nginx
+        image: nginx:alpine
+        volumeMounts:
+          - name: html
+            mountPath: /usr/share/nginx/html
+            readOnly: false
+  
+      - name: html-example
+        image: alpine:latest
+        command: ["/bin/sh", "-c"]
+        args:
+          - while true; do date >> /html/index.html; sleep 10; done
+        volumeMounts:
+          - name: html
+            mountPath: /html
+            readOnly: false
+#+END_SRC
+
+** hostPath
+A volume that's mounted in the Node's filesystem and is shared with a Pod
+
+** nfs
+A NFS share mounted into the Pod
+
+** configMap/secret
+Provides access to [[id:dd924a84-7d6f-41ec-98c2-aa16582c0d89][Kubernetes]] resources
+
+** persistentVolumeClaim
+A ~persistentVolume~ is a cluster-wide storage resource that relies on
+network-attached storage. It's abstracted and associated to a Pod via a
+~PersistentVolumeClaim~ (PVC).
+
++ Definying a persistent volume
+
+#+BEGIN_SRC yaml
+  apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    name: pv-1
+  spec:
+    capacity:
+      storage: 20Gi
+    accessModes:
+      - ReadWriteOnce
+      - ReadOnlyMany
+    persistentVolumePolicy: Retain
+    azureFile:
+      secretName: <azure-secret>
+      shareName: <azure-fileshare>
+      readOnly: false
+#+END_SRC
+
++ Setting up a volume claim
+
+#+BEGIN_SRC yaml
+  apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    name: pv-demo
+    annotations:
+      volume.beta.kubernetes.io/storage-class: accounthdd
+  spec:
+    accessModes:
+      - ReadWriteOnce
+    resources:
+      requests:
+        storage: 5Gi
+    storageClassName: cdk-cinder
+#+END_SRC
+
+
+** Cloud
+Cluster-wide storage, which varies depending on the cloud provider
+
++ AWS
+  * Elastic Block Store
++ Azure
+  * Azure Disk
+  * Azure File
++ GCP
+  * GCE Persistent Disk

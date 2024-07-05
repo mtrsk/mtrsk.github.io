@@ -1,7 +1,3 @@
-#+TITLE: I've Switched to NixOS
-#+AUTHOR: Marcos Benevides
-#+DATE: <2018-08-17 Fri> 
-
 After quite some time being a Debian user I've decided to become a full time
 meme distro user. At first I was following some of the manuals in an attempt to
 recreate my config in virtualbox. A day later this distro seemed too cool not to
@@ -17,3 +13,4 @@ previous generation if something explodes. The ~#nixos~ community on both
 freenode and [[https://discourse.nixos.org/][discourse]] is also very helpful.
 
 If you wanna see my crappy config just take a look [[https://github.com/mtrsk/nixos-config][here]].
+

@@ -1,0 +1,137 @@
+:PROPERTIES:
+:ID:       ee377537-0c8d-48c9-a181-19a2cff8c4a7
+:END:
+#+title: kubectl
+
+* Commands
+
++ View cluster information
+#+BEGIN_SRC shell
+  kubectl cluster-info
+#+END_SRC
+
+** Apply & Create
++ Just creates a resource
+
+#+BEGIN_SRC shell
+  kubectl create ...
+#+END_SRC
+
++ Create or modify a resource
+
+#+BEGIN_SRC shell
+  kubectl apply -f pod.yml
+#+END_SRC
+
+** Delete
+
+Deleting a pod won't prevent it from being recreated.
+#+BEGIN_SRC shell
+  kubectl delete pod [pod-name]
+#+END_SRC
+you need to delete it's ~deployment~.
+#+BEGIN_SRC shell
+  kubectl delete deployment [deployment-name]
+#+END_SRC
+
+** Describe
+
+#+BEGIN_SRC shell
+  kubectl describe pods <...>
+#+END_SRC
+
+** Get
+
++ View all the resources
+#+BEGIN_SRC shell
+  kubectl get all
+#+END_SRC
+
++ Get information about the pods
+#+BEGIN_SRC shell
+  kubectl get pods --watch
+  kubectl get pods -o wide
+#+END_SRC
+
++ Get information about deployments
+#+BEGIN_SRC shell
+  # Lists deployments and their labels
+  kubectl get deployment --show-labels
+  # Get deployments with a specific label
+  kubectl get deployment -l app=nginx
+#+END_SRC
+
+** Port-forward
+
++ Forward port to enables external calls
+#+BEGIN_SRC shell
+  kubectl port-forward [pod-name] [external-port]:[internal-port]
+  # For instance...
+  kubectl port-forward [pod-name] 8080:80
+#+END_SRC
+
+* YAML
+
+** Pod
+
+#+BEGIN_SRC yaml
+  apiVersion: v1
+  kind: Pod
+  metadata:
+    name: nginx
+    labels:
+      app: nginx
+      ref: stable
+  spec:
+    containers:
+    - name: nginx
+      image: nginx:alpine
+      ports:
+      - containerPort: 80
+#+END_SRC
+
+*** Pod Healthchecks
++ Probe Types
+  * Readiness Probe: Defines when should a container start receiving traffic
+  * Liveness Probe: Defines when a container is considered unhealthy and should,
+    therefore, be restarted.
+
++ Action Types
+  * ExecAction
+  * TCPSocketAction
+  * HTTPGetAction
+
+#+BEGIN_SRC yaml
+  apiVersion: v1
+  kind: Pod
+  metadata:
+    name: nginx
+    labels:
+      app: nginx
+      ref: stable
+  spec:
+    containers:
+    - name: nginx
+      image: nginx:alpine
+      ports:
+      - containerPort: 80
+      livenessProbe:
+        httpGet:
+          path: /index.html
+          port: 80
+        initialDelaySeconds: 15
+        timeoutSeconds: 2
+        periodSeconds: 5
+        failureThreshold: 1
+      readinessProbe:
+        httpGet:
+          path: /index.html
+          port: 80
+        initialDelaySeconds: 5
+        periodSeconds: 10
+        failureThreshold: 1
+      resources:
+        limits:
+          memory: "128Mi" # 128 Mb
+          cpu: "200m"     # 200 milicpu, i.e, 0.2 cpu or 20% cpu
+#+END_SRC

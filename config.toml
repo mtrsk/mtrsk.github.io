@@ -1,0 +1,34 @@
+title = "Benevide's Blog"
+baseURL = "https://mtrsk.github.io"
+languageCode = "en-us"
+
+pygmentsUseClasses = true
+assetDir = "static"
+
+[outputs]
+  section = ["HTML", "ATOM"]
+
+[permalinks]
+  blog = '/blog/:year/:slug/'
+  notes = '/notes/:year/:slug/'
+
+[author]
+  name = "Marcos Benevides"
+
+[mediaTypes."application/atom+xml"]
+  suffixes = ["xml"]
+
+[outputFormats.Atom]
+  name = "Atom"
+  mediaType = "application/atom+xml"
+  baseName = "atom"
+
+[outputFormats.RSS]
+  mediaType = "application/rss+xml"
+  baseName = "rss"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.tableOfContents]
+  ordered = true

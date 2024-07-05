@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      {{- block "title" . -}}
+        {{- .Site.Title -}}
+      {{ end }}
+    </title>
+    {{ $style := resources.Get "css/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    {{- template "_internal/opengraph.html" . -}}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+      {{- partial "nav.html" -}}
+      <main>
+        {{- block "main" . -}}
+        {{ end }}
+
+        {{- block "footer" . -}}
+          {{- partial "footer.html" . -}}
+        {{ end }}
+      </main>
+    </main>
+  </body>
+</html>

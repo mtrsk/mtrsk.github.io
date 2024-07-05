@@ -1,0 +1,334 @@
+:PROPERTIES:
+:ID:       32b2fe5a-3bc3-439b-a850-70a539498e9e
+:END:
+#+title: The-Effective-Manager
+
+* Teachable and Sustainable Skills
+
+#+BEGIN_QUOTE
+However you manage, your techniques, behavior, and philosophy must be both
+teachable to others and sustainable.
+#+END_QUOTE
+
+1. To go up in any organization, you must be able to teach others to do what you
+   do.
+2. If you're irreplacable, you're also unpromotable.
+
+#+BEGIN_QUOTE
+The way an effective manager manages is visible to others and is teachable to
+others. And the effective manager can repeat the
+#+END_QUOTE
+
+| Critical Behavior             | Manager Tool |
+|-------------------------------+--------------|
+| Get to know your people       | One on ones  |
+| Communicate about performance | Feedback     |
+| Ask for more                  | Coaching     |
+| Push work down                | Delegation   |
+
+* Know Your People: One On Ones
+
+One on ones are meetings that:
+
+1. That is scheduled
+2. That is held weekly
+3. That lasts for 30 minutes
+4. That is held with each of your directs
+5. In which the direct's issues are primary
+6. In which the manager takes notes
+
+** Scheduling
+
+#+BEGIN_QUOTE
+Scheduling your O3s is actually more important than having them weekly. That's
+why it's first on our list. It is more important
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+Weekly It is best to conduct your One On Ones on a weekly basis. The simplest
+reason for this is that you probably think about your work life in weekly
+increments.
+#+END_QUOTE
+
+How DO you “stay in touch” with those in your organization who
+are “below” your directs? First, insist on your subordinate
+managers doing One On Ones with their directs. Your
+immediate subordinate managers are responsible for their
+relationships with their directs. The way you maintain your
+relationship with your skips (and even levels below that, if it
+applies to you) is by keeping a strong relationship with your
+directs and relying on them to maintain relationships with theirs.
+Any other model for this just doesn't scale.
+
+What this means is that you won't be able to have the same
+relationship with people who are two or more levels down from
+you. You won't, but it's okay, because you're not supposed to.
+Efforts to do so are a waste of your most precious resource as a
+manager: your time. Build an organization of effective managers
+
+* Talk about performance - Feedback
+
+#+BEGIN_QUOTE
+The second critical manager behavior that leads to results and retention is
+communicating about performance.
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+When the average manager gives feedback, the focus is on what happened. The
+manager thinks about what happened in the past and asks herself how to talk to
+the direct—about what happened, in the past, about which the manager can do
+nothing.
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+If you don't point out mistakes frequently, your directs assume that, when you
+do choose to talk to them, they think it's because they may be “in trouble.”
+Their defensiveness, then, should not be surprising.
+#+END_QUOTE
+
+** Encourage Effective Future Behavior
+
+#+BEGIN_QUOTE
+The moment you switch to a future focus, however, you free yourself up to focus
+on something that you (and they) can do something about. *Regardless of whether
+your direct was ineffective or effective this morning, the true purpose of any
+performance communication about either situation is exactly the same: you want
+more effective behavior in the future*. If your direct made a mistake, you want
+different behavior. If your direct did something well, you want more of the
+same.
+#+END_QUOTE
+
+The Manager Tools Feedback Model has four simple steps:
+
+1. Ask: Ask your direct if you can give then some feedback. Also, it's an
+   important managerial rule to *never ask a question of your directs if you
+   don't intend to honor their answer*.
+2. State the Behavior: How should one pass it's messages to one's peers.
+   - The words you say: The words you choose to say out loud to others are a
+   choice, and different words produce different results. *Your choice of words
+   makes a difference in business results*. Furthermore, certain words are known
+   to produce distinctly better results in certain situations.
+   - How to say words: Watch your tone, tenor and inflection.
+   - Your facial expressions: Non-verbal language actually accounts for most of
+     the perceived meaning in normal conversations.
+   - Body language: Same as above.
+   - Work product: What you do and how well you do your job are behaviours as well.
+     - Quality
+     - Quantity
+     - Accuracy
+     - Timeliness
+     - Documents
+
+   Here are is template on how to start: "When you <behavior>...", for instance:
+    - "When you are ahead of schedule..."
+    - "When you stay an extra hour to find the root cause..."
+    - "When you respond politely after the customer insults you..."
+    - "When you make that extra call to keep the customer informed..."
+    - "When you promise it to me yesterday but don't deliver..."
+
+    #+BEGIN_QUOTE
+    Would you rather have a 15-second negative feedback
+    discussion or a two-minute negative feedback discussion with
+    your boss? Shorter is better. Saying “When you” will help you be
+    #+END_QUOTE
+
+3. State the Impact of the Behavior
+
+    #+BEGIN_QUOTE
+    (...) effective feedback isn't about waiting until there's a pattern, and it
+    doesn't get better with age. And wouldn't you rather know sooner rather than
+    later that there's a problem?
+    #+END_QUOTE
+
+4. Encourage Effective Future Behavior
+
+    #+BEGIN_QUOTE
+    When we are giving negative feedback, we are asking the direct to behave
+    differently. *We're not punishing the past mistake, because we've already
+    forgiven it. Remember that our focus is on the future, not the past*.
+    #+END_QUOTE
+
+5. Ask
+
+** When should I give feedback
+
+Feedbacks should be given as early and often as possible, if you can give
+feedback right after noticing positive/negative behaviour that's ideal, of
+course, make sure you do so without others overhearing.
+
+#+BEGIN_QUOTE
+If you keep in mind that sooner is better and that there's no appreciable
+decline in value during the first three to five days, you have a lot more time
+and a lot more opportunities to deliver what it is your directs want—and tell us
+they want. 
+#+END_QUOTE
+
+- Encouraging feedback can be given in front of other people, unless they don't
+  like attention.
+
+* Common Questions and Resistance to Feedback
+
+First, ask yourself these three questions before offering feedback.
+
+** The questions
+
+*** Am I angry?
+
+#+BEGIN_QUOTE
+If you're angry, don't give feedback. Period.
+#+END_QUOTE
+
+*** Do I want to remind or punish?
+
+Always focus in encouraging effective future behavior.
+
+*** Can I let it go?
+
+#+BEGIN_QUOTE
+If you can't let it go in terms of how you feel, we recommend that you do let it
+go by not giving negative feedback.
+#+END_QUOTE
+
+*** Maybe delay or defer?
+
+If you can't pass the three tests above, you should either *delay* or *defer*.
+
+- Delay: Hold off giving feedback for a while, a few hours won't hurt.
+- Defer: If you're still angry, if you can't let it go completely, don't give
+  negative feedback about the behavior. If the bad behavior is corrected, doing
+  nothing worked, otherwise, you'll have the another chance to give feedback
+  again.
+
+*** The Shot across the Bow
+
+What do I do if one of my directs pushes back or refuses feedback? If your
+direct is defensive it means they likely know they're in the wrong. Do not drag
+a conflict from the past and focus on the future.
+
+#+BEGIN_QUOTE
+Once you've given the feedback and the direct has pushed back, pause, smile,
+apologize, and walk away. You've made your point.
+#+END_QUOTE
+
+** The capstone: systemic feedback
+
+#+BEGIN_QUOTE
+Systemic feedback changes what you are talking to your direct about and raises
+the level of consequences associated with a continued failure to
+change. Systemic feedback addresses the direct's combination of continued
+failure to change with the direct's stated commitment to change. It addresses
+the greater failure to meet a repeated commitment. Failure to meet commitments
+is a systemic failure that no organization can long
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+Here is the fundamental difference. Standard feedback is about small
+behaviors. Systemic feedback addresses the moral hazard of a direct committing
+to new behavior but then failing to follow through. We can tolerate directs who
+make mistakes. We cannot tolerate directs who repeatedly make commitments they
+don't keep.
+#+END_QUOTE
+
+*** When to use it?
+
+#+BEGIN_QUOTE
+You should use systemic feedback when you have already given six instances of
+standard feedback in a period of time that indicates a pattern, and the direct
+has not been engaging in the behavior they've committed to.
+#+END_QUOTE
+
+*** How is it different?
+
+In systemic feedbacks you're giving feedback on *the failure to meet commitments*.
+
+*** Two dangers
+
+1. Use the standard feedback model before applying the systemic feedback
+2. Implied sanctions must be delivered
+
+* How to start giving feedback
+  
+** Announce your intention in your weekly staff meeting
+
+#+BEGIN_QUOTE
+Cover the purpose of feedback talk to your directs about the purpose of giving
+feedback, which is to "encourage effective future behavior". 
+#+END_QUOTE
+
+- Counteract their possible fear by explaining (plainly) why you're using the
+  feedback model
+
+** Give only positive feedback for eigth weeks
+
+#+BEGIN_QUOTE
+Don't give any negative feedback as you're learning to use the feedback
+model. If you try to slip in some negative feedback, you run the risk of doing
+it poorly because you haven't yet mastered the model and the delivery. You may
+hurt the feelings of your direct.
+#+END_QUOTE
+
+- Start with one feedback per day
+- If you can go five days in a row giving feedback, then raise the limit to two.
+
+** Stay as positive as you can
+
+- Don't overdo negative feedbacks
+- Positive feedbacks are much more powerful tools than negative ones
+
+#+BEGIN_QUOTE
+If you believe you should be "vigilant" against "mistakes", two things will
+happen gradually: you'll start seeing all the mistakes, and you'll stop seeing
+all the good behaviors.
+#+END_QUOTE
+
+* Push work down - Delegation
+
+#+BEGIN_QUOTE
+Learning to delegate is part of the transition to becoming an executive. Too
+many managers today think that because they are smarter and more effective at
+getting things done than their directs, they should try to get more done by
+doing it themselves.
+#+END_QUOTE
+
+How do we know when something is a task assignment and not a delegation? 
+
+*** Task assignment x Task delegation
+
+#+BEGIN_QUOTE
+Delegation, on the other hand, is you turning over responsibility for one of
+your regular responsibilities - something you routinely do - on a permanent or
+long standing basis, to one of your directs.
+#+END_QUOTE
+
+*** Why Delegation Is the Solution - The Delegation
+
+*** Delegate the Big Black Ball
+
+- Not a good idea, since you *don't* know how to do it, how are you going to
+  help your directs to do it?
+- You need to understand the work before you can delegate it.
+
+#+BEGIN_QUOTE
+Don't ever delegate a new responsibility your boss has just given you to one of
+your directs. Learn it first, master it, before
+#+END_QUOTE
+
+*** Delegate One of the Big Gray Balls
+
+#+BEGIN_QUOTE
+One of your small balls is a big ball to your direct.
+#+END_QUOTE
+
+- Splitting a big ball wouldn't work either, since you'll have to coordinate the
+  task anyway.
+
+*** Delegate One or More of the Small Balls
+
+** How to Delegate—The Manager Tools Delegation Model
+
+1. State your desire for help
+2. Tell them why you're asking them
+3. Ask for specific acceptance
+4. Describe the task or project in detail
+5. Address deadline, quality, and reporting standards
+

@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       e670c5d9-8238-4bf4-a916-e9ffb3097fa1
+:END:
+#+title: GitOps
+
+* Architecture Components
+
+| Items                   |                                                                |
+|-------------------------+----------------------------------------------------------------|
+| Source Control          | Github, Gitlab, ...                                            |
+| Git Resitory            |                                                                |
+| Container/Helm Registry | Gitlab Registry, Azure Container Registry, ...                 |
+| Operator                | Flux, Argo CD, [[id:ee377537-0c8d-48c9-a181-19a2cff8c4a7][kubectl]] apply, ...                              |
+| Namespace               | A well defined namespace policy (per app, per environment, ... |
+
+
+* ArgoCD 
+
+** Architecture
++ API Server
+
+  A gRPC/REST web server that exposes the API, it's used by both the UI & CLI
+
++ Repository Server
+
+  Maintains a local cache of the git repository
+
++ Application Controller
+
+  A [[id:dd924a84-7d6f-41ec-98c2-aa16582c0d89][Kubernetes]] controller monitors apps and compares the current state of
+  the cluster with the desired state of the Git repository.

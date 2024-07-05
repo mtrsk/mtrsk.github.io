@@ -1,0 +1,49 @@
+#+TITLE: Benevides Blog
+#+bibliography: ./refs.bib
+#+HUGO_BASE_DIR: ../
+#+HUGO_PAIRED_SHORTCODES: alert image
+#+AUTHOR: Marcos Benevides
+
+* Pages
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: /
+:END:
+
+** Home
+:PROPERTIES:
+:EXPORT_TITLE: homepage title
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_TYPE: homepage
+:END:
+
+#+INCLUDE: "../blog/home.org"
+
+* Blog  :@blog:
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: blog
+:END:
+
+** How to use private NeoVim plugins on NixOS
+:PROPERTIES:
+:EXPORT_FILE_NAME: how-to-use-private-neovim-plugins-on-nixos
+:EXPORT_DATE: 2023-09-17
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug how-to-use-private-neovim-plugins-on-nixos
+:CUSTOM_ID: how-to-use-private-neovim-plugins-on-nixos
+:END:
+
+#+INCLUDE: "../blog/posts/how-to-use-private-neovim-plugins-on-nixos.org"
+
+** I've Switched to NixOS
+:PROPERTIES:
+:EXPORT_FILE_NAME: ive-switched-to-nixos
+:EXPORT_DATE: 2018-08-17
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug ive-switched-to-nixos
+:CUSTOM_ID: ive-switched-to-nixos
+:END:
+
+#+INCLUDE: "../blog/posts/ive-switched-to-nixos.org"
+
+* Notes :@notes:
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: notes
+:END:
