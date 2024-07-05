@@ -1,0 +1,48 @@
+:PROPERTIES:
+:ID:       de7d0e94-618f-4982-b3e5-8806d88cad5d
+:END:
+#+title: Erlang
+
+Resources:
+
++ [[https://github.com/oreillymedia/etudes-for-erlang][Etudes for Erlang]]
++ [[https://www.amazon.com.br/Introducing-Erlang-Simon-St-Laurent/dp/1449331769][Introducing Erlang]]
+
+* Chapter 1: Getting Comfortable 
+
+** Numbers in Erlang
+
+#+BEGIN_QUOTE
+    If you need to do calculations on integers using a base other than 10, you can use
+    Base#Value notation.
+#+END_QUOTE
+
+** Seeing Your Bound Variables
+
+~b()~ shows all bound variables in the current erlang shell.
+
+#+BEGIN_SRC shell
+    > b().
+    N = 1
+    Number = 5
+#+END_SRC
+
+** Clearing Bound Variables in the Shell
+
+#+BEGIN_SRC shell
+  > f(N).
+  > f().
+#+END_SRC
+
+* Chapter 2: Functions and Modules
+
+** Defining Modules
+
+#+BEGIN_SRC erlang
+    -module(drop).
+    -export([fall_velocity/1, mps_to_mph/1, mps_to_kph/1]).
+
+    fall_velocity(Distance) -> math:sqrt(2 * 9.8 * Distance).
+    mps_to_mph(Mps) -> 2.23693629 * Mps.
+    mps_to_kph(Mps) -> 3.6 * Mps.
+#+END_SRC

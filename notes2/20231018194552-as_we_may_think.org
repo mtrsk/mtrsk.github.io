@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       22759a84-3a09-464f-b0f7-e5d0a7bf5295
+:END:
+#+TITLE: As We May Think
+
+#+BEGIN_QUOTE
+In this article Bush described a device called a Memex, which, using a complex
+mechanical system of reels and microfilm, along with an encoding system, would
+allow users to jump between related frames of content. The Memex was never
+actually implemented, but it was an inspiration for later work on the idea of
+Hypermedia.
+#+END_QUOTE
+

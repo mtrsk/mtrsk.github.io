@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       f5f06bf3-d288-47a8-901f-37bec1ba50e7
+:END:
+#+title: DNS
+
+* Why do we need DNS?
+
+| Human-Friendly Name | Machine-Friendly Name |
+|---------------------+-----------------------|
+| dns.google.com      |               8.8.8.8 |
+| dns.cloudfare.com   |               1.1.1.1 |
+
+* Terminology
+
+** Labels
+
+| Node |   | Subdomain |   | Domain |   | TLD | Root |
+|------+---+-----------+---+--------+---+-----+------|
+| www  | . | abc       | . | xyz    | . | com | .    |
+
+where TLD is an abbreviation for "Top Level Domain".
+
+** Zones
+
+** Query Types
+
++ Recursive
++ Iterative

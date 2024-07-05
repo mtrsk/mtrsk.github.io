@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       b9376a33-534c-4468-a788-df96a642a8e2
+:END:
+#+title: Helm
+
+* What is Helm?
+A tool that uses a package manager to create, install and manage applications
+inside a [[id:dd924a84-7d6f-41ec-98c2-aa16582c0d89][Kubernetes]] cluster.
+
+* What is a Helm Chart?
+
+A ~Helm Chart~ is a package containing files that will be used to deploy
+applications in the cluster. It consists of the following structure:
+
++ ~Chart.yaml~
+  Metadata for the application chart
++ ~values.yaml~
+  Values to the injected at the templates in runtime
++ ~templates~
+  A directory consisting of:
+  * ~deployment.yaml~
+  * ~services.yaml~ 
+  * ~_helpers.tbl~ 
+  * ~...~ 
+
+* Commands
+

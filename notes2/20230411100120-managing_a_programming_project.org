@@ -1,0 +1,55 @@
+:PROPERTIES:
+:ID:       da4d5031-66cb-4d1c-b8cf-24d12adf5c17
+:END:
+#+title: managing-a-programming-project
+
+* Introduction
+
+** Your ground rules
+
++ Adopt a set of unambiguous definitions and stick with them
++ Define your project's _development cycle_ and related all schedules and work
+  process to that cycle
++ Define activities, such as _levels of testing_, in a consistent way
++ Define a _system of documents_ clearly, consistent and early
+
+** Your contract
+
+#+BEGIN_QUOTE
+Half the horror stories about programming involve either bad contracts or no
+contract at all
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+The fact that you are managing a programming project means that you will be
+running a business. You will have suppliers, you will have one or more
+customers. You will have employees, you will have commitments, you will have
+financial goals, you will have measured results. (...) . Your responsibility is
+to manage your business so that everyone - your "investors" (the executives that
+gave you the assignment), your customers (the people who will use your system
+for a long time to come), your employees (...), and you - will look at your
+operating results and feel a sense of satisfaction.
+#+END_QUOTE
+
+*** Writing your own contract
+1. Scope of work
+2. Schedule and deliverables
+3. Key customer people
+4. Reviews
+5. Change management procedures
+6. Testing constraints
+7. Acceptance criteria
+8. Additional constraints
+9. Price
+
+** The nature of the beast
+
+"Why is software hard to build?"
+
++ The System
+#+BEGIN_QUOTE
+In order for a system that you are building to be useful, it needs to satisfy
+the needs of other systems.
+#+END_QUOTE
++ Interactions
++ Change

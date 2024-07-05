@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       116d7265-e46f-4b42-b5ef-af1e913e2c12
+:END:
+#+TITLE: The Mother of All Demos
+
+#+BEGIN_QUOTE
+Englebart demonstrated an unbelievable amount of technology:
+
+ * Remote, collaborative text editing with his peers in Menlo Park
+ * Video and audio chat
+ * An integrated windowing system, with window resizing, etc
+ * A recognizable hypertext, whereby clicking on underlined text navigated to new content
+
+Despite receiving a standing ovation from a shocked audience after his talk, it was decades before the technologies Englebart demonstrated became mainstream.
+#+END_QUOTE
+
