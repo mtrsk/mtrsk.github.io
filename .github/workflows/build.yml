@@ -2,15 +2,13 @@ name: Build
 
 on:
   pull_request:
-    branches: [ master ]
-
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  deploy:
+  pr-build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
