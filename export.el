@@ -6,6 +6,27 @@
 (require 'oc-csl)
 (require 'citeproc)
 
+;; Configuration Variables:
+(setq content-dir (concat (getenv "PWD") "/content-org"))
+
+;; Don't ask for confirmation before evaluating a code block
+;;(setq org-confirm-babel-evaluate nil)
+;;(setq org-export-use-babel t)
+(setq org-export-with-broken-links t)
+
+;; This makes it easier to export my notes into something that
+;; ox-hugo will easily pick links and generate markdowns.
+;; https://www.orgroam.com/manual.html#Overriding-the-default-link-creation-function
+;;(defun org-roam-custom-link-builder (node)
+;;  (let ((file (org-roam-node-file node)))
+;;    (concat (file-name-base file) ".html")))
+;;
+;;(setq org-roam-graph-link-builder 'org-roam-custom-link-builder)
+
+;;(setq org-roam-graph-link-builder 'org-roam-custom-link-builder)
+
+;; Functions
+
 (defun ox-hugo/export-all (&optional org-files-root-dir dont-recurse)
   "Export all Org files (including nested) under ORG-FILES-ROOT-DIR.
 
@@ -45,7 +66,7 @@ Example usage in Emacs Lisp: (ox-hugo/export-all \"~/org\")."
             (setq cnt (1+ cnt))))
         (message "Done!")))))
 
-;; regular posts
+;; Regular posts
 (setq org-id-locations-file ".orgids"
       org-src-preserve-indentation t
       org-cite-export-processors '((latex biblatex)
@@ -53,6 +74,6 @@ Example usage in Emacs Lisp: (ox-hugo/export-all \"~/org\")."
                                    (html csl)
                                    (t csl)))
 
-(ox-hugo/export-all "content-org" t)
+(ox-hugo/export-all content-dir t)
 
 ;;; export.el ends here

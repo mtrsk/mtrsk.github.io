@@ -77,7 +77,7 @@
             inherit inputs pkgs;
             modules = [
               ({ pkgs, lib, ... }: {
-                packages = [ texenv ] ++ tooling;
+                packages = [ customEmacs ] ++ [ texenv ] ++ tooling;
 
                 scripts = {
                   build.exec = "just build";
