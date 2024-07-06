@@ -64,5 +64,6 @@ hugo.linux
 
 # Extra
 content/
+ltximg
 *env*
 *zip

@@ -29,7 +29,7 @@ Algebraic Models for Accouting Systems
 ** The values of an account
 
 Let there be given a set R together with two binary operations on R called
-addition and multiplication, denoted in the usual way, such that the following
+ddition and multiplication, denoted in the usual way, such that the following
 rules hold for all elements $a, b, c \in R$:
 
 \begin{align*}

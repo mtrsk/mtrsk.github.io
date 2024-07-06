@@ -6,6 +6,8 @@ An Org-based personal page and blog.
 
 ** Usage
 
+This project uses the 
+
 *** Development
 
 #+BEGIN_SRC bash
