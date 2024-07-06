@@ -66,6 +66,7 @@
           # a custom package with just enough tools to generate the markdown
           # for org-roam.
           ci = pkgs.mkShell {
+            HUGO_ENVIRONMENT="production";
             buildInputs = [ customEmacs ] ++ tooling;
           };
 
@@ -79,9 +80,13 @@
               ({ pkgs, lib, ... }: {
                 packages = [ customEmacs ] ++ [ texenv ] ++ tooling;
 
+                env = {
+                  HUGO_ENVIRONMENT="development";
+                };
+
                 scripts = {
                   build.exec = "just build";
-                  publish.exec = "just publish";
+                  publish.exec = "just public";
                   run.exec = "just run";
                   clean.exec = "just clean";
                 };

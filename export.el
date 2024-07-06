@@ -5,28 +5,26 @@
 (require 'org)
 (require 'oc-csl)
 (require 'citeproc)
+(require 'find-lisp)
 
 ;; Configuration Variables:
 (setq content-dir (concat (getenv "PWD") "/content-org"))
 
 ;; Don't ask for confirmation before evaluating a code block
-;;(setq org-confirm-babel-evaluate nil)
+(setq org-confirm-babel-evaluate nil)
 ;;(setq org-export-use-babel t)
 (setq org-export-with-broken-links t)
 
 ;; This makes it easier to export my notes into something that
 ;; ox-hugo will easily pick links and generate markdowns.
 ;; https://www.orgroam.com/manual.html#Overriding-the-default-link-creation-function
-;;(defun org-roam-custom-link-builder (node)
-;;  (let ((file (org-roam-node-file node)))
-;;    (concat (file-name-base file) ".html")))
-;;
-;;(setq org-roam-graph-link-builder 'org-roam-custom-link-builder)
+(defun org-roam-custom-link-builder (node)
+  (let ((file (org-roam-node-file node)))
+    (concat (file-name-base file) ".html")))
 
-;;(setq org-roam-graph-link-builder 'org-roam-custom-link-builder)
+(setq org-roam-graph-link-builder 'org-roam-custom-link-builder)
 
 ;; Functions
-
 (defun ox-hugo/export-all (&optional org-files-root-dir dont-recurse)
   "Export all Org files (including nested) under ORG-FILES-ROOT-DIR.
 
