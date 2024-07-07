@@ -1,5 +1,6 @@
 :PROPERTIES:
 :ID:       9a03d556-ded4-4096-9a8c-c2147dee70a5
+:ROAM_ALIASES: "Algebra"
 :END:
 #+TITLE: Algebraic Models for Accounting Systems
 #+STARTUP: latexpreview
@@ -29,7 +30,7 @@ Algebraic Models for Accouting Systems
 ** The values of an account
 
 Let there be given a set R together with two binary operations on R called
-addition and multiplication, denoted in the usual way, such that the following
+ddition and multiplication, denoted in the usual way, such that the following
 rules hold for all elements $a, b, c \in R$:
 
 \begin{align*}

@@ -5,6 +5,11 @@ languageCode = "en-us"
 pygmentsUseClasses = true
 assetDir = "static"
 
+[params]
+  subtitle = "\"Writing is nothing more than a guided dream.\""
+  [params.author]
+    name = "Marcos Benevides"
+
 [outputs]
   section = ["HTML", "ATOM"]
 
@@ -12,8 +17,6 @@ assetDir = "static"
   blog = '/blog/:year/:slug/'
   notes = '/notes/:year/:slug/'
 
-[author]
-  name = "Marcos Benevides"
 
 [mediaTypes."application/atom+xml"]
   suffixes = ["xml"]

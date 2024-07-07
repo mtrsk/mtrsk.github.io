@@ -2,6 +2,7 @@
 #+bibliography: ./refs.bib
 #+HUGO_BASE_DIR: ../
 #+HUGO_PAIRED_SHORTCODES: alert image
+#+OPTIONS: broken-links:mark
 #+AUTHOR: Marcos Benevides
 
 * Pages
@@ -58,6 +59,36 @@ This page is a rendered version of my [[https://en.wikipedia.org/wiki/OPML][OPML
 
 #+INCLUDE: "../blog/notes.org"
 
+** Abelian Group
+:PROPERTIES:
+:EXPORT_FILE_NAME: abelian-group
+:EXPORT_DATE: 2023-10-07
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug abelian-group
+:CUSTOM_ID: abelian-group
+:END:
+
+#+INCLUDE: "../notes/20231007164540-abelian_group.org"
+
+** Algebraic Models for Accouting Systems
+:PROPERTIES:
+:EXPORT_FILE_NAME: algebraic-models-for-accouting-systems
+:EXPORT_DATE: 2023-10-05
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug algebraic-models-for-accouting-systems
+:CUSTOM_ID: algebraic-models-for-accouting-systems
+:END:
+
+#+INCLUDE: "../notes/20231005194145-algebraic_models_for_accounting_systems.org"
+
+** Commutative Ring
+:PROPERTIES:
+:EXPORT_FILE_NAME: commutative-ring
+:EXPORT_DATE: 2023-10-07
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug commutative-ring
+:CUSTOM_ID: commutative-ring
+:END:
+
+#+INCLUDE: "../notes/20231007164648-commutative_ring.org"
+
 ** Distributed Systems
 :PROPERTIES:
 :EXPORT_FILE_NAME: distributed-systems
@@ -67,6 +98,36 @@ This page is a rendered version of my [[https://en.wikipedia.org/wiki/OPML][OPML
 :END:
 
 #+INCLUDE: "../notes/20211202213813-distributed_systems.org"
+
+** Erlang
+:PROPERTIES:
+:EXPORT_FILE_NAME: erlang
+:EXPORT_DATE: 2024-06-19
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug erlang
+:CUSTOM_ID: erlang
+:END:
+
+#+INCLUDE: "../notes/20240619114451-erlang.org"
+
+** Introducing Erlang: Getting Started in Functional Programming
+:PROPERTIES:
+:EXPORT_FILE_NAME: introducing-erlang
+:EXPORT_DATE: 2024-07-06
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug introducing-erlang
+:CUSTOM_ID: introducing-erlang
+:END:
+
+#+INCLUDE: "../notes/20240706222446-introducing_erlang.org"
+
+** Programming Erlang: Software for a Concurrent World
+:PROPERTIES:
+:EXPORT_FILE_NAME: programming-erlang-software-for-a-concurrent-world
+:EXPORT_DATE: 2024-07-06
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug programming-erlang-software-for-a-concurrent-world
+:CUSTOM_ID: programming-erlang-software-for-a-concurrent-world
+:END:
+
+#+INCLUDE: "../notes/20240706213027-programming_erlang.org"
 
 ** History of Logic: From Aristotle to Taski
 :PROPERTIES:
@@ -117,3 +178,13 @@ This page is a rendered version of my [[https://en.wikipedia.org/wiki/OPML][OPML
 :END:
 
 #+INCLUDE: "../notes/20231008214945-monoid.org"
+
+** R-Module Homomorphism
+:PROPERTIES:
+:EXPORT_FILE_NAME: r-module-homomorphism
+:EXPORT_DATE: 2023-10-07
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug r-module-homomorphism
+:CUSTOM_ID: r-module-homomorphism
+:END:
+
+#+INCLUDE: "../notes/20231007182834-r_module_homomorphism.org"
