@@ -5,13 +5,97 @@
   
     <link href="https://mtrsk.github.io/notes/atom.xml" rel="self" type="application/atom+xml" />
   
-  <updated>2024-07-05T17:01:52Z</updated>
+  <updated>2024-07-07T02:31:20Z</updated>
   <author>
-    <name>Marcos Benevides</name>
+    
     
   </author>
   <generator>Hugo</generator>
   <id>https://mtrsk.github.io/notes/</id>
+  
+  <entry>
+    <title>Introducing Erlang: Getting Started in Functional Programming</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/introducing-erlang/"/>
+    <id>https://mtrsk.github.io/notes/2024/introducing-erlang/</id>
+    <published>2024-07-06T00:00:00Z</published>
+    <updated>2024-07-06T00:00:00Z</updated>
+    <summary>:ID: f5e7bb90-792d-406a-8c40-2b072db63a13
+Chapter 1: Getting Comfortable Numbers in Erlang If you need to do calculations on integers using a base other than 10, you can use Base#Value notation.
+Seeing Your Bound Variables b() shows all bound variables in the current erlang shell.
+&amp;gt; b(). N = 1 Number = 5 Clearing Bound Variables in the Shell &amp;gt; f(N). &amp;gt; f(). Chapter 2: Functions and Modules Defining Modules -module(drop). -export([fall_velocity/1, mps_to_mph/1, mps_to_kph/1]).</summary>
+    <content type="html">&lt;p&gt;:ID:       f5e7bb90-792d-406a-8c40-2b072db63a13&lt;/p&gt;
+&lt;h2 id=&#34;chapter-1-getting-comfortable&#34;&gt;Chapter 1: Getting Comfortable&lt;/h2&gt;
+&lt;h3 id=&#34;numbers-in-erlang&#34;&gt;Numbers in Erlang&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you need to do calculations on integers using a base other than 10, you can use
+Base#Value notation.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;seeing-your-bound-variables&#34;&gt;Seeing Your Bound Variables&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;b()&lt;/code&gt; shows all bound variables in the current erlang shell.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;gt; b&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;N&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Number&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;clearing-bound-variables-in-the-shell&#34;&gt;Clearing Bound Variables in the Shell&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;gt; f&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;N&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;gt; f&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;chapter-2-functions-and-modules&#34;&gt;Chapter 2: Functions and Modules&lt;/h2&gt;
+&lt;h3 id=&#34;defining-modules&#34;&gt;Defining Modules&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;module&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;drop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fall_velocity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mps_to_mph&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mps_to_kph&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]).&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;fall_velocity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Distance&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;math&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;sqrt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Distance&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;mps_to_mph&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Mps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;23693629&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Mps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;mps_to_kph&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Mps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Mps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    
+    
+    <category term="notes"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Programming Erlang: Software for a Concurrent World</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/programming-erlang-software-for-a-concurrent-world/"/>
+    <id>https://mtrsk.github.io/notes/2024/programming-erlang-software-for-a-concurrent-world/</id>
+    <published>2024-07-06T00:00:00Z</published>
+    <updated>2024-07-06T00:00:00Z</updated>
+    <summary>:ID: 1daea4ea-40bc-406d-8d03-906c7f9ec343 :ROAM_REFS: &amp;ldquo;Programming Erlang&amp;rdquo;</summary>
+    <content type="html">&lt;p&gt;:ID:       1daea4ea-40bc-406d-8d03-906c7f9ec343
+:ROAM_REFS: &amp;ldquo;Programming Erlang&amp;rdquo;&lt;/p&gt;
+</content>
+    
+    
+    <category term="notes"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Erlang</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/erlang/"/>
+    <id>https://mtrsk.github.io/notes/2024/erlang/</id>
+    <published>2024-06-19T00:00:00Z</published>
+    <updated>2024-06-19T00:00:00Z</updated>
+    <summary>:ID: de7d0e94-618f-4982-b3e5-8806d88cad5d
+Resources:
+Etudes for Erlang (Laurent 2017): Notes from [BROKEN LINK: f5e7bb90-792d-406a-8c40-2b072db63a13] (Armstrong 2013): Notes from [BROKEN LINK: 1daea4ea-40bc-406d-8d03-906c7f9ec343] References Armstrong, Joe. 2013. “Programming Erlang: Software for a Concurrent World.” Laurent, Simon St. 2017. Introducing Erlang: Getting Started in Functional Programming. O’Reilly Media, Inc. </summary>
+    <content type="html">&lt;p&gt;:ID:       de7d0e94-618f-4982-b3e5-8806d88cad5d&lt;/p&gt;
+&lt;p&gt;Resources:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/oreillymedia/etudes-for-erlang&#34;&gt;Etudes for Erlang&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;(&lt;a href=&#34;#citeproc_bib_item_2&#34;&gt;Laurent 2017&lt;/a&gt;): Notes from [BROKEN LINK: f5e7bb90-792d-406a-8c40-2b072db63a13]&lt;/li&gt;
+&lt;li&gt;(&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Armstrong 2013&lt;/a&gt;): Notes from [BROKEN LINK: 1daea4ea-40bc-406d-8d03-906c7f9ec343]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Armstrong, Joe. 2013. “Programming Erlang: Software for a Concurrent World.”&lt;/div&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_2&#34;&gt;&lt;/a&gt;Laurent, Simon St. 2017. &lt;i&gt;Introducing Erlang: Getting Started in Functional Programming&lt;/i&gt;. O’Reilly Media, Inc.&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    
+    
+    <category term="notes"/>
+    
+  </entry>
   
   <entry>
     <title>Monad</title>
@@ -106,6 +190,36 @@ t_1, t_2, t_3 \in \mathbb{M}, (t_1 \cdot t_2) \cdot t_3 = t_1 \cdot (t_2 \cdot t
   </entry>
   
   <entry>
+    <title>Abelian Group</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2023/abelian-group/"/>
+    <id>https://mtrsk.github.io/notes/2023/abelian-group/</id>
+    <published>2023-10-07T00:00:00Z</published>
+    <updated>2023-10-07T00:00:00Z</updated>
+    <summary>:ID: 6550857e-ec3f-4b76-80ce-9b86df92601e</summary>
+    <content type="html">&lt;p&gt;:ID:       6550857e-ec3f-4b76-80ce-9b86df92601e&lt;/p&gt;
+</content>
+    
+    
+    <category term="notes"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Commutative Ring</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2023/commutative-ring/"/>
+    <id>https://mtrsk.github.io/notes/2023/commutative-ring/</id>
+    <published>2023-10-07T00:00:00Z</published>
+    <updated>2023-10-07T00:00:00Z</updated>
+    <summary>:ID: 44839048-b783-4a37-9267-b8e59160d90f</summary>
+    <content type="html">&lt;p&gt;:ID:       44839048-b783-4a37-9267-b8e59160d90f&lt;/p&gt;
+</content>
+    
+    
+    <category term="notes"/>
+    
+  </entry>
+  
+  <entry>
     <title>Left R-Module</title>
     <link rel="alternate" href="https://mtrsk.github.io/notes/2023/left-r-module/"/>
     <id>https://mtrsk.github.io/notes/2023/left-r-module/</id>
@@ -125,6 +239,231 @@ r \cdot (x + y) &amp;amp;= r \cdot x + r \cdot y \tag{1}\\
 (r \cdot s) \cdot x &amp;amp;= r \cdot (s \cdot x) \tag{3}\\
 1 \cdot x &amp;amp;= x \tag{4}
 \end{align*}&lt;/p&gt;
+</content>
+    
+    
+    <category term="notes"/>
+    
+  </entry>
+  
+  <entry>
+    <title>R-Module Homomorphism</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2023/r-module-homomorphism/"/>
+    <id>https://mtrsk.github.io/notes/2023/r-module-homomorphism/</id>
+    <published>2023-10-07T00:00:00Z</published>
+    <updated>2023-10-07T00:00:00Z</updated>
+    <summary>:ID: e41608f8-fcf2-4b02-b502-9441c0aee369</summary>
+    <content type="html">&lt;p&gt;:ID:       e41608f8-fcf2-4b02-b502-9441c0aee369&lt;/p&gt;
+</content>
+    
+    
+    <category term="notes"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Algebraic Models for Accouting Systems</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2023/algebraic-models-for-accouting-systems/"/>
+    <id>https://mtrsk.github.io/notes/2023/algebraic-models-for-accouting-systems/</id>
+    <published>2023-10-05T00:00:00Z</published>
+    <updated>2023-10-05T00:00:00Z</updated>
+    <summary>:ID: 9a03d556-ded4-4096-9a8c-c2147dee70a5 :ROAM_ALIASES: &amp;ldquo;Algebra&amp;rdquo;
+Algebraic Models for Accouting Systems
+Approaches to Accounting Theory Algebraic concepts employed Balance vectors
+A balance vector is a column vector or column matrix the sum of whose entries equals zero. Balance vectors are able to represent the state of an accounting system at any instant. They are also capable of encoding the transactions that are applied to the system. Digraph
+The vertices represent accounts and the edges indicate where there are flows of value within the system.</summary>
+    <content type="html">&lt;p&gt;:ID:       9a03d556-ded4-4096-9a8c-c2147dee70a5
+:ROAM_ALIASES: &amp;ldquo;Algebra&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Algebraic Models for Accouting Systems&lt;/p&gt;
+&lt;h2 id=&#34;approaches-to-accounting-theory&#34;&gt;Approaches to Accounting Theory&lt;/h2&gt;
+&lt;h3 id=&#34;algebraic-concepts-employed&#34;&gt;Algebraic concepts employed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Balance vectors&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A balance vector is a column vector or column matrix the sum of whose entries equals zero.&lt;/li&gt;
+&lt;li&gt;Balance vectors are able to represent the state of an accounting system at any instant.&lt;/li&gt;
+&lt;li&gt;They are also capable of encoding the transactions that are applied to the system.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Digraph&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The vertices represent accounts and the edges indicate where there are flows
+of value within the system. Thus a digraph gives a picture of how value can
+flow around an accounting system.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Automaton&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The applicability to accounting is clear: the states of the accounting
+system are the balance vectors, the inputs are the transactions and the
+outputs are the new balance vectors.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[BROKEN LINK: d89285be-d7a9-46a1-8a10-e14e73b66935]&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;balance-vectors&#34;&gt;Balance Vectors&lt;/h2&gt;
+&lt;h3 id=&#34;the-values-of-an-account&#34;&gt;The values of an account&lt;/h3&gt;
+&lt;p&gt;Let there be given a set R together with two binary operations on R called
+ddition and multiplication, denoted in the usual way, such that the following
+rules hold for all elements \(a, b, c \in R\):&lt;/p&gt;
+&lt;p&gt;\begin{align*}
+(a + b) + c &amp;amp;= a + (b + c) \tag{1}\\
+a + b &amp;amp;= b + a \tag{2}\\
+\exists 0 \in R, \forall a \in R, a + 0_r &amp;amp;= a \tag{3}\\
+\forall a \in R, \exists (-a) \in R, a + (-a) &amp;amp;= 0 \tag{4}\\
+a \times (b \times c) &amp;amp;= (a \times b) \times c \tag{5}\\
+a \times b &amp;amp;= b \times a \tag{6}\\
+a \times (b + c) &amp;amp;= a \times b + a \times c \tag{7}\\
+\exists 1 \in R, \forall a \in R, a \times 1 &amp;amp;= a \tag{8}
+\end{align*}&lt;/p&gt;
+&lt;p&gt;The first four of these requirements assert that &lt;strong&gt;R&lt;/strong&gt; is an algebraic structure
+called an &lt;strong&gt;[BROKEN LINK: 6550857e-ec3f-4b76-80ce-9b86df92601e]&lt;/strong&gt;. With the additional properties (5) through (8) R
+becomes a &lt;strong&gt;[BROKEN LINK: 44839048-b783-4a37-9267-b8e59160d90f]&lt;/strong&gt; with identity.&lt;/p&gt;
+&lt;p&gt;A commutative ring with identity &lt;strong&gt;R&lt;/strong&gt; is said to be &lt;strong&gt;linearly ordered&lt;/strong&gt; if there is a
+non-empty subset &lt;strong&gt;P&lt;/strong&gt; of &lt;strong&gt;R&lt;/strong&gt; not containing 0, called the set of positive elements,
+such that the following conditions are satisfied:&lt;/p&gt;
+&lt;p&gt;\begin{align*}
+a,b \in P \implies a + b \in P &amp;amp;\wedge a \times b \in P \tag{9}\\
+\forall a \in R, (a \in P) \lor (a = 0) &amp;amp;\lor (-a \in P) \tag{10}\\
+\end{align*}&lt;/p&gt;
+&lt;p&gt;The actual concept of a linear order arises when one defines a &amp;lt; b to mean that
+b − a ∈ P. The negative elements of R are the elements of the set R \ (P ∪
+{0}). On the basis of (9) and (10) it can be shown that the following holds:&lt;/p&gt;
+&lt;p&gt;\begin{align*}
+\forall a,b \in R, (a &amp;lt; b) \lor (a = b) &amp;amp;\lor (a &amp;gt; b) \tag{11}\\
+a,b \in R \wedge a \times b = 0 \implies a = 0 &amp;amp;\lor b = 0 \tag{12}\\
+\end{align*}&lt;/p&gt;
+&lt;h3 id=&#34;the-state-of-an-accounting-system&#34;&gt;The State of an Accounting System&lt;/h3&gt;
+&lt;p&gt;Let &lt;strong&gt;R&lt;/strong&gt; be an &lt;strong&gt;ordered domain&lt;/strong&gt;, which will be the universal set for all account
+values, and let n be a positive integer, which will be the number of accounts in
+the accounting system. The state of the system at any instant can be described
+by listing the values of the accounts, which are assumed to be in some agreed
+order, in the form of an n-column vector over &lt;strong&gt;R&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;\begin{equation*}
+V = \begin{bmatrix}
+v_1 \\
+v_2 \\
+\vdots \\
+v_n \\
+\end{bmatrix}
+\end{equation*}&lt;/p&gt;
+&lt;p&gt;Thus v_i ∈ R is the value of the ith account. The set of all n-column vectors over R is denoted by R^n.&lt;/p&gt;
+&lt;p&gt;Of particular importance is the zero vector:&lt;/p&gt;
+&lt;p&gt;\begin{equation*}
+0 = \begin{bmatrix}
+0 \\
+0 \\
+\vdots \\
+0 \\
+\end{bmatrix}
+\end{equation*}&lt;/p&gt;
+&lt;p&gt;Addition can also be defined:&lt;/p&gt;
+&lt;p&gt;\begin{equation*}
+u + v = \begin{bmatrix}
+u_1 + v_1 \\
+u_2 + v_2 \\
+\vdots \\
+u_n + v_n \\
+\end{bmatrix}
+\end{equation*}&lt;/p&gt;
+&lt;p&gt;as well as scalar products:&lt;/p&gt;
+&lt;p&gt;\begin{equation*}
+r \times v = \begin{bmatrix}
+r \times v_1 \\
+r \times v_2 \\
+\vdots \\
+r \times v_n \\
+\end{bmatrix}
+\end{equation*}&lt;/p&gt;
+&lt;p&gt;Let \(u, v, w \in R^n\) and \(r, s \in R\):&lt;/p&gt;
+&lt;p&gt;\begin{align*}
+(u + v) + w &amp;amp;= u + (v + w) \tag{1}\\
+u + v &amp;amp;= v + u \tag{2}\\
+v + 0 &amp;amp;= v \tag{3}\\
+v + (-v) &amp;amp;= 0 \tag{4}\\
+r \times (u + v) &amp;amp;= r \times u + r \times v \tag{5}\\
+(r + s) \times u &amp;amp;= r \times u + s \times u \tag{6}\\
+(r \times s) \times v &amp;amp;= r \times (s \times v) \tag{7}\\
+1_R \times v &amp;amp;= v \tag{8}
+\end{align*}&lt;/p&gt;
+&lt;p&gt;These properties demonstrate that the set R^n has a recognizable algebraic
+structure. Indeed properties (1) – (4) assert that R^n is an [BROKEN LINK: 6550857e-ec3f-4b76-80ce-9b86df92601e], while
+the additional properties (5) through (8) make R^n into a [BROKEN LINK: e4bd8f7b-a64d-4da3-b1e8-289d6fb0c441].&lt;/p&gt;
+&lt;h4 id=&#34;the-free-r-module-r-n&#34;&gt;The free R-module R^n&lt;/h4&gt;
+&lt;p&gt;It turns out that R^n is a particular type of R-module called a Free R-module. To
+see what is special about it, consider the so-called elementary column vectors
+e(1), e(2), &amp;hellip; , e(n) where the ith entry of e(i) is 1 = 1_R and all other
+entries are 0. Thus:&lt;/p&gt;
+&lt;p&gt;\begin{equation*}
+e(1) = \begin{bmatrix}
+1 \\
+0 \\
+\vdots \\
+0 \\
+\end{bmatrix}, \,
+e(2) = \begin{bmatrix}
+0 \\
+1 \\
+\vdots \\
+0 \\
+\end{bmatrix},
+\,\, (\ldots) \,\,,
+e(n) = \begin{bmatrix}
+0 \\
+0 \\
+\vdots \\
+n \\
+\end{bmatrix}
+\end{equation*}&lt;/p&gt;
+&lt;p&gt;Now an arbitrary vector \(v \in R^n\) is expressible in terms of these
+elementary vectors since:&lt;/p&gt;
+&lt;p&gt;\begin{equation*}
+v = v_1 \times e(1) + v_2 \times e(2) + \dots + v_n \times e(n)
+\end{equation*}&lt;/p&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+&lt;p&gt;The set of elementary vectors {e(1), . . . , e(n)} is an R-basis of R^n, so that R^n is a free R-module of rank n.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h4 id=&#34;balance-vectors-in-r-n&#34;&gt;Balance vectors in R^n&lt;/h4&gt;
+&lt;p&gt;The accounts of a company generally fall into three categories:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;Asset accounts&lt;/em&gt;, which represent anything owned by the company&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Liability accounts&lt;/em&gt;, which record what is owed by the company to external entities&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Equity accounts&lt;/em&gt; or a &lt;em&gt;profit and loss account&lt;/em&gt;; these show what is owed by the
+company to the owners and also show the net assets of the company.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;It is a fundamental fact that a double entry accounting system must always be in
+balance, a fact which is implied by the accounting equation:&lt;/p&gt;
+&lt;p&gt;\begin{equation*}
+A - L = E
+\end{equation*}&lt;/p&gt;
+&lt;p&gt;We proceed now to study the properties of the subset of balance vectors in R^n,
+where R is an ordered domain.&lt;/p&gt;
+&lt;p&gt;First, let us consider the function σ : R^n → R, which sums the entries of a
+column vector \(v \in R^n\).&lt;/p&gt;
+&lt;p&gt;\begin{equation*}
+\sigma(v) = \sum_{i=0}^{n} v_i
+\end{equation*}&lt;/p&gt;
+&lt;p&gt;σ has the following properties:&lt;/p&gt;
+&lt;p&gt;\begin{align*}
+\sigma(v + w) &amp;amp;= \sigma(v) + \sigma(w) \\
+\sigma(rv) &amp;amp;= r \sigma(v)\\
+\forall v,w \in R^n, r \in R
+\end{align*}&lt;/p&gt;
+&lt;p&gt;A function between two R-modules with these properties is called an [BROKEN LINK: e41608f8-fcf2-4b02-b502-9441c0aee369].&lt;/p&gt;
+&lt;p&gt;Module elements which are sent to zero by a module homomorphism σ form a subset
+called the &lt;strong&gt;kernel&lt;/strong&gt;, written \(\text{Ker}(\sigma)\).&lt;/p&gt;
+&lt;p&gt;Returning to the particular homomorphism σ, we conclude that its kernel,
+i.e. the set of balance vectors, is a submodule of R^n. We shall write
+\(\text{Baln} ( R)\) for the set of all balance vectors in R^n, so that
+\(\text{Ker}(\sigma) = \text{Baln}( R)\) is a submodule of R^n, which will be called the
+balance module of degree n over R.&lt;/p&gt;
+&lt;h4 id=&#34;properties-of-the-balance-module&#34;&gt;Properties of the Balance Module&lt;/h4&gt;
 </content>
     
     
