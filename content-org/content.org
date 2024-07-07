@@ -109,6 +109,26 @@ This page is a rendered version of my [[https://en.wikipedia.org/wiki/OPML][OPML
 
 #+INCLUDE: "../notes/20240619114451-erlang.org"
 
+** Introducing Erlang: Getting Started in Functional Programming
+:PROPERTIES:
+:EXPORT_FILE_NAME: introducing-erlang
+:EXPORT_DATE: 2024-07-06
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug introducing-erlang
+:CUSTOM_ID: introducing-erlang
+:END:
+
+#+INCLUDE: "../notes/20240706222446-introducing_erlang.org"
+
+** Programming Erlang: Software for a Concurrent World
+:PROPERTIES:
+:EXPORT_FILE_NAME: programming-erlang-software-for-a-concurrent-world
+:EXPORT_DATE: 2024-07-06
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug programming-erlang-software-for-a-concurrent-world
+:CUSTOM_ID: programming-erlang-software-for-a-concurrent-world
+:END:
+
+#+INCLUDE: "../notes/20240706213027-programming_erlang.org"
+
 ** History of Logic: From Aristotle to Taski
 :PROPERTIES:
 :EXPORT_FILE_NAME: history-of-logic-from-aristotle-to-taski
