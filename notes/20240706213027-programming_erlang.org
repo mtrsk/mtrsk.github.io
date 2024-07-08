@@ -1,7 +1,38 @@
 :PROPERTIES:
 :ID:       1daea4ea-40bc-406d-8d03-906c7f9ec343
-:ROAM_REFS: "Programming Erlang"
+:ROAM_ALIASES: "Erlang"
 :END:
 #+TITLE: Programming Erlang
+#+ROAM_TAGS: "erlang"
 
+* Part I: Why Erlang?
 
+** Introducing Concurrency
+
+*** Modeling Concurrency
+
+~spawn~ is an Erlang primitive that creates a concurrent process and returns a
+process identifier (PID) that can used to interact with the newly created process:
+
+#+BEGIN_SRC erlang
+spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN])
+#+END_SRC
+
+The syntax ~Pid ! Msg~ means "send the message ~Msg~ to the process ~Pid~". And for
+~Pid~ to process a message we need to pattern match:
+
+#+BEGIN_SRC erlang
+receive
+    {From, Message} ->
+        ...
+end
+#+END_SRC
+
+*** Benefits of Concurrency
+
++ Performance
++ Scalability
++ Fault Tolerance
++ Clarity
+
+*** 
