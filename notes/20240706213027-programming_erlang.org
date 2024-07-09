@@ -100,3 +100,38 @@ terminates the Erlang session.
 + Atoms are also global, and this is achieved without the use of macro definitions or include files.
 
 *** Tuples
+
+#+BEGIN_QUOTE
+Tuples are created automatically when we declare them and are destroyed when
+they can no longer be used. Erlang uses a garbage collector to reclaim all
+unused memory, so we don’t have to worry about memory allocation.
+#+END_QUOTE
+
+You can also pattern match tuples by using free variables:
+#+BEGIN_SRC shell
+  1> Point = {point, 10, 45}.
+  {point,10,45}
+  2> {point, X, Y} = Point.
+  {point,10,45}
+  3> X.
+  10
+  4> Y.
+  45
+#+END_SRC
+
+*** Lists
+
+A list is a compound data type with a variable number of terms: ~[Term1,...,TermN]~.
+
+*** Strings
+#+BEGIN_QUOTE
+Strictly speaking, there are no strings in Erlang. To represent a string in
+Erlang, we can choose between representing the string as a list of integers or
+as a binary. When a string is represented as a list of integers, each element in
+the list represents a Unicode codepoint.
+#+END_QUOTE
+
+
+
+
+
