@@ -35,4 +35,68 @@ end
 + Fault Tolerance
 + Clarity
 
-*** 
+** A Whirlwind Tour of Erlang
+*** Syntax of Variables and Atoms
+#+BEGIN_QUOTE
+Note that Erlang variables start with uppercase characters. So, ~X~, ~This~, and
+~A_long_name~ are all variables. Names beginning with lowercase letters—for example,
+~monday~ or ~friday~ are not variables but are symbolic constants called 
+atoms.
+#+END_QUOTE
+
+*** Compiling and Running "Hello World" in the Shell
+#+BEGIN_SRC erlang
+  -module(hello).
+  -export([start/0]).
+  
+  start() ->
+      io:format("Hello world~n").
+#+END_SRC
+
+Running the ~hello.erl~ program in the erlang shell.
+
+#+BEGIN_SRC shell
+  $ erl                          
+  Erlang/OTP 26 [erts-14.2.5] [source] [64-bit] [smp:24:24] [ds:24:24:10] [async-threads:1] [jit:ns]
+
+  Eshell V14.2.5 (press Ctrl+G to abort, type help(). for help)
+  1> c(hello).
+  {ok,hello}
+  2> hello:start().
+  Hello world
+  ok
+#+END_SRC
+
+*** Compiling Outside the Erlang Shell
+
+#+BEGIN_SRC shell
+  $ erlc hello.erl
+  $ erl -noshell -s hello start -s init stop
+#+END_SRC
+
+#+BEGIN_QUOTE
+~erlc~ evokes the Erlang compiler from the command line. The compiler compiles the code in ~hello.erl~ and produces an object code file called ~hello.beam~.
+
+The ~erl -noshell~ command loads the module ~hello~ and evaluates the function
+~hello:start()~. After this, it evaluates the expression ~init:stop()~, which
+terminates the Erlang session.
+#+END_QUOTE
+
+* Part II: Sequential Programming
+
+** Basic Concepts
+*** Variables
++ Erlang Variables Do Not Vary
++ The scope of a variable is the lexical unit in which it is defined.
++ Variables acquire values as the result of a successful pattern matching
+  operation (~=~).
+
+*** Floating-Point Numbers
++ When you divide two integers with ~/~, the result is automatically converted to a floating-point number.
++ Integer division is handled by ~div~ and ~rem~.
+
+*** Atoms
++ In Erlang, atoms are used to represent constant values.
++ Atoms are also global, and this is achieved without the use of macro definitions or include files.
+
+*** Tuples
