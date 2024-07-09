@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Benevide&#39;s Blog</title>
+  <title>Benevides&#39; Blog</title>
   <link href="https://mtrsk.github.io/notes/"/>
   
     <link href="https://mtrsk.github.io/notes/atom.xml" rel="self" type="application/atom+xml" />
   
-  <updated>2024-07-07T02:31:20Z</updated>
+  <updated>2024-07-09T15:11:15Z</updated>
   <author>
     
     
@@ -59,9 +59,106 @@ Base#Value notation.&lt;/p&gt;
     <id>https://mtrsk.github.io/notes/2024/programming-erlang-software-for-a-concurrent-world/</id>
     <published>2024-07-06T00:00:00Z</published>
     <updated>2024-07-06T00:00:00Z</updated>
-    <summary>:ID: 1daea4ea-40bc-406d-8d03-906c7f9ec343 :ROAM_REFS: &amp;ldquo;Programming Erlang&amp;rdquo;</summary>
+    <summary>:ID: 1daea4ea-40bc-406d-8d03-906c7f9ec343 :ROAM_ALIASES: &amp;ldquo;Erlang&amp;rdquo;
+Part I: Why Erlang? Introducing Concurrency Modeling Concurrency spawn is an Erlang primitive that creates a concurrent process and returns a process identifier (PID) that can used to interact with the newly created process:
+spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]) The syntax Pid ! Msg means &amp;ldquo;send the message Msg to the process Pid&amp;rdquo;. And for Pid to process a message we need to pattern match:</summary>
     <content type="html">&lt;p&gt;:ID:       1daea4ea-40bc-406d-8d03-906c7f9ec343
-:ROAM_REFS: &amp;ldquo;Programming Erlang&amp;rdquo;&lt;/p&gt;
+:ROAM_ALIASES: &amp;ldquo;Erlang&amp;rdquo;&lt;/p&gt;
+&lt;h2 id=&#34;part-i-why-erlang&#34;&gt;Part I: Why Erlang?&lt;/h2&gt;
+&lt;h3 id=&#34;introducing-concurrency&#34;&gt;Introducing Concurrency&lt;/h3&gt;
+&lt;h4 id=&#34;modeling-concurrency&#34;&gt;Modeling Concurrency&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;spawn&lt;/code&gt; is an Erlang primitive that creates a concurrent process and returns a
+process identifier (PID) that can used to interact with the newly created process:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;spawn&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;ModName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;FuncName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Arg1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Arg2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;...,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ArgN&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The syntax &lt;code&gt;Pid ! Msg&lt;/code&gt; means &amp;ldquo;send the message &lt;code&gt;Msg&lt;/code&gt; to the process &lt;code&gt;Pid&lt;/code&gt;&amp;rdquo;. And for
+&lt;code&gt;Pid&lt;/code&gt; to process a message we need to pattern match:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;receive&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;From&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Message&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;benefits-of-concurrency&#34;&gt;Benefits of Concurrency&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Performance&lt;/li&gt;
+&lt;li&gt;Scalability&lt;/li&gt;
+&lt;li&gt;Fault Tolerance&lt;/li&gt;
+&lt;li&gt;Clarity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;a-whirlwind-tour-of-erlang&#34;&gt;A Whirlwind Tour of Erlang&lt;/h3&gt;
+&lt;h4 id=&#34;syntax-of-variables-and-atoms&#34;&gt;Syntax of Variables and Atoms&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note that Erlang variables start with uppercase characters. So, &lt;code&gt;X&lt;/code&gt;, &lt;code&gt;This&lt;/code&gt;, and
+&lt;code&gt;A_long_name&lt;/code&gt; are all variables. Names beginning with lowercase letters—for example,
+&lt;code&gt;monday&lt;/code&gt; or &lt;code&gt;friday&lt;/code&gt; are not variables but are symbolic constants called
+atoms.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;compiling-and-running-hello-world-in-the-shell&#34;&gt;Compiling and Running &amp;ldquo;Hello World&amp;rdquo; in the Shell&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;module&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hello&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]).&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nn&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello world&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;~n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Running the &lt;code&gt;hello.erl&lt;/code&gt; program in the erlang shell.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  $ erl
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Erlang/OTP &lt;span class=&#34;m&#34;&gt;26&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;erts-14.2.5&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;source&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;64-bit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;smp:24:24&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;ds:24:24:10&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;async-threads:1&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;jit:ns&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Eshell V14.2.5 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;press Ctrl+G to abort, &lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt; help&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;. &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  1&amp;gt; c&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;hello&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;ok,hello&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  2&amp;gt; hello:start&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Hello world
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ok
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;compiling-outside-the-erlang-shell&#34;&gt;Compiling Outside the Erlang Shell&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  $ erlc hello.erl
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  $ erl -noshell -s hello start -s init stop
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;erlc&lt;/code&gt; evokes the Erlang compiler from the command line. The compiler compiles the code in &lt;code&gt;hello.erl&lt;/code&gt; and produces an object code file called &lt;code&gt;hello.beam&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;erl -noshell&lt;/code&gt; command loads the module &lt;code&gt;hello&lt;/code&gt; and evaluates the function
+&lt;code&gt;hello:start()&lt;/code&gt;. After this, it evaluates the expression &lt;code&gt;init:stop()&lt;/code&gt;, which
+terminates the Erlang session.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;part-ii-sequential-programming&#34;&gt;Part II: Sequential Programming&lt;/h2&gt;
+&lt;h3 id=&#34;basic-concepts&#34;&gt;Basic Concepts&lt;/h3&gt;
+&lt;h4 id=&#34;variables&#34;&gt;Variables&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Erlang Variables Do Not Vary&lt;/li&gt;
+&lt;li&gt;The scope of a variable is the lexical unit in which it is defined.&lt;/li&gt;
+&lt;li&gt;Variables acquire values as the result of a successful pattern matching
+operation (&lt;code&gt;=&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;floating-point-numbers&#34;&gt;Floating-Point Numbers&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;When you divide two integers with &lt;code&gt;/&lt;/code&gt;, the result is automatically converted to a floating-point number.&lt;/li&gt;
+&lt;li&gt;Integer division is handled by &lt;code&gt;div&lt;/code&gt; and &lt;code&gt;rem&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;atoms&#34;&gt;Atoms&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;In Erlang, atoms are used to represent constant values.&lt;/li&gt;
+&lt;li&gt;Atoms are also global, and this is achieved without the use of macro definitions or include files.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;tuples&#34;&gt;Tuples&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tuples are created automatically when we declare them and are destroyed when
+they can no longer be used. Erlang uses a garbage collector to reclaim all
+unused memory, so we don’t have to worry about memory allocation.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;You can also pattern match tuples by using free variables:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  1&amp;gt; &lt;span class=&#34;nv&#34;&gt;Point&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;point, 10, 45&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;point,10,45&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  2&amp;gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;point, X, Y&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; Point.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;point,10,45&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  3&amp;gt; X.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  4&amp;gt; Y.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;m&#34;&gt;45&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;lists&#34;&gt;Lists&lt;/h4&gt;
+&lt;p&gt;A list is a compound data type with a variable number of terms: &lt;code&gt;[Term1,...,TermN]&lt;/code&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;strings&#34;&gt;Strings&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Strictly speaking, there are no strings in Erlang. To represent a string in
+Erlang, we can choose between representing the string as a list of integers or
+as a binary. When a string is represented as a list of integers, each element in
+the list represents a Unicode codepoint.&lt;/p&gt;
+&lt;/blockquote&gt;
 </content>
     
     

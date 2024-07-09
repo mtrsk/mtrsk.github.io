@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>homepage title on Benevide&#39;s Blog</title>
+    <title>homepage title on Benevides&#39; Blog</title>
     <link>https://mtrsk.github.io/</link>
-    <description>Recent content in homepage title on Benevide&#39;s Blog</description>
+    <description>Recent content in homepage title on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 06 Jul 2024 00:00:00 +0000</lastBuildDate>
@@ -20,7 +20,7 @@
       <link>https://mtrsk.github.io/notes/2024/programming-erlang-software-for-a-concurrent-world/</link>
       <pubDate>Sat, 06 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/programming-erlang-software-for-a-concurrent-world/</guid>
-      <description>:ID: 1daea4ea-40bc-406d-8d03-906c7f9ec343 :ROAM_REFS: &amp;ldquo;Programming Erlang&amp;rdquo;</description>
+      <description>:ID: 1daea4ea-40bc-406d-8d03-906c7f9ec343 :ROAM_ALIASES: &amp;ldquo;Erlang&amp;rdquo;&#xA;Part I: Why Erlang? Introducing Concurrency Modeling Concurrency spawn is an Erlang primitive that creates a concurrent process and returns a process identifier (PID) that can used to interact with the newly created process:&#xA;spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]) The syntax Pid ! Msg means &amp;ldquo;send the message Msg to the process Pid&amp;rdquo;. And for Pid to process a message we need to pattern match:</description>
     </item>
     <item>
       <title>Erlang</title>

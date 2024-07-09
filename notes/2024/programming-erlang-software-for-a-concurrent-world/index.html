@@ -8,9 +8,11 @@
 
     </title>
     <meta property="og:url" content="https://mtrsk.github.io/notes/2024/programming-erlang-software-for-a-concurrent-world/">
-  <meta property="og:site_name" content="Benevide&#39;s Blog">
+  <meta property="og:site_name" content="Benevides&#39; Blog">
   <meta property="og:title" content="Programming Erlang: Software for a Concurrent World">
-  <meta property="og:description" content=":ID: 1daea4ea-40bc-406d-8d03-906c7f9ec343 :ROAM_REFS: “Programming Erlang”">
+  <meta property="og:description" content=":ID: 1daea4ea-40bc-406d-8d03-906c7f9ec343 :ROAM_ALIASES: “Erlang”
+Part I: Why Erlang? Introducing Concurrency Modeling Concurrency spawn is an Erlang primitive that creates a concurrent process and returns a process identifier (PID) that can used to interact with the newly created process:
+spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]) The syntax Pid ! Msg means “send the message Msg to the process Pid”. And for Pid to process a message we need to pattern match:">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="notes">
@@ -28,7 +30,7 @@
     height="128"
   />
   <div>
-    <h1>Benevide&#39;s Blog</h1><p>&#34;Writing is nothing more than a guided dream.&#34;</p>
+    <h1>Benevides&#39; Blog</h1><p>&#34;Writing is nothing more than a guided dream.&#34;</p>
   </div>
   <ul>
     <li><a href="/">Home</a></li>
@@ -46,7 +48,102 @@
 
     </small>
   </h2><p>:ID:       1daea4ea-40bc-406d-8d03-906c7f9ec343
-:ROAM_REFS: &ldquo;Programming Erlang&rdquo;</p>
+:ROAM_ALIASES: &ldquo;Erlang&rdquo;</p>
+<h2 id="part-i-why-erlang">Part I: Why Erlang?</h2>
+<h3 id="introducing-concurrency">Introducing Concurrency</h3>
+<h4 id="modeling-concurrency">Modeling Concurrency</h4>
+<p><code>spawn</code> is an Erlang primitive that creates a concurrent process and returns a
+process identifier (PID) that can used to interact with the newly created process:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl"><span class="nb">spawn</span><span class="p">(</span><span class="nv">ModName</span><span class="p">,</span> <span class="nv">FuncName</span><span class="p">,</span> <span class="p">[</span><span class="nv">Arg1</span><span class="p">,</span> <span class="nv">Arg2</span><span class="p">,</span> <span class="p">...,</span> <span class="nv">ArgN</span><span class="p">])</span>
+</span></span></code></pre></div><p>The syntax <code>Pid ! Msg</code> means &ldquo;send the message <code>Msg</code> to the process <code>Pid</code>&rdquo;. And for
+<code>Pid</code> to process a message we need to pattern match:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl"><span class="k">receive</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="nv">From</span><span class="p">,</span> <span class="nv">Message</span><span class="p">}</span> <span class="o">-&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></div><h4 id="benefits-of-concurrency">Benefits of Concurrency</h4>
+<ul>
+<li>Performance</li>
+<li>Scalability</li>
+<li>Fault Tolerance</li>
+<li>Clarity</li>
+</ul>
+<h3 id="a-whirlwind-tour-of-erlang">A Whirlwind Tour of Erlang</h3>
+<h4 id="syntax-of-variables-and-atoms">Syntax of Variables and Atoms</h4>
+<blockquote>
+<p>Note that Erlang variables start with uppercase characters. So, <code>X</code>, <code>This</code>, and
+<code>A_long_name</code> are all variables. Names beginning with lowercase letters—for example,
+<code>monday</code> or <code>friday</code> are not variables but are symbolic constants called
+atoms.</p>
+</blockquote>
+<h4 id="compiling-and-running-hello-world-in-the-shell">Compiling and Running &ldquo;Hello World&rdquo; in the Shell</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl">  <span class="o">-</span><span class="n">module</span><span class="p">(</span><span class="n">hello</span><span class="p">).</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span><span class="n">export</span><span class="p">([</span><span class="n">start</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">start</span><span class="p">()</span> <span class="o">-&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nn">io</span><span class="p">:</span><span class="nf">format</span><span class="p">(</span><span class="s">&#34;Hello world</span><span class="si">~n</span><span class="s">&#34;</span><span class="p">).</span>
+</span></span></code></pre></div><p>Running the <code>hello.erl</code> program in the erlang shell.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  $ erl
+</span></span><span class="line"><span class="cl">  Erlang/OTP <span class="m">26</span> <span class="o">[</span>erts-14.2.5<span class="o">]</span> <span class="o">[</span>source<span class="o">]</span> <span class="o">[</span>64-bit<span class="o">]</span> <span class="o">[</span>smp:24:24<span class="o">]</span> <span class="o">[</span>ds:24:24:10<span class="o">]</span> <span class="o">[</span>async-threads:1<span class="o">]</span> <span class="o">[</span>jit:ns<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  Eshell V14.2.5 <span class="o">(</span>press Ctrl+G to abort, <span class="nb">type</span> help<span class="o">()</span>. <span class="k">for</span> <span class="nb">help</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">  1&gt; c<span class="o">(</span>hello<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">  <span class="o">{</span>ok,hello<span class="o">}</span>
+</span></span><span class="line"><span class="cl">  2&gt; hello:start<span class="o">()</span>.
+</span></span><span class="line"><span class="cl">  Hello world
+</span></span><span class="line"><span class="cl">  ok
+</span></span></code></pre></div><h4 id="compiling-outside-the-erlang-shell">Compiling Outside the Erlang Shell</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  $ erlc hello.erl
+</span></span><span class="line"><span class="cl">  $ erl -noshell -s hello start -s init stop
+</span></span></code></pre></div><blockquote>
+<p><code>erlc</code> evokes the Erlang compiler from the command line. The compiler compiles the code in <code>hello.erl</code> and produces an object code file called <code>hello.beam</code>.</p>
+<p>The <code>erl -noshell</code> command loads the module <code>hello</code> and evaluates the function
+<code>hello:start()</code>. After this, it evaluates the expression <code>init:stop()</code>, which
+terminates the Erlang session.</p>
+</blockquote>
+<h2 id="part-ii-sequential-programming">Part II: Sequential Programming</h2>
+<h3 id="basic-concepts">Basic Concepts</h3>
+<h4 id="variables">Variables</h4>
+<ul>
+<li>Erlang Variables Do Not Vary</li>
+<li>The scope of a variable is the lexical unit in which it is defined.</li>
+<li>Variables acquire values as the result of a successful pattern matching
+operation (<code>=</code>).</li>
+</ul>
+<h4 id="floating-point-numbers">Floating-Point Numbers</h4>
+<ul>
+<li>When you divide two integers with <code>/</code>, the result is automatically converted to a floating-point number.</li>
+<li>Integer division is handled by <code>div</code> and <code>rem</code>.</li>
+</ul>
+<h4 id="atoms">Atoms</h4>
+<ul>
+<li>In Erlang, atoms are used to represent constant values.</li>
+<li>Atoms are also global, and this is achieved without the use of macro definitions or include files.</li>
+</ul>
+<h4 id="tuples">Tuples</h4>
+<blockquote>
+<p>Tuples are created automatically when we declare them and are destroyed when
+they can no longer be used. Erlang uses a garbage collector to reclaim all
+unused memory, so we don’t have to worry about memory allocation.</p>
+</blockquote>
+<p>You can also pattern match tuples by using free variables:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  1&gt; <span class="nv">Point</span> <span class="o">=</span> <span class="o">{</span>point, 10, 45<span class="o">}</span>.
+</span></span><span class="line"><span class="cl">  <span class="o">{</span>point,10,45<span class="o">}</span>
+</span></span><span class="line"><span class="cl">  2&gt; <span class="o">{</span>point, X, Y<span class="o">}</span> <span class="o">=</span> Point.
+</span></span><span class="line"><span class="cl">  <span class="o">{</span>point,10,45<span class="o">}</span>
+</span></span><span class="line"><span class="cl">  3&gt; X.
+</span></span><span class="line"><span class="cl">  <span class="m">10</span>
+</span></span><span class="line"><span class="cl">  4&gt; Y.
+</span></span><span class="line"><span class="cl">  <span class="m">45</span>
+</span></span></code></pre></div><h4 id="lists">Lists</h4>
+<p>A list is a compound data type with a variable number of terms: <code>[Term1,...,TermN]</code>.</p>
+<h4 id="strings">Strings</h4>
+<blockquote>
+<p>Strictly speaking, there are no strings in Erlang. To represent a string in
+Erlang, we can choose between representing the string as a list of integers or
+as a binary. When a string is represented as a list of integers, each element in
+the list represents a Unicode codepoint.</p>
+</blockquote>
 
 
 
