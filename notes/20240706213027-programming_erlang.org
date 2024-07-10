@@ -100,6 +100,9 @@ terminates the Erlang session.
 + Atoms are also global, and this is achieved without the use of macro definitions or include files.
 
 *** Tuples
++ Represents a collection of elements (of any type) that are grouped together.
++ A tuple whose first element is an atom is called a ~tagged~ tuple, i.e., ~{book,
+  "The Aleph"}~.
 
 #+BEGIN_QUOTE
 Tuples are created automatically when we declare them and are destroyed when
@@ -121,7 +124,9 @@ You can also pattern match tuples by using free variables:
 
 *** Lists
 
-A list is a compound data type with a variable number of terms: ~[Term1,...,TermN]~.
++ A list is a compound data type with a variable number of terms: ~[Term1,...,TermN]~.
++ One can add or iterate over lists with the ~cons~ operator ~|~, which breaks a
+  list into ~H|T~ (~head~ and ~tail~),
 
 *** Strings
 #+BEGIN_QUOTE
@@ -131,7 +136,16 @@ as a binary. When a string is represented as a list of integers, each element in
 the list represents a Unicode codepoint.
 #+END_QUOTE
 
+To print a unicode string one must use the "t" modifier applied to the "s"
+control character in a formatting string, it accepts all Unicode codepoints and
+expect binaries to be in UTF-8:
 
+#+BEGIN_SRC shell
+  1> X = "a\x{221e}b".
+  [97,8734,98]
+  2> io:format("~ts~n",[X]).
+  a∞b
+  ok
+#+END_SRC
 
-
-
+** Modules and Functions
