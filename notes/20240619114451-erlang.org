@@ -8,5 +8,18 @@ Resources:
 + [[https://github.com/oreillymedia/etudes-for-erlang][Etudes for Erlang]]
 + [cite:@laurent2017]: Notes from [[id:f5e7bb90-792d-406a-8c40-2b072db63a13][Introducing Erlang]] 
 + [cite:@armstrong2013]: Notes from [[id:1daea4ea-40bc-406d-8d03-906c7f9ec343][Programming Erlang]]
-  
++ Joe Armstrong's PHD thesis
+
+The Erlang view of the world can be summarized in the following statments
+[cite:@armstrong2003]:
+
++ Everything is a process.
++ Processes are strongly isolated.
++ Process creation and destruction is a lightweight operation.
++ Message passing is the only way for processes to interact.
++ Processes have unique names.
++ If you know the name of a process you can send it a message.
++ Error handling is non-local.
++ Processes do what they are supposed to do or fail.
+
 #+print_bibliography:

@@ -1,6 +1,5 @@
 :PROPERTIES:
 :ID:       1daea4ea-40bc-406d-8d03-906c7f9ec343
-:ROAM_ALIASES: "Erlang"
 :END:
 #+TITLE: Programming Erlang
 #+ROAM_TAGS: "erlang"
@@ -97,7 +96,8 @@ terminates the Erlang session.
 
 *** Atoms
 + In Erlang, atoms are used to represent constant values.
-+ Atoms are also global, and this is achieved without the use of macro definitions or include files.
++ Atoms are also global, and this is achieved without the use of macro
+  definitions or include files.
 
 *** Tuples
 + Represents a collection of elements (of any type) that are grouped together.
@@ -150,4 +150,12 @@ expect binaries to be in UTF-8:
 
 ** Modules and Functions
 
-*** 
+*** Modules Are Where We Store Code
+
+#+BEGIN_SRC erlang
+  -module(geometry).
+  -export([area/1]).
+
+  area({rectangle, Width, Height}) -> Width * Height;
+  area({square, Side}) -> Side * Side.
+#+END_SRC

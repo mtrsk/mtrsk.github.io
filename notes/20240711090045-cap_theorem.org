@@ -3,7 +3,7 @@
 :END:
 #+title: CAP Theorem
 
-First postulated by Eric Brewer in [cite:@brewer2000], and formally proved in [cite:@gilbert2002brewer].
+First postulated by Eric Brewer in [cite:@brewer2000], and formally proved in [cite:@gilbert2002].
 
 * Definitions
 
