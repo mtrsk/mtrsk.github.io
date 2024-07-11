@@ -79,6 +79,16 @@ This page is a rendered version of my [[https://en.wikipedia.org/wiki/OPML][OPML
 
 #+INCLUDE: "../notes/20231005194145-algebraic_models_for_accounting_systems.org"
 
+** CAP Theorem
+:PROPERTIES:
+:EXPORT_FILE_NAME: cap-theorem
+:EXPORT_DATE: 2024-07-11
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug cap-theorem
+:CUSTOM_ID: cap-theorem
+:END:
+
+#+INCLUDE: "../notes/20240711090045-cap_theorem.org"
+
 ** Commutative Ring
 :PROPERTIES:
 :EXPORT_FILE_NAME: commutative-ring

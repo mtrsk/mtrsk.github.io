@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       74c5509d-73be-4b04-9ca4-039117d588a9
+:END:
+#+title: CAP Theorem
+
+First postulated by Eric Brewer in [cite:@brewer2000], and formally proved in [cite:@gilbert2002brewer].
+
+* Definitions
+
+For [cite:@brewer2000], a distributed system has some very specific properties
+and behaviour, being a collected set of Nodes that all share data.
+
+| Read                                                          | Write                                                        |
+|---------------------------------------------------------------+--------------------------------------------------------------|
+| A client can read data from the system by talking to any Node | A client can write data to the system by talking to any Node |
+
+A limitation of such systems happens when a write request is followed by a read request.
+
+#+BEGIN_QUOTE
+The Theorem states that for any given pair of requests this kind of system can
+only guarantee two out of three properties:
+
++ Consistency
+  + The system can read data that is (at least) as fresh as what has been just written
++ Avaliability
+  + A non-failing None will a give a reasonable response within a reasonable
+    amount of time.
++ Partition Tolerance
+  + The system will continue to function in the case of network partitions.
+#+END_QUOTE
+
+#+print_bibliography:
