@@ -157,5 +157,53 @@ expect binaries to be in UTF-8:
   -export([area/1]).
 
   area({rectangle, Width, Height}) -> Width * Height;
+  area({circle, Radius}) -> 3.14159 * Radius * Radius;
   area({square, Side}) -> Side * Side.
+#+END_SRC
+
+*** Funs: The Basic Unit of Abstraction
+
+~Funs~ are function closures. ~Funs~ are created by expressions of the form: ~fun(...) -> ... end~.
+
+*** Defining Your Own Control Abstractions
+If we want additional control structures, we can make our own. Erlang has no for loop, so let’s make one:
+#+BEGIN_SRC erlang
+  for(Max, Max, F) -> [F(Max)];
+  for(I, Max, F) -> [F(I)|for(I+1, Max, F)].
+#+END_SRC
+
+*** List Comprehensions
+
+#+BEGIN_SRC shell
+  1> L = [1,2,3,4,5,6,7].
+  [1,2,3,4,5,6,7]
+  2> [ 2*X || X <- L ].
+  [2,4,6,8,10,12,14]
+  3> 
+#+END_SRC
+
+#+BEGIN_QUOTE
+The most general form of a list comprehension is an expression of the following
+form: ~[X || Qualifier1, Qualifier2, ...]~, where ~X~ is an arbitrary expression,
+and each qualifier is either a generator, a bitstring generator, or a filter.
+
++ Generators are written as ~Pattern <- ListExpr~ where ~ListExpr~ must be an expression that evaluates to a list of terms.
++ Bitstring generators are written as ~BitStringPattern <= BitStringExpr~ where ~BitStringExpr~ must be an expression that evaluates to a bitstring.
++ Filters are either predicates or boolean expressions.
+#+END_QUOTE
+
+*** case and if Expressions
+
+#+BEGIN_SRC erlang
+  case Expression of
+    Pattern1 [when Guard1] -> Expr_seq1;
+    Pattern2 [when Guard2] -> Expr_seq2;
+    ...
+  end
+
+  if
+    Guard1 -> Expr_seq1;
+    Guard2 -> Expr_seq2;
+    ...
+  end
 #+END_SRC
