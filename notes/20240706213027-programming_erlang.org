@@ -240,3 +240,12 @@ to load a record from the the shell, one must use the ~rr~ command:
 *** Maps: Associative Key-Value Stores
 
 Maps are associative collections of key-value pairs.
+
+#+BEGIN_SRC shell
+  1> TaskPending = #{ status => pending, description => 'feed cats' }.
+  #{status => pending,description => 'feed cats'}
+  2> TaskDone = TaskPending#{ status := done }.
+  #{status => done,description => 'feed cats'}
+#+END_SRC
+
+** Error Handling in Sequential Programs

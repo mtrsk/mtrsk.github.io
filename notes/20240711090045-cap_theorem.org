@@ -2,31 +2,86 @@
 :ID:       74c5509d-73be-4b04-9ca4-039117d588a9
 :END:
 #+title: CAP Theorem
+#+ROAM_TAGS: "distributed systems"
 
 First postulated by Eric Brewer in [cite:@brewer2000], and formally proved in [cite:@gilbert2002].
 
 * Definitions
 
 For [cite:@brewer2000], a distributed system has some very specific properties
-and behaviour, being a collected set of Nodes that all share data.
+and behaviour, being a collected set of Nodes that all share data. A limitation
+of such systems happens when a write request is followed by a read request.
+
+#+BEGIN_SRC 
+       ┌────────┐
+       │ Client │
+       └────────┘
+     [R] ^    | [W]
+         |    v
+┌−−−−−−−−−−−−−−−−−−−−−−−−−┐
+╎         System          ╎
+╎              ┌────┐     ╎
+╎   ┌──────────│ a0 │──┐  ╎
+╎   │          └────┘  │  ╎
+╎   │             │    │  ╎
+╎ ┌────┐       ┌────┐  │  ╎
+╎ │ a3 │───────│ a1 │  │  ╎
+╎ └────┘       └────┘  │  ╎
+╎                 │    │  ╎
+╎              ┌────┐  │  ╎
+╎              │ a2 │──┘  ╎
+╎              └────┘     ╎
+└−−−−−−−−−−−−−−−−−−−−−−−−−┘
+#+END_SRC
 
 | Read                                                          | Write                                                        |
 |---------------------------------------------------------------+--------------------------------------------------------------|
 | A client can read data from the system by talking to any Node | A client can write data to the system by talking to any Node |
 
-A limitation of such systems happens when a write request is followed by a read request.
-
 #+BEGIN_QUOTE
 The Theorem states that for any given pair of requests this kind of system can
 only guarantee two out of three properties:
 
-+ Consistency
-  + The system can read data that is (at least) as fresh as what has been just written
-+ Avaliability
-  + A non-failing None will a give a reasonable response within a reasonable
-    amount of time.
-+ Partition Tolerance
-  + The system will continue to function in the case of network partitions.
++ Consistency :: The system can read data that is (at least) as fresh as what has been just written
++ Avaliability :: A non-failing None will a give a reasonable response within a reasonable amount of time.
++ Partition Tolerance :: The system will continue to function in the case of network partitions.
 #+END_QUOTE
+
+* Idea of the Proof
+
+Here is a sketch of the proof provided in [cite:@gilbert2002], conside the same
+system as before, but focus on a pair of requests (R/W) and two nodes.
+
+#+BEGIN_SRC 
+                [W]
+    ┌──────────────────────────┐
+    v                          │
+┌−−−−−−−−−−−−−−−−−−−−−−┐       │
+╎        System        ╎       │
+╎                      ╎       │
+╎ ┌────┐        ┌────┐ ╎ [R] ┌──────┐
+╎ │ a0 │ ────── │ a1 │ ╎-───>│Client│
+╎ └────┘        └────┘ ╎     └──────┘
+╎                      ╎
+└−−−−−−−−−−−−−−−−−−−−−−┘
+#+END_SRC
+
++ CA :: If the system has both consitency and avaliability, but no partition tolerance.
+
+#+BEGIN_SRC 
+                [W]
+    ┌──────────────────────────┐
+    v                          │
+┌−−−−−−−−−−−−−−−−−−−−−−┐       │
+╎        System        ╎       │
+╎                      ╎       │
+╎ ┌────┐        ┌────┐ ╎ [R] ┌──────┐
+╎ │ a0 │ ──//── │ a1 │ ╎-───>│Client│
+╎ └────┘        └────┘ ╎     └──────┘
+╎                      ╎
+└−−−−−−−−−−−−−−−−−−−−−−┘
+#+END_SRC
+
+The client will receive an older version from ~a1~.
 
 #+print_bibliography:
