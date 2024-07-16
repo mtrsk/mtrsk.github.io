@@ -28,6 +28,11 @@
           tooling = with pkgs; [
             just
             hugo
+
+            # .Net
+            netcoredbg
+            fsautocomplete
+            fantomas
           ];
 
           texenv = pkgs.texlive.combine {
@@ -50,6 +55,10 @@
               scheme-medium
               ;
           };
+
+          dotnet = with pkgs.dotnetCorePackages; combinePackages [
+            sdk_8_0
+          ];
           
           customEmacs = (pkgs.emacsPackagesFor pkgs.emacs-nox).emacsWithPackages (epkgs:
             with epkgs.melpaPackages; [
@@ -67,7 +76,11 @@
           # for org-roam.
           ci = pkgs.mkShell {
             HUGO_ENVIRONMENT="production";
-            buildInputs = [ customEmacs ] ++ tooling;
+            DOTNET_ROOT = "${dotnet}";
+            DOTNET_CLI_TELEMETRY_OPTOUT = "1";
+            LANG = "en_US.UTF-8";
+            buildInputs =
+              [ dotnet pkgs.icu pkgs.tzdata ] ++ [ customEmacs ] ++ tooling;
           };
 
           # `nix develop --impure`
@@ -78,10 +91,17 @@
             inherit inputs pkgs;
             modules = [
               ({ pkgs, lib, ... }: {
-                packages = [ customEmacs ] ++ [ texenv ] ++ tooling;
+                packages =
+                  [ dotnet pkgs.icu pkgs.tzdata ]
+                  ++ [ customEmacs ]
+                  ++ [ texenv ]
+                  ++ tooling;
 
                 env = {
                   HUGO_ENVIRONMENT="development";
+                  DOTNET_ROOT = "${dotnet}";
+                  DOTNET_CLI_TELEMETRY_OPTOUT = "1";
+                  LANG = "en_US.UTF-8";
                 };
 
                 scripts = {

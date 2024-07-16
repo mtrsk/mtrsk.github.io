@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       d7efb05f-fb8f-438c-b09d-ea91dc24ebc3
 :END:
-#+title: Distributed-Systems
+#+title: Distributed Systems
 
 Readings from the following books:
 

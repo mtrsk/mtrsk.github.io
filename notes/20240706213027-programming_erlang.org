@@ -1,6 +1,5 @@
 :PROPERTIES:
 :ID:       1daea4ea-40bc-406d-8d03-906c7f9ec343
-:ROAM_ALIASES: "Erlang"
 :END:
 #+TITLE: Programming Erlang
 #+ROAM_TAGS: "erlang"
@@ -97,9 +96,13 @@ terminates the Erlang session.
 
 *** Atoms
 + In Erlang, atoms are used to represent constant values.
-+ Atoms are also global, and this is achieved without the use of macro definitions or include files.
++ Atoms are also global, and this is achieved without the use of macro
+  definitions or include files.
 
 *** Tuples
++ Represents a collection of elements (of any type) that are grouped together.
++ A tuple whose first element is an atom is called a ~tagged~ tuple, i.e., ~{book,
+  "The Aleph"}~.
 
 #+BEGIN_QUOTE
 Tuples are created automatically when we declare them and are destroyed when
@@ -121,7 +124,9 @@ You can also pattern match tuples by using free variables:
 
 *** Lists
 
-A list is a compound data type with a variable number of terms: ~[Term1,...,TermN]~.
++ A list is a compound data type with a variable number of terms: ~[Term1,...,TermN]~.
++ One can add or iterate over lists with the ~cons~ operator ~|~, which breaks a
+  list into ~H|T~ (~head~ and ~tail~),
 
 *** Strings
 #+BEGIN_QUOTE
@@ -131,7 +136,150 @@ as a binary. When a string is represented as a list of integers, each element in
 the list represents a Unicode codepoint.
 #+END_QUOTE
 
+To print a unicode string one must use the "t" modifier applied to the "s"
+control character in a formatting string, it accepts all Unicode codepoints and
+expect binaries to be in UTF-8:
 
+#+BEGIN_SRC shell
+  1> X = "a\x{221e}b".
+  [97,8734,98]
+  2> io:format("~ts~n",[X]).
+  a∞b
+  ok
+#+END_SRC
 
+** Modules and Functions
 
+*** Modules Are Where We Store Code
 
+#+BEGIN_SRC erlang
+  -module(geometry).
+  -export([area/1]).
+
+  area({rectangle, Width, Height}) -> Width * Height;
+  area({circle, Radius}) -> 3.14159 * Radius * Radius;
+  area({square, Side}) -> Side * Side.
+#+END_SRC
+
+*** Funs: The Basic Unit of Abstraction
+
+~Funs~ are function closures. ~Funs~ are created by expressions of the form: ~fun(...) -> ... end~.
+
+*** Defining Your Own Control Abstractions
+If we want additional control structures, we can make our own. Erlang has no for loop, so let’s make one:
+#+BEGIN_SRC erlang
+  for(Max, Max, F) -> [F(Max)];
+  for(I, Max, F) -> [F(I)|for(I+1, Max, F)].
+#+END_SRC
+
+*** List Comprehensions
+
+#+BEGIN_SRC shell
+  1> L = [1,2,3,4,5,6,7].
+  [1,2,3,4,5,6,7]
+  2> [ 2*X || X <- L ].
+  [2,4,6,8,10,12,14]
+  3> 
+#+END_SRC
+
+#+BEGIN_QUOTE
+The most general form of a list comprehension is an expression of the following
+form: ~[X || Qualifier1, Qualifier2, ...]~, where ~X~ is an arbitrary expression,
+and each qualifier is either a generator, a bitstring generator, or a filter.
+
++ Generators are written as ~Pattern <- ListExpr~ where ~ListExpr~ must be an expression that evaluates to a list of terms.
++ Bitstring generators are written as ~BitStringPattern <= BitStringExpr~ where ~BitStringExpr~ must be an expression that evaluates to a bitstring.
++ Filters are either predicates or boolean expressions.
+#+END_QUOTE
+
+*** case and if Expressions
+
+#+BEGIN_SRC erlang
+  case Expression of
+    Pattern1 [when Guard1] -> Expr_seq1;
+    Pattern2 [when Guard2] -> Expr_seq2;
+    ...
+  end
+
+  if
+    Guard1 -> Expr_seq1;
+    Guard2 -> Expr_seq2;
+    ...
+  end
+#+END_SRC
+
+** Records and Maps
+
+*** Naming Tuple Items with Records
+
+#+BEGIN_QUOTE
+(...) records provide a convenient way for associating a tag
+with each of the elements in a tuple. This allows us to refer to an
+element of a tuple by name and not by position. A pre-compiler
+takes the record definition and replaces it with the appropriate tuple
+reference.
+#+END_QUOTE
+
+#+BEGIN_SRC erlang
+  -record(todo, {status=reminder,who=joe,text}).
+#+END_SRC
+
+to load a record from the the shell, one must use the ~rr~ command:
+
+#+BEGIN_SRC shell
+  1> rr("records.hrl").
+  [todo]
+  2> #todo{}.
+  #todo{status = reminder,who = joe,text = undefined}
+  3> X1 = #todo{status=urgent, text="Fix errata in book"}.
+  #todo{status = urgent,who = joe,text = "Fix errata in book"}
+  4> X2 = X1#todo{status=done}.
+  #todo{status = done,who = joe,text = "Fix errata in book"}
+#+END_SRC
+
+*** Maps: Associative Key-Value Stores
+
+Maps are associative collections of key-value pairs.
+
+#+BEGIN_SRC shell
+  1> TaskPending = #{ status => pending, description => 'feed cats' }.
+  #{status => pending,description => 'feed cats'}
+  2> TaskDone = TaskPending#{ status := done }.
+  #{status => done,description => 'feed cats'}
+#+END_SRC
+
+** Error Handling in Sequential Programs
+
+#+BEGIN_SRC erlang
+  try FuncOrExpressionSeq of
+    Pattern1 [when Guard1] -> Expressions1;
+    Pattern2 [when Guard2] -> Expressions2;
+    ...
+  catch
+    ExceptionType1: ExPattern1 [when ExGuard1] -> ExExpressions1;
+    ExceptionType2: ExPattern2 [when ExGuard2] -> ExExpressions2;
+    ...
+  after
+    AfterExpressions
+  end
+#+END_SRC
+
++ ~exit/1~ :: Used to terminate the current process.
++ ~throw~ :: Used as a documentation to the caller, to show that a function might throw this exception. 
++ error :: Crashing errors.
+
+*** Fail Fast and Noisily, Fail Politely
+
+#+BEGIN_QUOTE
+In Erlang, when an error is detected internally by the system or is detected by
+program logic, the correct approach is to crash immediately and generate a
+meaningful error message.
+
+(...)
+
+Second, fail politely means that only the programmer should see the detailed
+error messages produced when a program crashes. A user of the program should
+never see these messages.
+#+END_QUOTE
+
+** Binaries and the Bit Syntax
