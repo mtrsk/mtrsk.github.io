@@ -10,9 +10,10 @@
     <meta property="og:url" content="https://mtrsk.github.io/notes/2024/programming-erlang-software-for-a-concurrent-world/">
   <meta property="og:site_name" content="Benevides&#39; Blog">
   <meta property="og:title" content="Programming Erlang: Software for a Concurrent World">
-  <meta property="og:description" content=":ID: 1daea4ea-40bc-406d-8d03-906c7f9ec343 :ROAM_ALIASES: “Erlang”
+  <meta property="og:description" content=":ID: 1daea4ea-40bc-406d-8d03-906c7f9ec343
 Part I: Why Erlang? Introducing Concurrency Modeling Concurrency spawn is an Erlang primitive that creates a concurrent process and returns a process identifier (PID) that can used to interact with the newly created process:
-spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]) The syntax Pid ! Msg means “send the message Msg to the process Pid”. And for Pid to process a message we need to pattern match:">
+spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]) The syntax Pid ! Msg means “send the message Msg to the process Pid”. And for Pid to process a message we need to pattern match:
+receive {From, Message} -&gt; .">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="notes">
@@ -47,8 +48,7 @@ spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]) The syntax Pid ! Msg means “
 
 
     </small>
-  </h2><p>:ID:       1daea4ea-40bc-406d-8d03-906c7f9ec343
-:ROAM_ALIASES: &ldquo;Erlang&rdquo;</p>
+  </h2><p>:ID:       1daea4ea-40bc-406d-8d03-906c7f9ec343</p>
 <h2 id="part-i-why-erlang">Part I: Why Erlang?</h2>
 <h3 id="introducing-concurrency">Introducing Concurrency</h3>
 <h4 id="modeling-concurrency">Modeling Concurrency</h4>
@@ -118,9 +118,14 @@ operation (<code>=</code>).</li>
 <h4 id="atoms">Atoms</h4>
 <ul>
 <li>In Erlang, atoms are used to represent constant values.</li>
-<li>Atoms are also global, and this is achieved without the use of macro definitions or include files.</li>
+<li>Atoms are also global, and this is achieved without the use of macro
+definitions or include files.</li>
 </ul>
 <h4 id="tuples">Tuples</h4>
+<ul>
+<li>Represents a collection of elements (of any type) that are grouped together.</li>
+<li>A tuple whose first element is an atom is called a <code>tagged</code> tuple, i.e., <code>{book, &quot;The Aleph&quot;}</code>.</li>
+</ul>
 <blockquote>
 <p>Tuples are created automatically when we declare them and are destroyed when
 they can no longer be used. Erlang uses a garbage collector to reclaim all
@@ -136,7 +141,11 @@ unused memory, so we don’t have to worry about memory allocation.</p>
 </span></span><span class="line"><span class="cl">  4&gt; Y.
 </span></span><span class="line"><span class="cl">  <span class="m">45</span>
 </span></span></code></pre></div><h4 id="lists">Lists</h4>
-<p>A list is a compound data type with a variable number of terms: <code>[Term1,...,TermN]</code>.</p>
+<ul>
+<li>A list is a compound data type with a variable number of terms: <code>[Term1,...,TermN]</code>.</li>
+<li>One can add or iterate over lists with the <code>cons</code> operator <code>|</code>, which breaks a
+list into <code>H|T</code> (<code>head</code> and <code>tail</code>),</li>
+</ul>
 <h4 id="strings">Strings</h4>
 <blockquote>
 <p>Strictly speaking, there are no strings in Erlang. To represent a string in
@@ -144,8 +153,118 @@ Erlang, we can choose between representing the string as a list of integers or
 as a binary. When a string is represented as a list of integers, each element in
 the list represents a Unicode codepoint.</p>
 </blockquote>
+<p>To print a unicode string one must use the &ldquo;t&rdquo; modifier applied to the &ldquo;s&rdquo;
+control character in a formatting string, it accepts all Unicode codepoints and
+expect binaries to be in UTF-8:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  1&gt; <span class="nv">X</span> <span class="o">=</span> <span class="s2">&#34;a\x{221e}b&#34;</span>.
+</span></span><span class="line"><span class="cl">  <span class="o">[</span>97,8734,98<span class="o">]</span>
+</span></span><span class="line"><span class="cl">  2&gt; io:format<span class="o">(</span><span class="s2">&#34;~ts~n&#34;</span>,<span class="o">[</span>X<span class="o">])</span>.
+</span></span><span class="line"><span class="cl">  a∞b
+</span></span><span class="line"><span class="cl">  ok
+</span></span></code></pre></div><h3 id="modules-and-functions">Modules and Functions</h3>
+<h4 id="modules-are-where-we-store-code">Modules Are Where We Store Code</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl">  <span class="o">-</span><span class="n">module</span><span class="p">(</span><span class="n">geometry</span><span class="p">).</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span><span class="n">export</span><span class="p">([</span><span class="n">area</span><span class="o">/</span><span class="mi">1</span><span class="p">]).</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">area</span><span class="p">({</span><span class="n">rectangle</span><span class="p">,</span> <span class="nv">Width</span><span class="p">,</span> <span class="nv">Height</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="nv">Width</span> <span class="o">*</span> <span class="nv">Height</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">area</span><span class="p">({</span><span class="n">circle</span><span class="p">,</span> <span class="nv">Radius</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="mi">3</span><span class="p">.</span><span class="mi">14159</span> <span class="o">*</span> <span class="nv">Radius</span> <span class="o">*</span> <span class="nv">Radius</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">area</span><span class="p">({</span><span class="n">square</span><span class="p">,</span> <span class="nv">Side</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="nv">Side</span> <span class="o">*</span> <span class="nv">Side</span><span class="p">.</span>
+</span></span></code></pre></div><h4 id="funs-the-basic-unit-of-abstraction">Funs: The Basic Unit of Abstraction</h4>
+<p><code>Funs</code> are function closures. <code>Funs</code> are created by expressions of the form: <code>fun(...) -&gt; ... end</code>.</p>
+<h4 id="defining-your-own-control-abstractions">Defining Your Own Control Abstractions</h4>
+<p>If we want additional control structures, we can make our own. Erlang has no for loop, so let’s make one:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl">  <span class="n">for</span><span class="p">(</span><span class="nv">Max</span><span class="p">,</span> <span class="nv">Max</span><span class="p">,</span> <span class="nv">F</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="nv">F</span><span class="p">(</span><span class="nv">Max</span><span class="p">)];</span>
+</span></span><span class="line"><span class="cl">  <span class="n">for</span><span class="p">(</span><span class="nv">I</span><span class="p">,</span> <span class="nv">Max</span><span class="p">,</span> <span class="nv">F</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="nv">F</span><span class="p">(</span><span class="nv">I</span><span class="p">)|</span><span class="n">for</span><span class="p">(</span><span class="nv">I</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nv">Max</span><span class="p">,</span> <span class="nv">F</span><span class="p">)].</span>
+</span></span></code></pre></div><h4 id="list-comprehensions">List Comprehensions</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  1&gt; <span class="nv">L</span> <span class="o">=</span> <span class="o">[</span>1,2,3,4,5,6,7<span class="o">]</span>.
+</span></span><span class="line"><span class="cl">  <span class="o">[</span>1,2,3,4,5,6,7<span class="o">]</span>
+</span></span><span class="line"><span class="cl">  2&gt; <span class="o">[</span> 2*X <span class="o">||</span> X &lt;- L <span class="o">]</span>.
+</span></span><span class="line"><span class="cl">  <span class="o">[</span>2,4,6,8,10,12,14<span class="o">]</span>
+</span></span><span class="line"><span class="cl">  3&gt;
+</span></span></code></pre></div><blockquote>
+<p>The most general form of a list comprehension is an expression of the following
+form: <code>[X || Qualifier1, Qualifier2, ...]</code>, where <code>X</code> is an arbitrary expression,
+and each qualifier is either a generator, a bitstring generator, or a filter.</p>
+<ul>
+<li>Generators are written as <code>Pattern &lt;- ListExpr</code> where <code>ListExpr</code> must be an expression that evaluates to a list of terms.</li>
+<li>Bitstring generators are written as <code>BitStringPattern &lt;= BitStringExpr</code> where <code>BitStringExpr</code> must be an expression that evaluates to a bitstring.</li>
+<li>Filters are either predicates or boolean expressions.</li>
+</ul>
+</blockquote>
+<h4 id="case-and-if-expressions">case and if Expressions</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl">  <span class="k">case</span> <span class="nv">Expression</span> <span class="k">of</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">Pattern1</span> <span class="p">[</span><span class="k">when</span> <span class="nv">Guard1</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="nv">Expr_seq1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">Pattern2</span> <span class="p">[</span><span class="k">when</span> <span class="nv">Guard2</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="nv">Expr_seq2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">Guard1</span> <span class="o">-&gt;</span> <span class="nv">Expr_seq1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">Guard2</span> <span class="o">-&gt;</span> <span class="nv">Expr_seq2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span></code></pre></div><h3 id="records-and-maps">Records and Maps</h3>
+<h4 id="naming-tuple-items-with-records">Naming Tuple Items with Records</h4>
+<blockquote>
+<p>(&hellip;) records provide a convenient way for associating a tag
+with each of the elements in a tuple. This allows us to refer to an
+element of a tuple by name and not by position. A pre-compiler
+takes the record definition and replaces it with the appropriate tuple
+reference.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl">  <span class="o">-</span><span class="n">record</span><span class="p">(</span><span class="n">todo</span><span class="p">,</span> <span class="p">{</span><span class="n">status</span><span class="o">=</span><span class="n">reminder</span><span class="p">,</span><span class="n">who</span><span class="o">=</span><span class="n">joe</span><span class="p">,</span><span class="n">text</span><span class="p">}).</span>
+</span></span></code></pre></div><p>to load a record from the the shell, one must use the <code>rr</code> command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  1&gt; rr<span class="o">(</span><span class="s2">&#34;records.hrl&#34;</span><span class="o">)</span>.
+</span></span><span class="line"><span class="cl">  <span class="o">[</span>todo<span class="o">]</span>
+</span></span><span class="line"><span class="cl">  2&gt; <span class="c1">#todo{}.</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">#todo{status = reminder,who = joe,text = undefined}</span>
+</span></span><span class="line"><span class="cl">  3&gt; <span class="nv">X1</span> <span class="o">=</span> <span class="c1">#todo{status=urgent, text=&#34;Fix errata in book&#34;}.</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">#todo{status = urgent,who = joe,text = &#34;Fix errata in book&#34;}</span>
+</span></span><span class="line"><span class="cl">  4&gt; <span class="nv">X2</span> <span class="o">=</span> X1#todo<span class="o">{</span><span class="nv">status</span><span class="o">=</span><span class="k">done</span><span class="o">}</span>.
+</span></span><span class="line"><span class="cl">  <span class="c1">#todo{status = done,who = joe,text = &#34;Fix errata in book&#34;}</span>
+</span></span></code></pre></div><h4 id="maps-associative-key-value-stores">Maps: Associative Key-Value Stores</h4>
+<p>Maps are associative collections of key-value pairs.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  1&gt; <span class="nv">TaskPending</span> <span class="o">=</span> <span class="c1">#{ status =&gt; pending, description =&gt; &#39;feed cats&#39; }.</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">#{status =&gt; pending,description =&gt; &#39;feed cats&#39;}</span>
+</span></span><span class="line"><span class="cl">  2&gt; <span class="nv">TaskDone</span> <span class="o">=</span> TaskPending#<span class="o">{</span> status :<span class="o">=</span> <span class="k">done</span> <span class="o">}</span>.
+</span></span><span class="line"><span class="cl">  <span class="c1">#{status =&gt; done,description =&gt; &#39;feed cats&#39;}</span>
+</span></span></code></pre></div><h3 id="error-handling-in-sequential-programs">Error Handling in Sequential Programs</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl">  <span class="k">try</span> <span class="nv">FuncOrExpressionSeq</span> <span class="k">of</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">Pattern1</span> <span class="p">[</span><span class="k">when</span> <span class="nv">Guard1</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="nv">Expressions1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">Pattern2</span> <span class="p">[</span><span class="k">when</span> <span class="nv">Guard2</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="nv">Expressions2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">  <span class="k">catch</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">ExceptionType1</span><span class="p">:</span> <span class="nv">ExPattern1</span> <span class="p">[</span><span class="k">when</span> <span class="nv">ExGuard1</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="nv">ExExpressions1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">ExceptionType2</span><span class="p">:</span> <span class="nv">ExPattern2</span> <span class="p">[</span><span class="k">when</span> <span class="nv">ExGuard2</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="nv">ExExpressions2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">  <span class="k">after</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">AfterExpressions</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span></code></pre></div><dl>
+<dt><code>exit/1</code></dt>
+<dd>Used to terminate the current process.</dd>
+<dt><code>throw</code></dt>
+<dd>Used as a documentation to the caller, to show that a function might throw this exception.</dd>
+<dt>error</dt>
+<dd>Crashing errors.</dd>
+</dl>
+<h4 id="fail-fast-and-noisily-fail-politely">Fail Fast and Noisily, Fail Politely</h4>
+<blockquote>
+<p>In Erlang, when an error is detected internally by the system or is detected by
+program logic, the correct approach is to crash immediately and generate a
+meaningful error message.</p>
+<p>(&hellip;)</p>
+<p>Second, fail politely means that only the programmer should see the detailed
+error messages produced when a program crashes. A user of the program should
+never see these messages.</p>
+</blockquote>
+<h3 id="binaries-and-the-bit-syntax">Binaries and the Bit Syntax</h3>
 
 
+
+   
+
+   
 
    
 

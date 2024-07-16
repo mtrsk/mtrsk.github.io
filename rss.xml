@@ -6,8 +6,22 @@
     <description>Recent content in homepage title on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jul 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mtrsk.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Type-Driven Developmet with Idris</title>
+      <link>https://mtrsk.github.io/notes/2024/type-driven-developmet-with-idris/</link>
+      <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/type-driven-developmet-with-idris/</guid>
+      <description>:ID: 794f5acf-354c-49bf-943f-33480ade38f2&#xA;References: (Brady 2017) </description>
+    </item>
+    <item>
+      <title>CAP Theorem</title>
+      <link>https://mtrsk.github.io/notes/2024/cap-theorem/</link>
+      <pubDate>Thu, 11 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/cap-theorem/</guid>
+      <description>:ID: 74c5509d-73be-4b04-9ca4-039117d588a9&#xA;First postulated by Eric Brewer in (Brewer 2000), and formally proved in (Gilbert and Lynch 2002).&#xA;Definitions For (Brewer 2000), a distributed system has some very specific properties and behaviour, being a collected set of Nodes that all share data. A limitation of such systems happens when a write request is followed by a read request.&#xA;┌────────┐ │ Client │ └────────┘ [R] ^ | [W] | v ┌−−−−−−−−−−−−−−−−−−−−−−−−−┐ ╎ System ╎ ╎ ┌────┐ ╎ ╎ ┌──────────│ a0 │──┐ ╎ ╎ │ └────┘ │ ╎ ╎ │ │ │ ╎ ╎ ┌────┐ ┌────┐ │ ╎ ╎ │ a3 │───────│ a1 │ │ ╎ ╎ └────┘ └────┘ │ ╎ ╎ │ │ ╎ ╎ ┌────┐ │ ╎ ╎ │ a2 │──┘ ╎ ╎ └────┘ ╎ └−−−−−−−−−−−−−−−−−−−−−−−−−┘ Read Write A client can read data from the system by talking to any Node A client can write data to the system by talking to any Node The Theorem states that for any given pair of requests this kind of system can only guarantee two out of three properties:</description>
+    </item>
     <item>
       <title>Introducing Erlang: Getting Started in Functional Programming</title>
       <link>https://mtrsk.github.io/notes/2024/introducing-erlang/</link>
@@ -20,14 +34,14 @@
       <link>https://mtrsk.github.io/notes/2024/programming-erlang-software-for-a-concurrent-world/</link>
       <pubDate>Sat, 06 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/programming-erlang-software-for-a-concurrent-world/</guid>
-      <description>:ID: 1daea4ea-40bc-406d-8d03-906c7f9ec343 :ROAM_ALIASES: &amp;ldquo;Erlang&amp;rdquo;&#xA;Part I: Why Erlang? Introducing Concurrency Modeling Concurrency spawn is an Erlang primitive that creates a concurrent process and returns a process identifier (PID) that can used to interact with the newly created process:&#xA;spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]) The syntax Pid ! Msg means &amp;ldquo;send the message Msg to the process Pid&amp;rdquo;. And for Pid to process a message we need to pattern match:</description>
+      <description>:ID: 1daea4ea-40bc-406d-8d03-906c7f9ec343&#xA;Part I: Why Erlang? Introducing Concurrency Modeling Concurrency spawn is an Erlang primitive that creates a concurrent process and returns a process identifier (PID) that can used to interact with the newly created process:&#xA;spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]) The syntax Pid ! Msg means &amp;ldquo;send the message Msg to the process Pid&amp;rdquo;. And for Pid to process a message we need to pattern match:&#xA;receive {From, Message} -&amp;gt; .</description>
     </item>
     <item>
       <title>Erlang</title>
       <link>https://mtrsk.github.io/notes/2024/erlang/</link>
       <pubDate>Wed, 19 Jun 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/erlang/</guid>
-      <description>:ID: de7d0e94-618f-4982-b3e5-8806d88cad5d&#xA;Resources:&#xA;Etudes for Erlang (Laurent 2017): Notes from [BROKEN LINK: f5e7bb90-792d-406a-8c40-2b072db63a13] (Armstrong 2013): Notes from [BROKEN LINK: 1daea4ea-40bc-406d-8d03-906c7f9ec343] References Armstrong, Joe. 2013. “Programming Erlang: Software for a Concurrent World.” Laurent, Simon St. 2017. Introducing Erlang: Getting Started in Functional Programming. O’Reilly Media, Inc. </description>
+      <description>:ID: de7d0e94-618f-4982-b3e5-8806d88cad5d&#xA;Resources:&#xA;Etudes for Erlang (Laurent 2017): Notes from [BROKEN LINK: f5e7bb90-792d-406a-8c40-2b072db63a13] (Armstrong 2013): Notes from [BROKEN LINK: 1daea4ea-40bc-406d-8d03-906c7f9ec343] Joe Armstrong&amp;rsquo;s PHD thesis The Erlang view of the world can be summarized in the following statments (Armstrong 2003):&#xA;Everything is a process. Processes are strongly isolated. Process creation and destruction is a lightweight operation. Message passing is the only way for processes to interact. Processes have unique names. If you know the name of a process you can send it a message.</description>
     </item>
     <item>
       <title>Monad</title>

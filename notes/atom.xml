@@ -5,13 +5,140 @@
   
     <link href="https://mtrsk.github.io/notes/atom.xml" rel="self" type="application/atom+xml" />
   
-  <updated>2024-07-09T15:11:15Z</updated>
+  <updated>2024-07-16T02:55:43Z</updated>
   <author>
     
     
   </author>
   <generator>Hugo</generator>
   <id>https://mtrsk.github.io/notes/</id>
+  
+  <entry>
+    <title>Type-Driven Developmet with Idris</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/type-driven-developmet-with-idris/"/>
+    <id>https://mtrsk.github.io/notes/2024/type-driven-developmet-with-idris/</id>
+    <published>2024-07-15T00:00:00Z</published>
+    <updated>2024-07-15T00:00:00Z</updated>
+    <summary>:ID: 794f5acf-354c-49bf-943f-33480ade38f2
+References: (Brady 2017) </summary>
+    <content type="html">&lt;p&gt;:ID:       794f5acf-354c-49bf-943f-33480ade38f2&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;References:
+&lt;ul&gt;
+&lt;li&gt;(Brady 2017)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    
+    <category term="notes"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CAP Theorem</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/cap-theorem/"/>
+    <id>https://mtrsk.github.io/notes/2024/cap-theorem/</id>
+    <published>2024-07-11T00:00:00Z</published>
+    <updated>2024-07-11T00:00:00Z</updated>
+    <summary>:ID: 74c5509d-73be-4b04-9ca4-039117d588a9
+First postulated by Eric Brewer in (Brewer 2000), and formally proved in (Gilbert and Lynch 2002).
+Definitions For (Brewer 2000), a distributed system has some very specific properties and behaviour, being a collected set of Nodes that all share data. A limitation of such systems happens when a write request is followed by a read request.
+┌────────┐ │ Client │ └────────┘ [R] ^ | [W] | v ┌−−−−−−−−−−−−−−−−−−−−−−−−−┐ ╎ System ╎ ╎ ┌────┐ ╎ ╎ ┌──────────│ a0 │──┐ ╎ ╎ │ └────┘ │ ╎ ╎ │ │ │ ╎ ╎ ┌────┐ ┌────┐ │ ╎ ╎ │ a3 │───────│ a1 │ │ ╎ ╎ └────┘ └────┘ │ ╎ ╎ │ │ ╎ ╎ ┌────┐ │ ╎ ╎ │ a2 │──┘ ╎ ╎ └────┘ ╎ └−−−−−−−−−−−−−−−−−−−−−−−−−┘ Read Write A client can read data from the system by talking to any Node A client can write data to the system by talking to any Node The Theorem states that for any given pair of requests this kind of system can only guarantee two out of three properties:</summary>
+    <content type="html">&lt;p&gt;:ID:       74c5509d-73be-4b04-9ca4-039117d588a9&lt;/p&gt;
+&lt;p&gt;First postulated by Eric Brewer in (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Brewer 2000&lt;/a&gt;), and formally proved in (&lt;a href=&#34;#citeproc_bib_item_2&#34;&gt;Gilbert and Lynch 2002&lt;/a&gt;).&lt;/p&gt;
+&lt;h2 id=&#34;definitions&#34;&gt;Definitions&lt;/h2&gt;
+&lt;p&gt;For (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Brewer 2000&lt;/a&gt;), a distributed system has some very specific properties
+and behaviour, being a collected set of Nodes that all share data. A limitation
+of such systems happens when a write request is followed by a read request.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;       ┌────────┐
+       │ Client │
+       └────────┘
+     [R] ^    | [W]
+         |    v
+┌−−−−−−−−−−−−−−−−−−−−−−−−−┐
+╎         System          ╎
+╎              ┌────┐     ╎
+╎   ┌──────────│ a0 │──┐  ╎
+╎   │          └────┘  │  ╎
+╎   │             │    │  ╎
+╎ ┌────┐       ┌────┐  │  ╎
+╎ │ a3 │───────│ a1 │  │  ╎
+╎ └────┘       └────┘  │  ╎
+╎                 │    │  ╎
+╎              ┌────┐  │  ╎
+╎              │ a2 │──┘  ╎
+╎              └────┘     ╎
+└−−−−−−−−−−−−−−−−−−−−−−−−−┘
+&lt;/code&gt;&lt;/pre&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Read&lt;/th&gt;
+&lt;th&gt;Write&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;A client can read data from the system by talking to any Node&lt;/td&gt;
+&lt;td&gt;A client can write data to the system by talking to any Node&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The Theorem states that for any given pair of requests this kind of system can
+only guarantee two out of three properties:&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;Consistency&lt;/dt&gt;
+&lt;dd&gt;The system can read data that is (at least) as fresh as what has been just written.&lt;/dd&gt;
+&lt;dt&gt;Avaliability&lt;/dt&gt;
+&lt;dd&gt;Every request received by a non-failing node in the system must result in a response.&lt;/dd&gt;
+&lt;dt&gt;Partition Tolerance&lt;/dt&gt;
+&lt;dd&gt;The network will be allowed to lose arbitrarily many messages sent from one node to another.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;idea-of-the-proof&#34;&gt;Idea of the Proof&lt;/h2&gt;
+&lt;p&gt;Here is a sketch of the proof provided in (&lt;a href=&#34;#citeproc_bib_item_2&#34;&gt;Gilbert and Lynch 2002&lt;/a&gt;), consider the same
+system as before, but focus on a pair of requests (R/W) and two nodes.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;                [W]
+    ┌──────────────────────────┐
+    v                          │
+┌−−−−−−−−−−−−−−−−−−−−−−┐       │
+╎        System        ╎       │
+╎                      ╎       │
+╎ ┌────┐        ┌────┐ ╎ [R] ┌──────┐
+╎ │ a0 │ ────── │ a1 │ ╎────&amp;gt;│Client│
+╎ └────┘        └────┘ ╎     └──────┘
+╎                      ╎
+└−−−−−−−−−−−−−−−−−−−−−−┘
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Assume, via contraction, that such a system does follow all &lt;strong&gt;CAP&lt;/strong&gt;
+properties. Given a network partition between &lt;code&gt;a0&lt;/code&gt; and &lt;code&gt;a1&lt;/code&gt;, the followig will happen:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;                [W]
+    ┌──────────────────────────┐
+    v                          │
+┌−−−−−−−−−−−−−−−−−−−−−−┐       │
+╎        System        ╎       │
+╎                      ╎       │
+╎ ┌────┐        ┌────┐ ╎ [R] ┌──────┐
+╎ │ a0 │ ──//── │ a1 │ ╎─??─&amp;gt;│Client│
+╎ └────┘        └────┘ ╎     └──────┘
+╎                      ╎
+└−−−−−−−−−−−−−−−−−−−−−−┘
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;a1&lt;/code&gt; will never receive an update from &lt;code&gt;a0&lt;/code&gt;, which will break its avaliability promises (by never delivering the new result)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;a1&lt;/code&gt; sends stale data back to the client, breaking the consistency property.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Brewer, Eric A. 2000. “Towards Robust Distributed Systems.” In &lt;i&gt;Podc&lt;/i&gt;, 7:343–477. 10.1145. Portland, OR.&lt;/div&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_2&#34;&gt;&lt;/a&gt;Gilbert, Seth, and Nancy Lynch. 2002. “Brewer’s Conjecture and the Feasibility of Consistent, Available, Partition-Tolerant Web Services.” &lt;i&gt;Acm Sigact News&lt;/i&gt; 33 (2): 51–59.&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    
+    
+    <category term="notes"/>
+    
+  </entry>
   
   <entry>
     <title>Introducing Erlang: Getting Started in Functional Programming</title>
@@ -59,11 +186,11 @@ Base#Value notation.&lt;/p&gt;
     <id>https://mtrsk.github.io/notes/2024/programming-erlang-software-for-a-concurrent-world/</id>
     <published>2024-07-06T00:00:00Z</published>
     <updated>2024-07-06T00:00:00Z</updated>
-    <summary>:ID: 1daea4ea-40bc-406d-8d03-906c7f9ec343 :ROAM_ALIASES: &amp;ldquo;Erlang&amp;rdquo;
+    <summary>:ID: 1daea4ea-40bc-406d-8d03-906c7f9ec343
 Part I: Why Erlang? Introducing Concurrency Modeling Concurrency spawn is an Erlang primitive that creates a concurrent process and returns a process identifier (PID) that can used to interact with the newly created process:
-spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]) The syntax Pid ! Msg means &amp;ldquo;send the message Msg to the process Pid&amp;rdquo;. And for Pid to process a message we need to pattern match:</summary>
-    <content type="html">&lt;p&gt;:ID:       1daea4ea-40bc-406d-8d03-906c7f9ec343
-:ROAM_ALIASES: &amp;ldquo;Erlang&amp;rdquo;&lt;/p&gt;
+spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]) The syntax Pid ! Msg means &amp;ldquo;send the message Msg to the process Pid&amp;rdquo;. And for Pid to process a message we need to pattern match:
+receive {From, Message} -&amp;gt; .</summary>
+    <content type="html">&lt;p&gt;:ID:       1daea4ea-40bc-406d-8d03-906c7f9ec343&lt;/p&gt;
 &lt;h2 id=&#34;part-i-why-erlang&#34;&gt;Part I: Why Erlang?&lt;/h2&gt;
 &lt;h3 id=&#34;introducing-concurrency&#34;&gt;Introducing Concurrency&lt;/h3&gt;
 &lt;h4 id=&#34;modeling-concurrency&#34;&gt;Modeling Concurrency&lt;/h4&gt;
@@ -133,9 +260,14 @@ operation (&lt;code&gt;=&lt;/code&gt;).&lt;/li&gt;
 &lt;h4 id=&#34;atoms&#34;&gt;Atoms&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;In Erlang, atoms are used to represent constant values.&lt;/li&gt;
-&lt;li&gt;Atoms are also global, and this is achieved without the use of macro definitions or include files.&lt;/li&gt;
+&lt;li&gt;Atoms are also global, and this is achieved without the use of macro
+definitions or include files.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;tuples&#34;&gt;Tuples&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Represents a collection of elements (of any type) that are grouped together.&lt;/li&gt;
+&lt;li&gt;A tuple whose first element is an atom is called a &lt;code&gt;tagged&lt;/code&gt; tuple, i.e., &lt;code&gt;{book, &amp;quot;The Aleph&amp;quot;}&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Tuples are created automatically when we declare them and are destroyed when
 they can no longer be used. Erlang uses a garbage collector to reclaim all
@@ -151,7 +283,11 @@ unused memory, so we don’t have to worry about memory allocation.&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  4&amp;gt; Y.
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;m&#34;&gt;45&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;lists&#34;&gt;Lists&lt;/h4&gt;
-&lt;p&gt;A list is a compound data type with a variable number of terms: &lt;code&gt;[Term1,...,TermN]&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A list is a compound data type with a variable number of terms: &lt;code&gt;[Term1,...,TermN]&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;One can add or iterate over lists with the &lt;code&gt;cons&lt;/code&gt; operator &lt;code&gt;|&lt;/code&gt;, which breaks a
+list into &lt;code&gt;H|T&lt;/code&gt; (&lt;code&gt;head&lt;/code&gt; and &lt;code&gt;tail&lt;/code&gt;),&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h4 id=&#34;strings&#34;&gt;Strings&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Strictly speaking, there are no strings in Erlang. To represent a string in
@@ -159,6 +295,112 @@ Erlang, we can choose between representing the string as a list of integers or
 as a binary. When a string is represented as a list of integers, each element in
 the list represents a Unicode codepoint.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;To print a unicode string one must use the &amp;ldquo;t&amp;rdquo; modifier applied to the &amp;ldquo;s&amp;rdquo;
+control character in a formatting string, it accepts all Unicode codepoints and
+expect binaries to be in UTF-8:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  1&amp;gt; &lt;span class=&#34;nv&#34;&gt;X&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;a\x{221e}b&amp;#34;&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;97,8734,98&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  2&amp;gt; io:format&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;~ts~n&amp;#34;&lt;/span&gt;,&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;X&lt;span class=&#34;o&#34;&gt;])&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a∞b
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ok
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;modules-and-functions&#34;&gt;Modules and Functions&lt;/h3&gt;
+&lt;h4 id=&#34;modules-are-where-we-store-code&#34;&gt;Modules Are Where We Store Code&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;module&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;geometry&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;area&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]).&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;area&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;({&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rectangle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Width&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Height&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Width&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Height&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;area&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;({&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;circle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Radius&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;14159&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Radius&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Radius&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;area&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;({&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;square&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Side&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Side&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Side&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;funs-the-basic-unit-of-abstraction&#34;&gt;Funs: The Basic Unit of Abstraction&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;Funs&lt;/code&gt; are function closures. &lt;code&gt;Funs&lt;/code&gt; are created by expressions of the form: &lt;code&gt;fun(...) -&amp;gt; ... end&lt;/code&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;defining-your-own-control-abstractions&#34;&gt;Defining Your Own Control Abstractions&lt;/h4&gt;
+&lt;p&gt;If we want additional control structures, we can make our own. Erlang has no for loop, so let’s make one:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;F&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;F&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)];&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;F&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;F&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)|&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;F&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)].&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;list-comprehensions&#34;&gt;List Comprehensions&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  1&amp;gt; &lt;span class=&#34;nv&#34;&gt;L&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;1,2,3,4,5,6,7&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;1,2,3,4,5,6,7&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  2&amp;gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; 2*X &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; X &amp;lt;- L &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;2,4,6,8,10,12,14&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  3&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;The most general form of a list comprehension is an expression of the following
+form: &lt;code&gt;[X || Qualifier1, Qualifier2, ...]&lt;/code&gt;, where &lt;code&gt;X&lt;/code&gt; is an arbitrary expression,
+and each qualifier is either a generator, a bitstring generator, or a filter.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Generators are written as &lt;code&gt;Pattern &amp;lt;- ListExpr&lt;/code&gt; where &lt;code&gt;ListExpr&lt;/code&gt; must be an expression that evaluates to a list of terms.&lt;/li&gt;
+&lt;li&gt;Bitstring generators are written as &lt;code&gt;BitStringPattern &amp;lt;= BitStringExpr&lt;/code&gt; where &lt;code&gt;BitStringExpr&lt;/code&gt; must be an expression that evaluates to a bitstring.&lt;/li&gt;
+&lt;li&gt;Filters are either predicates or boolean expressions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;case-and-if-expressions&#34;&gt;case and if Expressions&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Expression&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;of&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Pattern1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;when&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Guard1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Expr_seq1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Pattern2&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;when&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Guard2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Expr_seq2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Guard1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Expr_seq1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Guard2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Expr_seq2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;records-and-maps&#34;&gt;Records and Maps&lt;/h3&gt;
+&lt;h4 id=&#34;naming-tuple-items-with-records&#34;&gt;Naming Tuple Items with Records&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(&amp;hellip;) records provide a convenient way for associating a tag
+with each of the elements in a tuple. This allows us to refer to an
+element of a tuple by name and not by position. A pre-compiler
+takes the record definition and replaces it with the appropriate tuple
+reference.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;record&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;todo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;status&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;reminder&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;who&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;joe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}).&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;to load a record from the the shell, one must use the &lt;code&gt;rr&lt;/code&gt; command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  1&amp;gt; rr&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;records.hrl&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;todo&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  2&amp;gt; &lt;span class=&#34;c1&#34;&gt;#todo{}.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;#todo{status = reminder,who = joe,text = undefined}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  3&amp;gt; &lt;span class=&#34;nv&#34;&gt;X1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#todo{status=urgent, text=&amp;#34;Fix errata in book&amp;#34;}.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;#todo{status = urgent,who = joe,text = &amp;#34;Fix errata in book&amp;#34;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  4&amp;gt; &lt;span class=&#34;nv&#34;&gt;X2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; X1#todo&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;status&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;#todo{status = done,who = joe,text = &amp;#34;Fix errata in book&amp;#34;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;maps-associative-key-value-stores&#34;&gt;Maps: Associative Key-Value Stores&lt;/h4&gt;
+&lt;p&gt;Maps are associative collections of key-value pairs.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  1&amp;gt; &lt;span class=&#34;nv&#34;&gt;TaskPending&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#{ status =&amp;gt; pending, description =&amp;gt; &amp;#39;feed cats&amp;#39; }.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;#{status =&amp;gt; pending,description =&amp;gt; &amp;#39;feed cats&amp;#39;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  2&amp;gt; &lt;span class=&#34;nv&#34;&gt;TaskDone&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; TaskPending#&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; status :&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;#{status =&amp;gt; done,description =&amp;gt; &amp;#39;feed cats&amp;#39;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;error-handling-in-sequential-programs&#34;&gt;Error Handling in Sequential Programs&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;FuncOrExpressionSeq&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;of&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Pattern1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;when&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Guard1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Expressions1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Pattern2&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;when&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Guard2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Expressions2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;catch&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;ExceptionType1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ExPattern1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;when&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ExGuard1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ExExpressions1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;ExceptionType2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ExPattern2&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;when&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ExGuard2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ExExpressions2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;after&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;AfterExpressions&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;dl&gt;
+&lt;dt&gt;&lt;code&gt;exit/1&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;Used to terminate the current process.&lt;/dd&gt;
+&lt;dt&gt;&lt;code&gt;throw&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;Used as a documentation to the caller, to show that a function might throw this exception.&lt;/dd&gt;
+&lt;dt&gt;error&lt;/dt&gt;
+&lt;dd&gt;Crashing errors.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h4 id=&#34;fail-fast-and-noisily-fail-politely&#34;&gt;Fail Fast and Noisily, Fail Politely&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In Erlang, when an error is detected internally by the system or is detected by
+program logic, the correct approach is to crash immediately and generate a
+meaningful error message.&lt;/p&gt;
+&lt;p&gt;(&amp;hellip;)&lt;/p&gt;
+&lt;p&gt;Second, fail politely means that only the programmer should see the detailed
+error messages produced when a program crashes. A user of the program should
+never see these messages.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;binaries-and-the-bit-syntax&#34;&gt;Binaries and the Bit Syntax&lt;/h3&gt;
 </content>
     
     
@@ -174,18 +416,33 @@ the list represents a Unicode codepoint.&lt;/p&gt;
     <updated>2024-06-19T00:00:00Z</updated>
     <summary>:ID: de7d0e94-618f-4982-b3e5-8806d88cad5d
 Resources:
-Etudes for Erlang (Laurent 2017): Notes from [BROKEN LINK: f5e7bb90-792d-406a-8c40-2b072db63a13] (Armstrong 2013): Notes from [BROKEN LINK: 1daea4ea-40bc-406d-8d03-906c7f9ec343] References Armstrong, Joe. 2013. “Programming Erlang: Software for a Concurrent World.” Laurent, Simon St. 2017. Introducing Erlang: Getting Started in Functional Programming. O’Reilly Media, Inc. </summary>
+Etudes for Erlang (Laurent 2017): Notes from [BROKEN LINK: f5e7bb90-792d-406a-8c40-2b072db63a13] (Armstrong 2013): Notes from [BROKEN LINK: 1daea4ea-40bc-406d-8d03-906c7f9ec343] Joe Armstrong&amp;rsquo;s PHD thesis The Erlang view of the world can be summarized in the following statments (Armstrong 2003):
+Everything is a process. Processes are strongly isolated. Process creation and destruction is a lightweight operation. Message passing is the only way for processes to interact. Processes have unique names. If you know the name of a process you can send it a message.</summary>
     <content type="html">&lt;p&gt;:ID:       de7d0e94-618f-4982-b3e5-8806d88cad5d&lt;/p&gt;
 &lt;p&gt;Resources:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/oreillymedia/etudes-for-erlang&#34;&gt;Etudes for Erlang&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;(&lt;a href=&#34;#citeproc_bib_item_2&#34;&gt;Laurent 2017&lt;/a&gt;): Notes from [BROKEN LINK: f5e7bb90-792d-406a-8c40-2b072db63a13]&lt;/li&gt;
-&lt;li&gt;(&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Armstrong 2013&lt;/a&gt;): Notes from [BROKEN LINK: 1daea4ea-40bc-406d-8d03-906c7f9ec343]&lt;/li&gt;
+&lt;li&gt;(&lt;a href=&#34;#citeproc_bib_item_3&#34;&gt;Laurent 2017&lt;/a&gt;): Notes from [BROKEN LINK: f5e7bb90-792d-406a-8c40-2b072db63a13]&lt;/li&gt;
+&lt;li&gt;(&lt;a href=&#34;#citeproc_bib_item_2&#34;&gt;Armstrong 2013&lt;/a&gt;): Notes from [BROKEN LINK: 1daea4ea-40bc-406d-8d03-906c7f9ec343]&lt;/li&gt;
+&lt;li&gt;Joe Armstrong&amp;rsquo;s PHD thesis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The Erlang view of the world can be summarized in the following statments
+(&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Armstrong 2003&lt;/a&gt;):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Everything is a process.&lt;/li&gt;
+&lt;li&gt;Processes are strongly isolated.&lt;/li&gt;
+&lt;li&gt;Process creation and destruction is a lightweight operation.&lt;/li&gt;
+&lt;li&gt;Message passing is the only way for processes to interact.&lt;/li&gt;
+&lt;li&gt;Processes have unique names.&lt;/li&gt;
+&lt;li&gt;If you know the name of a process you can send it a message.&lt;/li&gt;
+&lt;li&gt;Error handling is non-local.&lt;/li&gt;
+&lt;li&gt;Processes do what they are supposed to do or fail.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
-  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Armstrong, Joe. 2013. “Programming Erlang: Software for a Concurrent World.”&lt;/div&gt;
-  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_2&#34;&gt;&lt;/a&gt;Laurent, Simon St. 2017. &lt;i&gt;Introducing Erlang: Getting Started in Functional Programming&lt;/i&gt;. O’Reilly Media, Inc.&lt;/div&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Armstrong, Joe. 2003. “Making Reliable Distributed Systems in the Presence of Software Errors.”&lt;/div&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_2&#34;&gt;&lt;/a&gt;———. 2013. “Programming Erlang: Software for a Concurrent World.”&lt;/div&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_3&#34;&gt;&lt;/a&gt;Laurent, Simon St. 2017. &lt;i&gt;Introducing Erlang: Getting Started in Functional Programming&lt;/i&gt;. O’Reilly Media, Inc.&lt;/div&gt;
 &lt;/div&gt;
 </content>
     
