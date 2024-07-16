@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       794f5acf-354c-49bf-943f-33480ade38f2
+:END:
+#+title: Type-Driven Development with Idris
+
++ References:
+  + [cite:@brady2017]

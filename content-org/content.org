@@ -198,3 +198,13 @@ This page is a rendered version of my [[https://en.wikipedia.org/wiki/OPML][OPML
 :END:
 
 #+INCLUDE: "../notes/20231007182834-r_module_homomorphism.org"
+
+** Type-Driven Developmet with Idris
+:PROPERTIES:
+:EXPORT_FILE_NAME: type-driven-developmet-with-idris
+:EXPORT_DATE: 2024-07-15
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug type-driven-developmet-with-idris
+:CUSTOM_ID: type-driven-developmet-with-idris
+:END:
+
+#+INCLUDE: "../notes/20240715225258-type_driven_development.org"

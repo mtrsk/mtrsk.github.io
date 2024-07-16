@@ -249,4 +249,37 @@ Maps are associative collections of key-value pairs.
 #+END_SRC
 
 ** Error Handling in Sequential Programs
-*** Handling Errors in Sequential Code
+
+#+BEGIN_SRC erlang
+  try FuncOrExpressionSeq of
+    Pattern1 [when Guard1] -> Expressions1;
+    Pattern2 [when Guard2] -> Expressions2;
+    ...
+  catch
+    ExceptionType1: ExPattern1 [when ExGuard1] -> ExExpressions1;
+    ExceptionType2: ExPattern2 [when ExGuard2] -> ExExpressions2;
+    ...
+  after
+    AfterExpressions
+  end
+#+END_SRC
+
++ ~exit/1~ :: Used to terminate the current process.
++ ~throw~ :: Used as a documentation to the caller, to show that a function might throw this exception. 
++ error :: Crashing errors.
+
+*** Fail Fast and Noisily, Fail Politely
+
+#+BEGIN_QUOTE
+In Erlang, when an error is detected internally by the system or is detected by
+program logic, the correct approach is to crash immediately and generate a
+meaningful error message.
+
+(...)
+
+Second, fail politely means that only the programmer should see the detailed
+error messages produced when a program crashes. A user of the program should
+never see these messages.
+#+END_QUOTE
+
+** Binaries and the Bit Syntax
