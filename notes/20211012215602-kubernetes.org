@@ -12,6 +12,7 @@ applications. ---kubernetes.io
 * Architecture
 
 ** Masters
+Also know as control plane.
 
 #+BEGIN_QUOTE
 A Kubernetes master is a collection of system services that make up the control
@@ -37,7 +38,7 @@ production environments, multi-master high availability (HA) is a must have.
 + Persists the cluster state and configuration.
 + Based on [[https://etcd.io/][etcd]].
 
-**** kube-controller-manager
+**** controller-manager
 + Behaves like a controller of controllers:
   * Node controler.
   * Deployment controller.
@@ -45,7 +46,7 @@ production environments, multi-master high availability (HA) is a must have.
 + Implements watch loops in the subcontrolers, to check if their observed state
   is matching the desired state.
 
-**** kube-scheduler
+**** scheduler
 + Default scheduler for kubernetes, watches the ~kuber-apiserver~ for new work tasks.
 + Assigns work to cluster nodes:
   * Affinity/Anti-Affinity.
