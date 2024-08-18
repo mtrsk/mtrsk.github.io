@@ -5,7 +5,7 @@
   
     <link href="https://mtrsk.github.io/notes/atom.xml" rel="self" type="application/atom+xml" />
   
-  <updated>2024-08-18T20:03:17Z</updated>
+  <updated>2024-08-18T20:09:28Z</updated>
   <author>
     
     
@@ -64,8 +64,7 @@ commanding general and multiple lieutenants problem.&lt;/p&gt;
 &lt;p&gt;This is a special case of BGP and it&amp;rsquo;s unsolvable because a loyal lieutenant
 cannot distinguish betwee a loyal/traitorous officer when conflicting
 information arrives.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;A special case of BGP, 3 - General problem with 1 traitor is not solvable, because a loyal lieutenant can&amp;#39;t not distinguish who is the traitor when he gets conflicting information from the commander and the other lieutenant.
-                 👑
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;                 👑
                ┌─────┐
    ┌───────────│  L  │─────────┐
    │           └─────┘         │
