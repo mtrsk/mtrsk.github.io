@@ -208,3 +208,13 @@ This page is a rendered version of my [[https://en.wikipedia.org/wiki/OPML][OPML
 :END:
 
 #+INCLUDE: "../notes/20240715225258-type_driven_development.org"
+
+** Byzantine Generals Problem
+:PROPERTIES:
+:EXPORT_FILE_NAME: byzantine-generals-problem
+:EXPORT_DATE: 2024-08-16
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug byzantine-generals-problem
+:CUSTOM_ID: byzantine-generals-problem
+:END:
+
+#+INCLUDE: "../notes/20240816193136-byzantine_generals_problem.org"

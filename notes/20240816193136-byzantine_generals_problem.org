@@ -1,0 +1,73 @@
+:PROPERTIES:
+:ID:       68219535-efeb-4835-9670-fd2747376cf3
+:END:
+#+TITLE: Byzantine Generals Problem
+
+A summary from [cite:@lamport2019byzantine] paper.
+
+* Introduction
+
+#+BEGIN_QUOTE
+A reliable computer system must be able to cope with the failure of one or more
+of its components. A failed component may exhibit a type of behavior that is
+often overlooked namely, sending conflicting information to different parts of
+the system. The problem of coping with this type of failure is expressed
+abstractly as the *Byzantine Generals Problem*.
+#+END_QUOTE
+
+** The Classic Problem
+
++ Each division of Byzantine army is directed by its own general
++ Generals, some of which are traitors, communicate each other by messengers
+
+The generals must have an algorithm that guarantess the following properties:
+
+1. All loyal generals decide upon the same plan of action.
+2. A small number of traitors cannot cause the loyal generals to adopt a bad
+   plan.
+
+which can then be restated as:
+
+1. All loyal generals receive the same information upon which they will somehow get to the same decision
+2. The information sent by a loyal general should be used by all the other loyal generals.
+
+This problem is then further reformulated into what into a series of one
+commanding general and multiple lieutenants problem.
+
+#+BEGIN_QUOTE
+*Byzantine Generals Problem*: A commanding general must send an order to his $n -
+1$ lieutenant generals such that,
++ All *loyal* lieutenants obey the *same* order.
++ If the commanding general is *loyal*, then every *loyal* lieutenant *obeys* the
+order he sends. 
+#+END_QUOTE
+
+* Impossibility Results
+
+** 3-General Problem with 1 Traitor
+This is a special case of BGP and it's unsolvable because a loyal lieutenant
+cannot distinguish betwee a loyal/traitorous officer when conflicting
+information arrives.
+#+BEGIN_SRC 
+                 👑
+               ┌─────┐     
+   ┌───────────│  L  │─────────┐
+   │           └─────┘         │
+   │"Attack"                   │"Attack"
+┌─────┐                      ┌─────┐
+│  L  │<─────────────────────│  T  │
+└─────┘   "He said Retreat"  └─────┘
+
+
+                 👑
+               ┌─────┐     
+   ┌───────────│  T  │─────────┐
+   │           └─────┘         │
+   │"Attack"                   │"Retreat"
+┌─────┐                      ┌─────┐
+│  L  │<─────────────────────│  L  │
+└─────┘   "He said Retreat"  └─────┘
+#+END_SRC
+
+
+#+print_bibliography:
