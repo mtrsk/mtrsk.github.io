@@ -6,8 +6,15 @@
     <description>Recent content in Notes on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 16 Aug 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mtrsk.github.io/categories/notes/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Byzantine Generals Problem</title>
+      <link>https://mtrsk.github.io/notes/2024/byzantine-generals-problem/</link>
+      <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/byzantine-generals-problem/</guid>
+      <description>:ID: 68219535-efeb-4835-9670-fd2747376cf3&#xA;A summary from (Lamport, Shostak, and Pease 2019) paper.&#xA;Introduction A reliable computer system must be able to cope with the failure of one or more of its components. A failed component may exhibit a type of behavior that is often overlooked namely, sending conflicting information to different parts of the system. The problem of coping with this type of failure is expressed abstractly as the Byzantine Generals Problem.</description>
+    </item>
     <item>
       <title>Type-Driven Developmet with Idris</title>
       <link>https://mtrsk.github.io/notes/2024/type-driven-developmet-with-idris/</link>

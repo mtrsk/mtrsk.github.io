@@ -5,13 +5,94 @@
   
     <link href="https://mtrsk.github.io/notes/atom.xml" rel="self" type="application/atom+xml" />
   
-  <updated>2024-07-16T02:55:43Z</updated>
+  <updated>2024-08-18T20:03:17Z</updated>
   <author>
     
     
   </author>
   <generator>Hugo</generator>
   <id>https://mtrsk.github.io/notes/</id>
+  
+  <entry>
+    <title>Byzantine Generals Problem</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/byzantine-generals-problem/"/>
+    <id>https://mtrsk.github.io/notes/2024/byzantine-generals-problem/</id>
+    <published>2024-08-16T00:00:00Z</published>
+    <updated>2024-08-16T00:00:00Z</updated>
+    <summary>:ID: 68219535-efeb-4835-9670-fd2747376cf3
+A summary from (Lamport, Shostak, and Pease 2019) paper.
+Introduction A reliable computer system must be able to cope with the failure of one or more of its components. A failed component may exhibit a type of behavior that is often overlooked namely, sending conflicting information to different parts of the system. The problem of coping with this type of failure is expressed abstractly as the Byzantine Generals Problem.</summary>
+    <content type="html">&lt;p&gt;:ID:       68219535-efeb-4835-9670-fd2747376cf3&lt;/p&gt;
+&lt;p&gt;A summary from (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Lamport, Shostak, and Pease 2019&lt;/a&gt;) paper.&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A reliable computer system must be able to cope with the failure of one or more
+of its components. A failed component may exhibit a type of behavior that is
+often overlooked namely, sending conflicting information to different parts of
+the system. The problem of coping with this type of failure is expressed
+abstractly as the &lt;strong&gt;Byzantine Generals Problem&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;the-classic-problem&#34;&gt;The Classic Problem&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Each division of Byzantine army is directed by its own general&lt;/li&gt;
+&lt;li&gt;Generals, some of which are traitors, communicate each other by messengers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The generals must have an algorithm that guarantess the following properties:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;All loyal generals decide upon the same plan of action.&lt;/li&gt;
+&lt;li&gt;A small number of traitors cannot cause the loyal generals to adopt a bad
+plan.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;which can then be restated as:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;All loyal generals receive the same information upon which they will somehow get to the same decision&lt;/li&gt;
+&lt;li&gt;The information sent by a loyal general should be used by all the other loyal generals.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This problem is then further reformulated into what into a series of one
+commanding general and multiple lieutenants problem.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Byzantine Generals Problem&lt;/strong&gt;: A commanding general must send an order to his \(n -
+1\) lieutenant generals such that,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;All &lt;strong&gt;loyal&lt;/strong&gt; lieutenants obey the &lt;strong&gt;same&lt;/strong&gt; order.&lt;/li&gt;
+&lt;li&gt;If the commanding general is &lt;strong&gt;loyal&lt;/strong&gt;, then every &lt;strong&gt;loyal&lt;/strong&gt; lieutenant &lt;strong&gt;obeys&lt;/strong&gt; the&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;order he sends.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;impossibility-results&#34;&gt;Impossibility Results&lt;/h2&gt;
+&lt;h3 id=&#34;3-general-problem-with-1-traitor&#34;&gt;3-General Problem with 1 Traitor&lt;/h3&gt;
+&lt;p&gt;This is a special case of BGP and it&amp;rsquo;s unsolvable because a loyal lieutenant
+cannot distinguish betwee a loyal/traitorous officer when conflicting
+information arrives.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;A special case of BGP, 3 - General problem with 1 traitor is not solvable, because a loyal lieutenant can&amp;#39;t not distinguish who is the traitor when he gets conflicting information from the commander and the other lieutenant.
+                 👑
+               ┌─────┐
+   ┌───────────│  L  │─────────┐
+   │           └─────┘         │
+   │&amp;#34;Attack&amp;#34;                   │&amp;#34;Attack&amp;#34;
+┌─────┐                      ┌─────┐
+│  L  │&amp;lt;─────────────────────│  T  │
+└─────┘   &amp;#34;He said Retreat&amp;#34;  └─────┘
+
+
+                 👑
+               ┌─────┐
+   ┌───────────│  T  │─────────┐
+   │           └─────┘         │
+   │&amp;#34;Attack&amp;#34;                   │&amp;#34;Retreat&amp;#34;
+┌─────┐                      ┌─────┐
+│  L  │&amp;lt;─────────────────────│  L  │
+└─────┘   &amp;#34;He said Retreat&amp;#34;  └─────┘
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Lamport, Leslie, Robert Shostak, and Marshall Pease. 2019. “The Byzantine Generals Problem.” In &lt;i&gt;Concurrency: The Works of Leslie Lamport&lt;/i&gt;, 203–26.&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    
+    
+    <category term="notes"/>
+    
+  </entry>
   
   <entry>
     <title>Type-Driven Developmet with Idris</title>
@@ -950,173 +1031,6 @@ programmers will make incorrect assumptions.&lt;/p&gt;
 &lt;p&gt;A common optimization for immutable data structures that is enabled by immutable
 data structures.&lt;/p&gt;
 &lt;h3 id=&#34;the-two-generals-problem&#34;&gt;The Two Generals&amp;rsquo; Problem&lt;/h3&gt;
-</content>
-    
-    
-    <category term="notes"/>
-    
-  </entry>
-  
-  <entry>
-    <title>History of Logic: From Aristotle to Taski</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2021/history-of-logic-from-aristotle-to-taski/"/>
-    <id>https://mtrsk.github.io/notes/2021/history-of-logic-from-aristotle-to-taski/</id>
-    <published>2021-11-11T00:00:00Z</published>
-    <updated>2021-11-11T00:00:00Z</updated>
-    <summary>:ID: 0c082d02-4771-4860-8119-83b263c00ff3
-Notes from the book &amp;ldquo;History of Logic: from Aristotle to Tarski&amp;rdquo;.
-Intro Roughly speaking, the development of logic in Europe has had three &amp;ldquo;golden ages&amp;rdquo;:
-Greek period, from around 350 to 200 BCE and included thinkers like: Aristotle Diodoru Cronus Chrysippus High medieval period, from around 1100 to 1400 Modern period, from around 1850 up to the present day The Greek period From the beginning of the Greek golden period we get many anticipations of later developments.</summary>
-    <content type="html">&lt;p&gt;:ID:       0c082d02-4771-4860-8119-83b263c00ff3&lt;/p&gt;
-&lt;p&gt;Notes from the book &amp;ldquo;History of Logic: from Aristotle to Tarski&amp;rdquo;.&lt;/p&gt;
-&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
-&lt;p&gt;Roughly speaking, the development of logic in Europe has had three &amp;ldquo;golden
-ages&amp;rdquo;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Greek period, from around 350 to 200 BCE and included thinkers like:
-&lt;ul&gt;
-&lt;li&gt;Aristotle&lt;/li&gt;
-&lt;li&gt;Diodoru Cronus&lt;/li&gt;
-&lt;li&gt;Chrysippus&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;High medieval period, from around 1100 to 1400&lt;/li&gt;
-&lt;li&gt;Modern period, from around 1850 up to the present day&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;the-greek-period&#34;&gt;The Greek period&lt;/h3&gt;
-&lt;p&gt;From the beginning of the Greek golden period we get many anticipations of later
-developments. From Aristotle we get a wonderfully worked out system of
-&amp;ldquo;term-logic&amp;rdquo;, known as the &amp;ldquo;syllogism&amp;rdquo;, which was a precursor to the first-order
-logic, or &amp;ldquo;predicate calculus&amp;rdquo;, and which became easily the most influential
-contribution in logic for two thousand years. From the Stoics we get the first
-formulations of elements of propositional logic, with definitions of connectives
-given via truth-values, but we also see many other interesting formulations of
-logical problems, such as proposals for the nature of implication that are very
-similar to some contemporary theories on subjunctive and indicative
-conditionals. Much of the best work form the Stoic period, notably the work of
-Chrysippus, has been lost to history, but we know indirectly that he wrote much
-on logic generally, and specifi cally about paradoxes, including the Liar and
-the Sorites. It was for a very long time thought that the Aristotelian and Stoic
-conceptions of logic were at odds with one another, before their reconciliation
-in the modern era under the umbrella of first-order logic.&lt;/p&gt;
-&lt;p&gt;The fact that Aristotle’s achievement was so great actually had the unexpected
-consequence of holding back logical progress.&lt;/p&gt;
-&lt;h3 id=&#34;the-medieval-period&#34;&gt;The medieval period&lt;/h3&gt;
-&lt;p&gt;While learning in the West declined, the study of logic was kept alive in the
-thriving Islamic world under the Abbasid Caliphate, reaching great heights of
-sophistication with notable contributions from:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Al-Farabi&lt;/li&gt;
-&lt;li&gt;Avicenna&lt;/li&gt;
-&lt;li&gt;Averroes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;From the start of the twelfth century onwards, Europe became increasingly
-exposed to the Arabic world, and with this exposure came a rediscovery of the
-ancient Greek texts on logic, especially those of Aristotle, along with the
-benefit of the sophisticated Arabic commentaries. As these texts circulated
-around Europe we find the beginning of our second golden age of logic, from
-about 1100 to 1400, the high medieval or &amp;ldquo;scholastic&amp;rdquo; period, with notable
-contributors including Peter Abelard, William of Sherwood, Peter of Spain,
-William of Ockham and Paul of Venice. Curiously, during this period there was a
-combination both innovative progress and reverence for ancient authority, most
-particularly that of Aristotle. The progress came in the form of greater
-understanding of quantification, reference and logical consequence, a more
-intricate treatment of semantics, and developments in modal and temporal logic.&lt;/p&gt;
-&lt;p&gt;In the early decades of the sixteenth century, across northern Europe, we find
-the introductory arts course being adapted to meet the requirements of an influx
-of students from the professional classes. Within this arts course, with its
-humanist predilection for Greek and Latin eloquence, and legal and ethical
-instruction, there was an acknowledged need for some rigorous underpinning of
-instruction in ‘clear thinking’. But the meticulous introduction to formal logic
-and semantic theory provided by the scholastic programme came to look
-increasingly unsuitable for this purpose.
-Lisa Jardine 1982 : 805&lt;/p&gt;
-&lt;h3 id=&#34;the-birth-of-calculus&#34;&gt;The birth of Calculus&lt;/h3&gt;
-&lt;p&gt;While the study of pure logic may have declined in the early scientific period,
-there were a great many advances in mathematics, in particular in algebra and
-geometry. By the end of the sixteenth century European mathematicians had
-recovered many of the works from antiquity that had been lost, and largely
-improved upon the Arabic algebraic developments. This period of mathematical
-progress arguably culminated with the creation of the infinitesimal calculus of
-Leibniz (1646–1716) and Newton (1642–1727). Leibniz himself was an outstanding
-mind who worked in many fields and, against the intellectual tide of his day, he
-conducted a solitary programme of innovative research in formal logic. Although
-the main body of Leibniz’s works on logic remained relatively unknown until the
-turn of the twentieth century, in retrospect he is hugely significant for
-articulating a completely new vision of the subject – one that stressed the use
-of the recently developed mathematical and algebraic methods.&lt;/p&gt;
-&lt;p&gt;Leibniz’s motivations for pursuing an algebraic treatment of logic were deeply
-rooted in his philosophical views. He conceived of a mathematically
-reconstructed logic as a medium that would refl ect the nature of thought more
-faithfully than the comparatively clumsy linguistic approach of the medieval
-logicians. The idea was that this new logic, being symbolic rather than
-linguistic, would actually improve the way that we think, by laying out the real
-elements of thought with perfect clarity, and would therefore be a crucial key
-in advancing science generally. In his ambition, Leibniz saw the possibility for
-a universal language of thought based on logic; a lingua philosophica (or
-‘philosophical language’), which is something that would be recognizable to any
-student of analytic philosophy today. Despite the details of Leibniz’s logical
-innovations remaining largely out of sight in the Royal Library of Hanover until
-the turn of the twentieth century, the general character of his vision managed
-to exert an infl uence on a number of early pioneers in the modern age of
-logic. For instance, Leibniz’s ideal of a perfect language of thought heavily
-infl uenced two of the most important logicians of the early modern period;
-George Boole (1815–1864) and Gottlob Frege. This influence is reflected in the
-titles of their best known works on logic – Boole’s 1854 work &amp;ldquo;The Laws of
-Thought&amp;rdquo; and Frege’s 1879 work &amp;ldquo;Begriffsschrift&amp;rdquo; (which means ‘concept-
-script’). Although Boole and Frege diff ered signifi cantly in their approaches,
-both were trying to realize the mathematical vision of logic that Leibniz had
-envisaged.&lt;/p&gt;
-&lt;h3 id=&#34;the-modern-era&#34;&gt;The modern era&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;George Boole: Inspired by Aristotle and Leibniz, Boole managed to encode
-logical statements in a algebraic manner.&lt;/li&gt;
-&lt;li&gt;Charles Sanders Pierce:   Further developing on Boole&amp;rsquo;s approach, adding many
-contributions and taking the bold move to abandon Aristotle&amp;rsquo;s Logic. Pierce
-also tried to work with what today looks like Temporal and Modal Logics, and
-helped develop and introduce the modern version of quantifiers.&lt;/li&gt;
-&lt;li&gt;Gottlob Frege: Alongside Pierce, Frege independentely helped introduce the
-idea of universal quantifiers. Frege work is also famous for being what we
-would today call &lt;em&gt;Predicate Calculus&lt;/em&gt; in the modern sense, since it contains a
-formal language with quantifiers, logical connectives and predicates
-(including unary and relational ones), together with a set of Axioms and one
-law of inference (&lt;em&gt;Modus Pones&lt;/em&gt;).&lt;/li&gt;
-&lt;li&gt;Russel &amp;amp; Whitehead:&lt;/li&gt;
-&lt;li&gt;David Hilbert:&lt;/li&gt;
-&lt;li&gt;Kurt Gödel:&lt;/li&gt;
-&lt;li&gt;Alfred Tarski: Tarski&amp;rsquo;s landmark paper &amp;ldquo;On the concept of Truth in Formalized
-Languages&amp;rdquo; contains a definition of the satisfaction relation.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Aristotelian quantifier phrases take two predicates as arguments: they have the
-form ‘All A are B’, ‘Some A is B’, ‘No A is B’ or ‘Not all A are B’. Fregean or
-Peircian quantifi ers are unary and introduce a bound variable : a variable
-standing&lt;/p&gt;
-&lt;p&gt;One of the fundamental insights of the algebraic approach to logic was that
-logical symbols are subject to interpretation, as symbols in algebra are (for
-example, the geometric interpretation of complex numbers). Th is leads naturally
-to the idea of a model : an interpretation of the vocabulary of a logical system
-which satisfies its axioms. We therefore come to the notion of a Boolean
-algebra: any model of Boole’s axioms of logic. Such algebras consist of a set of
-atoms, the elements of the algebra; distinguished elements 0 and 1; and
-conjunction (intersection or multiplication), disjunction (union or addition)
-and complementation (negation or subtraction) operations on the set of
-elements. The study of Boolean algebras was begun by Marshall Stone, who proved
-a number of important results, including the representation theorem that bears
-his name: every Boolean algebra is isomorphic to (that is, has the same
-structure as) a Boolean algebra of sets.&lt;/p&gt;
-&lt;p&gt;We can trace the birth of model theory to Löwenheim’s paper &amp;ldquo;Über Möglichkeiten
-im Relativkalkül&amp;rdquo;. Working within Schröder’s version of the calculus of
-relations, Löwenheim showed that if a first-order sentence has a model, then it
-has a countable model. Th e Norwegian mathematician Thoralf Skolem improved
-Löwenheim’s proof in a paper of 1920, and in doing so generalized the result
-from single sentences to (possibly infi nite) sets of sentences. The result is
-important because it shows that first-order logic is not, in general, able to
-fix the cardinalities of its models: there can, for example, be models of the
-theory of real numbers which are countable, or models of set theory where sets
-that the theory holds to be uncountable are actually (from the external,
-model-theoretic perspective) countable. The completeness theorem for first-order
-logic, later proved by Gödel in his 1929 PhD thesis, is an easy corollary of
-Skolem’s work from the early 1920s, but this was not understood until later.&lt;/p&gt;
 </content>
     
     
