@@ -1,0 +1,176 @@
+Recently I've been collaborating with friends on [[https://github.com/Dr-Nekoma/lyceum][Lyceum]], an MMO game with an
+[[https://www.erlang.org/][Erlang]] backend and a [[https://ziglang.org/][Zig]] + [[https://www.raylib.com/][Raylib]] client (as if erlang wasn't a weird enough of
+a choice). Now, this is an unusual combination, but that's the whole reason
+[[https://github.com/Dr-Nekoma][Nekoma]] exists in the first place (if you want to know more check [[https://duing.dev/posts/beyondhackers/][my friend's
+Lemos post]]).
+
+One can imagine that setting up such a development environment might be
+nightmarish, but thankfully the 21st century brought us some interesting tools
+that make Unix less of a mess to deal with, and yes, I'm talking about [[https://nixos.org/][Nix]].
+
+* Devenv
+
+** A unified shell for Erlang and Zig
+
+#+BEGIN_SRC nix
+  # (...)
+  devShells = forAllSystems (
+    system:
+    let
+      pkgs = nixpkgs.legacyPackages.${system};
+
+      # Erlang shit
+      erlangLatest = pkgs.erlang_27;
+      erlangLibs = getErlangLibs erlangLatest;
+
+      # Zig shit
+      raylib = pkgs.raylib;
+      zigLatest = pkgs.zig;
+
+      linuxPkgs = with pkgs; [
+        inotify-tools
+        xorg.libX11
+        xorg.libXrandr
+        xorg.libXinerama
+        xorg.libXcursor
+        xorg.libXi
+        xorg.libXi
+        libGL
+      ];
+      darwinPkgs = with pkgs.darwin.apple_sdk.frameworks; [
+        CoreFoundation
+        CoreServices
+      ];
+    in
+    {
+      # `nix develop .#ci`
+      # reduce the number of packages to the bare minimum needed for CI
+      ci = pkgs.mkShell {
+        env = mkEnvVars pkgs erlangLatest erlangLibs raylib;
+        buildInputs = with pkgs; [
+          erlangLatest
+          heroku
+          just
+          rebar3
+          zigLatest
+        ];
+      };
+
+      # `nix develop`
+      default = devenv.lib.mkShell {
+        inherit inputs pkgs;
+        modules = [
+          (
+            { pkgs, lib, ... }:
+            {
+              packages =
+                with pkgs;
+                [
+                  erlang-ls
+                  erlfmt
+                  just
+                  rebar3
+                  dbeaver-bin
+                ]
+                ++ lib.optionals stdenv.isLinux (linuxPkgs)
+                ++ lib.optionals stdenv.isDarwin darwinPkgs;
+
+              languages.erlang = {
+                enable = true;
+                package = erlangLatest;
+              };
+
+              languages.zig = {
+                enable = true;
+                package = zigLatest;
+              };
+
+              env = mkEnvVars pkgs erlangLatest erlangLibs raylib;
+
+              scripts = {
+                build.exec = "just build";
+                server.exec = "just server";
+              };
+
+              enterShell = ''
+                echo "Starting Erlang environment..."
+                rebar3 get-deps
+              '';
+
+              services.postgres = {
+                package = pkgs.postgresql_16.withPackages (p: with p; [ p.periods ]);
+                enable = true;
+                initialDatabases = [ { name = "mmo"; } ];
+                port = 5432;
+                listen_addresses = "127.0.0.1";
+                initialScript = ''
+                  CREATE USER admin SUPERUSER;
+                  ALTER USER admin PASSWORD 'admin';
+                  GRANT ALL PRIVILEGES ON DATABASE mmo to admin;
+                '';
+              };
+            }
+          )
+        ];
+      };
+     # (...)
+#+END_SRC
+
+** Postgres
+
+** The CI environment
+
+#+BEGIN_SRC nix
+    # `nix develop .#ci`
+    # reduce the number of packages to the bare minimum needed for CI
+    ci = pkgs.mkShell {
+      env = mkEnvVars pkgs erlangLatest erlangLibs raylib;
+      buildInputs = with pkgs; [
+        erlangLatest
+        heroku
+        just
+        rebar3
+        zigLatest
+      ];
+    };
+#+END_SRC
+
+** Direnv
+As if thigs weren't awesome enough, I need to talk about [[https://direnv.net/][direnv]], a simple toolig
+that can make wonders and with a single ~.envrc~ in your project's repo you can
+jump inside a certain development shell just by ~cd~-ing into the project's
+directory. Here's an example of my ~.envrc~:
+
+#+BEGIN_SRC
+use flake . --impure
+#+END_SRC
+
+followed by a ~direnv allow~ in my shell:
+
+#+BEGIN_SRC shell
+  $ direnv allow   
+  direnv: loading ~/Code/Personal/lyceum/.envrc                                                                                                                   
+  direnv: using flake . --impure
+  direnv: nix-direnv: Using cached dev shell
+  Starting Erlang environment...
+  ===> Verifying dependencies...
+  direnv: export +AR +AS +CC +CONFIG_SHELL +CXX +DEVENV_DOTFILE +DEVENV_PROFILE +DEVENV_ROOT +DEVENV_RUNTIME +DEVENV_STATE +ERLANG_INTERFACE_PATH +ERLANG_PATH +ERL_AFLAGS +ERL_INCLUDE_PATH +IN_NIX_SHELL +LD +NIX_BINTOOLS +NIX_BINTOOLS_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu +NIX_CC +NIX_CC_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu +NIX_CFLAGS_COMPILE +NIX_ENFORCE_NO_NATIVE +NIX_HARDENING_ENABLE +NIX_LDFLAGS +NIX_PKG_CONFIG_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu +NIX_STORE +NM +OBJCOPY +OBJDUMP +PGDATA +PGHOST +PGPORT +PKG_CONFIG +PKG_CONFIG_PATH +RANLIB +RAYLIB_PATH +READELF +SIZE +SOURCE_DATE_EPOCH +STRINGS +STRIP +cmakeFlags +configureFlags +mesonFlags +name +system ~LOCALE_ARCHIVE ~PATH ~XDG_DATA_DIRS
+#+END_SRC
+
+That's it.
+
+* Nix Build
+
+** A pure build of the Erlang server
+
+In the previous step I've showed you our impure environment, there's no way (as
+of now) to make things 100% pure while developing, specially because we need to
+have a postgres service running to debug and test locally.
+
+#+BEGIN_SRC nix
+#+END_SRC
+
+
+
+* Containers
+

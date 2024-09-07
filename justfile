@@ -9,7 +9,7 @@ default:
   just --list
 
 # Generate the Markdown files
-build:
+build: clean
     emacs $(pwd) --batch --load export.el
 
 # Publish content
