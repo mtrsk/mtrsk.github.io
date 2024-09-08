@@ -391,8 +391,11 @@ it), it makes my life dealing with Unix systems less painfull.
 
 There is still much to do, and it can be left for a part II later.
 
-- [ ] I have yet to learn how to deploy a production-ready erlang system
+- [ ] I have yet to learn how to deploy a production-ready erlang system. Add
+  [cite:@cesarini2016designing] to my readlist.
 - [ ] Properly build the client, it seems that [[https://github.com/nix-community/zon2nix][non2nix]] breaks with the [[https://github.com/nix-community/zon2nix/issues/6][format for
   zon files]], I'm not familiar with Zig toolig and ill take a look at this later
 - [ ] We are still unsure where to deploy, but I really want to move away from
   Heroku and check what Nix has to offer to manage a fleet of VMs.
+
+#+print_bibliography: 
