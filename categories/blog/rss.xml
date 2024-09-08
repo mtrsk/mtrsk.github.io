@@ -6,8 +6,15 @@
     <description>Recent content in Blog on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Sep 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mtrsk.github.io/categories/blog/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Some experiments with Erlang and Nix</title>
+      <link>https://mtrsk.github.io/blog/2024/some-experiments-with-erlang-and-nix/</link>
+      <pubDate>Sat, 07 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/blog/2024/some-experiments-with-erlang-and-nix/</guid>
+      <description>Recently I&amp;rsquo;ve been collaborating with friends on Lyceum, an MMO game with an Erlang backend and a Zig + Raylib client (as if erlang wasn&amp;rsquo;t a weird enough of a choice). Now, this is an unusual combination, but that&amp;rsquo;s the whole reason our pesky group exists in the first place (if you want to know more check my friend&amp;rsquo;s Lemos post).&#xA;There is also a couple of stadards we try to follow when doing this project, all of the team works with microservices all day in their normal jobs, so whenever we want to do something we try follow some simple rules:</description>
+    </item>
     <item>
       <title>How to use private NeoVim plugins on NixOS</title>
       <link>https://mtrsk.github.io/blog/2023/how-to-use-private-neovim-plugins-on-nixos/</link>

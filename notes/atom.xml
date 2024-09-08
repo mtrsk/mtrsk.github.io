@@ -5,7 +5,7 @@
   
     <link href="https://mtrsk.github.io/notes/atom.xml" rel="self" type="application/atom+xml" />
   
-  <updated>2024-08-18T20:09:28Z</updated>
+  <updated>2024-09-08T00:56:45Z</updated>
   <author>
     
     
@@ -213,6 +213,21 @@ properties. Given a network partition between &lt;code&gt;a0&lt;/code&gt; and &l
   &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Brewer, Eric A. 2000. “Towards Robust Distributed Systems.” In &lt;i&gt;Podc&lt;/i&gt;, 7:343–477. 10.1145. Portland, OR.&lt;/div&gt;
   &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_2&#34;&gt;&lt;/a&gt;Gilbert, Seth, and Nancy Lynch. 2002. “Brewer’s Conjecture and the Feasibility of Consistent, Available, Partition-Tolerant Web Services.” &lt;i&gt;Acm Sigact News&lt;/i&gt; 33 (2): 51–59.&lt;/div&gt;
 &lt;/div&gt;
+</content>
+    
+    
+    <category term="notes"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Designing for Scalability with Erlang/Otp: Implement Robust, Fault-Tolerant Systems</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/design-for-scalability-with-erlang-otp/"/>
+    <id>https://mtrsk.github.io/notes/2024/design-for-scalability-with-erlang-otp/</id>
+    <published>2024-07-06T00:00:00Z</published>
+    <updated>2024-07-06T00:00:00Z</updated>
+    <summary>:ID: ffac18bd-4e44-4a7b-8a3a-a85552c9b076</summary>
+    <content type="html">&lt;p&gt;:ID:       ffac18bd-4e44-4a7b-8a3a-a85552c9b076&lt;/p&gt;
 </content>
     
     
@@ -496,14 +511,15 @@ never see these messages.&lt;/p&gt;
     <updated>2024-06-19T00:00:00Z</updated>
     <summary>:ID: de7d0e94-618f-4982-b3e5-8806d88cad5d
 Resources:
-Etudes for Erlang (Laurent 2017): Notes from [BROKEN LINK: f5e7bb90-792d-406a-8c40-2b072db63a13] (Armstrong 2013): Notes from [BROKEN LINK: 1daea4ea-40bc-406d-8d03-906c7f9ec343] Joe Armstrong&amp;rsquo;s PHD thesis The Erlang view of the world can be summarized in the following statments (Armstrong 2003):
-Everything is a process. Processes are strongly isolated. Process creation and destruction is a lightweight operation. Message passing is the only way for processes to interact. Processes have unique names. If you know the name of a process you can send it a message.</summary>
+Etudes for Erlang (Laurent 2017): Notes from [BROKEN LINK: f5e7bb90-792d-406a-8c40-2b072db63a13] (Armstrong 2013): Notes from [BROKEN LINK: 1daea4ea-40bc-406d-8d03-906c7f9ec343] (Cesarini and Vinoski 2016): Notes from [BROKEN LINK: ffac18bd-4e44-4a7b-8a3a-a85552c9b076] Joe Armstrong&amp;rsquo;s PHD thesis The Erlang view of the world can be summarized in the following statments (Armstrong 2003):
+Everything is a process. Processes are strongly isolated. Process creation and destruction is a lightweight operation. Message passing is the only way for processes to interact.</summary>
     <content type="html">&lt;p&gt;:ID:       de7d0e94-618f-4982-b3e5-8806d88cad5d&lt;/p&gt;
 &lt;p&gt;Resources:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/oreillymedia/etudes-for-erlang&#34;&gt;Etudes for Erlang&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;(&lt;a href=&#34;#citeproc_bib_item_3&#34;&gt;Laurent 2017&lt;/a&gt;): Notes from [BROKEN LINK: f5e7bb90-792d-406a-8c40-2b072db63a13]&lt;/li&gt;
+&lt;li&gt;(&lt;a href=&#34;#citeproc_bib_item_4&#34;&gt;Laurent 2017&lt;/a&gt;): Notes from [BROKEN LINK: f5e7bb90-792d-406a-8c40-2b072db63a13]&lt;/li&gt;
 &lt;li&gt;(&lt;a href=&#34;#citeproc_bib_item_2&#34;&gt;Armstrong 2013&lt;/a&gt;): Notes from [BROKEN LINK: 1daea4ea-40bc-406d-8d03-906c7f9ec343]&lt;/li&gt;
+&lt;li&gt;(&lt;a href=&#34;#citeproc_bib_item_3&#34;&gt;Cesarini and Vinoski 2016&lt;/a&gt;): Notes from [BROKEN LINK: ffac18bd-4e44-4a7b-8a3a-a85552c9b076]&lt;/li&gt;
 &lt;li&gt;Joe Armstrong&amp;rsquo;s PHD thesis&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The Erlang view of the world can be summarized in the following statments
@@ -522,7 +538,8 @@ Everything is a process. Processes are strongly isolated. Process creation and d
 &lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
   &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Armstrong, Joe. 2003. “Making Reliable Distributed Systems in the Presence of Software Errors.”&lt;/div&gt;
   &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_2&#34;&gt;&lt;/a&gt;———. 2013. “Programming Erlang: Software for a Concurrent World.”&lt;/div&gt;
-  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_3&#34;&gt;&lt;/a&gt;Laurent, Simon St. 2017. &lt;i&gt;Introducing Erlang: Getting Started in Functional Programming&lt;/i&gt;. O’Reilly Media, Inc.&lt;/div&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_3&#34;&gt;&lt;/a&gt;Cesarini, Francesco, and Steve Vinoski. 2016. &lt;i&gt;Designing for Scalability with Erlang/Otp: Implement Robust, Fault-Tolerant Systems&lt;/i&gt;. O’Reilly Media, Inc.&lt;/div&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_4&#34;&gt;&lt;/a&gt;Laurent, Simon St. 2017. &lt;i&gt;Introducing Erlang: Getting Started in Functional Programming&lt;/i&gt;. O’Reilly Media, Inc.&lt;/div&gt;
 &lt;/div&gt;
 </content>
     
@@ -965,71 +982,6 @@ the needs of other systems.&lt;/p&gt;
 &lt;li&gt;Interactions&lt;/li&gt;
 &lt;li&gt;Change&lt;/li&gt;
 &lt;/ul&gt;
-</content>
-    
-    
-    <category term="notes"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Distributed Systems</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2021/distributed-systems/"/>
-    <id>https://mtrsk.github.io/notes/2021/distributed-systems/</id>
-    <published>2021-11-20T00:00:00Z</published>
-    <updated>2021-11-20T00:00:00Z</updated>
-    <summary>:ID: d7efb05f-fb8f-438c-b09d-ea91dc24ebc3
-Readings from the following books:
-Michael L. Perry&amp;rsquo;s &amp;ldquo;The Art of Immutable Architecture&amp;rdquo;. Properties of a reliable application
-Idempotence Immutability Local Independence Versioning Why Immutable Architecture ..if you are in architecture, you are responsible for cutting the Gordian Knot of possible failures and mitigations. This is the fragile process by which we build the systems that run our society.
-The Problems with Immutability It&amp;rsquo;s not how machines actually operate, i.</summary>
-    <content type="html">&lt;p&gt;:ID:       d7efb05f-fb8f-438c-b09d-ea91dc24ebc3&lt;/p&gt;
-&lt;p&gt;Readings from the following books:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Michael L. Perry&amp;rsquo;s &amp;ldquo;The Art of Immutable Architecture&amp;rdquo;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Properties of a reliable application&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Idempotence&lt;/li&gt;
-&lt;li&gt;Immutability&lt;/li&gt;
-&lt;li&gt;Local Independence&lt;/li&gt;
-&lt;li&gt;Versioning&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;why-immutable-architecture&#34;&gt;Why Immutable Architecture&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;..if you are in architecture, you are responsible for cutting the Gordian Knot
-of possible failures and mitigations. This is the fragile process by which we
-build the systems that run our society.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;the-problems-with-immutability&#34;&gt;The Problems with Immutability&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;It&amp;rsquo;s not how machines actually operate, i.e, we need find a way to represent
-fixed mutable memory&lt;/li&gt;
-&lt;li&gt;Modelling mutable actions that need to be solved by our immutable system&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;the-fallacies-of-distributed-computing&#34;&gt;The Fallacies of Distributed Computing&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;The network is reliable&lt;/li&gt;
-&lt;li&gt;Latency is zero&lt;/li&gt;
-&lt;li&gt;Bandwidth is infinite&lt;/li&gt;
-&lt;li&gt;The network is secure&lt;/li&gt;
-&lt;li&gt;Topology doesn&amp;rsquo;t change&lt;/li&gt;
-&lt;li&gt;There is one administrator&lt;/li&gt;
-&lt;li&gt;Transport cost is zero&lt;/li&gt;
-&lt;li&gt;The network is homogenous&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;changing-assumptions&#34;&gt;Changing Assumptions&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The tools that we use and the patterns that we follow today all evolved from a
-time during which assumptions of high reliability, zero latency, and topological
-consistency were not fallacies. (&amp;hellip;) When we apply the languages and patterns
-of the past to the problems of modern distributed systems, it is no wonder that
-programmers will make incorrect assumptions.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;structural-sharing&#34;&gt;Structural Sharing&lt;/h3&gt;
-&lt;p&gt;A common optimization for immutable data structures that is enabled by immutable
-data structures.&lt;/p&gt;
-&lt;h3 id=&#34;the-two-generals-problem&#34;&gt;The Two Generals&amp;rsquo; Problem&lt;/h3&gt;
 </content>
     
     

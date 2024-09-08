@@ -2,13 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mtrsk.github.io/notes/2024/byzantine-generals-problem/</loc>
-    <lastmod>2024-08-16T00:00:00+00:00</lastmod>
+    <loc>https://mtrsk.github.io/categories/blog/</loc>
+    <lastmod>2024-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/blog/</loc>
+    <lastmod>2024-09-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/categories/</loc>
-    <lastmod>2024-08-16T00:00:00+00:00</lastmod>
+    <lastmod>2024-09-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/</loc>
+    <lastmod>2024-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/blog/2024/some-experiments-with-erlang-and-nix/</loc>
+    <lastmod>2024-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/notes/2024/byzantine-generals-problem/</loc>
     <lastmod>2024-08-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/notes/</loc>
@@ -22,6 +31,9 @@
   </url><url>
     <loc>https://mtrsk.github.io/notes/2024/cap-theorem/</loc>
     <lastmod>2024-07-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/notes/2024/design-for-scalability-with-erlang-otp/</loc>
+    <lastmod>2024-07-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/notes/2024/introducing-erlang/</loc>
     <lastmod>2024-07-06T00:00:00+00:00</lastmod>
@@ -52,12 +64,6 @@
   </url><url>
     <loc>https://mtrsk.github.io/notes/2023/algebraic-models-for-accouting-systems/</loc>
     <lastmod>2023-10-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mtrsk.github.io/categories/blog/</loc>
-    <lastmod>2023-09-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mtrsk.github.io/blog/</loc>
-    <lastmod>2023-09-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/blog/2023/how-to-use-private-neovim-plugins-on-nixos/</loc>
     <lastmod>2023-09-17T00:00:00+00:00</lastmod>
