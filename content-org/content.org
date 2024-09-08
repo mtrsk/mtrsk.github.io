@@ -32,12 +32,14 @@ This page is a rendered version of my [[https://en.wikipedia.org/wiki/OPML][OPML
 :EXPORT_HUGO_SECTION: blog
 :END:
 
-** Experiments with Erlang and Nix
+#+INCLUDE: "../blog/blog.org"
+
+** Some experiments with Erlang and Nix
 :PROPERTIES:
-:EXPORT_FILE_NAME: experiments-with-erlang-and-nix
-:EXPORT_DATE: 2024-09-06
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug experiments-with-erlang-and-nix
-:CUSTOM_ID: experiments-with-erlang-and-nix
+:EXPORT_FILE_NAME: some-experiments-with-erlang-and-nix
+:EXPORT_DATE: 2024-09-07
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug some-experiments-with-erlang-and-nix
+:CUSTOM_ID: some-experiments-with-erlang-and-nix
 :END:
 
 #+INCLUDE: "../blog/posts/experiments-with-erlang-and-nix.org"

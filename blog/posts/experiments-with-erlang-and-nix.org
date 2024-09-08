@@ -4,17 +4,26 @@ a choice). Now, this is an unusual combination, but that's the whole reason [[ht
 pesky group]] exists in the first place (if you want to know more check [[https://duing.dev/posts/beyondhackers/][my
 friend's Lemos post]]).
 
+There is also a couple of stadards we try to follow when doing this project, all
+of the team works with microservices all day in their normal jobs, so whenever
+we want to do something we try follow some simple rules:
+
+1. Can we develop all of the project parts locally? Preferably with no
+   networking as well (besides pulling dependencies).
+2. Can we do so by leveraging a couple handy tools to their limit?
+
 One can imagine that setting up such a development environment might be
 nightmarish, but thankfully the 21st century brought us some interesting tools
 that make Unix less of a mess to deal with, and yes, I'm talking about [[https://nixos.org/][Nix]]. My
-goal here is to convince people who deal with more normal tools (~brew~, ~asdf~,
-~<insert random linux package manager>~, ...) to at least give Nix a try.
+goal here is to show people what our development experience looks like and maybe
+convince a few souls dealing with more normal tools (~brew~, ~asdf~, ~<insert random
+linux package manager>~, ...) to at least give Nix a try.
 
 * Devenv
 
 We use [[https://devenv.sh/][devenv]] to setup our development shell, think of it as your favorite
-programming language's enviroment and dependecy manager (~pip~, ~poetry~, ~nvm~,
-~rvm~, ~cabal~, ...) but capable of installinng anything availiable on [[https://search.nixos.org/packages][nixpkgs]] and
+programming language's envinroment and dependency manager (~pip~, ~poetry~, ~nvm~,
+~rvm~, ...) but capable of installinng anything availiable on [[https://search.nixos.org/packages][nixpkgs]] and
 much more.
 
 ** A unified development shell for Erlang and Zig
@@ -118,27 +127,43 @@ you. Here's a snippet of what it lookups like:
      # (...)
 #+END_SRC
 
+Let's try building the ~Zig~ client:
+
+#+BEGIN_SRC shell
+  $ just client-build
+  $ just client
+#+END_SRC
+
+#+CAPTION: It just works
+#+NAME:   fig:lyceum-client
+[[../../static/img/some_experiments_with_nix_and_erlang/00_lyceum_client.png]]
+
 *** Running Postgres
 
-As you could have noticed, not only are we installing ~Erlang~ and ~Zig~, some
+As you may have noticed, not only are we installing ~Erlang~ and ~Zig~, some
 madlad even put ~dbeaver~ there for God knows what reason, but hey, that's the dev
 shell, just do whatever you want. We also have a local postgres setup and the
 workflow mimics what you usually have with ~docker-compose~ or ~podman~. By running:
 
 #+BEGIN_SRC shell
-  devenv up -d
+  devenv up
 #+END_SRC
 
 inside the shell, a local ~Postgres 16~ with custom extensions will be
 spinned. The list of services supported by ~devenv~ keeps growing and you can take
 a you can check them [[https://devenv.sh/services/#supported-services][here]].
 
+#+CAPTION: It just works (x2)
+#+NAME:   fig:lyceum-client
+[[../../static/img/some_experiments_with_nix_and_erlang/01_postgres.png]]
+
 *** Direnv
 
 As if thigs weren't awesome enough, I need to talk about [[https://direnv.net/][direnv]], a simple tool
-that can make wonders, with a single ~.envrc~ in your project's repo you can
-jump inside a certain development shell just by ~cd~-ing into the project's
-directory. Here's an example of my ~.envrc~:
+that can make wonders (and it comes with nix integrations for free), with a
+single ~.envrc~ in your project's repo you can jump inside a certain development
+shell just by ~cd~-ing into the project's directory. Here's an example of my
+~.envrc~:
 
 #+BEGIN_SRC
 use flake . --impure
@@ -160,7 +185,8 @@ followed by a ~direnv allow~ in my shell:
 #+END_SRC
 
 That's it. Now every time I ~cd <lyceum-directory>~, I'll immediatly load the
-whole development shell and be ready to work on it.
+whole development shell and be ready to work on it. This section is optional but
+it really simplifies my.
 
 ** The CI environment
 
@@ -192,10 +218,10 @@ You can check what the full devshell looks like [[https://github.com/Dr-Nekoma/l
 
 * Nix Build
 
-In the previous step I've showed you our impure environment, there's no way (as
-of now) to make things 100% pure while developing, specially because we need to
-have a postgres service running to debug and test locally. However, when we talk
-about releases, things change, we need to find a way to properly build the
+In the previous section I've showed you our impure environment, there's no way
+(as of now) to make things 100% pure while developing, specially because we need
+to have a postgres service running to debug and test locally. However, when we
+talk about releases, things change, we need to find a way to properly build the
 server.
 
 ** A pure build of the Erlang server
@@ -261,7 +287,7 @@ dependecy I need to satisfy and properly build our server. Now, as for the
 ~deps.nix~ file, it was auto-generated with [[https://github.com/erlang-nix/rebar3_nix][rebar3-nix]], which itself has a [[https://github.com/erlang-nix/rebar3_nix?tab=readme-ov-file#use][rebar3
 plugin]]. So everytime someone adds a BEAM dependency in our current flow, we
 automatically generate a nix lockfile to match as well. Here's what we needed to
-add in our ~rebar3~ config:
+add in our ~rebar3~ config to benefit from the Nix integration:
 
 #+BEGIN_SRC
 {plugins, [
@@ -274,6 +300,10 @@ now let's see if this really works:
 #+BEGIN_SRC shell
   $ nix build .#server
   # (...)
+  # We now have a `result` directory in the project's root...
+  $ ls ./result/
+  bin  database  erts-13.2.2.10  lib  releases
+  # Now try running the server we've just build and...
   $ ./result/bin/server foreground
   Exec: /nix/store/cm6vsbfls41q6s5ms4y2gfnxvmx1qzfq-server/erts-13.2.2.10/bin/erlexec -noinput +Bd -boot /nix/store/cm6vsbfls41q6s5ms4y2gfnxvmx1qzfq-server/releases/0.0.1/start -mode embedded -boot_var SYSTEM_LIB_DIR /nix/store/cm6vsbfls41q6s5ms4y2gfnxvmx1qzfq-server/lib -config /nix/store/cm6vsbfls41q6s5ms4y2gfnxvmx1qzfq-server/releases/0.0.1/sys.config -args_file /nix/store/cm6vsbfls41q6s5ms4y2gfnxvmx1qzfq-server/releases/0.0.1/vm.args -- foreground
   Root: /nix/store/cm6vsbfls41q6s5ms4y2gfnxvmx1qzfq-server
@@ -284,12 +314,13 @@ now let's see if this really works:
   Migration Path: "/nix/store/cm6vsbfls41q6s5ms4y2gfnxvmx1qzfq-server/database/migrations"
   Running DB migrations.
   Migrations completed successfully.
+  # (...) it works
 #+END_SRC
 
 * Containers
 
 There is a treasure trove of examples in [[https://github.com/NixOS/nixpkgs/blob/master/pkgs/build-support/docker/examples.nix#L218][Nixpkgs]], I've decided to go with the
-simplest one. This is how you can leverage Nix to build container images for you:
+**simplest** one. This what a container for the backend looks like in Nix:
 
 #+BEGIN_SRC nix
   # nix build .#dockerImage
@@ -297,12 +328,16 @@ simplest one. This is how you can leverage Nix to build container images for you
     name = "lyceum";
     tag = "latest";
     created = "now";
-    # This will copy the compiled erlang release to the image
-    contents = [ server ];
+    # This will copy the erlang release derivation from the
+    # previous step into to the image
+    contents = [ server pkgs.coreutils pkgs.gawk pkgs.gnugrep ];
     config = {
       Cmd = [
         "${server}/bin/server"
         "foreground"
+      ];
+      Env = [
+        "ERL_DIST_PORT=8001"
       ];
       ExposedPorts = {
         "8080/tcp" = { };
@@ -311,36 +346,53 @@ simplest one. This is how you can leverage Nix to build container images for you
   };
 #+END_SRC
 
-Notice that I'm using the ~server~ derivation from the previous step, the hard
-work required to make it work the first time is immediatly rewarded because now
-we can keep composing the previous solutions into more complex flows. To test
-this, let's build the image:
+It doesn't really look like most Dockerfiles you see around the net. Notice that
+I'm using the ~server~ derivation from the previous step, the hard work required
+to make it work the first time is immediatly rewarded because now we can keep
+composing the previous solutions into more complex flows. To test this, let's
+build the image:
 
 #+BEGIN_SRC shell
+  $ nix build .#dockerImage
+  # Now load the build image in docker (or podman)
+  $ docker load < ./result
+  # Make sure you have `devenv up` running
+  $ docker container run --network=host --rm lyceum:latest
+  Exec: /nix/store/vwnrgsah54qf9ca0ax921061b6sm1km9-server/erts-13.2.2.10/bin/erlexec -noinput +Bd -boot /nix/store/vwnrgsah54qf9ca0ax921061b6sm1km9-server/releases/0.0.1/start -mode embedded -boot_var SYSTEM_LIB_DIR /nix/store/vwnrgsah54qf9ca0ax921061b6sm1km9-server/lib -config /nix/store/vwnrgsah54qf9ca0ax921061b6sm1km9-server/releases/0.0.1/sys.config -args_file /nix/store/vwnrgsah54qf9ca0ax921061b6sm1km9-server/releases/0.0.1/vm.args -- foreground
+  Root: /nix/store/vwnrgsah54qf9ca0ax921061b6sm1km9-server
+  /nix/store/vwnrgsah54qf9ca0ax921061b6sm1km9-server
+  server[1] Starting up
+  Connecting to: "127.0.0.1"
+  Connected to "127.0.0.1" with USER = "admin"
+  Finding migration scripts... 
+  Migration Path: "/nix/store/vwnrgsah54qf9ca0ax921061b6sm1km9-server/database/migrations"
+  Running DB migrations.
+  Migrations completed successfully.
+  # (...)
 #+END_SRC
 
 * Conclusion
+
+As I wanted to show here, we've used Nix all the way from defining a common
+development environment for the developers, to re-using some of the stuff in CI,
+to later repurpose some of the flows for pure builds, that later got repursed
+into our containers, all by leveraging the **same tool**. I wish modern devops
+was more about that, but it seems it'll take time for people to realize that
+**immutability**, **composition** and **functional programming** can go hand in hand
+and give us a better experience than one can find in most other solution (built
+by trillion dollar companies). Luckilly, Nix is [[https://www.youtube.com/watch?v=FJVFXsNzYZQ][gaining some traction]] and more
+people are talking about it.
+
+I've been using it for the past 6 years in my workstations and don't regret
+doing so, its a tool worth learning (and there's still so much to learn about
+it), it makes my life dealing with Unix systems less painfull.
 
 ** TODO
 
 There is still much to do, and it can be left for a part II later.
 
+- [ ] I have yet to learn how to deploy a production-ready erlang system
 - [ ] Properly build the client, it seems that [[https://github.com/nix-community/zon2nix][non2nix]] breaks with the [[https://github.com/nix-community/zon2nix/issues/6][format for
   zon files]], I'm not familiar with Zig toolig and ill take a look at this later
 - [ ] We are still unsure where to deploy, but I really want to move away from
   Heroku and check what Nix has to offer to manage a fleet of VMs.
-
-** Final thoughs
-
-As I wanted to show here, we've used Nix all the way from defining a development
-environment for the developers, to re-using some of the stuff in CI, to later
-repurpose some of the flows to build our containers, all by leveraging the **same
-toolk**. I wish modern devops was more about that, but it seems it'll take time
-for people to realize that **immutability**, **composition** and **functional
-programming** can go hand in hand and give us a better experience than one can
-find in most other solution (built by trillion dollar companies). Luckilly, Nix
-is [[https://www.youtube.com/watch?v=FJVFXsNzYZQ][gaining some traction]] and more people are talking about it.
-
-I've been using it for the past 6 years in my workstations and don't regret
-doing so, its a tool worth learning (and there's still so much to learn about
-it), it makes my life dealing with Unix systems less painfull.
