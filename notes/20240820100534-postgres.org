@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       1949c98e-e1c0-474b-b383-c76aa418d583
+:END:
+#+TITLE: Postgres
+
+
+* Functions
+#+BEGIN_SRC plpgsql
+CREATE OR REPLACE FUNCTION
+  function_name(arg1 INT, arg2 INT, arg3 INT)
+RETURNS
+  SETOF VARCHAR
+LANGUAGE
+  plpgsql
+AS
+$$
+BEGIN
+  (...)
+END;
+$$;
+#+END_SRC
+
+#+print_bibliography:

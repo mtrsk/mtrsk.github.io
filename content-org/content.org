@@ -32,6 +32,18 @@ This page is a rendered version of my [[https://en.wikipedia.org/wiki/OPML][OPML
 :EXPORT_HUGO_SECTION: blog
 :END:
 
+#+INCLUDE: "../blog/blog.org"
+
+** Some experiments with Erlang and Nix
+:PROPERTIES:
+:EXPORT_FILE_NAME: some-experiments-with-erlang-and-nix
+:EXPORT_DATE: 2024-09-07
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug some-experiments-with-erlang-and-nix
+:CUSTOM_ID: some-experiments-with-erlang-and-nix
+:END:
+
+#+INCLUDE: "../blog/posts/experiments-with-erlang-and-nix.org"
+
 ** How to use private NeoVim plugins on NixOS
 :PROPERTIES:
 :EXPORT_FILE_NAME: how-to-use-private-neovim-plugins-on-nixos
@@ -138,6 +150,16 @@ This page is a rendered version of my [[https://en.wikipedia.org/wiki/OPML][OPML
 :END:
 
 #+INCLUDE: "../notes/20240706213027-programming_erlang.org"
+
+** Designing for Scalability with Erlang/Otp: Implement Robust, Fault-Tolerant Systems
+:PROPERTIES:
+:EXPORT_FILE_NAME: design-for-scalability-with-erlang-otp
+:EXPORT_DATE: 2024-07-06
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug design-for-scalability-with-erlang-otp
+:CUSTOM_ID: design-for-scalability-with-erlang-otp
+:END:
+
+#+INCLUDE: "../notes/20240709110323-designing_for_scalability_with_erlang.org"
 
 ** History of Logic: From Aristotle to Taski
 :PROPERTIES:

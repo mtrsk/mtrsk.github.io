@@ -3,5 +3,3 @@
 :END:
 #+title: Designing for Scalability With Erlang/OTP
 #+ROAM_TAGS: "erlang"
-
-
