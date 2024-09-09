@@ -162,7 +162,7 @@ check them [[https://devenv.sh/services/#supported-services][here]].
 As if thigs weren't awesome enough, I need to talk about [[https://direnv.net/][direnv]], a simple tool
 that can make wonders (and it comes with nix integrations for free), with a
 single ~.envrc~ in your project's repo you can jump inside a certain development
-shell just by ~cd~-ing into the a directory. Here's an example of my
+shell just by ~cd~-ing into the directory. Here's an example of my
 ~.envrc~:
 
 #+BEGIN_SRC
