@@ -34,6 +34,16 @@ This page is a rendered version of my [[https://en.wikipedia.org/wiki/OPML][OPML
 
 #+INCLUDE: "../blog/blog.org"
 
+** You have 10 seconds to nixify your .Net project
+:PROPERTIES:
+:EXPORT_FILE_NAME: you-have-10-seconds-to-nixify-your-dotnet-project
+:EXPORT_DATE: 2024-09-16
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug you-have-10-seconds-to-nixify-your-dotnet-project
+:CUSTOM_ID: you-have-10-seconds-to-nixify-your-dotnet-project
+:END:
+
+#+INCLUDE: "../blog/posts/you-have-10-seconds-to-nixify-your-dotnet-project.org"
+
 ** Some experiments with Erlang and Nix
 :PROPERTIES:
 :EXPORT_FILE_NAME: some-experiments-with-erlang-and-nix

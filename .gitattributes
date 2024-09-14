@@ -1,2 +1,4 @@
 *.html linguist-vendored
 *.scss linguist-vendored
+*.png filter=lfs diff=lfs merge=lfs -text
+static/img/you_have_10_seconds_to_nixify_your_dotnet_project/01_demo.gif filter=lfs diff=lfs merge=lfs -text
