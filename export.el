@@ -9,7 +9,7 @@
 
 ;; Configuration Variables:
 (setq content-dir (concat (getenv "PWD") "/content-org"))
-(setq org-hugo-base-di (concat (getenv "PWD") "/content-org"))
+(setq org-hugo-base-dir (concat (getenv "PWD") "/content-org"))
 
 ;; Don't ask for confirmation before evaluating a code block
 (setq org-confirm-babel-evaluate nil)

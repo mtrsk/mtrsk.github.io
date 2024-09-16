@@ -1,0 +1,194 @@
+#+CAPTION: Don "The Gun" Syme, now officially part of the "Nix Gang".
+#+NAME:   fig:gun-syme
+[[../../static/img/you_have_10_seconds_to_nixify_your_dotnet_project/00_don_gun.png]]
+
+While this is a click bait title (maybe I've also farmed some zoomer credits out
+the OC), I'm pretty sure that's how Don Syme feels when looks at a [[https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/results][Result]] type
+like ~Result<'T,string>~ in an F# codebase. The reason why I've written this post
+is that I started doing changes in a [[https://github.com/mtrsk/interval.fs][open source project]] I develop/maintain,
+and realized other .Net people could benefit from this somehow (as most of the
+Nix + .Net guides are from before 2024).
+
+* An Opinionated Template
+
+Turns out that, while writing this, I've decided to put everything in a template
+that's easy to +steal+ copy, so if you are from the future and have the [[https://nixos.org/download/][Nix (the
+package manager)]] and the [[https://nixos.wiki/wiki/Flakes][Flakes]] feature enabled you'll be able to reproduce this
+post. Additionally, someone beat me into writing a flake for F#, here's [[https://github.com/NixOS/templates/tree/master/dotnet][a more
+official take]] on it, there are a couple changes from my repo and this one,
+mostly because I tend to favor devenv (since it has shown better adoption when I
+preached it to non-Nixers).
+
+** Devenv
+
+I've already tackled this in a [[https://mtrsk.github.io/blog/2024/some-experiments-with-erlang-and-nix/][previous article]], but the best developer
+experience right now is with [[https://devenv.sh/][devenv.sh]]. Unlike the previous article tho, the
+environment setup is way simpler, just a bunch of .Net tools inside the shell
+and call it a day.
+
+#+BEGIN_SRC nix
+  #(...)
+  # `nix develop --impure`
+  default = devenv.lib.mkShell {
+    inherit inputs pkgs;
+    modules = [
+      (
+        { pkgs, lib, ... }:
+        {
+          packages = with pkgs; [
+            bash
+            just
+
+            # for dotnet
+            netcoredbg
+            fsautocomplete
+            fantomas
+          ];
+
+          languages.dotnet = {
+            enable = true;
+            package = dotnet;
+          };
+
+          # looks for the .env by default additionaly, there is .filename
+          # if an arbitrary file is desired
+          dotenv.enable = true;
+        }
+      )
+    ];
+  };
+  # (...)
+#+END_SRC
+
+and similary to the previous post, we can access the environment by doing:
+
+#+BEGIN_SRC shell
+  nix develop --impure
+#+END_SRC
+
+or, if you have [[https://github.com/direnv/direnv][direnv]], run ~direnv allow~. Now you can build the project with the
+usual .Net tooling:
+
+#+BEGIN_SRC shell
+  dotnet build
+  # There is also a justfile configured to you can just
+  # type "just" and get all commands
+#+END_SRC
+
+Here's a quick demo:
+
+#+NAME:   fig:demo
+[[../../static/img/you_have_10_seconds_to_nixify_your_dotnet_project/01_demo.gif]]
+
+** Build your project with Nix
+
+This project is just a simple solution with the basic [[https://learn.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line][CLI Console App]] from the
+official documentation, the difference being that I've added a dependency to
+[[https://github.com/demystifyfp/FsToolkit.ErrorHandling][FsToolkit.ErrorHandling]], just as a way to showcase how to handle nuget
+dependencies later. To package your .Net App there is already the [[https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/dotnet.section.md#packaging-a-dotnet-application-packaging-a-dotnet-application][buildDotNetModule]],
+you can explore all the other options later in the docs, this is what works for
+the current code:
+
+#+BEGIN_SRC nix
+  # `nix build`
+  default = pkgs.buildDotnetModule {
+    pname = name;
+    version = version;
+    src = ./.;
+    projectFile = "src/App/App.fsproj";
+    nugetDeps = ./deps.nix;
+
+    dotnet-sdk =
+      with pkgs.dotnetCorePackages;
+      combinePackages [
+        sdk_8_0
+      ];
+    dotnet-runtime = pkgs.dotnetCorePackages.sdk_8_0;
+  };
+#+END_SRC
+
+To properly build this with nix, you may have noticed that we also import a
+~deps.nix~ file in the previous step. This file contains all the nuget
+dependencies our project uses and their hashes:
+
+#+BEGIN_SRC nix
+  { fetchNuGet }: [
+    (fetchNuGet { pname = "FsToolkit.ErrorHandling"; version = "4.16.0"; hash = "sha256-4pRixOtRDgLt4/z71o1XnkuXRa/43LUhl/pDRpofX7s="; })
+  ]
+#+END_SRC
+
+You don't have to manually create or edit this, as its already documented
+[[https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/dotnet.section.md#generating-and-updating-nuget-dependencies-generating-and-updating-nuget-dependencies][here]]. In this project this is already handled by the ~just gen-deps~ (or ~just gd~)
+command:
+
+#+BEGIN_SRC shell
+  $ rm deps.nix
+  $ just gd      
+  dotnet restore --packages out
+    Determining projects to restore...
+    All projects are up-to-date for restore.
+  nix run nixpkgs#nuget-to-nix -- out > deps.nix
+  $ cat deps.nix               
+  { fetchNuGet }: [
+    (fetchNuGet { pname = "FsToolkit.ErrorHandling"; version = "4.16.0"; hash = "sha256-4pRixOtRDgLt4/z71o1XnkuXRa/43LUhl/pDRpofX7s="; })
+  ]
+#+END_SRC
+
+The previous step is also the usual way to update a .Net package in nixpkgs, most
+times you'll just need to get the new version hash and update the nuget hashes
+as well:
+
+#+BEGIN_SRC shell
+  $ cd <my-clone-of-nixpkgs>
+  $ nix-build -A <package-name>.passthru.fetch-deps | bash
+  $ nix-build -A <package-name>
+#+END_SRC
+
+Then you open a PR to the [[https://github.com/NixOS/nixpkgs][official repository]], following the [[https://github.com/NixOS/nixpkgs/blob/master/CONTRIBUTING.md][contribution
+guidelines]], of course. Now, going back to the testing the Nix build:
+
+#+BEGIN_SRC shell
+  $ nix build                                                    
+  $ ./result/bin/App 
+  Test
+  # It works
+#+END_SRC
+
+** Generating OCI Images
+
+Similar to the [[https://mtrsk.github.io/blog/2024/some-experiments-with-erlang-and-nix/][previous post]], the Container Image looks like this:
+
+#+BEGIN_SRC shell
+  # nix build .#dockerImage
+  dockerImage = pkgs.dockerTools.buildLayeredImage {
+    name = "sample";
+    tag = "latest";
+    created = "now";
+    contents = [ default ];
+    config = {
+      Cmd = [
+        "${default}/bin/App"
+      ];
+    };
+  };
+#+END_SRC
+
+And can be tested with:
+
+#+BEGIN_SRC shell
+  $ nix build .#dockerImage
+  $ docker load < ./result
+  $ docker container run --rm sample:latest
+  Test
+#+END_SRC
+
+* Conclusion
+
+If this sparkled your interest somehow, here's the [[https://github.com/mtrsk/fsharp-nix/tree/master][source code]], I've also made
+sure to configure some [[https://github.com/mtrsk/fsharp-nix/actions][Github Actions]] Workflows there. 
+
+** TODO
+- [ ] Optimize the container image, by just shipping the runtime, not the SDK.
+- [ ] Open a PR into the [[https://github.com/NixOS/templates/tree/master/dotnet][NixOS Templates]] repo, maybe adding a [[https://safe-stack.github.io/][SAFE]] stack example
+  as well and a container build into the Hello Example.
+  
