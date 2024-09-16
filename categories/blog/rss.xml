@@ -6,8 +6,15 @@
     <description>Recent content in Blog on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 07 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Sep 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mtrsk.github.io/categories/blog/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>You have 10 seconds to nixify your .Net project</title>
+      <link>https://mtrsk.github.io/blog/2024/you-have-10-seconds-to-nixify-your-dotnet-project/</link>
+      <pubDate>Mon, 16 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/blog/2024/you-have-10-seconds-to-nixify-your-dotnet-project/</guid>
+      <description>Figure 1: Don &amp;ldquo;The Gun&amp;rdquo; Syme, now officially part of the &amp;ldquo;Nix Gang&amp;rdquo;.&#xA;While this is a click bait title (maybe I&amp;rsquo;ve also farmed some zoomer credits out the OC), I&amp;rsquo;m pretty sure that&amp;rsquo;s how Don Syme feels when looks at a Result type like Result&amp;lt;&#39;T,string&amp;gt; in an F# codebase. The reason why I&amp;rsquo;ve written this post is that I started doing changes in a open source project I develop/maintain, and realized other .</description>
+    </item>
     <item>
       <title>Some experiments with Erlang and Nix</title>
       <link>https://mtrsk.github.io/blog/2024/some-experiments-with-erlang-and-nix/</link>
