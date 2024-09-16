@@ -14,7 +14,10 @@ Nix + .Net guides are from before 2024).
 Turns out that, while writing this, I've decided to put everything in a template
 that's easy to +steal+ copy, so if you are from the future and have the [[https://nixos.org/download/][Nix (the
 package manager)]] and the [[https://nixos.wiki/wiki/Flakes][Flakes]] feature enabled you'll be able to reproduce this
-post.
+post. Additionally, someone beat me into writing a flake for F#, here's [[https://github.com/NixOS/templates/tree/master/dotnet][a more
+official take]] on it, there are a couple changes from my repo and this one,
+mostly because I tend to favor devenv (since it has shown better adoption when I
+preached it to non-Nixers).
 
 ** Devenv
 
@@ -182,3 +185,7 @@ And can be tested with:
 
 If this sparkled your interest somehow, here's the [[https://github.com/mtrsk/fsharp-nix/tree/master][source code]], I've also made sure to configure some [[https://github.com/mtrsk/fsharp-nix/actions][Github Actions]] Workflows there.
 
+** TODO
+- [ ] Optimize the container image, by just shipping the runtime, not the SDK.
+- [ ] Open a PR into the official repo, maybe adding a [[https://safe-stack.github.io/][SAFE]] stack example as well.
+  
