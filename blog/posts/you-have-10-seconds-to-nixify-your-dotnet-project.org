@@ -117,8 +117,9 @@ dependencies our project uses and their hashes:
   ]
 #+END_SRC
 
-You don't have to manually create it or edit this, as its already documented [[https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/dotnet.section.md#generating-and-updating-nuget-dependencies-generating-and-updating-nuget-dependencies][here]]. In this
-project this is already handled by the ~just gen-deps~ (or ~just gd~) command:
+You don't have to manually create or edit this, as its already documented
+[[https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/dotnet.section.md#generating-and-updating-nuget-dependencies-generating-and-updating-nuget-dependencies][here]]. In this project this is already handled by the ~just gen-deps~ (or ~just gd~)
+command:
 
 #+BEGIN_SRC shell
   $ rm deps.nix
@@ -183,9 +184,11 @@ And can be tested with:
 
 * Conclusion
 
-If this sparkled your interest somehow, here's the [[https://github.com/mtrsk/fsharp-nix/tree/master][source code]], I've also made sure to configure some [[https://github.com/mtrsk/fsharp-nix/actions][Github Actions]] Workflows there.
+If this sparkled your interest somehow, here's the [[https://github.com/mtrsk/fsharp-nix/tree/master][source code]], I've also made
+sure to configure some [[https://github.com/mtrsk/fsharp-nix/actions][Github Actions]] Workflows there. 
 
 ** TODO
 - [ ] Optimize the container image, by just shipping the runtime, not the SDK.
-- [ ] Open a PR into the official repo, maybe adding a [[https://safe-stack.github.io/][SAFE]] stack example as well.
+- [ ] Open a PR into the [[https://github.com/NixOS/templates/tree/master/dotnet][NixOS Templates]] repo, maybe adding a [[https://safe-stack.github.io/][SAFE]] stack example
+  as well and a container build into the Hello Example.
   
