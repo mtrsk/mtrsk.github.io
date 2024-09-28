@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       3a7a03ae-8932-4d86-ae45-aa84ff1f325a
+:END:
+#+title: Internet Small Computer Systems Interface
+#+ROAM_ALIAS: iSCSI
+#+filetags [[id:8a427ee7-2ef1-489b-af82-91de7be8a3ba][Linux]]
+

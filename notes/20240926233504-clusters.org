@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb
+:END:
+#+title: Clusters
+#+filetags [[id:8a427ee7-2ef1-489b-af82-91de7be8a3ba][Linux]]
+
+* High Availability Clusters
+
+#+BEGIN_QUOTE
+The goal of a high availability cluster is to make sure that critical resources
+reach the maximum possible availability. This goal is accomplished by installing
+cluster software on multiple servers. This software monitors the availability of
+the cluster nodes, and it monitors the availability of the services that are
+managed by the cluster. If a server goes down, or if the resource stops, the HA
+cluster will notice and make sure that the resource is restarted somewhere else
+in the cluster, so that it can be used again after a minimal interruption. [cite:@van2014pro]
+#+END_QUOTE
+
+#+print_bibliography: 

@@ -28,6 +28,7 @@
           tooling = with pkgs; [
             just
             hugo
+            sqlite
 
             # .Net
             netcoredbg
@@ -66,6 +67,8 @@
               citeproc
             ] ++ (with epkgs.elpaPackages; [
               org
+              org-roam
+              org-roam-ui
             ]));
         in
         {
@@ -93,7 +96,6 @@
               ({ pkgs, lib, ... }: {
                 packages =
                   [ dotnet pkgs.icu pkgs.tzdata ]
-                  ++ [ customEmacs ]
                   ++ [ texenv ]
                   ++ tooling;
 

@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       f0da3356-3797-4ddc-8306-cd333f159754
+:END:
+#+title: Sequential Erlang
+- tags :: [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]]
+
+* Guards
+
+* Built-in Functions
++ Conventionally, these are part of the ~erlang~ module.
++ Mostly written in C for fast execution.
+
+*** List of BiFs
+
++ ~date()~
++ ~time()~
++ ~length(List)~
++ ~size(Tuple)~
++ ~atom_to_list(Atom)~
++ ~list_to_tuple(List)~
++ ~integer_to_list(1000)~
++ ~tuple_to_list(Tuple)~
+
+* Recursion
+** Tail Recursion

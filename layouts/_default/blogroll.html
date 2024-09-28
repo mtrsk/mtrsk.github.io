@@ -1,0 +1,22 @@
+{{ define "main" }}
+  <h2>{{.Title}}</h2>
+  <p><a href="{{ .Site.BaseURL  }}/blogroll.xml">OPML File</a></p>
+  {{.Content}}
+
+  {{ $resource := resources.Get "blogroll.xml" | transform.Unmarshal  }}
+  {{ range $resource.body  }}
+    {{ range $category := .  }}
+      <h2>
+        {{ index $category "-title"  }}
+        <small>{{ index $category "-text"  }}</small>
+      </h2>
+      {{ range $entry := .outline  }}
+        <h4>
+          <a href="{{ index $entry "-htmlUrl"  }}">{{ index $entry "-title"  }}</a>
+          <sup><a href="{{ index $entry "-xmlUrl"  }}">feed</a></sup>
+        </h4>
+        <p>{{ index $entry "-text" | markdownify | safeHTML  }}</p>
+      {{ end  }}
+    {{ end  }}
+  {{ end }}
+{{ end }}

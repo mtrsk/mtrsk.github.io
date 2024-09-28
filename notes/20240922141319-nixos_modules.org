@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       01b79396-e6d4-4673-9438-95a120543f05
+:END:
+#+title: NixOS Modules
+#+ROAM_TAGS: [[roam:Nix]]
+
+* Basics
+
++ A module is a function that takes an ~attrset~ and returns an ~attrset~.
++ It may declare ~options~.
++ It may define ~option~ values.
++ When evaluated, it produces a configuration based on the declarations and definitions.
+
+#+BEGIN_SRC nix
+  {lib, ...}: {
+    options = {
+      name = lib.mkOption {
+        type = lib.types.str;
+      };
+    };
+  }
+#+END_SRC
+
+* Lib Utilities
+
+** mkMerge
+** mkOverride
+** mkIf
+** mkOrder
+

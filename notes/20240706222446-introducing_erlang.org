@@ -2,6 +2,9 @@
 :ID:       f5e7bb90-792d-406a-8c40-2b072db63a13
 :END:
 #+title: Introducing Erlang
+- tags :: [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]]
+
+ Notes from [cite:@laurent2017].
 
 * Chapter 1: Getting Comfortable 
 

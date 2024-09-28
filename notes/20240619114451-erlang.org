@@ -6,9 +6,6 @@
 Resources:
 
 + [[https://github.com/oreillymedia/etudes-for-erlang][Etudes for Erlang]]
-+ [cite:@laurent2017]: Notes from [[id:f5e7bb90-792d-406a-8c40-2b072db63a13][Introducing Erlang]] 
-+ [cite:@armstrong2013]: Notes from [[id:1daea4ea-40bc-406d-8d03-906c7f9ec343][Programming Erlang]]
-+ [cite:@cesarini2016designing]: Notes from [[id:ffac18bd-4e44-4a7b-8a3a-a85552c9b076][Designing for Scalability With Erlang/OTP]]
 + Joe Armstrong's PHD thesis
 
 The Erlang view of the world can be summarized in the following statments

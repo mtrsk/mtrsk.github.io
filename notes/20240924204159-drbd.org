@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       694d20ba-bdb5-419d-ae9d-0dc73c695333
+:END:
+#+title: Distributed Replicated Block Device 
+#+ROAM_ALIAS: DRBD
+#+filetags [[id:8a427ee7-2ef1-489b-af82-91de7be8a3ba][Linux]]
+
+
+

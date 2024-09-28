@@ -21,12 +21,19 @@ run: build
 	hugo server --buildDrafts --buildFuture
 
 # Build for CI
-ci-build: clean public
+ci-build: clean
+    nix develop .#ci --impure -c emacs $(pwd) --batch --load export.el
+
+ci-publish: ci-build
+    nix develop .#ci --impure -c hugo
+
+ci-run: ci-build
+    nix develop .#ci --impure -c hugo server --buildDrafts --buildFuture
 
 # Removes org backups
 remove-org:
     #!/usr/bin/env bash
-    find . -iname "#*.org#" | xargs rm -r 
+    find . -iname "#*.org#" | xargs rm -f
     echo "Finished!"
 
 # Cleans the current environment

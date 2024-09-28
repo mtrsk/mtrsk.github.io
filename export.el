@@ -11,6 +11,11 @@
 (setq content-dir (concat (getenv "PWD") "/content-org"))
 (setq org-hugo-base-dir (concat (getenv "PWD") "/content-org"))
 
+;; https://github.com/ikoamu/publish-org-roam-ui
+(setq org-roam-directory (concat (getenv "PWD") "/notes"))
+(setq org-roam-database-connector 'sqlite3)
+(setq org-roam-db-location (concat org-roam-directory "/roam.db"))
+
 ;; Don't ask for confirmation before evaluating a code block
 (setq org-confirm-babel-evaluate nil)
 ;;(setq org-export-use-babel t)

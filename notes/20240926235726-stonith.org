@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       789326a5-20aa-4492-acb6-1474c3c11a4a
+:END:
+#+title: STONITH
+:ROAM_ALIASES: Fencing
+#+filetags [[id:d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb][Clusters]]
+
+#+BEGIN_QUOTE
+In STONITH, specific hardware is used to terminate a node that is no longer
+responsive to the cluster. The idea behind STONITH is that before migrating
+resources to another node in the cluster, the cluster has to confirm that the
+node in question really is down. To do this, the cluster will send a shutdown
+action to the STONITH device, which will, in turn, terminate the nonresponsive
+node. [cite:@van2014pro chapter 1]
+#+END_QUOTE
+
+
