@@ -6,6 +6,15 @@
 
 * Aggregates
 
+** ~ROW_NUMBER~
+
+** ~LEAD~
+The ~LEAD()~ function is used to retrieve data from the next row.
+
+** ~LAG~
+The ~LAG()~ function is used to retrieve data from the previous row.
+
+
 * Rankings
 
 * Value Functions

@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       6ed3a191-0128-453e-b0b6-37c48593a6f0
+:END:
+#+title: OTP
+#+filetags: [[roam:Erlang]]

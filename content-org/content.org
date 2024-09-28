@@ -35,7 +35,14 @@ This page is a rendered version of my [[https://en.wikipedia.org/wiki/OPML][OPML
 
 #+INCLUDE: "../blog/blog.org"
 
-** You have 10 seconds to nixify your .Net project
+#+NAME: export-posts
+#+BEGIN_SRC shell :results raw :output drawer
+  dotnet fsi posts.fsx
+#+END_SRC
+
+#+RESULTS: export-posts
+
+** You Have 10 Seconds To Nixify Your Dotnet Project
 :PROPERTIES:
 :EXPORT_FILE_NAME: you-have-10-seconds-to-nixify-your-dotnet-project
 :EXPORT_DATE: 2024-09-16
@@ -43,19 +50,21 @@ This page is a rendered version of my [[https://en.wikipedia.org/wiki/OPML][OPML
 :CUSTOM_ID: you-have-10-seconds-to-nixify-your-dotnet-project
 :END:
 
-#+INCLUDE: "../blog/posts/you-have-10-seconds-to-nixify-your-dotnet-project.org"
+#+INCLUDE: "../blog/posts/20240916-you_have_10_seconds_to_nixify_your_dotnet_project.org"
+    
 
-** Some experiments with Erlang and Nix
+** Experiments With Erlang And Nix
 :PROPERTIES:
-:EXPORT_FILE_NAME: some-experiments-with-erlang-and-nix
+:EXPORT_FILE_NAME: experiments-with-erlang-and-nix
 :EXPORT_DATE: 2024-09-07
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug some-experiments-with-erlang-and-nix
-:CUSTOM_ID: some-experiments-with-erlang-and-nix
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug experiments-with-erlang-and-nix
+:CUSTOM_ID: experiments-with-erlang-and-nix
 :END:
 
-#+INCLUDE: "../blog/posts/experiments-with-erlang-and-nix.org"
+#+INCLUDE: "../blog/posts/20240907-experiments_with_erlang_and_nix.org"
+    
 
-** How to use private NeoVim plugins on NixOS
+** How To Use Private Neovim Plugins On Nixos
 :PROPERTIES:
 :EXPORT_FILE_NAME: how-to-use-private-neovim-plugins-on-nixos
 :EXPORT_DATE: 2023-09-17
@@ -63,189 +72,231 @@ This page is a rendered version of my [[https://en.wikipedia.org/wiki/OPML][OPML
 :CUSTOM_ID: how-to-use-private-neovim-plugins-on-nixos
 :END:
 
-#+INCLUDE: "../blog/posts/how-to-use-private-neovim-plugins-on-nixos.org"
+#+INCLUDE: "../blog/posts/20230917-how_to_use_private_neovim_plugins_on_nixos.org"
+    
 
-** I've Switched to NixOS
+** Switching To Nixos
 :PROPERTIES:
-:EXPORT_FILE_NAME: ive-switched-to-nixos
-:EXPORT_DATE: 2018-08-17
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug ive-switched-to-nixos
-:CUSTOM_ID: ive-switched-to-nixos
+:EXPORT_FILE_NAME: switching-to-nixos
+:EXPORT_DATE: 2018-08-07
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug switching-to-nixos
+:CUSTOM_ID: switching-to-nixos
 :END:
 
-#+INCLUDE: "../blog/posts/ive-switched-to-nixos.org"
+#+INCLUDE: "../blog/posts/20180807-switching_to_nixos.org"
+    
 
 * Notes :@notes:
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: notes
 :END:
 
-#+INCLUDE: "../blog/notes.org"
+This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 
-#+NAME: Export Notes
-#+BEGIN_SRC fsharp :exports both
-printf "Hello"
+#+NAME: export-notes
+#+BEGIN_SRC shell :results raw :output drawer
+  dotnet fsi notes.fsx
 #+END_SRC
 
-** Abelian Group
+#+RESULTS: export-notes
+
+** Otp
 :PROPERTIES:
-:EXPORT_FILE_NAME: abelian-group
-:EXPORT_DATE: 2023-10-07
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug abelian-group
-:CUSTOM_ID: abelian-group
+:EXPORT_FILE_NAME: otp
+:EXPORT_DATE: 2024-09-28
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug otp
+:CUSTOM_ID: otp
 :END:
 
-#+INCLUDE: "../notes/20231007164540-abelian_group.org"
+#+INCLUDE: "../notes/20240928181517-otp.org"
+    
 
-** Algebraic Models for Accouting Systems
+** Split Brain
 :PROPERTIES:
-:EXPORT_FILE_NAME: algebraic-models-for-accouting-systems
-:EXPORT_DATE: 2023-10-05
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug algebraic-models-for-accouting-systems
-:CUSTOM_ID: algebraic-models-for-accouting-systems
+:EXPORT_FILE_NAME: split-brain
+:EXPORT_DATE: 2024-09-28
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug split-brain
+:CUSTOM_ID: split-brain
 :END:
 
-#+INCLUDE: "../notes/20231005194145-algebraic_models_for_accounting_systems.org"
+#+INCLUDE: "../notes/20240928110111-split_brain.org"
+    
 
-** CAP Theorem
+** Stonith
 :PROPERTIES:
-:EXPORT_FILE_NAME: cap-theorem
-:EXPORT_DATE: 2024-07-11
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug cap-theorem
-:CUSTOM_ID: cap-theorem
+:EXPORT_FILE_NAME: stonith
+:EXPORT_DATE: 2024-09-26
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug stonith
+:CUSTOM_ID: stonith
 :END:
 
-#+INCLUDE: "../notes/20240711090045-cap_theorem.org"
+#+INCLUDE: "../notes/20240926235726-stonith.org"
+    
 
-** Commutative Ring
+** Clusters
 :PROPERTIES:
-:EXPORT_FILE_NAME: commutative-ring
-:EXPORT_DATE: 2023-10-07
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug commutative-ring
-:CUSTOM_ID: commutative-ring
+:EXPORT_FILE_NAME: clusters
+:EXPORT_DATE: 2024-09-26
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug clusters
+:CUSTOM_ID: clusters
 :END:
 
-#+INCLUDE: "../notes/20231007164648-commutative_ring.org"
+#+INCLUDE: "../notes/20240926233504-clusters.org"
+    
 
-** Distributed Systems
+** Quorum
 :PROPERTIES:
-:EXPORT_FILE_NAME: distributed-systems
-:EXPORT_DATE: 2021-11-20
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug distributed-systems
-:CUSTOM_ID: distributed-systems
+:EXPORT_FILE_NAME: quorum
+:EXPORT_DATE: 2024-09-25
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug quorum
+:CUSTOM_ID: quorum
 :END:
 
-#+INCLUDE: "../notes/20211202213813-distributed_systems.org"
+#+INCLUDE: "../notes/20240925092856-quorum.org"
+    
 
-** Erlang
+** Iscsi
 :PROPERTIES:
-:EXPORT_FILE_NAME: erlang
-:EXPORT_DATE: 2024-06-19
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug erlang
-:CUSTOM_ID: erlang
+:EXPORT_FILE_NAME: iscsi
+:EXPORT_DATE: 2024-09-24
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug iscsi
+:CUSTOM_ID: iscsi
 :END:
 
-#+INCLUDE: "../notes/20240619114451-erlang.org"
+#+INCLUDE: "../notes/20240924205200-iscsi.org"
+    
 
-** Introducing Erlang: Getting Started in Functional Programming
+** Drbd
 :PROPERTIES:
-:EXPORT_FILE_NAME: introducing-erlang
-:EXPORT_DATE: 2024-07-06
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug introducing-erlang
-:CUSTOM_ID: introducing-erlang
+:EXPORT_FILE_NAME: drbd
+:EXPORT_DATE: 2024-09-24
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug drbd
+:CUSTOM_ID: drbd
 :END:
 
-#+INCLUDE: "../notes/20240706222446-introducing_erlang.org"
+#+INCLUDE: "../notes/20240924204159-drbd.org"
+    
 
-** Programming Erlang: Software for a Concurrent World
+** Sequential Erlang
 :PROPERTIES:
-:EXPORT_FILE_NAME: programming-erlang-software-for-a-concurrent-world
-:EXPORT_DATE: 2024-07-06
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug programming-erlang-software-for-a-concurrent-world
-:CUSTOM_ID: programming-erlang-software-for-a-concurrent-world
+:EXPORT_FILE_NAME: sequential-erlang
+:EXPORT_DATE: 2024-09-24
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug sequential-erlang
+:CUSTOM_ID: sequential-erlang
 :END:
 
-#+INCLUDE: "../notes/20240706213027-programming_erlang.org"
+#+INCLUDE: "../notes/20240924122449-sequential_erlang.org"
+    
 
-** Designing for Scalability with Erlang/Otp: Implement Robust, Fault-Tolerant Systems
+** Linux
 :PROPERTIES:
-:EXPORT_FILE_NAME: design-for-scalability-with-erlang-otp
-:EXPORT_DATE: 2024-07-06
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug design-for-scalability-with-erlang-otp
-:CUSTOM_ID: design-for-scalability-with-erlang-otp
+:EXPORT_FILE_NAME: linux
+:EXPORT_DATE: 2024-09-24
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug linux
+:CUSTOM_ID: linux
 :END:
 
-#+INCLUDE: "../notes/20240709110323-designing_for_scalability_with_erlang.org"
+#+INCLUDE: "../notes/20240924092617-linux.org"
+    
 
-** History of Logic: From Aristotle to Taski
+** Erlang Datatypes
 :PROPERTIES:
-:EXPORT_FILE_NAME: history-of-logic-from-aristotle-to-taski
-:EXPORT_DATE: 2021-11-11
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug history-of-logic-from-aristotle-to-taski
-:CUSTOM_ID: history-of-logic-from-aristotle-to-taski
+:EXPORT_FILE_NAME: erlang-datatypes
+:EXPORT_DATE: 2024-09-23
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug erlang-datatypes
+:CUSTOM_ID: erlang-datatypes
 :END:
 
-#+INCLUDE: "../notes/20211104221056-history_of_logic.org"
+#+INCLUDE: "../notes/20240923220335-erlang_datatypes.org"
+    
 
-** Left R-Module
+** Postgres Window Functions
 :PROPERTIES:
-:EXPORT_FILE_NAME: left-r-module
-:EXPORT_DATE: 2023-10-07
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug left-r-module
-:CUSTOM_ID: left-r-module
+:EXPORT_FILE_NAME: postgres-window-functions
+:EXPORT_DATE: 2024-09-23
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug postgres-window-functions
+:CUSTOM_ID: postgres-window-functions
 :END:
 
-#+INCLUDE: "../notes/20231007165834-left_r_module.org"
+#+INCLUDE: "../notes/20240923110122-postgres_window_functions.org"
+    
 
-** Managing a Programming Project
+** Nixos Modules
 :PROPERTIES:
-:EXPORT_FILE_NAME: managing-a-programming-project
-:EXPORT_DATE: 2023-04-11
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug managing-a-programming-project
-:CUSTOM_ID: managing-a-programming-project
+:EXPORT_FILE_NAME: nixos-modules
+:EXPORT_DATE: 2024-09-22
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug nixos-modules
+:CUSTOM_ID: nixos-modules
 :END:
 
-#+INCLUDE: "../notes/20230411100120-managing_a_programming_project.org"
+#+INCLUDE: "../notes/20240922141319-nixos_modules.org"
+    
 
-** Monad
+** Nix
 :PROPERTIES:
-:EXPORT_FILE_NAME: monad
-:EXPORT_DATE: 2024-06-19
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug monad
-:CUSTOM_ID: monad
+:EXPORT_FILE_NAME: nix
+:EXPORT_DATE: 2024-09-22
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug nix
+:CUSTOM_ID: nix
 :END:
 
-#+INCLUDE: "../notes/20240619115816-monad.org"
+#+INCLUDE: "../notes/20240922120854-nix.org"
+    
 
-** Monoid
+** Postgres Indexes
 :PROPERTIES:
-:EXPORT_FILE_NAME: monoid
-:EXPORT_DATE: 2023-10-08
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug monoid
-:CUSTOM_ID: monoid
+:EXPORT_FILE_NAME: postgres-indexes
+:EXPORT_DATE: 2024-09-21
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug postgres-indexes
+:CUSTOM_ID: postgres-indexes
 :END:
 
-#+INCLUDE: "../notes/20231008214945-monoid.org"
+#+INCLUDE: "../notes/20240921194608-postgres_indexes.org"
+    
 
-** R-Module Homomorphism
+** Postgres Functions
 :PROPERTIES:
-:EXPORT_FILE_NAME: r-module-homomorphism
-:EXPORT_DATE: 2023-10-07
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug r-module-homomorphism
-:CUSTOM_ID: r-module-homomorphism
+:EXPORT_FILE_NAME: postgres-functions
+:EXPORT_DATE: 2024-09-21
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug postgres-functions
+:CUSTOM_ID: postgres-functions
 :END:
 
-#+INCLUDE: "../notes/20231007182834-r_module_homomorphism.org"
+#+INCLUDE: "../notes/20240921194441-postgres_functions.org"
+    
 
-** Type-Driven Developmet with Idris
+** Postgres Ctes
 :PROPERTIES:
-:EXPORT_FILE_NAME: type-driven-developmet-with-idris
-:EXPORT_DATE: 2024-07-15
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug type-driven-developmet-with-idris
-:CUSTOM_ID: type-driven-developmet-with-idris
+:EXPORT_FILE_NAME: postgres-ctes
+:EXPORT_DATE: 2024-09-21
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug postgres-ctes
+:CUSTOM_ID: postgres-ctes
 :END:
 
-#+INCLUDE: "../notes/20240715225258-type_driven_development.org"
+#+INCLUDE: "../notes/20240921191551-postgres_ctes.org"
+    
+
+** Postgres Subqueries
+:PROPERTIES:
+:EXPORT_FILE_NAME: postgres-subqueries
+:EXPORT_DATE: 2024-09-18
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug postgres-subqueries
+:CUSTOM_ID: postgres-subqueries
+:END:
+
+#+INCLUDE: "../notes/20240918131408-postgres_subqueries.org"
+    
+
+** Postgres
+:PROPERTIES:
+:EXPORT_FILE_NAME: postgres
+:EXPORT_DATE: 2024-08-20
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug postgres
+:CUSTOM_ID: postgres
+:END:
+
+#+INCLUDE: "../notes/20240820100534-postgres.org"
+    
 
 ** Byzantine Generals Problem
 :PROPERTIES:
@@ -256,3 +307,345 @@ printf "Hello"
 :END:
 
 #+INCLUDE: "../notes/20240816193136-byzantine_generals_problem.org"
+    
+
+** Type Driven Development
+:PROPERTIES:
+:EXPORT_FILE_NAME: type-driven-development
+:EXPORT_DATE: 2024-07-15
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug type-driven-development
+:CUSTOM_ID: type-driven-development
+:END:
+
+#+INCLUDE: "../notes/20240715225258-type_driven_development.org"
+    
+
+** Cap Theorem
+:PROPERTIES:
+:EXPORT_FILE_NAME: cap-theorem
+:EXPORT_DATE: 2024-07-11
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug cap-theorem
+:CUSTOM_ID: cap-theorem
+:END:
+
+#+INCLUDE: "../notes/20240711090045-cap_theorem.org"
+    
+
+** Designing For Scalability With Erlang
+:PROPERTIES:
+:EXPORT_FILE_NAME: designing-for-scalability-with-erlang
+:EXPORT_DATE: 2024-07-09
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug designing-for-scalability-with-erlang
+:CUSTOM_ID: designing-for-scalability-with-erlang
+:END:
+
+#+INCLUDE: "../notes/20240709110323-designing_for_scalability_with_erlang.org"
+    
+
+** Introducing Erlang
+:PROPERTIES:
+:EXPORT_FILE_NAME: introducing-erlang
+:EXPORT_DATE: 2024-07-06
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug introducing-erlang
+:CUSTOM_ID: introducing-erlang
+:END:
+
+#+INCLUDE: "../notes/20240706222446-introducing_erlang.org"
+    
+
+** Programming Erlang
+:PROPERTIES:
+:EXPORT_FILE_NAME: programming-erlang
+:EXPORT_DATE: 2024-07-06
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug programming-erlang
+:CUSTOM_ID: programming-erlang
+:END:
+
+#+INCLUDE: "../notes/20240706213027-programming_erlang.org"
+    
+
+** Monad
+:PROPERTIES:
+:EXPORT_FILE_NAME: monad
+:EXPORT_DATE: 2024-06-19
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug monad
+:CUSTOM_ID: monad
+:END:
+
+#+INCLUDE: "../notes/20240619115816-monad.org"
+    
+
+** Erlang
+:PROPERTIES:
+:EXPORT_FILE_NAME: erlang
+:EXPORT_DATE: 2024-06-19
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug erlang
+:CUSTOM_ID: erlang
+:END:
+
+#+INCLUDE: "../notes/20240619114451-erlang.org"
+    
+
+** Architectural Styles And The Design Of Network Based Software Architectures
+:PROPERTIES:
+:EXPORT_FILE_NAME: architectural-styles-and-the-design-of-network-based-software-architectures
+:EXPORT_DATE: 2023-10-18
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug architectural-styles-and-the-design-of-network-based-software-architectures
+:CUSTOM_ID: architectural-styles-and-the-design-of-network-based-software-architectures
+:END:
+
+#+INCLUDE: "../notes/20231018195743-architectural_styles_and_the_design_of_network_based_software_architectures.org"
+    
+
+** The Mother Of All Demos
+:PROPERTIES:
+:EXPORT_FILE_NAME: the-mother-of-all-demos
+:EXPORT_DATE: 2023-10-18
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug the-mother-of-all-demos
+:CUSTOM_ID: the-mother-of-all-demos
+:END:
+
+#+INCLUDE: "../notes/20231018195150-the_mother_of_all_demos.org"
+    
+
+** As We May Think
+:PROPERTIES:
+:EXPORT_FILE_NAME: as-we-may-think
+:EXPORT_DATE: 2023-10-18
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug as-we-may-think
+:CUSTOM_ID: as-we-may-think
+:END:
+
+#+INCLUDE: "../notes/20231018194552-as_we_may_think.org"
+    
+
+** Hypermediasystems
+:PROPERTIES:
+:EXPORT_FILE_NAME: hypermediasystems
+:EXPORT_DATE: 2023-10-15
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug hypermediasystems
+:CUSTOM_ID: hypermediasystems
+:END:
+
+#+INCLUDE: "../notes/20231015192823-hypermediasystems.org"
+    
+
+** Monoid
+:PROPERTIES:
+:EXPORT_FILE_NAME: monoid
+:EXPORT_DATE: 2023-10-08
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug monoid
+:CUSTOM_ID: monoid
+:END:
+
+#+INCLUDE: "../notes/20231008214945-monoid.org"
+    
+
+** R Module Homomorphism
+:PROPERTIES:
+:EXPORT_FILE_NAME: r-module-homomorphism
+:EXPORT_DATE: 2023-10-07
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug r-module-homomorphism
+:CUSTOM_ID: r-module-homomorphism
+:END:
+
+#+INCLUDE: "../notes/20231007182834-r_module_homomorphism.org"
+    
+
+** Left R Module
+:PROPERTIES:
+:EXPORT_FILE_NAME: left-r-module
+:EXPORT_DATE: 2023-10-07
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug left-r-module
+:CUSTOM_ID: left-r-module
+:END:
+
+#+INCLUDE: "../notes/20231007165834-left_r_module.org"
+    
+
+** Commutative Ring
+:PROPERTIES:
+:EXPORT_FILE_NAME: commutative-ring
+:EXPORT_DATE: 2023-10-07
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug commutative-ring
+:CUSTOM_ID: commutative-ring
+:END:
+
+#+INCLUDE: "../notes/20231007164648-commutative_ring.org"
+    
+
+** Abelian Group
+:PROPERTIES:
+:EXPORT_FILE_NAME: abelian-group
+:EXPORT_DATE: 2023-10-07
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug abelian-group
+:CUSTOM_ID: abelian-group
+:END:
+
+#+INCLUDE: "../notes/20231007164540-abelian_group.org"
+    
+
+** Algebraic Models For Accounting Systems
+:PROPERTIES:
+:EXPORT_FILE_NAME: algebraic-models-for-accounting-systems
+:EXPORT_DATE: 2023-10-05
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug algebraic-models-for-accounting-systems
+:CUSTOM_ID: algebraic-models-for-accounting-systems
+:END:
+
+#+INCLUDE: "../notes/20231005194145-algebraic_models_for_accounting_systems.org"
+    
+
+** Managing A Programming Project
+:PROPERTIES:
+:EXPORT_FILE_NAME: managing-a-programming-project
+:EXPORT_DATE: 2023-04-11
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug managing-a-programming-project
+:CUSTOM_ID: managing-a-programming-project
+:END:
+
+#+INCLUDE: "../notes/20230411100120-managing_a_programming_project.org"
+    
+
+** Mandarin Chinese
+:PROPERTIES:
+:EXPORT_FILE_NAME: mandarin-chinese
+:EXPORT_DATE: 2022-02-04
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug mandarin-chinese
+:CUSTOM_ID: mandarin-chinese
+:END:
+
+#+INCLUDE: "../notes/20220204231800-mandarin_chinese.org"
+    
+
+** Kubernetes Ingress
+:PROPERTIES:
+:EXPORT_FILE_NAME: kubernetes-ingress
+:EXPORT_DATE: 2021-12-08
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug kubernetes-ingress
+:CUSTOM_ID: kubernetes-ingress
+:END:
+
+#+INCLUDE: "../notes/20211208202505-kubernetes_ingress.org"
+    
+
+** Distributed Systems
+:PROPERTIES:
+:EXPORT_FILE_NAME: distributed-systems
+:EXPORT_DATE: 2021-12-02
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug distributed-systems
+:CUSTOM_ID: distributed-systems
+:END:
+
+#+INCLUDE: "../notes/20211202213813-distributed_systems.org"
+    
+
+** Gitops
+:PROPERTIES:
+:EXPORT_FILE_NAME: gitops
+:EXPORT_DATE: 2021-12-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug gitops
+:CUSTOM_ID: gitops
+:END:
+
+#+INCLUDE: "../notes/20211201115324-gitops.org"
+    
+
+** Kubernetes Secrets
+:PROPERTIES:
+:EXPORT_FILE_NAME: kubernetes-secrets
+:EXPORT_DATE: 2021-11-08
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug kubernetes-secrets
+:CUSTOM_ID: kubernetes-secrets
+:END:
+
+#+INCLUDE: "../notes/20211108165331-kubernetes_secrets.org"
+    
+
+** The Effective Manager
+:PROPERTIES:
+:EXPORT_FILE_NAME: the-effective-manager
+:EXPORT_DATE: 2021-11-07
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug the-effective-manager
+:CUSTOM_ID: the-effective-manager
+:END:
+
+#+INCLUDE: "../notes/20211107141903-the_effective_manager.org"
+    
+
+** History Of Logic
+:PROPERTIES:
+:EXPORT_FILE_NAME: history-of-logic
+:EXPORT_DATE: 2021-11-04
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug history-of-logic
+:CUSTOM_ID: history-of-logic
+:END:
+
+#+INCLUDE: "../notes/20211104221056-history_of_logic.org"
+    
+
+** Kubernetes Configmaps
+:PROPERTIES:
+:EXPORT_FILE_NAME: kubernetes-configmaps
+:EXPORT_DATE: 2021-11-03
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug kubernetes-configmaps
+:CUSTOM_ID: kubernetes-configmaps
+:END:
+
+#+INCLUDE: "../notes/20211103202637-kubernetes_configmaps.org"
+    
+
+** Kubernetes Storage
+:PROPERTIES:
+:EXPORT_FILE_NAME: kubernetes-storage
+:EXPORT_DATE: 2021-11-03
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug kubernetes-storage
+:CUSTOM_ID: kubernetes-storage
+:END:
+
+#+INCLUDE: "../notes/20211103110648-kubernetes_storage.org"
+    
+
+** Dns
+:PROPERTIES:
+:EXPORT_FILE_NAME: dns
+:EXPORT_DATE: 2021-10-29
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug dns
+:CUSTOM_ID: dns
+:END:
+
+#+INCLUDE: "../notes/20211029092528-dns.org"
+    
+
+** Helm
+:PROPERTIES:
+:EXPORT_FILE_NAME: helm
+:EXPORT_DATE: 2021-10-23
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug helm
+:CUSTOM_ID: helm
+:END:
+
+#+INCLUDE: "../notes/20211023140908-helm.org"
+    
+
+** Kubectl
+:PROPERTIES:
+:EXPORT_FILE_NAME: kubectl
+:EXPORT_DATE: 2021-10-13
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug kubectl
+:CUSTOM_ID: kubectl
+:END:
+
+#+INCLUDE: "../notes/20211013230422-kubectl.org"
+    
+
+** Kubernetes
+:PROPERTIES:
+:EXPORT_FILE_NAME: kubernetes
+:EXPORT_DATE: 2021-10-12
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug kubernetes
+:CUSTOM_ID: kubernetes
+:END:
+
+#+INCLUDE: "../notes/20211012215602-kubernetes.org"
+    

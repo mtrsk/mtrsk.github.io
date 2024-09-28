@@ -2,10 +2,10 @@
 
 open System
 
-let createNote (fileName: String) =
-    let createdAt = fileName.[0..13]
+let createPost (fileName: String) =
+    let createdAt = fileName.[0..7]
     let date = $"{createdAt.[0..3]}-{createdAt.[4..5]}-{createdAt.[6..7]}"
-    let name = fileName.[15..].Replace(".org", "")
+    let name = fileName.[9..].Replace(".org", "")
     let slug = name.Replace("_", "-")
     let title = Shared.capitalize name
 
@@ -18,8 +18,8 @@ let createNote (fileName: String) =
 :CUSTOM_ID: {slug}
 :END:
 
-#+INCLUDE: \"../notes/{fileName}\"
+#+INCLUDE: \"../blog/posts/{fileName}\"
     "
 
-let org = Shared.notes |> List.map (createNote) |> (fun s -> String.Join("\n", s))
+let org = Shared.posts |> List.map (createPost) |> (fun s -> String.Join("\n", s))
 printfn "%s" org

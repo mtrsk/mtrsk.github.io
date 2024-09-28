@@ -107,9 +107,9 @@
                 };
 
                 scripts = {
-                  build.exec = "just build";
+                  build.exec = "just ci-build";
                   publish.exec = "just public";
-                  run.exec = "just run";
+                  run.exec = "just ci-run";
                   clean.exec = "just clean";
                 };
 
