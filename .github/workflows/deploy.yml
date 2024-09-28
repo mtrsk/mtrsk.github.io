@@ -27,11 +27,6 @@ jobs:
       - name: Build website
         run: nix develop .#ci --impure -c just nix-build
 
-      - name: Generate org-roam-ui page
-        uses: ikoamu/publish-org-roam-ui@main
-        with:
-          org-roam-directory: ./notes
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
