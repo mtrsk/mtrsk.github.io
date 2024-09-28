@@ -1,37 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <opml version="1.0">
     <head>
-        <title>~mmagueta's feed</title>
+        <title>Benevides' feed</title>
     </head>
     <body>
         <outline title="Blogs" text="Blogs I personally like to read">
-            <outline
-                title="Victor's blog"
-                text="Victor is my dear friend with a lot of enthusiasm when it comes to deep diving into a topic."
-                type="rss"
-                xmlUrl="https://gluer.org/rss.xml"
-                htmlUrl="https://gluer.org" />
 
 	    <outline
                 title="Eduardo's blog"
-                text="Bellani is someone I respect and trust to be interested into truth above all else."
+                text="My old boss."
                 type="atom"
                 xmlUrl="https://ebellani.github.io/blog/atom.xml"
                 htmlUrl="https://ebellani.github.io/blog/" />
 
 	    <outline
                 title="Lemos' blog"
-                text="Lemos is my dear recreative programming companion. We do suffer from the 'agree with you on over 90%' syndrome, however. Are we both insane?"
+                text="Lemos is an ex-coworker of mine and recreative programming partner."
                 type="atom"
                 xmlUrl=""
                 htmlUrl="https://duing.dev/" />
 
 	    <outline
-                title="Diary of an Aesthete - Fabio Trombini"
-                text="Fabio is a sartorialist that gives me inspiration to live in an art deco era."
+                title="Magueta's blog"
+                text="My favorite fashion micro e-celeb and logic programming enthusiast."
                 type="atom"
                 xmlUrl=""
-                htmlUrl="https://thediaryofanaesthete.blogspot.com/" />
+                htmlUrl="https://marcosmagueta.com/" />
+
+        <outline
+                title="Victor's blog"
+                text="The nix gopher."
+                type="rss"
+                xmlUrl="https://gluer.org/rss.xml"
+                htmlUrl="https://gluer.org" />
         </outline>
 
         <outline title="Open Source Projects" text="Projects to watch closely">
@@ -41,12 +42,6 @@
                 type="rss"
                 xmlUrl="https://nixos.org/blog/announcements-rss.xml"
                 htmlUrl="https://nixos.org/news.html" />
-            <outline
-                title="sourcehut"
-                text=""
-                type="rss"
-                xmlUrl="https://sourcehut.org/blog/index.xml"
-                htmlUrl="https://sourcehut.org/blog" />
         </outline>
     </body>
 </opml>
