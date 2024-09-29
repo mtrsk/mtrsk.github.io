@@ -14,8 +14,8 @@ assetDir = "static"
   section = ["HTML", "ATOM"]
 
 [permalinks]
-  blog = '/blog/:year/:slug/'
-  notes = '/notes/:year/:slug/'
+  blog = "/blog/:year/:slug/"
+  notes = "/notes/:year/:slug/"
 
 
 [mediaTypes."application/atom+xml"]
