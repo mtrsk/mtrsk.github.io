@@ -21,9 +21,6 @@ jobs:
       - name: Install Nix
         uses: cachix/install-nix-action@v27
 
-      - name: Clean
-        run: just clean
-
       - name: Build website
         run: nix develop .#ci --impure -c just ci-publish
 
