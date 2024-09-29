@@ -5,7 +5,7 @@
   
     <link href="https://mtrsk.github.io/notes/atom.xml" rel="self" type="application/atom+xml" />
   
-  <updated>2024-09-16T12:28:17Z</updated>
+  <updated>2024-09-29T00:30:53Z</updated>
   <author>
     
     
@@ -14,77 +14,65 @@
   <id>https://mtrsk.github.io/notes/</id>
   
   <entry>
-    <title>Byzantine Generals Problem</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/byzantine-generals-problem/"/>
-    <id>https://mtrsk.github.io/notes/2024/byzantine-generals-problem/</id>
-    <published>2024-08-16T00:00:00Z</published>
-    <updated>2024-08-16T00:00:00Z</updated>
-    <summary>:ID: 68219535-efeb-4835-9670-fd2747376cf3
-A summary from (Lamport, Shostak, and Pease 2019) paper.
-Introduction A reliable computer system must be able to cope with the failure of one or more of its components. A failed component may exhibit a type of behavior that is often overlooked namely, sending conflicting information to different parts of the system. The problem of coping with this type of failure is expressed abstractly as the Byzantine Generals Problem.</summary>
-    <content type="html">&lt;p&gt;:ID:       68219535-efeb-4835-9670-fd2747376cf3&lt;/p&gt;
-&lt;p&gt;A summary from (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Lamport, Shostak, and Pease 2019&lt;/a&gt;) paper.&lt;/p&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+    <title>Otp</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/otp/"/>
+    <id>https://mtrsk.github.io/notes/2024/otp/</id>
+    <published>2024-09-28T00:00:00Z</published>
+    <updated>2024-09-28T00:00:00Z</updated>
+    <summary>:ID: 6ed3a191-0128-453e-b0b6-37c48593a6f0</summary>
+    <content type="html">&lt;p&gt;:ID:       6ed3a191-0128-453e-b0b6-37c48593a6f0&lt;/p&gt;
+</content>
+    
+    <category term="[[roam"/>
+    
+    <category term="Erlang]]"/>
+    
+    
+    <category term="notes"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Split Brain</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/split-brain/"/>
+    <id>https://mtrsk.github.io/notes/2024/split-brain/</id>
+    <published>2024-09-28T00:00:00Z</published>
+    <updated>2024-09-28T00:00:00Z</updated>
+    <summary>:ID: 582a4090-eb66-4dfd-8166-9acd3c97dcc9
+#+filetags [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb]</summary>
+    <content type="html">&lt;p&gt;:ID:       582a4090-eb66-4dfd-8166-9acd3c97dcc9&lt;/p&gt;
+&lt;p&gt;#+filetags [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb]&lt;/p&gt;
+</content>
+    
+    
+    <category term="notes"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Clusters</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/clusters/"/>
+    <id>https://mtrsk.github.io/notes/2024/clusters/</id>
+    <published>2024-09-26T00:00:00Z</published>
+    <updated>2024-09-26T00:00:00Z</updated>
+    <summary>:ID: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb
+#+filetags [BROKEN LINK: 8a427ee7-2ef1-489b-af82-91de7be8a3ba]
+High Availability Clusters The goal of a high availability cluster is to make sure that critical resources reach the maximum possible availability. This goal is accomplished by installing cluster software on multiple servers. This software monitors the availability of the cluster nodes, and it monitors the availability of the services that are managed by the cluster. If a server goes down, or if the resource stops, the HA cluster will notice and make sure that the resource is restarted somewhere else in the cluster, so that it can be used again after a minimal interruption.</summary>
+    <content type="html">&lt;p&gt;:ID:       d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb&lt;/p&gt;
+&lt;p&gt;#+filetags [BROKEN LINK: 8a427ee7-2ef1-489b-af82-91de7be8a3ba]&lt;/p&gt;
+&lt;h2 id=&#34;high-availability-clusters&#34;&gt;High Availability Clusters&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;A reliable computer system must be able to cope with the failure of one or more
-of its components. A failed component may exhibit a type of behavior that is
-often overlooked namely, sending conflicting information to different parts of
-the system. The problem of coping with this type of failure is expressed
-abstractly as the &lt;strong&gt;Byzantine Generals Problem&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The goal of a high availability cluster is to make sure that critical resources
+reach the maximum possible availability. This goal is accomplished by installing
+cluster software on multiple servers. This software monitors the availability of
+the cluster nodes, and it monitors the availability of the services that are
+managed by the cluster. If a server goes down, or if the resource stops, the HA
+cluster will notice and make sure that the resource is restarted somewhere else
+in the cluster, so that it can be used again after a minimal interruption. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Van Vugt 2014&lt;/a&gt;)&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;the-classic-problem&#34;&gt;The Classic Problem&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Each division of Byzantine army is directed by its own general&lt;/li&gt;
-&lt;li&gt;Generals, some of which are traitors, communicate each other by messengers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The generals must have an algorithm that guarantess the following properties:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;All loyal generals decide upon the same plan of action.&lt;/li&gt;
-&lt;li&gt;A small number of traitors cannot cause the loyal generals to adopt a bad
-plan.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;which can then be restated as:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;All loyal generals receive the same information upon which they will somehow get to the same decision&lt;/li&gt;
-&lt;li&gt;The information sent by a loyal general should be used by all the other loyal generals.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This problem is then further reformulated into what into a series of one
-commanding general and multiple lieutenants problem.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Byzantine Generals Problem&lt;/strong&gt;: A commanding general must send an order to his \(n -
-1\) lieutenant generals such that,&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;All &lt;strong&gt;loyal&lt;/strong&gt; lieutenants obey the &lt;strong&gt;same&lt;/strong&gt; order.&lt;/li&gt;
-&lt;li&gt;If the commanding general is &lt;strong&gt;loyal&lt;/strong&gt;, then every &lt;strong&gt;loyal&lt;/strong&gt; lieutenant &lt;strong&gt;obeys&lt;/strong&gt; the&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;order he sends.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;impossibility-results&#34;&gt;Impossibility Results&lt;/h2&gt;
-&lt;h3 id=&#34;3-general-problem-with-1-traitor&#34;&gt;3-General Problem with 1 Traitor&lt;/h3&gt;
-&lt;p&gt;This is a special case of BGP and it&amp;rsquo;s unsolvable because a loyal lieutenant
-cannot distinguish betwee a loyal/traitorous officer when conflicting
-information arrives.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;                 👑
-               ┌─────┐
-   ┌───────────│  L  │─────────┐
-   │           └─────┘         │
-   │&amp;#34;Attack&amp;#34;                   │&amp;#34;Attack&amp;#34;
-┌─────┐                      ┌─────┐
-│  L  │&amp;lt;─────────────────────│  T  │
-└─────┘   &amp;#34;He said Retreat&amp;#34;  └─────┘
-
-
-                 👑
-               ┌─────┐
-   ┌───────────│  T  │─────────┐
-   │           └─────┘         │
-   │&amp;#34;Attack&amp;#34;                   │&amp;#34;Retreat&amp;#34;
-┌─────┐                      ┌─────┐
-│  L  │&amp;lt;─────────────────────│  L  │
-└─────┘   &amp;#34;He said Retreat&amp;#34;  └─────┘
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
-  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Lamport, Leslie, Robert Shostak, and Marshall Pease. 2019. “The Byzantine Generals Problem.” In &lt;i&gt;Concurrency: The Works of Leslie Lamport&lt;/i&gt;, 203–26.&lt;/div&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Van Vugt, Sander. 2014. &lt;i&gt;Pro Linux High Availability Clustering&lt;/i&gt;. Apress.&lt;/div&gt;
 &lt;/div&gt;
 </content>
     
@@ -94,21 +82,25 @@ information arrives.&lt;/p&gt;
   </entry>
   
   <entry>
-    <title>Type-Driven Developmet with Idris</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/type-driven-developmet-with-idris/"/>
-    <id>https://mtrsk.github.io/notes/2024/type-driven-developmet-with-idris/</id>
-    <published>2024-07-15T00:00:00Z</published>
-    <updated>2024-07-15T00:00:00Z</updated>
-    <summary>:ID: 794f5acf-354c-49bf-943f-33480ade38f2
-References: (Brady 2017) </summary>
-    <content type="html">&lt;p&gt;:ID:       794f5acf-354c-49bf-943f-33480ade38f2&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;References:
-&lt;ul&gt;
-&lt;li&gt;(Brady 2017)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+    <title>Stonith</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/stonith/"/>
+    <id>https://mtrsk.github.io/notes/2024/stonith/</id>
+    <published>2024-09-26T00:00:00Z</published>
+    <updated>2024-09-26T00:00:00Z</updated>
+    <summary>:ID: 789326a5-20aa-4492-acb6-1474c3c11a4a
+:ROAM_ALIASES: Fencing #+filetags [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb]
+In STONITH, specific hardware is used to terminate a node that is no longer responsive to the cluster. The idea behind STONITH is that before migrating resources to another node in the cluster, the cluster has to confirm that the node in question really is down. To do this, the cluster will send a shutdown action to the STONITH device, which will, in turn, terminate the nonresponsive node.</summary>
+    <content type="html">&lt;p&gt;:ID:       789326a5-20aa-4492-acb6-1474c3c11a4a&lt;/p&gt;
+&lt;p&gt;:ROAM_ALIASES: Fencing
+#+filetags [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb]&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In STONITH, specific hardware is used to terminate a node that is no longer
+responsive to the cluster. The idea behind STONITH is that before migrating
+resources to another node in the cluster, the cluster has to confirm that the
+node in question really is down. To do this, the cluster will send a shutdown
+action to the STONITH device, which will, in turn, terminate the nonresponsive
+node. (Van Vugt 2014, chap. 1)&lt;/p&gt;
+&lt;/blockquote&gt;
 </content>
     
     
@@ -117,101 +109,178 @@ References: (Brady 2017) </summary>
   </entry>
   
   <entry>
-    <title>CAP Theorem</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/cap-theorem/"/>
-    <id>https://mtrsk.github.io/notes/2024/cap-theorem/</id>
-    <published>2024-07-11T00:00:00Z</published>
-    <updated>2024-07-11T00:00:00Z</updated>
-    <summary>:ID: 74c5509d-73be-4b04-9ca4-039117d588a9
-First postulated by Eric Brewer in (Brewer 2000), and formally proved in (Gilbert and Lynch 2002).
-Definitions For (Brewer 2000), a distributed system has some very specific properties and behaviour, being a collected set of Nodes that all share data. A limitation of such systems happens when a write request is followed by a read request.
-┌────────┐ │ Client │ └────────┘ [R] ^ | [W] | v ┌−−−−−−−−−−−−−−−−−−−−−−−−−┐ ╎ System ╎ ╎ ┌────┐ ╎ ╎ ┌──────────│ a0 │──┐ ╎ ╎ │ └────┘ │ ╎ ╎ │ │ │ ╎ ╎ ┌────┐ ┌────┐ │ ╎ ╎ │ a3 │───────│ a1 │ │ ╎ ╎ └────┘ └────┘ │ ╎ ╎ │ │ ╎ ╎ ┌────┐ │ ╎ ╎ │ a2 │──┘ ╎ ╎ └────┘ ╎ └−−−−−−−−−−−−−−−−−−−−−−−−−┘ Read Write A client can read data from the system by talking to any Node A client can write data to the system by talking to any Node The Theorem states that for any given pair of requests this kind of system can only guarantee two out of three properties:</summary>
-    <content type="html">&lt;p&gt;:ID:       74c5509d-73be-4b04-9ca4-039117d588a9&lt;/p&gt;
-&lt;p&gt;First postulated by Eric Brewer in (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Brewer 2000&lt;/a&gt;), and formally proved in (&lt;a href=&#34;#citeproc_bib_item_2&#34;&gt;Gilbert and Lynch 2002&lt;/a&gt;).&lt;/p&gt;
-&lt;h2 id=&#34;definitions&#34;&gt;Definitions&lt;/h2&gt;
-&lt;p&gt;For (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Brewer 2000&lt;/a&gt;), a distributed system has some very specific properties
-and behaviour, being a collected set of Nodes that all share data. A limitation
-of such systems happens when a write request is followed by a read request.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;       ┌────────┐
-       │ Client │
-       └────────┘
-     [R] ^    | [W]
-         |    v
-┌−−−−−−−−−−−−−−−−−−−−−−−−−┐
-╎         System          ╎
-╎              ┌────┐     ╎
-╎   ┌──────────│ a0 │──┐  ╎
-╎   │          └────┘  │  ╎
-╎   │             │    │  ╎
-╎ ┌────┐       ┌────┐  │  ╎
-╎ │ a3 │───────│ a1 │  │  ╎
-╎ └────┘       └────┘  │  ╎
-╎                 │    │  ╎
-╎              ┌────┐  │  ╎
-╎              │ a2 │──┘  ╎
-╎              └────┘     ╎
-└−−−−−−−−−−−−−−−−−−−−−−−−−┘
-&lt;/code&gt;&lt;/pre&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Read&lt;/th&gt;
-&lt;th&gt;Write&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;A client can read data from the system by talking to any Node&lt;/td&gt;
-&lt;td&gt;A client can write data to the system by talking to any Node&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+    <title>Quorum</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/quorum/"/>
+    <id>https://mtrsk.github.io/notes/2024/quorum/</id>
+    <published>2024-09-25T00:00:00Z</published>
+    <updated>2024-09-25T00:00:00Z</updated>
+    <summary>:ID: 42950824-228d-48d6-abec-4e18908dfca0
+Quorum means &amp;ldquo;majority&amp;rdquo;, and the idea behind quorum is easy to understand: if the cluster doesn’t have quorum, no actions will be taken in the cluster. This by itself would offer a good solution to avoid the [BROKEN LINK: 582a4090-eb66-4dfd-8166-9acd3c97dcc9] problem.
+But to make sure that it can never happen, that multiple nodes activate the same resources in the cluster, another mechanism is used as well. This mechanism is known as [BROKEN LINK: 789326a5-20aa-4492-acb6-1474c3c11a4a].</summary>
+    <content type="html">&lt;p&gt;:ID:       42950824-228d-48d6-abec-4e18908dfca0&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;The Theorem states that for any given pair of requests this kind of system can
-only guarantee two out of three properties:&lt;/p&gt;
+&lt;p&gt;Quorum means &amp;ldquo;majority&amp;rdquo;, and the idea behind quorum is easy to understand: if
+the cluster doesn’t have quorum, no actions will be taken in the cluster. This
+by itself would offer a good solution to avoid the [BROKEN LINK: 582a4090-eb66-4dfd-8166-9acd3c97dcc9] problem.&lt;/p&gt;
+&lt;p&gt;But to make sure that it can never happen, that multiple nodes activate the same
+resources in the cluster, another mechanism is used as well. This mechanism is
+known as [BROKEN LINK: 789326a5-20aa-4492-acb6-1474c3c11a4a]. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Van Vugt 2014, chap. 1&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Van Vugt, Sander. 2014. &lt;i&gt;Pro Linux High Availability Clustering&lt;/i&gt;. Apress.&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    
+    <category term="[[id"/>
+    
+    <category term="d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb][Clusters]]"/>
+    
+    
+    <category term="notes"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Drbd</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/drbd/"/>
+    <id>https://mtrsk.github.io/notes/2024/drbd/</id>
+    <published>2024-09-24T00:00:00Z</published>
+    <updated>2024-09-24T00:00:00Z</updated>
+    <summary>:ID: 694d20ba-bdb5-419d-ae9d-0dc73c695333
+#+filetags [BROKEN LINK: 8a427ee7-2ef1-489b-af82-91de7be8a3ba]</summary>
+    <content type="html">&lt;p&gt;:ID:       694d20ba-bdb5-419d-ae9d-0dc73c695333&lt;/p&gt;
+&lt;p&gt;#+filetags [BROKEN LINK: 8a427ee7-2ef1-489b-af82-91de7be8a3ba]&lt;/p&gt;
+</content>
+    
+    
+    <category term="notes"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Iscsi</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/iscsi/"/>
+    <id>https://mtrsk.github.io/notes/2024/iscsi/</id>
+    <published>2024-09-24T00:00:00Z</published>
+    <updated>2024-09-24T00:00:00Z</updated>
+    <summary>:ID: 3a7a03ae-8932-4d86-ae45-aa84ff1f325a
+#+filetags [BROKEN LINK: 8a427ee7-2ef1-489b-af82-91de7be8a3ba]</summary>
+    <content type="html">&lt;p&gt;:ID:       3a7a03ae-8932-4d86-ae45-aa84ff1f325a&lt;/p&gt;
+&lt;p&gt;#+filetags [BROKEN LINK: 8a427ee7-2ef1-489b-af82-91de7be8a3ba]&lt;/p&gt;
+</content>
+    
+    
+    <category term="notes"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/linux/"/>
+    <id>https://mtrsk.github.io/notes/2024/linux/</id>
+    <published>2024-09-24T00:00:00Z</published>
+    <updated>2024-09-24T00:00:00Z</updated>
+    <summary>:ID: 8a427ee7-2ef1-489b-af82-91de7be8a3ba</summary>
+    <content type="html">&lt;p&gt;:ID:       8a427ee7-2ef1-489b-af82-91de7be8a3ba&lt;/p&gt;
+</content>
+    
+    
+    <category term="notes"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sequential Erlang</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/sequential-erlang/"/>
+    <id>https://mtrsk.github.io/notes/2024/sequential-erlang/</id>
+    <published>2024-09-24T00:00:00Z</published>
+    <updated>2024-09-24T00:00:00Z</updated>
+    <summary>:ID: f0da3356-3797-4ddc-8306-cd333f159754
+tags [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] Guards Built-in Functions Conventionally, these are part of the erlang module. Mostly written in C for fast execution. List of BiFs date() time() length(List) size(Tuple) atom_to_list(Atom) list_to_tuple(List) integer_to_list(1000) tuple_to_list(Tuple) Recursion Tail Recursion </summary>
+    <content type="html">&lt;p&gt;:ID:       f0da3356-3797-4ddc-8306-cd333f159754&lt;/p&gt;
 &lt;dl&gt;
-&lt;dt&gt;Consistency&lt;/dt&gt;
-&lt;dd&gt;The system can read data that is (at least) as fresh as what has been just written.&lt;/dd&gt;
-&lt;dt&gt;Avaliability&lt;/dt&gt;
-&lt;dd&gt;Every request received by a non-failing node in the system must result in a response.&lt;/dd&gt;
-&lt;dt&gt;Partition Tolerance&lt;/dt&gt;
-&lt;dd&gt;The network will be allowed to lose arbitrarily many messages sent from one node to another.&lt;/dd&gt;
+&lt;dt&gt;tags&lt;/dt&gt;
+&lt;dd&gt;[BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d]&lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;idea-of-the-proof&#34;&gt;Idea of the Proof&lt;/h2&gt;
-&lt;p&gt;Here is a sketch of the proof provided in (&lt;a href=&#34;#citeproc_bib_item_2&#34;&gt;Gilbert and Lynch 2002&lt;/a&gt;), consider the same
-system as before, but focus on a pair of requests (R/W) and two nodes.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;                [W]
-    ┌──────────────────────────┐
-    v                          │
-┌−−−−−−−−−−−−−−−−−−−−−−┐       │
-╎        System        ╎       │
-╎                      ╎       │
-╎ ┌────┐        ┌────┐ ╎ [R] ┌──────┐
-╎ │ a0 │ ────── │ a1 │ ╎────&amp;gt;│Client│
-╎ └────┘        └────┘ ╎     └──────┘
-╎                      ╎
-└−−−−−−−−−−−−−−−−−−−−−−┘
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Assume, via contraction, that such a system does follow all &lt;strong&gt;CAP&lt;/strong&gt;
-properties. Given a network partition between &lt;code&gt;a0&lt;/code&gt; and &lt;code&gt;a1&lt;/code&gt;, the followig will happen:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;                [W]
-    ┌──────────────────────────┐
-    v                          │
-┌−−−−−−−−−−−−−−−−−−−−−−┐       │
-╎        System        ╎       │
-╎                      ╎       │
-╎ ┌────┐        ┌────┐ ╎ [R] ┌──────┐
-╎ │ a0 │ ──//── │ a1 │ ╎─??─&amp;gt;│Client│
-╎ └────┘        └────┘ ╎     └──────┘
-╎                      ╎
-└−−−−−−−−−−−−−−−−−−−−−−┘
-&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;a1&lt;/code&gt; will never receive an update from &lt;code&gt;a0&lt;/code&gt;, which will break its avaliability promises (by never delivering the new result)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;a1&lt;/code&gt; sends stale data back to the client, breaking the consistency property.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h2 id=&#34;guards&#34;&gt;Guards&lt;/h2&gt;
+&lt;h2 id=&#34;built-in-functions&#34;&gt;Built-in Functions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Conventionally, these are part of the &lt;code&gt;erlang&lt;/code&gt; module.&lt;/li&gt;
+&lt;li&gt;Mostly written in C for fast execution.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;list-of-bifs&#34;&gt;List of BiFs&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;date()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;time()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;length(List)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;size(Tuple)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;atom_to_list(Atom)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;list_to_tuple(List)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;integer_to_list(1000)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tuple_to_list(Tuple)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;recursion&#34;&gt;Recursion&lt;/h2&gt;
+&lt;h3 id=&#34;tail-recursion&#34;&gt;Tail Recursion&lt;/h3&gt;
+</content>
+    
+    
+    <category term="notes"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Erlang Datatypes</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/erlang-datatypes/"/>
+    <id>https://mtrsk.github.io/notes/2024/erlang-datatypes/</id>
+    <published>2024-09-23T00:00:00Z</published>
+    <updated>2024-09-23T00:00:00Z</updated>
+    <summary>:ID: 9494e230-a572-46fe-8423-7b08dfe0119f
+tags [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] Datatypes Integers Large Integers are converted to bignums Floats Atoms Used to denote datatypes with a fixed number of items. Tuples Used to denote datatypes with a fixed number of items. Access is normally done by position. Lists Used to store a variable number of elements. Access is normally done by parttern matching. List = [ Element | List ] OR [] Strings Maps Variables Always start with an uppercase letter or _.</summary>
+    <content type="html">&lt;p&gt;:ID:       9494e230-a572-46fe-8423-7b08dfe0119f&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;tags&lt;/dt&gt;
+&lt;dd&gt;[BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d]&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h2 id=&#34;datatypes&#34;&gt;Datatypes&lt;/h2&gt;
+&lt;h3 id=&#34;integers&#34;&gt;Integers&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Large Integers are converted to &lt;code&gt;bignums&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;floats&#34;&gt;Floats&lt;/h3&gt;
+&lt;h3 id=&#34;atoms&#34;&gt;Atoms&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Used to denote datatypes with a fixed number of items.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;tuples&#34;&gt;Tuples&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Used to denote datatypes with a fixed number of items.&lt;/li&gt;
+&lt;li&gt;Access is normally done by position.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;lists&#34;&gt;Lists&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Used to store a variable number of elements.&lt;/li&gt;
+&lt;li&gt;Access is normally done by parttern matching.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--listend--&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;  List = [ Element | List ] OR []
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;strings&#34;&gt;Strings&lt;/h3&gt;
+&lt;h3 id=&#34;maps&#34;&gt;Maps&lt;/h3&gt;
+&lt;h2 id=&#34;variables&#34;&gt;Variables&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Always start with an uppercase letter or &lt;code&gt;_&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;pattern-matching&#34;&gt;Pattern Matching&lt;/h2&gt;
+&lt;p&gt;Pattern matching is used for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Assigning values to variables&lt;/li&gt;
+&lt;li&gt;Redirecting execution flows
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;functions&#34;&gt;Functions&lt;/h2&gt;
+&lt;h2 id=&#34;modules&#34;&gt;Modules&lt;/h2&gt;
 &lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
-  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Brewer, Eric A. 2000. “Towards Robust Distributed Systems.” In &lt;i&gt;Podc&lt;/i&gt;, 7:343–477. 10.1145. Portland, OR.&lt;/div&gt;
-  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_2&#34;&gt;&lt;/a&gt;Gilbert, Seth, and Nancy Lynch. 2002. “Brewer’s Conjecture and the Feasibility of Consistent, Available, Partition-Tolerant Web Services.” &lt;i&gt;Acm Sigact News&lt;/i&gt; 33 (2): 51–59.&lt;/div&gt;
 &lt;/div&gt;
 </content>
     
@@ -221,13 +290,26 @@ properties. Given a network partition between &lt;code&gt;a0&lt;/code&gt; and &l
   </entry>
   
   <entry>
-    <title>Designing for Scalability with Erlang/Otp: Implement Robust, Fault-Tolerant Systems</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/design-for-scalability-with-erlang-otp/"/>
-    <id>https://mtrsk.github.io/notes/2024/design-for-scalability-with-erlang-otp/</id>
-    <published>2024-07-06T00:00:00Z</published>
-    <updated>2024-07-06T00:00:00Z</updated>
-    <summary>:ID: ffac18bd-4e44-4a7b-8a3a-a85552c9b076</summary>
-    <content type="html">&lt;p&gt;:ID:       ffac18bd-4e44-4a7b-8a3a-a85552c9b076&lt;/p&gt;
+    <title>Postgres Window Functions</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/postgres-window-functions/"/>
+    <id>https://mtrsk.github.io/notes/2024/postgres-window-functions/</id>
+    <published>2024-09-23T00:00:00Z</published>
+    <updated>2024-09-23T00:00:00Z</updated>
+    <summary>:ID: 860f97f8-e41d-480b-881b-203773406990
+#+ROAM_TAGS [BROKEN LINK: 1949c98e-e1c0-474b-b383-c76aa418d583] Databases
+Aggregates ROW_NUMBER LEAD The LEAD() function is used to retrieve data from the next row.
+LAG The LAG() function is used to retrieve data from the previous row.
+Rankings Value Functions </summary>
+    <content type="html">&lt;p&gt;:ID:       860f97f8-e41d-480b-881b-203773406990&lt;/p&gt;
+&lt;p&gt;#+ROAM_TAGS [BROKEN LINK: 1949c98e-e1c0-474b-b383-c76aa418d583] Databases&lt;/p&gt;
+&lt;h2 id=&#34;aggregates&#34;&gt;Aggregates&lt;/h2&gt;
+&lt;h3 id=&#34;row-number&#34;&gt;&lt;code&gt;ROW_NUMBER&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;lead&#34;&gt;&lt;code&gt;LEAD&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;LEAD()&lt;/code&gt; function is used to retrieve data from the next row.&lt;/p&gt;
+&lt;h3 id=&#34;lag&#34;&gt;&lt;code&gt;LAG&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;LAG()&lt;/code&gt; function is used to retrieve data from the previous row.&lt;/p&gt;
+&lt;h2 id=&#34;rankings&#34;&gt;Rankings&lt;/h2&gt;
+&lt;h2 id=&#34;value-functions&#34;&gt;Value Functions&lt;/h2&gt;
 </content>
     
     
@@ -236,310 +318,18 @@ properties. Given a network partition between &lt;code&gt;a0&lt;/code&gt; and &l
   </entry>
   
   <entry>
-    <title>Introducing Erlang: Getting Started in Functional Programming</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/introducing-erlang/"/>
-    <id>https://mtrsk.github.io/notes/2024/introducing-erlang/</id>
-    <published>2024-07-06T00:00:00Z</published>
-    <updated>2024-07-06T00:00:00Z</updated>
-    <summary>:ID: f5e7bb90-792d-406a-8c40-2b072db63a13
-Chapter 1: Getting Comfortable Numbers in Erlang If you need to do calculations on integers using a base other than 10, you can use Base#Value notation.
-Seeing Your Bound Variables b() shows all bound variables in the current erlang shell.
-&amp;gt; b(). N = 1 Number = 5 Clearing Bound Variables in the Shell &amp;gt; f(N). &amp;gt; f(). Chapter 2: Functions and Modules Defining Modules -module(drop). -export([fall_velocity/1, mps_to_mph/1, mps_to_kph/1]).</summary>
-    <content type="html">&lt;p&gt;:ID:       f5e7bb90-792d-406a-8c40-2b072db63a13&lt;/p&gt;
-&lt;h2 id=&#34;chapter-1-getting-comfortable&#34;&gt;Chapter 1: Getting Comfortable&lt;/h2&gt;
-&lt;h3 id=&#34;numbers-in-erlang&#34;&gt;Numbers in Erlang&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;If you need to do calculations on integers using a base other than 10, you can use
-Base#Value notation.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;seeing-your-bound-variables&#34;&gt;Seeing Your Bound Variables&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;b()&lt;/code&gt; shows all bound variables in the current erlang shell.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;gt; b&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;N&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Number&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;clearing-bound-variables-in-the-shell&#34;&gt;Clearing Bound Variables in the Shell&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;gt; f&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;N&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;gt; f&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;chapter-2-functions-and-modules&#34;&gt;Chapter 2: Functions and Modules&lt;/h2&gt;
-&lt;h3 id=&#34;defining-modules&#34;&gt;Defining Modules&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;module&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;drop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fall_velocity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mps_to_mph&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mps_to_kph&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]).&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;fall_velocity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Distance&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;math&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;sqrt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Distance&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;mps_to_mph&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Mps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;23693629&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Mps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;mps_to_kph&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Mps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Mps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
-    
-    
-    <category term="notes"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Programming Erlang: Software for a Concurrent World</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/programming-erlang-software-for-a-concurrent-world/"/>
-    <id>https://mtrsk.github.io/notes/2024/programming-erlang-software-for-a-concurrent-world/</id>
-    <published>2024-07-06T00:00:00Z</published>
-    <updated>2024-07-06T00:00:00Z</updated>
-    <summary>:ID: 1daea4ea-40bc-406d-8d03-906c7f9ec343
-Part I: Why Erlang? Introducing Concurrency Modeling Concurrency spawn is an Erlang primitive that creates a concurrent process and returns a process identifier (PID) that can used to interact with the newly created process:
-spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]) The syntax Pid ! Msg means &amp;ldquo;send the message Msg to the process Pid&amp;rdquo;. And for Pid to process a message we need to pattern match:
-receive {From, Message} -&amp;gt; .</summary>
-    <content type="html">&lt;p&gt;:ID:       1daea4ea-40bc-406d-8d03-906c7f9ec343&lt;/p&gt;
-&lt;h2 id=&#34;part-i-why-erlang&#34;&gt;Part I: Why Erlang?&lt;/h2&gt;
-&lt;h3 id=&#34;introducing-concurrency&#34;&gt;Introducing Concurrency&lt;/h3&gt;
-&lt;h4 id=&#34;modeling-concurrency&#34;&gt;Modeling Concurrency&lt;/h4&gt;
-&lt;p&gt;&lt;code&gt;spawn&lt;/code&gt; is an Erlang primitive that creates a concurrent process and returns a
-process identifier (PID) that can used to interact with the newly created process:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;spawn&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;ModName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;FuncName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Arg1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Arg2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;...,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ArgN&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The syntax &lt;code&gt;Pid ! Msg&lt;/code&gt; means &amp;ldquo;send the message &lt;code&gt;Msg&lt;/code&gt; to the process &lt;code&gt;Pid&lt;/code&gt;&amp;rdquo;. And for
-&lt;code&gt;Pid&lt;/code&gt; to process a message we need to pattern match:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;receive&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;From&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Message&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;benefits-of-concurrency&#34;&gt;Benefits of Concurrency&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Performance&lt;/li&gt;
-&lt;li&gt;Scalability&lt;/li&gt;
-&lt;li&gt;Fault Tolerance&lt;/li&gt;
-&lt;li&gt;Clarity&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;a-whirlwind-tour-of-erlang&#34;&gt;A Whirlwind Tour of Erlang&lt;/h3&gt;
-&lt;h4 id=&#34;syntax-of-variables-and-atoms&#34;&gt;Syntax of Variables and Atoms&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Note that Erlang variables start with uppercase characters. So, &lt;code&gt;X&lt;/code&gt;, &lt;code&gt;This&lt;/code&gt;, and
-&lt;code&gt;A_long_name&lt;/code&gt; are all variables. Names beginning with lowercase letters—for example,
-&lt;code&gt;monday&lt;/code&gt; or &lt;code&gt;friday&lt;/code&gt; are not variables but are symbolic constants called
-atoms.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&#34;compiling-and-running-hello-world-in-the-shell&#34;&gt;Compiling and Running &amp;ldquo;Hello World&amp;rdquo; in the Shell&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;module&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hello&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]).&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nn&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello world&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;~n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Running the &lt;code&gt;hello.erl&lt;/code&gt; program in the erlang shell.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  $ erl
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Erlang/OTP &lt;span class=&#34;m&#34;&gt;26&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;erts-14.2.5&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;source&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;64-bit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;smp:24:24&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;ds:24:24:10&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;async-threads:1&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;jit:ns&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Eshell V14.2.5 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;press Ctrl+G to abort, &lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt; help&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;. &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  1&amp;gt; c&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;hello&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;ok,hello&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  2&amp;gt; hello:start&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Hello world
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ok
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;compiling-outside-the-erlang-shell&#34;&gt;Compiling Outside the Erlang Shell&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  $ erlc hello.erl
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  $ erl -noshell -s hello start -s init stop
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;erlc&lt;/code&gt; evokes the Erlang compiler from the command line. The compiler compiles the code in &lt;code&gt;hello.erl&lt;/code&gt; and produces an object code file called &lt;code&gt;hello.beam&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;erl -noshell&lt;/code&gt; command loads the module &lt;code&gt;hello&lt;/code&gt; and evaluates the function
-&lt;code&gt;hello:start()&lt;/code&gt;. After this, it evaluates the expression &lt;code&gt;init:stop()&lt;/code&gt;, which
-terminates the Erlang session.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;part-ii-sequential-programming&#34;&gt;Part II: Sequential Programming&lt;/h2&gt;
-&lt;h3 id=&#34;basic-concepts&#34;&gt;Basic Concepts&lt;/h3&gt;
-&lt;h4 id=&#34;variables&#34;&gt;Variables&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Erlang Variables Do Not Vary&lt;/li&gt;
-&lt;li&gt;The scope of a variable is the lexical unit in which it is defined.&lt;/li&gt;
-&lt;li&gt;Variables acquire values as the result of a successful pattern matching
-operation (&lt;code&gt;=&lt;/code&gt;).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;floating-point-numbers&#34;&gt;Floating-Point Numbers&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;When you divide two integers with &lt;code&gt;/&lt;/code&gt;, the result is automatically converted to a floating-point number.&lt;/li&gt;
-&lt;li&gt;Integer division is handled by &lt;code&gt;div&lt;/code&gt; and &lt;code&gt;rem&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;atoms&#34;&gt;Atoms&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;In Erlang, atoms are used to represent constant values.&lt;/li&gt;
-&lt;li&gt;Atoms are also global, and this is achieved without the use of macro
-definitions or include files.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;tuples&#34;&gt;Tuples&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Represents a collection of elements (of any type) that are grouped together.&lt;/li&gt;
-&lt;li&gt;A tuple whose first element is an atom is called a &lt;code&gt;tagged&lt;/code&gt; tuple, i.e., &lt;code&gt;{book, &amp;quot;The Aleph&amp;quot;}&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Tuples are created automatically when we declare them and are destroyed when
-they can no longer be used. Erlang uses a garbage collector to reclaim all
-unused memory, so we don’t have to worry about memory allocation.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;You can also pattern match tuples by using free variables:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  1&amp;gt; &lt;span class=&#34;nv&#34;&gt;Point&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;point, 10, 45&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;point,10,45&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  2&amp;gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;point, X, Y&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; Point.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;point,10,45&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  3&amp;gt; X.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  4&amp;gt; Y.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;m&#34;&gt;45&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;lists&#34;&gt;Lists&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;A list is a compound data type with a variable number of terms: &lt;code&gt;[Term1,...,TermN]&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;One can add or iterate over lists with the &lt;code&gt;cons&lt;/code&gt; operator &lt;code&gt;|&lt;/code&gt;, which breaks a
-list into &lt;code&gt;H|T&lt;/code&gt; (&lt;code&gt;head&lt;/code&gt; and &lt;code&gt;tail&lt;/code&gt;),&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;strings&#34;&gt;Strings&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Strictly speaking, there are no strings in Erlang. To represent a string in
-Erlang, we can choose between representing the string as a list of integers or
-as a binary. When a string is represented as a list of integers, each element in
-the list represents a Unicode codepoint.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;To print a unicode string one must use the &amp;ldquo;t&amp;rdquo; modifier applied to the &amp;ldquo;s&amp;rdquo;
-control character in a formatting string, it accepts all Unicode codepoints and
-expect binaries to be in UTF-8:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  1&amp;gt; &lt;span class=&#34;nv&#34;&gt;X&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;a\x{221e}b&amp;#34;&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;97,8734,98&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  2&amp;gt; io:format&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;~ts~n&amp;#34;&lt;/span&gt;,&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;X&lt;span class=&#34;o&#34;&gt;])&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a∞b
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ok
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;modules-and-functions&#34;&gt;Modules and Functions&lt;/h3&gt;
-&lt;h4 id=&#34;modules-are-where-we-store-code&#34;&gt;Modules Are Where We Store Code&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;module&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;geometry&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;area&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]).&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;area&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;({&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rectangle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Width&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Height&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Width&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Height&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;area&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;({&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;circle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Radius&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;14159&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Radius&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Radius&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;area&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;({&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;square&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Side&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Side&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Side&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;funs-the-basic-unit-of-abstraction&#34;&gt;Funs: The Basic Unit of Abstraction&lt;/h4&gt;
-&lt;p&gt;&lt;code&gt;Funs&lt;/code&gt; are function closures. &lt;code&gt;Funs&lt;/code&gt; are created by expressions of the form: &lt;code&gt;fun(...) -&amp;gt; ... end&lt;/code&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;defining-your-own-control-abstractions&#34;&gt;Defining Your Own Control Abstractions&lt;/h4&gt;
-&lt;p&gt;If we want additional control structures, we can make our own. Erlang has no for loop, so let’s make one:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;F&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;F&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)];&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;F&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;F&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)|&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;F&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)].&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;list-comprehensions&#34;&gt;List Comprehensions&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  1&amp;gt; &lt;span class=&#34;nv&#34;&gt;L&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;1,2,3,4,5,6,7&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;1,2,3,4,5,6,7&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  2&amp;gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; 2*X &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; X &amp;lt;- L &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;2,4,6,8,10,12,14&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  3&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;The most general form of a list comprehension is an expression of the following
-form: &lt;code&gt;[X || Qualifier1, Qualifier2, ...]&lt;/code&gt;, where &lt;code&gt;X&lt;/code&gt; is an arbitrary expression,
-and each qualifier is either a generator, a bitstring generator, or a filter.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Generators are written as &lt;code&gt;Pattern &amp;lt;- ListExpr&lt;/code&gt; where &lt;code&gt;ListExpr&lt;/code&gt; must be an expression that evaluates to a list of terms.&lt;/li&gt;
-&lt;li&gt;Bitstring generators are written as &lt;code&gt;BitStringPattern &amp;lt;= BitStringExpr&lt;/code&gt; where &lt;code&gt;BitStringExpr&lt;/code&gt; must be an expression that evaluates to a bitstring.&lt;/li&gt;
-&lt;li&gt;Filters are either predicates or boolean expressions.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&#34;case-and-if-expressions&#34;&gt;case and if Expressions&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Expression&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;of&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Pattern1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;when&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Guard1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Expr_seq1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Pattern2&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;when&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Guard2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Expr_seq2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Guard1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Expr_seq1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Guard2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Expr_seq2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;records-and-maps&#34;&gt;Records and Maps&lt;/h3&gt;
-&lt;h4 id=&#34;naming-tuple-items-with-records&#34;&gt;Naming Tuple Items with Records&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;(&amp;hellip;) records provide a convenient way for associating a tag
-with each of the elements in a tuple. This allows us to refer to an
-element of a tuple by name and not by position. A pre-compiler
-takes the record definition and replaces it with the appropriate tuple
-reference.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;record&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;todo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;status&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;reminder&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;who&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;joe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}).&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;to load a record from the the shell, one must use the &lt;code&gt;rr&lt;/code&gt; command:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  1&amp;gt; rr&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;records.hrl&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;todo&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  2&amp;gt; &lt;span class=&#34;c1&#34;&gt;#todo{}.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;#todo{status = reminder,who = joe,text = undefined}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  3&amp;gt; &lt;span class=&#34;nv&#34;&gt;X1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#todo{status=urgent, text=&amp;#34;Fix errata in book&amp;#34;}.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;#todo{status = urgent,who = joe,text = &amp;#34;Fix errata in book&amp;#34;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  4&amp;gt; &lt;span class=&#34;nv&#34;&gt;X2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; X1#todo&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;status&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;#todo{status = done,who = joe,text = &amp;#34;Fix errata in book&amp;#34;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;maps-associative-key-value-stores&#34;&gt;Maps: Associative Key-Value Stores&lt;/h4&gt;
-&lt;p&gt;Maps are associative collections of key-value pairs.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  1&amp;gt; &lt;span class=&#34;nv&#34;&gt;TaskPending&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#{ status =&amp;gt; pending, description =&amp;gt; &amp;#39;feed cats&amp;#39; }.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;#{status =&amp;gt; pending,description =&amp;gt; &amp;#39;feed cats&amp;#39;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  2&amp;gt; &lt;span class=&#34;nv&#34;&gt;TaskDone&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; TaskPending#&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; status :&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;#{status =&amp;gt; done,description =&amp;gt; &amp;#39;feed cats&amp;#39;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;error-handling-in-sequential-programs&#34;&gt;Error Handling in Sequential Programs&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;FuncOrExpressionSeq&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;of&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Pattern1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;when&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Guard1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Expressions1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Pattern2&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;when&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Guard2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Expressions2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;catch&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;ExceptionType1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ExPattern1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;when&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ExGuard1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ExExpressions1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;ExceptionType2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ExPattern2&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;when&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ExGuard2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ExExpressions2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;after&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;AfterExpressions&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;dl&gt;
-&lt;dt&gt;&lt;code&gt;exit/1&lt;/code&gt;&lt;/dt&gt;
-&lt;dd&gt;Used to terminate the current process.&lt;/dd&gt;
-&lt;dt&gt;&lt;code&gt;throw&lt;/code&gt;&lt;/dt&gt;
-&lt;dd&gt;Used as a documentation to the caller, to show that a function might throw this exception.&lt;/dd&gt;
-&lt;dt&gt;error&lt;/dt&gt;
-&lt;dd&gt;Crashing errors.&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;h4 id=&#34;fail-fast-and-noisily-fail-politely&#34;&gt;Fail Fast and Noisily, Fail Politely&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;In Erlang, when an error is detected internally by the system or is detected by
-program logic, the correct approach is to crash immediately and generate a
-meaningful error message.&lt;/p&gt;
-&lt;p&gt;(&amp;hellip;)&lt;/p&gt;
-&lt;p&gt;Second, fail politely means that only the programmer should see the detailed
-error messages produced when a program crashes. A user of the program should
-never see these messages.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;binaries-and-the-bit-syntax&#34;&gt;Binaries and the Bit Syntax&lt;/h3&gt;
-</content>
-    
-    
-    <category term="notes"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Erlang</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/erlang/"/>
-    <id>https://mtrsk.github.io/notes/2024/erlang/</id>
-    <published>2024-06-19T00:00:00Z</published>
-    <updated>2024-06-19T00:00:00Z</updated>
-    <summary>:ID: de7d0e94-618f-4982-b3e5-8806d88cad5d
-Resources:
-Etudes for Erlang (Laurent 2017): Notes from [BROKEN LINK: f5e7bb90-792d-406a-8c40-2b072db63a13] (Armstrong 2013): Notes from [BROKEN LINK: 1daea4ea-40bc-406d-8d03-906c7f9ec343] (Cesarini and Vinoski 2016): Notes from [BROKEN LINK: ffac18bd-4e44-4a7b-8a3a-a85552c9b076] Joe Armstrong&amp;rsquo;s PHD thesis The Erlang view of the world can be summarized in the following statments (Armstrong 2003):
-Everything is a process. Processes are strongly isolated. Process creation and destruction is a lightweight operation. Message passing is the only way for processes to interact.</summary>
-    <content type="html">&lt;p&gt;:ID:       de7d0e94-618f-4982-b3e5-8806d88cad5d&lt;/p&gt;
-&lt;p&gt;Resources:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/oreillymedia/etudes-for-erlang&#34;&gt;Etudes for Erlang&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;(&lt;a href=&#34;#citeproc_bib_item_4&#34;&gt;Laurent 2017&lt;/a&gt;): Notes from [BROKEN LINK: f5e7bb90-792d-406a-8c40-2b072db63a13]&lt;/li&gt;
-&lt;li&gt;(&lt;a href=&#34;#citeproc_bib_item_2&#34;&gt;Armstrong 2013&lt;/a&gt;): Notes from [BROKEN LINK: 1daea4ea-40bc-406d-8d03-906c7f9ec343]&lt;/li&gt;
-&lt;li&gt;(&lt;a href=&#34;#citeproc_bib_item_3&#34;&gt;Cesarini and Vinoski 2016&lt;/a&gt;): Notes from [BROKEN LINK: ffac18bd-4e44-4a7b-8a3a-a85552c9b076]&lt;/li&gt;
-&lt;li&gt;Joe Armstrong&amp;rsquo;s PHD thesis&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The Erlang view of the world can be summarized in the following statments
-(&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Armstrong 2003&lt;/a&gt;):&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Everything is a process.&lt;/li&gt;
-&lt;li&gt;Processes are strongly isolated.&lt;/li&gt;
-&lt;li&gt;Process creation and destruction is a lightweight operation.&lt;/li&gt;
-&lt;li&gt;Message passing is the only way for processes to interact.&lt;/li&gt;
-&lt;li&gt;Processes have unique names.&lt;/li&gt;
-&lt;li&gt;If you know the name of a process you can send it a message.&lt;/li&gt;
-&lt;li&gt;Error handling is non-local.&lt;/li&gt;
-&lt;li&gt;Processes do what they are supposed to do or fail.&lt;/li&gt;
-&lt;/ul&gt;
+    <title>Nix</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/nix/"/>
+    <id>https://mtrsk.github.io/notes/2024/nix/</id>
+    <published>2024-09-22T00:00:00Z</published>
+    <updated>2024-09-22T00:00:00Z</updated>
+    <summary>:ID: 72d705ae-9f5c-402b-88e5-21744277319a
+[BROKEN LINK: cite@dolstra2006purely]
+References </summary>
+    <content type="html">&lt;p&gt;:ID:       72d705ae-9f5c-402b-88e5-21744277319a&lt;/p&gt;
+&lt;p&gt;[BROKEN LINK: cite@dolstra2006purely]&lt;/p&gt;
 &lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
-  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Armstrong, Joe. 2003. “Making Reliable Distributed Systems in the Presence of Software Errors.”&lt;/div&gt;
-  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_2&#34;&gt;&lt;/a&gt;———. 2013. “Programming Erlang: Software for a Concurrent World.”&lt;/div&gt;
-  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_3&#34;&gt;&lt;/a&gt;Cesarini, Francesco, and Steve Vinoski. 2016. &lt;i&gt;Designing for Scalability with Erlang/Otp: Implement Robust, Fault-Tolerant Systems&lt;/i&gt;. O’Reilly Media, Inc.&lt;/div&gt;
-  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_4&#34;&gt;&lt;/a&gt;Laurent, Simon St. 2017. &lt;i&gt;Introducing Erlang: Getting Started in Functional Programming&lt;/i&gt;. O’Reilly Media, Inc.&lt;/div&gt;
 &lt;/div&gt;
 </content>
     
@@ -549,90 +339,34 @@ Everything is a process. Processes are strongly isolated. Process creation and d
   </entry>
   
   <entry>
-    <title>Monad</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/monad/"/>
-    <id>https://mtrsk.github.io/notes/2024/monad/</id>
-    <published>2024-06-19T00:00:00Z</published>
-    <updated>2024-06-19T00:00:00Z</updated>
-    <summary>:ID: a3e972e0-8db9-4556-9dca-0e4f6a663236
-Haskell class Monad m where (&amp;gt;&amp;gt;=) :: m a -&amp;gt; ( a -&amp;gt; m b) -&amp;gt; m b (&amp;gt;&amp;gt;) :: m a -&amp;gt; m b -&amp;gt; m b return :: a -&amp;gt; m a Name Handles Signature Result Errors Either e a -&amp;gt; (a -&amp;gt; Either e b) -&amp;gt; Either e b Maybe Absent values Maybe a -&amp;gt; (a -&amp;gt; Maybe b) -&amp;gt; Maybe b IO Pure/Impure separation IO a -&amp;gt; (a -&amp;gt; IO b) -&amp;gt; IO b State Monadic State State a -&amp;gt; (a -&amp;gt; State b) -&amp;gt; State b Reader Environment Data Reader a -&amp;gt; (a -&amp;gt; Reader b) -&amp;gt; Reader b Writer Writer-Only Data Writer a -&amp;gt; (a -&amp;gt; Writer b) -&amp;gt; Writer b Parser Composing Parsers Parser a -&amp;gt; (a -&amp;gt; Parser b) -&amp;gt; Parser b </summary>
-    <content type="html">&lt;p&gt;:ID:       a3e972e0-8db9-4556-9dca-0e4f6a663236&lt;/p&gt;
-&lt;h2 id=&#34;haskell&#34;&gt;Haskell&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-haskell&#34; data-lang=&#34;haskell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kr&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Monad&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;where&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;ow&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;   &lt;span class=&#34;ow&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;-&amp;gt;&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;         &lt;span class=&#34;ow&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;::&lt;/span&gt;   &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;                 &lt;span class=&#34;ow&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Handles&lt;/th&gt;
-&lt;th&gt;Signature&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Result&lt;/td&gt;
-&lt;td&gt;Errors&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;Either e a -&amp;gt; (a -&amp;gt; Either e b) -&amp;gt; Either e b&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Maybe&lt;/td&gt;
-&lt;td&gt;Absent values&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;Maybe a -&amp;gt; (a -&amp;gt; Maybe b) -&amp;gt; Maybe b&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;IO&lt;/td&gt;
-&lt;td&gt;Pure/Impure separation&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;IO a -&amp;gt; (a -&amp;gt; IO b) -&amp;gt; IO b&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;State&lt;/td&gt;
-&lt;td&gt;Monadic State&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;State a -&amp;gt; (a -&amp;gt; State b) -&amp;gt; State b&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Reader&lt;/td&gt;
-&lt;td&gt;Environment Data&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;Reader a -&amp;gt; (a -&amp;gt; Reader b) -&amp;gt; Reader b&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Writer&lt;/td&gt;
-&lt;td&gt;Writer-Only Data&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;Writer a -&amp;gt; (a -&amp;gt; Writer b) -&amp;gt; Writer b&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Parser&lt;/td&gt;
-&lt;td&gt;Composing Parsers&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;Parser a -&amp;gt; (a -&amp;gt; Parser b) -&amp;gt; Parser b&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</content>
-    
-    
-    <category term="notes"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Monoid</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2023/monoid/"/>
-    <id>https://mtrsk.github.io/notes/2023/monoid/</id>
-    <published>2023-10-08T00:00:00Z</published>
-    <updated>2023-10-08T00:00:00Z</updated>
-    <summary>:ID: d89285be-d7a9-46a1-8a10-e14e73b66935
-Definition A monoid is triple \(\left (\mathbb{M}, \cdot, 1 \right)\) such that:
-\(\mathbb{M}\) is an non-empty set \(\cdot : \mathbb{M} \times \mathbb{M} \rightarrow \mathbb{M}\) is an associative mapping, i.e., \(\forall t_1, t_2, t_3 \in \mathbb{M}, (t_1 \cdot t_2) \cdot t_3 = t_1 \cdot (t_2 \cdot t_3)\). \(1 \in \mathbb{M}\) is the unit satisfying \(1 \cdot t = t = t \cdot 1, \forall t \in \mathbb{M}\). </summary>
-    <content type="html">&lt;p&gt;:ID:       d89285be-d7a9-46a1-8a10-e14e73b66935&lt;/p&gt;
-&lt;h2 id=&#34;definition&#34;&gt;Definition&lt;/h2&gt;
-&lt;p&gt;A monoid is triple \(\left (\mathbb{M}, \cdot, 1 \right)\) such that:&lt;/p&gt;
+    <title>Nixos Modules</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/nixos-modules/"/>
+    <id>https://mtrsk.github.io/notes/2024/nixos-modules/</id>
+    <published>2024-09-22T00:00:00Z</published>
+    <updated>2024-09-22T00:00:00Z</updated>
+    <summary>:ID: 01b79396-e6d4-4673-9438-95a120543f05
+Basics A module is a function that takes an attrset and returns an attrset. It may declare options. It may define option values. When evaluated, it produces a configuration based on the declarations and definitions. {lib, ...}: { options = { name = lib.mkOption { type = lib.types.str; }; }; } Lib Utilities mkMerge mkOverride mkIf mkOrder </summary>
+    <content type="html">&lt;p&gt;:ID:       01b79396-e6d4-4673-9438-95a120543f05&lt;/p&gt;
+&lt;h2 id=&#34;basics&#34;&gt;Basics&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;\(\mathbb{M}\) is an non-empty set&lt;/li&gt;
-&lt;li&gt;\(\cdot : \mathbb{M} \times \mathbb{M} \rightarrow \mathbb{M}\) is an associative mapping, i.e., \(\forall
-t_1, t_2, t_3 \in \mathbb{M}, (t_1 \cdot t_2) \cdot t_3 = t_1 \cdot (t_2 \cdot t_3)\).&lt;/li&gt;
-&lt;li&gt;\(1 \in \mathbb{M}\) is the &lt;em&gt;unit&lt;/em&gt; satisfying \(1 \cdot t = t = t \cdot 1, \forall t \in \mathbb{M}\).&lt;/li&gt;
+&lt;li&gt;A module is a function that takes an &lt;code&gt;attrset&lt;/code&gt; and returns an &lt;code&gt;attrset&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;It may declare &lt;code&gt;options&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;It may define &lt;code&gt;option&lt;/code&gt; values.&lt;/li&gt;
+&lt;li&gt;When evaluated, it produces a configuration based on the declarations and definitions.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;!--listend--&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-nix&#34; data-lang=&#34;nix&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lib&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;options&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lib&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mkOption&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lib&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;types&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;lib-utilities&#34;&gt;Lib Utilities&lt;/h2&gt;
+&lt;h3 id=&#34;mkmerge&#34;&gt;mkMerge&lt;/h3&gt;
+&lt;h3 id=&#34;mkoverride&#34;&gt;mkOverride&lt;/h3&gt;
+&lt;h3 id=&#34;mkif&#34;&gt;mkIf&lt;/h3&gt;
+&lt;h3 id=&#34;mkorder&#34;&gt;mkOrder&lt;/h3&gt;
 </content>
     
     
@@ -641,14 +375,17 @@ t_1, t_2, t_3 \in \mathbb{M}, (t_1 \cdot t_2) \cdot t_3 = t_1 \cdot (t_2 \cdot t
   </entry>
   
   <entry>
-    <title>Abelian Group</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2023/abelian-group/"/>
-    <id>https://mtrsk.github.io/notes/2023/abelian-group/</id>
-    <published>2023-10-07T00:00:00Z</published>
-    <updated>2023-10-07T00:00:00Z</updated>
-    <summary>:ID: 6550857e-ec3f-4b76-80ce-9b86df92601e</summary>
-    <content type="html">&lt;p&gt;:ID:       6550857e-ec3f-4b76-80ce-9b86df92601e&lt;/p&gt;
-</content>
+    <title>Postgres Ctes</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/postgres-ctes/"/>
+    <id>https://mtrsk.github.io/notes/2024/postgres-ctes/</id>
+    <published>2024-09-21T00:00:00Z</published>
+    <updated>2024-09-21T00:00:00Z</updated>
+    <summary>:ID: 36f5efb2-34da-4d67-8c37-bbd5429d7b55
+Common Table Expressions Recursive </summary>
+    <content type="html">&lt;p&gt;:ID:       36f5efb2-34da-4d67-8c37-bbd5429d7b55&lt;/p&gt;
+&lt;h2 id=&#34;common-table-expressions&#34;&gt;Common Table Expressions&lt;/h2&gt;
+&lt;h3 id=&#34;recursive&#34;&gt;Recursive&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
     
     
     <category term="notes"/>
@@ -656,332 +393,30 @@ t_1, t_2, t_3 \in \mathbb{M}, (t_1 \cdot t_2) \cdot t_3 = t_1 \cdot (t_2 \cdot t
   </entry>
   
   <entry>
-    <title>Commutative Ring</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2023/commutative-ring/"/>
-    <id>https://mtrsk.github.io/notes/2023/commutative-ring/</id>
-    <published>2023-10-07T00:00:00Z</published>
-    <updated>2023-10-07T00:00:00Z</updated>
-    <summary>:ID: 44839048-b783-4a37-9267-b8e59160d90f</summary>
-    <content type="html">&lt;p&gt;:ID:       44839048-b783-4a37-9267-b8e59160d90f&lt;/p&gt;
-</content>
-    
-    
-    <category term="notes"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Left R-Module</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2023/left-r-module/"/>
-    <id>https://mtrsk.github.io/notes/2023/left-r-module/</id>
-    <published>2023-10-07T00:00:00Z</published>
-    <updated>2023-10-07T00:00:00Z</updated>
-    <summary>:ID: e4bd8f7b-a64d-4da3-b1e8-289d6fb0c441
-Formal Definition Suppose that R is a ring, and 1 is its multiplicative identity. A left R-module M consists of an abelian group (M, +) and an operation · : R × M → M such that ∀ r, s ∈ R and x, y ∈ M, we have:
-\begin{align*} r \cdot (x + y) &amp;amp;= r \cdot x + r \cdot y \tag{1}\\ (r + s) \cdot x &amp;amp;= r \cdot x + s \cdot x \tag{2}\\ (r \cdot s) \cdot x &amp;amp;= r \cdot (s \cdot x) \tag{3}\\ 1 \cdot x &amp;amp;= x \tag{4} \end{align*}</summary>
-    <content type="html">&lt;p&gt;:ID:       e4bd8f7b-a64d-4da3-b1e8-289d6fb0c441&lt;/p&gt;
-&lt;h2 id=&#34;formal-definition&#34;&gt;Formal Definition&lt;/h2&gt;
-&lt;p&gt;Suppose that R is a ring, and 1 is its multiplicative identity. A left R-module
-M consists of an abelian group (M, +) and an operation · : R × M → M such that
-∀ r, s ∈ R and x, y ∈ M, we have:&lt;/p&gt;
-&lt;p&gt;\begin{align*}
-r \cdot (x + y) &amp;amp;= r \cdot x + r \cdot y \tag{1}\\
-(r + s) \cdot x &amp;amp;= r \cdot x + s \cdot x \tag{2}\\
-(r \cdot s) \cdot x &amp;amp;= r \cdot (s \cdot x) \tag{3}\\
-1 \cdot x &amp;amp;= x \tag{4}
-\end{align*}&lt;/p&gt;
-</content>
-    
-    
-    <category term="notes"/>
-    
-  </entry>
-  
-  <entry>
-    <title>R-Module Homomorphism</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2023/r-module-homomorphism/"/>
-    <id>https://mtrsk.github.io/notes/2023/r-module-homomorphism/</id>
-    <published>2023-10-07T00:00:00Z</published>
-    <updated>2023-10-07T00:00:00Z</updated>
-    <summary>:ID: e41608f8-fcf2-4b02-b502-9441c0aee369</summary>
-    <content type="html">&lt;p&gt;:ID:       e41608f8-fcf2-4b02-b502-9441c0aee369&lt;/p&gt;
-</content>
-    
-    
-    <category term="notes"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Algebraic Models for Accouting Systems</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2023/algebraic-models-for-accouting-systems/"/>
-    <id>https://mtrsk.github.io/notes/2023/algebraic-models-for-accouting-systems/</id>
-    <published>2023-10-05T00:00:00Z</published>
-    <updated>2023-10-05T00:00:00Z</updated>
-    <summary>:ID: 9a03d556-ded4-4096-9a8c-c2147dee70a5 :ROAM_ALIASES: &amp;ldquo;Algebra&amp;rdquo;
-Algebraic Models for Accouting Systems
-Approaches to Accounting Theory Algebraic concepts employed Balance vectors
-A balance vector is a column vector or column matrix the sum of whose entries equals zero. Balance vectors are able to represent the state of an accounting system at any instant. They are also capable of encoding the transactions that are applied to the system. Digraph
-The vertices represent accounts and the edges indicate where there are flows of value within the system.</summary>
-    <content type="html">&lt;p&gt;:ID:       9a03d556-ded4-4096-9a8c-c2147dee70a5
-:ROAM_ALIASES: &amp;ldquo;Algebra&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;Algebraic Models for Accouting Systems&lt;/p&gt;
-&lt;h2 id=&#34;approaches-to-accounting-theory&#34;&gt;Approaches to Accounting Theory&lt;/h2&gt;
-&lt;h3 id=&#34;algebraic-concepts-employed&#34;&gt;Algebraic concepts employed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Balance vectors&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A balance vector is a column vector or column matrix the sum of whose entries equals zero.&lt;/li&gt;
-&lt;li&gt;Balance vectors are able to represent the state of an accounting system at any instant.&lt;/li&gt;
-&lt;li&gt;They are also capable of encoding the transactions that are applied to the system.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Digraph&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The vertices represent accounts and the edges indicate where there are flows
-of value within the system. Thus a digraph gives a picture of how value can
-flow around an accounting system.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Automaton&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The applicability to accounting is clear: the states of the accounting
-system are the balance vectors, the inputs are the transactions and the
-outputs are the new balance vectors.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;[BROKEN LINK: d89285be-d7a9-46a1-8a10-e14e73b66935]&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;balance-vectors&#34;&gt;Balance Vectors&lt;/h2&gt;
-&lt;h3 id=&#34;the-values-of-an-account&#34;&gt;The values of an account&lt;/h3&gt;
-&lt;p&gt;Let there be given a set R together with two binary operations on R called
-ddition and multiplication, denoted in the usual way, such that the following
-rules hold for all elements \(a, b, c \in R\):&lt;/p&gt;
-&lt;p&gt;\begin{align*}
-(a + b) + c &amp;amp;= a + (b + c) \tag{1}\\
-a + b &amp;amp;= b + a \tag{2}\\
-\exists 0 \in R, \forall a \in R, a + 0_r &amp;amp;= a \tag{3}\\
-\forall a \in R, \exists (-a) \in R, a + (-a) &amp;amp;= 0 \tag{4}\\
-a \times (b \times c) &amp;amp;= (a \times b) \times c \tag{5}\\
-a \times b &amp;amp;= b \times a \tag{6}\\
-a \times (b + c) &amp;amp;= a \times b + a \times c \tag{7}\\
-\exists 1 \in R, \forall a \in R, a \times 1 &amp;amp;= a \tag{8}
-\end{align*}&lt;/p&gt;
-&lt;p&gt;The first four of these requirements assert that &lt;strong&gt;R&lt;/strong&gt; is an algebraic structure
-called an &lt;strong&gt;[BROKEN LINK: 6550857e-ec3f-4b76-80ce-9b86df92601e]&lt;/strong&gt;. With the additional properties (5) through (8) R
-becomes a &lt;strong&gt;[BROKEN LINK: 44839048-b783-4a37-9267-b8e59160d90f]&lt;/strong&gt; with identity.&lt;/p&gt;
-&lt;p&gt;A commutative ring with identity &lt;strong&gt;R&lt;/strong&gt; is said to be &lt;strong&gt;linearly ordered&lt;/strong&gt; if there is a
-non-empty subset &lt;strong&gt;P&lt;/strong&gt; of &lt;strong&gt;R&lt;/strong&gt; not containing 0, called the set of positive elements,
-such that the following conditions are satisfied:&lt;/p&gt;
-&lt;p&gt;\begin{align*}
-a,b \in P \implies a + b \in P &amp;amp;\wedge a \times b \in P \tag{9}\\
-\forall a \in R, (a \in P) \lor (a = 0) &amp;amp;\lor (-a \in P) \tag{10}\\
-\end{align*}&lt;/p&gt;
-&lt;p&gt;The actual concept of a linear order arises when one defines a &amp;lt; b to mean that
-b − a ∈ P. The negative elements of R are the elements of the set R \ (P ∪
-{0}). On the basis of (9) and (10) it can be shown that the following holds:&lt;/p&gt;
-&lt;p&gt;\begin{align*}
-\forall a,b \in R, (a &amp;lt; b) \lor (a = b) &amp;amp;\lor (a &amp;gt; b) \tag{11}\\
-a,b \in R \wedge a \times b = 0 \implies a = 0 &amp;amp;\lor b = 0 \tag{12}\\
-\end{align*}&lt;/p&gt;
-&lt;h3 id=&#34;the-state-of-an-accounting-system&#34;&gt;The State of an Accounting System&lt;/h3&gt;
-&lt;p&gt;Let &lt;strong&gt;R&lt;/strong&gt; be an &lt;strong&gt;ordered domain&lt;/strong&gt;, which will be the universal set for all account
-values, and let n be a positive integer, which will be the number of accounts in
-the accounting system. The state of the system at any instant can be described
-by listing the values of the accounts, which are assumed to be in some agreed
-order, in the form of an n-column vector over &lt;strong&gt;R&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;\begin{equation*}
-V = \begin{bmatrix}
-v_1 \\
-v_2 \\
-\vdots \\
-v_n \\
-\end{bmatrix}
-\end{equation*}&lt;/p&gt;
-&lt;p&gt;Thus v_i ∈ R is the value of the ith account. The set of all n-column vectors over R is denoted by R^n.&lt;/p&gt;
-&lt;p&gt;Of particular importance is the zero vector:&lt;/p&gt;
-&lt;p&gt;\begin{equation*}
-0 = \begin{bmatrix}
-0 \\
-0 \\
-\vdots \\
-0 \\
-\end{bmatrix}
-\end{equation*}&lt;/p&gt;
-&lt;p&gt;Addition can also be defined:&lt;/p&gt;
-&lt;p&gt;\begin{equation*}
-u + v = \begin{bmatrix}
-u_1 + v_1 \\
-u_2 + v_2 \\
-\vdots \\
-u_n + v_n \\
-\end{bmatrix}
-\end{equation*}&lt;/p&gt;
-&lt;p&gt;as well as scalar products:&lt;/p&gt;
-&lt;p&gt;\begin{equation*}
-r \times v = \begin{bmatrix}
-r \times v_1 \\
-r \times v_2 \\
-\vdots \\
-r \times v_n \\
-\end{bmatrix}
-\end{equation*}&lt;/p&gt;
-&lt;p&gt;Let \(u, v, w \in R^n\) and \(r, s \in R\):&lt;/p&gt;
-&lt;p&gt;\begin{align*}
-(u + v) + w &amp;amp;= u + (v + w) \tag{1}\\
-u + v &amp;amp;= v + u \tag{2}\\
-v + 0 &amp;amp;= v \tag{3}\\
-v + (-v) &amp;amp;= 0 \tag{4}\\
-r \times (u + v) &amp;amp;= r \times u + r \times v \tag{5}\\
-(r + s) \times u &amp;amp;= r \times u + s \times u \tag{6}\\
-(r \times s) \times v &amp;amp;= r \times (s \times v) \tag{7}\\
-1_R \times v &amp;amp;= v \tag{8}
-\end{align*}&lt;/p&gt;
-&lt;p&gt;These properties demonstrate that the set R^n has a recognizable algebraic
-structure. Indeed properties (1) – (4) assert that R^n is an [BROKEN LINK: 6550857e-ec3f-4b76-80ce-9b86df92601e], while
-the additional properties (5) through (8) make R^n into a [BROKEN LINK: e4bd8f7b-a64d-4da3-b1e8-289d6fb0c441].&lt;/p&gt;
-&lt;h4 id=&#34;the-free-r-module-r-n&#34;&gt;The free R-module R^n&lt;/h4&gt;
-&lt;p&gt;It turns out that R^n is a particular type of R-module called a Free R-module. To
-see what is special about it, consider the so-called elementary column vectors
-e(1), e(2), &amp;hellip; , e(n) where the ith entry of e(i) is 1 = 1_R and all other
-entries are 0. Thus:&lt;/p&gt;
-&lt;p&gt;\begin{equation*}
-e(1) = \begin{bmatrix}
-1 \\
-0 \\
-\vdots \\
-0 \\
-\end{bmatrix}, \,
-e(2) = \begin{bmatrix}
-0 \\
-1 \\
-\vdots \\
-0 \\
-\end{bmatrix},
-\,\, (\ldots) \,\,,
-e(n) = \begin{bmatrix}
-0 \\
-0 \\
-\vdots \\
-n \\
-\end{bmatrix}
-\end{equation*}&lt;/p&gt;
-&lt;p&gt;Now an arbitrary vector \(v \in R^n\) is expressible in terms of these
-elementary vectors since:&lt;/p&gt;
-&lt;p&gt;\begin{equation*}
-v = v_1 \times e(1) + v_2 \times e(2) + \dots + v_n \times e(n)
-\end{equation*}&lt;/p&gt;
-&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
-&lt;div class=&#34;org-center&#34;&gt;
-&lt;p&gt;The set of elementary vectors {e(1), . . . , e(n)} is an R-basis of R^n, so that R^n is a free R-module of rank n.&lt;/p&gt;
+    <title>Postgres Functions</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/postgres-functions/"/>
+    <id>https://mtrsk.github.io/notes/2024/postgres-functions/</id>
+    <published>2024-09-21T00:00:00Z</published>
+    <updated>2024-09-21T00:00:00Z</updated>
+    <summary>:ID: 32e8ab3c-2b96-410f-b60d-fde9e35b49f3
+Functions CREATE OR REPLACE FUNCTION function_name(arg1 INT, arg2 INT, arg3 INT) RETURNS SETOF VARCHAR LANGUAGE plpgsql AS $$ BEGIN (...) END; $$; References </summary>
+    <content type="html">&lt;p&gt;:ID:       32e8ab3c-2b96-410f-b60d-fde9e35b49f3&lt;/p&gt;
+&lt;h2 id=&#34;functions&#34;&gt;Functions&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plpgsql&#34; data-lang=&#34;plpgsql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;OR&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;REPLACE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;FUNCTION&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;function_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;arg1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;INT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;arg2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;INT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;arg3&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;INT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;RETURNS&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SETOF&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;VARCHAR&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;LANGUAGE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;plpgsql&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;AS&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;$$&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;BEGIN&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;END&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;$$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
 &lt;/div&gt;
-&lt;h4 id=&#34;balance-vectors-in-r-n&#34;&gt;Balance vectors in R^n&lt;/h4&gt;
-&lt;p&gt;The accounts of a company generally fall into three categories:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;em&gt;Asset accounts&lt;/em&gt;, which represent anything owned by the company&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Liability accounts&lt;/em&gt;, which record what is owed by the company to external entities&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Equity accounts&lt;/em&gt; or a &lt;em&gt;profit and loss account&lt;/em&gt;; these show what is owed by the
-company to the owners and also show the net assets of the company.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;It is a fundamental fact that a double entry accounting system must always be in
-balance, a fact which is implied by the accounting equation:&lt;/p&gt;
-&lt;p&gt;\begin{equation*}
-A - L = E
-\end{equation*}&lt;/p&gt;
-&lt;p&gt;We proceed now to study the properties of the subset of balance vectors in R^n,
-where R is an ordered domain.&lt;/p&gt;
-&lt;p&gt;First, let us consider the function σ : R^n → R, which sums the entries of a
-column vector \(v \in R^n\).&lt;/p&gt;
-&lt;p&gt;\begin{equation*}
-\sigma(v) = \sum_{i=0}^{n} v_i
-\end{equation*}&lt;/p&gt;
-&lt;p&gt;σ has the following properties:&lt;/p&gt;
-&lt;p&gt;\begin{align*}
-\sigma(v + w) &amp;amp;= \sigma(v) + \sigma(w) \\
-\sigma(rv) &amp;amp;= r \sigma(v)\\
-\forall v,w \in R^n, r \in R
-\end{align*}&lt;/p&gt;
-&lt;p&gt;A function between two R-modules with these properties is called an [BROKEN LINK: e41608f8-fcf2-4b02-b502-9441c0aee369].&lt;/p&gt;
-&lt;p&gt;Module elements which are sent to zero by a module homomorphism σ form a subset
-called the &lt;strong&gt;kernel&lt;/strong&gt;, written \(\text{Ker}(\sigma)\).&lt;/p&gt;
-&lt;p&gt;Returning to the particular homomorphism σ, we conclude that its kernel,
-i.e. the set of balance vectors, is a submodule of R^n. We shall write
-\(\text{Baln} ( R)\) for the set of all balance vectors in R^n, so that
-\(\text{Ker}(\sigma) = \text{Baln}( R)\) is a submodule of R^n, which will be called the
-balance module of degree n over R.&lt;/p&gt;
-&lt;h4 id=&#34;properties-of-the-balance-module&#34;&gt;Properties of the Balance Module&lt;/h4&gt;
-</content>
-    
-    
-    <category term="notes"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Managing a Programming Project</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2023/managing-a-programming-project/"/>
-    <id>https://mtrsk.github.io/notes/2023/managing-a-programming-project/</id>
-    <published>2023-04-11T00:00:00Z</published>
-    <updated>2023-04-11T00:00:00Z</updated>
-    <summary>:ID: da4d5031-66cb-4d1c-b8cf-24d12adf5c17
-Introduction Your ground rules Adopt a set of unambiguous definitions and stick with them Define your project&amp;rsquo;s development cycle and related all schedules and work process to that cycle Define activities, such as levels of testing, in a consistent way Define a system of documents clearly, consistent and early Your contract Half the horror stories about programming involve either bad contracts or no contract at all
-The fact that you are managing a programming project means that you will be running a business.</summary>
-    <content type="html">&lt;p&gt;:ID:       da4d5031-66cb-4d1c-b8cf-24d12adf5c17&lt;/p&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;h3 id=&#34;your-ground-rules&#34;&gt;Your ground rules&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Adopt a set of unambiguous definitions and stick with them&lt;/li&gt;
-&lt;li&gt;Define your project&amp;rsquo;s &lt;span class=&#34;underline&#34;&gt;development cycle&lt;/span&gt; and related all schedules and work
-process to that cycle&lt;/li&gt;
-&lt;li&gt;Define activities, such as &lt;span class=&#34;underline&#34;&gt;levels of testing&lt;/span&gt;, in a consistent way&lt;/li&gt;
-&lt;li&gt;Define a &lt;span class=&#34;underline&#34;&gt;system of documents&lt;/span&gt; clearly, consistent and early&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;your-contract&#34;&gt;Your contract&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Half the horror stories about programming involve either bad contracts or no
-contract at all&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;!--quoteend--&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The fact that you are managing a programming project means that you will be
-running a business. You will have suppliers, you will have one or more
-customers. You will have employees, you will have commitments, you will have
-financial goals, you will have measured results. (&amp;hellip;) . Your responsibility is
-to manage your business so that everyone - your &amp;ldquo;investors&amp;rdquo; (the executives that
-gave you the assignment), your customers (the people who will use your system
-for a long time to come), your employees (&amp;hellip;), and you - will look at your
-operating results and feel a sense of satisfaction.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&#34;writing-your-own-contract&#34;&gt;Writing your own contract&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;Scope of work&lt;/li&gt;
-&lt;li&gt;Schedule and deliverables&lt;/li&gt;
-&lt;li&gt;Key customer people&lt;/li&gt;
-&lt;li&gt;Reviews&lt;/li&gt;
-&lt;li&gt;Change management procedures&lt;/li&gt;
-&lt;li&gt;Testing constraints&lt;/li&gt;
-&lt;li&gt;Acceptance criteria&lt;/li&gt;
-&lt;li&gt;Additional constraints&lt;/li&gt;
-&lt;li&gt;Price&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;the-nature-of-the-beast&#34;&gt;The nature of the beast&lt;/h3&gt;
-&lt;p&gt;&amp;ldquo;Why is software hard to build?&amp;rdquo;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The System&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;In order for a system that you are building to be useful, it needs to satisfy
-the needs of other systems.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;Interactions&lt;/li&gt;
-&lt;li&gt;Change&lt;/li&gt;
-&lt;/ul&gt;
 </content>
     
     

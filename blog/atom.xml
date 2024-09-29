@@ -5,7 +5,7 @@
   
     <link href="https://mtrsk.github.io/blog/atom.xml" rel="self" type="application/atom+xml" />
   
-  <updated>2024-09-16T12:28:17Z</updated>
+  <updated>2024-09-29T00:30:53Z</updated>
   <author>
     
     
@@ -14,7 +14,7 @@
   <id>https://mtrsk.github.io/blog/</id>
   
   <entry>
-    <title>You have 10 seconds to nixify your .Net project</title>
+    <title>You Have 10 Seconds To Nixify Your Dotnet Project</title>
     <link rel="alternate" href="https://mtrsk.github.io/blog/2024/you-have-10-seconds-to-nixify-your-dotnet-project/"/>
     <id>https://mtrsk.github.io/blog/2024/you-have-10-seconds-to-nixify-your-dotnet-project/</id>
     <published>2024-09-16T00:00:00Z</published>
@@ -179,9 +179,9 @@ as well and a container build into the Hello Example.&lt;/li&gt;
   </entry>
   
   <entry>
-    <title>Some experiments with Erlang and Nix</title>
-    <link rel="alternate" href="https://mtrsk.github.io/blog/2024/some-experiments-with-erlang-and-nix/"/>
-    <id>https://mtrsk.github.io/blog/2024/some-experiments-with-erlang-and-nix/</id>
+    <title>Experiments With Erlang And Nix</title>
+    <link rel="alternate" href="https://mtrsk.github.io/blog/2024/experiments-with-erlang-and-nix/"/>
+    <id>https://mtrsk.github.io/blog/2024/experiments-with-erlang-and-nix/</id>
     <published>2024-09-07T00:00:00Z</published>
     <updated>2024-09-07T00:00:00Z</updated>
     <summary>Recently I&amp;rsquo;ve been collaborating with friends on Lyceum, an MMO game with an Erlang backend and a Zig + Raylib client (as if erlang wasn&amp;rsquo;t a weird enough of a choice). Now, this is an unusual combination, but that&amp;rsquo;s the whole reason our pesky group exists in the first place (if you want to know more check my friend&amp;rsquo;s Lemos post).
@@ -540,7 +540,7 @@ Heroku and check what Nix has to offer to manage a fleet of VMs.&lt;/li&gt;
   </entry>
   
   <entry>
-    <title>How to use private NeoVim plugins on NixOS</title>
+    <title>How To Use Private Neovim Plugins On Nixos</title>
     <link rel="alternate" href="https://mtrsk.github.io/blog/2023/how-to-use-private-neovim-plugins-on-nixos/"/>
     <id>https://mtrsk.github.io/blog/2023/how-to-use-private-neovim-plugins-on-nixos/</id>
     <published>2023-09-17T00:00:00Z</published>
@@ -684,11 +684,11 @@ take a look &lt;a href=&#34;https://github.com/mtrsk/nixos-config/tree/master/ho
   </entry>
   
   <entry>
-    <title>I&#39;ve Switched to NixOS</title>
-    <link rel="alternate" href="https://mtrsk.github.io/blog/2018/ive-switched-to-nixos/"/>
-    <id>https://mtrsk.github.io/blog/2018/ive-switched-to-nixos/</id>
-    <published>2018-08-17T00:00:00Z</published>
-    <updated>2018-08-17T00:00:00Z</updated>
+    <title>Switching To Nixos</title>
+    <link rel="alternate" href="https://mtrsk.github.io/blog/2018/switching-to-nixos/"/>
+    <id>https://mtrsk.github.io/blog/2018/switching-to-nixos/</id>
+    <published>2018-08-07T00:00:00Z</published>
+    <updated>2018-08-07T00:00:00Z</updated>
     <summary>After quite some time being a Debian user I&amp;rsquo;ve decided to become a full time meme distro user. At first I was following some of the manuals in an attempt to recreate my config in virtualbox. A day later this distro seemed too cool not to try it out for real, so why not?
 It&amp;rsquo;s kinda weird to adapt, in Debian I was accostumed to just run a command here and there and have a bunch of config files across my system, with Nix (the configuration language) one can have a single file (configuration.</summary>
     <content type="html">&lt;p&gt;After quite some time being a Debian user I&amp;rsquo;ve decided to become a full time

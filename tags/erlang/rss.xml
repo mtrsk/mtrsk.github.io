@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Erlang]] on Benevides&#39; Blog</title>
+    <link>https://mtrsk.github.io/tags/erlang/</link>
+    <description>Recent content in Erlang]] on Benevides&#39; Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mtrsk.github.io/tags/erlang/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Otp</title>
+      <link>https://mtrsk.github.io/notes/2024/otp/</link>
+      <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/otp/</guid>
+      <description>:ID: 6ed3a191-0128-453e-b0b6-37c48593a6f0</description>
+    </item>
+  </channel>
+</rss>
