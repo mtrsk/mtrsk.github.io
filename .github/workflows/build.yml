@@ -21,3 +21,6 @@ jobs:
 
       - name: Build website
         run: nix develop .#ci -c just ci-build
+
+      - name: Publish website
+        run: nix develop .#ci -c just ci-publish
