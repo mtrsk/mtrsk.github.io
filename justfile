@@ -34,6 +34,7 @@ ci-run: ci-build
 remove-org:
     #!/usr/bin/env bash
     find . -iname "#*.org#" | xargs rm -f
+    find . -iname "*~undo-tree~" | xargs rm -f
     echo "Finished!"
 
 # Cleans the current environment

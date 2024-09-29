@@ -5,34 +5,33 @@
     </head>
     <body>
         <outline title="Blogs" text="Blogs I personally like to read">
+            <outline
+                    title="Eduardo's blog"
+                    text="My old boss."
+                    type="atom"
+                    xmlUrl=""
+                    htmlUrl="https://ebellani.github.io/blog/" />
 
-	    <outline
-                title="Eduardo's blog"
-                text="My old boss."
-                type="atom"
-                xmlUrl="https://ebellani.github.io/blog/atom.xml"
-                htmlUrl="https://ebellani.github.io/blog/" />
+            <outline
+                    title="Lemos' blog"
+                    text="Lemos is an ex-coworker of mine and recreative programming partner."
+                    type="atom"
+                    xmlUrl=""
+                    htmlUrl="https://duing.dev/" />
 
-	    <outline
-                title="Lemos' blog"
-                text="Lemos is an ex-coworker of mine and recreative programming partner."
-                type="atom"
-                xmlUrl=""
-                htmlUrl="https://duing.dev/" />
+            <outline
+                    title="Magueta's blog"
+                    text="My favorite fashion micro e-celeb and logic programming enthusiast."
+                    type="atom"
+                    xmlUrl=""
+                    htmlUrl="https://marcosmagueta.com/blog/" />
 
-	    <outline
-                title="Magueta's blog"
-                text="My favorite fashion micro e-celeb and logic programming enthusiast."
-                type="atom"
-                xmlUrl=""
-                htmlUrl="https://marcosmagueta.com/" />
-
-        <outline
-                title="Victor's blog"
-                text="The nix gopher."
-                type="rss"
-                xmlUrl="https://gluer.org/rss.xml"
-                htmlUrl="https://gluer.org" />
+            <outline
+                    title="Victor's blog"
+                    text="The nix gopher."
+                    type="rss"
+                    xmlUrl="https://gluer.org/rss.xml"
+                    htmlUrl="https://gluer.org" />
         </outline>
 
         <outline title="Open Source Projects" text="Projects to watch closely">
