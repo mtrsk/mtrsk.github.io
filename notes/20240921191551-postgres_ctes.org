@@ -1,8 +1,9 @@
 :PROPERTIES:
 :ID:       36f5efb2-34da-4d67-8c37-bbd5429d7b55
+:EXPORT_HUGO_CATEGORIES: "Databases"
+:EXPORT_HUGO_TAGS: "SQL" "Postgres"
 :END:
 #+title: Postgres CTEs
-#+ROAM_TAGS: [[roam:Postgres]] Databases
 
 * Common Table Expressions
 :PROPERTIES:

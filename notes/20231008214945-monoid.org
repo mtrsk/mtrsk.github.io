@@ -3,7 +3,6 @@
 :END:
 #+title: Monoid
 #+STARTUP: latexpreview
-#+ROAM_TAGS: "algebra"
 #+Html_MATHJAX: align: left indent: 5em tagside: left
 
 * Definition

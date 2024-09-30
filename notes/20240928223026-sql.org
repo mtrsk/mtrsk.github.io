@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       11f7d9cc-51a6-4897-955b-37a756105677
+:EXPORT_HUGO_CATEGORIES: "Databases"
+:EXPORT_HUGO_TAGS: "SQL"
+:END:
+#+title: SQL
+
+* Logical Query Processing Order
+
+** FROM
+*** JOIN
+| Step | Description                             |
+|------+-----------------------------------------|
+|    1 | Cartesian product                       |
+|    2 | Qualification step (i.e. the ON filter) |
+|    3 | ~LEFT~ or ~RIGHT~ reservations              |
+
+If the specified ~JOIN~ type is a ~CROSS JOIN~, then the query planner stops at Step
+1 and return the cartesian product to the next clause. All other join types
+proceed to the qualification step.
+
+~INNER~ and ~OUTER~ ~JOINS~ are called "qualified JOINs", the qualification
+predicated is specified using the ~ON~ keyword, which filters all rows from the
+previous cartesian step where the predicate is ~TRUE~. If the request is an
+~INNER JOIN~, then the qualified rows are returned to the next clause, if it is an
+~OUTER JOIN~, the qualified rows go throught the next step.
+
+**** Chiastic Order
+
+** WHERE
+** GROUP BY
+** HAVING
+** SELECT
+** ORDER BY
+** OFFSET/FETCH

@@ -2,7 +2,6 @@
 :ID:       74c5509d-73be-4b04-9ca4-039117d588a9
 :END:
 #+title: CAP Theorem
-#+ROAM_TAGS: "distributed systems"
 
 First postulated by Eric Brewer in [cite:@brewer2000], and formally proved in [cite:@gilbert2002].
 

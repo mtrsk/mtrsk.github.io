@@ -1,9 +1,10 @@
 :PROPERTIES:
 :ID:       1daea4ea-40bc-406d-8d03-906c7f9ec343
+:EXPORT_HUGO_CATEGORIES: "FP"
+:EXPORT_HUGO_TAGS: "Erlang"
 :END:
 #+TITLE: Programming Erlang
-#+ROAM_TAGS: "erlang"
-- tags :: [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]]
+#+filetags: [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]]
 
 Notes from [cite:@armstrong2013].
 

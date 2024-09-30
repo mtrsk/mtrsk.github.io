@@ -3,7 +3,7 @@
 :END:
 #+title: Distributed Replicated Block Device 
 #+ROAM_ALIAS: DRBD
-#+filetags [[id:8a427ee7-2ef1-489b-af82-91de7be8a3ba][Linux]]
 
-
+Distributed Replicated Block Device (DRBD) is a distributed replicated storage
+system for the [[id:8a427ee7-2ef1-489b-af82-91de7be8a3ba][Linux]] platform.
 

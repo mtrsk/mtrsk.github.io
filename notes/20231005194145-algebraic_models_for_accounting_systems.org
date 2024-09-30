@@ -4,7 +4,6 @@
 :END:
 #+TITLE: Algebraic Models for Accounting Systems
 #+STARTUP: latexpreview
-#+ROAM_TAGS: "accounting" "algebra"
 #+Html_MATHJAX: align: left indent: 5em tagside: left
 
 Algebraic Models for Accouting Systems

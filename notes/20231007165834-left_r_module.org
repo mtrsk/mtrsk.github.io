@@ -3,7 +3,6 @@
 :END:
 #+TITLE: Left R-Module
 #+STARTUP: latexpreview
-#+ROAM_TAGS: "algebra"
 
 * Formal Definition
 
