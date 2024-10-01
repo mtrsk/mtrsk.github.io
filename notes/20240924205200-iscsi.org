@@ -1,7 +1,13 @@
 :PROPERTIES:
 :ID:       3a7a03ae-8932-4d86-ae45-aa84ff1f325a
+:EXPORT_HUGO_CATEGORIES: "Networking"
+:EXPORT_HUGO_TAGS: "Protocols"
 :END:
 #+title: Internet Small Computer Systems Interface
 #+ROAM_ALIAS: iSCSI
-#+filetags [[id:8a427ee7-2ef1-489b-af82-91de7be8a3ba][Linux]]
 
+* Definition
+iSCSI an acronym for Internet Small Computer Systems Interface, an Internet
+Protocol (IP)-based storage networking standard for linking data storage
+facilities. It provides block-level access to storage devices by carrying SCSI
+commands over a TCP/IP network.

@@ -1,6 +1,8 @@
 :PROPERTIES:
 :ID:       9a03d556-ded4-4096-9a8c-c2147dee70a5
 :ROAM_ALIASES: "Algebra"
+:EXPORT_HUGO_CATEGORIES: "Math" "Finance"
+:EXPORT_HUGO_TAGS: "Algebra" "Accouting"
 :END:
 #+TITLE: Algebraic Models for Accounting Systems
 #+STARTUP: latexpreview

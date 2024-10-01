@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       44839048-b783-4a37-9267-b8e59160d90f
+:EXPORT_HUGO_CATEGORIES: "Math"
+:EXPORT_HUGO_TAGS: "Algebra"
 :END:
 #+title: Commutative Ring
 

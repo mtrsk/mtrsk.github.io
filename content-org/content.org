@@ -99,6 +99,17 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 
 #+RESULTS: export-notes
 
+** Sql
+:PROPERTIES:
+:EXPORT_FILE_NAME: sql
+:EXPORT_DATE: 2024-09-28
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug sql
+:CUSTOM_ID: sql
+:END:
+
+#+INCLUDE: "../notes/20240928223026-sql.org"
+    
+
 ** Otp
 :PROPERTIES:
 :EXPORT_FILE_NAME: otp
@@ -196,17 +207,6 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 :END:
 
 #+INCLUDE: "../notes/20240924092617-linux.org"
-    
-
-** Erlang Datatypes
-:PROPERTIES:
-:EXPORT_FILE_NAME: erlang-datatypes
-:EXPORT_DATE: 2024-09-23
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug erlang-datatypes
-:CUSTOM_ID: erlang-datatypes
-:END:
-
-#+INCLUDE: "../notes/20240923220335-erlang_datatypes.org"
     
 
 ** Postgres Window Functions
@@ -339,17 +339,6 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 :END:
 
 #+INCLUDE: "../notes/20240709110323-designing_for_scalability_with_erlang.org"
-    
-
-** Introducing Erlang
-:PROPERTIES:
-:EXPORT_FILE_NAME: introducing-erlang
-:EXPORT_DATE: 2024-07-06
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug introducing-erlang
-:CUSTOM_ID: introducing-erlang
-:END:
-
-#+INCLUDE: "../notes/20240706222446-introducing_erlang.org"
     
 
 ** Programming Erlang

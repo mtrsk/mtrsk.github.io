@@ -1,10 +1,13 @@
 :PROPERTIES:
 :ID:       d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb
+:EXPORT_HUGO_CATEGORIES: "DistributedSystems"
+:EXPORT_HUGO_TAGS: "Clusters"
 :END:
-#+title: Clusters
-#+filetags [[id:8a427ee7-2ef1-489b-af82-91de7be8a3ba][Linux]]
+#+title: Cluster
 
-* High Availability Clusters
+* Different Kinds of Clusters
+
+** High Availability Clusters
 
 #+BEGIN_QUOTE
 The goal of a high availability cluster is to make sure that critical resources
