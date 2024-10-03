@@ -20,3 +20,6 @@ nix develop
 build
 run
 #+END_SRC
+
+** TODO
+- [ ] Build the ~org-roam~ graph
