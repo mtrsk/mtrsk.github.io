@@ -36,10 +36,52 @@ The basic constructs of the [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]] 
 
 ** Strings
 
+** Records
+
+#+BEGIN_QUOTE
+(...) records provide a convenient way for associating a tag
+with each of the elements in a tuple. This allows us to refer to an
+element of a tuple by name and not by position. A pre-compiler
+takes the record definition and replaces it with the appropriate tuple
+reference. [cite:@armstrong2013]
+#+END_QUOTE
+
+#+BEGIN_SRC erlang
+  -record(todo, {status=reminder,who=joe,text}).
+#+END_SRC
+
+to load a record from the the shell, one must use the ~rr~ command:
+
+#+BEGIN_SRC shell
+  1> rr("records.hrl").
+  [todo]
+  2> #todo{}.
+  #todo{status = reminder,who = joe,text = undefined}
+  3> X1 = #todo{status=urgent, text="Fix errata in book"}.
+  #todo{status = urgent,who = joe,text = "Fix errata in book"}
+  4> X2 = X1#todo{status=done}.
+  #todo{status = done,who = joe,text = "Fix errata in book"}
+#+END_SRC
+
 ** Maps
 
+Maps are associative collections of key-value pairs.
+
+#+BEGIN_SRC shell
+  1> TaskPending = #{ status => pending, description => 'feed cats' }.
+  #{status => pending,description => 'feed cats'}
+  2> TaskDone = TaskPending#{ status := done }.
+  #{status => done,description => 'feed cats'}
+#+END_SRC
+
 * Variables
-+ Always start with an uppercase letter or ~_~.
+
+#+BEGIN_QUOTE
+Note that Erlang variables start with uppercase characters. So, ~X~, ~This~, and
+~A_long_name~ are all variables. Names beginning with lowercase letters—for example,
+~monday~ or ~friday~ are not variables but are symbolic constants called 
+atoms. [cite:@armstrong2013]
+#+END_QUOTE 
 
 * Pattern Matching
 Pattern matching is used for:
@@ -103,7 +145,6 @@ Pattern matching is used for:
   > f(N).
   > f().
 #+END_SRC
-
 
 #+print_bibliography:
 

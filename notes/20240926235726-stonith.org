@@ -1,9 +1,8 @@
 :PROPERTIES:
 :ID:       789326a5-20aa-4492-acb6-1474c3c11a4a
+:ROAM_ALIASES: Fencing
 :END:
 #+title: STONITH
-:ROAM_ALIASES: Fencing
-#+filetags [[id:d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb][Clusters]]
 
 #+BEGIN_QUOTE
 In STONITH, specific hardware is used to terminate a node that is no longer
@@ -14,4 +13,11 @@ action to the STONITH device, which will, in turn, terminate the nonresponsive
 node. [cite:@van2014pro chapter 1]
 #+END_QUOTE
 
+* Mechanisms
+** Power Fencing
++ Cuts the node off from power.
+** Fabric Fencing :: Disconnects the machine from storage.
++ By closing ports in a Fibre Channel Switch.
++ By using [[id:388e1a43-f7f6-4c9e-af19-d7b6116a070e][SCSI]] reservations.
 
+* Fencing Agents

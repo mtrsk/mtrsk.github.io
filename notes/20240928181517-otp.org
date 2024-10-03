@@ -2,11 +2,14 @@
 :ID:       6ed3a191-0128-453e-b0b6-37c48593a6f0
 :EXPORT_HUGO_CATEGORIES:  "FP"
 :EXPORT_HUGO_TAGS: "Erlang" "OTP"
+:ROAM_ALIAS: "Open Telecom Platform"
 :END:
 #+title: OTP
 
 #+BEGIN_QUOTE
-OTP is set of [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]] libraries and design principles providing middle-ware to
-develop these systems. It includes its own distributed database, applications to
-interface towards other languages, debugging and release handling tools.
+[[id:6ed3a191-0128-453e-b0b6-37c48593a6f0][OTP]] is a domain-independent set of frameworks, principles, and patterns that
+guide and support the structure, design, implementation, and deployment of
+[[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]] systems. Using OTP in your projects will help you avoid accidental
+complexity: things that are difficult because you picked inadequate
+tools. [cite:@cesarini2016designing p.20]
 #+END_QUOTE

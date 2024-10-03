@@ -1,0 +1,57 @@
+:PROPERTIES:
+:ID:       22ae9c25-3123-4ed8-b765-369ac89d2942
+:EXPORT_HUGO_CATEGORIES: "FP"
+:EXPORT_HUGO_TAGS: "Erlang"
+:END:
+#+title: Error Handling in Erlang
+
+#+BEGIN_QUOTE
+In [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]] we have a large number of processes at our disposal, so the failure
+of any individual process is not so important. We usually write only a small
+amount of defensive code and instead concentrate on writing corrective code.
+We take measures to detect the errors and then correct them after they have
+occurred. [cite:@armstrong2013]
+#+END_QUOTE
+
+* Definitions
++ Link :: A bi-directional propagation path for exit signals.
++ Exit Signal :: Transmit process termination information.
++ Error trapping :: The ability of an  to process exit signals as if they
+  were messages.
+
+** Link
+
+To create links, we call the primitive link(Pid), which creates a link between the
+calling process and Pid. So, if P1 calls link(P3), a link is created between P1 and
+P3.
+
+#+BEGIN_SRC erlang
+  PidA = link(PibB)
+#+END_SRC
+
++ ~link/1~ creates a bi-directional link between the process calling the BIF (~PidA~) and
+  the process linked (~PidB~).
++ ~spawn_link/3~ will yield the same result as ~spawn/3~ followed by ~link/1~, only that
+  will do so atomically.
++ ~unlink/1~ removes the link to ~Pid~.
+
+** Exit Signals
++ Exit Signals can be *normal* or *abnormal*.
++ When a process terminates, it sends a signal to all process its linked to. The
+  exit signal will contain the following information:
+
+ | Field               | Description                                                                             |
+ |---------------------+-----------------------------------------------------------------------------------------|
+ | *Sender Identifier*   | The process or port identifier of the process or port that terminated.                  |
+ | *Receiver Identifier* | The process or port identifier of the process or port which the exit signal is sent to. |
+ | The ~link~ flag       | This flag will be set indicating that the exit signal was sent due to a link.           |
+ | ~exit~ reason       |                                                                                         |
+
+** Error Trapping
+
+*** Propagation Semantics
+  
++ Processes can trap ~exit~ signals by calling the BIF ~process_flag(trap_exit, true)~.
++ Once trapped, the errors are saved in the mailbox.
+
+#+print_bibliography:

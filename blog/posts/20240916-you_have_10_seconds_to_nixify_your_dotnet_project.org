@@ -21,7 +21,7 @@ preached it to non-Nixers).
 
 ** Devenv
 
-I've already tackled this in a [[https://mtrsk.github.io/blog/2024/some-experiments-with-erlang-and-nix/][previous article]], but the best developer
+I've already tackled this in a [[https://mtrsk.github.io/blog/2024/experiments-with-erlang-and-nix/][previous article]], but the best developer
 experience right now is with [[https://devenv.sh/][devenv.sh]]. Unlike the previous article tho, the
 environment setup is way simpler, just a bunch of .Net tools inside the shell
 and call it a day.
@@ -156,7 +156,7 @@ guidelines]], of course. Now, going back to the testing the Nix build:
 
 ** Generating OCI Images
 
-Similar to the [[https://mtrsk.github.io/blog/2024/some-experiments-with-erlang-and-nix/][previous post]], the Container Image looks like this:
+Similar to the [[https://mtrsk.github.io/blog/2024/experiments-with-erlang-and-nix/][previous post]], the Container Image looks like this:
 
 #+BEGIN_SRC shell
   # nix build .#dockerImage
