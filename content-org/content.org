@@ -99,6 +99,61 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 
 #+RESULTS: export-notes
 
+** Error Handling In Erlang
+:PROPERTIES:
+:EXPORT_FILE_NAME: error-handling-in-erlang
+:EXPORT_DATE: 2024-10-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug error-handling-in-erlang
+:CUSTOM_ID: error-handling-in-erlang
+:END:
+
+#+INCLUDE: "../notes/20241001192402-error_handling_in_erlang.org"
+    
+
+** Scsi
+:PROPERTIES:
+:EXPORT_FILE_NAME: scsi
+:EXPORT_DATE: 2024-10-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug scsi
+:CUSTOM_ID: scsi
+:END:
+
+#+INCLUDE: "../notes/20241001154953-scsi.org"
+    
+
+** Postgres Server
+:PROPERTIES:
+:EXPORT_FILE_NAME: postgres-server
+:EXPORT_DATE: 2024-10-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug postgres-server
+:CUSTOM_ID: postgres-server
+:END:
+
+#+INCLUDE: "../notes/20241001144549-postgres_server.org"
+    
+
+** Concurrent Erlang
+:PROPERTIES:
+:EXPORT_FILE_NAME: concurrent-erlang
+:EXPORT_DATE: 2024-09-30
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug concurrent-erlang
+:CUSTOM_ID: concurrent-erlang
+:END:
+
+#+INCLUDE: "../notes/20240930224229-concurrent_erlang.org"
+    
+
+** Sql
+:PROPERTIES:
+:EXPORT_FILE_NAME: sql
+:EXPORT_DATE: 2024-09-28
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug sql
+:CUSTOM_ID: sql
+:END:
+
+#+INCLUDE: "../notes/20240928223026-sql.org"
+    
+
 ** Otp
 :PROPERTIES:
 :EXPORT_FILE_NAME: otp
@@ -196,17 +251,6 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 :END:
 
 #+INCLUDE: "../notes/20240924092617-linux.org"
-    
-
-** Erlang Datatypes
-:PROPERTIES:
-:EXPORT_FILE_NAME: erlang-datatypes
-:EXPORT_DATE: 2024-09-23
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug erlang-datatypes
-:CUSTOM_ID: erlang-datatypes
-:END:
-
-#+INCLUDE: "../notes/20240923220335-erlang_datatypes.org"
     
 
 ** Postgres Window Functions
@@ -339,17 +383,6 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 :END:
 
 #+INCLUDE: "../notes/20240709110323-designing_for_scalability_with_erlang.org"
-    
-
-** Introducing Erlang
-:PROPERTIES:
-:EXPORT_FILE_NAME: introducing-erlang
-:EXPORT_DATE: 2024-07-06
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug introducing-erlang
-:CUSTOM_ID: introducing-erlang
-:END:
-
-#+INCLUDE: "../notes/20240706222446-introducing_erlang.org"
     
 
 ** Programming Erlang

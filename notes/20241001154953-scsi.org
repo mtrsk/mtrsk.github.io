@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       388e1a43-f7f6-4c9e-af19-d7b6116a070e
+:EXPORT_HUGO_CATEGORIES: "Networking"
+:EXPORT_HUGO_TAGS: "Protocols"
+:END:
+#+title: SCSI
+

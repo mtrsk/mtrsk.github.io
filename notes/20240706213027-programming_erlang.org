@@ -1,41 +1,14 @@
 :PROPERTIES:
 :ID:       1daea4ea-40bc-406d-8d03-906c7f9ec343
+:EXPORT_HUGO_CATEGORIES: "FP"
+:EXPORT_HUGO_TAGS: "Erlang"
 :END:
 #+TITLE: Programming Erlang
-#+ROAM_TAGS: "erlang"
-- tags :: [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]]
+#+filetags: [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]]
 
 Notes from [cite:@armstrong2013].
 
 * Part I: Why Erlang?
-
-** Introducing Concurrency
-
-*** Modeling Concurrency
-
-~spawn~ is an Erlang primitive that creates a concurrent process and returns a
-process identifier (PID) that can used to interact with the newly created process:
-
-#+BEGIN_SRC erlang
-spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN])
-#+END_SRC
-
-The syntax ~Pid ! Msg~ means "send the message ~Msg~ to the process ~Pid~". And for
-~Pid~ to process a message we need to pattern match:
-
-#+BEGIN_SRC erlang
-receive
-    {From, Message} ->
-        ...
-end
-#+END_SRC
-
-*** Benefits of Concurrency
-
-+ Performance
-+ Scalability
-+ Fault Tolerance
-+ Clarity
 
 ** A Whirlwind Tour of Erlang
 *** Syntax of Variables and Atoms
@@ -43,8 +16,8 @@ end
 Note that Erlang variables start with uppercase characters. So, ~X~, ~This~, and
 ~A_long_name~ are all variables. Names beginning with lowercase letters—for example,
 ~monday~ or ~friday~ are not variables but are symbolic constants called 
-atoms.
-#+END_QUOTE
+atoms. [cite:@armstrong2013]
+#+END_QUOTE 
 
 *** Compiling and Running "Hello World" in the Shell
 #+BEGIN_SRC erlang
@@ -209,46 +182,6 @@ and each qualifier is either a generator, a bitstring generator, or a filter.
     Guard2 -> Expr_seq2;
     ...
   end
-#+END_SRC
-
-** Records and Maps
-
-*** Naming Tuple Items with Records
-
-#+BEGIN_QUOTE
-(...) records provide a convenient way for associating a tag
-with each of the elements in a tuple. This allows us to refer to an
-element of a tuple by name and not by position. A pre-compiler
-takes the record definition and replaces it with the appropriate tuple
-reference.
-#+END_QUOTE
-
-#+BEGIN_SRC erlang
-  -record(todo, {status=reminder,who=joe,text}).
-#+END_SRC
-
-to load a record from the the shell, one must use the ~rr~ command:
-
-#+BEGIN_SRC shell
-  1> rr("records.hrl").
-  [todo]
-  2> #todo{}.
-  #todo{status = reminder,who = joe,text = undefined}
-  3> X1 = #todo{status=urgent, text="Fix errata in book"}.
-  #todo{status = urgent,who = joe,text = "Fix errata in book"}
-  4> X2 = X1#todo{status=done}.
-  #todo{status = done,who = joe,text = "Fix errata in book"}
-#+END_SRC
-
-*** Maps: Associative Key-Value Stores
-
-Maps are associative collections of key-value pairs.
-
-#+BEGIN_SRC shell
-  1> TaskPending = #{ status => pending, description => 'feed cats' }.
-  #{status => pending,description => 'feed cats'}
-  2> TaskDone = TaskPending#{ status := done }.
-  #{status => done,description => 'feed cats'}
 #+END_SRC
 
 ** Error Handling in Sequential Programs

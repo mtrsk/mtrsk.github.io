@@ -1,5 +1,7 @@
 :PROPERTIES:
 :ID:       de7d0e94-618f-4982-b3e5-8806d88cad5d
+:EXPORT_HUGO_CATEGORIES: "FP"
+:EXPORT_HUGO_TAGS: "Erlang"
 :END:
 #+title: Erlang
 

@@ -2,7 +2,6 @@
 :ID:       860f97f8-e41d-480b-881b-203773406990
 :END:
 #+title: Postgres Window Functions
-#+ROAM_TAGS [[id:1949c98e-e1c0-474b-b383-c76aa418d583][Postgres]] Databases
 
 * Aggregates
 
@@ -16,5 +15,9 @@ The ~LAG()~ function is used to retrieve data from the previous row.
 
 
 * Rankings
+
+** Rank
+
+** Dense Rank
 
 * Value Functions
