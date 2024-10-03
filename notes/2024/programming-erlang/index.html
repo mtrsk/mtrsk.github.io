@@ -10,15 +10,17 @@
     <meta property="og:url" content="https://mtrsk.github.io/notes/2024/programming-erlang/">
   <meta property="og:site_name" content="Benevides&#39; Blog">
   <meta property="og:title" content="Programming Erlang">
-  <meta property="og:description" content=":ID: 1daea4ea-40bc-406d-8d03-906c7f9ec343
-tags [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] Notes from (Armstrong 2013).
-Part I: Why Erlang? Introducing Concurrency Modeling Concurrency spawn is an Erlang primitive that creates a concurrent process and returns a process identifier (PID) that can used to interact with the newly created process:
-spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]) The syntax Pid ! Msg means “send the message Msg to the process Pid”. And for Pid to process a message we need to pattern match:">
+  <meta property="og:description" content=":ID: 1daea4ea-40bc-406d-8d03-906c7f9ec343 :EXPORT_HUGO_CATEGORIES: “FP” :EXPORT_HUGO_TAGS: “Erlang”
+Notes from (Armstrong 2013).
+Part I: Why Erlang? A Whirlwind Tour of Erlang Syntax of Variables and Atoms Note that Erlang variables start with uppercase characters. So, X, This, and A_long_name are all variables. Names beginning with lowercase letters—for example, monday or friday are not variables but are symbolic constants called atoms. (Armstrong 2013)
+Compiling and Running “Hello World” in the Shell -module(hello). -export([start/0]). start() -&gt; io:format(&#34;Hello world~n&#34;).">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="notes">
     <meta property="article:published_time" content="2024-07-06T00:00:00+00:00">
     <meta property="article:modified_time" content="2024-07-06T00:00:00+00:00">
+    <meta property="article:tag" content="[[Id">
+    <meta property="article:tag" content="De7d0e94-618f-4982-B3e5-8806d88cad5d][Erlang]]">
 <link rel="stylesheet" href="/css/main.min.1135c79bd24c232c465ba2c4e5a9644086ce3f8358dbd0e0d76c5e86d24f1fad.css" />
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -48,38 +50,18 @@ spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]) The syntax Pid ! Msg means “
 
 
     </small>
-  </h2><p>:ID:       1daea4ea-40bc-406d-8d03-906c7f9ec343</p>
-<dl>
-<dt>tags</dt>
-<dd>[BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d]</dd>
-</dl>
+  </h2><p>:ID:       1daea4ea-40bc-406d-8d03-906c7f9ec343
+:EXPORT_HUGO_CATEGORIES: &ldquo;FP&rdquo;
+:EXPORT_HUGO_TAGS: &ldquo;Erlang&rdquo;</p>
 <p>Notes from (Armstrong 2013).</p>
 <h2 id="part-i-why-erlang">Part I: Why Erlang?</h2>
-<h3 id="introducing-concurrency">Introducing Concurrency</h3>
-<h4 id="modeling-concurrency">Modeling Concurrency</h4>
-<p><code>spawn</code> is an Erlang primitive that creates a concurrent process and returns a
-process identifier (PID) that can used to interact with the newly created process:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl"><span class="nb">spawn</span><span class="p">(</span><span class="nv">ModName</span><span class="p">,</span> <span class="nv">FuncName</span><span class="p">,</span> <span class="p">[</span><span class="nv">Arg1</span><span class="p">,</span> <span class="nv">Arg2</span><span class="p">,</span> <span class="p">...,</span> <span class="nv">ArgN</span><span class="p">])</span>
-</span></span></code></pre></div><p>The syntax <code>Pid ! Msg</code> means &ldquo;send the message <code>Msg</code> to the process <code>Pid</code>&rdquo;. And for
-<code>Pid</code> to process a message we need to pattern match:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl"><span class="k">receive</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="nv">From</span><span class="p">,</span> <span class="nv">Message</span><span class="p">}</span> <span class="o">-&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">...</span>
-</span></span><span class="line"><span class="cl"><span class="k">end</span>
-</span></span></code></pre></div><h4 id="benefits-of-concurrency">Benefits of Concurrency</h4>
-<ul>
-<li>Performance</li>
-<li>Scalability</li>
-<li>Fault Tolerance</li>
-<li>Clarity</li>
-</ul>
 <h3 id="a-whirlwind-tour-of-erlang">A Whirlwind Tour of Erlang</h3>
 <h4 id="syntax-of-variables-and-atoms">Syntax of Variables and Atoms</h4>
 <blockquote>
 <p>Note that Erlang variables start with uppercase characters. So, <code>X</code>, <code>This</code>, and
 <code>A_long_name</code> are all variables. Names beginning with lowercase letters—for example,
 <code>monday</code> or <code>friday</code> are not variables but are symbolic constants called
-atoms.</p>
+atoms. (Armstrong 2013)</p>
 </blockquote>
 <h4 id="compiling-and-running-hello-world-in-the-shell">Compiling and Running &ldquo;Hello World&rdquo; in the Shell</h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl">  <span class="o">-</span><span class="n">module</span><span class="p">(</span><span class="n">hello</span><span class="p">).</span>
@@ -208,31 +190,6 @@ and each qualifier is either a generator, a bitstring generator, or a filter.</p
 </span></span><span class="line"><span class="cl">    <span class="nv">Guard2</span> <span class="o">-&gt;</span> <span class="nv">Expr_seq2</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">...</span>
 </span></span><span class="line"><span class="cl">  <span class="k">end</span>
-</span></span></code></pre></div><h3 id="records-and-maps">Records and Maps</h3>
-<h4 id="naming-tuple-items-with-records">Naming Tuple Items with Records</h4>
-<blockquote>
-<p>(&hellip;) records provide a convenient way for associating a tag
-with each of the elements in a tuple. This allows us to refer to an
-element of a tuple by name and not by position. A pre-compiler
-takes the record definition and replaces it with the appropriate tuple
-reference.</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl">  <span class="o">-</span><span class="n">record</span><span class="p">(</span><span class="n">todo</span><span class="p">,</span> <span class="p">{</span><span class="n">status</span><span class="o">=</span><span class="n">reminder</span><span class="p">,</span><span class="n">who</span><span class="o">=</span><span class="n">joe</span><span class="p">,</span><span class="n">text</span><span class="p">}).</span>
-</span></span></code></pre></div><p>to load a record from the the shell, one must use the <code>rr</code> command:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  1&gt; rr<span class="o">(</span><span class="s2">&#34;records.hrl&#34;</span><span class="o">)</span>.
-</span></span><span class="line"><span class="cl">  <span class="o">[</span>todo<span class="o">]</span>
-</span></span><span class="line"><span class="cl">  2&gt; <span class="c1">#todo{}.</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">#todo{status = reminder,who = joe,text = undefined}</span>
-</span></span><span class="line"><span class="cl">  3&gt; <span class="nv">X1</span> <span class="o">=</span> <span class="c1">#todo{status=urgent, text=&#34;Fix errata in book&#34;}.</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">#todo{status = urgent,who = joe,text = &#34;Fix errata in book&#34;}</span>
-</span></span><span class="line"><span class="cl">  4&gt; <span class="nv">X2</span> <span class="o">=</span> X1#todo<span class="o">{</span><span class="nv">status</span><span class="o">=</span><span class="k">done</span><span class="o">}</span>.
-</span></span><span class="line"><span class="cl">  <span class="c1">#todo{status = done,who = joe,text = &#34;Fix errata in book&#34;}</span>
-</span></span></code></pre></div><h4 id="maps-associative-key-value-stores">Maps: Associative Key-Value Stores</h4>
-<p>Maps are associative collections of key-value pairs.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  1&gt; <span class="nv">TaskPending</span> <span class="o">=</span> <span class="c1">#{ status =&gt; pending, description =&gt; &#39;feed cats&#39; }.</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">#{status =&gt; pending,description =&gt; &#39;feed cats&#39;}</span>
-</span></span><span class="line"><span class="cl">  2&gt; <span class="nv">TaskDone</span> <span class="o">=</span> TaskPending#<span class="o">{</span> status :<span class="o">=</span> <span class="k">done</span> <span class="o">}</span>.
-</span></span><span class="line"><span class="cl">  <span class="c1">#{status =&gt; done,description =&gt; &#39;feed cats&#39;}</span>
 </span></span></code></pre></div><h3 id="error-handling-in-sequential-programs">Error Handling in Sequential Programs</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl">  <span class="k">try</span> <span class="nv">FuncOrExpressionSeq</span> <span class="k">of</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">Pattern1</span> <span class="p">[</span><span class="k">when</span> <span class="nv">Guard1</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="nv">Expressions1</span><span class="p">;</span>
@@ -266,6 +223,8 @@ never see these messages.</p>
 <h3 id="binaries-and-the-bit-syntax">Binaries and the Bit Syntax</h3>
 
 
+
+   
 
    
 

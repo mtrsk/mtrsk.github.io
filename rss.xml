@@ -6,84 +6,112 @@
     <description>Recent content in homepage title on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mtrsk.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Error Handling In Erlang</title>
+      <link>https://mtrsk.github.io/notes/2024/error-handling-in-erlang/</link>
+      <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/error-handling-in-erlang/</guid>
+      <description>:ID: 22ae9c25-3123-4ed8-b765-369ac89d2942 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;FP&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Erlang&amp;rdquo;&#xA;In [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] we have a large number of processes at our disposal, so the failure of any individual process is not so important. We usually write only a small amount of defensive code and instead concentrate on writing corrective code. We take measures to detect the errors and then correct them after they have occurred. (Armstrong 2013)&#xA;Definitions Link A bi-directional propagation path for exit signals.</description>
+    </item>
+    <item>
+      <title>Postgres Server</title>
+      <link>https://mtrsk.github.io/notes/2024/postgres-server/</link>
+      <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/postgres-server/</guid>
+      <description>:ID: ae205cab-10ea-4cff-9051-fef9021638b6 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Databases&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;SQL&amp;rdquo; &amp;ldquo;Postgres&amp;rdquo;&#xA;Locating the database server files [BROKEN LINK: 1949c98e-e1c0-474b-b383-c76aa418d583] Database server files are initially stored in a location referred to as data directory:&#xA;SHOW data_directory; </description>
+    </item>
+    <item>
+      <title>Scsi</title>
+      <link>https://mtrsk.github.io/notes/2024/scsi/</link>
+      <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/scsi/</guid>
+      <description>:ID: 388e1a43-f7f6-4c9e-af19-d7b6116a070e :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Networking&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Protocols&amp;rdquo;</description>
+    </item>
+    <item>
+      <title>Concurrent Erlang</title>
+      <link>https://mtrsk.github.io/notes/2024/concurrent-erlang/</link>
+      <pubDate>Mon, 30 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/concurrent-erlang/</guid>
+      <description>:ID: 63607e63-4428-4578-bf2a-12a49649b49c :EXPORT_HUGO_CATEGORIES: &amp;ldquo;FP&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Erlang&amp;rdquo; :ROAM_ALIAS: &amp;ldquo;Erlang Process&amp;rdquo;&#xA;Processes In [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d], creation of a parallel process is achieved by evaluating the spawn primitive. This primitive creates a concurrent process and returns a process identifier (PID) that can used to interact with the newly created process:&#xA;Pid = spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]). This BIF never fails A process can either terminate: Abormally when run-time errors occur Normally when there is no more code to execute Modeling Concurrency The syntax Pid !</description>
+    </item>
     <item>
       <title>Otp</title>
       <link>https://mtrsk.github.io/notes/2024/otp/</link>
       <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/otp/</guid>
-      <description>:ID: 6ed3a191-0128-453e-b0b6-37c48593a6f0</description>
+      <description>:ID: 6ed3a191-0128-453e-b0b6-37c48593a6f0 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;FP&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Erlang&amp;rdquo; &amp;ldquo;OTP&amp;rdquo; :ROAM_ALIAS: &amp;ldquo;Open Telecom Platform&amp;rdquo;&#xA;[BROKEN LINK: 6ed3a191-0128-453e-b0b6-37c48593a6f0] is a domain-independent set of frameworks, principles, and patterns that guide and support the structure, design, implementation, and deployment of [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] systems. Using OTP in your projects will help you avoid accidental complexity: things that are difficult because you picked inadequate tools. (Cesarini and Vinoski 2016, 20)</description>
     </item>
     <item>
       <title>Split Brain</title>
       <link>https://mtrsk.github.io/notes/2024/split-brain/</link>
       <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/split-brain/</guid>
-      <description>:ID: 582a4090-eb66-4dfd-8166-9acd3c97dcc9&#xA;#+filetags [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb]</description>
+      <description>:ID: 582a4090-eb66-4dfd-8166-9acd3c97dcc9 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;DistributedSystems&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Clusters&amp;rdquo;&#xA;Split brain means that the [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb] is split in two (or more) parts, but both parts think they are the only remaining part of the cluster. This can lead to very bad situations when both parts of the cluster try to host the resources that are offered by the cluster. If the resource is a file system, and multiple nodes try to write to the file system simultaneously and without coordination, it may lead to corruption of the file system and the loss of data.</description>
+    </item>
+    <item>
+      <title>Sql</title>
+      <link>https://mtrsk.github.io/notes/2024/sql/</link>
+      <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/sql/</guid>
+      <description>:ID: 11f7d9cc-51a6-4897-955b-37a756105677 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Databases&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;SQL&amp;rdquo;&#xA;Logical Query Processing Order FROM JOIN Step Description 1 Cartesian product 2 Qualification step (i.e. the ON filter) 3 LEFT or RIGHT reservations If the specified JOIN type is a CROSS JOIN, then the query planner stops at Step 1 and return the cartesian product to the next clause. All other join types proceed to the qualification step.&#xA;INNER and OUTER JOINS are called &amp;ldquo;qualified JOINs&amp;rdquo;, the qualification predicated is specified using the ON keyword, which filters all rows from the previous cartesian step where the predicate is TRUE.</description>
     </item>
     <item>
       <title>Clusters</title>
       <link>https://mtrsk.github.io/notes/2024/clusters/</link>
       <pubDate>Thu, 26 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/clusters/</guid>
-      <description>:ID: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb&#xA;#+filetags [BROKEN LINK: 8a427ee7-2ef1-489b-af82-91de7be8a3ba]&#xA;High Availability Clusters The goal of a high availability cluster is to make sure that critical resources reach the maximum possible availability. This goal is accomplished by installing cluster software on multiple servers. This software monitors the availability of the cluster nodes, and it monitors the availability of the services that are managed by the cluster. If a server goes down, or if the resource stops, the HA cluster will notice and make sure that the resource is restarted somewhere else in the cluster, so that it can be used again after a minimal interruption.</description>
+      <description>:ID: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb :EXPORT_HUGO_CATEGORIES: &amp;ldquo;DistributedSystems&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Clusters&amp;rdquo;&#xA;Different Kinds of Clusters High Availability Clusters The goal of a high availability cluster is to make sure that critical resources reach the maximum possible availability. This goal is accomplished by installing cluster software on multiple servers. This software monitors the availability of the cluster nodes, and it monitors the availability of the services that are managed by the cluster. If a server goes down, or if the resource stops, the HA cluster will notice and make sure that the resource is restarted somewhere else in the cluster, so that it can be used again after a minimal interruption.</description>
     </item>
     <item>
       <title>Stonith</title>
       <link>https://mtrsk.github.io/notes/2024/stonith/</link>
       <pubDate>Thu, 26 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/stonith/</guid>
-      <description>:ID: 789326a5-20aa-4492-acb6-1474c3c11a4a&#xA;:ROAM_ALIASES: Fencing #+filetags [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb]&#xA;In STONITH, specific hardware is used to terminate a node that is no longer responsive to the cluster. The idea behind STONITH is that before migrating resources to another node in the cluster, the cluster has to confirm that the node in question really is down. To do this, the cluster will send a shutdown action to the STONITH device, which will, in turn, terminate the nonresponsive node.</description>
+      <description>:ID: 789326a5-20aa-4492-acb6-1474c3c11a4a :ROAM_ALIASES: Fencing&#xA;In STONITH, specific hardware is used to terminate a node that is no longer responsive to the cluster. The idea behind STONITH is that before migrating resources to another node in the cluster, the cluster has to confirm that the node in question really is down. To do this, the cluster will send a shutdown action to the STONITH device, which will, in turn, terminate the nonresponsive node.</description>
     </item>
     <item>
       <title>Quorum</title>
       <link>https://mtrsk.github.io/notes/2024/quorum/</link>
       <pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/quorum/</guid>
-      <description>:ID: 42950824-228d-48d6-abec-4e18908dfca0&#xA;Quorum means &amp;ldquo;majority&amp;rdquo;, and the idea behind quorum is easy to understand: if the cluster doesn’t have quorum, no actions will be taken in the cluster. This by itself would offer a good solution to avoid the [BROKEN LINK: 582a4090-eb66-4dfd-8166-9acd3c97dcc9] problem.&#xA;But to make sure that it can never happen, that multiple nodes activate the same resources in the cluster, another mechanism is used as well. This mechanism is known as [BROKEN LINK: 789326a5-20aa-4492-acb6-1474c3c11a4a].</description>
+      <description>:ID: 42950824-228d-48d6-abec-4e18908dfca0 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;DistributedSystems&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Clusters&amp;rdquo;&#xA;Quorum means &amp;ldquo;majority&amp;rdquo;, and the idea behind quorum is easy to understand: if the [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb] doesn’t have quorum, no actions will be taken in the cluster. This by itself would offer a good solution to avoid the [BROKEN LINK: 582a4090-eb66-4dfd-8166-9acd3c97dcc9] problem.&#xA;But to make sure that it can never happen, that multiple nodes activate the same resources in the cluster, another mechanism is used as well.</description>
     </item>
     <item>
       <title>Drbd</title>
       <link>https://mtrsk.github.io/notes/2024/drbd/</link>
       <pubDate>Tue, 24 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/drbd/</guid>
-      <description>:ID: 694d20ba-bdb5-419d-ae9d-0dc73c695333&#xA;#+filetags [BROKEN LINK: 8a427ee7-2ef1-489b-af82-91de7be8a3ba]</description>
+      <description>:ID: 694d20ba-bdb5-419d-ae9d-0dc73c695333 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;OS&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Linux&amp;rdquo;&#xA;Distributed Replicated Block Device (DRBD) is a distributed replicated storage system for the [BROKEN LINK: 8a427ee7-2ef1-489b-af82-91de7be8a3ba] platform.</description>
     </item>
     <item>
       <title>Iscsi</title>
       <link>https://mtrsk.github.io/notes/2024/iscsi/</link>
       <pubDate>Tue, 24 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/iscsi/</guid>
-      <description>:ID: 3a7a03ae-8932-4d86-ae45-aa84ff1f325a&#xA;#+filetags [BROKEN LINK: 8a427ee7-2ef1-489b-af82-91de7be8a3ba]</description>
+      <description>:ID: 3a7a03ae-8932-4d86-ae45-aa84ff1f325a :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Networking&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Protocols&amp;rdquo;&#xA;Definition iSCSI an acronym for Internet Small Computer Systems Interface, an Internet Protocol (IP)-based storage networking standard for linking data storage facilities. It provides block-level access to storage devices by carrying [BROKEN LINK: 388e1a43-f7f6-4c9e-af19-d7b6116a070e] commands over a TCP/IP network.</description>
     </item>
     <item>
       <title>Linux</title>
       <link>https://mtrsk.github.io/notes/2024/linux/</link>
       <pubDate>Tue, 24 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/linux/</guid>
-      <description>:ID: 8a427ee7-2ef1-489b-af82-91de7be8a3ba</description>
+      <description>:ID: 8a427ee7-2ef1-489b-af82-91de7be8a3ba :EXPORT_HUGO_CATEGORIES: &amp;ldquo;OS&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Linux&amp;rdquo;</description>
     </item>
     <item>
       <title>Sequential Erlang</title>
       <link>https://mtrsk.github.io/notes/2024/sequential-erlang/</link>
       <pubDate>Tue, 24 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/sequential-erlang/</guid>
-      <description>:ID: f0da3356-3797-4ddc-8306-cd333f159754&#xA;tags [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] Guards Built-in Functions Conventionally, these are part of the erlang module. Mostly written in C for fast execution. List of BiFs date() time() length(List) size(Tuple) atom_to_list(Atom) list_to_tuple(List) integer_to_list(1000) tuple_to_list(Tuple) Recursion Tail Recursion </description>
-    </item>
-    <item>
-      <title>Erlang Datatypes</title>
-      <link>https://mtrsk.github.io/notes/2024/erlang-datatypes/</link>
-      <pubDate>Mon, 23 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/notes/2024/erlang-datatypes/</guid>
-      <description>:ID: 9494e230-a572-46fe-8423-7b08dfe0119f&#xA;tags [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] Datatypes Integers Large Integers are converted to bignums Floats Atoms Used to denote datatypes with a fixed number of items. Tuples Used to denote datatypes with a fixed number of items. Access is normally done by position. Lists Used to store a variable number of elements. Access is normally done by parttern matching. List = [ Element | List ] OR [] Strings Maps Variables Always start with an uppercase letter or _.</description>
+      <description>:ID: f0da3356-3797-4ddc-8306-cd333f159754 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;FP&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Erlang&amp;rdquo;&#xA;The basic constructs of the [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] language.&#xA;Datatypes Integers Large Integers are converted to bignums If you need to do calculations on integers using a base other than 10, you can use Base#Value notation. (Laurent 2017, 7)&#xA;Floats Atoms Used to denote datatypes with a fixed number of items. Tuples Used to denote datatypes with a fixed number of items. Access is normally done by position.</description>
     </item>
     <item>
       <title>Postgres Window Functions</title>
       <link>https://mtrsk.github.io/notes/2024/postgres-window-functions/</link>
       <pubDate>Mon, 23 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/postgres-window-functions/</guid>
-      <description>:ID: 860f97f8-e41d-480b-881b-203773406990&#xA;#+ROAM_TAGS [BROKEN LINK: 1949c98e-e1c0-474b-b383-c76aa418d583] Databases&#xA;Aggregates ROW_NUMBER LEAD The LEAD() function is used to retrieve data from the next row.&#xA;LAG The LAG() function is used to retrieve data from the previous row.&#xA;Rankings Value Functions </description>
+      <description>:ID: 860f97f8-e41d-480b-881b-203773406990&#xA;Aggregates ROW_NUMBER LEAD The LEAD() function is used to retrieve data from the next row.&#xA;LAG The LAG() function is used to retrieve data from the previous row.&#xA;Rankings Rank Dense Rank Value Functions </description>
     </item>
     <item>
       <title>Nix</title>
@@ -104,28 +132,28 @@
       <link>https://mtrsk.github.io/notes/2024/postgres-ctes/</link>
       <pubDate>Sat, 21 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/postgres-ctes/</guid>
-      <description>:ID: 36f5efb2-34da-4d67-8c37-bbd5429d7b55&#xA;Common Table Expressions Recursive </description>
+      <description>:ID: 36f5efb2-34da-4d67-8c37-bbd5429d7b55 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Databases&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;SQL&amp;rdquo; &amp;ldquo;Postgres&amp;rdquo;&#xA;Common Table Expressions Recursive </description>
     </item>
     <item>
       <title>Postgres Functions</title>
       <link>https://mtrsk.github.io/notes/2024/postgres-functions/</link>
       <pubDate>Sat, 21 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/postgres-functions/</guid>
-      <description>:ID: 32e8ab3c-2b96-410f-b60d-fde9e35b49f3&#xA;Functions CREATE OR REPLACE FUNCTION function_name(arg1 INT, arg2 INT, arg3 INT) RETURNS SETOF VARCHAR LANGUAGE plpgsql AS $$ BEGIN (...) END; $$; References </description>
+      <description>:ID: 32e8ab3c-2b96-410f-b60d-fde9e35b49f3 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Databases&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;SQL&amp;rdquo; &amp;ldquo;Postgres&amp;rdquo;&#xA;Functions CREATE OR REPLACE FUNCTION function_name(arg1 INT, arg2 INT, arg3 INT) RETURNS SETOF VARCHAR LANGUAGE plpgsql AS $$ BEGIN (...) END; $$; References </description>
     </item>
     <item>
       <title>Postgres Indexes</title>
       <link>https://mtrsk.github.io/notes/2024/postgres-indexes/</link>
       <pubDate>Sat, 21 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/postgres-indexes/</guid>
-      <description>:ID: 48dd781f-123c-4508-82b5-ac9b05383db4</description>
+      <description>:ID: 48dd781f-123c-4508-82b5-ac9b05383db4 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Databases&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;SQL&amp;rdquo; &amp;ldquo;Postgres&amp;rdquo;</description>
     </item>
     <item>
       <title>Postgres Subqueries</title>
       <link>https://mtrsk.github.io/notes/2024/postgres-subqueries/</link>
       <pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/postgres-subqueries/</guid>
-      <description>:ID: 60f014f9-8a82-43b8-ae13-dee68b9470bf&#xA;Subqueries as Expressions Scalar Subquery Results in a single row&#xA;Multi-Row Subquery Results in multiple rows, tipically used in the where clause with operators such as IN, NOT, EXISTS, ANY and ALL.&#xA;Correlated Subquery A uncorrelated sub-query is a type of sub-query where the inner query doesn’t depend upon the outer query for its execution.&#xA;Uncorrelated Subquery A correlated sub-query is a type of query where the inner query depends upon the outcome of the outer query in order to perform its execution.</description>
+      <description>:ID: 60f014f9-8a82-43b8-ae13-dee68b9470bf :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Databases&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;SQL&amp;rdquo; &amp;ldquo;Postgres&amp;rdquo;&#xA;Subqueries as Expressions Scalar Subquery Results in a single row&#xA;Multi-Row Subquery Results in multiple rows, tipically used in the where clause with operators such as IN, NOT, EXISTS, ANY and ALL.&#xA;Correlated Subquery A uncorrelated sub-query is a type of sub-query where the inner query doesn’t depend upon the outer query for its execution.&#xA;Uncorrelated Subquery A correlated sub-query is a type of query where the inner query depends upon the outcome of the outer query in order to perform its execution.</description>
     </item>
     <item>
       <title>You Have 10 Seconds To Nixify Your Dotnet Project</title>
@@ -146,7 +174,7 @@
       <link>https://mtrsk.github.io/notes/2024/postgres/</link>
       <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/postgres/</guid>
-      <description>:ID: 1949c98e-e1c0-474b-b383-c76aa418d583&#xA;[BROKEN LINK: 36f5efb2-34da-4d67-8c37-bbd5429d7b55] [BROKEN LINK: 32e8ab3c-2b96-410f-b60d-fde9e35b49f3] [BROKEN LINK: 48dd781f-123c-4508-82b5-ac9b05383db4] [BROKEN LINK: 60f014f9-8a82-43b8-ae13-dee68b9470bf] </description>
+      <description>:ID: 1949c98e-e1c0-474b-b383-c76aa418d583 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Databases&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;SQL&amp;rdquo; &amp;ldquo;Postgres&amp;rdquo; :ROAM_ALIAS: &amp;ldquo;PostgreSQL&amp;rdquo;&#xA;PostgreSQL also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and [BROKEN LINK: 11f7d9cc-51a6-4897-955b-37a756105677] compliance.&#xA;[BROKEN LINK: 36f5efb2-34da-4d67-8c37-bbd5429d7b55] [BROKEN LINK: 32e8ab3c-2b96-410f-b60d-fde9e35b49f3] [BROKEN LINK: 48dd781f-123c-4508-82b5-ac9b05383db4] [BROKEN LINK: 60f014f9-8a82-43b8-ae13-dee68b9470bf] </description>
     </item>
     <item>
       <title>Byzantine Generals Problem</title>
@@ -174,28 +202,21 @@
       <link>https://mtrsk.github.io/notes/2024/designing-for-scalability-with-erlang/</link>
       <pubDate>Tue, 09 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/designing-for-scalability-with-erlang/</guid>
-      <description>:ID: ffac18bd-4e44-4a7b-8a3a-a85552c9b076&#xA;tags [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] Notes from (Cesarini and Vinoski 2016).</description>
-    </item>
-    <item>
-      <title>Introducing Erlang</title>
-      <link>https://mtrsk.github.io/notes/2024/introducing-erlang/</link>
-      <pubDate>Sat, 06 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/notes/2024/introducing-erlang/</guid>
-      <description>:ID: f5e7bb90-792d-406a-8c40-2b072db63a13&#xA;tags [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] Notes from (Laurent 2017).&#xA;Chapter 1: Getting Comfortable Numbers in Erlang If you need to do calculations on integers using a base other than 10, you can use Base#Value notation.&#xA;Seeing Your Bound Variables b() shows all bound variables in the current erlang shell.&#xA;&amp;gt; b(). N = 1 Number = 5 Clearing Bound Variables in the Shell &amp;gt; f(N). &amp;gt; f(). Chapter 2: Functions and Modules Defining Modules -module(drop).</description>
+      <description>:ID: ffac18bd-4e44-4a7b-8a3a-a85552c9b076 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;FP&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Erlang&amp;rdquo; &amp;ldquo;OTP&amp;rdquo; :ROAM_TAGS: &amp;ldquo;Erlang&amp;rdquo;&#xA;[BROKEN LINK: 6ed3a191-0128-453e-b0b6-37c48593a6f0] is said to consist of three building blocks that, when used together, provide a solid approach to designing and developing systems in the problem domain we’ve just described. They are [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] itself, tools and libraries, and a set of design principles. (Cesarini and Vinoski 2016, 20)</description>
     </item>
     <item>
       <title>Programming Erlang</title>
       <link>https://mtrsk.github.io/notes/2024/programming-erlang/</link>
       <pubDate>Sat, 06 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/programming-erlang/</guid>
-      <description>:ID: 1daea4ea-40bc-406d-8d03-906c7f9ec343&#xA;tags [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] Notes from (Armstrong 2013).&#xA;Part I: Why Erlang? Introducing Concurrency Modeling Concurrency spawn is an Erlang primitive that creates a concurrent process and returns a process identifier (PID) that can used to interact with the newly created process:&#xA;spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]) The syntax Pid ! Msg means &amp;ldquo;send the message Msg to the process Pid&amp;rdquo;. And for Pid to process a message we need to pattern match:</description>
+      <description>:ID: 1daea4ea-40bc-406d-8d03-906c7f9ec343 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;FP&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Erlang&amp;rdquo;&#xA;Notes from (Armstrong 2013).&#xA;Part I: Why Erlang? A Whirlwind Tour of Erlang Syntax of Variables and Atoms Note that Erlang variables start with uppercase characters. So, X, This, and A_long_name are all variables. Names beginning with lowercase letters—for example, monday or friday are not variables but are symbolic constants called atoms. (Armstrong 2013)&#xA;Compiling and Running &amp;ldquo;Hello World&amp;rdquo; in the Shell -module(hello). -export([start/0]). start() -&amp;gt; io:format(&amp;#34;Hello world~n&amp;#34;).</description>
     </item>
     <item>
       <title>Erlang</title>
       <link>https://mtrsk.github.io/notes/2024/erlang/</link>
       <pubDate>Wed, 19 Jun 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/erlang/</guid>
-      <description>:ID: de7d0e94-618f-4982-b3e5-8806d88cad5d&#xA;Resources:&#xA;Etudes for Erlang Joe Armstrong&amp;rsquo;s PHD thesis The Erlang view of the world can be summarized in the following statments (Armstrong 2003):&#xA;Everything is a process. Processes are strongly isolated. Process creation and destruction is a lightweight operation. Message passing is the only way for processes to interact. Processes have unique names. If you know the name of a process you can send it a message. Error handling is non-local.</description>
+      <description>:ID: de7d0e94-618f-4982-b3e5-8806d88cad5d :EXPORT_HUGO_CATEGORIES: &amp;ldquo;FP&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Erlang&amp;rdquo;&#xA;Resources:&#xA;Etudes for Erlang Joe Armstrong&amp;rsquo;s PHD thesis The Erlang view of the world can be summarized in the following statments (Armstrong 2003):&#xA;Everything is a process. Processes are strongly isolated. Process creation and destruction is a lightweight operation. Message passing is the only way for processes to interact. Processes have unique names. If you know the name of a process you can send it a message.</description>
     </item>
     <item>
       <title>Monad</title>
@@ -237,42 +258,42 @@
       <link>https://mtrsk.github.io/notes/2023/monoid/</link>
       <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2023/monoid/</guid>
-      <description>:ID: d89285be-d7a9-46a1-8a10-e14e73b66935&#xA;Definition A monoid is triple \(\left (\mathbb{M}, \cdot, 1 \right)\) such that:&#xA;\(\mathbb{M}\) is an non-empty set \(\cdot : \mathbb{M} \times \mathbb{M} \rightarrow \mathbb{M}\) is an associative mapping, i.e., \(\forall t_1, t_2, t_3 \in \mathbb{M}, (t_1 \cdot t_2) \cdot t_3 = t_1 \cdot (t_2 \cdot t_3)\). \(1 \in \mathbb{M}\) is the unit satisfying \(1 \cdot t = t = t \cdot 1, \forall t \in \mathbb{M}\). </description>
+      <description>:ID: d89285be-d7a9-46a1-8a10-e14e73b66935 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Math&amp;rdquo; &amp;ldquo;FP&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Algebra&amp;rdquo; &amp;ldquo;Haskell&amp;rdquo;&#xA;Definition A monoid is triple \(\left (\mathbb{M}, \cdot, 1 \right)\) such that:&#xA;\(\mathbb{M}\) is an non-empty set \(\cdot : \mathbb{M} \times \mathbb{M} \rightarrow \mathbb{M}\) is an associative mapping, i.e., \(\forall t_1, t_2, t_3 \in \mathbb{M}, (t_1 \cdot t_2) \cdot t_3 = t_1 \cdot (t_2 \cdot t_3)\). \(1 \in \mathbb{M}\) is the unit satisfying \(1 \cdot t = t = t \cdot 1, \forall t \in \mathbb{M}\).</description>
     </item>
     <item>
       <title>Abelian Group</title>
       <link>https://mtrsk.github.io/notes/2023/abelian-group/</link>
       <pubDate>Sat, 07 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2023/abelian-group/</guid>
-      <description>:ID: 6550857e-ec3f-4b76-80ce-9b86df92601e</description>
+      <description>:ID: 6550857e-ec3f-4b76-80ce-9b86df92601e :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Math&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Algebra&amp;rdquo;</description>
     </item>
     <item>
       <title>Commutative Ring</title>
       <link>https://mtrsk.github.io/notes/2023/commutative-ring/</link>
       <pubDate>Sat, 07 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2023/commutative-ring/</guid>
-      <description>:ID: 44839048-b783-4a37-9267-b8e59160d90f</description>
+      <description>:ID: 44839048-b783-4a37-9267-b8e59160d90f :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Math&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Algebra&amp;rdquo;</description>
     </item>
     <item>
       <title>Left R Module</title>
       <link>https://mtrsk.github.io/notes/2023/left-r-module/</link>
       <pubDate>Sat, 07 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2023/left-r-module/</guid>
-      <description>:ID: e4bd8f7b-a64d-4da3-b1e8-289d6fb0c441&#xA;Formal Definition Suppose that R is a ring, and 1 is its multiplicative identity. A left R-module M consists of an abelian group (M, +) and an operation · : R × M → M such that ∀ r, s ∈ R and x, y ∈ M, we have:&#xA;\begin{align*} r \cdot (x + y) &amp;amp;= r \cdot x + r \cdot y \tag{1}\\ (r + s) \cdot x &amp;amp;= r \cdot x + s \cdot x \tag{2}\\ (r \cdot s) \cdot x &amp;amp;= r \cdot (s \cdot x) \tag{3}\\ 1 \cdot x &amp;amp;= x \tag{4} \end{align*}</description>
+      <description>:ID: e4bd8f7b-a64d-4da3-b1e8-289d6fb0c441 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Math&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Algebra&amp;rdquo;&#xA;Formal Definition Suppose that R is a ring, and 1 is its multiplicative identity. A left R-module M consists of an abelian group (M, +) and an operation · : R × M → M such that ∀ r, s ∈ R and x, y ∈ M, we have:&#xA;\begin{align*} r \cdot (x + y) &amp;amp;= r \cdot x + r \cdot y \tag{1}\\ (r + s) \cdot x &amp;amp;= r \cdot x + s \cdot x \tag{2}\\ (r \cdot s) \cdot x &amp;amp;= r \cdot (s \cdot x) \tag{3}\\ 1 \cdot x &amp;amp;= x \tag{4} \end{align*}</description>
     </item>
     <item>
       <title>R Module Homomorphism</title>
       <link>https://mtrsk.github.io/notes/2023/r-module-homomorphism/</link>
       <pubDate>Sat, 07 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2023/r-module-homomorphism/</guid>
-      <description>:ID: e41608f8-fcf2-4b02-b502-9441c0aee369</description>
+      <description>:ID: e41608f8-fcf2-4b02-b502-9441c0aee369 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Math&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Algebra&amp;rdquo;</description>
     </item>
     <item>
       <title>Algebraic Models For Accounting Systems</title>
       <link>https://mtrsk.github.io/notes/2023/algebraic-models-for-accounting-systems/</link>
       <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2023/algebraic-models-for-accounting-systems/</guid>
-      <description>:ID: 9a03d556-ded4-4096-9a8c-c2147dee70a5 :ROAM_ALIASES: &amp;ldquo;Algebra&amp;rdquo;&#xA;Algebraic Models for Accouting Systems&#xA;Approaches to Accounting Theory Algebraic concepts employed Balance vectors&#xA;A balance vector is a column vector or column matrix the sum of whose entries equals zero. Balance vectors are able to represent the state of an accounting system at any instant. They are also capable of encoding the transactions that are applied to the system. Digraph&#xA;The vertices represent accounts and the edges indicate where there are flows of value within the system.</description>
+      <description>:ID: 9a03d556-ded4-4096-9a8c-c2147dee70a5 :ROAM_ALIASES: &amp;ldquo;Algebra&amp;rdquo; :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Math&amp;rdquo; &amp;ldquo;Finance&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Algebra&amp;rdquo; &amp;ldquo;Accouting&amp;rdquo;&#xA;Algebraic Models for Accouting Systems&#xA;Approaches to Accounting Theory Algebraic concepts employed Balance vectors&#xA;A balance vector is a column vector or column matrix the sum of whose entries equals zero. Balance vectors are able to represent the state of an accounting system at any instant. They are also capable of encoding the transactions that are applied to the system. Digraph</description>
     </item>
     <item>
       <title>How To Use Private Neovim Plugins On Nixos</title>

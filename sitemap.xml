@@ -2,23 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mtrsk.github.io/tags/roam/</loc>
-    <lastmod>2024-09-28T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mtrsk.github.io/categories/</loc>
-    <lastmod>2024-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2024-10-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mtrsk.github.io/tags/erlang/</loc>
-    <lastmod>2024-09-28T00:00:00+00:00</lastmod>
+    <loc>https://mtrsk.github.io/notes/2024/error-handling-in-erlang/</loc>
+    <lastmod>2024-10-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/</loc>
-    <lastmod>2024-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2024-10-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/notes/</loc>
-    <lastmod>2024-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2024-10-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/categories/notes/</loc>
-    <lastmod>2024-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2024-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/notes/2024/postgres-server/</loc>
+    <lastmod>2024-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/notes/2024/scsi/</loc>
+    <lastmod>2024-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/notes/2024/concurrent-erlang/</loc>
+    <lastmod>2024-09-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/notes/2024/otp/</loc>
     <lastmod>2024-09-28T00:00:00+00:00</lastmod>
@@ -26,7 +32,7 @@
     <loc>https://mtrsk.github.io/notes/2024/split-brain/</loc>
     <lastmod>2024-09-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mtrsk.github.io/tags/</loc>
+    <loc>https://mtrsk.github.io/notes/2024/sql/</loc>
     <lastmod>2024-09-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/notes/2024/clusters/</loc>
@@ -34,12 +40,6 @@
   </url><url>
     <loc>https://mtrsk.github.io/notes/2024/stonith/</loc>
     <lastmod>2024-09-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mtrsk.github.io/tags/id/</loc>
-    <lastmod>2024-09-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mtrsk.github.io/tags/d8a1a1ff-47e6-44bc-a627-83ca8dc61ecbclusters/</loc>
-    <lastmod>2024-09-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/notes/2024/quorum/</loc>
     <lastmod>2024-09-25T00:00:00+00:00</lastmod>
@@ -55,9 +55,6 @@
   </url><url>
     <loc>https://mtrsk.github.io/notes/2024/sequential-erlang/</loc>
     <lastmod>2024-09-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mtrsk.github.io/notes/2024/erlang-datatypes/</loc>
-    <lastmod>2024-09-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/notes/2024/postgres-window-functions/</loc>
     <lastmod>2024-09-23T00:00:00+00:00</lastmod>
@@ -107,10 +104,16 @@
     <loc>https://mtrsk.github.io/notes/2024/designing-for-scalability-with-erlang/</loc>
     <lastmod>2024-07-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mtrsk.github.io/notes/2024/introducing-erlang/</loc>
+    <loc>https://mtrsk.github.io/tags/id/</loc>
+    <lastmod>2024-07-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/tags/de7d0e94-618f-4982-b3e5-8806d88cad5derlang/</loc>
     <lastmod>2024-07-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/notes/2024/programming-erlang/</loc>
+    <lastmod>2024-07-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/tags/</loc>
     <lastmod>2024-07-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/notes/2024/erlang/</loc>

@@ -10,8 +10,8 @@
     <meta property="og:url" content="https://mtrsk.github.io/notes/2024/split-brain/">
   <meta property="og:site_name" content="Benevides&#39; Blog">
   <meta property="og:title" content="Split Brain">
-  <meta property="og:description" content=":ID: 582a4090-eb66-4dfd-8166-9acd3c97dcc9
-#&#43;filetags [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb]">
+  <meta property="og:description" content=":ID: 582a4090-eb66-4dfd-8166-9acd3c97dcc9 :EXPORT_HUGO_CATEGORIES: “DistributedSystems” :EXPORT_HUGO_TAGS: “Clusters”
+Split brain means that the [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb] is split in two (or more) parts, but both parts think they are the only remaining part of the cluster. This can lead to very bad situations when both parts of the cluster try to host the resources that are offered by the cluster. If the resource is a file system, and multiple nodes try to write to the file system simultaneously and without coordination, it may lead to corruption of the file system and the loss of data.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="notes">
@@ -46,10 +46,27 @@
 
 
     </small>
-  </h2><p>:ID:       582a4090-eb66-4dfd-8166-9acd3c97dcc9</p>
-<p>#+filetags [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb]</p>
+  </h2><p>:ID:       582a4090-eb66-4dfd-8166-9acd3c97dcc9
+:EXPORT_HUGO_CATEGORIES: &ldquo;DistributedSystems&rdquo;
+:EXPORT_HUGO_TAGS: &ldquo;Clusters&rdquo;</p>
+<blockquote>
+<p>Split brain means that the [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb] is split in two (or more) parts, but both
+parts think they are the only remaining part of the cluster. This can lead to
+very bad situations when both parts of the cluster try to host the resources
+that are offered by the cluster. If the resource is a file system, and multiple
+nodes try to write to the file system simultaneously and without coordination,
+it may lead to corruption of the file system and the loss of data. As it is the
+purpose of a high availability cluster to avoid situations where data could be
+lost, this must be prevented no matter what. (, <a href="#citeproc_bib_item_1">Van Vugt 2014, 6</a>)</p>
+</blockquote>
+<h2 id="references">References</h2>
+<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Van Vugt, Sander. 2014. <i>Pro Linux High Availability Clustering</i>. Apress.</div>
+</div>
 
 
+
+   
 
    
 

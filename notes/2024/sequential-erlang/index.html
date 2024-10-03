@@ -10,8 +10,10 @@
     <meta property="og:url" content="https://mtrsk.github.io/notes/2024/sequential-erlang/">
   <meta property="og:site_name" content="Benevides&#39; Blog">
   <meta property="og:title" content="Sequential Erlang">
-  <meta property="og:description" content=":ID: f0da3356-3797-4ddc-8306-cd333f159754
-tags [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] Guards Built-in Functions Conventionally, these are part of the erlang module. Mostly written in C for fast execution. List of BiFs date() time() length(List) size(Tuple) atom_to_list(Atom) list_to_tuple(List) integer_to_list(1000) tuple_to_list(Tuple) Recursion Tail Recursion ">
+  <meta property="og:description" content=":ID: f0da3356-3797-4ddc-8306-cd333f159754 :EXPORT_HUGO_CATEGORIES: “FP” :EXPORT_HUGO_TAGS: “Erlang”
+The basic constructs of the [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] language.
+Datatypes Integers Large Integers are converted to bignums If you need to do calculations on integers using a base other than 10, you can use Base#Value notation. (Laurent 2017, 7)
+Floats Atoms Used to denote datatypes with a fixed number of items. Tuples Used to denote datatypes with a fixed number of items. Access is normally done by position.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="notes">
@@ -46,13 +48,77 @@ tags [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] Guards Built-in Functio
 
 
     </small>
-  </h2><p>:ID:       f0da3356-3797-4ddc-8306-cd333f159754</p>
-<dl>
-<dt>tags</dt>
-<dd>[BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d]</dd>
-</dl>
-<h2 id="guards">Guards</h2>
-<h2 id="built-in-functions">Built-in Functions</h2>
+  </h2><p>:ID:       f0da3356-3797-4ddc-8306-cd333f159754
+:EXPORT_HUGO_CATEGORIES: &ldquo;FP&rdquo;
+:EXPORT_HUGO_TAGS: &ldquo;Erlang&rdquo;</p>
+<p>The basic constructs of the [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] language.</p>
+<h2 id="datatypes">Datatypes</h2>
+<h3 id="integers">Integers</h3>
+<ul>
+<li>Large Integers are converted to <code>bignums</code></li>
+</ul>
+<blockquote>
+<p>If you need to do calculations on integers using a base other than 10, you can use
+Base#Value notation. (<a href="#citeproc_bib_item_2">Laurent 2017, 7</a>)</p>
+</blockquote>
+<h3 id="floats">Floats</h3>
+<h3 id="atoms">Atoms</h3>
+<ul>
+<li>Used to denote datatypes with a fixed number of items.</li>
+</ul>
+<h3 id="tuples">Tuples</h3>
+<ul>
+<li>Used to denote datatypes with a fixed number of items.</li>
+<li>Access is normally done by position.</li>
+</ul>
+<h3 id="lists">Lists</h3>
+<ul>
+<li>Used to store a variable number of elements.</li>
+<li>Access is normally done by parttern matching.</li>
+</ul>
+<!--listend-->
+<pre tabindex="0"><code class="language-nil" data-lang="nil">  List = [ Element | List ] OR []
+</code></pre><h3 id="strings">Strings</h3>
+<h3 id="records">Records</h3>
+<blockquote>
+<p>(&hellip;) records provide a convenient way for associating a tag
+with each of the elements in a tuple. This allows us to refer to an
+element of a tuple by name and not by position. A pre-compiler
+takes the record definition and replaces it with the appropriate tuple
+reference. (<a href="#citeproc_bib_item_1">Armstrong 2013</a>)</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl">  <span class="o">-</span><span class="n">record</span><span class="p">(</span><span class="n">todo</span><span class="p">,</span> <span class="p">{</span><span class="n">status</span><span class="o">=</span><span class="n">reminder</span><span class="p">,</span><span class="n">who</span><span class="o">=</span><span class="n">joe</span><span class="p">,</span><span class="n">text</span><span class="p">}).</span>
+</span></span></code></pre></div><p>to load a record from the the shell, one must use the <code>rr</code> command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  1&gt; rr<span class="o">(</span><span class="s2">&#34;records.hrl&#34;</span><span class="o">)</span>.
+</span></span><span class="line"><span class="cl">  <span class="o">[</span>todo<span class="o">]</span>
+</span></span><span class="line"><span class="cl">  2&gt; <span class="c1">#todo{}.</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">#todo{status = reminder,who = joe,text = undefined}</span>
+</span></span><span class="line"><span class="cl">  3&gt; <span class="nv">X1</span> <span class="o">=</span> <span class="c1">#todo{status=urgent, text=&#34;Fix errata in book&#34;}.</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">#todo{status = urgent,who = joe,text = &#34;Fix errata in book&#34;}</span>
+</span></span><span class="line"><span class="cl">  4&gt; <span class="nv">X2</span> <span class="o">=</span> X1#todo<span class="o">{</span><span class="nv">status</span><span class="o">=</span><span class="k">done</span><span class="o">}</span>.
+</span></span><span class="line"><span class="cl">  <span class="c1">#todo{status = done,who = joe,text = &#34;Fix errata in book&#34;}</span>
+</span></span></code></pre></div><h3 id="maps">Maps</h3>
+<p>Maps are associative collections of key-value pairs.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  1&gt; <span class="nv">TaskPending</span> <span class="o">=</span> <span class="c1">#{ status =&gt; pending, description =&gt; &#39;feed cats&#39; }.</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">#{status =&gt; pending,description =&gt; &#39;feed cats&#39;}</span>
+</span></span><span class="line"><span class="cl">  2&gt; <span class="nv">TaskDone</span> <span class="o">=</span> TaskPending#<span class="o">{</span> status :<span class="o">=</span> <span class="k">done</span> <span class="o">}</span>.
+</span></span><span class="line"><span class="cl">  <span class="c1">#{status =&gt; done,description =&gt; &#39;feed cats&#39;}</span>
+</span></span></code></pre></div><h2 id="variables">Variables</h2>
+<blockquote>
+<p>Note that Erlang variables start with uppercase characters. So, <code>X</code>, <code>This</code>, and
+<code>A_long_name</code> are all variables. Names beginning with lowercase letters—for example,
+<code>monday</code> or <code>friday</code> are not variables but are symbolic constants called
+atoms. (<a href="#citeproc_bib_item_1">Armstrong 2013</a>)</p>
+</blockquote>
+<h2 id="pattern-matching">Pattern Matching</h2>
+<p>Pattern matching is used for:</p>
+<ul>
+<li>Assigning values to variables</li>
+<li>Redirecting execution flows
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"></code></pre></div></li>
+</ul>
+<h2 id="functions">Functions</h2>
+<h3 id="built-in-functions">Built-in Functions</h3>
 <ul>
 <li>Conventionally, these are part of the <code>erlang</code> module.</li>
 <li>Mostly written in C for fast execution.</li>
@@ -68,10 +134,35 @@ tags [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] Guards Built-in Functio
 <li><code>integer_to_list(1000)</code></li>
 <li><code>tuple_to_list(Tuple)</code></li>
 </ul>
-<h2 id="recursion">Recursion</h2>
-<h3 id="tail-recursion">Tail Recursion</h3>
+<h3 id="recursion">Recursion</h3>
+<h4 id="tail-recursion">Tail Recursion</h4>
+<h2 id="guards">Guards</h2>
+<h2 id="modules">Modules</h2>
+<h3 id="defining-modules">Defining Modules</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl">    <span class="o">-</span><span class="n">module</span><span class="p">(</span><span class="n">drop</span><span class="p">).</span>
+</span></span><span class="line"><span class="cl">    <span class="o">-</span><span class="n">export</span><span class="p">([</span><span class="n">fall_velocity</span><span class="o">/</span><span class="mi">1</span><span class="p">,</span> <span class="n">mps_to_mph</span><span class="o">/</span><span class="mi">1</span><span class="p">,</span> <span class="n">mps_to_kph</span><span class="o">/</span><span class="mi">1</span><span class="p">]).</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">fall_velocity</span><span class="p">(</span><span class="nv">Distance</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nn">math</span><span class="p">:</span><span class="nf">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">9</span><span class="p">.</span><span class="mi">8</span> <span class="o">*</span> <span class="nv">Distance</span><span class="p">).</span>
+</span></span><span class="line"><span class="cl">    <span class="n">mps_to_mph</span><span class="p">(</span><span class="nv">Mps</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="mi">2</span><span class="p">.</span><span class="mi">23693629</span> <span class="o">*</span> <span class="nv">Mps</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">    <span class="n">mps_to_kph</span><span class="p">(</span><span class="nv">Mps</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="mi">3</span><span class="p">.</span><span class="mi">6</span> <span class="o">*</span> <span class="nv">Mps</span><span class="p">.</span>
+</span></span></code></pre></div><h2 id="erlang-shell">Erlang Shell</h2>
+<h3 id="seeing-your-bound-variables">Seeing Your Bound Variables</h3>
+<p><code>b()</code> shows all bound variables in the current erlang shell.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">    &gt; b<span class="o">()</span>.
+</span></span><span class="line"><span class="cl">    <span class="nv">N</span> <span class="o">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">Number</span> <span class="o">=</span> <span class="m">5</span>
+</span></span></code></pre></div><h3 id="clearing-bound-variables-in-the-shell">Clearing Bound Variables in the Shell</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  &gt; f<span class="o">(</span>N<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">  &gt; f<span class="o">()</span>.
+</span></span></code></pre></div><h2 id="references">References</h2>
+<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Armstrong, Joe. 2013. “Programming Erlang: Software for a Concurrent World.”</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Laurent, Simon St. 2017. <i>Introducing Erlang: Getting Started in Functional Programming</i>. O’Reilly Media, Inc.</div>
+</div>
 
 
+
+   
 
    
 

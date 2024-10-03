@@ -5,7 +5,7 @@
   
     <link href="https://mtrsk.github.io/blog/atom.xml" rel="self" type="application/atom+xml" />
   
-  <updated>2024-09-29T00:30:53Z</updated>
+  <updated>2024-10-03T13:09:15Z</updated>
   <author>
     
     
@@ -43,7 +43,7 @@ official take&lt;/a&gt; on it, there are a couple changes from my repo and this 
 mostly because I tend to favor devenv (since it has shown better adoption when I
 preached it to non-Nixers).&lt;/p&gt;
 &lt;h3 id=&#34;devenv&#34;&gt;Devenv&lt;/h3&gt;
-&lt;p&gt;I&amp;rsquo;ve already tackled this in a &lt;a href=&#34;https://mtrsk.github.io/blog/2024/some-experiments-with-erlang-and-nix/&#34;&gt;previous article&lt;/a&gt;, but the best developer
+&lt;p&gt;I&amp;rsquo;ve already tackled this in a &lt;a href=&#34;https://mtrsk.github.io/blog/2024/experiments-with-erlang-and-nix/&#34;&gt;previous article&lt;/a&gt;, but the best developer
 experience right now is with &lt;a href=&#34;https://devenv.sh/&#34;&gt;devenv.sh&lt;/a&gt;. Unlike the previous article tho, the
 environment setup is way simpler, just a bunch of .Net tools inside the shell
 and call it a day.&lt;/p&gt;
@@ -144,7 +144,7 @@ guidelines&lt;/a&gt;, of course. Now, going back to the testing the Nix build:&l
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Test
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;# It works&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;generating-oci-images&#34;&gt;Generating OCI Images&lt;/h3&gt;
-&lt;p&gt;Similar to the &lt;a href=&#34;https://mtrsk.github.io/blog/2024/some-experiments-with-erlang-and-nix/&#34;&gt;previous post&lt;/a&gt;, the Container Image looks like this:&lt;/p&gt;
+&lt;p&gt;Similar to the &lt;a href=&#34;https://mtrsk.github.io/blog/2024/experiments-with-erlang-and-nix/&#34;&gt;previous post&lt;/a&gt;, the Container Image looks like this:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;# nix build .#dockerImage&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nv&#34;&gt;dockerImage&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; pkgs.dockerTools.buildLayeredImage &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;sample&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;

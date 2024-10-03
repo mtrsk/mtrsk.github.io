@@ -10,8 +10,7 @@
     <meta property="og:url" content="https://mtrsk.github.io/notes/2024/stonith/">
   <meta property="og:site_name" content="Benevides&#39; Blog">
   <meta property="og:title" content="Stonith">
-  <meta property="og:description" content=":ID: 789326a5-20aa-4492-acb6-1474c3c11a4a
-:ROAM_ALIASES: Fencing #&#43;filetags [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb]
+  <meta property="og:description" content=":ID: 789326a5-20aa-4492-acb6-1474c3c11a4a :ROAM_ALIASES: Fencing
 In STONITH, specific hardware is used to terminate a node that is no longer responsive to the cluster. The idea behind STONITH is that before migrating resources to another node in the cluster, the cluster has to confirm that the node in question really is down. To do this, the cluster will send a shutdown action to the STONITH device, which will, in turn, terminate the nonresponsive node.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
@@ -47,9 +46,8 @@ In STONITH, specific hardware is used to terminate a node that is no longer resp
 
 
     </small>
-  </h2><p>:ID:       789326a5-20aa-4492-acb6-1474c3c11a4a</p>
-<p>:ROAM_ALIASES: Fencing
-#+filetags [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb]</p>
+  </h2><p>:ID:       789326a5-20aa-4492-acb6-1474c3c11a4a
+:ROAM_ALIASES: Fencing</p>
 <blockquote>
 <p>In STONITH, specific hardware is used to terminate a node that is no longer
 responsive to the cluster. The idea behind STONITH is that before migrating
@@ -58,8 +56,21 @@ node in question really is down. To do this, the cluster will send a shutdown
 action to the STONITH device, which will, in turn, terminate the nonresponsive
 node. (Van Vugt 2014, chap. 1)</p>
 </blockquote>
+<h2 id="mechanisms">Mechanisms</h2>
+<h3 id="power-fencing">Power Fencing</h3>
+<ul>
+<li>Cuts the node off from power.</li>
+</ul>
+<h3 id="fabric-fencing-disconnects-the-machine-from-storage-dot">Fabric Fencing :: Disconnects the machine from storage.</h3>
+<ul>
+<li>By closing ports in a Fibre Channel Switch.</li>
+<li>By using [BROKEN LINK: 388e1a43-f7f6-4c9e-af19-d7b6116a070e] reservations.</li>
+</ul>
+<h2 id="fencing-agents">Fencing Agents</h2>
 
 
+
+   
 
    
 

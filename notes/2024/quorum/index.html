@@ -10,16 +10,14 @@
     <meta property="og:url" content="https://mtrsk.github.io/notes/2024/quorum/">
   <meta property="og:site_name" content="Benevides&#39; Blog">
   <meta property="og:title" content="Quorum">
-  <meta property="og:description" content=":ID: 42950824-228d-48d6-abec-4e18908dfca0
-Quorum means “majority”, and the idea behind quorum is easy to understand: if the cluster doesn’t have quorum, no actions will be taken in the cluster. This by itself would offer a good solution to avoid the [BROKEN LINK: 582a4090-eb66-4dfd-8166-9acd3c97dcc9] problem.
-But to make sure that it can never happen, that multiple nodes activate the same resources in the cluster, another mechanism is used as well. This mechanism is known as [BROKEN LINK: 789326a5-20aa-4492-acb6-1474c3c11a4a].">
+  <meta property="og:description" content=":ID: 42950824-228d-48d6-abec-4e18908dfca0 :EXPORT_HUGO_CATEGORIES: “DistributedSystems” :EXPORT_HUGO_TAGS: “Clusters”
+Quorum means “majority”, and the idea behind quorum is easy to understand: if the [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb] doesn’t have quorum, no actions will be taken in the cluster. This by itself would offer a good solution to avoid the [BROKEN LINK: 582a4090-eb66-4dfd-8166-9acd3c97dcc9] problem.
+But to make sure that it can never happen, that multiple nodes activate the same resources in the cluster, another mechanism is used as well.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="notes">
     <meta property="article:published_time" content="2024-09-25T00:00:00+00:00">
     <meta property="article:modified_time" content="2024-09-25T00:00:00+00:00">
-    <meta property="article:tag" content="[[Id">
-    <meta property="article:tag" content="D8a1a1ff-47e6-44bc-A627-83ca8dc61ecb][Clusters]]">
 <link rel="stylesheet" href="/css/main.min.1135c79bd24c232c465ba2c4e5a9644086ce3f8358dbd0e0d76c5e86d24f1fad.css" />
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -49,21 +47,27 @@ But to make sure that it can never happen, that multiple nodes activate the same
 
 
     </small>
-  </h2><p>:ID:       42950824-228d-48d6-abec-4e18908dfca0</p>
+  </h2><p>:ID:       42950824-228d-48d6-abec-4e18908dfca0
+:EXPORT_HUGO_CATEGORIES: &ldquo;DistributedSystems&rdquo;
+:EXPORT_HUGO_TAGS: &ldquo;Clusters&rdquo;</p>
 <blockquote>
 <p>Quorum means &ldquo;majority&rdquo;, and the idea behind quorum is easy to understand: if
-the cluster doesn’t have quorum, no actions will be taken in the cluster. This
+the [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb] doesn’t have quorum, no actions will be taken in the cluster. This
 by itself would offer a good solution to avoid the [BROKEN LINK: 582a4090-eb66-4dfd-8166-9acd3c97dcc9] problem.</p>
 <p>But to make sure that it can never happen, that multiple nodes activate the same
 resources in the cluster, another mechanism is used as well. This mechanism is
-known as [BROKEN LINK: 789326a5-20aa-4492-acb6-1474c3c11a4a]. (<a href="#citeproc_bib_item_1">Van Vugt 2014, chap. 1</a>)</p>
+known as [BROKEN LINK: 789326a5-20aa-4492-acb6-1474c3c11a4a]. (, <a href="#citeproc_bib_item_1">Van Vugt 2014, 6</a>)</p>
 </blockquote>
+<p>This is required to avoid corruption on vital [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb] resources, such as the
+File System.</p>
 <h2 id="references">References</h2>
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Van Vugt, Sander. 2014. <i>Pro Linux High Availability Clustering</i>. Apress.</div>
 </div>
 
 
+
+   
 
    
 

@@ -68,7 +68,7 @@ official take</a> on it, there are a couple changes from my repo and this one,
 mostly because I tend to favor devenv (since it has shown better adoption when I
 preached it to non-Nixers).</p>
 <h3 id="devenv">Devenv</h3>
-<p>I&rsquo;ve already tackled this in a <a href="https://mtrsk.github.io/blog/2024/some-experiments-with-erlang-and-nix/">previous article</a>, but the best developer
+<p>I&rsquo;ve already tackled this in a <a href="https://mtrsk.github.io/blog/2024/experiments-with-erlang-and-nix/">previous article</a>, but the best developer
 experience right now is with <a href="https://devenv.sh/">devenv.sh</a>. Unlike the previous article tho, the
 environment setup is way simpler, just a bunch of .Net tools inside the shell
 and call it a day.</p>
@@ -169,7 +169,7 @@ guidelines</a>, of course. Now, going back to the testing the Nix build:</p>
 </span></span><span class="line"><span class="cl">  Test
 </span></span><span class="line"><span class="cl">  <span class="c1"># It works</span>
 </span></span></code></pre></div><h3 id="generating-oci-images">Generating OCI Images</h3>
-<p>Similar to the <a href="https://mtrsk.github.io/blog/2024/some-experiments-with-erlang-and-nix/">previous post</a>, the Container Image looks like this:</p>
+<p>Similar to the <a href="https://mtrsk.github.io/blog/2024/experiments-with-erlang-and-nix/">previous post</a>, the Container Image looks like this:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  <span class="c1"># nix build .#dockerImage</span>
 </span></span><span class="line"><span class="cl">  <span class="nv">dockerImage</span> <span class="o">=</span> pkgs.dockerTools.buildLayeredImage <span class="o">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;sample&#34;</span><span class="p">;</span>
@@ -198,6 +198,8 @@ as well and a container build into the Hello Example.</li>
 </ul>
 
 
+
+   
 
    
 
