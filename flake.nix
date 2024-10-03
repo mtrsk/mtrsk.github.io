@@ -30,6 +30,13 @@
             hugo
             sqlite
 
+            # To generate the Graph
+            (pkgs.python3.withPackages (python-pkgs: [
+              python-pkgs.networkx
+              python-pkgs.numpy
+              python-pkgs.scipy
+            ]))
+
             # .Net
             netcoredbg
             fsautocomplete
