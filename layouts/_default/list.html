@@ -4,6 +4,7 @@
 
 {{ define "main" }}
     <h2>{{ .Section | title }}</h2>
+    {{ .Content }}
     <p><a href="{{.Site.BaseURL}}/{{.Section}}/atom.xml">RSS feed</a></p>
     {{ range .Data.Pages  }}
     <div class="stub">

@@ -86,6 +86,6 @@ if __name__ == "__main__":
     compute_centrality(DOT_GRAPH)
     compute_communities(DOT_GRAPH, N_COM)
     add_missing_links(DOT_GRAPH, N_MISSING)
-    sys.stderr.write("Done\n")
     JS_GRAPH = json_graph.node_link_data(DOT_GRAPH)
-    sys.stdout.write(json.dumps(JS_GRAPH))
+    pathlib.Path("./static/js/graph.json").write_text(json.dumps(JS_GRAPH))
+    sys.stderr.write("Done\n")

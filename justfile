@@ -39,6 +39,7 @@ remove-org:
 
 # Cleans the current environment
 clean: remove-org
-	rm -rf content
-	rm -rf public
-	rm -rf {{ BLOG_BUNDLE }}
+    rm -rf content
+    rm -f {{ BLOG_SRC }}/.#content.org
+    rm -rf public
+    rm -rf {{ BLOG_BUNDLE }}

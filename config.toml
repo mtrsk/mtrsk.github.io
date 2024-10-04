@@ -7,6 +7,7 @@ assetDir = "static"
 
 [params]
   subtitle = "\"Writing is nothing more than a guided dream.\""
+  math = true
   [params.author]
     name = "Marcos Benevides"
 
@@ -35,3 +36,13 @@ assetDir = "static"
 
 [markup.tableOfContents]
   ordered = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+
