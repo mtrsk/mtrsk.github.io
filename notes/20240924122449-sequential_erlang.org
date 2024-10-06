@@ -1,9 +1,9 @@
 :PROPERTIES:
 :ID:       f0da3356-3797-4ddc-8306-cd333f159754
-:EXPORT_HUGO_CATEGORIES: "FP"
-:EXPORT_HUGO_TAGS: "Erlang"
 :END:
 #+title: Sequential Erlang
+#+HUGO_CATEGORIES: "Functional Programming"
+#+HUGO_TAGS: "Erlang"
 
 The basic constructs of the [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]] language.
 

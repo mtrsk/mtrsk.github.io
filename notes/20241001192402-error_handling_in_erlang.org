@@ -1,9 +1,9 @@
 :PROPERTIES:
 :ID:       22ae9c25-3123-4ed8-b765-369ac89d2942
-:EXPORT_HUGO_CATEGORIES: "FP"
-:EXPORT_HUGO_TAGS: "Erlang"
 :END:
 #+title: Error Handling in Erlang
+#+HUGO_CATEGORIES: "Functional Programming"
+#+HUGO_TAGS: "Erlang"
 
 #+BEGIN_QUOTE
 In [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]] we have a large number of processes at our disposal, so the failure

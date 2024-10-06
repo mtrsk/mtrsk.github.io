@@ -3,6 +3,12 @@
 :END:
 #+title: NixOS Modules
 
+#+BEGIN_QUOTE
+A module is a file containing a [[id:72d705ae-9f5c-402b-88e5-21744277319a][Nix]] expression with a specific structure. It
+declares options for other modules to define (give a value). It processes them
+and defines options declared in other modules.
+#+END_QUOTE
+
 * Basics
 
 + A module is a function that takes an ~attrset~ and returns an ~attrset~.

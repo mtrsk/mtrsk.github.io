@@ -3,6 +3,8 @@
 :ROAM_ALIASES: Fencing
 :END:
 #+title: STONITH
+#+HUGO_CATEGORIES: "Distributed Systems"
+#+HUGO_TAGS: "Clusters"
 
 #+BEGIN_QUOTE
 In STONITH, specific hardware is used to terminate a node that is no longer

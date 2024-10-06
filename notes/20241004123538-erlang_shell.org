@@ -1,9 +1,9 @@
 :PROPERTIES:
 :ID:       bcd04f60-0a4c-4213-90f7-139c0ddf5bef
-:EXPORT_HUGO_CATEGORIES: "FP"
-:EXPORT_HUGO_TAGS: "Erlang"
 :END:
 #+title: Erlang Shell
+#+HUGO_CATEGORIES: "Functional Programming"
+#+HUGO_TAGS: "Erlang"
 
 Some features of the [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]] shell.
 

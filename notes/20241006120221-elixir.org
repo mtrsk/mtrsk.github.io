@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       8d568d81-9c22-4d94-81b2-27a2d730ba98
+:EXPORT_HUGO_CATEGORIES: "FP"
+:EXPORT_HUGO_TAGS: "Elixir"
+:END:
+#+title: Elixir
+
+#+BEGIN_QUOTE
+Elixir describes itself as a functional, meta-programming-aware language built
+on top of the [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]] virtual machine.
+#+END_QUOTE
+
+* Basics
+
+** Protocols
+

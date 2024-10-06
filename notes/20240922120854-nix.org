@@ -3,6 +3,4 @@
 :END:
 #+title: Nix
 
-[[cite@dolstra2006purely]]
-
 #+print_bibliography: 

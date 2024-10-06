@@ -10,7 +10,8 @@ import networkx.algorithms.community as com
 from networkx.drawing.nx_pydot import read_dot
 from networkx.readwrite import json_graph
 
-N_COM = 7  # Desired number of communities
+# Desired number of communities
+N_COM = 14 
 N_MISSING = 20  # Number of predicted missing links
 MAX_NODES = 200  # Number of nodes in the final graph 
 

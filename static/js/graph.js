@@ -1,30 +1,4 @@
-let is_full = false;
-let graph_name = "graph.json";
-
-function toggle_full_graph() {
-  if (!is_full) {
-    graph_name = "/js/graph_full.json";
-    d3.selectAll("g").remove();
-    // Canvas size
-    height = 1600;
-    width = 2200;
-    draw_graph(graph_name, height, width);
-    is_full = true;
-  }
-  else {
-    graph_name = "/js/graph.json";
-    d3.selectAll("g").remove();
-    // Canvas size
-    height = 1100;
-    width = 1600;
-    draw_graph(graph_name, height, width);
-    is_full = false;
-
-  }
-}
-
-function draw_graph(graph_name, height, width) {
-d3.json(graph_name).then(function(data) {
+function draw_graph(data, height, width) {
     // Radius function for nodes. Node radius are function of centrality
     scale = 1.;
     radius = d => {
@@ -197,7 +171,7 @@ d3.json(graph_name).then(function(data) {
 
     // We sort the nodes now because some of the sorting function need the
     // node radius
-    sort_items();
+    //sort_items();
 
     // Run the simulation
     simulation.on("tick", () => {
@@ -215,9 +189,8 @@ d3.json(graph_name).then(function(data) {
         label_background.attr("x", d => d.x)
             .attr("y", d => d.y);
     });
-});
 }
 
 height = 1100;
 width = 1600;
-draw_graph(graph_name, height, width);
+draw_graph(graph_data, height, width);

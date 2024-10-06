@@ -4,6 +4,8 @@
 :EXPORT_HUGO_TAGS: "Algebra" "Haskell"
 :END:
 #+title: Monoid
+#+HUGO_CATEGORIES: "Math" "Functional Programming"
+#+HUGO_TAGS: "Algebra" "Haskell"
 #+STARTUP: latexpreview
 #+Html_MATHJAX: align: left indent: 5em tagside: left
 

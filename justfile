@@ -1,6 +1,13 @@
 # Define source directory
 BLOG_SRC := 'content-org'
 BLOG_BUNDLE := 'site.tar.gz'
+STATIC_SRC := 'static'
+STATIC_JS_SRC := STATIC_SRC / 'js'
+
+D3_VERSION := 'v7'
+D3_FILENAME := "d3.min.js"
+D3_URL := "https://d3js.org/d3." + D3_VERSION + ".min.js"
+D3_PATH := STATIC_JS_SRC / D3_FILENAME
 
 # Define source files using wildcard
 SOURCES := `echo {{ BLOG_SRC }}/*.org`
@@ -15,6 +22,10 @@ build: clean
 # Publish content
 public: build
     hugo
+
+# Download D3
+d3-download:
+    curl -L -o {{ D3_PATH }} {{ D3_URL }}
 
 # Run Hugo server with drafts
 run: build

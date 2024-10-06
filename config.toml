@@ -8,6 +8,7 @@ assetDir = "static"
 [params]
   subtitle = "\"Writing is nothing more than a guided dream.\""
   math = true
+  graph = true
   [params.author]
     name = "Marcos Benevides"
 
