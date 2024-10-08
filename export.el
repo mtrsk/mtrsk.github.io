@@ -11,6 +11,7 @@
 (setq content-dir (concat (getenv "PWD") "/content-org"))
 (setq org-hugo-base-dir (concat (getenv "PWD") "/content-org"))
 (setq org-roam-directory (concat (getenv "PWD") "/notes"))
+(setq org-roam-graph-export-directory (concat (getenv "PWD") "/content-org"))
 (setq org-blog-directory (concat (getenv "PWD") "/blog"))
 
 ;; Don't ask for confirmation before evaluating a code block

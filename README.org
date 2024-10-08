@@ -21,5 +21,8 @@ build
 run
 #+END_SRC
 
-** TODO
-- [ ] Build the ~org-roam~ graph
+** Org Roam
+
+The org roam graph generation is a modification from [[https://hugocisneros.com/blog/my-org-roam-notes-workflow/][Hugo Cisnero's Notes
+Workflow]].
+

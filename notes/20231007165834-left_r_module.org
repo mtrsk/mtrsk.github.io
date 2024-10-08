@@ -1,9 +1,9 @@
 :PROPERTIES:
 :ID:       e4bd8f7b-a64d-4da3-b1e8-289d6fb0c441
-:EXPORT_HUGO_CATEGORIES: "Math"
-:EXPORT_HUGO_TAGS: "Algebra"
 :END:
 #+TITLE: Left R-Module
+#+HUGO_CATEGORIES: "Math"
+#+HUGO_TAGS: "Algebra"
 #+STARTUP: latexpreview
 
 * Formal Definition

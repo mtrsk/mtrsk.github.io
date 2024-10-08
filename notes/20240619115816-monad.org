@@ -2,7 +2,8 @@
 :ID:       a3e972e0-8db9-4556-9dca-0e4f6a663236
 :END:
 #+title: Monad
-
+#+HUGO_CATEGORIES: "Category Theory" "Functional Programming"
+#+HUGO_TAGS: "Haskell"
 
 ** Haskell
 

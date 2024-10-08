@@ -1,10 +1,10 @@
 :PROPERTIES:
 :ID:       63607e63-4428-4578-bf2a-12a49649b49c
-:EXPORT_HUGO_CATEGORIES: "FP"
-:EXPORT_HUGO_TAGS: "Erlang"
 :ROAM_ALIAS: "Erlang Process"
 :END:
 #+title: Concurrent Erlang
+#+HUGO_CATEGORIES: "Functional Programming"
+#+HUGO_TAGS: "Erlang"
 
 * Processes
 

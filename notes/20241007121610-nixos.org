@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       c350b99c-021d-4f5a-a948-4929056e1267
+:END:
+#+title: NixOS
+#+HUGO_CATEGORIES: "Operating Systems"
+#+HUGO_TAGS: "Linux" "Nix" "NixOS"
+
+NixOS is a [[id:8a427ee7-2ef1-489b-af82-91de7be8a3ba][Linux]] distribution based on the purely functional package management system [[id:72d705ae-9f5c-402b-88e5-21744277319a][Nix]].
+

@@ -4,6 +4,8 @@
 :EXPORT_HUGO_TAGS: "Clusters"
 :END:
 #+title: Quorum
+#+HUGO_CATEGORIES: "Distributed Systems"
+#+HUGO_TAGS: "Clusters"
 
 #+BEGIN_QUOTE
 Quorum means "majority", and the idea behind quorum is easy to understand: if

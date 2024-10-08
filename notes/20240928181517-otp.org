@@ -1,10 +1,10 @@
 :PROPERTIES:
 :ID:       6ed3a191-0128-453e-b0b6-37c48593a6f0
-:EXPORT_HUGO_CATEGORIES:  "FP"
-:EXPORT_HUGO_TAGS: "Erlang" "OTP"
 :ROAM_ALIAS: "Open Telecom Platform"
 :END:
 #+title: OTP
+#+HUGO_CATEGORIES: "Functional Programming"
+#+HUGO_TAGS: "Erlang" "Elixir" "OTP"
 
 #+BEGIN_QUOTE
 [[id:6ed3a191-0128-453e-b0b6-37c48593a6f0][OTP]] is a domain-independent set of frameworks, principles, and patterns that

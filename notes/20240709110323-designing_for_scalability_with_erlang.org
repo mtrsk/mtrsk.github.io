@@ -1,10 +1,9 @@
 :PROPERTIES:
 :ID:       ffac18bd-4e44-4a7b-8a3a-a85552c9b076
-:EXPORT_HUGO_CATEGORIES: "FP"
-:EXPORT_HUGO_TAGS: "Erlang" "OTP"
-:ROAM_TAGS: "Erlang"
 :END:
 #+title: Designing for Scalability With Erlang/OTP
+#+HUGO_CATEGORIES: "Functional Programming"
+#+HUGO_TAGS: "Erlang" "OTP"
 
 #+BEGIN_QUOTE
 [[id:6ed3a191-0128-453e-b0b6-37c48593a6f0][OTP]] is said to consist of three building blocks that, when used together, provide a solid approach to designing and developing systems in the

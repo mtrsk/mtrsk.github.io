@@ -1,9 +1,9 @@
 :PROPERTIES:
 :ID:       f0da3356-3797-4ddc-8306-cd333f159754
-:EXPORT_HUGO_CATEGORIES: "FP"
-:EXPORT_HUGO_TAGS: "Erlang"
 :END:
 #+title: Sequential Erlang
+#+HUGO_CATEGORIES: "Functional Programming"
+#+HUGO_TAGS: "Erlang"
 
 The basic constructs of the [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]] language.
 
@@ -19,22 +19,90 @@ The basic constructs of the [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]] 
 
 ** Floats
 
++ When you divide two integers with ~/~, the result is automatically converted to a floating-point number.
++ Integer division is handled by ~div~ and ~rem~.
+
 ** Atoms
-+ Used to denote datatypes with a fixed number of items.
++ In Erlang, atoms are used to represent constant values.
++ Atoms are also global, and this is achieved without the use of macro
+  definitions or include files.
 
 ** Tuples
-+ Used to denote datatypes with a fixed number of items.
++ Represents a collection of elements (of any type) that are grouped together.
 + Access is normally done by position.
++ A tuple whose first element is an atom is called a ~tagged~ tuple, i.e., ~{book,
+  "The Aleph"}~.
+
+#+BEGIN_QUOTE
+Tuples are created automatically when we declare them and are destroyed when
+they can no longer be used. Erlang uses a garbage collector to reclaim all
+unused memory, so we don’t have to worry about memory
+allocation. [cite:@armstrong2013 p.35]
+#+END_QUOTE
+
+You can also pattern match tuples by using free variables:
+#+BEGIN_SRC shell
+  1> Point = {point, 10, 45}.
+  {point,10,45}
+  2> {point, X, Y} = Point.
+  {point,10,45}
+  3> X.
+  10
+  4> Y.
+  45
+#+END_SRC
 
 ** Lists
-+ Used to store a variable number of elements.
++ A list is a compound data type with a variable number of terms:
+  ~[Term1,...,TermN]~.
 + Access is normally done by parttern matching.
++ One can add or iterate over lists with the ~cons~ operator ~|~, which breaks a
+  list into ~H|T~ (~head~ and ~tail~),
 
 #+BEGIN_SRC 
   List = [ Element | List ] OR []
 #+END_SRC
 
+*** List Comprehensions
+
+#+BEGIN_SRC shell
+  1> L = [1,2,3,4,5,6,7].
+  [1,2,3,4,5,6,7]
+  2> [ 2*X || X <- L ].
+  [2,4,6,8,10,12,14]
+  3> 
+#+END_SRC
+
+#+BEGIN_QUOTE
+The most general form of a list comprehension is an expression of the following
+form: ~[X || Qualifier1, Qualifier2, ...]~, where ~X~ is an arbitrary expression,
+and each qualifier is either a generator, a bitstring generator, or a filter.
+
++ Generators are written as ~Pattern <- ListExpr~ where ~ListExpr~ must be an expression that evaluates to a list of terms.
++ Bitstring generators are written as ~BitStringPattern <= BitStringExpr~ where ~BitStringExpr~ must be an expression that evaluates to a bitstring.
++ Filters are either predicates or boolean expressions. [cite:@armstrong2013 p.61]
+#+END_QUOTE
+
 ** Strings
+
+#+BEGIN_QUOTE
+Strictly speaking, there are no strings in Erlang. To represent a string in
+Erlang, we can choose between representing the string as a list of integers or
+as a binary. When a string is represented as a list of integers, each element in
+the list represents a Unicode codepoint.
+#+END_QUOTE
+
+To print a unicode string one must use the "t" modifier applied to the "s"
+control character in a formatting string, it accepts all Unicode codepoints and
+expect binaries to be in UTF-8:
+
+#+BEGIN_SRC shell
+  1> X = "a\x{221e}b".
+  [97,8734,98]
+  2> io:format("~ts~n",[X]).
+  a∞b
+  ok
+#+END_SRC
 
 ** Records
 
@@ -83,14 +151,31 @@ Note that Erlang variables start with uppercase characters. So, ~X~, ~This~, and
 atoms. [cite:@armstrong2013]
 #+END_QUOTE 
 
++ Erlang Variables Do Not Vary
++ The scope of a variable is the lexical unit in which it is defined.
++ Variables acquire values as the result of a successful pattern matching
+  operation (~=~).
+
 * Pattern Matching
 Pattern matching is used for:
 + Assigning values to variables
 + Redirecting execution flows
 
-  #+BEGIN_SRC erlang
+*** case and if Expressions
 
-  #+END_SRC
+#+BEGIN_SRC erlang
+  case Expression of
+    Pattern1 [when Guard1] -> Expr_seq1;
+    Pattern2 [when Guard2] -> Expr_seq2;
+    ...
+  end
+
+  if
+    Guard1 -> Expr_seq1;
+    Guard2 -> Expr_seq2;
+    ...
+  end
+#+END_SRC
 
 * Functions
 
@@ -109,6 +194,17 @@ Pattern matching is used for:
 + ~integer_to_list(1000)~
 + ~tuple_to_list(Tuple)~
 
+** Funs: The Basic Unit of Abstraction
+
+~Funs~ are function closures. ~Funs~ are created by expressions of the form: ~fun(...) -> ... end~.
+
+*** Defining Your Own Control Abstractions
+If we want additional control structures, we can make our own. Erlang has no for loop, so let’s make one:
+#+BEGIN_SRC erlang
+  for(Max, Max, F) -> [F(Max)];
+  for(I, Max, F) -> [F(I)|for(I+1, Max, F)].
+#+END_SRC
+
 ** Recursion
 *** Tail Recursion
 
@@ -126,25 +222,3 @@ Pattern matching is used for:
     mps_to_mph(Mps) -> 2.23693629 * Mps.
     mps_to_kph(Mps) -> 3.6 * Mps.
 #+END_SRC
-
-* Erlang Shell
-
-** Seeing Your Bound Variables
-
-~b()~ shows all bound variables in the current erlang shell.
-
-#+BEGIN_SRC shell
-    > b().
-    N = 1
-    Number = 5
-#+END_SRC
-
-** Clearing Bound Variables in the Shell
-
-#+BEGIN_SRC shell
-  > f(N).
-  > f().
-#+END_SRC
-
-#+print_bibliography:
-

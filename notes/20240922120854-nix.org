@@ -2,7 +2,7 @@
 :ID:       72d705ae-9f5c-402b-88e5-21744277319a
 :END:
 #+title: Nix
-
-[[cite@dolstra2006purely]]
+#+HUGO_CATEGORIES: "Functional Programming"
+#+HUGO_TAGS: "Nix"
 
 #+print_bibliography: 
