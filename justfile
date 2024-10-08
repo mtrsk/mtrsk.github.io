@@ -27,6 +27,10 @@ public: build
 d3-download:
     curl -L -o {{ D3_PATH }} {{ D3_URL }}
 
+# Build braph
+graph:
+    python graph.py
+
 # Run Hugo server with drafts
 run: build
 	hugo server --buildDrafts --buildFuture

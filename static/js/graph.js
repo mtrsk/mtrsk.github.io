@@ -1,3 +1,14 @@
+function random_hex_colors(n) {
+  const hexColors = [];
+
+  for (let i = 0; i < n; i++) {
+    let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+    hexColors.push(randomColor);
+  }
+
+  return hexColors;
+}
+
 function draw_graph(data, height, width) {
     // Radius function for nodes. Node radius are function of centrality
     scale = 1.;
@@ -16,15 +27,7 @@ function draw_graph(data, height, width) {
     centersx = angleArr.map(x => Math.cos(Math.PI + x));
     centersy = angleArr.map(x => Math.sin(Math.PI + x));
     // Color palette
-    nodeColors = [
-        '#C98914',
-        '#C55F1A',
-        '#4189AD',
-        '#007500',
-        '#968674',
-        '#5E998A',
-        "#363ea9",
-    ];
+    nodeColors = random_hex_colors(num_colors);
     // Color function just maps cluster to color palette
     nodeColor = d => {
         return nodeColors[d.communityLabel];
@@ -191,6 +194,6 @@ function draw_graph(data, height, width) {
     });
 }
 
-height = 1100;
-width = 1600;
+let height = window.innerHeight;
+let width = window.innerWidth;
 draw_graph(graph_data, height, width);

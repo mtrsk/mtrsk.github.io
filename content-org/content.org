@@ -105,6 +105,7 @@ Here you'll find my latest content, projects, tutorials and ramblings.
 :EXPORT_TITLE: Notes
 :EXPORT_FILE_NAME: _index
 :EXPORT_DATE: 1970-01-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :graph true
 :END:
 
 This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.

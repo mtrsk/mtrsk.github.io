@@ -10,9 +10,7 @@ import networkx.algorithms.community as com
 from networkx.drawing.nx_pydot import read_dot
 from networkx.readwrite import json_graph
 
-# Desired number of communities
-N_COM = 14 
-N_MISSING = 20  # Number of predicted missing links
+N_MISSING = 7  # Number of predicted missing links
 MAX_NODES = 200  # Number of nodes in the final graph 
 
 def to_rellink(inp: str) -> str:
@@ -80,13 +78,23 @@ def add_missing_links(dot_graph: nx.DiGraph, n_missing: int) -> None:
         sys.stderr.write(f"Predicted edge {link[0]} {link[1]}\n")
         dot_graph.add_edge(link[0], link[1], predicted=link[2])
 
+def update_html(graph_data: nx.DiGraph) -> None:
+    JS_GRAPH = json_graph.node_link_data(graph_data)
+    JSON_GRAPH = json.dumps(JS_GRAPH)
+    pathlib.Path("../static/graph.json").write_text(JSON_GRAPH)
+    with open(pathlib.Path("../static/js/graph.js")) as js_code:
+        return f"""
+        <script>
+            var graph_data = {json.dumps(JS_GRAPH)}
+            {js_code.read()}
+        </script>
+        """
 
 if __name__ == "__main__":
     sys.stderr.write("Reading graph...")
     DOT_GRAPH = build_graph()
     compute_centrality(DOT_GRAPH)
-    compute_communities(DOT_GRAPH, N_COM)
+    number_of_communities = nx.number_weakly_connected_components(DOT_GRAPH)
+    compute_communities(DOT_GRAPH, number_of_communities)
     add_missing_links(DOT_GRAPH, N_MISSING)
-    JS_GRAPH = json_graph.node_link_data(DOT_GRAPH)
-    pathlib.Path("./static/js/graph.json").write_text(json.dumps(JS_GRAPH))
-    sys.stderr.write("Done\n")
+    print(generate_html(DOT_GRAPH))

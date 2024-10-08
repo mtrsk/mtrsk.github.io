@@ -2,6 +2,8 @@
 :ID:       01b79396-e6d4-4673-9438-95a120543f05
 :END:
 #+title: NixOS Modules
+#+HUGO_CATEGORIES: "Operating Systems"
+#+HUGO_TAGS: "Linux" "Nix" "NixOS"
 
 #+BEGIN_QUOTE
 A module is a file containing a [[id:72d705ae-9f5c-402b-88e5-21744277319a][Nix]] expression with a specific structure. It
