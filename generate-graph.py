@@ -1,3 +1,4 @@
+import fileinput
 import itertools
 import json
 import pathlib
@@ -81,14 +82,12 @@ def add_missing_links(dot_graph: nx.DiGraph, n_missing: int) -> None:
 def update_html(graph_data: nx.DiGraph) -> None:
     JS_GRAPH = json_graph.node_link_data(graph_data)
     JSON_GRAPH = json.dumps(JS_GRAPH)
-    pathlib.Path("../static/graph.json").write_text(JSON_GRAPH)
-    with open(pathlib.Path("../static/js/graph.js")) as js_code:
-        return f"""
-        <script>
-            var graph_data = {json.dumps(JS_GRAPH)}
-            {js_code.read()}
-        </script>
-        """
+    pathlib.Path("./static/graph.json").write_text(JSON_GRAPH)
+    filepath = pathlib.Path("./layouts/partials/graph.html").resolve()
+    for line in fileinput.input([filepath], inplace=True):
+        if line.strip().startswith("var graph_data ="):
+            line = f"var graph_data = {JSON_GRAPH}\n"
+        sys.stdout.write(line)
 
 if __name__ == "__main__":
     sys.stderr.write("Reading graph...")
@@ -97,4 +96,5 @@ if __name__ == "__main__":
     number_of_communities = nx.number_weakly_connected_components(DOT_GRAPH)
     compute_communities(DOT_GRAPH, number_of_communities)
     add_missing_links(DOT_GRAPH, N_MISSING)
-    print(generate_html(DOT_GRAPH))
+    update_html(DOT_GRAPH)
+    sys.stderr.write("Done...")
