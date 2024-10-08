@@ -14,6 +14,9 @@
 (setq org-roam-graph-export-directory (concat (getenv "PWD") "/content-org"))
 (setq org-blog-directory (concat (getenv "PWD") "/blog"))
 
+;; https://jeffkreeftmeijer.com/org-unable-to-resolve-link/
+;;(org-id-update-id-locations (directory-files-recursively org-roam-directory "\\.org$") )
+
 ;; Don't ask for confirmation before evaluating a code block
 (setq org-confirm-babel-evaluate nil)
 ;;(setq org-export-use-babel t)

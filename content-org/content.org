@@ -120,6 +120,17 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 
 #+RESULTS: export-notes
 
+** Haskell
+:PROPERTIES:
+:EXPORT_FILE_NAME: haskell
+:EXPORT_DATE: 2024-10-08
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug haskell
+:CUSTOM_ID: haskell
+:END:
+
+#+INCLUDE: "../notes/20241008121957-haskell.org"
+    
+
 ** Nixos
 :PROPERTIES:
 :EXPORT_FILE_NAME: nixos
@@ -746,4 +757,3 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 
 #+INCLUDE: "../notes/20211012215602-kubernetes.org"
     
-

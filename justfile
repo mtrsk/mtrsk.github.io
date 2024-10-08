@@ -38,6 +38,7 @@ run: build
 # Build for CI
 ci-build: clean
     nix develop .#ci --impure -c emacs $(pwd) --batch --load export.el
+    python fix-ref-links.py
 
 ci-publish: ci-build
     nix develop .#ci --impure -c hugo
