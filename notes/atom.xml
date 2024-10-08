@@ -5,7 +5,7 @@
   
     <link href="https://mtrsk.github.io/notes/atom.xml" rel="self" type="application/atom+xml" />
   
-  <updated>2024-10-03T13:09:15Z</updated>
+  <updated>2024-10-08T01:53:36Z</updated>
   <author>
     
     
@@ -14,17 +14,145 @@
   <id>https://mtrsk.github.io/notes/</id>
   
   <entry>
+    <title>Nixos</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/nixos/"/>
+    <id>https://mtrsk.github.io/notes/2024/nixos/</id>
+    <published>2024-10-07T00:00:00Z</published>
+    <updated>2024-10-07T00:00:00Z</updated>
+    <summary>:ID: c350b99c-021d-4f5a-a948-4929056e1267
+NixOS is a [BROKEN LINK: 8a427ee7-2ef1-489b-af82-91de7be8a3ba] distribution based on the purely functional package management system [BROKEN LINK: 72d705ae-9f5c-402b-88e5-21744277319a].</summary>
+    <content type="html">&lt;p&gt;:ID:       c350b99c-021d-4f5a-a948-4929056e1267&lt;/p&gt;
+&lt;p&gt;NixOS is a [BROKEN LINK: 8a427ee7-2ef1-489b-af82-91de7be8a3ba] distribution based on the purely functional package management system [BROKEN LINK: 72d705ae-9f5c-402b-88e5-21744277319a].&lt;/p&gt;
+</content>
+    
+    <category term="Linux"/>
+    
+    <category term="Nix"/>
+    
+    <category term="NixOS"/>
+    
+    
+    <category term="Operating Systems"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dializer</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/dializer/"/>
+    <id>https://mtrsk.github.io/notes/2024/dializer/</id>
+    <published>2024-10-06T00:00:00Z</published>
+    <updated>2024-10-06T00:00:00Z</updated>
+    <summary>:ID: 228628b7-14cf-41cb-bc39-018a4ff2325f
+Dialyzer is a static analysis tool that identifies software discrepancies, such as definite type errors, code that is unreachable because of programming errors, and unnecessary tests in [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] and [BROKEN LINK: 8d568d81-9c22-4d94-81b2-27a2d730ba98] modules or an entire codebases.</summary>
+    <content type="html">&lt;p&gt;:ID:       228628b7-14cf-41cb-bc39-018a4ff2325f&lt;/p&gt;
+&lt;p&gt;Dialyzer is a static analysis tool that identifies software discrepancies, such
+as definite type errors, code that is unreachable because of programming errors,
+and unnecessary tests in [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] and [BROKEN LINK: 8d568d81-9c22-4d94-81b2-27a2d730ba98] modules or an entire codebases.&lt;/p&gt;
+</content>
+    
+    <category term="Erlang"/>
+    
+    <category term="Elixir"/>
+    
+    
+    <category term="Functional Programming"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Elixir</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/elixir/"/>
+    <id>https://mtrsk.github.io/notes/2024/elixir/</id>
+    <published>2024-10-06T00:00:00Z</published>
+    <updated>2024-10-06T00:00:00Z</updated>
+    <summary>:ID: 8d568d81-9c22-4d94-81b2-27a2d730ba98 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;FP&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Elixir&amp;rdquo;
+Elixir describes itself as a functional, meta-programming-aware language built on top of the [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] virtual machine.
+Basics Protocols </summary>
+    <content type="html">&lt;p&gt;:ID:       8d568d81-9c22-4d94-81b2-27a2d730ba98
+:EXPORT_HUGO_CATEGORIES: &amp;ldquo;FP&amp;rdquo;
+:EXPORT_HUGO_TAGS: &amp;ldquo;Elixir&amp;rdquo;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Elixir describes itself as a functional, meta-programming-aware language built
+on top of the [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] virtual machine.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;basics&#34;&gt;Basics&lt;/h2&gt;
+&lt;h3 id=&#34;protocols&#34;&gt;Protocols&lt;/h3&gt;
+</content>
+    
+    
+    <category term="notes"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Erlang Shell</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/erlang-shell/"/>
+    <id>https://mtrsk.github.io/notes/2024/erlang-shell/</id>
+    <published>2024-10-04T00:00:00Z</published>
+    <updated>2024-10-04T00:00:00Z</updated>
+    <summary>:ID: bcd04f60-0a4c-4213-90f7-139c0ddf5bef
+Some features of the [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] shell.
+Examples Compiling and Running &amp;ldquo;Hello World&amp;rdquo; in the Shell -module(hello). -export([start/0]). start() -&amp;gt; io:format(&amp;#34;Hello world~n&amp;#34;). Running the hello.erl program in the erlang shell.
+$ erl Erlang/OTP 26 [erts-14.2.5] [source] [64-bit] [smp:24:24] [ds:24:24:10] [async-threads:1] [jit:ns] Eshell V14.2.5 (press Ctrl+G to abort, type help(). for help) 1&amp;gt; c(hello). {ok,hello} 2&amp;gt; hello:start(). Hello world ok Compiling Outside the Erlang Shell $ erlc hello.erl $ erl -noshell -s hello start -s init stop erlc evokes the Erlang compiler from the command line.</summary>
+    <content type="html">&lt;p&gt;:ID:       bcd04f60-0a4c-4213-90f7-139c0ddf5bef&lt;/p&gt;
+&lt;p&gt;Some features of the [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] shell.&lt;/p&gt;
+&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
+&lt;h3 id=&#34;compiling-and-running-hello-world-in-the-shell&#34;&gt;Compiling and Running &amp;ldquo;Hello World&amp;rdquo; in the Shell&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;module&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hello&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]).&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nn&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello world&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;~n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Running the &lt;code&gt;hello.erl&lt;/code&gt; program in the erlang shell.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  $ erl
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Erlang/OTP &lt;span class=&#34;m&#34;&gt;26&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;erts-14.2.5&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;source&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;64-bit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;smp:24:24&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;ds:24:24:10&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;async-threads:1&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;jit:ns&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Eshell V14.2.5 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;press Ctrl+G to abort, &lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt; help&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;. &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  1&amp;gt; c&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;hello&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;ok,hello&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  2&amp;gt; hello:start&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Hello world
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ok
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;compiling-outside-the-erlang-shell&#34;&gt;Compiling Outside the Erlang Shell&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  $ erlc hello.erl
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  $ erl -noshell -s hello start -s init stop
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;erlc&lt;/code&gt; evokes the Erlang compiler from the command line. The compiler compiles the code in &lt;code&gt;hello.erl&lt;/code&gt; and produces an object code file called &lt;code&gt;hello.beam&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;erl -noshell&lt;/code&gt; command loads the module &lt;code&gt;hello&lt;/code&gt; and evaluates the function
+&lt;code&gt;hello:start()&lt;/code&gt;. After this, it evaluates the expression &lt;code&gt;init:stop()&lt;/code&gt;, which
+terminates the Erlang session.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;commands&#34;&gt;Commands&lt;/h2&gt;
+&lt;h3 id=&#34;seeing-your-bound-variables&#34;&gt;Seeing Your Bound Variables&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;b()&lt;/code&gt; shows all bound variables in the current erlang shell.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;gt; b&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;N&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Number&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;clearing-bound-variables-in-the-shell&#34;&gt;Clearing Bound Variables in the Shell&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;gt; f&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;N&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;gt; f&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
+&lt;/div&gt;
+</content>
+    
+    <category term="Erlang"/>
+    
+    
+    <category term="Functional Programming"/>
+    
+  </entry>
+  
+  <entry>
     <title>Error Handling In Erlang</title>
     <link rel="alternate" href="https://mtrsk.github.io/notes/2024/error-handling-in-erlang/"/>
     <id>https://mtrsk.github.io/notes/2024/error-handling-in-erlang/</id>
     <published>2024-10-01T00:00:00Z</published>
     <updated>2024-10-01T00:00:00Z</updated>
-    <summary>:ID: 22ae9c25-3123-4ed8-b765-369ac89d2942 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;FP&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Erlang&amp;rdquo;
+    <summary>:ID: 22ae9c25-3123-4ed8-b765-369ac89d2942
 In [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] we have a large number of processes at our disposal, so the failure of any individual process is not so important. We usually write only a small amount of defensive code and instead concentrate on writing corrective code. We take measures to detect the errors and then correct them after they have occurred. (Armstrong 2013)
-Definitions Link A bi-directional propagation path for exit signals.</summary>
-    <content type="html">&lt;p&gt;:ID:       22ae9c25-3123-4ed8-b765-369ac89d2942
-:EXPORT_HUGO_CATEGORIES: &amp;ldquo;FP&amp;rdquo;
-:EXPORT_HUGO_TAGS: &amp;ldquo;Erlang&amp;rdquo;&lt;/p&gt;
+Definitions Link A bi-directional propagation path for exit signals. Exit Signal Transmit process termination information.</summary>
+    <content type="html">&lt;p&gt;:ID:       22ae9c25-3123-4ed8-b765-369ac89d2942&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;In [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] we have a large number of processes at our disposal, so the failure
 of any individual process is not so important. We usually write only a small
@@ -99,8 +227,10 @@ exit signal will contain the following information:
 &lt;/div&gt;
 </content>
     
+    <category term="Erlang"/>
     
-    <category term="notes"/>
+    
+    <category term="Functional Programming"/>
     
   </entry>
   
@@ -132,14 +262,14 @@ SHOW data_directory; </summary>
     <id>https://mtrsk.github.io/notes/2024/scsi/</id>
     <published>2024-10-01T00:00:00Z</published>
     <updated>2024-10-01T00:00:00Z</updated>
-    <summary>:ID: 388e1a43-f7f6-4c9e-af19-d7b6116a070e :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Networking&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Protocols&amp;rdquo;</summary>
-    <content type="html">&lt;p&gt;:ID:       388e1a43-f7f6-4c9e-af19-d7b6116a070e
-:EXPORT_HUGO_CATEGORIES: &amp;ldquo;Networking&amp;rdquo;
-:EXPORT_HUGO_TAGS: &amp;ldquo;Protocols&amp;rdquo;&lt;/p&gt;
+    <summary>:ID: 388e1a43-f7f6-4c9e-af19-d7b6116a070e</summary>
+    <content type="html">&lt;p&gt;:ID:       388e1a43-f7f6-4c9e-af19-d7b6116a070e&lt;/p&gt;
 </content>
     
+    <category term="Protocols"/>
     
-    <category term="notes"/>
+    
+    <category term="Networking"/>
     
   </entry>
   
@@ -149,12 +279,10 @@ SHOW data_directory; </summary>
     <id>https://mtrsk.github.io/notes/2024/concurrent-erlang/</id>
     <published>2024-09-30T00:00:00Z</published>
     <updated>2024-09-30T00:00:00Z</updated>
-    <summary>:ID: 63607e63-4428-4578-bf2a-12a49649b49c :EXPORT_HUGO_CATEGORIES: &amp;ldquo;FP&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Erlang&amp;rdquo; :ROAM_ALIAS: &amp;ldquo;Erlang Process&amp;rdquo;
+    <summary>:ID: 63607e63-4428-4578-bf2a-12a49649b49c :ROAM_ALIAS: &amp;ldquo;Erlang Process&amp;rdquo;
 Processes In [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d], creation of a parallel process is achieved by evaluating the spawn primitive. This primitive creates a concurrent process and returns a process identifier (PID) that can used to interact with the newly created process:
 Pid = spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]). This BIF never fails A process can either terminate: Abormally when run-time errors occur Normally when there is no more code to execute Modeling Concurrency The syntax Pid !</summary>
     <content type="html">&lt;p&gt;:ID:       63607e63-4428-4578-bf2a-12a49649b49c
-:EXPORT_HUGO_CATEGORIES: &amp;ldquo;FP&amp;rdquo;
-:EXPORT_HUGO_TAGS: &amp;ldquo;Erlang&amp;rdquo;
 :ROAM_ALIAS: &amp;ldquo;Erlang Process&amp;rdquo;&lt;/p&gt;
 &lt;h2 id=&#34;processes&#34;&gt;Processes&lt;/h2&gt;
 &lt;p&gt;In [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d], creation of a parallel process is achieved by evaluating the &lt;code&gt;spawn&lt;/code&gt;
@@ -248,8 +376,10 @@ executed. Otherwise, &lt;code&gt;expr02&lt;/code&gt; will be executed.&lt;/li&gt
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
     
+    <category term="Erlang"/>
     
-    <category term="notes"/>
+    
+    <category term="Functional Programming"/>
     
   </entry>
   
@@ -259,11 +389,9 @@ executed. Otherwise, &lt;code&gt;expr02&lt;/code&gt; will be executed.&lt;/li&gt
     <id>https://mtrsk.github.io/notes/2024/otp/</id>
     <published>2024-09-28T00:00:00Z</published>
     <updated>2024-09-28T00:00:00Z</updated>
-    <summary>:ID: 6ed3a191-0128-453e-b0b6-37c48593a6f0 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;FP&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Erlang&amp;rdquo; &amp;ldquo;OTP&amp;rdquo; :ROAM_ALIAS: &amp;ldquo;Open Telecom Platform&amp;rdquo;
+    <summary>:ID: 6ed3a191-0128-453e-b0b6-37c48593a6f0 :ROAM_ALIAS: &amp;ldquo;Open Telecom Platform&amp;rdquo;
 [BROKEN LINK: 6ed3a191-0128-453e-b0b6-37c48593a6f0] is a domain-independent set of frameworks, principles, and patterns that guide and support the structure, design, implementation, and deployment of [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] systems. Using OTP in your projects will help you avoid accidental complexity: things that are difficult because you picked inadequate tools. (Cesarini and Vinoski 2016, 20)</summary>
     <content type="html">&lt;p&gt;:ID:       6ed3a191-0128-453e-b0b6-37c48593a6f0
-:EXPORT_HUGO_CATEGORIES:  &amp;ldquo;FP&amp;rdquo;
-:EXPORT_HUGO_TAGS: &amp;ldquo;Erlang&amp;rdquo; &amp;ldquo;OTP&amp;rdquo;
 :ROAM_ALIAS: &amp;ldquo;Open Telecom Platform&amp;rdquo;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[BROKEN LINK: 6ed3a191-0128-453e-b0b6-37c48593a6f0] is a domain-independent set of frameworks, principles, and patterns that
@@ -274,8 +402,14 @@ tools. (Cesarini and Vinoski 2016, 20)&lt;/p&gt;
 &lt;/blockquote&gt;
 </content>
     
+    <category term="Erlang"/>
     
-    <category term="notes"/>
+    <category term="Elixir"/>
+    
+    <category term="OTP"/>
+    
+    
+    <category term="Functional Programming"/>
     
   </entry>
   
@@ -285,11 +419,9 @@ tools. (Cesarini and Vinoski 2016, 20)&lt;/p&gt;
     <id>https://mtrsk.github.io/notes/2024/split-brain/</id>
     <published>2024-09-28T00:00:00Z</published>
     <updated>2024-09-28T00:00:00Z</updated>
-    <summary>:ID: 582a4090-eb66-4dfd-8166-9acd3c97dcc9 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;DistributedSystems&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Clusters&amp;rdquo;
+    <summary>:ID: 582a4090-eb66-4dfd-8166-9acd3c97dcc9
 Split brain means that the [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb] is split in two (or more) parts, but both parts think they are the only remaining part of the cluster. This can lead to very bad situations when both parts of the cluster try to host the resources that are offered by the cluster. If the resource is a file system, and multiple nodes try to write to the file system simultaneously and without coordination, it may lead to corruption of the file system and the loss of data.</summary>
-    <content type="html">&lt;p&gt;:ID:       582a4090-eb66-4dfd-8166-9acd3c97dcc9
-:EXPORT_HUGO_CATEGORIES: &amp;ldquo;DistributedSystems&amp;rdquo;
-:EXPORT_HUGO_TAGS: &amp;ldquo;Clusters&amp;rdquo;&lt;/p&gt;
+    <content type="html">&lt;p&gt;:ID:       582a4090-eb66-4dfd-8166-9acd3c97dcc9&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Split brain means that the [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb] is split in two (or more) parts, but both
 parts think they are the only remaining part of the cluster. This can lead to
@@ -306,8 +438,10 @@ lost, this must be prevented no matter what. (, &lt;a href=&#34;#citeproc_bib_it
 &lt;/div&gt;
 </content>
     
+    <category term="Clusters"/>
     
-    <category term="notes"/>
+    
+    <category term="Distributed Systems"/>
     
   </entry>
   
@@ -379,11 +513,9 @@ previous cartesian step where the predicate is &lt;code&gt;TRUE&lt;/code&gt;. If
     <id>https://mtrsk.github.io/notes/2024/clusters/</id>
     <published>2024-09-26T00:00:00Z</published>
     <updated>2024-09-26T00:00:00Z</updated>
-    <summary>:ID: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb :EXPORT_HUGO_CATEGORIES: &amp;ldquo;DistributedSystems&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Clusters&amp;rdquo;
+    <summary>:ID: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb
 Different Kinds of Clusters High Availability Clusters The goal of a high availability cluster is to make sure that critical resources reach the maximum possible availability. This goal is accomplished by installing cluster software on multiple servers. This software monitors the availability of the cluster nodes, and it monitors the availability of the services that are managed by the cluster. If a server goes down, or if the resource stops, the HA cluster will notice and make sure that the resource is restarted somewhere else in the cluster, so that it can be used again after a minimal interruption.</summary>
-    <content type="html">&lt;p&gt;:ID:       d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb
-:EXPORT_HUGO_CATEGORIES: &amp;ldquo;DistributedSystems&amp;rdquo;
-:EXPORT_HUGO_TAGS: &amp;ldquo;Clusters&amp;rdquo;&lt;/p&gt;
+    <content type="html">&lt;p&gt;:ID:       d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb&lt;/p&gt;
 &lt;h2 id=&#34;different-kinds-of-clusters&#34;&gt;Different Kinds of Clusters&lt;/h2&gt;
 &lt;h3 id=&#34;high-availability-clusters&#34;&gt;High Availability Clusters&lt;/h3&gt;
 &lt;blockquote&gt;
@@ -401,8 +533,10 @@ in the cluster, so that it can be used again after a minimal interruption. (&lt;
 &lt;/div&gt;
 </content>
     
+    <category term="Clusters"/>
     
-    <category term="notes"/>
+    
+    <category term="Distributed Systems"/>
     
   </entry>
   
@@ -437,8 +571,10 @@ node. (Van Vugt 2014, chap. 1)&lt;/p&gt;
 &lt;h2 id=&#34;fencing-agents&#34;&gt;Fencing Agents&lt;/h2&gt;
 </content>
     
+    <category term="Clusters"/>
     
-    <category term="notes"/>
+    
+    <category term="Distributed Systems"/>
     
   </entry>
   
@@ -470,8 +606,10 @@ File System.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     
+    <category term="Clusters"/>
     
-    <category term="notes"/>
+    
+    <category term="Distributed Systems"/>
     
   </entry>
   
@@ -488,202 +626,6 @@ Distributed Replicated Block Device (DRBD) is a distributed replicated storage s
 :EXPORT_HUGO_TAGS: &amp;ldquo;Linux&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;Distributed Replicated Block Device (DRBD) is a distributed replicated storage
 system for the [BROKEN LINK: 8a427ee7-2ef1-489b-af82-91de7be8a3ba] platform.&lt;/p&gt;
-</content>
-    
-    
-    <category term="notes"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Iscsi</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/iscsi/"/>
-    <id>https://mtrsk.github.io/notes/2024/iscsi/</id>
-    <published>2024-09-24T00:00:00Z</published>
-    <updated>2024-09-24T00:00:00Z</updated>
-    <summary>:ID: 3a7a03ae-8932-4d86-ae45-aa84ff1f325a :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Networking&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Protocols&amp;rdquo;
-Definition iSCSI an acronym for Internet Small Computer Systems Interface, an Internet Protocol (IP)-based storage networking standard for linking data storage facilities. It provides block-level access to storage devices by carrying [BROKEN LINK: 388e1a43-f7f6-4c9e-af19-d7b6116a070e] commands over a TCP/IP network.</summary>
-    <content type="html">&lt;p&gt;:ID:       3a7a03ae-8932-4d86-ae45-aa84ff1f325a
-:EXPORT_HUGO_CATEGORIES: &amp;ldquo;Networking&amp;rdquo;
-:EXPORT_HUGO_TAGS: &amp;ldquo;Protocols&amp;rdquo;&lt;/p&gt;
-&lt;h2 id=&#34;definition&#34;&gt;Definition&lt;/h2&gt;
-&lt;p&gt;iSCSI an acronym for Internet Small Computer Systems Interface, an Internet
-Protocol (IP)-based storage networking standard for linking data storage
-facilities. It provides block-level access to storage devices by carrying [BROKEN LINK: 388e1a43-f7f6-4c9e-af19-d7b6116a070e]
-commands over a TCP/IP network.&lt;/p&gt;
-</content>
-    
-    
-    <category term="notes"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/linux/"/>
-    <id>https://mtrsk.github.io/notes/2024/linux/</id>
-    <published>2024-09-24T00:00:00Z</published>
-    <updated>2024-09-24T00:00:00Z</updated>
-    <summary>:ID: 8a427ee7-2ef1-489b-af82-91de7be8a3ba :EXPORT_HUGO_CATEGORIES: &amp;ldquo;OS&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Linux&amp;rdquo;</summary>
-    <content type="html">&lt;p&gt;:ID:       8a427ee7-2ef1-489b-af82-91de7be8a3ba
-:EXPORT_HUGO_CATEGORIES: &amp;ldquo;OS&amp;rdquo;
-:EXPORT_HUGO_TAGS: &amp;ldquo;Linux&amp;rdquo;&lt;/p&gt;
-</content>
-    
-    
-    <category term="notes"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sequential Erlang</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/sequential-erlang/"/>
-    <id>https://mtrsk.github.io/notes/2024/sequential-erlang/</id>
-    <published>2024-09-24T00:00:00Z</published>
-    <updated>2024-09-24T00:00:00Z</updated>
-    <summary>:ID: f0da3356-3797-4ddc-8306-cd333f159754 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;FP&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Erlang&amp;rdquo;
-The basic constructs of the [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] language.
-Datatypes Integers Large Integers are converted to bignums If you need to do calculations on integers using a base other than 10, you can use Base#Value notation. (Laurent 2017, 7)
-Floats Atoms Used to denote datatypes with a fixed number of items. Tuples Used to denote datatypes with a fixed number of items. Access is normally done by position.</summary>
-    <content type="html">&lt;p&gt;:ID:       f0da3356-3797-4ddc-8306-cd333f159754
-:EXPORT_HUGO_CATEGORIES: &amp;ldquo;FP&amp;rdquo;
-:EXPORT_HUGO_TAGS: &amp;ldquo;Erlang&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;The basic constructs of the [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] language.&lt;/p&gt;
-&lt;h2 id=&#34;datatypes&#34;&gt;Datatypes&lt;/h2&gt;
-&lt;h3 id=&#34;integers&#34;&gt;Integers&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Large Integers are converted to &lt;code&gt;bignums&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;If you need to do calculations on integers using a base other than 10, you can use
-Base#Value notation. (&lt;a href=&#34;#citeproc_bib_item_2&#34;&gt;Laurent 2017, 7&lt;/a&gt;)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;floats&#34;&gt;Floats&lt;/h3&gt;
-&lt;h3 id=&#34;atoms&#34;&gt;Atoms&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Used to denote datatypes with a fixed number of items.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;tuples&#34;&gt;Tuples&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Used to denote datatypes with a fixed number of items.&lt;/li&gt;
-&lt;li&gt;Access is normally done by position.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;lists&#34;&gt;Lists&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Used to store a variable number of elements.&lt;/li&gt;
-&lt;li&gt;Access is normally done by parttern matching.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!--listend--&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;  List = [ Element | List ] OR []
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;strings&#34;&gt;Strings&lt;/h3&gt;
-&lt;h3 id=&#34;records&#34;&gt;Records&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;(&amp;hellip;) records provide a convenient way for associating a tag
-with each of the elements in a tuple. This allows us to refer to an
-element of a tuple by name and not by position. A pre-compiler
-takes the record definition and replaces it with the appropriate tuple
-reference. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Armstrong 2013&lt;/a&gt;)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;record&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;todo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;status&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;reminder&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;who&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;joe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}).&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;to load a record from the the shell, one must use the &lt;code&gt;rr&lt;/code&gt; command:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  1&amp;gt; rr&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;records.hrl&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;todo&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  2&amp;gt; &lt;span class=&#34;c1&#34;&gt;#todo{}.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;#todo{status = reminder,who = joe,text = undefined}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  3&amp;gt; &lt;span class=&#34;nv&#34;&gt;X1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#todo{status=urgent, text=&amp;#34;Fix errata in book&amp;#34;}.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;#todo{status = urgent,who = joe,text = &amp;#34;Fix errata in book&amp;#34;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  4&amp;gt; &lt;span class=&#34;nv&#34;&gt;X2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; X1#todo&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;status&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;#todo{status = done,who = joe,text = &amp;#34;Fix errata in book&amp;#34;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;maps&#34;&gt;Maps&lt;/h3&gt;
-&lt;p&gt;Maps are associative collections of key-value pairs.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  1&amp;gt; &lt;span class=&#34;nv&#34;&gt;TaskPending&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#{ status =&amp;gt; pending, description =&amp;gt; &amp;#39;feed cats&amp;#39; }.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;#{status =&amp;gt; pending,description =&amp;gt; &amp;#39;feed cats&amp;#39;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  2&amp;gt; &lt;span class=&#34;nv&#34;&gt;TaskDone&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; TaskPending#&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; status :&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;#{status =&amp;gt; done,description =&amp;gt; &amp;#39;feed cats&amp;#39;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;variables&#34;&gt;Variables&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Note that Erlang variables start with uppercase characters. So, &lt;code&gt;X&lt;/code&gt;, &lt;code&gt;This&lt;/code&gt;, and
-&lt;code&gt;A_long_name&lt;/code&gt; are all variables. Names beginning with lowercase letters—for example,
-&lt;code&gt;monday&lt;/code&gt; or &lt;code&gt;friday&lt;/code&gt; are not variables but are symbolic constants called
-atoms. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Armstrong 2013&lt;/a&gt;)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;pattern-matching&#34;&gt;Pattern Matching&lt;/h2&gt;
-&lt;p&gt;Pattern matching is used for:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Assigning values to variables&lt;/li&gt;
-&lt;li&gt;Redirecting execution flows
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;functions&#34;&gt;Functions&lt;/h2&gt;
-&lt;h3 id=&#34;built-in-functions&#34;&gt;Built-in Functions&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Conventionally, these are part of the &lt;code&gt;erlang&lt;/code&gt; module.&lt;/li&gt;
-&lt;li&gt;Mostly written in C for fast execution.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;list-of-bifs&#34;&gt;List of BiFs&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;date()&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;time()&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;length(List)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;size(Tuple)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;atom_to_list(Atom)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;list_to_tuple(List)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;integer_to_list(1000)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;tuple_to_list(Tuple)&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;recursion&#34;&gt;Recursion&lt;/h3&gt;
-&lt;h4 id=&#34;tail-recursion&#34;&gt;Tail Recursion&lt;/h4&gt;
-&lt;h2 id=&#34;guards&#34;&gt;Guards&lt;/h2&gt;
-&lt;h2 id=&#34;modules&#34;&gt;Modules&lt;/h2&gt;
-&lt;h3 id=&#34;defining-modules&#34;&gt;Defining Modules&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;module&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;drop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fall_velocity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mps_to_mph&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mps_to_kph&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]).&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;fall_velocity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Distance&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;math&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;sqrt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Distance&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;mps_to_mph&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Mps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;23693629&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Mps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;mps_to_kph&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Mps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Mps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;erlang-shell&#34;&gt;Erlang Shell&lt;/h2&gt;
-&lt;h3 id=&#34;seeing-your-bound-variables&#34;&gt;Seeing Your Bound Variables&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;b()&lt;/code&gt; shows all bound variables in the current erlang shell.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;gt; b&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;N&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Number&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;clearing-bound-variables-in-the-shell&#34;&gt;Clearing Bound Variables in the Shell&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;gt; f&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;N&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;gt; f&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
-  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Armstrong, Joe. 2013. “Programming Erlang: Software for a Concurrent World.”&lt;/div&gt;
-  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_2&#34;&gt;&lt;/a&gt;Laurent, Simon St. 2017. &lt;i&gt;Introducing Erlang: Getting Started in Functional Programming&lt;/i&gt;. O’Reilly Media, Inc.&lt;/div&gt;
-&lt;/div&gt;
-</content>
-    
-    
-    <category term="notes"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Postgres Window Functions</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/postgres-window-functions/"/>
-    <id>https://mtrsk.github.io/notes/2024/postgres-window-functions/</id>
-    <published>2024-09-23T00:00:00Z</published>
-    <updated>2024-09-23T00:00:00Z</updated>
-    <summary>:ID: 860f97f8-e41d-480b-881b-203773406990
-Aggregates ROW_NUMBER LEAD The LEAD() function is used to retrieve data from the next row.
-LAG The LAG() function is used to retrieve data from the previous row.
-Rankings Rank Dense Rank Value Functions </summary>
-    <content type="html">&lt;p&gt;:ID:       860f97f8-e41d-480b-881b-203773406990&lt;/p&gt;
-&lt;h2 id=&#34;aggregates&#34;&gt;Aggregates&lt;/h2&gt;
-&lt;h3 id=&#34;row-number&#34;&gt;&lt;code&gt;ROW_NUMBER&lt;/code&gt;&lt;/h3&gt;
-&lt;h3 id=&#34;lead&#34;&gt;&lt;code&gt;LEAD&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;The &lt;code&gt;LEAD()&lt;/code&gt; function is used to retrieve data from the next row.&lt;/p&gt;
-&lt;h3 id=&#34;lag&#34;&gt;&lt;code&gt;LAG&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;The &lt;code&gt;LAG()&lt;/code&gt; function is used to retrieve data from the previous row.&lt;/p&gt;
-&lt;h2 id=&#34;rankings&#34;&gt;Rankings&lt;/h2&gt;
-&lt;h3 id=&#34;rank&#34;&gt;Rank&lt;/h3&gt;
-&lt;h3 id=&#34;dense-rank&#34;&gt;Dense Rank&lt;/h3&gt;
-&lt;h2 id=&#34;value-functions&#34;&gt;Value Functions&lt;/h2&gt;
 </content>
     
     

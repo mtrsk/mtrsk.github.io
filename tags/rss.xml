@@ -6,20 +6,132 @@
     <description>Recent content in Tags on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mtrsk.github.io/tags/rss.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[[Id</title>
-      <link>https://mtrsk.github.io/tags/id/</link>
+      <title>Linux</title>
+      <link>https://mtrsk.github.io/tags/linux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/tags/id/</guid>
+      <guid>https://mtrsk.github.io/tags/linux/</guid>
       <description></description>
     </item>
     <item>
-      <title>De7d0e94-618f-4982-B3e5-8806d88cad5d][Erlang]]</title>
-      <link>https://mtrsk.github.io/tags/de7d0e94-618f-4982-b3e5-8806d88cad5derlang/</link>
+      <title>Nix</title>
+      <link>https://mtrsk.github.io/tags/nix/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/tags/de7d0e94-618f-4982-b3e5-8806d88cad5derlang/</guid>
+      <guid>https://mtrsk.github.io/tags/nix/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NixOS</title>
+      <link>https://mtrsk.github.io/tags/nixos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/nixos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Elixir</title>
+      <link>https://mtrsk.github.io/tags/elixir/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/elixir/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Erlang</title>
+      <link>https://mtrsk.github.io/tags/erlang/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/erlang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Protocols</title>
+      <link>https://mtrsk.github.io/tags/protocols/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/protocols/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Clusters</title>
+      <link>https://mtrsk.github.io/tags/clusters/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/clusters/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OTP</title>
+      <link>https://mtrsk.github.io/tags/otp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/otp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Postgres</title>
+      <link>https://mtrsk.github.io/tags/postgres/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/postgres/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SQL</title>
+      <link>https://mtrsk.github.io/tags/sql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/sql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Idris</title>
+      <link>https://mtrsk.github.io/tags/idris/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/idris/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Type-Driven Development</title>
+      <link>https://mtrsk.github.io/tags/type-driven-development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/type-driven-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Classic Papers</title>
+      <link>https://mtrsk.github.io/tags/classic-papers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/classic-papers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Haskell</title>
+      <link>https://mtrsk.github.io/tags/haskell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/haskell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Algebra</title>
+      <link>https://mtrsk.github.io/tags/algebra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/algebra/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Accouting</title>
+      <link>https://mtrsk.github.io/tags/accouting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/accouting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>FSM</title>
+      <link>https://mtrsk.github.io/tags/fsm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/fsm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Graphs</title>
+      <link>https://mtrsk.github.io/tags/graphs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/graphs/</guid>
       <description></description>
     </item>
   </channel>

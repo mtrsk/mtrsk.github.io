@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Erlang on Benevides&#39; Blog</title>
+    <link>https://mtrsk.github.io/tags/erlang/</link>
+    <description>Recent content in Erlang on Benevides&#39; Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mtrsk.github.io/tags/erlang/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dializer</title>
+      <link>https://mtrsk.github.io/notes/2024/dializer/</link>
+      <pubDate>Sun, 06 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/dializer/</guid>
+      <description>:ID: 228628b7-14cf-41cb-bc39-018a4ff2325f&#xA;Dialyzer is a static analysis tool that identifies software discrepancies, such as definite type errors, code that is unreachable because of programming errors, and unnecessary tests in [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] and [BROKEN LINK: 8d568d81-9c22-4d94-81b2-27a2d730ba98] modules or an entire codebases.</description>
+    </item>
+    <item>
+      <title>Erlang Shell</title>
+      <link>https://mtrsk.github.io/notes/2024/erlang-shell/</link>
+      <pubDate>Fri, 04 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/erlang-shell/</guid>
+      <description>:ID: bcd04f60-0a4c-4213-90f7-139c0ddf5bef&#xA;Some features of the [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] shell.&#xA;Examples Compiling and Running &amp;ldquo;Hello World&amp;rdquo; in the Shell -module(hello). -export([start/0]). start() -&amp;gt; io:format(&amp;#34;Hello world~n&amp;#34;). Running the hello.erl program in the erlang shell.&#xA;$ erl Erlang/OTP 26 [erts-14.2.5] [source] [64-bit] [smp:24:24] [ds:24:24:10] [async-threads:1] [jit:ns] Eshell V14.2.5 (press Ctrl+G to abort, type help(). for help) 1&amp;gt; c(hello). {ok,hello} 2&amp;gt; hello:start(). Hello world ok Compiling Outside the Erlang Shell $ erlc hello.erl $ erl -noshell -s hello start -s init stop erlc evokes the Erlang compiler from the command line.</description>
+    </item>
+    <item>
+      <title>Error Handling In Erlang</title>
+      <link>https://mtrsk.github.io/notes/2024/error-handling-in-erlang/</link>
+      <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/error-handling-in-erlang/</guid>
+      <description>:ID: 22ae9c25-3123-4ed8-b765-369ac89d2942&#xA;In [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] we have a large number of processes at our disposal, so the failure of any individual process is not so important. We usually write only a small amount of defensive code and instead concentrate on writing corrective code. We take measures to detect the errors and then correct them after they have occurred. (Armstrong 2013)&#xA;Definitions Link A bi-directional propagation path for exit signals. Exit Signal Transmit process termination information.</description>
+    </item>
+    <item>
+      <title>Concurrent Erlang</title>
+      <link>https://mtrsk.github.io/notes/2024/concurrent-erlang/</link>
+      <pubDate>Mon, 30 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/concurrent-erlang/</guid>
+      <description>:ID: 63607e63-4428-4578-bf2a-12a49649b49c :ROAM_ALIAS: &amp;ldquo;Erlang Process&amp;rdquo;&#xA;Processes In [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d], creation of a parallel process is achieved by evaluating the spawn primitive. This primitive creates a concurrent process and returns a process identifier (PID) that can used to interact with the newly created process:&#xA;Pid = spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]). This BIF never fails A process can either terminate: Abormally when run-time errors occur Normally when there is no more code to execute Modeling Concurrency The syntax Pid !</description>
+    </item>
+    <item>
+      <title>Otp</title>
+      <link>https://mtrsk.github.io/notes/2024/otp/</link>
+      <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/otp/</guid>
+      <description>:ID: 6ed3a191-0128-453e-b0b6-37c48593a6f0 :ROAM_ALIAS: &amp;ldquo;Open Telecom Platform&amp;rdquo;&#xA;[BROKEN LINK: 6ed3a191-0128-453e-b0b6-37c48593a6f0] is a domain-independent set of frameworks, principles, and patterns that guide and support the structure, design, implementation, and deployment of [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] systems. Using OTP in your projects will help you avoid accidental complexity: things that are difficult because you picked inadequate tools. (Cesarini and Vinoski 2016, 20)</description>
+    </item>
+    <item>
+      <title>Sequential Erlang</title>
+      <link>https://mtrsk.github.io/notes/2024/sequential-erlang/</link>
+      <pubDate>Tue, 24 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/sequential-erlang/</guid>
+      <description>:ID: f0da3356-3797-4ddc-8306-cd333f159754&#xA;The basic constructs of the [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] language.&#xA;Datatypes Integers Large Integers are converted to bignums If you need to do calculations on integers using a base other than 10, you can use Base#Value notation. (Laurent 2017, 7)&#xA;Floats When you divide two integers with /, the result is automatically converted to a floating-point number. Integer division is handled by div and rem. Atoms In Erlang, atoms are used to represent constant values.</description>
+    </item>
+    <item>
+      <title>Designing For Scalability With Erlang</title>
+      <link>https://mtrsk.github.io/notes/2024/designing-for-scalability-with-erlang/</link>
+      <pubDate>Tue, 09 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/designing-for-scalability-with-erlang/</guid>
+      <description>:ID: ffac18bd-4e44-4a7b-8a3a-a85552c9b076&#xA;[BROKEN LINK: 6ed3a191-0128-453e-b0b6-37c48593a6f0] is said to consist of three building blocks that, when used together, provide a solid approach to designing and developing systems in the problem domain we’ve just described. They are [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] itself, tools and libraries, and a set of design principles. (Cesarini and Vinoski 2016, 20)</description>
+    </item>
+    <item>
+      <title>Erlang</title>
+      <link>https://mtrsk.github.io/notes/2024/erlang/</link>
+      <pubDate>Wed, 19 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/erlang/</guid>
+      <description>:ID: de7d0e94-618f-4982-b3e5-8806d88cad5d&#xA;Resources:&#xA;Etudes for Erlang Joe Armstrong&amp;rsquo;s PHD thesis The Erlang view of the world can be summarized in the following statments (Armstrong 2003):&#xA;Everything is a process. Processes are strongly isolated. Process creation and destruction is a lightweight operation. Message passing is the only way for processes to interact. Processes have unique names. If you know the name of a process you can send it a message. Error handling is non-local.</description>
+    </item>
+  </channel>
+</rss>

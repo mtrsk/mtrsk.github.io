@@ -36,5 +36,12 @@
       <guid>https://mtrsk.github.io/blog/2018/switching-to-nixos/</guid>
       <description>After quite some time being a Debian user I&amp;rsquo;ve decided to become a full time meme distro user. At first I was following some of the manuals in an attempt to recreate my config in virtualbox. A day later this distro seemed too cool not to try it out for real, so why not?&#xA;It&amp;rsquo;s kinda weird to adapt, in Debian I was accostumed to just run a command here and there and have a bunch of config files across my system, with Nix (the configuration language) one can have a single file (configuration.</description>
     </item>
+    <item>
+      <title>Blog</title>
+      <link>https://mtrsk.github.io/blog/</link>
+      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/blog/</guid>
+      <description>Here you&amp;rsquo;ll find my latest content, projects, tutorials and ramblings.&#xA;dotnet fsi posts.fsx </description>
+    </item>
   </channel>
 </rss>

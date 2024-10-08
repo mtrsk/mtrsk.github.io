@@ -10,7 +10,7 @@
     <meta property="og:url" content="https://mtrsk.github.io/notes/2024/concurrent-erlang/">
   <meta property="og:site_name" content="Benevides&#39; Blog">
   <meta property="og:title" content="Concurrent Erlang">
-  <meta property="og:description" content=":ID: 63607e63-4428-4578-bf2a-12a49649b49c :EXPORT_HUGO_CATEGORIES: “FP” :EXPORT_HUGO_TAGS: “Erlang” :ROAM_ALIAS: “Erlang Process”
+  <meta property="og:description" content=":ID: 63607e63-4428-4578-bf2a-12a49649b49c :ROAM_ALIAS: “Erlang Process”
 Processes In [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d], creation of a parallel process is achieved by evaluating the spawn primitive. This primitive creates a concurrent process and returns a process identifier (PID) that can used to interact with the newly created process:
 Pid = spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]). This BIF never fails A process can either terminate: Abormally when run-time errors occur Normally when there is no more code to execute Modeling Concurrency The syntax Pid !">
   <meta property="og:locale" content="en_us">
@@ -18,9 +18,23 @@ Pid = spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]). This BIF never fails A 
     <meta property="article:section" content="notes">
     <meta property="article:published_time" content="2024-09-30T00:00:00+00:00">
     <meta property="article:modified_time" content="2024-09-30T00:00:00+00:00">
+    <meta property="article:tag" content="Erlang">
 <link rel="stylesheet" href="/css/main.min.1135c79bd24c232c465ba2c4e5a9644086ce3f8358dbd0e0d76c5e86d24f1fad.css" />
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+        <script type="text/javascript" src ="https://d3js.org/d3.v7.min.js"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)']]                  
+    }
+  };
+</script>
+
+    
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
   </head>
   <body><nav>
   <img
@@ -48,8 +62,6 @@ Pid = spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]). This BIF never fails A 
 
     </small>
   </h2><p>:ID:       63607e63-4428-4578-bf2a-12a49649b49c
-:EXPORT_HUGO_CATEGORIES: &ldquo;FP&rdquo;
-:EXPORT_HUGO_TAGS: &ldquo;Erlang&rdquo;
 :ROAM_ALIAS: &ldquo;Erlang Process&rdquo;</p>
 <h2 id="processes">Processes</h2>
 <p>In [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d], creation of a parallel process is achieved by evaluating the <code>spawn</code>
@@ -143,6 +155,62 @@ executed. Otherwise, <code>expr02</code> will be executed.</li>
 </span></span><span class="line"><span class="cl">  <span class="k">end</span>
 </span></span></code></pre></div>
 
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
 
    
 
