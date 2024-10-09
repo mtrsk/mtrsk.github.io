@@ -222,3 +222,5 @@ If we want additional control structures, we can make our own. Erlang has no for
     mps_to_mph(Mps) -> 2.23693629 * Mps.
     mps_to_kph(Mps) -> 3.6 * Mps.
 #+END_SRC
+
+#+print_bibliography: 

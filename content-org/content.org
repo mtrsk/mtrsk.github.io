@@ -120,6 +120,17 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 
 #+RESULTS: export-notes
 
+** Dializer
+:PROPERTIES:
+:EXPORT_FILE_NAME: dializer
+:EXPORT_DATE: 2024-10-09
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug dializer
+:CUSTOM_ID: dializer
+:END:
+
+#+INCLUDE: "../notes/20241009092203-dializer.org"
+    
+
 ** Haskell
 :PROPERTIES:
 :EXPORT_FILE_NAME: haskell
@@ -140,17 +151,6 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 :END:
 
 #+INCLUDE: "../notes/20241007121610-nixos.org"
-    
-
-** Dializer
-:PROPERTIES:
-:EXPORT_FILE_NAME: dializer
-:EXPORT_DATE: 2024-10-06
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug dializer
-:CUSTOM_ID: dializer
-:END:
-
-#+INCLUDE: "../notes/20241006133317-dializer.org"
     
 
 ** Elixir

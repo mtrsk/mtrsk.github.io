@@ -25,9 +25,9 @@
 ;; This makes it easier to export my notes into something that
 ;; ox-hugo will easily pick links and generate markdowns.
 ;; https://www.orgroam.com/manual.html#Overriding-the-default-link-creation-function
-(defun org-roam-custom-link-builder (node)
-  (let ((file (org-roam-node-file node)))
-    (concat (file-name-base file) ".html")))
+;;(defun org-roam-custom-link-builder (node)
+;;  (let ((file (org-roam-node-file node)))
+;;    (concat (file-name-base file) ".html")))
 
 (setq org-roam-graph-link-builder 'org-roam-custom-link-builder)
 

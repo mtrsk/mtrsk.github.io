@@ -18,6 +18,7 @@ default:
 # Generate the Markdown files
 build: clean
     emacs $(pwd) --batch --load export.el
+    python fix-ref-links.py
 
 # Publish content
 public: build
@@ -37,8 +38,7 @@ run: build
 
 # Build for CI
 ci-build: clean
-    nix develop .#ci --impure -c emacs $(pwd) --batch --load export.el
-    python fix-ref-links.py
+    nix develop .#ci --impure -c just build
 
 ci-publish: ci-build
     nix develop .#ci --impure -c hugo
