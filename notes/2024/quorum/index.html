@@ -10,9 +10,9 @@
     <meta property="og:url" content="https://mtrsk.github.io/notes/2024/quorum/">
   <meta property="og:site_name" content="Benevides&#39; Blog">
   <meta property="og:title" content="Quorum">
-  <meta property="og:description" content=":ID: 42950824-228d-48d6-abec-4e18908dfca0 :EXPORT_HUGO_CATEGORIES: “DistributedSystems” :EXPORT_HUGO_TAGS: “Clusters”
-Quorum means “majority”, and the idea behind quorum is easy to understand: if the [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb] doesn’t have quorum, no actions will be taken in the cluster. This by itself would offer a good solution to avoid the [BROKEN LINK: 582a4090-eb66-4dfd-8166-9acd3c97dcc9] problem.
-But to make sure that it can never happen, that multiple nodes activate the same resources in the cluster, another mechanism is used as well.">
+  <meta property="og:description" content=":ID: 42950824-228d-48d6-abec-4e18908dfca0
+Quorum means “majority”, and the idea behind quorum is easy to understand: if the Clusters doesn’t have quorum, no actions will be taken in the cluster. This by itself would offer a good solution to avoid the Split Brain problem.
+But to make sure that it can never happen, that multiple nodes activate the same resources in the cluster, another mechanism is used as well. This mechanism is known as Stonith.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="notes">
@@ -61,18 +61,16 @@ But to make sure that it can never happen, that multiple nodes activate the same
 
 
     </small>
-  </h2><p>:ID:       42950824-228d-48d6-abec-4e18908dfca0
-:EXPORT_HUGO_CATEGORIES: &ldquo;DistributedSystems&rdquo;
-:EXPORT_HUGO_TAGS: &ldquo;Clusters&rdquo;</p>
+  </h2><p>:ID:       42950824-228d-48d6-abec-4e18908dfca0</p>
 <blockquote>
 <p>Quorum means &ldquo;majority&rdquo;, and the idea behind quorum is easy to understand: if
-the [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb] doesn’t have quorum, no actions will be taken in the cluster. This
-by itself would offer a good solution to avoid the [BROKEN LINK: 582a4090-eb66-4dfd-8166-9acd3c97dcc9] problem.</p>
+the <a href="/notes/2024/clusters/">Clusters</a> doesn’t have quorum, no actions will be taken in the cluster. This
+by itself would offer a good solution to avoid the <a href="/notes/2024/split_brain/">Split Brain</a> problem.</p>
 <p>But to make sure that it can never happen, that multiple nodes activate the same
 resources in the cluster, another mechanism is used as well. This mechanism is
-known as [BROKEN LINK: 789326a5-20aa-4492-acb6-1474c3c11a4a]. (, <a href="#citeproc_bib_item_1">Van Vugt 2014, 6</a>)</p>
+known as <a href="/notes/2024/stonith/">Stonith</a>. (, <a href="#citeproc_bib_item_1">Van Vugt 2014, 6</a>)</p>
 </blockquote>
-<p>This is required to avoid corruption on vital [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb] resources, such as the
+<p>This is required to avoid corruption on vital <a href="/notes/2024/clusters/">Clusters</a> resources, such as the
 File System.</p>
 <h2 id="references">References</h2>
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
@@ -80,6 +78,8 @@ File System.</p>
 </div>
 
 
+
+   
 
    
 

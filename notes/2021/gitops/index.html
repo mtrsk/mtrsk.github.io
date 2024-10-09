@@ -11,10 +11,11 @@
   <meta property="og:site_name" content="Benevides&#39; Blog">
   <meta property="og:title" content="Gitops">
   <meta property="og:description" content=":ID: e670c5d9-8238-4bf4-a916-e9ffb3097fa1
-Architecture Components Items Source Control Github, Gitlab, … Git Resitory Container/Helm Registry Gitlab Registry, Azure Container Registry, … Operator Flux, Argo CD, [BROKEN LINK: ee377537-0c8d-48c9-a181-19a2cff8c4a7] apply, … Namespace A well defined namespace policy (per app, per environment, … ArgoCD Architecture API Server
+Architecture Components Items Source Control Github, Gitlab, … Git Resitory Container/Helm Registry Gitlab Registry, Azure Container Registry, … Operator Flux, Argo CD, Kubectl apply, … Namespace A well defined namespace policy (per app, per environment, … ArgoCD Architecture API Server
 A gRPC/REST web server that exposes the API, it’s used by both the UI &amp; CLI
 Repository Server
-Maintains a local cache of the git repository">
+Maintains a local cache of the git repository
+Application Controller">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="notes">
@@ -86,7 +87,7 @@ Maintains a local cache of the git repository">
 </tr>
 <tr>
 <td>Operator</td>
-<td>Flux, Argo CD, [BROKEN LINK: ee377537-0c8d-48c9-a181-19a2cff8c4a7] apply, &hellip;</td>
+<td>Flux, Argo CD, <a href="/notes/2021/kubectl/">Kubectl</a> apply, &hellip;</td>
 </tr>
 <tr>
 <td>Namespace</td>
@@ -107,12 +108,14 @@ Maintains a local cache of the git repository">
 </li>
 <li>
 <p>Application Controller</p>
-<p>A [BROKEN LINK: dd924a84-7d6f-41ec-98c2-aa16582c0d89] controller monitors apps and compares the current state of
+<p>A <a href="/notes/2021/kubernetes/">Kubernetes</a> controller monitors apps and compares the current state of
 the cluster with the desired state of the Git repository.</p>
 </li>
 </ul>
 
 
+
+   
 
    
 

@@ -13,7 +13,7 @@
       <link>https://mtrsk.github.io/notes/2024/split-brain/</link>
       <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/split-brain/</guid>
-      <description>:ID: 582a4090-eb66-4dfd-8166-9acd3c97dcc9&#xA;Split brain means that the [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb] is split in two (or more) parts, but both parts think they are the only remaining part of the cluster. This can lead to very bad situations when both parts of the cluster try to host the resources that are offered by the cluster. If the resource is a file system, and multiple nodes try to write to the file system simultaneously and without coordination, it may lead to corruption of the file system and the loss of data.</description>
+      <description>:ID: 582a4090-eb66-4dfd-8166-9acd3c97dcc9&#xA;Split brain means that the Clusters is split in two (or more) parts, but both parts think they are the only remaining part of the cluster. This can lead to very bad situations when both parts of the cluster try to host the resources that are offered by the cluster. If the resource is a file system, and multiple nodes try to write to the file system simultaneously and without coordination, it may lead to corruption of the file system and the loss of data.</description>
     </item>
     <item>
       <title>Clusters</title>
@@ -34,7 +34,7 @@
       <link>https://mtrsk.github.io/notes/2024/quorum/</link>
       <pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/quorum/</guid>
-      <description>:ID: 42950824-228d-48d6-abec-4e18908dfca0 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;DistributedSystems&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Clusters&amp;rdquo;&#xA;Quorum means &amp;ldquo;majority&amp;rdquo;, and the idea behind quorum is easy to understand: if the [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb] doesn’t have quorum, no actions will be taken in the cluster. This by itself would offer a good solution to avoid the [BROKEN LINK: 582a4090-eb66-4dfd-8166-9acd3c97dcc9] problem.&#xA;But to make sure that it can never happen, that multiple nodes activate the same resources in the cluster, another mechanism is used as well.</description>
+      <description>:ID: 42950824-228d-48d6-abec-4e18908dfca0&#xA;Quorum means &amp;ldquo;majority&amp;rdquo;, and the idea behind quorum is easy to understand: if the Clusters doesn’t have quorum, no actions will be taken in the cluster. This by itself would offer a good solution to avoid the Split Brain problem.&#xA;But to make sure that it can never happen, that multiple nodes activate the same resources in the cluster, another mechanism is used as well. This mechanism is known as Stonith.</description>
     </item>
   </channel>
 </rss>

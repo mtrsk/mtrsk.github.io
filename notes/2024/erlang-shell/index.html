@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Benevides&#39; Blog">
   <meta property="og:title" content="Erlang Shell">
   <meta property="og:description" content=":ID: bcd04f60-0a4c-4213-90f7-139c0ddf5bef
-Some features of the [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] shell.
+Some features of the Erlang shell.
 Examples Compiling and Running “Hello World” in the Shell -module(hello). -export([start/0]). start() -&gt; io:format(&#34;Hello world~n&#34;). Running the hello.erl program in the erlang shell.
 $ erl Erlang/OTP 26 [erts-14.2.5] [source] [64-bit] [smp:24:24] [ds:24:24:10] [async-threads:1] [jit:ns] Eshell V14.2.5 (press Ctrl&#43;G to abort, type help(). for help) 1&gt; c(hello). {ok,hello} 2&gt; hello:start(). Hello world ok Compiling Outside the Erlang Shell $ erlc hello.erl $ erl -noshell -s hello start -s init stop erlc evokes the Erlang compiler from the command line.">
   <meta property="og:locale" content="en_us">
@@ -63,7 +63,7 @@ $ erl Erlang/OTP 26 [erts-14.2.5] [source] [64-bit] [smp:24:24] [ds:24:24:10] [a
 
     </small>
   </h2><p>:ID:       bcd04f60-0a4c-4213-90f7-139c0ddf5bef</p>
-<p>Some features of the [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] shell.</p>
+<p>Some features of the <a href="/notes/2024/erlang/">Erlang</a> shell.</p>
 <h2 id="examples">Examples</h2>
 <h3 id="compiling-and-running-hello-world-in-the-shell">Compiling and Running &ldquo;Hello World&rdquo; in the Shell</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl">  <span class="o">-</span><span class="n">module</span><span class="p">(</span><span class="n">hello</span><span class="p">).</span>
@@ -88,7 +88,7 @@ $ erl Erlang/OTP 26 [erts-14.2.5] [source] [64-bit] [smp:24:24] [ds:24:24:10] [a
 <p><code>erlc</code> evokes the Erlang compiler from the command line. The compiler compiles the code in <code>hello.erl</code> and produces an object code file called <code>hello.beam</code>.</p>
 <p>The <code>erl -noshell</code> command loads the module <code>hello</code> and evaluates the function
 <code>hello:start()</code>. After this, it evaluates the expression <code>init:stop()</code>, which
-terminates the Erlang session.</p>
+terminates the Erlang session. (<a href="#citeproc_bib_item_1">Armstrong 2013, 14</a>)</p>
 </blockquote>
 <h2 id="commands">Commands</h2>
 <h3 id="seeing-your-bound-variables">Seeing Your Bound Variables</h3>
@@ -101,9 +101,12 @@ terminates the Erlang session.</p>
 </span></span><span class="line"><span class="cl">  &gt; f<span class="o">()</span>.
 </span></span></code></pre></div><h2 id="references">References</h2>
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Armstrong, Joe. 2013. “Programming Erlang: Software for a Concurrent World.”</div>
 </div>
 
 
+
+   
 
    
 

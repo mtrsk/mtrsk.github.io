@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Benevides&#39; Blog">
   <meta property="og:title" content="Sequential Erlang">
   <meta property="og:description" content=":ID: f0da3356-3797-4ddc-8306-cd333f159754
-The basic constructs of the [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] language.
+The basic constructs of the Erlang language.
 Datatypes Integers Large Integers are converted to bignums If you need to do calculations on integers using a base other than 10, you can use Base#Value notation. (Laurent 2017, 7)
 Floats When you divide two integers with /, the result is automatically converted to a floating-point number. Integer division is handled by div and rem. Atoms In Erlang, atoms are used to represent constant values.">
   <meta property="og:locale" content="en_us">
@@ -63,7 +63,7 @@ Floats When you divide two integers with /, the result is automatically converte
 
     </small>
   </h2><p>:ID:       f0da3356-3797-4ddc-8306-cd333f159754</p>
-<p>The basic constructs of the [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] language.</p>
+<p>The basic constructs of the <a href="/notes/2024/erlang/">Erlang</a> language.</p>
 <h2 id="datatypes">Datatypes</h2>
 <h3 id="integers">Integers</h3>
 <ul>
@@ -71,7 +71,7 @@ Floats When you divide two integers with /, the result is automatically converte
 </ul>
 <blockquote>
 <p>If you need to do calculations on integers using a base other than 10, you can use
-Base#Value notation. (Laurent 2017, 7)</p>
+Base#Value notation. (<a href="#citeproc_bib_item_2">Laurent 2017, 7</a>)</p>
 </blockquote>
 <h3 id="floats">Floats</h3>
 <ul>
@@ -94,7 +94,7 @@ definitions or include files.</li>
 <p>Tuples are created automatically when we declare them and are destroyed when
 they can no longer be used. Erlang uses a garbage collector to reclaim all
 unused memory, so we don’t have to worry about memory
-allocation. (Armstrong 2013, 35)</p>
+allocation. (<a href="#citeproc_bib_item_1">Armstrong 2013, 35</a>)</p>
 </blockquote>
 <p>You can also pattern match tuples by using free variables:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  1&gt; <span class="nv">Point</span> <span class="o">=</span> <span class="o">{</span>point, 10, 45<span class="o">}</span>.
@@ -128,7 +128,7 @@ and each qualifier is either a generator, a bitstring generator, or a filter.</p
 <ul>
 <li>Generators are written as <code>Pattern &lt;- ListExpr</code> where <code>ListExpr</code> must be an expression that evaluates to a list of terms.</li>
 <li>Bitstring generators are written as <code>BitStringPattern &lt;= BitStringExpr</code> where <code>BitStringExpr</code> must be an expression that evaluates to a bitstring.</li>
-<li>Filters are either predicates or boolean expressions. (Armstrong 2013, 61)</li>
+<li>Filters are either predicates or boolean expressions. (<a href="#citeproc_bib_item_1">Armstrong 2013, 61</a>)</li>
 </ul>
 </blockquote>
 <h3 id="strings">Strings</h3>
@@ -152,7 +152,7 @@ expect binaries to be in UTF-8:</p>
 with each of the elements in a tuple. This allows us to refer to an
 element of a tuple by name and not by position. A pre-compiler
 takes the record definition and replaces it with the appropriate tuple
-reference. (Armstrong 2013)</p>
+reference. (<a href="#citeproc_bib_item_1">Armstrong 2013</a>)</p>
 </blockquote>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl">  <span class="o">-</span><span class="n">record</span><span class="p">(</span><span class="n">todo</span><span class="p">,</span> <span class="p">{</span><span class="n">status</span><span class="o">=</span><span class="n">reminder</span><span class="p">,</span><span class="n">who</span><span class="o">=</span><span class="n">joe</span><span class="p">,</span><span class="n">text</span><span class="p">}).</span>
 </span></span></code></pre></div><p>to load a record from the the shell, one must use the <code>rr</code> command:</p>
@@ -175,7 +175,7 @@ reference. (Armstrong 2013)</p>
 <p>Note that Erlang variables start with uppercase characters. So, <code>X</code>, <code>This</code>, and
 <code>A_long_name</code> are all variables. Names beginning with lowercase letters—for example,
 <code>monday</code> or <code>friday</code> are not variables but are symbolic constants called
-atoms. (Armstrong 2013)</p>
+atoms. (<a href="#citeproc_bib_item_1">Armstrong 2013</a>)</p>
 </blockquote>
 <ul>
 <li>Erlang Variables Do Not Vary</li>
@@ -235,8 +235,15 @@ operation (<code>=</code>).</li>
 </span></span><span class="line"><span class="cl">    <span class="n">fall_velocity</span><span class="p">(</span><span class="nv">Distance</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nn">math</span><span class="p">:</span><span class="nf">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">9</span><span class="p">.</span><span class="mi">8</span> <span class="o">*</span> <span class="nv">Distance</span><span class="p">).</span>
 </span></span><span class="line"><span class="cl">    <span class="n">mps_to_mph</span><span class="p">(</span><span class="nv">Mps</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="mi">2</span><span class="p">.</span><span class="mi">23693629</span> <span class="o">*</span> <span class="nv">Mps</span><span class="p">.</span>
 </span></span><span class="line"><span class="cl">    <span class="n">mps_to_kph</span><span class="p">(</span><span class="nv">Mps</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="mi">3</span><span class="p">.</span><span class="mi">6</span> <span class="o">*</span> <span class="nv">Mps</span><span class="p">.</span>
-</span></span></code></pre></div>
+</span></span></code></pre></div><h2 id="references">References</h2>
+<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Armstrong, Joe. 2013. “Programming Erlang: Software for a Concurrent World.”</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Laurent, Simon St. 2017. <i>Introducing Erlang: Getting Started in Functional Programming</i>. O’Reilly Media, Inc.</div>
+</div>
 
+
+
+   
 
    
 

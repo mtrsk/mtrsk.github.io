@@ -11,7 +11,8 @@
   <meta property="og:site_name" content="Benevides&#39; Blog">
   <meta property="og:title" content="Monad">
   <meta property="og:description" content=":ID: a3e972e0-8db9-4556-9dca-0e4f6a663236
-Haskell class Monad m where (&gt;&gt;=) :: m a -&gt; ( a -&gt; m b) -&gt; m b (&gt;&gt;) :: m a -&gt; m b -&gt; m b return :: a -&gt; m a Name Handles Signature Result Errors Either e a -&gt; (a -&gt; Either e b) -&gt; Either e b Maybe Absent values Maybe a -&gt; (a -&gt; Maybe b) -&gt; Maybe b IO Pure/Impure separation IO a -&gt; (a -&gt; IO b) -&gt; IO b State Monadic State State a -&gt; (a -&gt; State b) -&gt; State b Reader Environment Data Reader a -&gt; (a -&gt; Reader b) -&gt; Reader b Writer Writer-Only Data Writer a -&gt; (a -&gt; Writer b) -&gt; Writer b Parser Composing Parsers Parser a -&gt; (a -&gt; Parser b) -&gt; Parser b ">
+Haskell In Haskell, monads are defined as:
+class Monad m where (&gt;&gt;=) :: m a -&gt; ( a -&gt; m b) -&gt; m b (&gt;&gt;) :: m a -&gt; m b -&gt; m b return :: a -&gt; m a Name Handles Signature Result Errors Either e a -&gt; (a -&gt; Either e b) -&gt; Either e b Maybe Absent values Maybe a -&gt; (a -&gt; Maybe b) -&gt; Maybe b IO Pure/Impure separation IO a -&gt; (a -&gt; IO b) -&gt; IO b State Monadic State State a -&gt; (a -&gt; State b) -&gt; State b Reader Environment Data Reader a -&gt; (a -&gt; Reader b) -&gt; Reader b Writer Writer-Only Data Writer a -&gt; (a -&gt; Writer b) -&gt; Writer b Parser Composing Parsers Parser a -&gt; (a -&gt; Parser b) -&gt; Parser b ">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="notes">
@@ -62,6 +63,7 @@ Haskell class Monad m where (&gt;&gt;=) :: m a -&gt; ( a -&gt; m b) -&gt; m b (&
     </small>
   </h2><p>:ID:       a3e972e0-8db9-4556-9dca-0e4f6a663236</p>
 <h2 id="haskell">Haskell</h2>
+<p>In <a href="/notes/2024/haskell/">Haskell</a>, monads are defined as:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-haskell" data-lang="haskell"><span class="line"><span class="cl">    <span class="kr">class</span> <span class="kt">Monad</span> <span class="n">m</span> <span class="kr">where</span>
 </span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="o">&gt;&gt;=</span><span class="p">)</span>  <span class="ow">::</span> <span class="n">m</span> <span class="n">a</span> <span class="ow">-&gt;</span> <span class="p">(</span>  <span class="n">a</span> <span class="ow">-&gt;</span> <span class="n">m</span> <span class="n">b</span><span class="p">)</span> <span class="ow">-&gt;</span> <span class="n">m</span> <span class="n">b</span>
 </span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="o">&gt;&gt;</span><span class="p">)</span>   <span class="ow">::</span> <span class="n">m</span> <span class="n">a</span> <span class="ow">-&gt;</span>  <span class="n">m</span> <span class="n">b</span>         <span class="ow">-&gt;</span> <span class="n">m</span> <span class="n">b</span>
@@ -114,6 +116,8 @@ Haskell class Monad m where (&gt;&gt;=) :: m a -&gt; ( a -&gt; m b) -&gt; m b (&
 </table>
 
 
+
+   
 
    
 

@@ -6,8 +6,29 @@
     <description>Recent content in Tags on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mtrsk.github.io/tags/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Elixir</title>
+      <link>https://mtrsk.github.io/tags/elixir/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/elixir/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Erlang</title>
+      <link>https://mtrsk.github.io/tags/erlang/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/erlang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Haskell</title>
+      <link>https://mtrsk.github.io/tags/haskell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/haskell/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Linux</title>
       <link>https://mtrsk.github.io/tags/linux/</link>
@@ -27,20 +48,6 @@
       <link>https://mtrsk.github.io/tags/nixos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/tags/nixos/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Elixir</title>
-      <link>https://mtrsk.github.io/tags/elixir/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/tags/elixir/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Erlang</title>
-      <link>https://mtrsk.github.io/tags/erlang/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/tags/erlang/</guid>
       <description></description>
     </item>
     <item>
@@ -97,13 +104,6 @@
       <link>https://mtrsk.github.io/tags/classic-papers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/tags/classic-papers/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Haskell</title>
-      <link>https://mtrsk.github.io/tags/haskell/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/tags/haskell/</guid>
       <description></description>
     </item>
     <item>

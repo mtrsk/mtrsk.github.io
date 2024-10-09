@@ -5,13 +5,53 @@
   
     <link href="https://mtrsk.github.io/notes/atom.xml" rel="self" type="application/atom+xml" />
   
-  <updated>2024-10-08T01:53:36Z</updated>
+  <updated>2024-10-09T12:37:18Z</updated>
   <author>
     
     
   </author>
   <generator>Hugo</generator>
   <id>https://mtrsk.github.io/notes/</id>
+  
+  <entry>
+    <title>Dializer</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/dializer/"/>
+    <id>https://mtrsk.github.io/notes/2024/dializer/</id>
+    <published>2024-10-09T00:00:00Z</published>
+    <updated>2024-10-09T00:00:00Z</updated>
+    <summary>:ID: 54473599-719d-460b-92ba-3796dd951872
+Dialyzer is a static analysis tool that identifies software discrepancies, such as definite type errors, code that is unreachable because of programming errors, and unnecessary tests in [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] and [BROKEN LINK: 8d568d81-9c22-4d94-81b2-27a2d730ba98] modules or an entire codebases.</summary>
+    <content type="html">&lt;p&gt;:ID:       54473599-719d-460b-92ba-3796dd951872&lt;/p&gt;
+&lt;p&gt;Dialyzer is a static analysis tool that identifies software discrepancies, such
+as definite type errors, code that is unreachable because of programming errors,
+and unnecessary tests in [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] and [BROKEN LINK: 8d568d81-9c22-4d94-81b2-27a2d730ba98] modules or an entire codebases.&lt;/p&gt;
+</content>
+    
+    <category term="Erlang"/>
+    
+    <category term="Elixir"/>
+    
+    
+    <category term="Functional Programming"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Haskell</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/haskell/"/>
+    <id>https://mtrsk.github.io/notes/2024/haskell/</id>
+    <published>2024-10-08T00:00:00Z</published>
+    <updated>2024-10-08T00:00:00Z</updated>
+    <summary>:ID: a74d6aac-dbe9-48a6-83ca-648cd6ea933e</summary>
+    <content type="html">&lt;p&gt;:ID:       a74d6aac-dbe9-48a6-83ca-648cd6ea933e&lt;/p&gt;
+</content>
+    
+    <category term="Haskell"/>
+    
+    
+    <category term="Functional Programming"/>
+    
+  </entry>
   
   <entry>
     <title>Nixos</title>
@@ -37,43 +77,20 @@ NixOS is a [BROKEN LINK: 8a427ee7-2ef1-489b-af82-91de7be8a3ba] distribution base
   </entry>
   
   <entry>
-    <title>Dializer</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/dializer/"/>
-    <id>https://mtrsk.github.io/notes/2024/dializer/</id>
-    <published>2024-10-06T00:00:00Z</published>
-    <updated>2024-10-06T00:00:00Z</updated>
-    <summary>:ID: 228628b7-14cf-41cb-bc39-018a4ff2325f
-Dialyzer is a static analysis tool that identifies software discrepancies, such as definite type errors, code that is unreachable because of programming errors, and unnecessary tests in [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] and [BROKEN LINK: 8d568d81-9c22-4d94-81b2-27a2d730ba98] modules or an entire codebases.</summary>
-    <content type="html">&lt;p&gt;:ID:       228628b7-14cf-41cb-bc39-018a4ff2325f&lt;/p&gt;
-&lt;p&gt;Dialyzer is a static analysis tool that identifies software discrepancies, such
-as definite type errors, code that is unreachable because of programming errors,
-and unnecessary tests in [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] and [BROKEN LINK: 8d568d81-9c22-4d94-81b2-27a2d730ba98] modules or an entire codebases.&lt;/p&gt;
-</content>
-    
-    <category term="Erlang"/>
-    
-    <category term="Elixir"/>
-    
-    
-    <category term="Functional Programming"/>
-    
-  </entry>
-  
-  <entry>
     <title>Elixir</title>
     <link rel="alternate" href="https://mtrsk.github.io/notes/2024/elixir/"/>
     <id>https://mtrsk.github.io/notes/2024/elixir/</id>
     <published>2024-10-06T00:00:00Z</published>
     <updated>2024-10-06T00:00:00Z</updated>
     <summary>:ID: 8d568d81-9c22-4d94-81b2-27a2d730ba98 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;FP&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Elixir&amp;rdquo;
-Elixir describes itself as a functional, meta-programming-aware language built on top of the [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] virtual machine.
+Elixir describes itself as a functional, meta-programming-aware language built on top of the Erlang virtual machine.
 Basics Protocols </summary>
     <content type="html">&lt;p&gt;:ID:       8d568d81-9c22-4d94-81b2-27a2d730ba98
 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;FP&amp;rdquo;
 :EXPORT_HUGO_TAGS: &amp;ldquo;Elixir&amp;rdquo;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Elixir describes itself as a functional, meta-programming-aware language built
-on top of the [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] virtual machine.&lt;/p&gt;
+on top of the &lt;a href=&#34;/notes/2024/erlang/&#34;&gt;Erlang&lt;/a&gt; virtual machine.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;basics&#34;&gt;Basics&lt;/h2&gt;
 &lt;h3 id=&#34;protocols&#34;&gt;Protocols&lt;/h3&gt;
@@ -91,11 +108,11 @@ on top of the [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] virtual machin
     <published>2024-10-04T00:00:00Z</published>
     <updated>2024-10-04T00:00:00Z</updated>
     <summary>:ID: bcd04f60-0a4c-4213-90f7-139c0ddf5bef
-Some features of the [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] shell.
+Some features of the Erlang shell.
 Examples Compiling and Running &amp;ldquo;Hello World&amp;rdquo; in the Shell -module(hello). -export([start/0]). start() -&amp;gt; io:format(&amp;#34;Hello world~n&amp;#34;). Running the hello.erl program in the erlang shell.
 $ erl Erlang/OTP 26 [erts-14.2.5] [source] [64-bit] [smp:24:24] [ds:24:24:10] [async-threads:1] [jit:ns] Eshell V14.2.5 (press Ctrl+G to abort, type help(). for help) 1&amp;gt; c(hello). {ok,hello} 2&amp;gt; hello:start(). Hello world ok Compiling Outside the Erlang Shell $ erlc hello.erl $ erl -noshell -s hello start -s init stop erlc evokes the Erlang compiler from the command line.</summary>
     <content type="html">&lt;p&gt;:ID:       bcd04f60-0a4c-4213-90f7-139c0ddf5bef&lt;/p&gt;
-&lt;p&gt;Some features of the [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] shell.&lt;/p&gt;
+&lt;p&gt;Some features of the &lt;a href=&#34;/notes/2024/erlang/&#34;&gt;Erlang&lt;/a&gt; shell.&lt;/p&gt;
 &lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
 &lt;h3 id=&#34;compiling-and-running-hello-world-in-the-shell&#34;&gt;Compiling and Running &amp;ldquo;Hello World&amp;rdquo; in the Shell&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;module&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hello&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;
@@ -120,7 +137,7 @@ $ erl Erlang/OTP 26 [erts-14.2.5] [source] [64-bit] [smp:24:24] [ds:24:24:10] [a
 &lt;p&gt;&lt;code&gt;erlc&lt;/code&gt; evokes the Erlang compiler from the command line. The compiler compiles the code in &lt;code&gt;hello.erl&lt;/code&gt; and produces an object code file called &lt;code&gt;hello.beam&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;erl -noshell&lt;/code&gt; command loads the module &lt;code&gt;hello&lt;/code&gt; and evaluates the function
 &lt;code&gt;hello:start()&lt;/code&gt;. After this, it evaluates the expression &lt;code&gt;init:stop()&lt;/code&gt;, which
-terminates the Erlang session.&lt;/p&gt;
+terminates the Erlang session. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Armstrong 2013, 14&lt;/a&gt;)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;commands&#34;&gt;Commands&lt;/h2&gt;
 &lt;h3 id=&#34;seeing-your-bound-variables&#34;&gt;Seeing Your Bound Variables&lt;/h3&gt;
@@ -133,6 +150,7 @@ terminates the Erlang session.&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;gt; f&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;.
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Armstrong, Joe. 2013. “Programming Erlang: Software for a Concurrent World.”&lt;/div&gt;
 &lt;/div&gt;
 </content>
     
@@ -150,11 +168,11 @@ terminates the Erlang session.&lt;/p&gt;
     <published>2024-10-01T00:00:00Z</published>
     <updated>2024-10-01T00:00:00Z</updated>
     <summary>:ID: 22ae9c25-3123-4ed8-b765-369ac89d2942
-In [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] we have a large number of processes at our disposal, so the failure of any individual process is not so important. We usually write only a small amount of defensive code and instead concentrate on writing corrective code. We take measures to detect the errors and then correct them after they have occurred. (Armstrong 2013)
+In Erlang we have a large number of processes at our disposal, so the failure of any individual process is not so important. We usually write only a small amount of defensive code and instead concentrate on writing corrective code. We take measures to detect the errors and then correct them after they have occurred. (Armstrong 2013)
 Definitions Link A bi-directional propagation path for exit signals. Exit Signal Transmit process termination information.</summary>
     <content type="html">&lt;p&gt;:ID:       22ae9c25-3123-4ed8-b765-369ac89d2942&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;In [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] we have a large number of processes at our disposal, so the failure
+&lt;p&gt;In &lt;a href=&#34;/notes/2024/erlang/&#34;&gt;Erlang&lt;/a&gt; we have a large number of processes at our disposal, so the failure
 of any individual process is not so important. We usually write only a small
 amount of defensive code and instead concentrate on writing corrective code.
 We take measures to detect the errors and then correct them after they have
@@ -241,13 +259,13 @@ exit signal will contain the following information:
     <published>2024-10-01T00:00:00Z</published>
     <updated>2024-10-01T00:00:00Z</updated>
     <summary>:ID: ae205cab-10ea-4cff-9051-fef9021638b6 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Databases&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;SQL&amp;rdquo; &amp;ldquo;Postgres&amp;rdquo;
-Locating the database server files [BROKEN LINK: 1949c98e-e1c0-474b-b383-c76aa418d583] Database server files are initially stored in a location referred to as data directory:
+Locating the database server files Postgres Database server files are initially stored in a location referred to as data directory:
 SHOW data_directory; </summary>
     <content type="html">&lt;p&gt;:ID:       ae205cab-10ea-4cff-9051-fef9021638b6
 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Databases&amp;rdquo;
 :EXPORT_HUGO_TAGS: &amp;ldquo;SQL&amp;rdquo; &amp;ldquo;Postgres&amp;rdquo;&lt;/p&gt;
 &lt;h2 id=&#34;locating-the-database-server-files&#34;&gt;Locating the database server files&lt;/h2&gt;
-&lt;p&gt;[BROKEN LINK: 1949c98e-e1c0-474b-b383-c76aa418d583] Database server files are initially stored in a location referred to as data directory:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/notes/2024/postgres/&#34;&gt;Postgres&lt;/a&gt; Database server files are initially stored in a location referred to as data directory:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-psql&#34; data-lang=&#34;psql&#34;&gt;SHOW data_directory;
 &lt;/code&gt;&lt;/pre&gt;</content>
     
@@ -280,12 +298,12 @@ SHOW data_directory; </summary>
     <published>2024-09-30T00:00:00Z</published>
     <updated>2024-09-30T00:00:00Z</updated>
     <summary>:ID: 63607e63-4428-4578-bf2a-12a49649b49c :ROAM_ALIAS: &amp;ldquo;Erlang Process&amp;rdquo;
-Processes In [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d], creation of a parallel process is achieved by evaluating the spawn primitive. This primitive creates a concurrent process and returns a process identifier (PID) that can used to interact with the newly created process:
+Processes In Erlang, creation of a parallel process is achieved by evaluating the spawn primitive. This primitive creates a concurrent process and returns a process identifier (PID) that can used to interact with the newly created process:
 Pid = spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]). This BIF never fails A process can either terminate: Abormally when run-time errors occur Normally when there is no more code to execute Modeling Concurrency The syntax Pid !</summary>
     <content type="html">&lt;p&gt;:ID:       63607e63-4428-4578-bf2a-12a49649b49c
 :ROAM_ALIAS: &amp;ldquo;Erlang Process&amp;rdquo;&lt;/p&gt;
 &lt;h2 id=&#34;processes&#34;&gt;Processes&lt;/h2&gt;
-&lt;p&gt;In [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d], creation of a parallel process is achieved by evaluating the &lt;code&gt;spawn&lt;/code&gt;
+&lt;p&gt;In &lt;a href=&#34;/notes/2024/erlang/&#34;&gt;Erlang&lt;/a&gt;, creation of a parallel process is achieved by evaluating the &lt;code&gt;spawn&lt;/code&gt;
 primitive. This primitive creates a concurrent process and returns a process
 identifier (PID) that can used to interact with the newly created process:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;Pid&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;spawn&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;ModName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;FuncName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Arg1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Arg2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;...,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ArgN&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]).&lt;/span&gt;
@@ -300,7 +318,7 @@ identifier (PID) that can used to interact with the newly created process:&lt;/p
 &lt;/ul&gt;
 &lt;h3 id=&#34;modeling-concurrency&#34;&gt;Modeling Concurrency&lt;/h3&gt;
 &lt;p&gt;The syntax &lt;code&gt;Pid ! Msg&lt;/code&gt; means &amp;ldquo;send the message &lt;code&gt;Msg&lt;/code&gt; to the process &lt;code&gt;Pid&lt;/code&gt;&amp;rdquo;, where &lt;code&gt;Msg&lt;/code&gt;
-is from any valid [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] data type. For a &lt;code&gt;Pid&lt;/code&gt; to process a message we need to
+is from any valid &lt;a href=&#34;/notes/2024/erlang/&#34;&gt;Erlang&lt;/a&gt; data type. For a &lt;code&gt;Pid&lt;/code&gt; to process a message we need to
 pattern match:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;receive&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;From&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Message&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;
@@ -374,7 +392,10 @@ executed. Otherwise, &lt;code&gt;expr02&lt;/code&gt; will be executed.&lt;/li&gt
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;after&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TimeOut&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;expr02&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
+&lt;/div&gt;
+</content>
     
     <category term="Erlang"/>
     
@@ -390,16 +411,21 @@ executed. Otherwise, &lt;code&gt;expr02&lt;/code&gt; will be executed.&lt;/li&gt
     <published>2024-09-28T00:00:00Z</published>
     <updated>2024-09-28T00:00:00Z</updated>
     <summary>:ID: 6ed3a191-0128-453e-b0b6-37c48593a6f0 :ROAM_ALIAS: &amp;ldquo;Open Telecom Platform&amp;rdquo;
-[BROKEN LINK: 6ed3a191-0128-453e-b0b6-37c48593a6f0] is a domain-independent set of frameworks, principles, and patterns that guide and support the structure, design, implementation, and deployment of [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] systems. Using OTP in your projects will help you avoid accidental complexity: things that are difficult because you picked inadequate tools. (Cesarini and Vinoski 2016, 20)</summary>
+Otp is a domain-independent set of frameworks, principles, and patterns that guide and support the structure, design, implementation, and deployment of Erlang systems. Using OTP in your projects will help you avoid accidental complexity: things that are difficult because you picked inadequate tools. (Cesarini and Vinoski 2016, 20)
+References Cesarini, Francesco, and Steve Vinoski. 2016. Designing for Scalability with Erlang/Otp: Implement Robust, Fault-Tolerant Systems. O’Reilly Media, Inc.</summary>
     <content type="html">&lt;p&gt;:ID:       6ed3a191-0128-453e-b0b6-37c48593a6f0
 :ROAM_ALIAS: &amp;ldquo;Open Telecom Platform&amp;rdquo;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;[BROKEN LINK: 6ed3a191-0128-453e-b0b6-37c48593a6f0] is a domain-independent set of frameworks, principles, and patterns that
+&lt;p&gt;&lt;a href=&#34;/notes/2024/otp/&#34;&gt;Otp&lt;/a&gt; is a domain-independent set of frameworks, principles, and patterns that
 guide and support the structure, design, implementation, and deployment of
-[BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] systems. Using OTP in your projects will help you avoid accidental
+&lt;a href=&#34;/notes/2024/erlang/&#34;&gt;Erlang&lt;/a&gt; systems. Using OTP in your projects will help you avoid accidental
 complexity: things that are difficult because you picked inadequate
-tools. (Cesarini and Vinoski 2016, 20)&lt;/p&gt;
+tools. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Cesarini and Vinoski 2016, 20&lt;/a&gt;)&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Cesarini, Francesco, and Steve Vinoski. 2016. &lt;i&gt;Designing for Scalability with Erlang/Otp: Implement Robust, Fault-Tolerant Systems&lt;/i&gt;. O’Reilly Media, Inc.&lt;/div&gt;
+&lt;/div&gt;
 </content>
     
     <category term="Erlang"/>
@@ -420,10 +446,10 @@ tools. (Cesarini and Vinoski 2016, 20)&lt;/p&gt;
     <published>2024-09-28T00:00:00Z</published>
     <updated>2024-09-28T00:00:00Z</updated>
     <summary>:ID: 582a4090-eb66-4dfd-8166-9acd3c97dcc9
-Split brain means that the [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb] is split in two (or more) parts, but both parts think they are the only remaining part of the cluster. This can lead to very bad situations when both parts of the cluster try to host the resources that are offered by the cluster. If the resource is a file system, and multiple nodes try to write to the file system simultaneously and without coordination, it may lead to corruption of the file system and the loss of data.</summary>
+Split brain means that the Clusters is split in two (or more) parts, but both parts think they are the only remaining part of the cluster. This can lead to very bad situations when both parts of the cluster try to host the resources that are offered by the cluster. If the resource is a file system, and multiple nodes try to write to the file system simultaneously and without coordination, it may lead to corruption of the file system and the loss of data.</summary>
     <content type="html">&lt;p&gt;:ID:       582a4090-eb66-4dfd-8166-9acd3c97dcc9&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Split brain means that the [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb] is split in two (or more) parts, but both
+&lt;p&gt;Split brain means that the &lt;a href=&#34;/notes/2024/clusters/&#34;&gt;Clusters&lt;/a&gt; is split in two (or more) parts, but both
 parts think they are the only remaining part of the cluster. This can lead to
 very bad situations when both parts of the cluster try to host the resources
 that are offered by the cluster. If the resource is a file system, and multiple
@@ -566,7 +592,7 @@ node. (Van Vugt 2014, chap. 1)&lt;/p&gt;
 &lt;h3 id=&#34;fabric-fencing-disconnects-the-machine-from-storage-dot&#34;&gt;Fabric Fencing :: Disconnects the machine from storage.&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;By closing ports in a Fibre Channel Switch.&lt;/li&gt;
-&lt;li&gt;By using [BROKEN LINK: 388e1a43-f7f6-4c9e-af19-d7b6116a070e] reservations.&lt;/li&gt;
+&lt;li&gt;By using &lt;a href=&#34;/notes/2024/scsi/&#34;&gt;Scsi&lt;/a&gt; reservations.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;fencing-agents&#34;&gt;Fencing Agents&lt;/h2&gt;
 </content>
@@ -584,21 +610,19 @@ node. (Van Vugt 2014, chap. 1)&lt;/p&gt;
     <id>https://mtrsk.github.io/notes/2024/quorum/</id>
     <published>2024-09-25T00:00:00Z</published>
     <updated>2024-09-25T00:00:00Z</updated>
-    <summary>:ID: 42950824-228d-48d6-abec-4e18908dfca0 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;DistributedSystems&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Clusters&amp;rdquo;
-Quorum means &amp;ldquo;majority&amp;rdquo;, and the idea behind quorum is easy to understand: if the [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb] doesn’t have quorum, no actions will be taken in the cluster. This by itself would offer a good solution to avoid the [BROKEN LINK: 582a4090-eb66-4dfd-8166-9acd3c97dcc9] problem.
-But to make sure that it can never happen, that multiple nodes activate the same resources in the cluster, another mechanism is used as well.</summary>
-    <content type="html">&lt;p&gt;:ID:       42950824-228d-48d6-abec-4e18908dfca0
-:EXPORT_HUGO_CATEGORIES: &amp;ldquo;DistributedSystems&amp;rdquo;
-:EXPORT_HUGO_TAGS: &amp;ldquo;Clusters&amp;rdquo;&lt;/p&gt;
+    <summary>:ID: 42950824-228d-48d6-abec-4e18908dfca0
+Quorum means &amp;ldquo;majority&amp;rdquo;, and the idea behind quorum is easy to understand: if the Clusters doesn’t have quorum, no actions will be taken in the cluster. This by itself would offer a good solution to avoid the Split Brain problem.
+But to make sure that it can never happen, that multiple nodes activate the same resources in the cluster, another mechanism is used as well. This mechanism is known as Stonith.</summary>
+    <content type="html">&lt;p&gt;:ID:       42950824-228d-48d6-abec-4e18908dfca0&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Quorum means &amp;ldquo;majority&amp;rdquo;, and the idea behind quorum is easy to understand: if
-the [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb] doesn’t have quorum, no actions will be taken in the cluster. This
-by itself would offer a good solution to avoid the [BROKEN LINK: 582a4090-eb66-4dfd-8166-9acd3c97dcc9] problem.&lt;/p&gt;
+the &lt;a href=&#34;/notes/2024/clusters/&#34;&gt;Clusters&lt;/a&gt; doesn’t have quorum, no actions will be taken in the cluster. This
+by itself would offer a good solution to avoid the &lt;a href=&#34;/notes/2024/split_brain/&#34;&gt;Split Brain&lt;/a&gt; problem.&lt;/p&gt;
 &lt;p&gt;But to make sure that it can never happen, that multiple nodes activate the same
 resources in the cluster, another mechanism is used as well. This mechanism is
-known as [BROKEN LINK: 789326a5-20aa-4492-acb6-1474c3c11a4a]. (, &lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Van Vugt 2014, 6&lt;/a&gt;)&lt;/p&gt;
+known as &lt;a href=&#34;/notes/2024/stonith/&#34;&gt;Stonith&lt;/a&gt;. (, &lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Van Vugt 2014, 6&lt;/a&gt;)&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;This is required to avoid corruption on vital [BROKEN LINK: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb] resources, such as the
+&lt;p&gt;This is required to avoid corruption on vital &lt;a href=&#34;/notes/2024/clusters/&#34;&gt;Clusters&lt;/a&gt; resources, such as the
 File System.&lt;/p&gt;
 &lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
@@ -610,26 +634,6 @@ File System.&lt;/p&gt;
     
     
     <category term="Distributed Systems"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Drbd</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/drbd/"/>
-    <id>https://mtrsk.github.io/notes/2024/drbd/</id>
-    <published>2024-09-24T00:00:00Z</published>
-    <updated>2024-09-24T00:00:00Z</updated>
-    <summary>:ID: 694d20ba-bdb5-419d-ae9d-0dc73c695333 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;OS&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Linux&amp;rdquo;
-Distributed Replicated Block Device (DRBD) is a distributed replicated storage system for the [BROKEN LINK: 8a427ee7-2ef1-489b-af82-91de7be8a3ba] platform.</summary>
-    <content type="html">&lt;p&gt;:ID:       694d20ba-bdb5-419d-ae9d-0dc73c695333
-:EXPORT_HUGO_CATEGORIES: &amp;ldquo;OS&amp;rdquo;
-:EXPORT_HUGO_TAGS: &amp;ldquo;Linux&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;Distributed Replicated Block Device (DRBD) is a distributed replicated storage
-system for the [BROKEN LINK: 8a427ee7-2ef1-489b-af82-91de7be8a3ba] platform.&lt;/p&gt;
-</content>
-    
-    
-    <category term="notes"/>
     
   </entry>
   

@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Benevides&#39; Blog">
   <meta property="og:title" content="Concurrent Erlang">
   <meta property="og:description" content=":ID: 63607e63-4428-4578-bf2a-12a49649b49c :ROAM_ALIAS: “Erlang Process”
-Processes In [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d], creation of a parallel process is achieved by evaluating the spawn primitive. This primitive creates a concurrent process and returns a process identifier (PID) that can used to interact with the newly created process:
+Processes In Erlang, creation of a parallel process is achieved by evaluating the spawn primitive. This primitive creates a concurrent process and returns a process identifier (PID) that can used to interact with the newly created process:
 Pid = spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]). This BIF never fails A process can either terminate: Abormally when run-time errors occur Normally when there is no more code to execute Modeling Concurrency The syntax Pid !">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
@@ -64,7 +64,7 @@ Pid = spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]). This BIF never fails A 
   </h2><p>:ID:       63607e63-4428-4578-bf2a-12a49649b49c
 :ROAM_ALIAS: &ldquo;Erlang Process&rdquo;</p>
 <h2 id="processes">Processes</h2>
-<p>In [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d], creation of a parallel process is achieved by evaluating the <code>spawn</code>
+<p>In <a href="/notes/2024/erlang/">Erlang</a>, creation of a parallel process is achieved by evaluating the <code>spawn</code>
 primitive. This primitive creates a concurrent process and returns a process
 identifier (PID) that can used to interact with the newly created process:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl"><span class="nv">Pid</span> <span class="o">=</span> <span class="nb">spawn</span><span class="p">(</span><span class="nv">ModName</span><span class="p">,</span> <span class="nv">FuncName</span><span class="p">,</span> <span class="p">[</span><span class="nv">Arg1</span><span class="p">,</span> <span class="nv">Arg2</span><span class="p">,</span> <span class="p">...,</span> <span class="nv">ArgN</span><span class="p">]).</span>
@@ -79,7 +79,7 @@ identifier (PID) that can used to interact with the newly created process:</p>
 </ul>
 <h3 id="modeling-concurrency">Modeling Concurrency</h3>
 <p>The syntax <code>Pid ! Msg</code> means &ldquo;send the message <code>Msg</code> to the process <code>Pid</code>&rdquo;, where <code>Msg</code>
-is from any valid [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] data type. For a <code>Pid</code> to process a message we need to
+is from any valid <a href="/notes/2024/erlang/">Erlang</a> data type. For a <code>Pid</code> to process a message we need to
 pattern match:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl"><span class="k">receive</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="nv">From</span><span class="p">,</span> <span class="nv">Message</span><span class="p">}</span> <span class="o">-&gt;</span>
@@ -153,8 +153,13 @@ executed. Otherwise, <code>expr02</code> will be executed.</li>
 </span></span><span class="line"><span class="cl">    <span class="k">after</span> <span class="nv">TimeOut</span> <span class="o">-&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="n">expr02</span><span class="o">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="k">end</span>
-</span></span></code></pre></div>
+</span></span></code></pre></div><h2 id="references">References</h2>
+<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+</div>
 
+
+
+   
 
    
 

@@ -11,8 +11,8 @@
   <meta property="og:site_name" content="Benevides&#39; Blog">
   <meta property="og:title" content="Kubernetes Configmaps">
   <meta property="og:description" content=":ID: c02e9bd0-e9fb-45d0-985a-4bdcbe62b8dc
-ConfigMaps A ConfigMap is a [BROKEN LINK: dd924a84-7d6f-41ec-98c2-aa16582c0d89] API object used to store non-confidential data in key-value pairs. Pods can consume ConfigMaps as environment variables, command-line arguments, or as configuration files in a volume.
-apiVersion: v1 kind: ConfigMap metadata: name: game-demo labels: app: game-demo data: # property-like keys; each key maps to a simple value player_initial_lives: &#34;3&#34; ui_properties_file_name: &#34;user-interface.properties&#34; # file-like keys game.properties: | enemy.types=aliens,monsters player.maximum-lives=5 user-interface.properties: | color.">
+ConfigMaps A ConfigMap is a Kubernetes API object used to store non-confidential data in key-value pairs. Pods can consume ConfigMaps as environment variables, command-line arguments, or as configuration files in a volume.
+apiVersion: v1 kind: ConfigMap metadata: name: game-demo labels: app: game-demo data: # property-like keys; each key maps to a simple value player_initial_lives: &#34;3&#34; ui_properties_file_name: &#34;user-interface.properties&#34; # file-like keys game.properties: | enemy.types=aliens,monsters player.maximum-lives=5 user-interface.properties: | color.good=purple color.bad=yellow allow.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="notes">
@@ -62,7 +62,7 @@ apiVersion: v1 kind: ConfigMap metadata: name: game-demo labels: app: game-demo 
     </small>
   </h2><p>:ID:       c02e9bd0-e9fb-45d0-985a-4bdcbe62b8dc</p>
 <h2 id="configmaps">ConfigMaps</h2>
-<p>A ConfigMap is a [BROKEN LINK: dd924a84-7d6f-41ec-98c2-aa16582c0d89] API object used to store non-confidential data in
+<p>A ConfigMap is a <a href="/notes/2021/kubernetes/">Kubernetes</a> API object used to store non-confidential data in
 key-value pairs. Pods can consume ConfigMaps as environment variables,
 command-line arguments, or as configuration files in a volume.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">  </span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
@@ -136,6 +136,8 @@ command-line arguments, or as configuration files in a volume.</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;user-interface.properties&#34;</span><span class="w">
 </span></span></span></code></pre></div>
 
+
+   
 
    
 

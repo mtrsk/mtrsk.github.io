@@ -13,14 +13,14 @@
       <link>https://mtrsk.github.io/notes/2024/otp/</link>
       <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/otp/</guid>
-      <description>:ID: 6ed3a191-0128-453e-b0b6-37c48593a6f0 :ROAM_ALIAS: &amp;ldquo;Open Telecom Platform&amp;rdquo;&#xA;[BROKEN LINK: 6ed3a191-0128-453e-b0b6-37c48593a6f0] is a domain-independent set of frameworks, principles, and patterns that guide and support the structure, design, implementation, and deployment of [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] systems. Using OTP in your projects will help you avoid accidental complexity: things that are difficult because you picked inadequate tools. (Cesarini and Vinoski 2016, 20)</description>
+      <description>:ID: 6ed3a191-0128-453e-b0b6-37c48593a6f0 :ROAM_ALIAS: &amp;ldquo;Open Telecom Platform&amp;rdquo;&#xA;Otp is a domain-independent set of frameworks, principles, and patterns that guide and support the structure, design, implementation, and deployment of Erlang systems. Using OTP in your projects will help you avoid accidental complexity: things that are difficult because you picked inadequate tools. (Cesarini and Vinoski 2016, 20)&#xA;References Cesarini, Francesco, and Steve Vinoski. 2016. Designing for Scalability with Erlang/Otp: Implement Robust, Fault-Tolerant Systems. O’Reilly Media, Inc.</description>
     </item>
     <item>
       <title>Designing For Scalability With Erlang</title>
       <link>https://mtrsk.github.io/notes/2024/designing-for-scalability-with-erlang/</link>
       <pubDate>Tue, 09 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/designing-for-scalability-with-erlang/</guid>
-      <description>:ID: ffac18bd-4e44-4a7b-8a3a-a85552c9b076&#xA;[BROKEN LINK: 6ed3a191-0128-453e-b0b6-37c48593a6f0] is said to consist of three building blocks that, when used together, provide a solid approach to designing and developing systems in the problem domain we’ve just described. They are [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] itself, tools and libraries, and a set of design principles. (Cesarini and Vinoski 2016, 20)</description>
+      <description>:ID: ffac18bd-4e44-4a7b-8a3a-a85552c9b076&#xA;Otp is said to consist of three building blocks that, when used together, provide a solid approach to designing and developing systems in the problem domain we’ve just described. They are Erlang itself, tools and libraries, and a set of design principles. (Cesarini and Vinoski 2016, 20)&#xA;References Cesarini, Francesco, and Steve Vinoski. 2016. Designing for Scalability with Erlang/Otp: Implement Robust, Fault-Tolerant Systems. O’Reilly Media, Inc. </description>
     </item>
   </channel>
 </rss>

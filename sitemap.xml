@@ -3,10 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mtrsk.github.io/categories/</loc>
-    <lastmod>2024-10-07T00:00:00+00:00</lastmod>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/notes/2024/dializer/</loc>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/tags/elixir/</loc>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/tags/erlang/</loc>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/categories/functional-programming/</loc>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/</loc>
-    <lastmod>2024-10-07T00:00:00+00:00</lastmod>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/tags/</loc>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/tags/haskell/</loc>
+    <lastmod>2024-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/notes/2024/haskell/</loc>
+    <lastmod>2024-10-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/tags/linux/</loc>
     <lastmod>2024-10-07T00:00:00+00:00</lastmod>
@@ -23,22 +44,7 @@
     <loc>https://mtrsk.github.io/categories/operating-systems/</loc>
     <lastmod>2024-10-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mtrsk.github.io/tags/</loc>
-    <lastmod>2024-10-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mtrsk.github.io/notes/2024/dializer/</loc>
-    <lastmod>2024-10-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mtrsk.github.io/tags/elixir/</loc>
-    <lastmod>2024-10-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mtrsk.github.io/notes/2024/elixir/</loc>
-    <lastmod>2024-10-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mtrsk.github.io/tags/erlang/</loc>
-    <lastmod>2024-10-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mtrsk.github.io/categories/functional-programming/</loc>
     <lastmod>2024-10-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/categories/notes/</loc>
@@ -174,9 +180,6 @@
     <lastmod>2024-06-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/notes/2024/erlang/</loc>
-    <lastmod>2024-06-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mtrsk.github.io/tags/haskell/</loc>
     <lastmod>2024-06-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/notes/2024/monad/</loc>
