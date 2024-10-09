@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       0fee39a3-5d70-4dfb-8603-7d50d8e4777e
+:END:
+#+title: Immutable Architectures
+#+HUGO_CATEGORIES: "Distributed Systems"
+#+HUGO_TAGS: "Immutable Architectures"
+
+Properties of a reliable application:
+
++ Idempotence
++ Immutability
++ Local Independence
++ Versioning
+
+#+BEGIN_QUOTE
+In 2015, Pat Helland wrote "Immutability Changes Everything", an analysis of
+several computing solutions based on immutability. It demonstrates that
+immutability solves many problems in several layers of computational
+abstraction. (...) . This paper claims no new ideas but only serves to point out
+the common thread of immutability in all of these solutions. [cite:@perry2024art]
+#+END_QUOTE
+
+** The Two Generals' Problems
+

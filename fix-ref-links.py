@@ -8,7 +8,7 @@ NOTES_DIRECTORY = pathlib.Path("./content/notes/")
 MARKDOWN_NOTES = NOTES_DIRECTORY.glob("*.md")
 STATIC_PATH = pathlib.Path("./static").resolve()
 JSON_PATH = pathlib.Path(STATIC_PATH / "graph.json")
-PATTERN = re.compile(r"\[BROKEN\s+LINK:\s+(.+)\]")
+PATTERN = re.compile(r"\[BROKEN\s+LINK:\s+([0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12})\]")
 
 with open(JSON_PATH.resolve()) as f:
     graph_list = json.loads(f.read())
@@ -26,7 +26,6 @@ def fix_links(path: pathlib.PosixPath) -> None:
         if len(matches) > 0:
             for item in matches:
                 if item in graph:
-                    #print(rewrite(graph[item]))
                     line = re.sub(PATTERN, rewrite(graph[item]), line, count=1)
         sys.stdout.write(line)
 
