@@ -20,5 +20,11 @@ abstraction. (...) . This paper claims no new ideas but only serves to point out
 the common thread of immutability in all of these solutions. [cite:@perry2024art]
 #+END_QUOTE
 
-** The Two Generals' Problems
+* Forms of Immutable Architectures
+
+| Name    | Definition                |
+|---------+---------------------------|
+| Objects | Things that change        |
+| Records | Things that do not change |
+
 
