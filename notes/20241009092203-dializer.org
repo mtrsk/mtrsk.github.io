@@ -1,5 +1,5 @@
 :PROPERTIES:
-:ID:       228628b7-14cf-41cb-bc39-018a4ff2325f
+:ID:       54473599-719d-460b-92ba-3796dd951872
 :END:
 #+title: Dializer
 #+HUGO_CATEGORIES: "Functional Programming"
@@ -8,5 +8,3 @@
 Dialyzer is a static analysis tool that identifies software discrepancies, such
 as definite type errors, code that is unreachable because of programming errors,
 and unnecessary tests in [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]] and [[id:8d568d81-9c22-4d94-81b2-27a2d730ba98][Elixir]] modules or an entire codebases.
-
-

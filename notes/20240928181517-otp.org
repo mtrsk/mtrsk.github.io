@@ -13,3 +13,5 @@ guide and support the structure, design, implementation, and deployment of
 complexity: things that are difficult because you picked inadequate
 tools. [cite:@cesarini2016designing p.20]
 #+END_QUOTE
+
+#+print_bibliography: 

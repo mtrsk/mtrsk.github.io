@@ -6,6 +6,7 @@
 #+HUGO_TAGS: "Haskell"
 
 ** Haskell
+In [[id:a74d6aac-dbe9-48a6-83ca-648cd6ea933e][Haskell]], monads are defined as:
 
 #+BEGIN_SRC haskell
     class Monad m where

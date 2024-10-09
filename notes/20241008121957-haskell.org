@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       a74d6aac-dbe9-48a6-83ca-648cd6ea933e
+:END:
+#+title: Haskell
+#+HUGO_CATEGORIES: "Functional Programming"
+#+HUGO_TAGS: "Haskell"

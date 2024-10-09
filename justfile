@@ -18,6 +18,7 @@ default:
 # Generate the Markdown files
 build: clean
     emacs $(pwd) --batch --load export.el
+    python fix-ref-links.py
 
 # Publish content
 public: build
@@ -29,7 +30,7 @@ d3-download:
 
 # Build braph
 graph:
-    python graph.py
+    python generate-graph.py
 
 # Run Hugo server with drafts
 run: build
@@ -37,7 +38,7 @@ run: build
 
 # Build for CI
 ci-build: clean
-    nix develop .#ci --impure -c emacs $(pwd) --batch --load export.el
+    nix develop .#ci --impure -c just build
 
 ci-publish: ci-build
     nix develop .#ci --impure -c hugo

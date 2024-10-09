@@ -14,6 +14,9 @@
 (setq org-roam-graph-export-directory (concat (getenv "PWD") "/content-org"))
 (setq org-blog-directory (concat (getenv "PWD") "/blog"))
 
+;; https://jeffkreeftmeijer.com/org-unable-to-resolve-link/
+;; (org-id-update-id-locations (directory-files-recursively org-roam-directory "\\.org$") )
+
 ;; Don't ask for confirmation before evaluating a code block
 (setq org-confirm-babel-evaluate nil)
 ;;(setq org-export-use-babel t)
@@ -22,9 +25,9 @@
 ;; This makes it easier to export my notes into something that
 ;; ox-hugo will easily pick links and generate markdowns.
 ;; https://www.orgroam.com/manual.html#Overriding-the-default-link-creation-function
-(defun org-roam-custom-link-builder (node)
-  (let ((file (org-roam-node-file node)))
-    (concat (file-name-base file) ".html")))
+;;(defun org-roam-custom-link-builder (node)
+;;  (let ((file (org-roam-node-file node)))
+;;    (concat (file-name-base file) ".html")))
 
 (setq org-roam-graph-link-builder 'org-roam-custom-link-builder)
 

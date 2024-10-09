@@ -43,7 +43,7 @@ Running the ~hello.erl~ program in the erlang shell.
 
 The ~erl -noshell~ command loads the module ~hello~ and evaluates the function
 ~hello:start()~. After this, it evaluates the expression ~init:stop()~, which
-terminates the Erlang session.
+terminates the Erlang session. [cite:@armstrong2013 p.14]
 #+END_QUOTE
 
 * Commands

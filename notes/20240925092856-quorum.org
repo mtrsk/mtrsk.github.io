@@ -1,7 +1,5 @@
 :PROPERTIES:
 :ID:       42950824-228d-48d6-abec-4e18908dfca0
-:EXPORT_HUGO_CATEGORIES: "DistributedSystems"
-:EXPORT_HUGO_TAGS: "Clusters"
 :END:
 #+title: Quorum
 #+HUGO_CATEGORIES: "Distributed Systems"
