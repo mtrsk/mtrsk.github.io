@@ -29,7 +29,7 @@ d3-download:
 
 # Build braph
 graph:
-    python graph.py
+    python generate-graph.py
 
 # Run Hugo server with drafts
 run: build
