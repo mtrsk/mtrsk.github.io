@@ -9,6 +9,20 @@
     <lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mtrsk.github.io/tags/rss.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Books</title>
+      <link>https://mtrsk.github.io/tags/books/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/books/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Classical Papers</title>
+      <link>https://mtrsk.github.io/tags/classical-papers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/classical-papers/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Elixir</title>
       <link>https://mtrsk.github.io/tags/elixir/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -20,6 +34,27 @@
       <link>https://mtrsk.github.io/tags/erlang/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/tags/erlang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fallacies</title>
+      <link>https://mtrsk.github.io/tags/fallacies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/fallacies/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Immutable Architectures</title>
+      <link>https://mtrsk.github.io/tags/immutable-architectures/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/immutable-architectures/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Relational Theory</title>
+      <link>https://mtrsk.github.io/tags/relational-theory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/relational-theory/</guid>
       <description></description>
     </item>
     <item>

@@ -13,7 +13,7 @@
       <link>https://mtrsk.github.io/notes/2024/dializer/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/dializer/</guid>
-      <description>:ID: 54473599-719d-460b-92ba-3796dd951872&#xA;Dialyzer is a static analysis tool that identifies software discrepancies, such as definite type errors, code that is unreachable because of programming errors, and unnecessary tests in [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] and [BROKEN LINK: 8d568d81-9c22-4d94-81b2-27a2d730ba98] modules or an entire codebases.</description>
+      <description>:ID: 54473599-719d-460b-92ba-3796dd951872&#xA;Dialyzer is a static analysis tool that identifies software discrepancies, such as definite type errors, code that is unreachable because of programming errors, and unnecessary tests in Erlang and Elixir modules or an entire codebases.</description>
     </item>
     <item>
       <title>Otp</title>

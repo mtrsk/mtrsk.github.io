@@ -13,7 +13,42 @@
       <link>https://mtrsk.github.io/notes/2024/dializer/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/dializer/</guid>
-      <description>:ID: 54473599-719d-460b-92ba-3796dd951872&#xA;Dialyzer is a static analysis tool that identifies software discrepancies, such as definite type errors, code that is unreachable because of programming errors, and unnecessary tests in [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] and [BROKEN LINK: 8d568d81-9c22-4d94-81b2-27a2d730ba98] modules or an entire codebases.</description>
+      <description>:ID: 54473599-719d-460b-92ba-3796dd951872&#xA;Dialyzer is a static analysis tool that identifies software discrepancies, such as definite type errors, code that is unreachable because of programming errors, and unnecessary tests in Erlang and Elixir modules or an entire codebases.</description>
+    </item>
+    <item>
+      <title>Fallacies Of Distributed Computing</title>
+      <link>https://mtrsk.github.io/notes/2024/fallacies-of-distributed-computing/</link>
+      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/fallacies-of-distributed-computing/</guid>
+      <description>:ID: 5a3ae2dc-5a54-4ba1-a638-f6090502d8ae&#xA;Between 1991 and 1997, engineers at Sun Microsystems collected a list of mistakes that programmers commonly make when writing software for networked computers. Bill Joy, Dave Lyon, L Peter Deutsch, and James Gosling cataloged eight assumptions that developers commonly hold about Distributed Systems. These assumptions, while obviously incorrect when stated explicitly, nevertheless inform many of the decisions that the Sun engineers found in systems of the day. (Perry 2020, 6)</description>
+    </item>
+    <item>
+      <title>Immutable Architectures</title>
+      <link>https://mtrsk.github.io/notes/2024/immutable-architectures/</link>
+      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/immutable-architectures/</guid>
+      <description>:ID: 0fee39a3-5d70-4dfb-8603-7d50d8e4777e&#xA;Properties of a reliable application:&#xA;Idempotence Immutability Local Independence Versioning In 2015, Pat Helland wrote &amp;ldquo;Immutability Changes Everything&amp;rdquo;, an analysis of several computing solutions based on immutability. It demonstrates that immutability solves many problems in several layers of computational abstraction. (&amp;hellip;) . This paper claims no new ideas but only serves to point out the common thread of immutability in all of these solutions. (Perry 2020)&#xA;Forms of Immutable Architectures Name Definition Objects Things that change Records Things that do not change References Perry, Michael L.</description>
+    </item>
+    <item>
+      <title>Management</title>
+      <link>https://mtrsk.github.io/notes/2024/management/</link>
+      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/management/</guid>
+      <description>:ID: 1d989967-2878-40ab-827d-c4d1a91e0011&#xA;Books Managing A Programming Project The Effective Manager </description>
+    </item>
+    <item>
+      <title>Relational Theory</title>
+      <link>https://mtrsk.github.io/notes/2024/relational-theory/</link>
+      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/relational-theory/</guid>
+      <description>:ID: abcb3048-34a5-4561-885c-74b8285924ac&#xA;It was late in 1968 that Codd, a mathematician by training, first realized that the discipline of mathematics could be used to inject some solid principles and rigor into a field, database management, that prior to that time was all too deficient in any such qualities. His original definition of the relational model appeared in an IBM Research Report in 1969 (&amp;hellip;) (Date 2015).&#xA;Date&amp;rsquo;s Review of Codd&amp;rsquo;s Original Algebra Structure Types (or Domains) n-Ary Relations Attributes &amp;amp; Tuples Keys Candidate Primary Foreign Integrity Entity Integrity Referential Integrity Manipulation Relational Algebra Relational Assignment References Date, Chris J.</description>
+    </item>
+    <item>
+      <title>The Two Generals Problem</title>
+      <link>https://mtrsk.github.io/notes/2024/the-two-generals-problem/</link>
+      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/the-two-generals-problem/</guid>
+      <description>:ID: e9403288-b149-474c-928f-02e52e7cf78a&#xA;The Two Generals&amp;rsquo; Problem is a classic unsolvable problem in Distributed Systems, first formulated by (Akkoyunlu, Ekanadham, and Huber 1975) and later described by .&#xA;References Akkoyunlu, Eralp A, Kattamuri Ekanadham, and Richard V Huber. 1975. “Some Constraints and Tradeoffs in the Design of Network Communications.” In Proceedings of the Fifth Acm Symposium on Operating Systems Principles, 67–74. </description>
     </item>
     <item>
       <title>Haskell</title>
@@ -27,7 +62,7 @@
       <link>https://mtrsk.github.io/notes/2024/nixos/</link>
       <pubDate>Mon, 07 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/nixos/</guid>
-      <description>:ID: c350b99c-021d-4f5a-a948-4929056e1267&#xA;NixOS is a [BROKEN LINK: 8a427ee7-2ef1-489b-af82-91de7be8a3ba] distribution based on the purely functional package management system [BROKEN LINK: 72d705ae-9f5c-402b-88e5-21744277319a].</description>
+      <description>:ID: c350b99c-021d-4f5a-a948-4929056e1267&#xA;NixOS is a Linux distribution based on the purely functional package management system Nix.</description>
     </item>
     <item>
       <title>Elixir</title>
@@ -97,7 +132,7 @@
       <link>https://mtrsk.github.io/notes/2024/clusters/</link>
       <pubDate>Thu, 26 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/clusters/</guid>
-      <description>:ID: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb&#xA;Different Kinds of Clusters High Availability Clusters The goal of a high availability cluster is to make sure that critical resources reach the maximum possible availability. This goal is accomplished by installing cluster software on multiple servers. This software monitors the availability of the cluster nodes, and it monitors the availability of the services that are managed by the cluster. If a server goes down, or if the resource stops, the HA cluster will notice and make sure that the resource is restarted somewhere else in the cluster, so that it can be used again after a minimal interruption.</description>
+      <description>:ID: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb&#xA;Different Kinds of Clusters High performance Different computers work together to host onE or more tasks that require lots of computing resources.&#xA;Load balancing A load balancer serves as a front end and receives requests from end users. The load balancer distributes the request to different servers.&#xA;High Availability Clusters The goal of a high availability cluster is to make sure that critical resources reach the maximum possible availability.</description>
     </item>
     <item>
       <title>Stonith</title>
@@ -118,7 +153,7 @@
       <link>https://mtrsk.github.io/notes/2024/drbd/</link>
       <pubDate>Tue, 24 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/drbd/</guid>
-      <description>:ID: 694d20ba-bdb5-419d-ae9d-0dc73c695333 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;OS&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Linux&amp;rdquo;&#xA;Distributed Replicated Block Device (DRBD) is a distributed replicated storage system for the Linux platform.</description>
+      <description>:ID: 694d20ba-bdb5-419d-ae9d-0dc73c695333 :ROAM_ALIAS: DRBD&#xA;Definition Distributed Replicated Block Device (DRBD) is a distributed replicated storage system for the Linux platform.&#xA;If you want to create an environment where multiple nodes can access your data simultaneously, the distributed replicated block device (DRBD) is an excellent choice. This is particularly true if you want to set up a two-node cluster, in which one node must be able to take over the exact state of the other node as fast as possible.</description>
     </item>
     <item>
       <title>Iscsi</title>
@@ -167,28 +202,28 @@
       <link>https://mtrsk.github.io/notes/2024/postgres-ctes/</link>
       <pubDate>Sat, 21 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/postgres-ctes/</guid>
-      <description>:ID: 36f5efb2-34da-4d67-8c37-bbd5429d7b55 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Databases&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;SQL&amp;rdquo; &amp;ldquo;Postgres&amp;rdquo;&#xA;Common Table Expressions Recursive </description>
+      <description>:ID: 36f5efb2-34da-4d67-8c37-bbd5429d7b55 :ROAM_ALIASES: CTE&#xA;Common Table Expressions Recursive </description>
     </item>
     <item>
       <title>Postgres Functions</title>
       <link>https://mtrsk.github.io/notes/2024/postgres-functions/</link>
       <pubDate>Sat, 21 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/postgres-functions/</guid>
-      <description>:ID: 32e8ab3c-2b96-410f-b60d-fde9e35b49f3 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Databases&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;SQL&amp;rdquo; &amp;ldquo;Postgres&amp;rdquo;&#xA;Functions CREATE OR REPLACE FUNCTION function_name(arg1 INT, arg2 INT, arg3 INT) RETURNS SETOF VARCHAR LANGUAGE plpgsql AS $$ BEGIN (...) END; $$; References </description>
+      <description>:ID: 32e8ab3c-2b96-410f-b60d-fde9e35b49f3&#xA;Functions CREATE OR REPLACE FUNCTION function_name(arg1 INT, arg2 INT, arg3 INT) RETURNS SETOF VARCHAR LANGUAGE plpgsql AS $$ BEGIN (...) END; $$; References </description>
     </item>
     <item>
       <title>Postgres Indexes</title>
       <link>https://mtrsk.github.io/notes/2024/postgres-indexes/</link>
       <pubDate>Sat, 21 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/postgres-indexes/</guid>
-      <description>:ID: 48dd781f-123c-4508-82b5-ac9b05383db4 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Databases&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;SQL&amp;rdquo; &amp;ldquo;Postgres&amp;rdquo;</description>
+      <description>:ID: 48dd781f-123c-4508-82b5-ac9b05383db4</description>
     </item>
     <item>
       <title>Postgres Subqueries</title>
       <link>https://mtrsk.github.io/notes/2024/postgres-subqueries/</link>
       <pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/postgres-subqueries/</guid>
-      <description>:ID: 60f014f9-8a82-43b8-ae13-dee68b9470bf :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Databases&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;SQL&amp;rdquo; &amp;ldquo;Postgres&amp;rdquo;&#xA;Subqueries as Expressions Scalar Subquery Results in a single row&#xA;Multi-Row Subquery Results in multiple rows, tipically used in the where clause with operators such as IN, NOT, EXISTS, ANY and ALL.&#xA;Correlated Subquery A uncorrelated sub-query is a type of sub-query where the inner query doesn’t depend upon the outer query for its execution.&#xA;Uncorrelated Subquery A correlated sub-query is a type of query where the inner query depends upon the outcome of the outer query in order to perform its execution.</description>
+      <description>:ID: 60f014f9-8a82-43b8-ae13-dee68b9470bf&#xA;Subqueries as Expressions Scalar Subquery Results in a single row&#xA;Multi-Row Subquery Results in multiple rows, tipically used in the where clause with operators such as IN, NOT, EXISTS, ANY and ALL.&#xA;Correlated Subquery A uncorrelated sub-query is a type of sub-query where the inner query doesn’t depend upon the outer query for its execution.&#xA;Uncorrelated Subquery A correlated sub-query is a type of query where the inner query depends upon the outcome of the outer query in order to perform its execution.</description>
     </item>
     <item>
       <title>You Have 10 Seconds To Nixify Your Dotnet Project</title>
@@ -216,7 +251,7 @@
       <link>https://mtrsk.github.io/notes/2024/byzantine-generals-problem/</link>
       <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/byzantine-generals-problem/</guid>
-      <description>:ID: 68219535-efeb-4835-9670-fd2747376cf3&#xA;A summary from (Lamport, Shostak, and Pease 2019) paper.&#xA;Introduction A reliable computer system must be able to cope with the failure of one or more of its components. A failed component may exhibit a type of behavior that is often overlooked namely, sending conflicting information to different parts of the system. The problem of coping with this type of failure is expressed abstractly as the Byzantine Generals Problem.</description>
+      <description>:ID: 68219535-efeb-4835-9670-fd2747376cf3&#xA;The Byzantine Generals&amp;rsquo; Problem is an analogy used to describe the difficulties of reaching consensus in Distributed Systems, this is a summary from (Lamport, Shostak, and Pease 2019).&#xA;Introduction A reliable computer system must be able to cope with the failure of one or more of its components. A failed component may exhibit a type of behavior that is often overlooked namely, sending conflicting information to different parts of the system.</description>
     </item>
     <item>
       <title>Type Driven Development</title>
@@ -230,7 +265,7 @@
       <link>https://mtrsk.github.io/notes/2024/cap-theorem/</link>
       <pubDate>Thu, 11 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/cap-theorem/</guid>
-      <description>:ID: 74c5509d-73be-4b04-9ca4-039117d588a9&#xA;First postulated by Eric Brewer in (Brewer 2000), and formally proved in (Gilbert and Lynch 2002).&#xA;Definitions For (Brewer 2000), a distributed system has some very specific properties and behaviour, being a collected set of Nodes that all share data. A limitation of such systems happens when a write request is followed by a read request.&#xA;┌────────┐ │ Client │ └────────┘ [R] ^ | [W] | v ┌−−−−−−−−−−−−−−−−−−−−−−−−−┐ ╎ System ╎ ╎ ┌────┐ ╎ ╎ ┌──────────│ a0 │──┐ ╎ ╎ │ └────┘ │ ╎ ╎ │ │ │ ╎ ╎ ┌────┐ ┌────┐ │ ╎ ╎ │ a3 │───────│ a1 │ │ ╎ ╎ └────┘ └────┘ │ ╎ ╎ │ │ ╎ ╎ ┌────┐ │ ╎ ╎ │ a2 │──┘ ╎ ╎ └────┘ ╎ └−−−−−−−−−−−−−−−−−−−−−−−−−┘ Read Write A client can read data from the system by talking to any Node A client can write data to the system by talking to any Node The Theorem states that for any given pair of requests this kind of system can only guarantee two out of three properties:</description>
+      <description>:ID: 74c5509d-73be-4b04-9ca4-039117d588a9&#xA;The CAP Theorem is a classic problem in Distributed Systems, first postulated by Eric Brewer in (Brewer 2000), and formally proved in (Gilbert and Lynch 2002).&#xA;Definitions For (Brewer 2000), a distributed system has some very specific properties and behaviour, being a collected set of Nodes that all share data. A limitation of such systems happens when a write request is followed by a read request.&#xA;┌────────┐ │ Client │ └────────┘ [R] ^ | [W] | v ┌−−−−−−−−−−−−−−−−−−−−−−−−−┐ ╎ System ╎ ╎ ┌────┐ ╎ ╎ ┌──────────│ a0 │──┐ ╎ ╎ │ └────┘ │ ╎ ╎ │ │ │ ╎ ╎ ┌────┐ ┌────┐ │ ╎ ╎ │ a3 │───────│ a1 │ │ ╎ ╎ └────┘ └────┘ │ ╎ ╎ │ │ ╎ ╎ ┌────┐ │ ╎ ╎ │ a2 │──┘ ╎ ╎ └────┘ ╎ └−−−−−−−−−−−−−−−−−−−−−−−−−┘ Read Write A client can read data from the system by talking to any Node A client can write data to the system by talking to any Node The Theorem states that for any given pair of requests this kind of system can only guarantee two out of three properties:</description>
     </item>
     <item>
       <title>Designing For Scalability With Erlang</title>
@@ -342,7 +377,7 @@
       <link>https://mtrsk.github.io/notes/2023/managing-a-programming-project/</link>
       <pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2023/managing-a-programming-project/</guid>
-      <description>:ID: da4d5031-66cb-4d1c-b8cf-24d12adf5c17&#xA;Introduction Your ground rules Adopt a set of unambiguous definitions and stick with them Define your project&amp;rsquo;s development cycle and related all schedules and work process to that cycle Define activities, such as levels of testing, in a consistent way Define a system of documents clearly, consistent and early Your contract Half the horror stories about programming involve either bad contracts or no contract at all&#xA;The fact that you are managing a programming project means that you will be running a business.</description>
+      <description>:ID: da4d5031-66cb-4d1c-b8cf-24d12adf5c17&#xA;Notes from (Metzger and Boddie 1996).&#xA;Introduction Your ground rules Adopt a set of unambiguous definitions and stick with them Define your project&amp;rsquo;s development cycle and related all schedules and work process to that cycle Define activities, such as levels of testing, in a consistent way Define a system of documents clearly, consistent and early Your contract Half the horror stories about programming involve either bad contracts or no contract at all</description>
     </item>
     <item>
       <title>Mandarin Chinese</title>
@@ -363,7 +398,7 @@
       <link>https://mtrsk.github.io/notes/2021/distributed-systems/</link>
       <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2021/distributed-systems/</guid>
-      <description>:ID: d7efb05f-fb8f-438c-b09d-ea91dc24ebc3&#xA;Readings from the following books:&#xA;Michael L. Perry&amp;rsquo;s &amp;ldquo;The Art of Immutable Architecture&amp;rdquo;. Properties of a reliable application&#xA;Idempotence Immutability Local Independence Versioning Why Immutable Architecture ..if you are in architecture, you are responsible for cutting the Gordian Knot of possible failures and mitigations. This is the fragile process by which we build the systems that run our society.&#xA;The Problems with Immutability It&amp;rsquo;s not how machines actually operate, i.</description>
+      <description>:ID: d7efb05f-fb8f-438c-b09d-ea91dc24ebc3</description>
     </item>
     <item>
       <title>Gitops</title>
@@ -384,7 +419,7 @@
       <link>https://mtrsk.github.io/notes/2021/the-effective-manager/</link>
       <pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2021/the-effective-manager/</guid>
-      <description>:ID: 32b2fe5a-3bc3-439b-a850-70a539498e9e&#xA;Teachable and Sustainable Skills However you manage, your techniques, behavior, and philosophy must be both teachable to others and sustainable.&#xA;To go up in any organization, you must be able to teach others to do what you do. If you&amp;rsquo;re irreplacable, you&amp;rsquo;re also unpromotable. The way an effective manager manages is visible to others and is teachable to others. And the effective manager can repeat the&#xA;Critical Behavior Manager Tool Get to know your people One on ones Communicate about performance Feedback Ask for more Coaching Push work down Delegation Know Your People: One On Ones One on ones are meetings that:</description>
+      <description>:ID: 32b2fe5a-3bc3-439b-a850-70a539498e9e&#xA;Notes from the (Horstman, Braun, and Sentes 2023).&#xA;Teachable and Sustainable Skills However you manage, your techniques, behavior, and philosophy must be both teachable to others and sustainable.&#xA;To go up in any organization, you must be able to teach others to do what you do. If you&amp;rsquo;re irreplacable, you&amp;rsquo;re also unpromotable. The way an effective manager manages is visible to others and is teachable to others. And the effective manager can repeat the</description>
     </item>
     <item>
       <title>History Of Logic</title>

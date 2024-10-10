@@ -5,7 +5,7 @@
   
     <link href="https://mtrsk.github.io/notes/atom.xml" rel="self" type="application/atom+xml" />
   
-  <updated>2024-10-09T12:37:18Z</updated>
+  <updated>2024-10-10T01:29:10Z</updated>
   <author>
     
     
@@ -20,11 +20,11 @@
     <published>2024-10-09T00:00:00Z</published>
     <updated>2024-10-09T00:00:00Z</updated>
     <summary>:ID: 54473599-719d-460b-92ba-3796dd951872
-Dialyzer is a static analysis tool that identifies software discrepancies, such as definite type errors, code that is unreachable because of programming errors, and unnecessary tests in [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] and [BROKEN LINK: 8d568d81-9c22-4d94-81b2-27a2d730ba98] modules or an entire codebases.</summary>
+Dialyzer is a static analysis tool that identifies software discrepancies, such as definite type errors, code that is unreachable because of programming errors, and unnecessary tests in Erlang and Elixir modules or an entire codebases.</summary>
     <content type="html">&lt;p&gt;:ID:       54473599-719d-460b-92ba-3796dd951872&lt;/p&gt;
 &lt;p&gt;Dialyzer is a static analysis tool that identifies software discrepancies, such
 as definite type errors, code that is unreachable because of programming errors,
-and unnecessary tests in [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] and [BROKEN LINK: 8d568d81-9c22-4d94-81b2-27a2d730ba98] modules or an entire codebases.&lt;/p&gt;
+and unnecessary tests in &lt;a href=&#34;/notes/2024/erlang/&#34;&gt;Erlang&lt;/a&gt; and &lt;a href=&#34;/notes/2024/elixir/&#34;&gt;Elixir&lt;/a&gt; modules or an entire codebases.&lt;/p&gt;
 </content>
     
     <category term="Erlang"/>
@@ -33,6 +33,205 @@ and unnecessary tests in [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] and
     
     
     <category term="Functional Programming"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Fallacies Of Distributed Computing</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/fallacies-of-distributed-computing/"/>
+    <id>https://mtrsk.github.io/notes/2024/fallacies-of-distributed-computing/</id>
+    <published>2024-10-09T00:00:00Z</published>
+    <updated>2024-10-09T00:00:00Z</updated>
+    <summary>:ID: 5a3ae2dc-5a54-4ba1-a638-f6090502d8ae
+Between 1991 and 1997, engineers at Sun Microsystems collected a list of mistakes that programmers commonly make when writing software for networked computers. Bill Joy, Dave Lyon, L Peter Deutsch, and James Gosling cataloged eight assumptions that developers commonly hold about Distributed Systems. These assumptions, while obviously incorrect when stated explicitly, nevertheless inform many of the decisions that the Sun engineers found in systems of the day. (Perry 2020, 6)</summary>
+    <content type="html">&lt;p&gt;:ID:       5a3ae2dc-5a54-4ba1-a638-f6090502d8ae&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Between 1991 and 1997, engineers at Sun Microsystems collected a list of
+mistakes that programmers commonly make when writing software for networked
+computers. Bill Joy, Dave Lyon, L Peter Deutsch, and James Gosling cataloged
+eight assumptions that developers commonly hold about &lt;a href=&#34;/notes/2021/distributed-systems/&#34;&gt;Distributed Systems&lt;/a&gt;. These
+assumptions, while obviously incorrect when stated explicitly, nevertheless
+inform many of the decisions that the Sun engineers found in systems of the
+day. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Perry 2020, 6&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;The network is reliable&lt;/li&gt;
+&lt;li&gt;Latency is zero&lt;/li&gt;
+&lt;li&gt;Bandwidth is infinite&lt;/li&gt;
+&lt;li&gt;The network is secure&lt;/li&gt;
+&lt;li&gt;Topology doesn&amp;rsquo;t change&lt;/li&gt;
+&lt;li&gt;There is one administrator&lt;/li&gt;
+&lt;li&gt;Transport cost is zero&lt;/li&gt;
+&lt;li&gt;The network is homogenous&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Perry, Michael L. 2020. &lt;i&gt;The Art of Immutable Architecture&lt;/i&gt;. Springer.&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    
+    <category term="Fallacies"/>
+    
+    
+    <category term="Distributed Systems"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Immutable Architectures</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/immutable-architectures/"/>
+    <id>https://mtrsk.github.io/notes/2024/immutable-architectures/</id>
+    <published>2024-10-09T00:00:00Z</published>
+    <updated>2024-10-09T00:00:00Z</updated>
+    <summary>:ID: 0fee39a3-5d70-4dfb-8603-7d50d8e4777e
+Properties of a reliable application:
+Idempotence Immutability Local Independence Versioning In 2015, Pat Helland wrote &amp;ldquo;Immutability Changes Everything&amp;rdquo;, an analysis of several computing solutions based on immutability. It demonstrates that immutability solves many problems in several layers of computational abstraction. (&amp;hellip;) . This paper claims no new ideas but only serves to point out the common thread of immutability in all of these solutions. (Perry 2020)
+Forms of Immutable Architectures Name Definition Objects Things that change Records Things that do not change References Perry, Michael L.</summary>
+    <content type="html">&lt;p&gt;:ID:       0fee39a3-5d70-4dfb-8603-7d50d8e4777e&lt;/p&gt;
+&lt;p&gt;Properties of a reliable application:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Idempotence&lt;/li&gt;
+&lt;li&gt;Immutability&lt;/li&gt;
+&lt;li&gt;Local Independence&lt;/li&gt;
+&lt;li&gt;Versioning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In 2015, Pat Helland wrote &amp;ldquo;Immutability Changes Everything&amp;rdquo;, an analysis of
+several computing solutions based on immutability. It demonstrates that
+immutability solves many problems in several layers of computational
+abstraction. (&amp;hellip;) . This paper claims no new ideas but only serves to point out
+the common thread of immutability in all of these solutions. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Perry 2020&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;forms-of-immutable-architectures&#34;&gt;Forms of Immutable Architectures&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Definition&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Objects&lt;/td&gt;
+&lt;td&gt;Things that change&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Records&lt;/td&gt;
+&lt;td&gt;Things that do not change&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Perry, Michael L. 2020. &lt;i&gt;The Art of Immutable Architecture&lt;/i&gt;. Springer.&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    
+    <category term="Immutable Architectures"/>
+    
+    
+    <category term="Distributed Systems"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Management</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/management/"/>
+    <id>https://mtrsk.github.io/notes/2024/management/</id>
+    <published>2024-10-09T00:00:00Z</published>
+    <updated>2024-10-09T00:00:00Z</updated>
+    <summary>:ID: 1d989967-2878-40ab-827d-c4d1a91e0011
+Books Managing A Programming Project The Effective Manager </summary>
+    <content type="html">&lt;p&gt;:ID:       1d989967-2878-40ab-827d-c4d1a91e0011&lt;/p&gt;
+&lt;h2 id=&#34;books&#34;&gt;Books&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/notes/2023/managing-a-programming-project/&#34;&gt;Managing A Programming Project&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/notes/2021/the-effective-manager/&#34;&gt;The Effective Manager&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <category term="Books"/>
+    
+    
+    <category term="Management"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Relational Theory</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/relational-theory/"/>
+    <id>https://mtrsk.github.io/notes/2024/relational-theory/</id>
+    <published>2024-10-09T00:00:00Z</published>
+    <updated>2024-10-09T00:00:00Z</updated>
+    <summary>:ID: abcb3048-34a5-4561-885c-74b8285924ac
+It was late in 1968 that Codd, a mathematician by training, first realized that the discipline of mathematics could be used to inject some solid principles and rigor into a field, database management, that prior to that time was all too deficient in any such qualities. His original definition of the relational model appeared in an IBM Research Report in 1969 (&amp;hellip;) (Date 2015).
+Date&amp;rsquo;s Review of Codd&amp;rsquo;s Original Algebra Structure Types (or Domains) n-Ary Relations Attributes &amp;amp; Tuples Keys Candidate Primary Foreign Integrity Entity Integrity Referential Integrity Manipulation Relational Algebra Relational Assignment References Date, Chris J.</summary>
+    <content type="html">&lt;p&gt;:ID:       abcb3048-34a5-4561-885c-74b8285924ac&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It was late in 1968 that Codd, a mathematician by training, first realized that
+the discipline of mathematics could be used to inject some solid principles and
+rigor into a field, database management, that prior to that time was all too
+deficient in any such qualities. His original definition of the relational model
+appeared in an IBM Research Report in 1969 (&amp;hellip;) (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Date 2015&lt;/a&gt;).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;date-s-review-of-codd-s-original-algebra&#34;&gt;Date&amp;rsquo;s Review of Codd&amp;rsquo;s Original Algebra&lt;/h2&gt;
+&lt;h3 id=&#34;structure&#34;&gt;Structure&lt;/h3&gt;
+&lt;h4 id=&#34;types--or-domains&#34;&gt;Types (or Domains)&lt;/h4&gt;
+&lt;h4 id=&#34;n-ary-relations&#34;&gt;n-Ary Relations&lt;/h4&gt;
+&lt;h4 id=&#34;attributes-and-tuples&#34;&gt;Attributes &amp;amp; Tuples&lt;/h4&gt;
+&lt;h4 id=&#34;keys&#34;&gt;Keys&lt;/h4&gt;
+&lt;!--list-separator--&gt;
+&lt;ul&gt;
+&lt;li&gt;Candidate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--list-separator--&gt;
+&lt;ul&gt;
+&lt;li&gt;Primary&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--list-separator--&gt;
+&lt;ul&gt;
+&lt;li&gt;Foreign&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;integrity&#34;&gt;Integrity&lt;/h3&gt;
+&lt;h4 id=&#34;entity-integrity&#34;&gt;Entity Integrity&lt;/h4&gt;
+&lt;h4 id=&#34;referential-integrity&#34;&gt;Referential Integrity&lt;/h4&gt;
+&lt;h3 id=&#34;manipulation&#34;&gt;Manipulation&lt;/h3&gt;
+&lt;h4 id=&#34;relational-algebra&#34;&gt;Relational Algebra&lt;/h4&gt;
+&lt;h4 id=&#34;relational-assignment&#34;&gt;Relational Assignment&lt;/h4&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Date, Chris J. 2015. &lt;i&gt;Sql and Relational Theory: How to Write Accurate Sql Code&lt;/i&gt;. O’Reilly Media, Inc.&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    
+    <category term="Relational Theory"/>
+    
+    
+    <category term="Databases"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The Two Generals Problem</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/the-two-generals-problem/"/>
+    <id>https://mtrsk.github.io/notes/2024/the-two-generals-problem/</id>
+    <published>2024-10-09T00:00:00Z</published>
+    <updated>2024-10-09T00:00:00Z</updated>
+    <summary>:ID: e9403288-b149-474c-928f-02e52e7cf78a
+The Two Generals&amp;rsquo; Problem is a classic unsolvable problem in Distributed Systems, first formulated by (Akkoyunlu, Ekanadham, and Huber 1975) and later described by .
+References Akkoyunlu, Eralp A, Kattamuri Ekanadham, and Richard V Huber. 1975. “Some Constraints and Tradeoffs in the Design of Network Communications.” In Proceedings of the Fifth Acm Symposium on Operating Systems Principles, 67–74. </summary>
+    <content type="html">&lt;p&gt;:ID:       e9403288-b149-474c-928f-02e52e7cf78a&lt;/p&gt;
+&lt;p&gt;The Two Generals&amp;rsquo; Problem is a classic unsolvable problem in &lt;a href=&#34;/notes/2021/distributed-systems/&#34;&gt;Distributed Systems&lt;/a&gt;, first formulated by (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Akkoyunlu, Ekanadham, and Huber 1975&lt;/a&gt;) and later described by .&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Akkoyunlu, Eralp A, Kattamuri Ekanadham, and Richard V Huber. 1975. “Some Constraints and Tradeoffs in the Design of Network Communications.” In &lt;i&gt;Proceedings of the Fifth Acm Symposium on Operating Systems Principles&lt;/i&gt;, 67–74.&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    
+    <category term="Classical Papers"/>
+    
+    
+    <category term="Distributed Systems"/>
     
   </entry>
   
@@ -60,9 +259,9 @@ and unnecessary tests in [BROKEN LINK: de7d0e94-618f-4982-b3e5-8806d88cad5d] and
     <published>2024-10-07T00:00:00Z</published>
     <updated>2024-10-07T00:00:00Z</updated>
     <summary>:ID: c350b99c-021d-4f5a-a948-4929056e1267
-NixOS is a [BROKEN LINK: 8a427ee7-2ef1-489b-af82-91de7be8a3ba] distribution based on the purely functional package management system [BROKEN LINK: 72d705ae-9f5c-402b-88e5-21744277319a].</summary>
+NixOS is a Linux distribution based on the purely functional package management system Nix.</summary>
     <content type="html">&lt;p&gt;:ID:       c350b99c-021d-4f5a-a948-4929056e1267&lt;/p&gt;
-&lt;p&gt;NixOS is a [BROKEN LINK: 8a427ee7-2ef1-489b-af82-91de7be8a3ba] distribution based on the purely functional package management system [BROKEN LINK: 72d705ae-9f5c-402b-88e5-21744277319a].&lt;/p&gt;
+&lt;p&gt;NixOS is a &lt;a href=&#34;/notes/2024/linux/&#34;&gt;Linux&lt;/a&gt; distribution based on the purely functional package management system &lt;a href=&#34;/notes/2024/nix/&#34;&gt;Nix&lt;/a&gt;.&lt;/p&gt;
 </content>
     
     <category term="Linux"/>
@@ -436,204 +635,6 @@ tools. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Cesarini and Vinoski 2016, 
     
     
     <category term="Functional Programming"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Split Brain</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/split-brain/"/>
-    <id>https://mtrsk.github.io/notes/2024/split-brain/</id>
-    <published>2024-09-28T00:00:00Z</published>
-    <updated>2024-09-28T00:00:00Z</updated>
-    <summary>:ID: 582a4090-eb66-4dfd-8166-9acd3c97dcc9
-Split brain means that the Clusters is split in two (or more) parts, but both parts think they are the only remaining part of the cluster. This can lead to very bad situations when both parts of the cluster try to host the resources that are offered by the cluster. If the resource is a file system, and multiple nodes try to write to the file system simultaneously and without coordination, it may lead to corruption of the file system and the loss of data.</summary>
-    <content type="html">&lt;p&gt;:ID:       582a4090-eb66-4dfd-8166-9acd3c97dcc9&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Split brain means that the &lt;a href=&#34;/notes/2024/clusters/&#34;&gt;Clusters&lt;/a&gt; is split in two (or more) parts, but both
-parts think they are the only remaining part of the cluster. This can lead to
-very bad situations when both parts of the cluster try to host the resources
-that are offered by the cluster. If the resource is a file system, and multiple
-nodes try to write to the file system simultaneously and without coordination,
-it may lead to corruption of the file system and the loss of data. As it is the
-purpose of a high availability cluster to avoid situations where data could be
-lost, this must be prevented no matter what. (, &lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Van Vugt 2014, 6&lt;/a&gt;)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
-  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Van Vugt, Sander. 2014. &lt;i&gt;Pro Linux High Availability Clustering&lt;/i&gt;. Apress.&lt;/div&gt;
-&lt;/div&gt;
-</content>
-    
-    <category term="Clusters"/>
-    
-    
-    <category term="Distributed Systems"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sql</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/sql/"/>
-    <id>https://mtrsk.github.io/notes/2024/sql/</id>
-    <published>2024-09-28T00:00:00Z</published>
-    <updated>2024-09-28T00:00:00Z</updated>
-    <summary>:ID: 11f7d9cc-51a6-4897-955b-37a756105677 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Databases&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;SQL&amp;rdquo;
-Logical Query Processing Order FROM JOIN Step Description 1 Cartesian product 2 Qualification step (i.e. the ON filter) 3 LEFT or RIGHT reservations If the specified JOIN type is a CROSS JOIN, then the query planner stops at Step 1 and return the cartesian product to the next clause. All other join types proceed to the qualification step.
-INNER and OUTER JOINS are called &amp;ldquo;qualified JOINs&amp;rdquo;, the qualification predicated is specified using the ON keyword, which filters all rows from the previous cartesian step where the predicate is TRUE.</summary>
-    <content type="html">&lt;p&gt;:ID:       11f7d9cc-51a6-4897-955b-37a756105677
-:EXPORT_HUGO_CATEGORIES: &amp;ldquo;Databases&amp;rdquo;
-:EXPORT_HUGO_TAGS: &amp;ldquo;SQL&amp;rdquo;&lt;/p&gt;
-&lt;h2 id=&#34;logical-query-processing-order&#34;&gt;Logical Query Processing Order&lt;/h2&gt;
-&lt;h3 id=&#34;from&#34;&gt;FROM&lt;/h3&gt;
-&lt;h4 id=&#34;join&#34;&gt;JOIN&lt;/h4&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Step&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;Cartesian product&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;Qualification step (i.e. the ON filter)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;LEFT&lt;/code&gt; or &lt;code&gt;RIGHT&lt;/code&gt; reservations&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;If the specified &lt;code&gt;JOIN&lt;/code&gt; type is a &lt;code&gt;CROSS JOIN&lt;/code&gt;, then the query planner stops at Step
-1 and return the cartesian product to the next clause. All other join types
-proceed to the qualification step.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;INNER&lt;/code&gt; and &lt;code&gt;OUTER&lt;/code&gt; &lt;code&gt;JOINS&lt;/code&gt; are called &amp;ldquo;qualified JOINs&amp;rdquo;, the qualification
-predicated is specified using the &lt;code&gt;ON&lt;/code&gt; keyword, which filters all rows from the
-previous cartesian step where the predicate is &lt;code&gt;TRUE&lt;/code&gt;. If the request is an
-&lt;code&gt;INNER JOIN&lt;/code&gt;, then the qualified rows are returned to the next clause, if it is an
-&lt;code&gt;OUTER JOIN&lt;/code&gt;, the qualified rows go throught the next step.&lt;/p&gt;
-&lt;!--list-separator--&gt;
-&lt;ul&gt;
-&lt;li&gt;Chiastic Order&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;where&#34;&gt;WHERE&lt;/h3&gt;
-&lt;h3 id=&#34;group-by&#34;&gt;GROUP BY&lt;/h3&gt;
-&lt;h3 id=&#34;having&#34;&gt;HAVING&lt;/h3&gt;
-&lt;h3 id=&#34;select&#34;&gt;SELECT&lt;/h3&gt;
-&lt;h3 id=&#34;order-by&#34;&gt;ORDER BY&lt;/h3&gt;
-&lt;h3 id=&#34;offset-fetch&#34;&gt;OFFSET/FETCH&lt;/h3&gt;
-</content>
-    
-    
-    <category term="notes"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Clusters</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/clusters/"/>
-    <id>https://mtrsk.github.io/notes/2024/clusters/</id>
-    <published>2024-09-26T00:00:00Z</published>
-    <updated>2024-09-26T00:00:00Z</updated>
-    <summary>:ID: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb
-Different Kinds of Clusters High Availability Clusters The goal of a high availability cluster is to make sure that critical resources reach the maximum possible availability. This goal is accomplished by installing cluster software on multiple servers. This software monitors the availability of the cluster nodes, and it monitors the availability of the services that are managed by the cluster. If a server goes down, or if the resource stops, the HA cluster will notice and make sure that the resource is restarted somewhere else in the cluster, so that it can be used again after a minimal interruption.</summary>
-    <content type="html">&lt;p&gt;:ID:       d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb&lt;/p&gt;
-&lt;h2 id=&#34;different-kinds-of-clusters&#34;&gt;Different Kinds of Clusters&lt;/h2&gt;
-&lt;h3 id=&#34;high-availability-clusters&#34;&gt;High Availability Clusters&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The goal of a high availability cluster is to make sure that critical resources
-reach the maximum possible availability. This goal is accomplished by installing
-cluster software on multiple servers. This software monitors the availability of
-the cluster nodes, and it monitors the availability of the services that are
-managed by the cluster. If a server goes down, or if the resource stops, the HA
-cluster will notice and make sure that the resource is restarted somewhere else
-in the cluster, so that it can be used again after a minimal interruption. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Van Vugt 2014&lt;/a&gt;)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
-  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Van Vugt, Sander. 2014. &lt;i&gt;Pro Linux High Availability Clustering&lt;/i&gt;. Apress.&lt;/div&gt;
-&lt;/div&gt;
-</content>
-    
-    <category term="Clusters"/>
-    
-    
-    <category term="Distributed Systems"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Stonith</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/stonith/"/>
-    <id>https://mtrsk.github.io/notes/2024/stonith/</id>
-    <published>2024-09-26T00:00:00Z</published>
-    <updated>2024-09-26T00:00:00Z</updated>
-    <summary>:ID: 789326a5-20aa-4492-acb6-1474c3c11a4a :ROAM_ALIASES: Fencing
-In STONITH, specific hardware is used to terminate a node that is no longer responsive to the cluster. The idea behind STONITH is that before migrating resources to another node in the cluster, the cluster has to confirm that the node in question really is down. To do this, the cluster will send a shutdown action to the STONITH device, which will, in turn, terminate the nonresponsive node.</summary>
-    <content type="html">&lt;p&gt;:ID:       789326a5-20aa-4492-acb6-1474c3c11a4a
-:ROAM_ALIASES: Fencing&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;In STONITH, specific hardware is used to terminate a node that is no longer
-responsive to the cluster. The idea behind STONITH is that before migrating
-resources to another node in the cluster, the cluster has to confirm that the
-node in question really is down. To do this, the cluster will send a shutdown
-action to the STONITH device, which will, in turn, terminate the nonresponsive
-node. (Van Vugt 2014, chap. 1)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;mechanisms&#34;&gt;Mechanisms&lt;/h2&gt;
-&lt;h3 id=&#34;power-fencing&#34;&gt;Power Fencing&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Cuts the node off from power.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;fabric-fencing-disconnects-the-machine-from-storage-dot&#34;&gt;Fabric Fencing :: Disconnects the machine from storage.&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;By closing ports in a Fibre Channel Switch.&lt;/li&gt;
-&lt;li&gt;By using &lt;a href=&#34;/notes/2024/scsi/&#34;&gt;Scsi&lt;/a&gt; reservations.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;fencing-agents&#34;&gt;Fencing Agents&lt;/h2&gt;
-</content>
-    
-    <category term="Clusters"/>
-    
-    
-    <category term="Distributed Systems"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Quorum</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/quorum/"/>
-    <id>https://mtrsk.github.io/notes/2024/quorum/</id>
-    <published>2024-09-25T00:00:00Z</published>
-    <updated>2024-09-25T00:00:00Z</updated>
-    <summary>:ID: 42950824-228d-48d6-abec-4e18908dfca0
-Quorum means &amp;ldquo;majority&amp;rdquo;, and the idea behind quorum is easy to understand: if the Clusters doesn’t have quorum, no actions will be taken in the cluster. This by itself would offer a good solution to avoid the Split Brain problem.
-But to make sure that it can never happen, that multiple nodes activate the same resources in the cluster, another mechanism is used as well. This mechanism is known as Stonith.</summary>
-    <content type="html">&lt;p&gt;:ID:       42950824-228d-48d6-abec-4e18908dfca0&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Quorum means &amp;ldquo;majority&amp;rdquo;, and the idea behind quorum is easy to understand: if
-the &lt;a href=&#34;/notes/2024/clusters/&#34;&gt;Clusters&lt;/a&gt; doesn’t have quorum, no actions will be taken in the cluster. This
-by itself would offer a good solution to avoid the &lt;a href=&#34;/notes/2024/split_brain/&#34;&gt;Split Brain&lt;/a&gt; problem.&lt;/p&gt;
-&lt;p&gt;But to make sure that it can never happen, that multiple nodes activate the same
-resources in the cluster, another mechanism is used as well. This mechanism is
-known as &lt;a href=&#34;/notes/2024/stonith/&#34;&gt;Stonith&lt;/a&gt;. (, &lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Van Vugt 2014, 6&lt;/a&gt;)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;This is required to avoid corruption on vital &lt;a href=&#34;/notes/2024/clusters/&#34;&gt;Clusters&lt;/a&gt; resources, such as the
-File System.&lt;/p&gt;
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
-  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Van Vugt, Sander. 2014. &lt;i&gt;Pro Linux High Availability Clustering&lt;/i&gt;. Apress.&lt;/div&gt;
-&lt;/div&gt;
-</content>
-    
-    <category term="Clusters"/>
-    
-    
-    <category term="Distributed Systems"/>
     
   </entry>
   

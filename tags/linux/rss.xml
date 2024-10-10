@@ -13,7 +13,14 @@
       <link>https://mtrsk.github.io/notes/2024/nixos/</link>
       <pubDate>Mon, 07 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/nixos/</guid>
-      <description>:ID: c350b99c-021d-4f5a-a948-4929056e1267&#xA;NixOS is a [BROKEN LINK: 8a427ee7-2ef1-489b-af82-91de7be8a3ba] distribution based on the purely functional package management system [BROKEN LINK: 72d705ae-9f5c-402b-88e5-21744277319a].</description>
+      <description>:ID: c350b99c-021d-4f5a-a948-4929056e1267&#xA;NixOS is a Linux distribution based on the purely functional package management system Nix.</description>
+    </item>
+    <item>
+      <title>Drbd</title>
+      <link>https://mtrsk.github.io/notes/2024/drbd/</link>
+      <pubDate>Tue, 24 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/drbd/</guid>
+      <description>:ID: 694d20ba-bdb5-419d-ae9d-0dc73c695333 :ROAM_ALIAS: DRBD&#xA;Definition Distributed Replicated Block Device (DRBD) is a distributed replicated storage system for the Linux platform.&#xA;If you want to create an environment where multiple nodes can access your data simultaneously, the distributed replicated block device (DRBD) is an excellent choice. This is particularly true if you want to set up a two-node cluster, in which one node must be able to take over the exact state of the other node as fast as possible.</description>
     </item>
     <item>
       <title>Linux</title>

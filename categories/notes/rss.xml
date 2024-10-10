@@ -30,53 +30,11 @@
       <description>:ID: 11f7d9cc-51a6-4897-955b-37a756105677 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Databases&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;SQL&amp;rdquo;&#xA;Logical Query Processing Order FROM JOIN Step Description 1 Cartesian product 2 Qualification step (i.e. the ON filter) 3 LEFT or RIGHT reservations If the specified JOIN type is a CROSS JOIN, then the query planner stops at Step 1 and return the cartesian product to the next clause. All other join types proceed to the qualification step.&#xA;INNER and OUTER JOINS are called &amp;ldquo;qualified JOINs&amp;rdquo;, the qualification predicated is specified using the ON keyword, which filters all rows from the previous cartesian step where the predicate is TRUE.</description>
     </item>
     <item>
-      <title>Drbd</title>
-      <link>https://mtrsk.github.io/notes/2024/drbd/</link>
-      <pubDate>Tue, 24 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/notes/2024/drbd/</guid>
-      <description>:ID: 694d20ba-bdb5-419d-ae9d-0dc73c695333 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;OS&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Linux&amp;rdquo;&#xA;Distributed Replicated Block Device (DRBD) is a distributed replicated storage system for the Linux platform.</description>
-    </item>
-    <item>
-      <title>Postgres Window Functions</title>
-      <link>https://mtrsk.github.io/notes/2024/postgres-window-functions/</link>
-      <pubDate>Mon, 23 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/notes/2024/postgres-window-functions/</guid>
-      <description>:ID: 860f97f8-e41d-480b-881b-203773406990&#xA;Aggregates ROW_NUMBER LEAD The LEAD() function is used to retrieve data from the next row.&#xA;LAG The LAG() function is used to retrieve data from the previous row.&#xA;Rankings Rank Dense Rank Value Functions </description>
-    </item>
-    <item>
-      <title>Postgres Ctes</title>
-      <link>https://mtrsk.github.io/notes/2024/postgres-ctes/</link>
-      <pubDate>Sat, 21 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/notes/2024/postgres-ctes/</guid>
-      <description>:ID: 36f5efb2-34da-4d67-8c37-bbd5429d7b55 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Databases&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;SQL&amp;rdquo; &amp;ldquo;Postgres&amp;rdquo;&#xA;Common Table Expressions Recursive </description>
-    </item>
-    <item>
-      <title>Postgres Functions</title>
-      <link>https://mtrsk.github.io/notes/2024/postgres-functions/</link>
-      <pubDate>Sat, 21 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/notes/2024/postgres-functions/</guid>
-      <description>:ID: 32e8ab3c-2b96-410f-b60d-fde9e35b49f3 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Databases&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;SQL&amp;rdquo; &amp;ldquo;Postgres&amp;rdquo;&#xA;Functions CREATE OR REPLACE FUNCTION function_name(arg1 INT, arg2 INT, arg3 INT) RETURNS SETOF VARCHAR LANGUAGE plpgsql AS $$ BEGIN (...) END; $$; References </description>
-    </item>
-    <item>
-      <title>Postgres Indexes</title>
-      <link>https://mtrsk.github.io/notes/2024/postgres-indexes/</link>
-      <pubDate>Sat, 21 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/notes/2024/postgres-indexes/</guid>
-      <description>:ID: 48dd781f-123c-4508-82b5-ac9b05383db4 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Databases&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;SQL&amp;rdquo; &amp;ldquo;Postgres&amp;rdquo;</description>
-    </item>
-    <item>
-      <title>Postgres Subqueries</title>
-      <link>https://mtrsk.github.io/notes/2024/postgres-subqueries/</link>
-      <pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/notes/2024/postgres-subqueries/</guid>
-      <description>:ID: 60f014f9-8a82-43b8-ae13-dee68b9470bf :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Databases&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;SQL&amp;rdquo; &amp;ldquo;Postgres&amp;rdquo;&#xA;Subqueries as Expressions Scalar Subquery Results in a single row&#xA;Multi-Row Subquery Results in multiple rows, tipically used in the where clause with operators such as IN, NOT, EXISTS, ANY and ALL.&#xA;Correlated Subquery A uncorrelated sub-query is a type of sub-query where the inner query doesn’t depend upon the outer query for its execution.&#xA;Uncorrelated Subquery A correlated sub-query is a type of query where the inner query depends upon the outcome of the outer query in order to perform its execution.</description>
-    </item>
-    <item>
       <title>Byzantine Generals Problem</title>
       <link>https://mtrsk.github.io/notes/2024/byzantine-generals-problem/</link>
       <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/byzantine-generals-problem/</guid>
-      <description>:ID: 68219535-efeb-4835-9670-fd2747376cf3&#xA;A summary from (Lamport, Shostak, and Pease 2019) paper.&#xA;Introduction A reliable computer system must be able to cope with the failure of one or more of its components. A failed component may exhibit a type of behavior that is often overlooked namely, sending conflicting information to different parts of the system. The problem of coping with this type of failure is expressed abstractly as the Byzantine Generals Problem.</description>
+      <description>:ID: 68219535-efeb-4835-9670-fd2747376cf3&#xA;The Byzantine Generals&amp;rsquo; Problem is an analogy used to describe the difficulties of reaching consensus in Distributed Systems, this is a summary from (Lamport, Shostak, and Pease 2019).&#xA;Introduction A reliable computer system must be able to cope with the failure of one or more of its components. A failed component may exhibit a type of behavior that is often overlooked namely, sending conflicting information to different parts of the system.</description>
     </item>
     <item>
       <title>Programming Erlang</title>
@@ -114,13 +72,6 @@
       <description>:ID: 10d70300-3c11-48f7-af3b-d5d07d5a5f39&#xA;Chapter 01 - Hypermedia: A Reintroduction What Is Hypermedia? Hypermedia is a media, for example a text, that includes non-linear branching from one location in the media to another, via, for example, hyperlinks embedded in the media.&#xA;A Brief History of Hypermedia Where did the idea of hypermedia come from?&#xA;The 1945 article As We May Think, from Vanevar Bush Ted Nelson&amp;rsquo;s work on the &amp;ldquo;Hypertext Editing System&amp;rdquo; at Brown University and who later created the File Retrieval and Editing System (FRESS) Douglas Engelbart&amp;rsquo;s thesis on the &amp;ldquo;The Mother Of All Demos&amp;rdquo; Modern Implementation Tim Berners-Lee&amp;rsquo;s &amp;ldquo;World Wide Web&amp;rdquo; Roy Fielding&amp;rsquo;s &amp;ldquo;Architectural Styles And The Design Of Network Based Software Architectures&amp;rdquo; The World’s Most Successful Hypertext: HTML The Essence of HTML as a Hypermedia Anchor tags</description>
     </item>
     <item>
-      <title>Managing A Programming Project</title>
-      <link>https://mtrsk.github.io/notes/2023/managing-a-programming-project/</link>
-      <pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/notes/2023/managing-a-programming-project/</guid>
-      <description>:ID: da4d5031-66cb-4d1c-b8cf-24d12adf5c17&#xA;Introduction Your ground rules Adopt a set of unambiguous definitions and stick with them Define your project&amp;rsquo;s development cycle and related all schedules and work process to that cycle Define activities, such as levels of testing, in a consistent way Define a system of documents clearly, consistent and early Your contract Half the horror stories about programming involve either bad contracts or no contract at all&#xA;The fact that you are managing a programming project means that you will be running a business.</description>
-    </item>
-    <item>
       <title>Mandarin Chinese</title>
       <link>https://mtrsk.github.io/notes/2022/mandarin-chinese/</link>
       <pubDate>Fri, 04 Feb 2022 00:00:00 +0000</pubDate>
@@ -135,13 +86,6 @@
       <description>:ID: bd5dba58-0dd8-4b89-aabb-8bd49ed8c27c&#xA;What is an Ingress Controller? Opens the Kubernetes cluster to receive traffic from the external world Routes traffic to the backend services </description>
     </item>
     <item>
-      <title>Distributed Systems</title>
-      <link>https://mtrsk.github.io/notes/2021/distributed-systems/</link>
-      <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/notes/2021/distributed-systems/</guid>
-      <description>:ID: d7efb05f-fb8f-438c-b09d-ea91dc24ebc3&#xA;Readings from the following books:&#xA;Michael L. Perry&amp;rsquo;s &amp;ldquo;The Art of Immutable Architecture&amp;rdquo;. Properties of a reliable application&#xA;Idempotence Immutability Local Independence Versioning Why Immutable Architecture ..if you are in architecture, you are responsible for cutting the Gordian Knot of possible failures and mitigations. This is the fragile process by which we build the systems that run our society.&#xA;The Problems with Immutability It&amp;rsquo;s not how machines actually operate, i.</description>
-    </item>
-    <item>
       <title>Gitops</title>
       <link>https://mtrsk.github.io/notes/2021/gitops/</link>
       <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
@@ -154,13 +98,6 @@
       <pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2021/kubernetes-secrets/</guid>
       <description>:ID: 2bdf666d-f2a0-410a-a46a-45815fdf7285&#xA;A Kubernetes Secret is an object that contains a small amount of sensitive data such as a password, a token, or a key. Such information might otherwise be put in a Pod specification or in a container image. Using a Secret means that you don&amp;rsquo;t need to include confidential data in your application code.&#xA;YAML apiVersion: v1 kind: Secret metadata: name: example-secret type: Opaque data: app-password: NXVQNFNlS3J5dA== admin-password: RDBub3Q1VDM0TA== Accessing a secret As an environment variable apiVersion: apps/v1 .</description>
-    </item>
-    <item>
-      <title>The Effective Manager</title>
-      <link>https://mtrsk.github.io/notes/2021/the-effective-manager/</link>
-      <pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/notes/2021/the-effective-manager/</guid>
-      <description>:ID: 32b2fe5a-3bc3-439b-a850-70a539498e9e&#xA;Teachable and Sustainable Skills However you manage, your techniques, behavior, and philosophy must be both teachable to others and sustainable.&#xA;To go up in any organization, you must be able to teach others to do what you do. If you&amp;rsquo;re irreplacable, you&amp;rsquo;re also unpromotable. The way an effective manager manages is visible to others and is teachable to others. And the effective manager can repeat the&#xA;Critical Behavior Manager Tool Get to know your people One on ones Communicate about performance Feedback Ask for more Coaching Push work down Delegation Know Your People: One On Ones One on ones are meetings that:</description>
     </item>
     <item>
       <title>History Of Logic</title>

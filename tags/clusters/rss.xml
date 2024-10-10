@@ -20,7 +20,7 @@
       <link>https://mtrsk.github.io/notes/2024/clusters/</link>
       <pubDate>Thu, 26 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/clusters/</guid>
-      <description>:ID: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb&#xA;Different Kinds of Clusters High Availability Clusters The goal of a high availability cluster is to make sure that critical resources reach the maximum possible availability. This goal is accomplished by installing cluster software on multiple servers. This software monitors the availability of the cluster nodes, and it monitors the availability of the services that are managed by the cluster. If a server goes down, or if the resource stops, the HA cluster will notice and make sure that the resource is restarted somewhere else in the cluster, so that it can be used again after a minimal interruption.</description>
+      <description>:ID: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb&#xA;Different Kinds of Clusters High performance Different computers work together to host onE or more tasks that require lots of computing resources.&#xA;Load balancing A load balancer serves as a front end and receives requests from end users. The load balancer distributes the request to different servers.&#xA;High Availability Clusters The goal of a high availability cluster is to make sure that critical resources reach the maximum possible availability.</description>
     </item>
     <item>
       <title>Stonith</title>

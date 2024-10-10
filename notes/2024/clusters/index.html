@@ -11,7 +11,9 @@
   <meta property="og:site_name" content="Benevides&#39; Blog">
   <meta property="og:title" content="Clusters">
   <meta property="og:description" content=":ID: d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb
-Different Kinds of Clusters High Availability Clusters The goal of a high availability cluster is to make sure that critical resources reach the maximum possible availability. This goal is accomplished by installing cluster software on multiple servers. This software monitors the availability of the cluster nodes, and it monitors the availability of the services that are managed by the cluster. If a server goes down, or if the resource stops, the HA cluster will notice and make sure that the resource is restarted somewhere else in the cluster, so that it can be used again after a minimal interruption.">
+Different Kinds of Clusters High performance Different computers work together to host onE or more tasks that require lots of computing resources.
+Load balancing A load balancer serves as a front end and receives requests from end users. The load balancer distributes the request to different servers.
+High Availability Clusters The goal of a high availability cluster is to make sure that critical resources reach the maximum possible availability.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="notes">
@@ -62,6 +64,12 @@ Different Kinds of Clusters High Availability Clusters The goal of a high availa
     </small>
   </h2><p>:ID:       d8a1a1ff-47e6-44bc-a627-83ca8dc61ecb</p>
 <h2 id="different-kinds-of-clusters">Different Kinds of Clusters</h2>
+<h3 id="high-performance">High performance</h3>
+<p>Different computers work together to host onE or more tasks that require lots of
+computing resources.</p>
+<h3 id="load-balancing">Load balancing</h3>
+<p>A load balancer serves as a front end and receives requests from end users. The
+load balancer distributes the request to different servers.</p>
 <h3 id="high-availability-clusters">High Availability Clusters</h3>
 <blockquote>
 <p>The goal of a high availability cluster is to make sure that critical resources
@@ -72,12 +80,44 @@ managed by the cluster. If a server goes down, or if the resource stops, the HA
 cluster will notice and make sure that the resource is restarted somewhere else
 in the cluster, so that it can be used again after a minimal interruption. (<a href="#citeproc_bib_item_1">Van Vugt 2014</a>)</p>
 </blockquote>
+<h4 id="components-of-a-ha-cluster">Components of a HA Cluster</h4>
+<ul>
+<li>Shared storage</li>
+<li>Different networks</li>
+<li>Bonded network devices</li>
+<li>Multipathing</li>
+<li><a href="/notes/2024/stonith/">Stonith</a> devices</li>
+</ul>
 <h2 id="references">References</h2>
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Van Vugt, Sander. 2014. <i>Pro Linux High Availability Clustering</i>. Apress.</div>
 </div>
 
 
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
 
    
 

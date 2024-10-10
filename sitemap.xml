@@ -2,10 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mtrsk.github.io/tags/books/</loc>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mtrsk.github.io/categories/</loc>
     <lastmod>2024-10-09T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mtrsk.github.io/tags/classical-papers/</loc>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/categories/databases/</loc>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mtrsk.github.io/notes/2024/dializer/</loc>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/categories/distributed-systems/</loc>
     <lastmod>2024-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/tags/elixir/</loc>
@@ -14,13 +26,40 @@
     <loc>https://mtrsk.github.io/tags/erlang/</loc>
     <lastmod>2024-10-09T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mtrsk.github.io/tags/fallacies/</loc>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/notes/2024/fallacies-of-distributed-computing/</loc>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mtrsk.github.io/categories/functional-programming/</loc>
     <lastmod>2024-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/</loc>
     <lastmod>2024-10-09T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mtrsk.github.io/tags/immutable-architectures/</loc>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/notes/2024/immutable-architectures/</loc>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/categories/management/</loc>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/notes/2024/management/</loc>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/tags/relational-theory/</loc>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/notes/2024/relational-theory/</loc>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mtrsk.github.io/tags/</loc>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/notes/2024/the-two-generals-problem/</loc>
     <lastmod>2024-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/tags/haskell/</loc>
@@ -74,9 +113,6 @@
     <loc>https://mtrsk.github.io/tags/clusters/</loc>
     <lastmod>2024-09-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mtrsk.github.io/categories/distributed-systems/</loc>
-    <lastmod>2024-09-28T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mtrsk.github.io/notes/2024/otp/</loc>
     <lastmod>2024-09-28T00:00:00+00:00</lastmod>
   </url><url>
@@ -107,10 +143,19 @@
     <loc>https://mtrsk.github.io/notes/2024/linux/</loc>
     <lastmod>2024-09-24T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mtrsk.github.io/categories/os/</loc>
+    <lastmod>2024-09-24T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mtrsk.github.io/notes/2024/sequential-erlang/</loc>
     <lastmod>2024-09-24T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mtrsk.github.io/tags/postgres/</loc>
+    <lastmod>2024-09-23T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mtrsk.github.io/notes/2024/postgres-window-functions/</loc>
+    <lastmod>2024-09-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/tags/sql/</loc>
     <lastmod>2024-09-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/notes/2024/nix/</loc>
@@ -140,16 +185,7 @@
     <loc>https://mtrsk.github.io/blog/2024/experiments-with-erlang-and-nix/</loc>
     <lastmod>2024-09-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mtrsk.github.io/categories/databases/</loc>
-    <lastmod>2024-08-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mtrsk.github.io/tags/postgres/</loc>
-    <lastmod>2024-08-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mtrsk.github.io/notes/2024/postgres/</loc>
-    <lastmod>2024-08-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mtrsk.github.io/tags/sql/</loc>
     <lastmod>2024-08-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/notes/2024/byzantine-generals-problem/</loc>
