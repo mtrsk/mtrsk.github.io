@@ -5,7 +5,8 @@
 #+HUGO_CATEGORIES: "Distributed Systems"
 #+HUGO_TAGS: "Classic Papers"
 
-First postulated by Eric Brewer in [cite:@brewer2000], and formally proved in [cite:@gilbert2002].
+The CAP Theorem is a classic problem in [[id:d7efb05f-fb8f-438c-b09d-ea91dc24ebc3][Distributed Systems]], first postulated by
+Eric Brewer in [cite:@brewer2000], and formally proved in [cite:@gilbert2002].
 
 * Definitions
 

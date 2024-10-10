@@ -24,5 +24,13 @@ run
 ** Org Roam
 
 The org roam graph generation is a modification from [[https://hugocisneros.com/blog/my-org-roam-notes-workflow/][Hugo Cisnero's Notes
-Workflow]].
+Workflow]]. You can generate the current graph from you local database instance by running:
+
+#+BEGIN_SRC shell
+  graph
+  # or
+  just graph
+#+END_SRC
+
+inside the Nix shell.
 

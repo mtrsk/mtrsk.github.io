@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       1d989967-2878-40ab-827d-c4d1a91e0011
+:END:
+#+title: Management
+#+HUGO_CATEGORIES: "Management"
+#+HUGO_TAGS: "Books"
+
+* Books
++ [[id:da4d5031-66cb-4d1c-b8cf-24d12adf5c17][Managing a Programming Project]]
++ [[id:32b2fe5a-3bc3-439b-a850-70a539498e9e][The Effective Manager]]

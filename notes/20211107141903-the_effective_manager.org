@@ -1,7 +1,11 @@
 :PROPERTIES:
 :ID:       32b2fe5a-3bc3-439b-a850-70a539498e9e
 :END:
-#+title: The-Effective-Manager
+#+title: The Effective Manager
+#+HUGO_CATEGORIES: "Management"
+#+HUGO_TAGS: "Books"
+
+Notes from the [cite:@horstman2023effective].
 
 * Teachable and Sustainable Skills
 
@@ -332,3 +336,4 @@ One of your small balls is a big ball to your direct.
 4. Describe the task or project in detail
 5. Address deadline, quality, and reporting standards
 
+#+print_bibliography: 

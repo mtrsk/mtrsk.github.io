@@ -7,6 +7,14 @@
 
 * Different Kinds of Clusters
 
+** High performance
+Different computers work together to host onE or more tasks that require lots of
+computing resources.
+
+** Load balancing
+A load balancer serves as a front end and receives requests from end users. The
+load balancer distributes the request to different servers.
+
 ** High Availability Clusters
 
 #+BEGIN_QUOTE
@@ -19,4 +27,12 @@ cluster will notice and make sure that the resource is restarted somewhere else
 in the cluster, so that it can be used again after a minimal interruption. [cite:@van2014pro]
 #+END_QUOTE
 
+*** Components of a HA Cluster
++ Shared storage
++ Different networks
++ Bonded network devices
++ Multipathing
++ [[id:789326a5-20aa-4492-acb6-1474c3c11a4a][STONITH]] devices
+
 #+print_bibliography: 
+
