@@ -120,6 +120,61 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 
 #+RESULTS: export-notes
 
+** Relational Theory
+:PROPERTIES:
+:EXPORT_FILE_NAME: relational-theory
+:EXPORT_DATE: 2024-10-09
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug relational-theory
+:CUSTOM_ID: relational-theory
+:END:
+
+#+INCLUDE: "../notes/20241009215607-relational_theory.org"
+    
+
+** Management
+:PROPERTIES:
+:EXPORT_FILE_NAME: management
+:EXPORT_DATE: 2024-10-09
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug management
+:CUSTOM_ID: management
+:END:
+
+#+INCLUDE: "../notes/20241009203936-management.org"
+    
+
+** The Two Generals Problem
+:PROPERTIES:
+:EXPORT_FILE_NAME: the-two-generals-problem
+:EXPORT_DATE: 2024-10-09
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug the-two-generals-problem
+:CUSTOM_ID: the-two-generals-problem
+:END:
+
+#+INCLUDE: "../notes/20241009131720-the_two_generals_problem.org"
+    
+
+** Immutable Architectures
+:PROPERTIES:
+:EXPORT_FILE_NAME: immutable-architectures
+:EXPORT_DATE: 2024-10-09
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug immutable-architectures
+:CUSTOM_ID: immutable-architectures
+:END:
+
+#+INCLUDE: "../notes/20241009115044-immutable_architectures.org"
+    
+
+** Fallacies Of Distributed Computing
+:PROPERTIES:
+:EXPORT_FILE_NAME: fallacies-of-distributed-computing
+:EXPORT_DATE: 2024-10-09
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug fallacies-of-distributed-computing
+:CUSTOM_ID: fallacies-of-distributed-computing
+:END:
+
+#+INCLUDE: "../notes/20241009110639-fallacies_of_distributed_computing.org"
+    
+
 ** Dializer
 :PROPERTIES:
 :EXPORT_FILE_NAME: dializer
@@ -757,3 +812,4 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 
 #+INCLUDE: "../notes/20211012215602-kubernetes.org"
     
+

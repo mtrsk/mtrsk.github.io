@@ -2,6 +2,8 @@
 :ID:       860f97f8-e41d-480b-881b-203773406990
 :END:
 #+title: Postgres Window Functions
+#+HUGO_CATEGORIES: "Databases"
+#+HUGO_TAGS: "SQL" "Postgres"
 
 * Aggregates
 

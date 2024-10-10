@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       5a3ae2dc-5a54-4ba1-a638-f6090502d8ae
+:END:
+#+title: Fallacies of Distributed Computing
+#+HUGO_CATEGORIES: "Distributed Systems"
+#+HUGO_TAGS: "Fallacies"
+
+#+BEGIN_QUOTE
+Between 1991 and 1997, engineers at Sun Microsystems collected a list of
+mistakes that programmers commonly make when writing software for networked
+computers. Bill Joy, Dave Lyon, L Peter Deutsch, and James Gosling cataloged
+eight assumptions that developers commonly hold about [[id:d7efb05f-fb8f-438c-b09d-ea91dc24ebc3][Distributed Systems]]. These
+assumptions, while obviously incorrect when stated explicitly, nevertheless
+inform many of the decisions that the Sun engineers found in systems of the
+day. [cite:@perry2024art p.6]
+#+END_QUOTE
+
+1. The network is reliable
+2. Latency is zero
+3. Bandwidth is infinite
+4. The network is secure
+5. Topology doesn't change
+6. There is one administrator
+7. Transport cost is zero
+8. The network is homogenous
+
+#+print_bibliography: 

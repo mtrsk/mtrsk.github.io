@@ -117,6 +117,7 @@
                   build.exec = "just ci-build";
                   publish.exec = "just public";
                   run.exec = "just ci-run";
+                  graph.exec = "just graph";
                   clean.exec = "just clean";
                 };
 

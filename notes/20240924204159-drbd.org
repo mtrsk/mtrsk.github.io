@@ -1,11 +1,31 @@
 :PROPERTIES:
 :ID:       694d20ba-bdb5-419d-ae9d-0dc73c695333
-:EXPORT_HUGO_CATEGORIES: "OS"
-:EXPORT_HUGO_TAGS: "Linux"
+:ROAM_ALIAS: DRBD
 :END:
 #+title: Distributed Replicated Block Device 
-#+ROAM_ALIAS: DRBD
+#+HUGO_CATEGORIES: "OS"
+#+HUGO_TAGS: "Linux"
+
+* Definition
 
 Distributed Replicated Block Device (DRBD) is a distributed replicated storage
 system for the [[id:8a427ee7-2ef1-489b-af82-91de7be8a3ba][Linux]] platform.
+
+#+BEGIN_QUOTE
+If you want to create an environment where multiple nodes can access your data simultaneously, the distributed
+replicated block device (DRBD) is an excellent choice. This is particularly true if you want to set up a two-node cluster,
+in which one node must be able to take over the exact state of the other node as fast as possible. The DRBD performs a
+delta-sync of blocks over the network, which ensures that you’ll have the exact same state on different machines in a
+matter of seconds. [cite:@van2014pro p.109]
+#+END_QUOTE
+
++ This is basically RAID-1, but over the network.
++ Syncronization happens at block-device level, after losing connection the Node
+  will catch up the changes that happened in the other node.
+
+** Replication Modes
+
++ Protocol A :: Asyncronous Writes
++ Protocol B :: Semi-Syncronous
++ Protocol C :: Syncronous
 

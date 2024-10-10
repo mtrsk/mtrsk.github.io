@@ -1,9 +1,9 @@
 :PROPERTIES:
 :ID:       60f014f9-8a82-43b8-ae13-dee68b9470bf
-:EXPORT_HUGO_CATEGORIES: "Databases"
-:EXPORT_HUGO_TAGS: "SQL" "Postgres"
 :END:
 #+title: Postgres Subqueries
+#+HUGO_CATEGORIES: "Databases"
+#+HUGO_TAGS: "SQL" "Postgres"
 
 * Subqueries as Expressions
 

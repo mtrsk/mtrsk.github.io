@@ -11,3 +11,4 @@ iSCSI an acronym for Internet Small Computer Systems Interface, an Internet
 Protocol (IP)-based storage networking standard for linking data storage
 facilities. It provides block-level access to storage devices by carrying [[id:388e1a43-f7f6-4c9e-af19-d7b6116a070e][SCSI]]
 commands over a TCP/IP network.
+

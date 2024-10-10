@@ -3,7 +3,9 @@
 :END:
 #+TITLE: Byzantine Generals Problem
 
-A summary from [cite:@lamport2019byzantine] paper.
+The Byzantine Generals' Problem is an analogy used to describe the difficulties
+of reaching consensus in [[id:d7efb05f-fb8f-438c-b09d-ea91dc24ebc3][Distributed Systems]], this is a summary from
+[cite:@lamport2019byzantine].
 
 * Introduction
 

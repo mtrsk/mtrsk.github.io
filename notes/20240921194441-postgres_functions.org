@@ -1,9 +1,9 @@
 :PROPERTIES:
 :ID:       32e8ab3c-2b96-410f-b60d-fde9e35b49f3
-:EXPORT_HUGO_CATEGORIES: "Databases"
-:EXPORT_HUGO_TAGS: "SQL" "Postgres"
 :END:
 #+title: Postgres Functions
+#+HUGO_CATEGORIES: "Databases"
+#+HUGO_TAGS: "SQL" "Postgres"
 
 * Functions
 #+BEGIN_SRC plpgsql
