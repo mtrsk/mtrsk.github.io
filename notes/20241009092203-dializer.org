@@ -8,3 +8,45 @@
 Dialyzer is a static analysis tool that identifies software discrepancies, such
 as definite type errors, code that is unreachable because of programming errors,
 and unnecessary tests in [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]] and [[id:8d568d81-9c22-4d94-81b2-27a2d730ba98][Elixir]] modules or an entire codebases.
+
+* Erlang Type Notation
+We can define a subset of Erlang types as follows:
+#+BEGIN_SRC 
+Type ::
+      any()
+    | none()
+    | pid()
+    | port()
+    | reference()
+    | []
+    | Atom
+    | binary()
+    | float()
+    | Fun
+    | Integer
+    | [Type]
+    | Tuple
+    | Union
+    | UserDefined
+Union :: Type1 | Type2 | ...
+Atom :: atom() | Erlang_Atom
+Integer :: integer() | Min .. Max
+Fun :: fun() | fun((...) -> Type)
+Tuple :: tuple() | {T1, T2, ... Tn}
+#+END_SRC
+
+New types can be defined with the following syntax:
+#+begin_src 
+  -type NewTypeName(TVar1, TVar2, ... , TVarN) :: Type.
+#+end_src
+
+** Specifying the Input and Output Types of a Function
+
+#+BEGIN_SRC 
+-spec file:open(FileName, Modes) -> {ok, Handle} | {error, Why} when
+    FileName :: string(),
+    Modes :: [Mode],
+    Mode :: read | write | ...
+    Handle :: file_handle(),
+    Why :: error_term().
+#+END_SRC

@@ -18,6 +18,9 @@ assetDir = "static"
   blog = "/blog/:year/:slug/"
   notes = "/notes/:year/:slug/"
 
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
 
 [mediaTypes."application/atom+xml"]
   suffixes = ["xml"]

@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       0c082d02-4771-4860-8119-83b263c00ff3
 :END:
-#+title: History-of-Logic
+#+title: History of Logic
 
 Notes from the book "History of Logic: from Aristotle to Tarski".
 

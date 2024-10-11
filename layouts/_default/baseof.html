@@ -14,8 +14,6 @@
     {{ if .Param "libs" }}
         {{ partialCached "libs.html" . }}
     {{ end }}
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
   </head>
   <body>
       {{- partial "nav.html" -}}

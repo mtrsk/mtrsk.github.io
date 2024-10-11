@@ -1,10 +1,10 @@
 :PROPERTIES:
 :ID:       63607e63-4428-4578-bf2a-12a49649b49c
-:ROAM_ALIAS: "Erlang Process"
 :END:
 #+title: Concurrent Erlang
 #+HUGO_CATEGORIES: "Functional Programming"
 #+HUGO_TAGS: "Erlang"
+#+STARTUP: inlineimages
 
 * Processes
 
@@ -16,12 +16,44 @@ identifier (PID) that can used to interact with the newly created process:
 Pid = spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]).
 #+END_SRC
 
+#+NAME: erlang-spawn
+#+BEGIN_SRC dot :file ../static/img/notes/erlang_spawn.png :cmdline -Kdot -Tpng :exports results
+  digraph Spawn {
+    node [shape=circle];
+    sep = 1;
+
+    pid1 [label="Pid 1", fontsize="10pt", style=filled, fillcolor=grey];
+    pid2 [label="Pid 2", xlabel="Mod:Func(Args)", fontsize="10pt", style=filled, fillcolor=red];
+
+    pid1 -> pid2 [label="  Spawn(Mod, Func, Args)", fontsize="10pt", minlen=1, style=dashed];
+  }
+#+END_SRC
+
+#+RESULTS: erlang-spawn
+[[file:../static/img/notes/erlang_spawn.png]]
+
 + This BIF never fails
 + A process can either terminate:
   * Abormally when run-time errors occur
   * Normally when there is no more code to execute
 
 ** Modeling Concurrency
+
+#+NAME: erlang-send
+#+BEGIN_SRC dot :file ../static/img/notes/erlang_send.png :cmdline -Kdot -Tpng :exports results
+  digraph Send {
+    node [shape=circle];
+    rankdir="LR";
+
+    pid1 [label="Pid 1", xlabel="Pid2 ! { self(), hello }", fontsize="10pt", style=filled, fillcolor=grey];
+    pid2 [label="Pid 2", fontsize="10pt", style=filled, fillcolor=red, xlabel="receive (...) end." ];
+
+    pid1 -> pid2 [label="{ Pid1, hello }", fontsize="10pt", style=dashed];
+  }
+#+END_SRC
+
+#+RESULTS: erlang-send
+[[file:../static/img/notes/erlang_send.png]]
 
 The syntax ~Pid ! Msg~ means "send the message ~Msg~ to the process ~Pid~", where ~Msg~
 is from any valid [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]] data type. For a ~Pid~ to process a message we need to
@@ -50,9 +82,38 @@ end
 
   + Messages can be matched and selectivelly retrieved
 
-    #+BEGIN_SRC erlang
+    #+NAME: erlang-seletive
+    #+BEGIN_SRC dot :file ../static/img/notes/erlang_selective.png :cmdline -Kdot -Tpng :exports results
+      digraph Selective {
+          node [shape=circle];
+          rankdir="LR";
+          sep = 1;
 
+          pid1 [label="Pid 1", xlabel="Pid 3 ! { foo, ... }", fontsize="10pt", style=filled, fillcolor=grey];
+          pid2 [label="Pid 2", xlabel="Pid 3 ! { bar, ... }", fontsize="10pt", style=filled, fillcolor=grey];
+          pid3 [label="Pid 3", fontsize="10pt", style=filled, fillcolor=red];
+
+          pid1 -> pid3 [label="{foo, ...}", fontsize="10pt", minlen=1, style=dashed];
+          pid2 -> pid3 [label="{bar, ...}", fontsize="10pt", minlen=1, style=dashed];
+      }
     #+END_SRC
+
+    #+RESULTS: erlang-seletive
+    [[file:../static/img/notes/erlang_selective.png]]
+
+    #+BEGIN_SRC erlang
+      receive
+        {foo, _} ->
+        (...)
+      end,
+      (...)
+      receive
+        {bar, _} ->
+        (...)
+      end,
+    #+END_SRC
+
+    this way the message ~{foo, ...}~ is received before the message ~{bar, ...}~.
 
   + Messages are received when a message matches a clause
   + Mailboxes are scanned sequentially
@@ -73,6 +134,25 @@ end
 + If the message ~Msg~ is received within the ~TimeOut~, ~expr01~ will be
   executed. Otherwise, ~expr02~ will be executed.
 + ~TimeOut~ is an integer denoting the time in miliseconds or the Atom ~infinity~.
+
+#+NAME: erlang-timeout
+#+BEGIN_SRC dot :file ../static/img/notes/erlang_timeout.png :cmdline -Kdot -Tpng :exports results
+  digraph Timeout {
+      node [shape=circle];
+      rankdir="LR";
+      sep = 1;
+
+      timeout [label="🕒", fontsize="10pt", style=filled, fillcolor=white];
+      pid1 [label="Pid 1", fontsize="10pt", style=filled, fillcolor=grey];
+      pid2 [label="Pid 2", fontsize="10pt", style=filled, fillcolor=red];
+
+      timeout -> pid2 [label="Timeout", fontsize="10pt", minlen=1, style=dashed];
+      pid1 -> pid2 [label="Msg", fontsize="10pt", minlen=1, style=dashed];
+  }
+#+END_SRC
+
+#+RESULTS: erlang-timeout
+[[file:../static/img/notes/erlang_timeout.png]]
 
 #+BEGIN_SRC erlang
   receive 

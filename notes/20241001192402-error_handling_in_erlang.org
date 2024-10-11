@@ -36,7 +36,9 @@ P3.
 + ~unlink/1~ removes the link to ~Pid~.
 
 ** Exit Signals
-+ Exit Signals can be *normal* or *abnormal*.
++ A process can termination can be *normal* or *abnormal*.
+  * *Normal*: When there is no more code to execute.
+  * *Abnormal*: When runtime errors occur.
 + When a process terminates, it sends a signal to all process its linked to. The
   exit signal will contain the following information:
 
@@ -47,11 +49,48 @@ P3.
  | The ~link~ flag       | This flag will be set indicating that the exit signal was sent due to a link.           |
  | ~exit~ reason       |                                                                                         |
 
+#+NAME: erlang-error-exit-signals
+#+BEGIN_SRC dot :file ../static/img/notes/erlang_error_exit_signals.png :cmdline -Kdot -Tpng :exports results
+  digraph Link {
+      node [shape=circle];
+      rankdir="LR";
+      sep = 1;
+
+      pid1 [label="Pid 1", fontsize="10pt", style=filled, fontcolor=white; fillcolor=black];
+      pid2 [label="Pid 2", fontsize="10pt", style=filled, fillcolor=grey];
+
+      pid1 -> pid2 [label="{'Exit', Pid1, Reason}", dir=both, fontsize="10pt", minlen=1, style=dashed];
+  }
+#+END_SRC
+
+#+RESULTS: erlang-error-exit-signals
+[[file:../static/img/notes/erlang_error_exit_signals.png]]
+
 ** Error Trapping
 
 *** Propagation Semantics
   
 + Processes can trap ~exit~ signals by calling the BIF ~process_flag(trap_exit, true)~.
 + Once trapped, the errors are saved in the mailbox.
+
+#+NAME: erlang-error-trapping
+#+BEGIN_SRC dot :file ../static/img/notes/erlang_error_trapping.png :cmdline -Kdot -Tpng :exports results
+  digraph Trapping {
+      node [shape=circle];
+      rankdir="LR";
+      sep = 1;
+
+      pid1 [label="Pid 1", fontsize="10pt", style=filled, fontcolor=white; fillcolor=black];
+      pid2 [label="Pid 2", fontsize="10pt", style=filled, fillcolor=grey; shape=doublecircle];
+      pid3 [label="Pid 3", fontsize="10pt", style=filled, fillcolor=grey];
+
+
+      pid1 -> pid2 [label="{'Exit', Pid1, Reason}", dir=both, fontsize="10pt", minlen=1, style=dashed];
+      pid2 -> pid3 [dir=both, fontsize="10pt", minlen=2, style=dashed];
+  }
+#+END_SRC
+
+#+RESULTS: erlang-error-trapping
+[[file:../static/img/notes/erlang_error_trapping.png]]
 
 #+print_bibliography:

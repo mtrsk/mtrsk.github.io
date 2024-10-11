@@ -120,6 +120,28 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 
 #+RESULTS: export-notes
 
+** Gen Server
+:PROPERTIES:
+:EXPORT_FILE_NAME: gen-server
+:EXPORT_DATE: 2024-10-10
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug gen-server
+:CUSTOM_ID: gen-server
+:END:
+
+#+INCLUDE: "../notes/20241010094109-gen_server.org"
+    
+
+** Erlang Ets
+:PROPERTIES:
+:EXPORT_FILE_NAME: erlang-ets
+:EXPORT_DATE: 2024-10-10
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug erlang-ets
+:CUSTOM_ID: erlang-ets
+:END:
+
+#+INCLUDE: "../notes/20241010093430-erlang_ets.org"
+    
+
 ** Relational Theory
 :PROPERTIES:
 :EXPORT_FILE_NAME: relational-theory
@@ -516,17 +538,6 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 #+INCLUDE: "../notes/20240709110323-designing_for_scalability_with_erlang.org"
     
 
-** Programming Erlang
-:PROPERTIES:
-:EXPORT_FILE_NAME: programming-erlang
-:EXPORT_DATE: 2024-07-06
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug programming-erlang
-:CUSTOM_ID: programming-erlang
-:END:
-
-#+INCLUDE: "../notes/20240706213027-programming_erlang.org"
-    
-
 ** Monad
 :PROPERTIES:
 :EXPORT_FILE_NAME: monad
@@ -812,4 +823,3 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 
 #+INCLUDE: "../notes/20211012215602-kubernetes.org"
     
-

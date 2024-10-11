@@ -15,7 +15,16 @@ appeared in an IBM Research Report in 1969 (...) [cite:@date2015sql].
 
 * Date's Review of Codd's Original Algebra
 
+The relational model defines a database abstraction based on relations to avoid maintenance overhead. It
+has three key ideas:
+
++ Store database in simple data structures (relations).
++ Physical storage left up to the DBMS implementation.
++ Access data through a high-level language, where the DBMS figures out best execution strategy.
+
 ** Structure
+The definition of relations and their contents independent of their physical representation
+
 *** Types (or Domains)
 *** n-Ary Relations
 *** Attributes & Tuples
@@ -25,11 +34,14 @@ appeared in an IBM Research Report in 1969 (...) [cite:@date2015sql].
 **** Foreign
 
 ** Integrity
+Ensure the database's contents satisfy certain constraints
 *** Entity Integrity
 *** Referential Integrity
 
 ** Manipulation
-*** Relational Algebra
-*** Relational Assignment
+Programming interface for accessing and modifying a database's contents
+
++ [[id:11914357-b272-40fc-8bf6-a0ff98af0c99][Relational Algebra]]
++ Relational Assignment
 
 #+print_bibliography: 

@@ -4,3 +4,14 @@
 #+title: Haskell
 #+HUGO_CATEGORIES: "Functional Programming"
 #+HUGO_TAGS: "Haskell"
+
+#+begin_quote
+Haskell is a general purpose, purely [[id:171718cd-10fd-484b-8d77-0ffcffc29163][Functional Programming]] language
+incorporating many recent innovations in programming language design. Haskell
+provides higher-order functions, non-strict semantics, static polymorphic
+typing, user-defined algebraic datatypes, pattern-matching, list comprehensions,
+a module system, a monadic I/O system, and a rich set of primitive datatypes,
+including lists, arrays, arbitrary and fixed precision integers, and
+floating-point numbers. Haskell is both the culmination and solidification of
+many years of research on non-strict functional languages.
+#+end_quote

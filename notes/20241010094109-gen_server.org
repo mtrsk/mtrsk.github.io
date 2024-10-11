@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       1cd8fd81-a7c4-44ea-8b7a-d803e9b491af
+:END:
+#+title: gen_server
+#+HUGO_CATEGORIES: "Functional Programming"
+#+HUGO_TAGS: "Erlang" "Elixir" "OTP"
+
+~gen_server~ is a generic server process that implements a standard set of
+interface functions and functionality for tracing and error reporting, it also
+fits an [[id:6ed3a191-0128-453e-b0b6-37c48593a6f0][OTP]] supervision tree.
