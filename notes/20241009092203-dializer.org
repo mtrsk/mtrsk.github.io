@@ -36,13 +36,13 @@ Tuple :: tuple() | {T1, T2, ... Tn}
 #+END_SRC
 
 New types can be defined with the following syntax:
-#+begin_src 
+#+begin_src erlang
   -type NewTypeName(TVar1, TVar2, ... , TVarN) :: Type.
 #+end_src
 
 ** Specifying the Input and Output Types of a Function
 
-#+BEGIN_SRC 
+#+BEGIN_SRC erlang
 -spec file:open(FileName, Modes) -> {ok, Handle} | {error, Why} when
     FileName :: string(),
     Modes :: [Mode],
@@ -50,3 +50,30 @@ New types can be defined with the following syntax:
     Handle :: file_handle(),
     Why :: error_term().
 #+END_SRC
+
+** Exporting Types
+A module can export some types to declare that other modules are allowed to
+refer to them as remote types. This declaration has the following form:
+
+#+BEGIN_SRC erlang
+  -export_type([T1/A1, ..., Tk/Ak]).
+#+END_SRC
+
+** Opaque Types
+The main use case for opacity in Erlang is to hide the implementation of a data
+type, enabling evolving the API while minimizing the risk of breaking consumers.
+
+* Running Dializer
+** Things that confuse Dializer
+The dialyzer can get easily confused. We can help prevent this by following a
+few simple rules. [cite:@armstrong2013 p.151].
++ Avoid using ~-compile(export_all)~.
++ Provide detailed type specifications for all the arguments to the *exported*
+  functions in the module.
++ Provide default arguments to all elements in a record definition. If you don't
+  provide a default, the atom ~undefined~ is taken as the default.
++ Using anonymous variables in arguments to a function often results in types
+  that are far less specific than you had intended; try to constrain variables
+  as much as possible.
+
+#+print_bibliography: 

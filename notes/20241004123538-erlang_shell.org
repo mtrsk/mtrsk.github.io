@@ -7,7 +7,7 @@
 
 Some features of the [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]] shell.
 
-* Examples
+* Basics
 ** Compiling and Running "Hello World" in the Shell
 #+BEGIN_SRC erlang
   -module(hello).
@@ -63,5 +63,23 @@ terminates the Erlang session. [cite:@armstrong2013 p.14]
   > f(N).
   > f().
 #+END_SRC
+
+* Modifying the Development Environment
+
+You can find the value of the current load path by starting an Erlang shell
+and giving the command ~code:get_path()~. The two most common functions that we
+use to manipulate the load path are as follows:
+
+#+begin_src erlang
+% Add a new directory to the start of the load path.
+-spec code:add_patha(Dir) => true | {error, bad_directory}
+% Add a new directory to the end of the load path.
+-spec code:add_pathz(Dir) => true | {error, bad_directory}
+#+end_src
+
+Alternatively, you can start Erlang with a command like this:
+#+begin_src shell
+$ erl -pa Dir1 -pa Dir2 ... -pz DirK1 -pz DirK2
+#+end_src
 
 #+print_bibliography:
