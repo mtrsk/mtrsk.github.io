@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       11914357-b272-40fc-8bf6-a0ff98af0c99
+:END:
+#+title: Relational Algebra
+#+HUGO_CATEGORIES: "Databases"
+#+HUGO_TAGS: "Relational Theory"

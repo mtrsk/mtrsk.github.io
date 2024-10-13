@@ -14,4 +14,12 @@ complexity: things that are difficult because you picked inadequate
 tools. [cite:@cesarini2016designing p.20]
 #+END_QUOTE
 
+* Behaviors
+
++ [[id:1cd8fd81-a7c4-44ea-8b7a-d803e9b491af][gen_server]]
++ [[id:2daf1307-afb4-49e4-98cb-66ac7eb27cf0][supervisor]]
++ ~gen_statem~: State Machines
++ ~gen_fsm~: Finite State Machine
++ ~gen_event~
+
 #+print_bibliography: 

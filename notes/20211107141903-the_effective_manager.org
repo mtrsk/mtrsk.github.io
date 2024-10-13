@@ -2,8 +2,8 @@
 :ID:       32b2fe5a-3bc3-439b-a850-70a539498e9e
 :END:
 #+title: The Effective Manager
-#+HUGO_CATEGORIES: "Management"
-#+HUGO_TAGS: "Books"
+#+HUGO_CATEGORIES: "Leadership"
+#+HUGO_TAGS: "Management"
 
 Notes from the [cite:@horstman2023effective].
 

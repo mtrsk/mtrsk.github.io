@@ -1,10 +1,27 @@
 :PROPERTIES:
 :ID:       63607e63-4428-4578-bf2a-12a49649b49c
-:ROAM_ALIAS: "Erlang Process"
 :END:
 #+title: Concurrent Erlang
 #+HUGO_CATEGORIES: "Functional Programming"
 #+HUGO_TAGS: "Erlang"
+#+STARTUP: inlineimages
+
+#+BEGIN_QUOTE
+I’m sure you’ve met processes before, but only in the context of operating
+systems. In Erlang, processes belong to the programming language and not the
+operating system. This means that Erlang processes will have the same logical
+behavior on any operating system, so we can write portable concurrent code that
+can run on any operating system that supports Erlang.
+
+In Erlang:
++ Creating and destroying processes is very fast.
++ Sending messages between processes is very fast.
++ Processes behave the same way on all operating systems.
++ We can have very large numbers of processes.
++ Processes share no memory and are completely independent.
++ The only way for processes to interact is through message passing.
+[cite:@armstrong2013 p.181]
+#+END_QUOTE
 
 * Processes
 
@@ -16,6 +33,22 @@ identifier (PID) that can used to interact with the newly created process:
 Pid = spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]).
 #+END_SRC
 
+#+NAME: erlang-spawn
+#+BEGIN_SRC dot :file ../static/img/notes/erlang_spawn.png :cmdline -Kdot -Tpng :exports results
+  digraph Spawn {
+    node [shape=circle];
+    sep = 1;
+
+    pid1 [label="Pid 1", fontsize="10pt", style=filled, fillcolor=grey];
+    pid2 [label="Pid 2", xlabel="Mod:Func(Args)", fontsize="10pt", style=filled, fillcolor=white];
+
+    pid1 -> pid2 [label="  Spawn(Mod, Func, Args)", fontsize="10pt", minlen=1, style=dashed];
+  }
+#+END_SRC
+
+#+RESULTS: erlang-spawn
+[[file:../static/img/notes/erlang_spawn.png]]
+
 + This BIF never fails
 + A process can either terminate:
   * Abormally when run-time errors occur
@@ -23,20 +56,41 @@ Pid = spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]).
 
 ** Modeling Concurrency
 
+#+NAME: erlang-send
+#+BEGIN_SRC dot :file ../static/img/notes/erlang_send.png :cmdline -Kdot -Tpng :exports results
+  digraph Send {
+    node [shape=circle];
+    rankdir="LR";
+
+    pid1 [label="Pid 1", xlabel="Pid2 ! { self(), hello }", fontsize="10pt", style=filled, fillcolor=grey];
+    pid2 [label="Pid 2", fontsize="10pt", style=filled, fillcolor=white, xlabel="receive (...) end." ];
+
+    pid1 -> pid2 [label="{ Pid1, hello }", fontsize="10pt", style=dashed];
+  }
+#+END_SRC
+
+#+RESULTS: erlang-send
+[[file:../static/img/notes/erlang_send.png]]
+
 The syntax ~Pid ! Msg~ means "send the message ~Msg~ to the process ~Pid~", where ~Msg~
-is from any valid [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]] data type. For a ~Pid~ to process a message we need to
-pattern match:
+is from any valid [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]] data type. Also, ~Pid1 ! Pid2 ! ... ! Msg~ means send the
+message Msg to all the processes ~Pid1~, ~Pid2~, and so on. The ~receive ... end~
+construct is used for a process to read a message that has been sent:
 
 #+BEGIN_SRC erlang
 receive
-    {From, Message} ->
-        ...
+   Pattern1 [when Guard1] -> Expression1;
+   Pattern2 [when Guard2] -> Expression2;
+   ...
 end
 #+END_SRC
 
-+ Sending a message will never fail
-+ A message sent to non-existing processes are throw away
-+ Received messages are store in a process' mailbox
++ Sending a message will never fail.
++ A message sent to non-existing processes are throw away.
++ Received messages are store in a process' mailbox.
++ Mailboxes are scanned sequentially.
++ If a message fails to be pattern matched, it's saved in a queue for later
+  processing and the process waits for the next message.
 
   The erlang shell (~erl~) is itself a process, you can test its message-passing
   functionalities by using the ~self~ keyword:
@@ -48,14 +102,41 @@ end
     hello
   #+END_SRC
 
-  + Messages can be matched and selectivelly retrieved
+  + Messages can be matched and selectivelly retrieved.
+  + We can force an order (emulating a priority queue) by using multiple receives:
 
-    #+BEGIN_SRC erlang
+    #+NAME: erlang-seletive
+    #+BEGIN_SRC dot :file ../static/img/notes/erlang_selective.png :cmdline -Kdot -Tpng :exports results
+      digraph Selective {
+          node [shape=circle];
+          rankdir="LR";
+          sep = 1;
 
+          pid1 [label="Pid 1", xlabel="Pid 3 ! { foo, ... }", fontsize="10pt", style=filled, fillcolor=grey];
+          pid2 [label="Pid 2", xlabel="Pid 3 ! { bar, ... }", fontsize="10pt", style=filled, fillcolor=grey];
+          pid3 [label="Pid 3", fontsize="10pt", style=filled, fillcolor=white];
+
+          pid1 -> pid3 [label="{foo, ...}", fontsize="10pt", minlen=1, style=dashed];
+          pid2 -> pid3 [label="{bar, ...}", fontsize="10pt", minlen=1, style=dashed];
+      }
     #+END_SRC
 
-  + Messages are received when a message matches a clause
-  + Mailboxes are scanned sequentially
+    #+RESULTS: erlang-seletive
+    [[file:../static/img/notes/erlang_selective.png]]
+
+    #+BEGIN_SRC erlang
+      receive
+        {foo, _} ->
+        (...)
+      end,
+      (...)
+      receive
+        {bar, _} ->
+        (...)
+      end,
+    #+END_SRC
+
+    this way the message ~{foo, ...}~ is received before the message ~{bar, ...}~.
 
 ** Registered Processes
 | BIF                 | Description                                                                        |
@@ -63,7 +144,7 @@ end
 | ~register(Name, Pid)~ | Associates the name ~Name~, an atom, with the process ~Pid~.                           |
 | ~registered/0~        | Returns a list of names that have been registered using ~register/2~.                |
 | ~whereis(Name)~       | Returns the pid registered under ~Name~, or ~undefined~ if the name is not registered. |
-
+| ~registered()~        | Return a list of all registered processes in the system.                           |
 
 + Sending messages to a non-existing registered process causes the calling
   process to terminate with a ~badarg~ error.
@@ -73,6 +154,25 @@ end
 + If the message ~Msg~ is received within the ~TimeOut~, ~expr01~ will be
   executed. Otherwise, ~expr02~ will be executed.
 + ~TimeOut~ is an integer denoting the time in miliseconds or the Atom ~infinity~.
+
+#+NAME: erlang-timeout
+#+BEGIN_SRC dot :file ../static/img/notes/erlang_timeout.png :cmdline -Kdot -Tpng :exports results
+  digraph Timeout {
+      node [shape=circle];
+      rankdir="LR";
+      sep = 1;
+
+      timeout [label="🕒", fontsize="10pt", style=filled, fillcolor=white];
+      pid1 [label="Pid 1", fontsize="10pt", style=filled, fillcolor=grey];
+      pid2 [label="Pid 2", fontsize="10pt", style=filled, fillcolor=grey];
+
+      timeout -> pid2 [label="Timeout", fontsize="10pt", minlen=1, style=dashed];
+      pid1 -> pid2 [label="Msg", fontsize="10pt", minlen=1, style=dashed];
+  }
+#+END_SRC
+
+#+RESULTS: erlang-timeout
+[[file:../static/img/notes/erlang_timeout.png]]
 
 #+BEGIN_SRC erlang
   receive 

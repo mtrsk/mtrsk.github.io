@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       171718cd-10fd-484b-8d77-0ffcffc29163
+:END:
+#+title: Functional Programming
+#+HUGO_CATEGORIES: "Functional Programming"
+
+#+begin_quote
+We often refer to the term functional programming, meaning the following programming techniques:
+
++ Composing functions for structuring programs and using recursion instead of loops.
++ Purity, so that the result of a function is fully determined once its parameters have been fixed.
++ Absence of side effects (doing literally nothing except evaluating the result).
++ Immutability (the inability to change the value of a variable).
+
+[cite:@bragilevsky2021haskell, p.xix]
+#+end_quote
+
+#+print_bibliography: 

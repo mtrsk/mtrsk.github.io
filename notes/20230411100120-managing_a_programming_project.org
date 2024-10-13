@@ -2,8 +2,8 @@
 :ID:       da4d5031-66cb-4d1c-b8cf-24d12adf5c17
 :END:
 #+title: Managing a Programming Project
-#+HUGO_CATEGORIES: "Management"
-#+HUGO_TAGS: "Books"
+#+HUGO_CATEGORIES: "Leadership"
+#+HUGO_TAGS: "Management"
 
 Notes from [cite:@metzger1996].
 

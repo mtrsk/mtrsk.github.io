@@ -11,7 +11,7 @@ import networkx.algorithms.community as com
 from networkx.drawing.nx_pydot import read_dot
 from networkx.readwrite import json_graph
 
-N_MISSING = 8  # Number of predicted missing links
+N_MISSING = 10  # Number of predicted missing links
 MAX_NODES = 200  # Number of nodes in the final graph 
 
 def to_rellink(inp: str) -> str:

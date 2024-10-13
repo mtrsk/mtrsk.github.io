@@ -120,6 +120,94 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 
 #+RESULTS: export-notes
 
+** Partial Order
+:PROPERTIES:
+:EXPORT_FILE_NAME: partial-order
+:EXPORT_DATE: 2024-10-13
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug partial-order
+:CUSTOM_ID: partial-order
+:END:
+
+#+INCLUDE: "../notes/20241013114603-partial_order.org"
+    
+
+** Relation
+:PROPERTIES:
+:EXPORT_FILE_NAME: relation
+:EXPORT_DATE: 2024-10-13
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug relation
+:CUSTOM_ID: relation
+:END:
+
+#+INCLUDE: "../notes/20241013113437-relation.org"
+    
+
+** Supervisor
+:PROPERTIES:
+:EXPORT_FILE_NAME: supervisor
+:EXPORT_DATE: 2024-10-13
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug supervisor
+:CUSTOM_ID: supervisor
+:END:
+
+#+INCLUDE: "../notes/20241013103835-supervisor.org"
+    
+
+** Dependent Types
+:PROPERTIES:
+:EXPORT_FILE_NAME: dependent-types
+:EXPORT_DATE: 2024-10-11
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug dependent-types
+:CUSTOM_ID: dependent-types
+:END:
+
+#+INCLUDE: "../notes/20241011135759-dependent_types.org"
+    
+
+** Functional Programming
+:PROPERTIES:
+:EXPORT_FILE_NAME: functional-programming
+:EXPORT_DATE: 2024-10-11
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug functional-programming
+:CUSTOM_ID: functional-programming
+:END:
+
+#+INCLUDE: "../notes/20241011135148-functional_programming.org"
+    
+
+** Relational Algebra
+:PROPERTIES:
+:EXPORT_FILE_NAME: relational-algebra
+:EXPORT_DATE: 2024-10-10
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug relational-algebra
+:CUSTOM_ID: relational-algebra
+:END:
+
+#+INCLUDE: "../notes/20241010155009-relational_algebra.org"
+    
+
+** Gen Server
+:PROPERTIES:
+:EXPORT_FILE_NAME: gen-server
+:EXPORT_DATE: 2024-10-10
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug gen-server
+:CUSTOM_ID: gen-server
+:END:
+
+#+INCLUDE: "../notes/20241010094109-gen_server.org"
+    
+
+** Erlang Ets
+:PROPERTIES:
+:EXPORT_FILE_NAME: erlang-ets
+:EXPORT_DATE: 2024-10-10
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug erlang-ets
+:CUSTOM_ID: erlang-ets
+:END:
+
+#+INCLUDE: "../notes/20241010093430-erlang_ets.org"
+    
+
 ** Relational Theory
 :PROPERTIES:
 :EXPORT_FILE_NAME: relational-theory
@@ -514,17 +602,6 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 :END:
 
 #+INCLUDE: "../notes/20240709110323-designing_for_scalability_with_erlang.org"
-    
-
-** Programming Erlang
-:PROPERTIES:
-:EXPORT_FILE_NAME: programming-erlang
-:EXPORT_DATE: 2024-07-06
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug programming-erlang
-:CUSTOM_ID: programming-erlang
-:END:
-
-#+INCLUDE: "../notes/20240706213027-programming_erlang.org"
     
 
 ** Monad

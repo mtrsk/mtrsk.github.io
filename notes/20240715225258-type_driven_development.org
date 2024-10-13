@@ -3,7 +3,13 @@
 :END:
 #+title: Type-Driven Development with Idris
 #+HUGO_CATEGORIES: "Functional Programming"
-#+HUGO_TAGS: "Idris" "Type-Driven Development"
+#+HUGO_TAGS: "Idris"
+
+#+BEGIN_QUOTE
+Idris is a pure [[id:171718cd-10fd-484b-8d77-0ffcffc29163][Functional Programming]] language with [[id:7580b45a-1dba-4690-bfbf-652fee25e1d9][Dependent Types]]
+#+END_QUOTE
 
 + References:
   + [cite:@brady2017]
+
+#+print_bibliography: 
