@@ -23,6 +23,8 @@ Floats When you divide two integers with /, the result is automatically converte
 <link rel="stylesheet" href="/css/main.min.1135c79bd24c232c465ba2c4e5a9644086ce3f8358dbd0e0d76c5e86d24f1fad.css" />
     
         <script type="text/javascript" src ="https://d3js.org/d3.v7.min.js"></script>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <script>
   MathJax = {
@@ -34,8 +36,6 @@ Floats When you divide two integers with /, the result is automatically converte
 </script>
 
     
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
   </head>
   <body><nav>
   <img
@@ -235,7 +235,37 @@ operation (<code>=</code>).</li>
 </span></span><span class="line"><span class="cl">    <span class="n">fall_velocity</span><span class="p">(</span><span class="nv">Distance</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nn">math</span><span class="p">:</span><span class="nf">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">9</span><span class="p">.</span><span class="mi">8</span> <span class="o">*</span> <span class="nv">Distance</span><span class="p">).</span>
 </span></span><span class="line"><span class="cl">    <span class="n">mps_to_mph</span><span class="p">(</span><span class="nv">Mps</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="mi">2</span><span class="p">.</span><span class="mi">23693629</span> <span class="o">*</span> <span class="nv">Mps</span><span class="p">.</span>
 </span></span><span class="line"><span class="cl">    <span class="n">mps_to_kph</span><span class="p">(</span><span class="nv">Mps</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="mi">3</span><span class="p">.</span><span class="mi">6</span> <span class="o">*</span> <span class="nv">Mps</span><span class="p">.</span>
-</span></span></code></pre></div><h2 id="references">References</h2>
+</span></span></code></pre></div><h2 id="error-handling-in-sequential-programs">Error Handling in Sequential Programs</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl">  <span class="k">try</span> <span class="nv">FuncOrExpressionSeq</span> <span class="k">of</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">Pattern1</span> <span class="p">[</span><span class="k">when</span> <span class="nv">Guard1</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="nv">Expressions1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">Pattern2</span> <span class="p">[</span><span class="k">when</span> <span class="nv">Guard2</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="nv">Expressions2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">  <span class="k">catch</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">ExceptionType1</span><span class="p">:</span> <span class="nv">ExPattern1</span> <span class="p">[</span><span class="k">when</span> <span class="nv">ExGuard1</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="nv">ExExpressions1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">ExceptionType2</span><span class="p">:</span> <span class="nv">ExPattern2</span> <span class="p">[</span><span class="k">when</span> <span class="nv">ExGuard2</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="nv">ExExpressions2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">  <span class="k">after</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">AfterExpressions</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span></code></pre></div><dl>
+<dt><code>exit/1</code></dt>
+<dd>Used to terminate the current process.</dd>
+<dt><code>throw</code></dt>
+<dd>Used as a documentation to the caller, to show that a function might throw this exception.</dd>
+<dt>error</dt>
+<dd>Crashing errors.</dd>
+</dl>
+<h4 id="fail-fast-and-noisily-fail-politely">Fail Fast and Noisily, Fail Politely</h4>
+<blockquote>
+<p>In Erlang, when an error is detected internally by the system or is detected by
+program logic, the correct approach is to crash immediately and generate a
+meaningful error message.</p>
+<p>(&hellip;)</p>
+<p>Second, fail politely means that only the programmer should see the detailed
+error messages produced when a program crashes. A user of the program should
+never see these messages.</p>
+</blockquote>
+<h2 id="references">References</h2>
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Armstrong, Joe. 2013. “Programming Erlang: Software for a Concurrent World.”</div>
   <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Laurent, Simon St. 2017. <i>Introducing Erlang: Getting Started in Functional Programming</i>. O’Reilly Media, Inc.</div>
@@ -326,6 +356,22 @@ operation (<code>=</code>).</li>
    
 
    
+      
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
 
    
 
@@ -458,9 +504,21 @@ operation (<code>=</code>).</li>
    
 
    
+
 
 
 
+  <hr>
+  <div class="bl-section">
+    <h4>Links to this note</h4>
+    <div class="backlinks">
+      <ul>
+       
+          <li><a href="/notes/2024/error-handling-in-erlang/">Error Handling In Erlang</a></li>
+       
+     </ul>
+    </div>
+  </div>
 
 
 <footer>

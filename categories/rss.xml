@@ -6,8 +6,29 @@
     <description>Recent content in Categories on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mtrsk.github.io/categories/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Functional Programming</title>
+      <link>https://mtrsk.github.io/categories/functional-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/categories/functional-programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Math</title>
+      <link>https://mtrsk.github.io/categories/math/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/categories/math/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Notes</title>
+      <link>https://mtrsk.github.io/categories/notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/categories/notes/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Databases</title>
       <link>https://mtrsk.github.io/categories/databases/</link>
@@ -23,17 +44,10 @@
       <description></description>
     </item>
     <item>
-      <title>Functional Programming</title>
-      <link>https://mtrsk.github.io/categories/functional-programming/</link>
+      <title>Leadership</title>
+      <link>https://mtrsk.github.io/categories/leadership/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/categories/functional-programming/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Management</title>
-      <link>https://mtrsk.github.io/categories/management/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/categories/management/</guid>
+      <guid>https://mtrsk.github.io/categories/leadership/</guid>
       <description></description>
     </item>
     <item>
@@ -41,13 +55,6 @@
       <link>https://mtrsk.github.io/categories/operating-systems/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/categories/operating-systems/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Notes</title>
-      <link>https://mtrsk.github.io/categories/notes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/categories/notes/</guid>
       <description></description>
     </item>
     <item>
@@ -76,13 +83,6 @@
       <link>https://mtrsk.github.io/categories/category-theory/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/categories/category-theory/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Math</title>
-      <link>https://mtrsk.github.io/categories/math/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/categories/math/</guid>
       <description></description>
     </item>
     <item>

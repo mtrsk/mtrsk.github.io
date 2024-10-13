@@ -5,7 +5,7 @@
   
     <link href="https://mtrsk.github.io/notes/atom.xml" rel="self" type="application/atom+xml" />
   
-  <updated>2024-10-10T01:29:10Z</updated>
+  <updated>2024-10-13T19:36:14Z</updated>
   <author>
     
     
@@ -14,17 +14,271 @@
   <id>https://mtrsk.github.io/notes/</id>
   
   <entry>
+    <title>Partial Order</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/partial-order/"/>
+    <id>https://mtrsk.github.io/notes/2024/partial-order/</id>
+    <published>2024-10-13T00:00:00Z</published>
+    <updated>2024-10-13T00:00:00Z</updated>
+    <summary>:ID: ce27d04b-aa7b-4fd5-98d3-30aa645f0d46
+A Relation \(R\) is said to be a reflexive partial order if its reflexive, antisymmetric, and transitive. </summary>
+    <content type="html">&lt;p&gt;:ID:       ce27d04b-aa7b-4fd5-98d3-30aa645f0d46&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A &lt;a href=&#34;/notes/2024/relation/&#34;&gt;Relation&lt;/a&gt; \(R\) is said to be a &lt;strong&gt;reflexive partial order&lt;/strong&gt; if its &lt;strong&gt;reflexive&lt;/strong&gt;,
+&lt;strong&gt;antisymmetric&lt;/strong&gt;, and &lt;strong&gt;transitive&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <category term="Set Theory"/>
+    
+    
+    <category term="Math"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Relation</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/relation/"/>
+    <id>https://mtrsk.github.io/notes/2024/relation/</id>
+    <published>2024-10-13T00:00:00Z</published>
+    <updated>2024-10-13T00:00:00Z</updated>
+    <summary>:ID: efd79527-1cfb-48da-868e-6286cff21c34
+A relation is any subset of a Cartesian product. For instance, a relation \(R\) over any subset of \(X \times X\) is called a &amp;ldquo;Relation on \(X\)&amp;rdquo;.
+A Relation \(R\) is said to be reflexive if \(\forall x \in X: (x,x) \in R\). A Relation \(R\) is said to be symmetric if \(\forall x,y \in X: (x,y) \in R \implies (y,x) \in R\). A Relation \(R\) is antisymmetric if \(\forall x,y \in X: (x,y) \in R \land (y,x) \in R \implies x = y\).</summary>
+    <content type="html">&lt;p&gt;:ID:       efd79527-1cfb-48da-868e-6286cff21c34&lt;/p&gt;
+&lt;p&gt;A relation is any subset of a Cartesian product. For instance, a relation \(R\)
+over any subset of \(X \times X\) is called a &amp;ldquo;Relation on \(X\)&amp;rdquo;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A Relation \(R\) is said to be &lt;strong&gt;reflexive&lt;/strong&gt; if \(\forall x \in X: (x,x) \in R\).&lt;/li&gt;
+&lt;li&gt;A Relation \(R\) is said to be &lt;strong&gt;symmetric&lt;/strong&gt; if \(\forall x,y \in X: (x,y) \in R \implies (y,x)
+\in R\).&lt;/li&gt;
+&lt;li&gt;A Relation \(R\) is &lt;strong&gt;antisymmetric&lt;/strong&gt; if \(\forall x,y \in X: (x,y) \in R \land (y,x) \in R \implies x
+= y\).&lt;/li&gt;
+&lt;li&gt;A Relation \(R\) is &lt;strong&gt;transitive&lt;/strong&gt; if \(\forall x,y,z \in X: (x,y) \in R \land (y,z) \in R \implies
+(x,z) \in R\).&lt;/li&gt;
+&lt;li&gt;A Relation \(R\) is an &lt;strong&gt;equivalence relation&lt;/strong&gt; if it is &lt;strong&gt;reflexive&lt;/strong&gt;, &lt;strong&gt;symmetric&lt;/strong&gt; and &lt;strong&gt;transitive&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <category term="Set Theory"/>
+    
+    
+    <category term="Math"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Supervisor</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/supervisor/"/>
+    <id>https://mtrsk.github.io/notes/2024/supervisor/</id>
+    <published>2024-10-13T00:00:00Z</published>
+    <updated>2024-10-13T00:00:00Z</updated>
+    <summary>:ID: 2daf1307-afb4-49e4-98cb-66ac7eb27cf0</summary>
+    <content type="html">&lt;p&gt;:ID:       2daf1307-afb4-49e4-98cb-66ac7eb27cf0&lt;/p&gt;
+</content>
+    
+    <category term="OTP"/>
+    
+    
+    <category term="Functional Programming"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dependent Types</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/dependent-types/"/>
+    <id>https://mtrsk.github.io/notes/2024/dependent-types/</id>
+    <published>2024-10-11T00:00:00Z</published>
+    <updated>2024-10-11T00:00:00Z</updated>
+    <summary>:ID: 7580b45a-1dba-4690-bfbf-652fee25e1d9</summary>
+    <content type="html">&lt;p&gt;:ID:       7580b45a-1dba-4690-bfbf-652fee25e1d9&lt;/p&gt;
+</content>
+    
+    
+    <category term="notes"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Functional Programming</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/functional-programming/"/>
+    <id>https://mtrsk.github.io/notes/2024/functional-programming/</id>
+    <published>2024-10-11T00:00:00Z</published>
+    <updated>2024-10-11T00:00:00Z</updated>
+    <summary>:ID: 171718cd-10fd-484b-8d77-0ffcffc29163
+We often refer to the term functional programming, meaning the following programming techniques:
+Composing functions for structuring programs and using recursion instead of loops. Purity, so that the result of a function is fully determined once its parameters have been fixed. Absence of side effects (doing literally nothing except evaluating the result). Immutability (the inability to change the value of a variable). (, Bragilevsky 2021)
+References Bragilevsky, Vitaly. 2021.</summary>
+    <content type="html">&lt;p&gt;:ID:       171718cd-10fd-484b-8d77-0ffcffc29163&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We often refer to the term functional programming, meaning the following programming techniques:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Composing functions for structuring programs and using recursion instead of loops.&lt;/li&gt;
+&lt;li&gt;Purity, so that the result of a function is fully determined once its parameters have been fixed.&lt;/li&gt;
+&lt;li&gt;Absence of side effects (doing literally nothing except evaluating the result).&lt;/li&gt;
+&lt;li&gt;Immutability (the inability to change the value of a variable).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(, &lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Bragilevsky 2021&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Bragilevsky, Vitaly. 2021. &lt;i&gt;Haskell in Depth&lt;/i&gt;. Simon and Schuster.&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    
+    
+    <category term="Functional Programming"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Erlang Ets</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/erlang-ets/"/>
+    <id>https://mtrsk.github.io/notes/2024/erlang-ets/</id>
+    <published>2024-10-10T00:00:00Z</published>
+    <updated>2024-10-10T00:00:00Z</updated>
+    <summary>:ID: 37c6ea44-0c80-4c57-a36e-98d37e8a3413 :ROAM_ALIAS: &amp;ldquo;ETS&amp;rdquo;
+Erlang Term Storage, commonly referred to as ETS, is a powerful storage engine built into Otp.</summary>
+    <content type="html">&lt;p&gt;:ID:       37c6ea44-0c80-4c57-a36e-98d37e8a3413
+:ROAM_ALIAS: &amp;ldquo;ETS&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Erlang Term Storage, commonly referred to as ETS, is a powerful storage engine
+built into &lt;a href=&#34;/notes/2024/otp/&#34;&gt;Otp&lt;/a&gt;.&lt;/p&gt;
+</content>
+    
+    <category term="Erlang"/>
+    
+    <category term="Elixir"/>
+    
+    <category term="OTP"/>
+    
+    
+    <category term="Functional Programming"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gen Server</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/gen-server/"/>
+    <id>https://mtrsk.github.io/notes/2024/gen-server/</id>
+    <published>2024-10-10T00:00:00Z</published>
+    <updated>2024-10-10T00:00:00Z</updated>
+    <summary>:ID: 1cd8fd81-a7c4-44ea-8b7a-d803e9b491af
+Much of the work you think of as the core of a program - calculating results, storing information, and preparing replies - will fit neatly into the gen_server behavior. It provides a core set of methods that let you set up a process, respond to requests, end the process gracefully, and even pass state to a new process if this one needs to be upgraded in place. (Laurent 2017, 148)</summary>
+    <content type="html">&lt;p&gt;:ID:       1cd8fd81-a7c4-44ea-8b7a-d803e9b491af&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Much of the work you think of as the core of a program - calculating results,
+storing information, and preparing replies - will fit neatly into the &lt;code&gt;gen_server&lt;/code&gt;
+behavior. It provides a core set of methods that let you set up a process,
+respond to requests, end the process gracefully, and even pass state to a new
+process if this one needs to be upgraded in place. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Laurent 2017, 148&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;gen_server&lt;/code&gt; is a generic server process that implements a standard set of
+interface functions and functionality for tracing and error reporting, it also
+fits an &lt;a href=&#34;/notes/2024/otp/&#34;&gt;Otp&lt;/a&gt; supervision tree.&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Laurent, Simon St. 2017. &lt;i&gt;Introducing Erlang: Getting Started in Functional Programming&lt;/i&gt;. O’Reilly Media, Inc.&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    
+    <category term="Erlang"/>
+    
+    <category term="Elixir"/>
+    
+    <category term="OTP"/>
+    
+    
+    <category term="Functional Programming"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Relational Algebra</title>
+    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/relational-algebra/"/>
+    <id>https://mtrsk.github.io/notes/2024/relational-algebra/</id>
+    <published>2024-10-10T00:00:00Z</published>
+    <updated>2024-10-10T00:00:00Z</updated>
+    <summary>:ID: 11914357-b272-40fc-8bf6-a0ff98af0c99</summary>
+    <content type="html">&lt;p&gt;:ID:       11914357-b272-40fc-8bf6-a0ff98af0c99&lt;/p&gt;
+</content>
+    
+    <category term="Relational Theory"/>
+    
+    
+    <category term="Databases"/>
+    
+  </entry>
+  
+  <entry>
     <title>Dializer</title>
     <link rel="alternate" href="https://mtrsk.github.io/notes/2024/dializer/"/>
     <id>https://mtrsk.github.io/notes/2024/dializer/</id>
     <published>2024-10-09T00:00:00Z</published>
     <updated>2024-10-09T00:00:00Z</updated>
     <summary>:ID: 54473599-719d-460b-92ba-3796dd951872
-Dialyzer is a static analysis tool that identifies software discrepancies, such as definite type errors, code that is unreachable because of programming errors, and unnecessary tests in Erlang and Elixir modules or an entire codebases.</summary>
+Dialyzer is a static analysis tool that identifies software discrepancies, such as definite type errors, code that is unreachable because of programming errors, and unnecessary tests in Erlang and Elixir modules or an entire codebases.
+Erlang Type Notation We can define a subset of Erlang types as follows:
+Type :: any() | none() | pid() | port() | reference() | [] | Atom | binary() | float() | Fun | Integer | [Type] | Tuple | Union | UserDefined Union :: Type1 | Type2 | .</summary>
     <content type="html">&lt;p&gt;:ID:       54473599-719d-460b-92ba-3796dd951872&lt;/p&gt;
 &lt;p&gt;Dialyzer is a static analysis tool that identifies software discrepancies, such
 as definite type errors, code that is unreachable because of programming errors,
 and unnecessary tests in &lt;a href=&#34;/notes/2024/erlang/&#34;&gt;Erlang&lt;/a&gt; and &lt;a href=&#34;/notes/2024/elixir/&#34;&gt;Elixir&lt;/a&gt; modules or an entire codebases.&lt;/p&gt;
+&lt;h2 id=&#34;erlang-type-notation&#34;&gt;Erlang Type Notation&lt;/h2&gt;
+&lt;p&gt;We can define a subset of Erlang types as follows:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;Type ::
+      any()
+    | none()
+    | pid()
+    | port()
+    | reference()
+    | []
+    | Atom
+    | binary()
+    | float()
+    | Fun
+    | Integer
+    | [Type]
+    | Tuple
+    | Union
+    | UserDefined
+Union :: Type1 | Type2 | ...
+Atom :: atom() | Erlang_Atom
+Integer :: integer() | Min .. Max
+Fun :: fun() | fun((...) -&amp;gt; Type)
+Tuple :: tuple() | {T1, T2, ... Tn}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;New types can be defined with the following syntax:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;NewTypeName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;TVar1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TVar2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TVarN&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;specifying-the-input-and-output-types-of-a-function&#34;&gt;Specifying the Input and Output Types of a Function&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;ni&#34;&gt;spec&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;FileName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Modes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ok&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Handle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Why&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;when&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;FileName&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Modes&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Mode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Mode&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;read&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;write&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Handle&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;file_handle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Why&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;error_term&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;exporting-types&#34;&gt;Exporting Types&lt;/h3&gt;
+&lt;p&gt;A module can export some types to declare that other modules are allowed to
+refer to them as remote types. This declaration has the following form:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;export_type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;T1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;A1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;...,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Tk&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Ak&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]).&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;opaque-types&#34;&gt;Opaque Types&lt;/h3&gt;
+&lt;p&gt;The main use case for opacity in Erlang is to hide the implementation of a data
+type, enabling evolving the API while minimizing the risk of breaking consumers.&lt;/p&gt;
+&lt;h2 id=&#34;running-dializer&#34;&gt;Running Dializer&lt;/h2&gt;
+&lt;h3 id=&#34;things-that-confuse-dializer&#34;&gt;Things that confuse Dializer&lt;/h3&gt;
+&lt;p&gt;The dialyzer can get easily confused. We can help prevent this by following a
+few simple rules. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Armstrong 2013, 151&lt;/a&gt;).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Avoid using &lt;code&gt;-compile(export_all)&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Provide detailed type specifications for all the arguments to the &lt;strong&gt;exported&lt;/strong&gt;
+functions in the module.&lt;/li&gt;
+&lt;li&gt;Provide default arguments to all elements in a record definition. If you don&amp;rsquo;t
+provide a default, the atom &lt;code&gt;undefined&lt;/code&gt; is taken as the default.&lt;/li&gt;
+&lt;li&gt;Using anonymous variables in arguments to a function often results in types
+that are far less specific than you had intended; try to constrain variables
+as much as possible.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Armstrong, Joe. 2013. “Programming Erlang: Software for a Concurrent World.”&lt;/div&gt;
+&lt;/div&gt;
 </content>
     
     <category term="Erlang"/>
@@ -150,10 +404,10 @@ Books Managing A Programming Project The Effective Manager </summary>
 &lt;/ul&gt;
 </content>
     
-    <category term="Books"/>
-    
-    
     <category term="Management"/>
+    
+    
+    <category term="Leadership"/>
     
   </entry>
   
@@ -165,7 +419,7 @@ Books Managing A Programming Project The Effective Manager </summary>
     <updated>2024-10-09T00:00:00Z</updated>
     <summary>:ID: abcb3048-34a5-4561-885c-74b8285924ac
 It was late in 1968 that Codd, a mathematician by training, first realized that the discipline of mathematics could be used to inject some solid principles and rigor into a field, database management, that prior to that time was all too deficient in any such qualities. His original definition of the relational model appeared in an IBM Research Report in 1969 (&amp;hellip;) (Date 2015).
-Date&amp;rsquo;s Review of Codd&amp;rsquo;s Original Algebra Structure Types (or Domains) n-Ary Relations Attributes &amp;amp; Tuples Keys Candidate Primary Foreign Integrity Entity Integrity Referential Integrity Manipulation Relational Algebra Relational Assignment References Date, Chris J.</summary>
+Date&amp;rsquo;s Review of Codd&amp;rsquo;s Original Algebra The relational model defines a database abstraction based on relations to avoid maintenance overhead.</summary>
     <content type="html">&lt;p&gt;:ID:       abcb3048-34a5-4561-885c-74b8285924ac&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;It was late in 1968 that Codd, a mathematician by training, first realized that
@@ -175,7 +429,15 @@ deficient in any such qualities. His original definition of the relational model
 appeared in an IBM Research Report in 1969 (&amp;hellip;) (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Date 2015&lt;/a&gt;).&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;date-s-review-of-codd-s-original-algebra&#34;&gt;Date&amp;rsquo;s Review of Codd&amp;rsquo;s Original Algebra&lt;/h2&gt;
+&lt;p&gt;The relational model defines a database abstraction based on relations to avoid maintenance overhead. It
+has three key ideas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Store database in simple data structures (relations).&lt;/li&gt;
+&lt;li&gt;Physical storage left up to the DBMS implementation.&lt;/li&gt;
+&lt;li&gt;Access data through a high-level language, where the DBMS figures out best execution strategy.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;structure&#34;&gt;Structure&lt;/h3&gt;
+&lt;p&gt;The definition of relations and their contents independent of their physical representation&lt;/p&gt;
 &lt;h4 id=&#34;types--or-domains&#34;&gt;Types (or Domains)&lt;/h4&gt;
 &lt;h4 id=&#34;n-ary-relations&#34;&gt;n-Ary Relations&lt;/h4&gt;
 &lt;h4 id=&#34;attributes-and-tuples&#34;&gt;Attributes &amp;amp; Tuples&lt;/h4&gt;
@@ -193,11 +455,15 @@ appeared in an IBM Research Report in 1969 (&amp;hellip;) (&lt;a href=&#34;#cite
 &lt;li&gt;Foreign&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;integrity&#34;&gt;Integrity&lt;/h3&gt;
+&lt;p&gt;Ensure the database&amp;rsquo;s contents satisfy certain constraints&lt;/p&gt;
 &lt;h4 id=&#34;entity-integrity&#34;&gt;Entity Integrity&lt;/h4&gt;
 &lt;h4 id=&#34;referential-integrity&#34;&gt;Referential Integrity&lt;/h4&gt;
 &lt;h3 id=&#34;manipulation&#34;&gt;Manipulation&lt;/h3&gt;
-&lt;h4 id=&#34;relational-algebra&#34;&gt;Relational Algebra&lt;/h4&gt;
-&lt;h4 id=&#34;relational-assignment&#34;&gt;Relational Assignment&lt;/h4&gt;
+&lt;p&gt;Programming interface for accessing and modifying a database&amp;rsquo;s contents&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/notes/2024/relational-algebra/&#34;&gt;Relational Algebra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Relational Assignment&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
   &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Date, Chris J. 2015. &lt;i&gt;Sql and Relational Theory: How to Write Accurate Sql Code&lt;/i&gt;. O’Reilly Media, Inc.&lt;/div&gt;
@@ -241,397 +507,22 @@ References Akkoyunlu, Eralp A, Kattamuri Ekanadham, and Richard V Huber. 1975. �
     <id>https://mtrsk.github.io/notes/2024/haskell/</id>
     <published>2024-10-08T00:00:00Z</published>
     <updated>2024-10-08T00:00:00Z</updated>
-    <summary>:ID: a74d6aac-dbe9-48a6-83ca-648cd6ea933e</summary>
+    <summary>:ID: a74d6aac-dbe9-48a6-83ca-648cd6ea933e
+Haskell is a general purpose, purely Functional Programming language incorporating many recent innovations in programming language design. Haskell provides higher-order functions, non-strict semantics, static polymorphic typing, user-defined algebraic datatypes, pattern-matching, list comprehensions, a module system, a monadic I/O system, and a rich set of primitive datatypes, including lists, arrays, arbitrary and fixed precision integers, and floating-point numbers. Haskell is both the culmination and solidification of many years of research on non-strict functional languages.</summary>
     <content type="html">&lt;p&gt;:ID:       a74d6aac-dbe9-48a6-83ca-648cd6ea933e&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Haskell is a general purpose, purely &lt;a href=&#34;/notes/2024/functional-programming/&#34;&gt;Functional Programming&lt;/a&gt; language
+incorporating many recent innovations in programming language design. Haskell
+provides higher-order functions, non-strict semantics, static polymorphic
+typing, user-defined algebraic datatypes, pattern-matching, list comprehensions,
+a module system, a monadic I/O system, and a rich set of primitive datatypes,
+including lists, arrays, arbitrary and fixed precision integers, and
+floating-point numbers. Haskell is both the culmination and solidification of
+many years of research on non-strict functional languages.&lt;/p&gt;
+&lt;/blockquote&gt;
 </content>
     
     <category term="Haskell"/>
-    
-    
-    <category term="Functional Programming"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Nixos</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/nixos/"/>
-    <id>https://mtrsk.github.io/notes/2024/nixos/</id>
-    <published>2024-10-07T00:00:00Z</published>
-    <updated>2024-10-07T00:00:00Z</updated>
-    <summary>:ID: c350b99c-021d-4f5a-a948-4929056e1267
-NixOS is a Linux distribution based on the purely functional package management system Nix.</summary>
-    <content type="html">&lt;p&gt;:ID:       c350b99c-021d-4f5a-a948-4929056e1267&lt;/p&gt;
-&lt;p&gt;NixOS is a &lt;a href=&#34;/notes/2024/linux/&#34;&gt;Linux&lt;/a&gt; distribution based on the purely functional package management system &lt;a href=&#34;/notes/2024/nix/&#34;&gt;Nix&lt;/a&gt;.&lt;/p&gt;
-</content>
-    
-    <category term="Linux"/>
-    
-    <category term="Nix"/>
-    
-    <category term="NixOS"/>
-    
-    
-    <category term="Operating Systems"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Elixir</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/elixir/"/>
-    <id>https://mtrsk.github.io/notes/2024/elixir/</id>
-    <published>2024-10-06T00:00:00Z</published>
-    <updated>2024-10-06T00:00:00Z</updated>
-    <summary>:ID: 8d568d81-9c22-4d94-81b2-27a2d730ba98 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;FP&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Elixir&amp;rdquo;
-Elixir describes itself as a functional, meta-programming-aware language built on top of the Erlang virtual machine.
-Basics Protocols </summary>
-    <content type="html">&lt;p&gt;:ID:       8d568d81-9c22-4d94-81b2-27a2d730ba98
-:EXPORT_HUGO_CATEGORIES: &amp;ldquo;FP&amp;rdquo;
-:EXPORT_HUGO_TAGS: &amp;ldquo;Elixir&amp;rdquo;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Elixir describes itself as a functional, meta-programming-aware language built
-on top of the &lt;a href=&#34;/notes/2024/erlang/&#34;&gt;Erlang&lt;/a&gt; virtual machine.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;basics&#34;&gt;Basics&lt;/h2&gt;
-&lt;h3 id=&#34;protocols&#34;&gt;Protocols&lt;/h3&gt;
-</content>
-    
-    
-    <category term="notes"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Erlang Shell</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/erlang-shell/"/>
-    <id>https://mtrsk.github.io/notes/2024/erlang-shell/</id>
-    <published>2024-10-04T00:00:00Z</published>
-    <updated>2024-10-04T00:00:00Z</updated>
-    <summary>:ID: bcd04f60-0a4c-4213-90f7-139c0ddf5bef
-Some features of the Erlang shell.
-Examples Compiling and Running &amp;ldquo;Hello World&amp;rdquo; in the Shell -module(hello). -export([start/0]). start() -&amp;gt; io:format(&amp;#34;Hello world~n&amp;#34;). Running the hello.erl program in the erlang shell.
-$ erl Erlang/OTP 26 [erts-14.2.5] [source] [64-bit] [smp:24:24] [ds:24:24:10] [async-threads:1] [jit:ns] Eshell V14.2.5 (press Ctrl+G to abort, type help(). for help) 1&amp;gt; c(hello). {ok,hello} 2&amp;gt; hello:start(). Hello world ok Compiling Outside the Erlang Shell $ erlc hello.erl $ erl -noshell -s hello start -s init stop erlc evokes the Erlang compiler from the command line.</summary>
-    <content type="html">&lt;p&gt;:ID:       bcd04f60-0a4c-4213-90f7-139c0ddf5bef&lt;/p&gt;
-&lt;p&gt;Some features of the &lt;a href=&#34;/notes/2024/erlang/&#34;&gt;Erlang&lt;/a&gt; shell.&lt;/p&gt;
-&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
-&lt;h3 id=&#34;compiling-and-running-hello-world-in-the-shell&#34;&gt;Compiling and Running &amp;ldquo;Hello World&amp;rdquo; in the Shell&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;module&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hello&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]).&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nn&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello world&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;~n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Running the &lt;code&gt;hello.erl&lt;/code&gt; program in the erlang shell.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  $ erl
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Erlang/OTP &lt;span class=&#34;m&#34;&gt;26&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;erts-14.2.5&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;source&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;64-bit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;smp:24:24&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;ds:24:24:10&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;async-threads:1&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;jit:ns&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Eshell V14.2.5 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;press Ctrl+G to abort, &lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt; help&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;. &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  1&amp;gt; c&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;hello&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;ok,hello&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  2&amp;gt; hello:start&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Hello world
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ok
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;compiling-outside-the-erlang-shell&#34;&gt;Compiling Outside the Erlang Shell&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  $ erlc hello.erl
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  $ erl -noshell -s hello start -s init stop
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;erlc&lt;/code&gt; evokes the Erlang compiler from the command line. The compiler compiles the code in &lt;code&gt;hello.erl&lt;/code&gt; and produces an object code file called &lt;code&gt;hello.beam&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;erl -noshell&lt;/code&gt; command loads the module &lt;code&gt;hello&lt;/code&gt; and evaluates the function
-&lt;code&gt;hello:start()&lt;/code&gt;. After this, it evaluates the expression &lt;code&gt;init:stop()&lt;/code&gt;, which
-terminates the Erlang session. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Armstrong 2013, 14&lt;/a&gt;)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;commands&#34;&gt;Commands&lt;/h2&gt;
-&lt;h3 id=&#34;seeing-your-bound-variables&#34;&gt;Seeing Your Bound Variables&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;b()&lt;/code&gt; shows all bound variables in the current erlang shell.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;gt; b&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;N&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Number&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;clearing-bound-variables-in-the-shell&#34;&gt;Clearing Bound Variables in the Shell&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;gt; f&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;N&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;gt; f&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
-  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Armstrong, Joe. 2013. “Programming Erlang: Software for a Concurrent World.”&lt;/div&gt;
-&lt;/div&gt;
-</content>
-    
-    <category term="Erlang"/>
-    
-    
-    <category term="Functional Programming"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Error Handling In Erlang</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/error-handling-in-erlang/"/>
-    <id>https://mtrsk.github.io/notes/2024/error-handling-in-erlang/</id>
-    <published>2024-10-01T00:00:00Z</published>
-    <updated>2024-10-01T00:00:00Z</updated>
-    <summary>:ID: 22ae9c25-3123-4ed8-b765-369ac89d2942
-In Erlang we have a large number of processes at our disposal, so the failure of any individual process is not so important. We usually write only a small amount of defensive code and instead concentrate on writing corrective code. We take measures to detect the errors and then correct them after they have occurred. (Armstrong 2013)
-Definitions Link A bi-directional propagation path for exit signals. Exit Signal Transmit process termination information.</summary>
-    <content type="html">&lt;p&gt;:ID:       22ae9c25-3123-4ed8-b765-369ac89d2942&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;In &lt;a href=&#34;/notes/2024/erlang/&#34;&gt;Erlang&lt;/a&gt; we have a large number of processes at our disposal, so the failure
-of any individual process is not so important. We usually write only a small
-amount of defensive code and instead concentrate on writing corrective code.
-We take measures to detect the errors and then correct them after they have
-occurred. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Armstrong 2013&lt;/a&gt;)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;definitions&#34;&gt;Definitions&lt;/h2&gt;
-&lt;dl&gt;
-&lt;dt&gt;Link&lt;/dt&gt;
-&lt;dd&gt;A bi-directional propagation path for exit signals.&lt;/dd&gt;
-&lt;dt&gt;Exit Signal&lt;/dt&gt;
-&lt;dd&gt;Transmit process termination information.&lt;/dd&gt;
-&lt;dt&gt;Error trapping&lt;/dt&gt;
-&lt;dd&gt;The ability of an  to process exit signals as if they
-were messages.&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;h3 id=&#34;link&#34;&gt;Link&lt;/h3&gt;
-&lt;p&gt;To create links, we call the primitive link(Pid), which creates a link between the
-calling process and Pid. So, if P1 calls link(P3), a link is created between P1 and
-P3.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nv&#34;&gt;PidA&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;link&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PibB&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;link/1&lt;/code&gt; creates a bi-directional link between the process calling the BIF (&lt;code&gt;PidA&lt;/code&gt;) and
-the process linked (&lt;code&gt;PidB&lt;/code&gt;).&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;spawn_link/3&lt;/code&gt; will yield the same result as &lt;code&gt;spawn/3&lt;/code&gt; followed by &lt;code&gt;link/1&lt;/code&gt;, only that
-will do so atomically.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;unlink/1&lt;/code&gt; removes the link to &lt;code&gt;Pid&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;exit-signals&#34;&gt;Exit Signals&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Exit Signals can be &lt;strong&gt;normal&lt;/strong&gt; or &lt;strong&gt;abnormal&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;When a process terminates, it sends a signal to all process its linked to. The
-exit signal will contain the following information:
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Field&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Sender Identifier&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;The process or port identifier of the process or port that terminated.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Receiver Identifier&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;The process or port identifier of the process or port which the exit signal is sent to.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;The &lt;code&gt;link&lt;/code&gt; flag&lt;/td&gt;
-&lt;td&gt;This flag will be set indicating that the exit signal was sent due to a link.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;exit&lt;/code&gt; reason&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;error-trapping&#34;&gt;Error Trapping&lt;/h3&gt;
-&lt;h4 id=&#34;propagation-semantics&#34;&gt;Propagation Semantics&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Processes can trap &lt;code&gt;exit&lt;/code&gt; signals by calling the BIF &lt;code&gt;process_flag(trap_exit, true)&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Once trapped, the errors are saved in the mailbox.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
-  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Armstrong, Joe. 2013. “Programming Erlang: Software for a Concurrent World.”&lt;/div&gt;
-&lt;/div&gt;
-</content>
-    
-    <category term="Erlang"/>
-    
-    
-    <category term="Functional Programming"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Postgres Server</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/postgres-server/"/>
-    <id>https://mtrsk.github.io/notes/2024/postgres-server/</id>
-    <published>2024-10-01T00:00:00Z</published>
-    <updated>2024-10-01T00:00:00Z</updated>
-    <summary>:ID: ae205cab-10ea-4cff-9051-fef9021638b6 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Databases&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;SQL&amp;rdquo; &amp;ldquo;Postgres&amp;rdquo;
-Locating the database server files Postgres Database server files are initially stored in a location referred to as data directory:
-SHOW data_directory; </summary>
-    <content type="html">&lt;p&gt;:ID:       ae205cab-10ea-4cff-9051-fef9021638b6
-:EXPORT_HUGO_CATEGORIES: &amp;ldquo;Databases&amp;rdquo;
-:EXPORT_HUGO_TAGS: &amp;ldquo;SQL&amp;rdquo; &amp;ldquo;Postgres&amp;rdquo;&lt;/p&gt;
-&lt;h2 id=&#34;locating-the-database-server-files&#34;&gt;Locating the database server files&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;/notes/2024/postgres/&#34;&gt;Postgres&lt;/a&gt; Database server files are initially stored in a location referred to as data directory:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-psql&#34; data-lang=&#34;psql&#34;&gt;SHOW data_directory;
-&lt;/code&gt;&lt;/pre&gt;</content>
-    
-    
-    <category term="notes"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Scsi</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/scsi/"/>
-    <id>https://mtrsk.github.io/notes/2024/scsi/</id>
-    <published>2024-10-01T00:00:00Z</published>
-    <updated>2024-10-01T00:00:00Z</updated>
-    <summary>:ID: 388e1a43-f7f6-4c9e-af19-d7b6116a070e</summary>
-    <content type="html">&lt;p&gt;:ID:       388e1a43-f7f6-4c9e-af19-d7b6116a070e&lt;/p&gt;
-</content>
-    
-    <category term="Protocols"/>
-    
-    
-    <category term="Networking"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Concurrent Erlang</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/concurrent-erlang/"/>
-    <id>https://mtrsk.github.io/notes/2024/concurrent-erlang/</id>
-    <published>2024-09-30T00:00:00Z</published>
-    <updated>2024-09-30T00:00:00Z</updated>
-    <summary>:ID: 63607e63-4428-4578-bf2a-12a49649b49c :ROAM_ALIAS: &amp;ldquo;Erlang Process&amp;rdquo;
-Processes In Erlang, creation of a parallel process is achieved by evaluating the spawn primitive. This primitive creates a concurrent process and returns a process identifier (PID) that can used to interact with the newly created process:
-Pid = spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]). This BIF never fails A process can either terminate: Abormally when run-time errors occur Normally when there is no more code to execute Modeling Concurrency The syntax Pid !</summary>
-    <content type="html">&lt;p&gt;:ID:       63607e63-4428-4578-bf2a-12a49649b49c
-:ROAM_ALIAS: &amp;ldquo;Erlang Process&amp;rdquo;&lt;/p&gt;
-&lt;h2 id=&#34;processes&#34;&gt;Processes&lt;/h2&gt;
-&lt;p&gt;In &lt;a href=&#34;/notes/2024/erlang/&#34;&gt;Erlang&lt;/a&gt;, creation of a parallel process is achieved by evaluating the &lt;code&gt;spawn&lt;/code&gt;
-primitive. This primitive creates a concurrent process and returns a process
-identifier (PID) that can used to interact with the newly created process:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;Pid&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;spawn&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;ModName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;FuncName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Arg1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Arg2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;...,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ArgN&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]).&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;This BIF never fails&lt;/li&gt;
-&lt;li&gt;A process can either terminate:
-&lt;ul&gt;
-&lt;li&gt;Abormally when run-time errors occur&lt;/li&gt;
-&lt;li&gt;Normally when there is no more code to execute&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;modeling-concurrency&#34;&gt;Modeling Concurrency&lt;/h3&gt;
-&lt;p&gt;The syntax &lt;code&gt;Pid ! Msg&lt;/code&gt; means &amp;ldquo;send the message &lt;code&gt;Msg&lt;/code&gt; to the process &lt;code&gt;Pid&lt;/code&gt;&amp;rdquo;, where &lt;code&gt;Msg&lt;/code&gt;
-is from any valid &lt;a href=&#34;/notes/2024/erlang/&#34;&gt;Erlang&lt;/a&gt; data type. For a &lt;code&gt;Pid&lt;/code&gt; to process a message we need to
-pattern match:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;receive&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;From&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Message&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Sending a message will never fail&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;A message sent to non-existing processes are throw away&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Received messages are store in a process&amp;rsquo; mailbox&lt;/p&gt;
-&lt;p&gt;The erlang shell (&lt;code&gt;erl&lt;/code&gt;) is itself a process, you can test its message-passing
-functionalities by using the &lt;code&gt;self&lt;/code&gt; keyword:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    1&amp;gt; self&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; ! hello.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    hello
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    2&amp;gt; receive X -&amp;gt; X end.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    hello
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Messages can be matched and selectivelly retrieved&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Messages are received when a message matches a clause&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Mailboxes are scanned sequentially&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;registered-processes&#34;&gt;Registered Processes&lt;/h3&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;BIF&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;register(Name, Pid)&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Associates the name &lt;code&gt;Name&lt;/code&gt;, an atom, with the process &lt;code&gt;Pid&lt;/code&gt;.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;registered/0&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Returns a list of names that have been registered using &lt;code&gt;register/2&lt;/code&gt;.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;whereis(Name)&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Returns the pid registered under &lt;code&gt;Name&lt;/code&gt;, or &lt;code&gt;undefined&lt;/code&gt; if the name is not registered.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;ul&gt;
-&lt;li&gt;Sending messages to a non-existing registered process causes the calling
-process to terminate with a &lt;code&gt;badarg&lt;/code&gt; error.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;timeouts&#34;&gt;Timeouts&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;If the message &lt;code&gt;Msg&lt;/code&gt; is received within the &lt;code&gt;TimeOut&lt;/code&gt;, &lt;code&gt;expr01&lt;/code&gt; will be
-executed. Otherwise, &lt;code&gt;expr02&lt;/code&gt; will be executed.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;TimeOut&lt;/code&gt; is an integer denoting the time in miliseconds or the Atom &lt;code&gt;infinity&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!--listend--&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;receive&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Msg&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;expr01&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;after&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TimeOut&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;expr02&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
-&lt;/div&gt;
-</content>
-    
-    <category term="Erlang"/>
-    
-    
-    <category term="Functional Programming"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Otp</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/otp/"/>
-    <id>https://mtrsk.github.io/notes/2024/otp/</id>
-    <published>2024-09-28T00:00:00Z</published>
-    <updated>2024-09-28T00:00:00Z</updated>
-    <summary>:ID: 6ed3a191-0128-453e-b0b6-37c48593a6f0 :ROAM_ALIAS: &amp;ldquo;Open Telecom Platform&amp;rdquo;
-Otp is a domain-independent set of frameworks, principles, and patterns that guide and support the structure, design, implementation, and deployment of Erlang systems. Using OTP in your projects will help you avoid accidental complexity: things that are difficult because you picked inadequate tools. (Cesarini and Vinoski 2016, 20)
-References Cesarini, Francesco, and Steve Vinoski. 2016. Designing for Scalability with Erlang/Otp: Implement Robust, Fault-Tolerant Systems. O’Reilly Media, Inc.</summary>
-    <content type="html">&lt;p&gt;:ID:       6ed3a191-0128-453e-b0b6-37c48593a6f0
-:ROAM_ALIAS: &amp;ldquo;Open Telecom Platform&amp;rdquo;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;/notes/2024/otp/&#34;&gt;Otp&lt;/a&gt; is a domain-independent set of frameworks, principles, and patterns that
-guide and support the structure, design, implementation, and deployment of
-&lt;a href=&#34;/notes/2024/erlang/&#34;&gt;Erlang&lt;/a&gt; systems. Using OTP in your projects will help you avoid accidental
-complexity: things that are difficult because you picked inadequate
-tools. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Cesarini and Vinoski 2016, 20&lt;/a&gt;)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
-  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Cesarini, Francesco, and Steve Vinoski. 2016. &lt;i&gt;Designing for Scalability with Erlang/Otp: Implement Robust, Fault-Tolerant Systems&lt;/i&gt;. O’Reilly Media, Inc.&lt;/div&gt;
-&lt;/div&gt;
-</content>
-    
-    <category term="Erlang"/>
-    
-    <category term="Elixir"/>
-    
-    <category term="OTP"/>
     
     
     <category term="Functional Programming"/>

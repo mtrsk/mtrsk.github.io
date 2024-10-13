@@ -6,20 +6,20 @@
     <description>Recent content in Tags on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mtrsk.github.io/tags/rss.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Books</title>
-      <link>https://mtrsk.github.io/tags/books/</link>
+      <title>OTP</title>
+      <link>https://mtrsk.github.io/tags/otp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/tags/books/</guid>
+      <guid>https://mtrsk.github.io/tags/otp/</guid>
       <description></description>
     </item>
     <item>
-      <title>Classical Papers</title>
-      <link>https://mtrsk.github.io/tags/classical-papers/</link>
+      <title>Set Theory</title>
+      <link>https://mtrsk.github.io/tags/set-theory/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/tags/classical-papers/</guid>
+      <guid>https://mtrsk.github.io/tags/set-theory/</guid>
       <description></description>
     </item>
     <item>
@@ -37,6 +37,20 @@
       <description></description>
     </item>
     <item>
+      <title>Relational Theory</title>
+      <link>https://mtrsk.github.io/tags/relational-theory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/relational-theory/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Classical Papers</title>
+      <link>https://mtrsk.github.io/tags/classical-papers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/classical-papers/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Fallacies</title>
       <link>https://mtrsk.github.io/tags/fallacies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -51,10 +65,10 @@
       <description></description>
     </item>
     <item>
-      <title>Relational Theory</title>
-      <link>https://mtrsk.github.io/tags/relational-theory/</link>
+      <title>Management</title>
+      <link>https://mtrsk.github.io/tags/management/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/tags/relational-theory/</guid>
+      <guid>https://mtrsk.github.io/tags/management/</guid>
       <description></description>
     </item>
     <item>
@@ -100,13 +114,6 @@
       <description></description>
     </item>
     <item>
-      <title>OTP</title>
-      <link>https://mtrsk.github.io/tags/otp/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/tags/otp/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Postgres</title>
       <link>https://mtrsk.github.io/tags/postgres/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -125,13 +132,6 @@
       <link>https://mtrsk.github.io/tags/idris/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/tags/idris/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Type-Driven Development</title>
-      <link>https://mtrsk.github.io/tags/type-driven-development/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/tags/type-driven-development/</guid>
       <description></description>
     </item>
     <item>

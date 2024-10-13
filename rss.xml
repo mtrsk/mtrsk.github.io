@@ -6,14 +6,70 @@
     <description>Recent content in homepage title on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mtrsk.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Partial Order</title>
+      <link>https://mtrsk.github.io/notes/2024/partial-order/</link>
+      <pubDate>Sun, 13 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/partial-order/</guid>
+      <description>:ID: ce27d04b-aa7b-4fd5-98d3-30aa645f0d46&#xA;A Relation \(R\) is said to be a reflexive partial order if its reflexive, antisymmetric, and transitive. </description>
+    </item>
+    <item>
+      <title>Relation</title>
+      <link>https://mtrsk.github.io/notes/2024/relation/</link>
+      <pubDate>Sun, 13 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/relation/</guid>
+      <description>:ID: efd79527-1cfb-48da-868e-6286cff21c34&#xA;A relation is any subset of a Cartesian product. For instance, a relation \(R\) over any subset of \(X \times X\) is called a &amp;ldquo;Relation on \(X\)&amp;rdquo;.&#xA;A Relation \(R\) is said to be reflexive if \(\forall x \in X: (x,x) \in R\). A Relation \(R\) is said to be symmetric if \(\forall x,y \in X: (x,y) \in R \implies (y,x) \in R\). A Relation \(R\) is antisymmetric if \(\forall x,y \in X: (x,y) \in R \land (y,x) \in R \implies x = y\).</description>
+    </item>
+    <item>
+      <title>Supervisor</title>
+      <link>https://mtrsk.github.io/notes/2024/supervisor/</link>
+      <pubDate>Sun, 13 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/supervisor/</guid>
+      <description>:ID: 2daf1307-afb4-49e4-98cb-66ac7eb27cf0</description>
+    </item>
+    <item>
+      <title>Dependent Types</title>
+      <link>https://mtrsk.github.io/notes/2024/dependent-types/</link>
+      <pubDate>Fri, 11 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/dependent-types/</guid>
+      <description>:ID: 7580b45a-1dba-4690-bfbf-652fee25e1d9</description>
+    </item>
+    <item>
+      <title>Functional Programming</title>
+      <link>https://mtrsk.github.io/notes/2024/functional-programming/</link>
+      <pubDate>Fri, 11 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/functional-programming/</guid>
+      <description>:ID: 171718cd-10fd-484b-8d77-0ffcffc29163&#xA;We often refer to the term functional programming, meaning the following programming techniques:&#xA;Composing functions for structuring programs and using recursion instead of loops. Purity, so that the result of a function is fully determined once its parameters have been fixed. Absence of side effects (doing literally nothing except evaluating the result). Immutability (the inability to change the value of a variable). (, Bragilevsky 2021)&#xA;References Bragilevsky, Vitaly. 2021.</description>
+    </item>
+    <item>
+      <title>Erlang Ets</title>
+      <link>https://mtrsk.github.io/notes/2024/erlang-ets/</link>
+      <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/erlang-ets/</guid>
+      <description>:ID: 37c6ea44-0c80-4c57-a36e-98d37e8a3413 :ROAM_ALIAS: &amp;ldquo;ETS&amp;rdquo;&#xA;Erlang Term Storage, commonly referred to as ETS, is a powerful storage engine built into Otp.</description>
+    </item>
+    <item>
+      <title>Gen Server</title>
+      <link>https://mtrsk.github.io/notes/2024/gen-server/</link>
+      <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/gen-server/</guid>
+      <description>:ID: 1cd8fd81-a7c4-44ea-8b7a-d803e9b491af&#xA;Much of the work you think of as the core of a program - calculating results, storing information, and preparing replies - will fit neatly into the gen_server behavior. It provides a core set of methods that let you set up a process, respond to requests, end the process gracefully, and even pass state to a new process if this one needs to be upgraded in place. (Laurent 2017, 148)</description>
+    </item>
+    <item>
+      <title>Relational Algebra</title>
+      <link>https://mtrsk.github.io/notes/2024/relational-algebra/</link>
+      <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/relational-algebra/</guid>
+      <description>:ID: 11914357-b272-40fc-8bf6-a0ff98af0c99</description>
+    </item>
     <item>
       <title>Dializer</title>
       <link>https://mtrsk.github.io/notes/2024/dializer/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/dializer/</guid>
-      <description>:ID: 54473599-719d-460b-92ba-3796dd951872&#xA;Dialyzer is a static analysis tool that identifies software discrepancies, such as definite type errors, code that is unreachable because of programming errors, and unnecessary tests in Erlang and Elixir modules or an entire codebases.</description>
+      <description>:ID: 54473599-719d-460b-92ba-3796dd951872&#xA;Dialyzer is a static analysis tool that identifies software discrepancies, such as definite type errors, code that is unreachable because of programming errors, and unnecessary tests in Erlang and Elixir modules or an entire codebases.&#xA;Erlang Type Notation We can define a subset of Erlang types as follows:&#xA;Type :: any() | none() | pid() | port() | reference() | [] | Atom | binary() | float() | Fun | Integer | [Type] | Tuple | Union | UserDefined Union :: Type1 | Type2 | .</description>
     </item>
     <item>
       <title>Fallacies Of Distributed Computing</title>
@@ -41,7 +97,7 @@
       <link>https://mtrsk.github.io/notes/2024/relational-theory/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/relational-theory/</guid>
-      <description>:ID: abcb3048-34a5-4561-885c-74b8285924ac&#xA;It was late in 1968 that Codd, a mathematician by training, first realized that the discipline of mathematics could be used to inject some solid principles and rigor into a field, database management, that prior to that time was all too deficient in any such qualities. His original definition of the relational model appeared in an IBM Research Report in 1969 (&amp;hellip;) (Date 2015).&#xA;Date&amp;rsquo;s Review of Codd&amp;rsquo;s Original Algebra Structure Types (or Domains) n-Ary Relations Attributes &amp;amp; Tuples Keys Candidate Primary Foreign Integrity Entity Integrity Referential Integrity Manipulation Relational Algebra Relational Assignment References Date, Chris J.</description>
+      <description>:ID: abcb3048-34a5-4561-885c-74b8285924ac&#xA;It was late in 1968 that Codd, a mathematician by training, first realized that the discipline of mathematics could be used to inject some solid principles and rigor into a field, database management, that prior to that time was all too deficient in any such qualities. His original definition of the relational model appeared in an IBM Research Report in 1969 (&amp;hellip;) (Date 2015).&#xA;Date&amp;rsquo;s Review of Codd&amp;rsquo;s Original Algebra The relational model defines a database abstraction based on relations to avoid maintenance overhead.</description>
     </item>
     <item>
       <title>The Two Generals Problem</title>
@@ -55,7 +111,7 @@
       <link>https://mtrsk.github.io/notes/2024/haskell/</link>
       <pubDate>Tue, 08 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/haskell/</guid>
-      <description>:ID: a74d6aac-dbe9-48a6-83ca-648cd6ea933e</description>
+      <description>:ID: a74d6aac-dbe9-48a6-83ca-648cd6ea933e&#xA;Haskell is a general purpose, purely Functional Programming language incorporating many recent innovations in programming language design. Haskell provides higher-order functions, non-strict semantics, static polymorphic typing, user-defined algebraic datatypes, pattern-matching, list comprehensions, a module system, a monadic I/O system, and a rich set of primitive datatypes, including lists, arrays, arbitrary and fixed precision integers, and floating-point numbers. Haskell is both the culmination and solidification of many years of research on non-strict functional languages.</description>
     </item>
     <item>
       <title>Nixos</title>
@@ -76,14 +132,14 @@
       <link>https://mtrsk.github.io/notes/2024/erlang-shell/</link>
       <pubDate>Fri, 04 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/erlang-shell/</guid>
-      <description>:ID: bcd04f60-0a4c-4213-90f7-139c0ddf5bef&#xA;Some features of the Erlang shell.&#xA;Examples Compiling and Running &amp;ldquo;Hello World&amp;rdquo; in the Shell -module(hello). -export([start/0]). start() -&amp;gt; io:format(&amp;#34;Hello world~n&amp;#34;). Running the hello.erl program in the erlang shell.&#xA;$ erl Erlang/OTP 26 [erts-14.2.5] [source] [64-bit] [smp:24:24] [ds:24:24:10] [async-threads:1] [jit:ns] Eshell V14.2.5 (press Ctrl+G to abort, type help(). for help) 1&amp;gt; c(hello). {ok,hello} 2&amp;gt; hello:start(). Hello world ok Compiling Outside the Erlang Shell $ erlc hello.erl $ erl -noshell -s hello start -s init stop erlc evokes the Erlang compiler from the command line.</description>
+      <description>:ID: bcd04f60-0a4c-4213-90f7-139c0ddf5bef&#xA;Some features of the Erlang shell.&#xA;Basics Compiling and Running &amp;ldquo;Hello World&amp;rdquo; in the Shell -module(hello). -export([start/0]). start() -&amp;gt; io:format(&amp;#34;Hello world~n&amp;#34;). Running the hello.erl program in the erlang shell.&#xA;$ erl Erlang/OTP 26 [erts-14.2.5] [source] [64-bit] [smp:24:24] [ds:24:24:10] [async-threads:1] [jit:ns] Eshell V14.2.5 (press Ctrl+G to abort, type help(). for help) 1&amp;gt; c(hello). {ok,hello} 2&amp;gt; hello:start(). Hello world ok Compiling Outside the Erlang Shell $ erlc hello.erl $ erl -noshell -s hello start -s init stop erlc evokes the Erlang compiler from the command line.</description>
     </item>
     <item>
       <title>Error Handling In Erlang</title>
       <link>https://mtrsk.github.io/notes/2024/error-handling-in-erlang/</link>
       <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/error-handling-in-erlang/</guid>
-      <description>:ID: 22ae9c25-3123-4ed8-b765-369ac89d2942&#xA;In Erlang we have a large number of processes at our disposal, so the failure of any individual process is not so important. We usually write only a small amount of defensive code and instead concentrate on writing corrective code. We take measures to detect the errors and then correct them after they have occurred. (Armstrong 2013)&#xA;Definitions Link A bi-directional propagation path for exit signals. Exit Signal Transmit process termination information.</description>
+      <description>:ID: 22ae9c25-3123-4ed8-b765-369ac89d2942&#xA;In Erlang we do exactly the opposite. We build our applications in two parts: a part that solves the problem and a part that corrects errors if they have occurred.&#xA;The part that solves the problem is written with as little defensive code as possible; we assume that all arguments to functions are correct and the programs will execute without errors.&#xA;The part that corrects errors is often generic, so the same error-correcting code can be used for many different applications.</description>
     </item>
     <item>
       <title>Postgres Server</title>
@@ -104,14 +160,14 @@
       <link>https://mtrsk.github.io/notes/2024/concurrent-erlang/</link>
       <pubDate>Mon, 30 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/concurrent-erlang/</guid>
-      <description>:ID: 63607e63-4428-4578-bf2a-12a49649b49c :ROAM_ALIAS: &amp;ldquo;Erlang Process&amp;rdquo;&#xA;Processes In Erlang, creation of a parallel process is achieved by evaluating the spawn primitive. This primitive creates a concurrent process and returns a process identifier (PID) that can used to interact with the newly created process:&#xA;Pid = spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]). This BIF never fails A process can either terminate: Abormally when run-time errors occur Normally when there is no more code to execute Modeling Concurrency The syntax Pid !</description>
+      <description>:ID: 63607e63-4428-4578-bf2a-12a49649b49c&#xA;I’m sure you’ve met processes before, but only in the context of operating systems. In Erlang, processes belong to the programming language and not the operating system. This means that Erlang processes will have the same logical behavior on any operating system, so we can write portable concurrent code that can run on any operating system that supports Erlang.&#xA;In Erlang:&#xA;Creating and destroying processes is very fast. Sending messages between processes is very fast.</description>
     </item>
     <item>
       <title>Otp</title>
       <link>https://mtrsk.github.io/notes/2024/otp/</link>
       <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/otp/</guid>
-      <description>:ID: 6ed3a191-0128-453e-b0b6-37c48593a6f0 :ROAM_ALIAS: &amp;ldquo;Open Telecom Platform&amp;rdquo;&#xA;Otp is a domain-independent set of frameworks, principles, and patterns that guide and support the structure, design, implementation, and deployment of Erlang systems. Using OTP in your projects will help you avoid accidental complexity: things that are difficult because you picked inadequate tools. (Cesarini and Vinoski 2016, 20)&#xA;References Cesarini, Francesco, and Steve Vinoski. 2016. Designing for Scalability with Erlang/Otp: Implement Robust, Fault-Tolerant Systems. O’Reilly Media, Inc.</description>
+      <description>:ID: 6ed3a191-0128-453e-b0b6-37c48593a6f0 :ROAM_ALIAS: &amp;ldquo;Open Telecom Platform&amp;rdquo;&#xA;Otp is a domain-independent set of frameworks, principles, and patterns that guide and support the structure, design, implementation, and deployment of Erlang systems. Using OTP in your projects will help you avoid accidental complexity: things that are difficult because you picked inadequate tools. (Cesarini and Vinoski 2016, 20)&#xA;Behaviors Gen Server Supervisor gen_statem: State Machines gen_fsm: Finite State Machine gen_event References Cesarini, Francesco, and Steve Vinoski.</description>
     </item>
     <item>
       <title>Split Brain</title>
@@ -258,7 +314,7 @@
       <link>https://mtrsk.github.io/notes/2024/type-driven-development/</link>
       <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/type-driven-development/</guid>
-      <description>:ID: 794f5acf-354c-49bf-943f-33480ade38f2&#xA;References: (Brady 2017) </description>
+      <description>:ID: 794f5acf-354c-49bf-943f-33480ade38f2&#xA;Idris is a pure Functional Programming language with Dependent Types&#xA;References: (Brady 2017) References Brady, Edwin. 2017. Type-Driven Development with Idris. Simon and Schuster. </description>
     </item>
     <item>
       <title>Cap Theorem</title>
@@ -273,13 +329,6 @@
       <pubDate>Tue, 09 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/designing-for-scalability-with-erlang/</guid>
       <description>:ID: ffac18bd-4e44-4a7b-8a3a-a85552c9b076&#xA;Otp is said to consist of three building blocks that, when used together, provide a solid approach to designing and developing systems in the problem domain we’ve just described. They are Erlang itself, tools and libraries, and a set of design principles. (Cesarini and Vinoski 2016, 20)&#xA;References Cesarini, Francesco, and Steve Vinoski. 2016. Designing for Scalability with Erlang/Otp: Implement Robust, Fault-Tolerant Systems. O’Reilly Media, Inc. </description>
-    </item>
-    <item>
-      <title>Programming Erlang</title>
-      <link>https://mtrsk.github.io/notes/2024/programming-erlang/</link>
-      <pubDate>Sat, 06 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/notes/2024/programming-erlang/</guid>
-      <description>:ID: 1daea4ea-40bc-406d-8d03-906c7f9ec343 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;FP&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Erlang&amp;rdquo;&#xA;Notes from (Armstrong 2013).&#xA;Erlang&#xA;Part II: Sequential Programming Error Handling in Sequential Programs try FuncOrExpressionSeq of Pattern1 [when Guard1] -&amp;gt; Expressions1; Pattern2 [when Guard2] -&amp;gt; Expressions2; ... catch ExceptionType1: ExPattern1 [when ExGuard1] -&amp;gt; ExExpressions1; ExceptionType2: ExPattern2 [when ExGuard2] -&amp;gt; ExExpressions2; ... after AfterExpressions end exit/1 Used to terminate the current process. throw Used as a documentation to the caller, to show that a function might throw this exception.</description>
     </item>
     <item>
       <title>Erlang</title>

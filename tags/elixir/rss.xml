@@ -6,21 +6,35 @@
     <description>Recent content in Elixir on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mtrsk.github.io/tags/elixir/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Erlang Ets</title>
+      <link>https://mtrsk.github.io/notes/2024/erlang-ets/</link>
+      <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/erlang-ets/</guid>
+      <description>:ID: 37c6ea44-0c80-4c57-a36e-98d37e8a3413 :ROAM_ALIAS: &amp;ldquo;ETS&amp;rdquo;&#xA;Erlang Term Storage, commonly referred to as ETS, is a powerful storage engine built into Otp.</description>
+    </item>
+    <item>
+      <title>Gen Server</title>
+      <link>https://mtrsk.github.io/notes/2024/gen-server/</link>
+      <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/gen-server/</guid>
+      <description>:ID: 1cd8fd81-a7c4-44ea-8b7a-d803e9b491af&#xA;Much of the work you think of as the core of a program - calculating results, storing information, and preparing replies - will fit neatly into the gen_server behavior. It provides a core set of methods that let you set up a process, respond to requests, end the process gracefully, and even pass state to a new process if this one needs to be upgraded in place. (Laurent 2017, 148)</description>
+    </item>
     <item>
       <title>Dializer</title>
       <link>https://mtrsk.github.io/notes/2024/dializer/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/dializer/</guid>
-      <description>:ID: 54473599-719d-460b-92ba-3796dd951872&#xA;Dialyzer is a static analysis tool that identifies software discrepancies, such as definite type errors, code that is unreachable because of programming errors, and unnecessary tests in Erlang and Elixir modules or an entire codebases.</description>
+      <description>:ID: 54473599-719d-460b-92ba-3796dd951872&#xA;Dialyzer is a static analysis tool that identifies software discrepancies, such as definite type errors, code that is unreachable because of programming errors, and unnecessary tests in Erlang and Elixir modules or an entire codebases.&#xA;Erlang Type Notation We can define a subset of Erlang types as follows:&#xA;Type :: any() | none() | pid() | port() | reference() | [] | Atom | binary() | float() | Fun | Integer | [Type] | Tuple | Union | UserDefined Union :: Type1 | Type2 | .</description>
     </item>
     <item>
       <title>Otp</title>
       <link>https://mtrsk.github.io/notes/2024/otp/</link>
       <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/otp/</guid>
-      <description>:ID: 6ed3a191-0128-453e-b0b6-37c48593a6f0 :ROAM_ALIAS: &amp;ldquo;Open Telecom Platform&amp;rdquo;&#xA;Otp is a domain-independent set of frameworks, principles, and patterns that guide and support the structure, design, implementation, and deployment of Erlang systems. Using OTP in your projects will help you avoid accidental complexity: things that are difficult because you picked inadequate tools. (Cesarini and Vinoski 2016, 20)&#xA;References Cesarini, Francesco, and Steve Vinoski. 2016. Designing for Scalability with Erlang/Otp: Implement Robust, Fault-Tolerant Systems. O’Reilly Media, Inc.</description>
+      <description>:ID: 6ed3a191-0128-453e-b0b6-37c48593a6f0 :ROAM_ALIAS: &amp;ldquo;Open Telecom Platform&amp;rdquo;&#xA;Otp is a domain-independent set of frameworks, principles, and patterns that guide and support the structure, design, implementation, and deployment of Erlang systems. Using OTP in your projects will help you avoid accidental complexity: things that are difficult because you picked inadequate tools. (Cesarini and Vinoski 2016, 20)&#xA;Behaviors Gen Server Supervisor gen_statem: State Machines gen_fsm: Finite State Machine gen_event References Cesarini, Francesco, and Steve Vinoski.</description>
     </item>
   </channel>
 </rss>

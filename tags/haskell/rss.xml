@@ -13,7 +13,7 @@
       <link>https://mtrsk.github.io/notes/2024/haskell/</link>
       <pubDate>Tue, 08 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/haskell/</guid>
-      <description>:ID: a74d6aac-dbe9-48a6-83ca-648cd6ea933e</description>
+      <description>:ID: a74d6aac-dbe9-48a6-83ca-648cd6ea933e&#xA;Haskell is a general purpose, purely Functional Programming language incorporating many recent innovations in programming language design. Haskell provides higher-order functions, non-strict semantics, static polymorphic typing, user-defined algebraic datatypes, pattern-matching, list comprehensions, a module system, a monadic I/O system, and a rich set of primitive datatypes, including lists, arrays, arbitrary and fixed precision integers, and floating-point numbers. Haskell is both the culmination and solidification of many years of research on non-strict functional languages.</description>
     </item>
     <item>
       <title>Monad</title>

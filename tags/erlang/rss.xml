@@ -6,42 +6,56 @@
     <description>Recent content in Erlang on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mtrsk.github.io/tags/erlang/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Erlang Ets</title>
+      <link>https://mtrsk.github.io/notes/2024/erlang-ets/</link>
+      <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/erlang-ets/</guid>
+      <description>:ID: 37c6ea44-0c80-4c57-a36e-98d37e8a3413 :ROAM_ALIAS: &amp;ldquo;ETS&amp;rdquo;&#xA;Erlang Term Storage, commonly referred to as ETS, is a powerful storage engine built into Otp.</description>
+    </item>
+    <item>
+      <title>Gen Server</title>
+      <link>https://mtrsk.github.io/notes/2024/gen-server/</link>
+      <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/gen-server/</guid>
+      <description>:ID: 1cd8fd81-a7c4-44ea-8b7a-d803e9b491af&#xA;Much of the work you think of as the core of a program - calculating results, storing information, and preparing replies - will fit neatly into the gen_server behavior. It provides a core set of methods that let you set up a process, respond to requests, end the process gracefully, and even pass state to a new process if this one needs to be upgraded in place. (Laurent 2017, 148)</description>
+    </item>
     <item>
       <title>Dializer</title>
       <link>https://mtrsk.github.io/notes/2024/dializer/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/dializer/</guid>
-      <description>:ID: 54473599-719d-460b-92ba-3796dd951872&#xA;Dialyzer is a static analysis tool that identifies software discrepancies, such as definite type errors, code that is unreachable because of programming errors, and unnecessary tests in Erlang and Elixir modules or an entire codebases.</description>
+      <description>:ID: 54473599-719d-460b-92ba-3796dd951872&#xA;Dialyzer is a static analysis tool that identifies software discrepancies, such as definite type errors, code that is unreachable because of programming errors, and unnecessary tests in Erlang and Elixir modules or an entire codebases.&#xA;Erlang Type Notation We can define a subset of Erlang types as follows:&#xA;Type :: any() | none() | pid() | port() | reference() | [] | Atom | binary() | float() | Fun | Integer | [Type] | Tuple | Union | UserDefined Union :: Type1 | Type2 | .</description>
     </item>
     <item>
       <title>Erlang Shell</title>
       <link>https://mtrsk.github.io/notes/2024/erlang-shell/</link>
       <pubDate>Fri, 04 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/erlang-shell/</guid>
-      <description>:ID: bcd04f60-0a4c-4213-90f7-139c0ddf5bef&#xA;Some features of the Erlang shell.&#xA;Examples Compiling and Running &amp;ldquo;Hello World&amp;rdquo; in the Shell -module(hello). -export([start/0]). start() -&amp;gt; io:format(&amp;#34;Hello world~n&amp;#34;). Running the hello.erl program in the erlang shell.&#xA;$ erl Erlang/OTP 26 [erts-14.2.5] [source] [64-bit] [smp:24:24] [ds:24:24:10] [async-threads:1] [jit:ns] Eshell V14.2.5 (press Ctrl+G to abort, type help(). for help) 1&amp;gt; c(hello). {ok,hello} 2&amp;gt; hello:start(). Hello world ok Compiling Outside the Erlang Shell $ erlc hello.erl $ erl -noshell -s hello start -s init stop erlc evokes the Erlang compiler from the command line.</description>
+      <description>:ID: bcd04f60-0a4c-4213-90f7-139c0ddf5bef&#xA;Some features of the Erlang shell.&#xA;Basics Compiling and Running &amp;ldquo;Hello World&amp;rdquo; in the Shell -module(hello). -export([start/0]). start() -&amp;gt; io:format(&amp;#34;Hello world~n&amp;#34;). Running the hello.erl program in the erlang shell.&#xA;$ erl Erlang/OTP 26 [erts-14.2.5] [source] [64-bit] [smp:24:24] [ds:24:24:10] [async-threads:1] [jit:ns] Eshell V14.2.5 (press Ctrl+G to abort, type help(). for help) 1&amp;gt; c(hello). {ok,hello} 2&amp;gt; hello:start(). Hello world ok Compiling Outside the Erlang Shell $ erlc hello.erl $ erl -noshell -s hello start -s init stop erlc evokes the Erlang compiler from the command line.</description>
     </item>
     <item>
       <title>Error Handling In Erlang</title>
       <link>https://mtrsk.github.io/notes/2024/error-handling-in-erlang/</link>
       <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/error-handling-in-erlang/</guid>
-      <description>:ID: 22ae9c25-3123-4ed8-b765-369ac89d2942&#xA;In Erlang we have a large number of processes at our disposal, so the failure of any individual process is not so important. We usually write only a small amount of defensive code and instead concentrate on writing corrective code. We take measures to detect the errors and then correct them after they have occurred. (Armstrong 2013)&#xA;Definitions Link A bi-directional propagation path for exit signals. Exit Signal Transmit process termination information.</description>
+      <description>:ID: 22ae9c25-3123-4ed8-b765-369ac89d2942&#xA;In Erlang we do exactly the opposite. We build our applications in two parts: a part that solves the problem and a part that corrects errors if they have occurred.&#xA;The part that solves the problem is written with as little defensive code as possible; we assume that all arguments to functions are correct and the programs will execute without errors.&#xA;The part that corrects errors is often generic, so the same error-correcting code can be used for many different applications.</description>
     </item>
     <item>
       <title>Concurrent Erlang</title>
       <link>https://mtrsk.github.io/notes/2024/concurrent-erlang/</link>
       <pubDate>Mon, 30 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/concurrent-erlang/</guid>
-      <description>:ID: 63607e63-4428-4578-bf2a-12a49649b49c :ROAM_ALIAS: &amp;ldquo;Erlang Process&amp;rdquo;&#xA;Processes In Erlang, creation of a parallel process is achieved by evaluating the spawn primitive. This primitive creates a concurrent process and returns a process identifier (PID) that can used to interact with the newly created process:&#xA;Pid = spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]). This BIF never fails A process can either terminate: Abormally when run-time errors occur Normally when there is no more code to execute Modeling Concurrency The syntax Pid !</description>
+      <description>:ID: 63607e63-4428-4578-bf2a-12a49649b49c&#xA;I’m sure you’ve met processes before, but only in the context of operating systems. In Erlang, processes belong to the programming language and not the operating system. This means that Erlang processes will have the same logical behavior on any operating system, so we can write portable concurrent code that can run on any operating system that supports Erlang.&#xA;In Erlang:&#xA;Creating and destroying processes is very fast. Sending messages between processes is very fast.</description>
     </item>
     <item>
       <title>Otp</title>
       <link>https://mtrsk.github.io/notes/2024/otp/</link>
       <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/otp/</guid>
-      <description>:ID: 6ed3a191-0128-453e-b0b6-37c48593a6f0 :ROAM_ALIAS: &amp;ldquo;Open Telecom Platform&amp;rdquo;&#xA;Otp is a domain-independent set of frameworks, principles, and patterns that guide and support the structure, design, implementation, and deployment of Erlang systems. Using OTP in your projects will help you avoid accidental complexity: things that are difficult because you picked inadequate tools. (Cesarini and Vinoski 2016, 20)&#xA;References Cesarini, Francesco, and Steve Vinoski. 2016. Designing for Scalability with Erlang/Otp: Implement Robust, Fault-Tolerant Systems. O’Reilly Media, Inc.</description>
+      <description>:ID: 6ed3a191-0128-453e-b0b6-37c48593a6f0 :ROAM_ALIAS: &amp;ldquo;Open Telecom Platform&amp;rdquo;&#xA;Otp is a domain-independent set of frameworks, principles, and patterns that guide and support the structure, design, implementation, and deployment of Erlang systems. Using OTP in your projects will help you avoid accidental complexity: things that are difficult because you picked inadequate tools. (Cesarini and Vinoski 2016, 20)&#xA;Behaviors Gen Server Supervisor gen_statem: State Machines gen_fsm: Finite State Machine gen_event References Cesarini, Francesco, and Steve Vinoski.</description>
     </item>
     <item>
       <title>Sequential Erlang</title>

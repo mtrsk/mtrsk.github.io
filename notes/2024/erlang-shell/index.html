@@ -12,7 +12,7 @@
   <meta property="og:title" content="Erlang Shell">
   <meta property="og:description" content=":ID: bcd04f60-0a4c-4213-90f7-139c0ddf5bef
 Some features of the Erlang shell.
-Examples Compiling and Running “Hello World” in the Shell -module(hello). -export([start/0]). start() -&gt; io:format(&#34;Hello world~n&#34;). Running the hello.erl program in the erlang shell.
+Basics Compiling and Running “Hello World” in the Shell -module(hello). -export([start/0]). start() -&gt; io:format(&#34;Hello world~n&#34;). Running the hello.erl program in the erlang shell.
 $ erl Erlang/OTP 26 [erts-14.2.5] [source] [64-bit] [smp:24:24] [ds:24:24:10] [async-threads:1] [jit:ns] Eshell V14.2.5 (press Ctrl&#43;G to abort, type help(). for help) 1&gt; c(hello). {ok,hello} 2&gt; hello:start(). Hello world ok Compiling Outside the Erlang Shell $ erlc hello.erl $ erl -noshell -s hello start -s init stop erlc evokes the Erlang compiler from the command line.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
@@ -23,6 +23,8 @@ $ erl Erlang/OTP 26 [erts-14.2.5] [source] [64-bit] [smp:24:24] [ds:24:24:10] [a
 <link rel="stylesheet" href="/css/main.min.1135c79bd24c232c465ba2c4e5a9644086ce3f8358dbd0e0d76c5e86d24f1fad.css" />
     
         <script type="text/javascript" src ="https://d3js.org/d3.v7.min.js"></script>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <script>
   MathJax = {
@@ -34,8 +36,6 @@ $ erl Erlang/OTP 26 [erts-14.2.5] [source] [64-bit] [smp:24:24] [ds:24:24:10] [a
 </script>
 
     
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
   </head>
   <body><nav>
   <img
@@ -64,7 +64,7 @@ $ erl Erlang/OTP 26 [erts-14.2.5] [source] [64-bit] [smp:24:24] [ds:24:24:10] [a
     </small>
   </h2><p>:ID:       bcd04f60-0a4c-4213-90f7-139c0ddf5bef</p>
 <p>Some features of the <a href="/notes/2024/erlang/">Erlang</a> shell.</p>
-<h2 id="examples">Examples</h2>
+<h2 id="basics">Basics</h2>
 <h3 id="compiling-and-running-hello-world-in-the-shell">Compiling and Running &ldquo;Hello World&rdquo; in the Shell</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl">  <span class="o">-</span><span class="n">module</span><span class="p">(</span><span class="n">hello</span><span class="p">).</span>
 </span></span><span class="line"><span class="cl">  <span class="o">-</span><span class="n">export</span><span class="p">([</span><span class="n">start</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span>
@@ -99,12 +99,65 @@ terminates the Erlang session. (<a href="#citeproc_bib_item_1">Armstrong 2013, 1
 </span></span></code></pre></div><h3 id="clearing-bound-variables-in-the-shell">Clearing Bound Variables in the Shell</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  &gt; f<span class="o">(</span>N<span class="o">)</span>.
 </span></span><span class="line"><span class="cl">  &gt; f<span class="o">()</span>.
+</span></span></code></pre></div><h3 id="getting-help">Getting Help</h3>
+<blockquote>
+<p>The Erlang shell has a number of built-in commands. You can see them all
+with the shell command <code>help()</code>. (<a href="#citeproc_bib_item_1">Armstrong 2013, 173</a>).</p>
+</blockquote>
+<h2 id="compiling-and-running-erlang-programs">Compiling and running Erlang programs</h2>
+<h3 id="modifying-the-environment">Modifying the Environment</h3>
+<p>You can find the value of the current load path by starting an Erlang shell
+and giving the command <code>code:get_path()</code>. The two most common functions that we
+use to manipulate the load path are as follows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl"><span class="c">% Add a new directory to the start of the load path.
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="p">-</span><span class="ni">spec</span> <span class="nn">code</span><span class="p">:</span><span class="nf">add_patha</span><span class="p">(</span><span class="nv">Dir</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">true</span> <span class="p">|</span> <span class="p">{</span><span class="n">error</span><span class="p">,</span> <span class="n">bad_directory</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c">% Add a new directory to the end of the load path.
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="p">-</span><span class="ni">spec</span> <span class="nn">code</span><span class="p">:</span><span class="nf">add_pathz</span><span class="p">(</span><span class="nv">Dir</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">true</span> <span class="p">|</span> <span class="p">{</span><span class="n">error</span><span class="p">,</span> <span class="n">bad_directory</span><span class="p">}</span>
+</span></span></code></pre></div><p>Alternatively, you can start Erlang with a command like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ erl -pa Dir1 -pa Dir2 ... -pz DirK1 -pz DirK2
+</span></span></code></pre></div><h3 id="scripting">Scripting</h3>
+<p>Often we want to be able to execute an arbitrary Erlang function from the OS command
+line. The <code>-eval</code> argument is very handy for quick scripting.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  erl <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>      -eval <span class="s1">&#39;io:format(&#34;Memory: ~p~n&#34;, [erlang:memory(total)]).&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>      -noshell -s init stop
+</span></span></code></pre></div><h4 id="run-as-an-escript">Run As an Escript</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-erlang" data-lang="erlang"><span class="line"><span class="cl">  <span class="err">#</span><span class="o">!/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">env</span> <span class="n">escript</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">main</span><span class="p">([</span><span class="nv">A</span><span class="p">])</span> <span class="o">-&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">I</span> <span class="o">=</span> <span class="nb">list_to_integer</span><span class="p">(</span><span class="nv">A</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">F</span> <span class="o">=</span> <span class="n">fac</span><span class="p">(</span><span class="nv">I</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="nn">io</span><span class="p">:</span><span class="nf">format</span><span class="p">(</span><span class="s">&#34;factorial </span><span class="si">~w</span><span class="s"> = </span><span class="si">~w~n</span><span class="s">&#34;</span><span class="p">,</span> <span class="p">[</span><span class="nv">I</span><span class="p">,</span> <span class="nv">F</span><span class="p">]).</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">fac</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">fac</span><span class="p">(</span><span class="nv">N</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">N</span> <span class="o">*</span> <span class="n">fac</span><span class="p">(</span><span class="nv">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">).</span>
+</span></span></code></pre></div><h2 id="debugging">Debugging</h2>
+<h3 id="reading-crash-dumps">Reading Crash Dumps</h3>
+<p>If Erlang crashes, it leaves behind a file called <code>erl_crash.dump</code>. To start the
+analyzer, give the following command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  crashdump_viewer:start<span class="o">()</span>
 </span></span></code></pre></div><h2 id="references">References</h2>
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Armstrong, Joe. 2013. “Programming Erlang: Software for a Concurrent World.”</div>
 </div>
 
 
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
 
    
 

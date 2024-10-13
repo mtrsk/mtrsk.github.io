@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Books on Benevides&#39; Blog</title>
-    <link>https://mtrsk.github.io/tags/books/</link>
-    <description>Recent content in Books on Benevides&#39; Blog</description>
+    <title>Leadership on Benevides&#39; Blog</title>
+    <link>https://mtrsk.github.io/categories/leadership/</link>
+    <description>Recent content in Leadership on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mtrsk.github.io/tags/books/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mtrsk.github.io/categories/leadership/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Management</title>
       <link>https://mtrsk.github.io/notes/2024/management/</link>
