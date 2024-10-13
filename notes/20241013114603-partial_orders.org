@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       ce27d04b-aa7b-4fd5-98d3-30aa645f0d46
+:END:
+#+title: Partial Order
+#+HUGO_CATEGORIES: "Math"
+#+HUGO_TAGS: "Set Theory"
+
++ A [[id:efd79527-1cfb-48da-868e-6286cff21c34][Relation]] $R$ is said to be a *reflexive partial order* if its *reflexive*,
+  *antisymmetric*, and *transitive*.

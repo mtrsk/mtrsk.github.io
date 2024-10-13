@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       efd79527-1cfb-48da-868e-6286cff21c34
+:END:
+#+title: Relation
+#+HUGO_CATEGORIES: "Math"
+#+HUGO_TAGS: "Set Theory"
+
+A relation is any subset of a Cartesian product. For instance, a relation $R$
+over any subset of $X \times X$ is called a "Relation on $X$".
+
++ A Relation $R$ is said to be *reflexive* if $\forall x \in X: (x,x) \in R$.
++ A Relation $R$ is said to be *symmetric* if $\forall x,y \in X: (x,y) \in R \implies (y,x)
+  \in R$.
++ A Relation $R$ is *antisymmetric* if $\forall x,y \in X: (x,y) \in R \land (y,x) \in R \implies x
+  = y$.
++ A Relation $R$ is *transitive* if $\forall x,y,z \in X: (x,y) \in R \land (y,z) \in R \implies
+  (x,z) \in R$.
++ A Relation $R$ is an *equivalence relation* if it is *reflexive*, *symmetric* and *transitive*.
