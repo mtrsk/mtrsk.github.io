@@ -120,17 +120,6 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 
 #+RESULTS: export-notes
 
-** Partial Orders
-:PROPERTIES:
-:EXPORT_FILE_NAME: partial-orders
-:EXPORT_DATE: 2024-10-13
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug partial-orders
-:CUSTOM_ID: partial-orders
-:END:
-
-#+INCLUDE: "../notes/20241013114603-partial_orders.org"
-    
-
 ** Partial Order
 :PROPERTIES:
 :EXPORT_FILE_NAME: partial-order
@@ -900,3 +889,4 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 
 #+INCLUDE: "../notes/20211012215602-kubernetes.org"
     
+
