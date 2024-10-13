@@ -120,6 +120,83 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 
 #+RESULTS: export-notes
 
+** Partial Orders
+:PROPERTIES:
+:EXPORT_FILE_NAME: partial-orders
+:EXPORT_DATE: 2024-10-13
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug partial-orders
+:CUSTOM_ID: partial-orders
+:END:
+
+#+INCLUDE: "../notes/20241013114603-partial_orders.org"
+    
+
+** Partial Order
+:PROPERTIES:
+:EXPORT_FILE_NAME: partial-order
+:EXPORT_DATE: 2024-10-13
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug partial-order
+:CUSTOM_ID: partial-order
+:END:
+
+#+INCLUDE: "../notes/20241013114603-partial_order.org"
+    
+
+** Relation
+:PROPERTIES:
+:EXPORT_FILE_NAME: relation
+:EXPORT_DATE: 2024-10-13
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug relation
+:CUSTOM_ID: relation
+:END:
+
+#+INCLUDE: "../notes/20241013113437-relation.org"
+    
+
+** Supervisor
+:PROPERTIES:
+:EXPORT_FILE_NAME: supervisor
+:EXPORT_DATE: 2024-10-13
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug supervisor
+:CUSTOM_ID: supervisor
+:END:
+
+#+INCLUDE: "../notes/20241013103835-supervisor.org"
+    
+
+** Dependent Types
+:PROPERTIES:
+:EXPORT_FILE_NAME: dependent-types
+:EXPORT_DATE: 2024-10-11
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug dependent-types
+:CUSTOM_ID: dependent-types
+:END:
+
+#+INCLUDE: "../notes/20241011135759-dependent_types.org"
+    
+
+** Functional Programming
+:PROPERTIES:
+:EXPORT_FILE_NAME: functional-programming
+:EXPORT_DATE: 2024-10-11
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug functional-programming
+:CUSTOM_ID: functional-programming
+:END:
+
+#+INCLUDE: "../notes/20241011135148-functional_programming.org"
+    
+
+** Relational Algebra
+:PROPERTIES:
+:EXPORT_FILE_NAME: relational-algebra
+:EXPORT_DATE: 2024-10-10
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug relational-algebra
+:CUSTOM_ID: relational-algebra
+:END:
+
+#+INCLUDE: "../notes/20241010155009-relational_algebra.org"
+    
+
 ** Gen Server
 :PROPERTIES:
 :EXPORT_FILE_NAME: gen-server
