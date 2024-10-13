@@ -64,7 +64,16 @@ terminates the Erlang session. [cite:@armstrong2013 p.14]
   > f().
 #+END_SRC
 
-* Modifying the Development Environment
+** Getting Help
+
+#+begin_quote
+The Erlang shell has a number of built-in commands. You can see them all
+with the shell command ~help()~. [cite:@armstrong2013 p.173].
+#+end_quote
+
+* Compiling and running Erlang programs
+
+** Modifying the Environment
 
 You can find the value of the current load path by starting an Erlang shell
 and giving the command ~code:get_path()~. The two most common functions that we
@@ -80,6 +89,41 @@ use to manipulate the load path are as follows:
 Alternatively, you can start Erlang with a command like this:
 #+begin_src shell
 $ erl -pa Dir1 -pa Dir2 ... -pz DirK1 -pz DirK2
+#+end_src
+
+** Scripting
+Often we want to be able to execute an arbitrary Erlang function from the OS command
+line. The ~-eval~ argument is very handy for quick scripting.
+
+#+begin_src shell
+  erl \
+      -eval 'io:format("Memory: ~p~n", [erlang:memory(total)]).' \
+      -noshell -s init stop
+#+end_src
+
+*** Run As an Escript
+
+#+begin_src erlang
+  #!/usr/bin/env escript
+
+  main([A]) ->
+      I = list_to_integer(A),
+      F = fac(I),
+      io:format("factorial ~w = ~w~n", [I, F]).
+
+  fac(0) ->
+      1;
+  fac(N) ->
+      N * fac(N - 1).
+#+end_src
+
+* Debugging
+** Reading Crash Dumps
+If Erlang crashes, it leaves behind a file called ~erl_crash.dump~. To start the
+analyzer, give the following command:
+
+#+begin_src shell
+  crashdump_viewer:start()
 #+end_src
 
 #+print_bibliography:

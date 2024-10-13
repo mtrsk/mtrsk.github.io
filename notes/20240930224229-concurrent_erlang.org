@@ -6,6 +6,23 @@
 #+HUGO_TAGS: "Erlang"
 #+STARTUP: inlineimages
 
+#+BEGIN_QUOTE
+I’m sure you’ve met processes before, but only in the context of operating
+systems. In Erlang, processes belong to the programming language and not the
+operating system. This means that Erlang processes will have the same logical
+behavior on any operating system, so we can write portable concurrent code that
+can run on any operating system that supports Erlang.
+
+In Erlang:
++ Creating and destroying processes is very fast.
++ Sending messages between processes is very fast.
++ Processes behave the same way on all operating systems.
++ We can have very large numbers of processes.
++ Processes share no memory and are completely independent.
++ The only way for processes to interact is through message passing.
+[cite:@armstrong2013 p.181]
+#+END_QUOTE
+
 * Processes
 
 In [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]], creation of a parallel process is achieved by evaluating the ~spawn~
@@ -56,19 +73,24 @@ Pid = spawn(ModName, FuncName, [Arg1, Arg2, ..., ArgN]).
 [[file:../static/img/notes/erlang_send.png]]
 
 The syntax ~Pid ! Msg~ means "send the message ~Msg~ to the process ~Pid~", where ~Msg~
-is from any valid [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]] data type. For a ~Pid~ to process a message we need to
-pattern match:
+is from any valid [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]] data type. Also, ~Pid1 ! Pid2 ! ... ! Msg~ means send the
+message Msg to all the processes ~Pid1~, ~Pid2~, and so on. The ~receive ... end~
+construct is used for a process to read a message that has been sent:
 
 #+BEGIN_SRC erlang
 receive
-    {From, Message} ->
-        ...
+   Pattern1 [when Guard1] -> Expression1;
+   Pattern2 [when Guard2] -> Expression2;
+   ...
 end
 #+END_SRC
 
-+ Sending a message will never fail
-+ A message sent to non-existing processes are throw away
-+ Received messages are store in a process' mailbox
++ Sending a message will never fail.
++ A message sent to non-existing processes are throw away.
++ Received messages are store in a process' mailbox.
++ Mailboxes are scanned sequentially.
++ If a message fails to be pattern matched, it's saved in a queue for later
+  processing and the process waits for the next message.
 
   The erlang shell (~erl~) is itself a process, you can test its message-passing
   functionalities by using the ~self~ keyword:
@@ -80,7 +102,8 @@ end
     hello
   #+END_SRC
 
-  + Messages can be matched and selectivelly retrieved
+  + Messages can be matched and selectivelly retrieved.
+  + We can force an order (emulating a priority queue) by using multiple receives:
 
     #+NAME: erlang-seletive
     #+BEGIN_SRC dot :file ../static/img/notes/erlang_selective.png :cmdline -Kdot -Tpng :exports results
@@ -115,16 +138,13 @@ end
 
     this way the message ~{foo, ...}~ is received before the message ~{bar, ...}~.
 
-  + Messages are received when a message matches a clause
-  + Mailboxes are scanned sequentially
-
 ** Registered Processes
 | BIF                 | Description                                                                        |
 |---------------------+------------------------------------------------------------------------------------|
 | ~register(Name, Pid)~ | Associates the name ~Name~, an atom, with the process ~Pid~.                           |
 | ~registered/0~        | Returns a list of names that have been registered using ~register/2~.                |
 | ~whereis(Name)~       | Returns the pid registered under ~Name~, or ~undefined~ if the name is not registered. |
-
+| ~registered()~        | Return a list of all registered processes in the system.                           |
 
 + Sending messages to a non-existing registered process causes the calling
   process to terminate with a ~badarg~ error.
