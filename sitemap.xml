@@ -3,15 +3,45 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mtrsk.github.io/categories/</loc>
-    <lastmod>2024-10-13T00:00:00+00:00</lastmod>
+    <lastmod>2024-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mtrsk.github.io/categories/functional-programming/</loc>
-    <lastmod>2024-10-13T00:00:00+00:00</lastmod>
+    <loc>https://mtrsk.github.io/tags/graph-theory/</loc>
+    <lastmod>2024-10-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/</loc>
-    <lastmod>2024-10-13T00:00:00+00:00</lastmod>
+    <lastmod>2024-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/notes/2024/konig-s-lemma/</loc>
+    <lastmod>2024-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/categories/logic/</loc>
+    <lastmod>2024-10-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/categories/math/</loc>
+    <lastmod>2024-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/notes/2024/natural-deduction/</loc>
+    <lastmod>2024-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/categories/networking/</loc>
+    <lastmod>2024-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/tags/sequent-calculus/</loc>
+    <lastmod>2024-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/tags/</loc>
+    <lastmod>2024-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/notes/2024/tcp-ip/</loc>
+    <lastmod>2024-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/tags/tcp/ip/</loc>
+    <lastmod>2024-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/notes/2024/osi-model/</loc>
+    <lastmod>2024-10-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mtrsk.github.io/categories/functional-programming/</loc>
     <lastmod>2024-10-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/tags/otp/</loc>
@@ -27,9 +57,6 @@
     <lastmod>2024-10-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/notes/2024/supervisor/</loc>
-    <lastmod>2024-10-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mtrsk.github.io/tags/</loc>
     <lastmod>2024-10-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/notes/2024/dependent-types/</loc>
@@ -126,9 +153,6 @@
     <lastmod>2024-10-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/notes/2024/error-handling-in-erlang/</loc>
-    <lastmod>2024-10-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mtrsk.github.io/categories/networking/</loc>
     <lastmod>2024-10-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/notes/2024/postgres-server/</loc>
@@ -228,9 +252,6 @@
     <lastmod>2024-07-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/notes/2024/cap-theorem/</loc>
-    <lastmod>2024-07-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mtrsk.github.io/tags/classic-papers/</loc>
     <lastmod>2024-07-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mtrsk.github.io/notes/2024/designing-for-scalability-with-erlang/</loc>

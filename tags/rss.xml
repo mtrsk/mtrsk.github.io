@@ -6,8 +6,29 @@
     <description>Recent content in Tags on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mtrsk.github.io/tags/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Graph Theory</title>
+      <link>https://mtrsk.github.io/tags/graph-theory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/graph-theory/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sequent Calculus</title>
+      <link>https://mtrsk.github.io/tags/sequent-calculus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/sequent-calculus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TCP/IP</title>
+      <link>https://mtrsk.github.io/tags/tcp/ip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/tags/tcp/ip/</guid>
+      <description></description>
+    </item>
     <item>
       <title>OTP</title>
       <link>https://mtrsk.github.io/tags/otp/</link>
@@ -132,13 +153,6 @@
       <link>https://mtrsk.github.io/tags/idris/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/tags/idris/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Classic Papers</title>
-      <link>https://mtrsk.github.io/tags/classic-papers/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/tags/classic-papers/</guid>
       <description></description>
     </item>
     <item>

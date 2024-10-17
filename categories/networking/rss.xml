@@ -6,8 +6,22 @@
     <description>Recent content in Networking on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mtrsk.github.io/categories/networking/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tcp Ip</title>
+      <link>https://mtrsk.github.io/notes/2024/tcp-ip/</link>
+      <pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/tcp-ip/</guid>
+      <description>:ID: 3bdcfa3b-8fb6-4c4f-97d9-9abaf4aa4a8b&#xA;Unlike the Osi Model, but &amp;ldquo;Application&amp;rdquo;, &amp;ldquo;Presentation&amp;rdquo; and &amp;ldquo;Session&amp;rdquo; are folded in a single layer.&#xA;Transmission Control Protocol / Internet Protocol </description>
+    </item>
+    <item>
+      <title>Osi Model</title>
+      <link>https://mtrsk.github.io/notes/2024/osi-model/</link>
+      <pubDate>Tue, 15 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/osi-model/</guid>
+      <description>:ID: e1a39e7c-50a7-4ad8-84f0-dfb7a8864e8b&#xA;The Open Systems Interconnection (OSI) model is a reference tool for understanding data communications between any two networked systems. It divides the communications processes into seven layers. Each layer both performs specific functions to support the layers above it and offers services to the layers below it.&#xA;Physical Layer Data Link MAC Addressing Flow control Error control: Error detection, followed by correction and/or re-transmition. Line discipline Unit of measure: Frames Network IP Addressing Unit of measure: Packets Transport Responsible for providing and managing end-to-end transmission of messages between two end nodes.</description>
+    </item>
     <item>
       <title>Scsi</title>
       <link>https://mtrsk.github.io/notes/2024/scsi/</link>

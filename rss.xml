@@ -6,14 +6,42 @@
     <description>Recent content in homepage title on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mtrsk.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Konig S Lemma</title>
+      <link>https://mtrsk.github.io/notes/2024/konig-s-lemma/</link>
+      <pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/konig-s-lemma/</guid>
+      <description>:ID: c3826363-989c-49d9-905f-f1349f5528b7&#xA;Definition A tree that is finitely branching but infinite must have an infinite branch.</description>
+    </item>
+    <item>
+      <title>Natural Deduction</title>
+      <link>https://mtrsk.github.io/notes/2024/natural-deduction/</link>
+      <pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/natural-deduction/</guid>
+      <description>:ID: 1db8ac56-b188-4797-80ed-21ac950a77b9&#xA;In natural deduction, we have a collection of proof rules. They allow us to infer formulas from other formulas. By applying these rules in succession, we may infer a conclusion from a set of premises.&#xA;Suppose we have a set of formulas \(\phi_1, \phi_2, \phi_3, \ldots, \phi_n\), which we will call premises, and another formula, \(\psi\), which we will call a conclusion. By applying proof rules to the premises, we hope to get some more formulas, and by applying more proof rules to those, to eventually obtain the conclusion.</description>
+    </item>
+    <item>
+      <title>Tcp Ip</title>
+      <link>https://mtrsk.github.io/notes/2024/tcp-ip/</link>
+      <pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/tcp-ip/</guid>
+      <description>:ID: 3bdcfa3b-8fb6-4c4f-97d9-9abaf4aa4a8b&#xA;Unlike the Osi Model, but &amp;ldquo;Application&amp;rdquo;, &amp;ldquo;Presentation&amp;rdquo; and &amp;ldquo;Session&amp;rdquo; are folded in a single layer.&#xA;Transmission Control Protocol / Internet Protocol </description>
+    </item>
+    <item>
+      <title>Osi Model</title>
+      <link>https://mtrsk.github.io/notes/2024/osi-model/</link>
+      <pubDate>Tue, 15 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/osi-model/</guid>
+      <description>:ID: e1a39e7c-50a7-4ad8-84f0-dfb7a8864e8b&#xA;The Open Systems Interconnection (OSI) model is a reference tool for understanding data communications between any two networked systems. It divides the communications processes into seven layers. Each layer both performs specific functions to support the layers above it and offers services to the layers below it.&#xA;Physical Layer Data Link MAC Addressing Flow control Error control: Error detection, followed by correction and/or re-transmition. Line discipline Unit of measure: Frames Network IP Addressing Unit of measure: Packets Transport Responsible for providing and managing end-to-end transmission of messages between two end nodes.</description>
+    </item>
     <item>
       <title>Partial Order</title>
       <link>https://mtrsk.github.io/notes/2024/partial-order/</link>
       <pubDate>Sun, 13 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/partial-order/</guid>
-      <description>:ID: ce27d04b-aa7b-4fd5-98d3-30aa645f0d46&#xA;A Relation \(R\) is said to be a reflexive partial order if its reflexive, antisymmetric, and transitive. </description>
+      <description>:ID: a7be7168-8d15-4fe0-a82c-9fd9348b3b93&#xA;A Relation \(R\) is said to be a reflexive partial order if its reflexive, antisymmetric, and transitive. </description>
     </item>
     <item>
       <title>Relation</title>
@@ -377,7 +405,7 @@
       <link>https://mtrsk.github.io/notes/2023/monoid/</link>
       <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2023/monoid/</guid>
-      <description>:ID: d89285be-d7a9-46a1-8a10-e14e73b66935 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Math&amp;rdquo; &amp;ldquo;FP&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Algebra&amp;rdquo; &amp;ldquo;Haskell&amp;rdquo;&#xA;Definition A monoid is triple \(\left (\mathbb{M}, \cdot, 1 \right)\) such that:&#xA;\(\mathbb{M}\) is an non-empty set \(\cdot : \mathbb{M} \times \mathbb{M} \rightarrow \mathbb{M}\) is an associative mapping, i.e., \(\forall t_1, t_2, t_3 \in \mathbb{M}, (t_1 \cdot t_2) \cdot t_3 = t_1 \cdot (t_2 \cdot t_3)\). \(1 \in \mathbb{M}\) is the unit satisfying \(1 \cdot t = t = t \cdot 1, \forall t \in \mathbb{M}\).</description>
+      <description>:ID: d89285be-d7a9-46a1-8a10-e14e73b66935&#xA;Definition A monoid is triple \(\left (\mathbb{M}, \cdot, 1 \right)\) such that:&#xA;\(\mathbb{M}\) is an non-empty set \(\cdot : \mathbb{M} \times \mathbb{M} \rightarrow \mathbb{M}\) is an associative mapping, i.e., \(\forall t_1, t_2, t_3 \in \mathbb{M}, (t_1 \cdot t_2) \cdot t_3 = t_1 \cdot (t_2 \cdot t_3)\). \(1 \in \mathbb{M}\) is the unit satisfying \(1 \cdot t = t = t \cdot 1, \forall t \in \mathbb{M}\). </description>
     </item>
     <item>
       <title>Abelian Group</title>

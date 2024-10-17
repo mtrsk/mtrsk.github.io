@@ -6,14 +6,21 @@
     <description>Recent content in Math on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mtrsk.github.io/categories/math/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Konig S Lemma</title>
+      <link>https://mtrsk.github.io/notes/2024/konig-s-lemma/</link>
+      <pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/notes/2024/konig-s-lemma/</guid>
+      <description>:ID: c3826363-989c-49d9-905f-f1349f5528b7&#xA;Definition A tree that is finitely branching but infinite must have an infinite branch.</description>
+    </item>
     <item>
       <title>Partial Order</title>
       <link>https://mtrsk.github.io/notes/2024/partial-order/</link>
       <pubDate>Sun, 13 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/partial-order/</guid>
-      <description>:ID: ce27d04b-aa7b-4fd5-98d3-30aa645f0d46&#xA;A Relation \(R\) is said to be a reflexive partial order if its reflexive, antisymmetric, and transitive. </description>
+      <description>:ID: a7be7168-8d15-4fe0-a82c-9fd9348b3b93&#xA;A Relation \(R\) is said to be a reflexive partial order if its reflexive, antisymmetric, and transitive. </description>
     </item>
     <item>
       <title>Relation</title>
@@ -27,7 +34,7 @@
       <link>https://mtrsk.github.io/notes/2023/monoid/</link>
       <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2023/monoid/</guid>
-      <description>:ID: d89285be-d7a9-46a1-8a10-e14e73b66935 :EXPORT_HUGO_CATEGORIES: &amp;ldquo;Math&amp;rdquo; &amp;ldquo;FP&amp;rdquo; :EXPORT_HUGO_TAGS: &amp;ldquo;Algebra&amp;rdquo; &amp;ldquo;Haskell&amp;rdquo;&#xA;Definition A monoid is triple \(\left (\mathbb{M}, \cdot, 1 \right)\) such that:&#xA;\(\mathbb{M}\) is an non-empty set \(\cdot : \mathbb{M} \times \mathbb{M} \rightarrow \mathbb{M}\) is an associative mapping, i.e., \(\forall t_1, t_2, t_3 \in \mathbb{M}, (t_1 \cdot t_2) \cdot t_3 = t_1 \cdot (t_2 \cdot t_3)\). \(1 \in \mathbb{M}\) is the unit satisfying \(1 \cdot t = t = t \cdot 1, \forall t \in \mathbb{M}\).</description>
+      <description>:ID: d89285be-d7a9-46a1-8a10-e14e73b66935&#xA;Definition A monoid is triple \(\left (\mathbb{M}, \cdot, 1 \right)\) such that:&#xA;\(\mathbb{M}\) is an non-empty set \(\cdot : \mathbb{M} \times \mathbb{M} \rightarrow \mathbb{M}\) is an associative mapping, i.e., \(\forall t_1, t_2, t_3 \in \mathbb{M}, (t_1 \cdot t_2) \cdot t_3 = t_1 \cdot (t_2 \cdot t_3)\). \(1 \in \mathbb{M}\) is the unit satisfying \(1 \cdot t = t = t \cdot 1, \forall t \in \mathbb{M}\). </description>
     </item>
     <item>
       <title>Abelian Group</title>

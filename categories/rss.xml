@@ -6,13 +6,13 @@
     <description>Recent content in Categories on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mtrsk.github.io/categories/rss.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Functional Programming</title>
-      <link>https://mtrsk.github.io/categories/functional-programming/</link>
+      <title>Logic</title>
+      <link>https://mtrsk.github.io/categories/logic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/categories/functional-programming/</guid>
+      <guid>https://mtrsk.github.io/categories/logic/</guid>
       <description></description>
     </item>
     <item>
@@ -20,6 +20,20 @@
       <link>https://mtrsk.github.io/categories/math/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/categories/math/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Networking</title>
+      <link>https://mtrsk.github.io/categories/networking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/categories/networking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Functional Programming</title>
+      <link>https://mtrsk.github.io/categories/functional-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mtrsk.github.io/categories/functional-programming/</guid>
       <description></description>
     </item>
     <item>
@@ -55,13 +69,6 @@
       <link>https://mtrsk.github.io/categories/operating-systems/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/categories/operating-systems/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Networking</title>
-      <link>https://mtrsk.github.io/categories/networking/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/categories/networking/</guid>
       <description></description>
     </item>
     <item>
