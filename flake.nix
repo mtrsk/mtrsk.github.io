@@ -142,9 +142,9 @@
                     };
 
                     enterShell = ''
-                      echo "Starting environment..."
+                      export PROJECT_ROOT_DIR=$(pwd)
+                      echo "Starting environment at $PROJECT_ROOT_DIR..."
                       hugo version
-                      export CONTENT_DIR=$(pwd)/content-org"
                     '';
                   }
                 )

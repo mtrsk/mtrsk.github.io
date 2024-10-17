@@ -7,7 +7,7 @@ Hello! I'm *Marcos Benevides*, a developer from São Luís, MA - Brazil. You're
 going to find my posts, projects and tutorials here, and probably some random
 rambling about byzantine history.
 
-*** Interests
+** Interests
 
 Here's a non-exaustive list of my current interests:
 
@@ -23,7 +23,7 @@ Here's a non-exaustive list of my current interests:
 #+ATTR_HTML: :width 25% :height 25%
 [[../static/img/nixos.gif]]
 
-*** Contact me
+** Contact me
 
 You may also find me elsewhere in cyberspace, under the following aliases:
 
