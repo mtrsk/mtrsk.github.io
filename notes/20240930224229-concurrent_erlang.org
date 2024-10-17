@@ -23,6 +23,7 @@ In Erlang:
 [cite:@armstrong2013 p.181]
 #+END_QUOTE
 
+
 * Processes
 
 In [[id:de7d0e94-618f-4982-b3e5-8806d88cad5d][Erlang]], creation of a parallel process is achieved by evaluating the ~spawn~
@@ -182,5 +183,30 @@ end
       <expr02>
   end
 #+END_SRC
+
+** Skeleton of an Erlang Process
+
+#+NAME: erlang-process-skeleton
+#+BEGIN_SRC dot :file ../static/img/notes/erlang_process_skeleton.png :cmdline -Kdot -Tpng :exports results
+  digraph Process {
+    node [fontsize="10pt", style=filled];
+    
+    start [label="Start", fillcolor=red, shape=circle];
+    stop [label="Stop", fillcolor=red, shape=circle];
+    init [label="Initialize", xlabel="Mod:Func(Args)", fillcolor=yellow, shape=rectangle];
+    loop [label="Receive/Eval Loop", fillcolor=green, shape=rectangle]
+    terminate [label="Terminate", fillcolor=yellow, shape=rectangle];
+
+    start -> init [label="  Spawn(Mod, Func, Args)", fontsize="10pt", minlen=1];
+    init -> loop
+    loop -> loop
+    stop -> loop
+    loop -> terminate
+  }
+#+END_SRC
+
+#+RESULTS: erlang-process-skeleton
+[[file:../static/img/notes/erlang_process_skeleton.png]]
+
 
 #+print_bibliography: 

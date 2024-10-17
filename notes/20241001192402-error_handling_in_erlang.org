@@ -215,7 +215,7 @@ Monitors are similar to links but with several significant differences.
 
 + Monitors are unidirectional.
 
-A process ~Pid1~ can create a monitor for ~Pid2~ by calling the BIF
+A process ~Pid2~ can create a monitor for ~Pid1~ by calling the BIF
 ~erlang:monitor(process, Pid2)~. The function returns a reference ~Ref~.
 
 #+NAME: erlang-monitor
@@ -228,7 +228,7 @@ A process ~Pid1~ can create a monitor for ~Pid2~ by calling the BIF
       pid1 [label="Pid 1", fontsize="10pt", style=filled, fillcolor=grey];
       pid2 [label="Pid 2", fontsize="10pt", style=filled, fillcolor=green, shape=square];
 
-      pid1 -> pid2 [fontsize="10pt", minlen=2, style=dashed];
+      pid2 -> pid1 [label="erlang:monitor(process, Pid1)", fontsize="10pt", minlen=2, style=dashed];
   }
 #+END_SRC
 

@@ -1,0 +1,168 @@
+:PROPERTIES:
+:ID:       3bdcfa3b-8fb6-4c4f-97d9-9abaf4aa4a8b
+:END:
+#+title: TCP/IP
+#+HUGO_CATEGORIES: "Networking"
+#+HUGO_TAGS: "TCP/IP"
+
+Unlike the [[id:e1a39e7c-50a7-4ad8-84f0-dfb7a8864e8b][OSI Model]], but "Application", "Presentation" and "Session" are
+folded in a single layer.
+
+* Transmission Control Protocol / Internet Protocol
+
+#+NAME: tcp-ip-diagram
+#+BEGIN_SRC dot :file ../static/img/notes/tcp_ip_diagram.png :cmdline -Kdot -Tpng :exports results
+digraph TCP_IP_diagram {
+    nodesep=0
+    ranksep=.1
+    splines=false
+    
+    edge[style=dashed]
+    node[shape=box height=.6]
+    
+    // NODES ------------------------------------
+    
+    table_0 [margin=0 shape=none label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+    <TR><TD PORT="f0" HEIGHT="40" FIXEDSIZE="TRUE">user data</TD></TR>
+    </TABLE>>]
+    
+    inv_0 [shape=point style=invis]
+    
+    table_1 [margin=0 shape=none label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+    <TR>
+        <TD PORT="f0">Appl<BR/>header</TD>
+        <TD PORT="f1">user data</TD>
+    </TR>
+    </TABLE>>]
+    
+    inv_00 [shape=point style=invis]
+    
+    table_2 [margin=0 shape=none label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+    <TR>
+        <TD PORT="f0">TCP<BR/>header</TD>
+        <TD PORT="f1"> application data</TD>
+    </TR>
+    </TABLE>>]
+    
+    {
+        rank=same;
+        "TCP segment" [shape=plaintext]
+        inv_1 [shape=point height=.01]
+        inv_2 [shape=point height=.01]
+    }
+    
+    table_3 [margin=0 shape=none label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+    <TR>
+        <TD PORT="f0">IP<BR/>header</TD>
+        <TD>TCP<BR/>header</TD>
+        <TD PORT="f1"> application data</TD>
+    </TR>
+    </TABLE>>]
+    
+    {
+        rank=same;
+        "IP datagram" [shape=plaintext]
+        inv_3 [shape=point height=.01]
+        inv_4 [shape=point height=.01]
+    }
+    
+    table_4 [margin=0 shape=none label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+    <TR>
+        <TD PORT="f0">Ethernet<BR/>header</TD>
+        <TD>IP<BR/>header</TD>
+        <TD>TCP<BR/>header</TD>
+        <TD> application data</TD>
+        <TD PORT="f1">Ethernet<BR/>trailer</TD>
+    </TR>
+    <TR>
+        <TD SIDES="T">14</TD>
+        <TD SIDES="T">20</TD>
+        <TD SIDES="T">20</TD>
+        <TD SIDES="T"></TD>
+        <TD SIDES="T">4</TD>
+    </TR>
+    </TABLE>>]
+    
+    {
+        rank=same;
+        "Ethernet frame" [shape=plaintext]
+        inv_5 [shape=box height=.4 width=.01 label=""]
+        inv_6 [shape=box height=.4 width=.01 label=""]
+    }
+    
+    {
+        rank=same;
+        "46 to 1500 bytes" [shape=plaintext]
+        inv_7 [shape=box height=.4 width=.01 label=""]
+        inv_8 [shape=box height=.4 width=.01 label=""]
+    }
+    
+    table_5 [margin=0 shape=none label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+    <TR><TD BORDER="4" PORT="f0" SIDES="T">Ethernet</TD></TR>
+    </TABLE>>]
+    
+    morespace [style=invis shape=plain]
+    
+    // EDGES ------------------------------------
+    
+    table_0:f0:se -> table_1:f1:ne
+    table_0:f0:sw -> table_1:f1:nw
+    table_0 -> inv_0 [style=invis]
+    inv_0 -> table_1 [style=invis]
+    
+    table_1:f0:sw -> table_2:f0:ne
+    table_1:f1:se -> table_2:f1:ne
+    
+    table_1 -> inv_00 [style=invis]
+    inv_00 -> table_2 [style=invis]
+    
+    table_2 -> "TCP segment" [style=invis]
+    table_2:f0:sw -> inv_1 [arrowhead=none]
+    table_2:f1:se -> inv_2 [arrowhead=none]
+    
+    inv_1 -> table_3:f0:ne
+    inv_2 -> table_3:f1:ne
+    
+    "TCP segment" -> inv_1 [weight=0 style=solid]
+    "TCP segment" -> inv_2 [weight=0 style=solid]
+    
+    table_3 -> "IP datagram" [style=invis]
+    table_3:f0:sw -> inv_3 [arrowhead=none]
+    table_3:f1:se -> inv_4 [arrowhead=none]
+    
+    "IP datagram" -> inv_3 [weight=0 style=solid]
+    "IP datagram" -> inv_4 [weight=0 style=solid]
+    
+    inv_3 -> table_4:f0:ne [style=dashed]
+    inv_4 -> table_4:f1:nw
+    
+    table_4 -> "Ethernet frame" [style=invis]
+    table_4:f0:sw -> inv_5 [style=invis]
+    table_4:f1:se -> inv_6 [style=invis]
+    "Ethernet frame" -> inv_5 [weight=0 style=solid]
+    "Ethernet frame" -> inv_6 [weight=0 style=solid]
+
+    "Ethernet frame" -> "46 to 1500 bytes" [style=invis]
+    table_4:f0:se -> inv_7 [style=invis]
+    table_4:f1:sw -> inv_8 [style=invis]
+    "46 to 1500 bytes" -> inv_7 [weight=0 style=solid]
+    "46 to 1500 bytes" -> inv_8 [weight=0 style=solid]
+    
+    "46 to 1500 bytes" -> morespace [style=invis]
+    
+    {
+        edge [minlen=2]
+        "application" -> "TCP" -> "IP" -> "Ethernet\ndriver"
+    }
+    "Ethernet\ndriver" -> table_5:f0 [style=solid arrowhead=none]
+    
+    // OTHER RANKS ------------------------------------
+    
+    {rank=same;"application";inv_0}
+    {rank=same;table_4;table_5}
+}
+#+END_SRC
+
+#+RESULTS: tcp-ip-diagram
+[[file:../static/img/notes/tcp_ip_diagram.png]]
+
