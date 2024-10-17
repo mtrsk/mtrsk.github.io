@@ -1,0 +1,178 @@
+:PROPERTIES:
+:ID:       1db8ac56-b188-4797-80ed-21ac950a77b9
+:END:
+#+title: Natural Deduction
+#+HUGO_CATEGORIES: "Logic"
+#+HUGO_TAGS: "Sequent Calculus"
+
+#+begin_quote
+In natural deduction, we have a collection of proof rules. They allow us to
+infer formulas from other formulas. By applying these rules in succession, we
+may infer a conclusion from a set of premises.
+
+Suppose we have a set of formulas $\phi_1, \phi_2, \phi_3, \ldots, \phi_n$, which we will call
+premises, and another formula, $\psi$, which we will call a conclusion. By applying
+proof rules to the premises, we hope to get some more formulas, and by applying
+more proof rules to those, to eventually obtain the conclusion. This intention
+we denote by:
+
+$$\phi_1, \phi_2, \phi_3, \ldots, \phi_n \vdash \psi$$
+
+This expression is called a *sequent*; it is valid if a proof for it can be
+found.
+
+[cite:@huth2004logic p.5]
+#+end_quote
+
+* Rules for Natural Deduction
+
+** Conjunction
+
+\begin{prooftree}
+\AxiomC{$\phi$}
+\AxiomC{$\psi$}
+\RightLabel{$\land i$}
+\BinaryInfC{$\phi \land \psi$}
+\end{prooftree}
+
+\begin{prooftree}
+\AxiomC{$\phi \land \psi$}
+\RightLabel{$\land e_1$}
+\UnaryInfC{$\phi$}
+\end{prooftree}
+
+\begin{prooftree}
+\AxiomC{$\phi \land \psi$}
+\RightLabel{$\land e_2$}
+\UnaryInfC{$\psi$}
+\end{prooftree}
+
+** Double Negation
+
+\begin{prooftree}
+\AxiomC{$\phi$}
+\RightLabel{$\lnot \lnot i$}
+\UnaryInfC{$\lnot \lnot \phi$}
+\end{prooftree}
+
+\begin{prooftree}
+\AxiomC{$\lnot \lnot \phi$}
+\RightLabel{$\lnot \lnot e$}
+\UnaryInfC{$\phi$}
+\end{prooftree}
+
+** Implication
+
+\begin{prooftree}
+\AxiomC{$\phi$}
+\AxiomC{$\phi \to \psi$}
+\RightLabel{$\to_e$}
+\BinaryInfC{$\psi$}
+\end{prooftree}
+
+in order to prove $\phi \to \psi$, make a temporary assumption of $\phi$ and then prove $\psi$.
+
+\begin{prooftree}
+\alwaysNoLine
+\AxiomC{[$\phi$]}
+\UnaryInfC{$\vdots$}
+\UnaryInfC{$\psi$}
+\RightLabel{$\to_i$}
+\alwaysSingleLine
+\UnaryInfC{$\phi \to \psi$}
+\end{prooftree}
+
+#+begin_quote
+Showing $p \to q$ using the rule $\to_i$ rule is now called *type checking*, an
+important topic in the construction of compilers for typed programming
+languages. [cite:@huth2004logic p.12]
+#+end_quote
+
+** Disjunction
+
+\begin{prooftree}
+\AxiomC{$\phi$}
+\RightLabel{$\lor i_1$}
+\UnaryInfC{$\phi \lor \psi$}
+\end{prooftree}
+
+\begin{prooftree}
+\AxiomC{$\psi$}
+\RightLabel{$\lor i_2$}
+\UnaryInfC{$\phi \lor \psi$}
+\end{prooftree}
+
+To dissasemble a disjunction, we need to show that either $\phi \vdash \chi$ or $\psi
+\vdash \chi$:
+
+\begin{prooftree}
+\alwaysNoLine
+\AxiomC{$\phi \lor \psi$}
+\AxiomC{[$\phi$]}
+\UnaryInfC{$\vdots$}
+\UnaryInfC{$\chi$}
+\AxiomC{[$\psi$]}
+\UnaryInfC{$\vdots$}
+\UnaryInfC{$\chi$}
+\RightLabel{$\lor_e$}
+\alwaysSingleLine
+\TrinaryInfC{$\chi$}
+\end{prooftree}
+
+** Negation
+
+\begin{prooftree}
+\AxiomC{$\bot$}
+\RightLabel{$\bot_e$}
+\UnaryInfC{$\phi$}
+\end{prooftree}
+
+\begin{prooftree}
+\AxiomC{$\psi$}
+\AxiomC{$\lnot \psi$}
+\RightLabel{$\lnot_e$}
+\BinaryInfC{$\bot$}
+\end{prooftree}
+
+\begin{prooftree}
+\alwaysNoLine
+\AxiomC{[$\phi$]}
+\UnaryInfC{$\vdots$}
+\UnaryInfC{$\bot$}
+\RightLabel{$\lnot_i$}
+\alwaysSingleLine
+\UnaryInfC{$\lnot \phi$}
+\end{prooftree}
+
+** Useful Derived Rules
+*** Modus Tollens
+
+\begin{prooftree}
+\AxiomC{$\lnot \psi$}
+\AxiomC{$\phi \to \psi$}
+\RightLabel{MT}
+\BinaryInfC{$\lnot \phi$}
+\end{prooftree}
+
+*** Law of the Excluded Middle
+
+\begin{prooftree}
+\alwaysNoLine
+\AxiomC{}
+\RightLabel{LEM}
+\alwaysSingleLine
+\UnaryInfC{$\phi \lor \lnot \phi$}
+\end{prooftree}
+
+*** Proof by Contradiction
+\begin{prooftree}
+\alwaysNoLine
+\AxiomC{[$\lnot \phi$]}
+\UnaryInfC{$\vdots$}
+\UnaryInfC{$\bot$}
+\RightLabel{$PBC$}
+\alwaysSingleLine
+\UnaryInfC{$\phi$}
+\end{prooftree}
+
+#+print_bibliography: 

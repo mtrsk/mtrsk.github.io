@@ -1,7 +1,5 @@
 :PROPERTIES:
 :ID:       d89285be-d7a9-46a1-8a10-e14e73b66935
-:EXPORT_HUGO_CATEGORIES: "Math" "FP"
-:EXPORT_HUGO_TAGS: "Algebra" "Haskell"
 :END:
 #+title: Monoid
 #+HUGO_CATEGORIES: "Math" "Functional Programming"

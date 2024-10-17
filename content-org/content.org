@@ -120,6 +120,50 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 
 #+RESULTS: export-notes
 
+** Natural Deduction
+:PROPERTIES:
+:EXPORT_FILE_NAME: natural-deduction
+:EXPORT_DATE: 2024-10-16
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug natural-deduction
+:CUSTOM_ID: natural-deduction
+:END:
+
+#+INCLUDE: "../notes/20241016211301-natural_deduction.org"
+    
+
+** Tcp Ip
+:PROPERTIES:
+:EXPORT_FILE_NAME: tcp-ip
+:EXPORT_DATE: 2024-10-16
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug tcp-ip
+:CUSTOM_ID: tcp-ip
+:END:
+
+#+INCLUDE: "../notes/20241016180340-tcp_ip.org"
+    
+
+** Konig S Lemma
+:PROPERTIES:
+:EXPORT_FILE_NAME: konig-s-lemma
+:EXPORT_DATE: 2024-10-16
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug konig-s-lemma
+:CUSTOM_ID: konig-s-lemma
+:END:
+
+#+INCLUDE: "../notes/20241016121322-konig_s_lemma.org"
+    
+
+** Osi Model
+:PROPERTIES:
+:EXPORT_FILE_NAME: osi-model
+:EXPORT_DATE: 2024-10-15
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug osi-model
+:CUSTOM_ID: osi-model
+:END:
+
+#+INCLUDE: "../notes/20241015105852-osi_model.org"
+    
+
 ** Partial Order
 :PROPERTIES:
 :EXPORT_FILE_NAME: partial-order
@@ -128,7 +172,7 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 :CUSTOM_ID: partial-order
 :END:
 
-#+INCLUDE: "../notes/20241013114603-partial_order.org"
+#+INCLUDE: "../notes/20241013162211-partial_order.org"
     
 
 ** Relation
@@ -889,4 +933,3 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 
 #+INCLUDE: "../notes/20211012215602-kubernetes.org"
     
-

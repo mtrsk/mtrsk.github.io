@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:       e1a39e7c-50a7-4ad8-84f0-dfb7a8864e8b
+:END:
+#+title: OSI Model
+#+HUGO_CATEGORIES: "Networking"
+
+#+begin_quote
+The Open Systems Interconnection (OSI) model is a reference tool for
+understanding data communications between any two networked systems. It divides
+the communications processes into seven layers. Each layer both performs
+specific functions to support the layers above it and offers services to the
+layers below it.
+#+end_quote
+
+* Physical Layer
+* Data Link
++ MAC Addressing
++ Flow control
++ Error control: Error detection, followed by correction and/or re-transmition.
++ Line discipline
++ Unit of measure: Frames
+* Network
++ IP Addressing
++ Unit of measure: Packets
+* Transport
++ Responsible for providing and managing end-to-end transmission of messages
+  between two end nodes.
++ Maps transport and network addresses, port-based.
+
+** Protocols
++ TCP: Reliable transfer and guarantees error-free delivery of data in the
+  correct order.
++ UDP: "Unreliable" transport, no sequence messages.
+
+* Session
+* Presentation
+* Application

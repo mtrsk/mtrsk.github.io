@@ -13,6 +13,7 @@
 (setq org-roam-directory (concat (getenv "PWD") "/notes"))
 (setq org-roam-graph-export-directory (concat (getenv "PWD") "/content-org"))
 (setq org-blog-directory (concat (getenv "PWD") "/blog"))
+(setq org-element-use-cache nil)
 
 ;; https://jeffkreeftmeijer.com/org-unable-to-resolve-link/
 ;; (org-id-update-id-locations (directory-files-recursively org-roam-directory "\\.org$") )

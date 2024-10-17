@@ -34,7 +34,7 @@ graph:
 
 # Run Hugo server with drafts
 run: build
-	hugo server --buildDrafts --buildFuture
+	hugo server --buildDrafts --buildFuture --disableFastRender
 
 # Build for CI
 ci-build: clean
@@ -43,8 +43,8 @@ ci-build: clean
 ci-publish: ci-build
     nix develop .#ci --impure -c hugo
 
-ci-run: ci-build
-    nix develop .#ci --impure -c hugo server --buildDrafts --buildFuture
+ci-run:
+    nix develop .#ci --impure -c just run
 
 # Removes org backups
 remove-org:

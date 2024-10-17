@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       c3826363-989c-49d9-905f-f1349f5528b7
+:END:
+#+title: König's Lemma
+#+HUGO_CATEGORIES: "Math"
+#+HUGO_TAGS: "Graph Theory"
+
+* Definition
+A tree that is finitely branching but infinite must have an infinite branch.
