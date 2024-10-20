@@ -25,7 +25,9 @@
 
 ;; Configuration Variables:
 (setq
- content-dir (concat (getenv "PWD") "/content-org")
+ content-dir (concat project-root-dir "/content-org/")
+ blog-dir (concat project-root-dir "/blog/posts/")
+ notes-dir (concat project-root-dir "/notes/")
  ;; Don't ask for confirmation before evaluating a code block
  org-confirm-babel-evaluate nil
  org-id-locations-file ".orgids"
@@ -50,18 +52,38 @@
 
 ;; Functions
 
-(defun build/export-file (&optional org-files-root-dir)
-  "Exports a single Org files."
-  ((message (format "[build] Looking for files at %s" org-files-root-dir))
-   let (search-path (file-name-as-directory (expand-file-name org-files-root-dir)))
-   (message (format "[build] Setting Search Path at %s" search-path))
-   (dolist (org-file (directory-files-recursively search-path "\.org$"))
-     (with-current-buffer (find-file org-file)
-	   (message (format "[build] Exporting %s" org-file))
-	   (org-hugo-export-wim-to-md :all-subtrees nil nil nil)))
-   (message "Done!")))
+(defun publish (file)
+  (with-current-buffer (find-file-noselect file)
+    (let ((org-id-extra-files (find-lisp-find-files org-roam-directory "\.org$")))
+      (org-hugo-export-wim-to-md))))
+
+(defun get-org-files-in-directory (dir)
+  "Print and return a list of all .org files in DIR and its subdirectories."
+  (message "[build] Directory: %s" dir)
+  (dolist (org-file (directory-files-recursively dir "\.org$"))
+    (message (format "[build] Found: %s" org-file))
+    (publish org-file))
+  (message "Done!"))
+
+                                        ; (defun build/export-file (org-file)
+                                        ;   "Exports a single ORG-FILE as markdown."
+                                        ;   ((message (format "[build] Looking for files at %s" org-files-root-dir))
+                                        ;    let (search-path (file-name-as-directory (expand-file-name org-files-root-dir)))
+                                        ;    (message (format "[build] Setting Search Path at %s" search-path))
+                                        ;    (dolist (org-file (directory-files-recursively search-path "\.org$"))
+                                        ;      (with-current-buffer (find-file org-file)
+                                        ;        (message (format "[build] Exporting %s" org-file))
+                                        ;        (org-hugo-export-wim-to-md :all-subtrees nil nil nil)))
+                                        ;    (message "Done!")))
+
+(message (format "Setting NOTES-DIR as %s" notes-dir))
+;;(get-org-files-in-directory notes-dir)
+
+(message (format "Setting BLOG-DIR as %s" blog-dir))
+(get-org-files-in-directory blog-dir)
 
 (message (format "Setting CONTENT-DIR as %s" content-dir))
-(build/export-all content-dir)
+(get-org-files-in-directory content-dir)
+;;(build/export-file content-dir)
 
 ;;; publish.el ends here

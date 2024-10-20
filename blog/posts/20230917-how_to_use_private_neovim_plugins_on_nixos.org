@@ -1,3 +1,18 @@
+:PROPERTIES:
+:EXPORT_FILE_NAME: how-to-use-private-neovim-plugins-on-nixos
+:EXPORT_DATE: 2023-09-17
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug how-to-use-private-neovim-plugins-on-nixos
+:EXPORT_HUGO_SECTION: blog
+:CUSTOM_ID: how-to-use-private-neovim-plugins-on-nixos
+:END:
+
+#+TITLE: How to use private neovim plugins on NixOS
+#+bibliography: ../../content-org/refs.bib
+#+HUGO_BASE_DIR: ../../
+#+HUGO_PAIRED_SHORTCODES: alert image
+#+OPTIONS: broken-links:mark
+#+AUTHOR: Marcos Benevides
+
 Over time my config changed a lot since the early days, as of now I'm using a
 combination of [[https://nixos.wiki/wiki/Flakes][Flakes]] and [[https://github.com/nix-community/home-manager][home-manager]] to manage my workstations. I try not to overthink
 too much when it comes to Nix, my current Neovim setup is pretty simple, lua-based, yet,

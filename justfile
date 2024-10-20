@@ -17,8 +17,9 @@ default:
 
 # Generate the Markdown files
 build: clean
-    emacs $(pwd) --batch --load export.el
-    python fix-ref-links.py
+    #emacs $(pwd) --batch --load export.el
+    #python fix-ref-links.py
+    emacs $(pwd) --batch --load publish.el
 
 # Publish content
 public: build

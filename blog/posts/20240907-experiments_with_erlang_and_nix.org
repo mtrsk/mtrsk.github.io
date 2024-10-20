@@ -1,3 +1,18 @@
+:PROPERTIES:
+:EXPORT_FILE_NAME: experiments-with-erlang-and-nix
+:EXPORT_DATE: 2024-09-07
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug experiments-with-erlang-and-nix
+:EXPORT_HUGO_SECTION: blog
+:CUSTOM_ID: experiments-with-erlang-and-nix
+:END:
+
+#+TITLE: Experiments with Erlang and Nix
+#+bibliography: ../../content-org/refs.bib
+#+HUGO_BASE_DIR: ../../
+#+HUGO_PAIRED_SHORTCODES: alert image
+#+OPTIONS: broken-links:mark
+#+AUTHOR: Marcos Benevides
+
 Recently I've been collaborating with friends on [[https://github.com/Dr-Nekoma/lyceum][Lyceum]], an MMO game with an
 [[https://www.erlang.org/][Erlang]] backend and a [[https://ziglang.org/][Zig]] + [[https://www.raylib.com/][Raylib]] client (as if erlang wasn't a weird enough of
 a choice). Now, this is an unusual combination, but that's the whole reason [[https://github.com/Dr-Nekoma][our
@@ -136,7 +151,7 @@ Let's try building the ~Zig~ client:
 
 #+CAPTION: It just works
 #+NAME:   fig:lyceum-client
-[[../../static/img/some_experiments_with_nix_and_erlang/00_lyceum_client.png]]
+[[./some_experiments_with_erlang_and_nix/00_lyceum_client.png][It just works]]
 
 *** Running Postgres
 
@@ -155,7 +170,7 @@ check them [[https://devenv.sh/services/#supported-services][here]].
 
 #+CAPTION: It just works (x2)
 #+NAME:   fig:lyceum-client
-[[../../static/img/some_experiments_with_nix_and_erlang/01_postgres.png]]
+[[./some_experiments_erlang_and_nix/01_postgres.png][It just works (x2)]]
 
 *** Direnv
 

@@ -1,6 +1,21 @@
+:PROPERTIES:
+:EXPORT_FILE_NAME: you-have-10-seconds-to-nixify-your-dotnet-project
+:EXPORT_DATE: 2024-09-16
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug you-have-10-seconds-to-nixify-your-dotnet-project
+:EXPORT_HUGO_SECTION: blog
+:CUSTOM_ID: you-have-10-seconds-to-nixify-your-dotnet-project
+:END:
+
+#+TITLE: You have 10 seconds to Nixify your .Net Project
+#+bibliography: ../../content-org/refs.bib
+#+HUGO_BASE_DIR: ../../
+#+HUGO_PAIRED_SHORTCODES: alert image
+#+OPTIONS: broken-links:mark
+#+AUTHOR: Marcos Benevides
+
 #+CAPTION: Don "The Gun" Syme, now officially part of the "Nix Gang".
 #+NAME:   fig:gun-syme
-[[../../static/img/you_have_10_seconds_to_nixify_your_dotnet_project/00_don_gun.png]]
+[[./you_have_10_seconds_to_nixify_your_dotnet_project/00_don_gun.png][Don "The Gun" Syme]]
 
 While this is a click bait title (maybe I've also farmed some zoomer credits out
 the OC), I'm pretty sure that's how Don Syme feels when looks at a [[https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/results][Result]] type
@@ -78,7 +93,7 @@ usual .Net tooling:
 Here's a quick demo:
 
 #+NAME:   fig:demo
-[[../../static/img/you_have_10_seconds_to_nixify_your_dotnet_project/01_demo.gif]]
+[[./you_have_10_seconds_to_nixify_your_dotnet_project/01_demo.gif][Demo]]
 
 ** Build your project with Nix
 

@@ -1,3 +1,18 @@
+:PROPERTIES:
+:EXPORT_FILE_NAME: switching-to-nixos
+:EXPORT_DATE: 2018-08-07
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug switching-to-nixos
+:EXPORT_HUGO_SECTION: blog
+:CUSTOM_ID: switching-to-nixos
+:END:
+
+#+TITLE: Switching to NixOS
+#+bibliography: ../../content-org/refs.bib
+#+HUGO_BASE_DIR: ../../
+#+HUGO_PAIRED_SHORTCODES: alert image
+#+OPTIONS: broken-links:mark
+#+AUTHOR: Marcos Benevides
+
 After quite some time being a Debian user I've decided to become a full time
 meme distro user. At first I was following some of the manuals in an attempt to
 recreate my config in virtualbox. A day later this distro seemed too cool not to
