@@ -5,3 +5,9 @@
 #+HUGO_CATEGORIES: "Functional Programming"
 #+HUGO_TAGS: "OTP"
 
+#+begin_quote
+Supervisors are one of the most important features of [[id:6ed3a191-0128-453e-b0b6-37c48593a6f0][OTP]]. They monitor other
+processes and take action if anything goes wrong, restarting the failed process
+or possibly escalating the problem to a higher level. Layering supervisors into
+supervision trees allows you to create highly fault-tolerant systems. [cite:@logan2010erlang]
+#+end_quote

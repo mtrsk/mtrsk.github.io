@@ -1,3 +1,6 @@
+*Updated at <2024-11-02 Sat>: I've changed the way we package our erlang
+project with Nix, mostly for the better*.
+
 Recently I've been collaborating with friends on [[https://github.com/Dr-Nekoma/lyceum][Lyceum]], an MMO game with an
 [[https://www.erlang.org/][Erlang]] backend and a [[https://ziglang.org/][Zig]] + [[https://www.raylib.com/][Raylib]] client (as if erlang wasn't a weird enough of
 a choice). Now, this is an unusual combination, but that's the whole reason [[https://github.com/Dr-Nekoma][our
@@ -35,19 +38,8 @@ you. Here's a snippet of what it looks like:
 
 #+BEGIN_SRC nix
   # (...)
-  devShells = forAllSystems (
-    system:
+  devShells =
     let
-      pkgs = nixpkgs.legacyPackages.${system};
-
-      # Erlang shit
-      erlangLatest = pkgs.erlang_27;
-      erlangLibs = getErlangLibs erlangLatest;
-
-      # Zig shit
-      raylib = pkgs.raylib;
-      zigLatest = pkgs.zig;
-
       linuxPkgs = with pkgs; [
         inotify-tools
         xorg.libX11
@@ -64,8 +56,7 @@ you. Here's a snippet of what it looks like:
       ];
     in
     {
-      # (...) This will be shown in the next section
-
+      # (...)
       # `nix develop`
       default = devenv.lib.mkShell {
         inherit inputs pkgs;
@@ -76,11 +67,8 @@ you. Here's a snippet of what it looks like:
               packages =
                 with pkgs;
                 [
-                  erlang-ls
-                  erlfmt
                   just
-                  rebar3
-                  dbeaver-bin
+                  raylib
                 ]
                 ++ lib.optionals stdenv.isLinux (linuxPkgs)
                 ++ lib.optionals stdenv.isDarwin darwinPkgs;
@@ -100,6 +88,10 @@ you. Here's a snippet of what it looks like:
               scripts = {
                 build.exec = "just build";
                 server.exec = "just server";
+                client.exec = "just client";
+                db-up.exec = "just db-up";
+                db-down.exec = "just db-down";
+                db-reset.exec = "just db-reset";
               };
 
               enterShell = ''
@@ -123,8 +115,9 @@ you. Here's a snippet of what it looks like:
           )
         ];
       };
+    };
 
-     # (...)
+  # (...)
 #+END_SRC
 
 Let's try building the ~Zig~ client:
@@ -196,18 +189,19 @@ for Erlang and Zig, we should just make another one for when we need to run
 builds and test suites on CI.
 
 #+BEGIN_SRC nix
-    # `nix develop .#ci`
-    # reduce the number of packages to the bare minimum needed for CI
-    ci = pkgs.mkShell {
-      env = mkEnvVars pkgs erlangLatest erlangLibs raylib;
-      buildInputs = with pkgs; [
-        erlangLatest
-        heroku
-        just
-        rebar3
-        zigLatest
-      ];
-    };
+   # `nix develop .#ci`
+   # reduce the number of packages to the bare minimum needed for CI
+   ci = pkgs.mkShell {
+     env = mkEnvVars pkgs erlangLatest erlangLibs raylib;
+     buildInputs = with pkgs; [
+       erlangLatest
+       just
+       rebar3
+       rsync
+       zigLatest
+       raylib
+     ];
+   };
 #+END_SRC
 
 If you use Github Actions, now you can leverage both the [[https://github.com/cachix/install-nix-action][Install Nix]] and [[https://github.com/DeterminateSystems/magic-nix-cache][Magic
@@ -238,48 +232,19 @@ package this with the abstractions plain Nix already gives you:
   # nix build .#server
   server =
     let
-      deps = import ./rebar-deps.nix { inherit (pkgs) fetchHex fetchFromGitHub fetchgit; };
+      deps = import ./server/rebar-deps.nix { 
+        inherit (pkgs) fetchHex fetchFromGitHub fetchgit;
+        builder = pkgs.beamPackages.buildRebar3;
+      };
     in
-    pkgs.stdenv.mkDerivation {
-      name = "server";
-      version = "0.0.1";
-      src = pkgs.lib.cleanSource ./.;
-      buildInputs = with pkgs; [
-        erlangLatest
-        pkgs.stdenv.cc.cc.lib
-        rebar3
-        just
-        gnutar
-      ];
-      nativeBuildInputs = with pkgs; [
-        autoPatchelfHook
-        coreutils
-        gawk
-        gnugrep
-        libz
-        ncurses
-        openssl
-        systemdLibs
-      ];
-      buildPhase = ''
-        mkdir -p _checkouts
-        # https://github.com/NixOS/nix/issues/670#issuecomment-1211700127
-        export HOME=$(pwd)
-        ${toString (
-          pkgs.lib.mapAttrsToList (k: v: ''
-            cp -R --no-preserve=mode ${v} _checkouts/${k}
-          '') deps
-        )}
-        just release-nix
-      '';
-      installPhase = ''
-        mkdir -p $out
-        mkdir -p $out/database
-        # Add migrations to the output as well, otherwise the server
-        # breaks at runtime.
-        cp -r database/migrations $out/database
-        tar -xzf _build/prod/rel/*/*.tar.gz -C $out/
-      '';
+    pkgs.beamPackages.rebar3Relx {
+      pname = erl_app;
+      version = "0.1.0";
+      root = ./server;
+      src = pkgs.lib.cleanSource ./server;
+      releaseType = "release";
+      profile = "prod";
+      beamDeps = builtins.attrValues deps;
     };
 #+END_SRC
 
@@ -327,25 +292,42 @@ There is a treasure trove of examples in [[https://github.com/NixOS/nixpkgs/blob
 #+BEGIN_SRC nix
   # nix build .#dockerImage
   dockerImage = pkgs.dockerTools.buildLayeredImage {
-    name = "lyceum";
+    name = erl_app;
     tag = "latest";
     created = "now";
-    # This will copy the erlang release derivation from the
-    # previous step into to the image
-    contents = [ server pkgs.coreutils pkgs.gawk pkgs.gnugrep ];
+    # This will copy the compiled erlang release to the image
+    contents = [
+      server
+      pkgs.coreutils
+      pkgs.gawk
+      pkgs.gnugrep
+      pkgs.openssl
+    ];
     config = {
+      Volumes = {
+        "/opt/${erl_app}/etc" = {};
+        "/opt/${erl_app}/data" = {};
+        "/opt/${erl_app}/log" = {};
+      };
+      WorkingDir = "/opt/${erl_app}";
       Cmd = [
-        "${server}/bin/server"
+        "${server}/bin/${erl_app}"
         "foreground"
       ];
       Env = [
-        "ERL_DIST_PORT=8001"
+        "ERL_DIST_PORT=8080"
+        "ERL_AFLAGS=\"-kernel shell_history enabled\""
+        "NODE_NAME=${erl_app}"
       ];
       ExposedPorts = {
-        "8080/tcp" = { };
+        "4369/tcp" = {};
+        "4369/ucp" = {};
+        "8080/tcp" = {};
+        "8080/udp" = {};
       };
     };
   };
+
 #+END_SRC
 
 It doesn't really look like most Dockerfiles you see around the net. Notice that
@@ -397,7 +379,5 @@ There is still much to do, and it can be left for a part II later.
   [cite:@cesarini2016designing] to my readlist.
 - [ ] Properly build the client, it seems that [[https://github.com/nix-community/zon2nix][non2nix]] breaks with the [[https://github.com/nix-community/zon2nix/issues/6][format for
   zon files]], I'm not familiar with Zig toolig and ill take a look at this later
-- [ ] We are still unsure where to deploy, but I really want to move away from
-  Heroku and check what Nix has to offer to manage a fleet of VMs.
 
 #+print_bibliography: 
