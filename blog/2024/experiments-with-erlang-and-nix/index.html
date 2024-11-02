@@ -10,8 +10,8 @@
     <meta property="og:url" content="https://mtrsk.github.io/blog/2024/experiments-with-erlang-and-nix/">
   <meta property="og:site_name" content="Benevides&#39; Blog">
   <meta property="og:title" content="Experiments With Erlang And Nix">
-  <meta property="og:description" content="Recently I’ve been collaborating with friends on Lyceum, an MMO game with an Erlang backend and a Zig &#43; Raylib client (as if erlang wasn’t a weird enough of a choice). Now, this is an unusual combination, but that’s the whole reason our pesky group exists in the first place (if you want to know more check my friend’s Lemos post).
-There is also a couple of standards we try to follow when doing this project, all of the team works with microservices all day in their normal jobs, so whenever we want to do something we try follow some simple rules:">
+  <meta property="og:description" content="Updated at &lt;2024-11-02 Sat&gt;: I’ve changed the way we package our erlang project with Nix, mostly for the better.
+Recently I’ve been collaborating with friends on Lyceum, an MMO game with an Erlang backend and a Zig &#43; Raylib client (as if erlang wasn’t a weird enough of a choice). Now, this is an unusual combination, but that’s the whole reason our pesky group exists in the first place (if you want to know more check my friend’s Lemos post).">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
@@ -59,7 +59,9 @@ There is also a couple of standards we try to follow when doing this project, al
 
 
     </small>
-  </h2><p>Recently I&rsquo;ve been collaborating with friends on <a href="https://github.com/Dr-Nekoma/lyceum">Lyceum</a>, an MMO game with an
+  </h2><p><strong>Updated at <span class="timestamp-wrapper"><span class="timestamp">&lt;2024-11-02 Sat&gt;</span></span>: I&rsquo;ve changed the way we package our erlang
+project with Nix, mostly for the better</strong>.</p>
+<p>Recently I&rsquo;ve been collaborating with friends on <a href="https://github.com/Dr-Nekoma/lyceum">Lyceum</a>, an MMO game with an
 <a href="https://www.erlang.org/">Erlang</a> backend and a <a href="https://ziglang.org/">Zig</a> + <a href="https://www.raylib.com/">Raylib</a> client (as if erlang wasn&rsquo;t a weird enough of
 a choice). Now, this is an unusual combination, but that&rsquo;s the whole reason <a href="https://github.com/Dr-Nekoma">our
 pesky group</a> exists in the first place (if you want to know more check <a href="https://duing.dev/posts/beyondhackers/">my
@@ -88,19 +90,8 @@ expected to have any of the environment variables needed for this project to
 work, the development shell already does all of that boring stuff for
 you. Here&rsquo;s a snippet of what it looks like:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nix" data-lang="nix"><span class="line"><span class="cl">  <span class="c1"># (...)</span>
-</span></span><span class="line"><span class="cl">  <span class="n">devShells</span> <span class="err">=</span> <span class="n">forAllSystems</span> <span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">system</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="n">devShells</span> <span class="err">=</span>
 </span></span><span class="line"><span class="cl">    <span class="k">let</span>
-</span></span><span class="line"><span class="cl">      <span class="n">pkgs</span> <span class="o">=</span> <span class="n">nixpkgs</span><span class="o">.</span><span class="n">legacyPackages</span><span class="o">.</span><span class="si">${</span><span class="n">system</span><span class="si">}</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">      <span class="c1"># Erlang shit</span>
-</span></span><span class="line"><span class="cl">      <span class="n">erlangLatest</span> <span class="o">=</span> <span class="n">pkgs</span><span class="o">.</span><span class="n">erlang_27</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="n">erlangLibs</span> <span class="o">=</span> <span class="n">getErlangLibs</span> <span class="n">erlangLatest</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">      <span class="c1"># Zig shit</span>
-</span></span><span class="line"><span class="cl">      <span class="n">raylib</span> <span class="o">=</span> <span class="n">pkgs</span><span class="o">.</span><span class="n">raylib</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="n">zigLatest</span> <span class="o">=</span> <span class="n">pkgs</span><span class="o">.</span><span class="n">zig</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">      <span class="n">linuxPkgs</span> <span class="o">=</span> <span class="k">with</span> <span class="n">pkgs</span><span class="p">;</span> <span class="p">[</span>
 </span></span><span class="line"><span class="cl">        <span class="n">inotify-tools</span>
 </span></span><span class="line"><span class="cl">        <span class="n">xorg</span><span class="o">.</span><span class="n">libX11</span>
@@ -117,8 +108,7 @@ you. Here&rsquo;s a snippet of what it looks like:</p>
 </span></span><span class="line"><span class="cl">      <span class="p">];</span>
 </span></span><span class="line"><span class="cl">    <span class="k">in</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="c1"># (...) This will be shown in the next section</span>
-</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="c1"># (...)</span>
 </span></span><span class="line"><span class="cl">      <span class="c1"># `nix develop`</span>
 </span></span><span class="line"><span class="cl">      <span class="n">default</span> <span class="o">=</span> <span class="n">devenv</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">mkShell</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">inherit</span> <span class="n">inputs</span> <span class="n">pkgs</span><span class="p">;</span>
@@ -129,11 +119,8 @@ you. Here&rsquo;s a snippet of what it looks like:</p>
 </span></span><span class="line"><span class="cl">              <span class="n">packages</span> <span class="o">=</span>
 </span></span><span class="line"><span class="cl">                <span class="k">with</span> <span class="n">pkgs</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">                <span class="p">[</span>
-</span></span><span class="line"><span class="cl">                  <span class="n">erlang-ls</span>
-</span></span><span class="line"><span class="cl">                  <span class="n">erlfmt</span>
 </span></span><span class="line"><span class="cl">                  <span class="n">just</span>
-</span></span><span class="line"><span class="cl">                  <span class="n">rebar3</span>
-</span></span><span class="line"><span class="cl">                  <span class="n">dbeaver-bin</span>
+</span></span><span class="line"><span class="cl">                  <span class="n">raylib</span>
 </span></span><span class="line"><span class="cl">                <span class="p">]</span>
 </span></span><span class="line"><span class="cl">                <span class="o">++</span> <span class="n">lib</span><span class="o">.</span><span class="n">optionals</span> <span class="n">stdenv</span><span class="o">.</span><span class="n">isLinux</span> <span class="p">(</span><span class="n">linuxPkgs</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">                <span class="o">++</span> <span class="n">lib</span><span class="o">.</span><span class="n">optionals</span> <span class="n">stdenv</span><span class="o">.</span><span class="n">isDarwin</span> <span class="n">darwinPkgs</span><span class="p">;</span>
@@ -153,6 +140,10 @@ you. Here&rsquo;s a snippet of what it looks like:</p>
 </span></span><span class="line"><span class="cl">              <span class="n">scripts</span> <span class="o">=</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                <span class="n">build</span><span class="o">.</span><span class="n">exec</span> <span class="o">=</span> <span class="s2">&#34;just build&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">                <span class="n">server</span><span class="o">.</span><span class="n">exec</span> <span class="o">=</span> <span class="s2">&#34;just server&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">client</span><span class="o">.</span><span class="n">exec</span> <span class="o">=</span> <span class="s2">&#34;just client&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">db-up</span><span class="o">.</span><span class="n">exec</span> <span class="o">=</span> <span class="s2">&#34;just db-up&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">db-down</span><span class="o">.</span><span class="n">exec</span> <span class="o">=</span> <span class="s2">&#34;just db-down&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">db-reset</span><span class="o">.</span><span class="n">exec</span> <span class="o">=</span> <span class="s2">&#34;just db-reset&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">              <span class="p">};</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">              <span class="n">enterShell</span> <span class="o">=</span> <span class="s1">&#39;&#39;
@@ -176,8 +167,9 @@ you. Here&rsquo;s a snippet of what it looks like:</p>
 </span></span><span class="line"><span class="cl">          <span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">];</span>
 </span></span><span class="line"><span class="cl">      <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">     <span class="c1"># (...)</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># (...)</span>
 </span></span></code></pre></div><p>Let&rsquo;s try building the <code>Zig</code> client:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  $ just client-build
 </span></span><span class="line"><span class="cl">  $ just client
@@ -230,18 +222,19 @@ an environment.</p>
 <p>Since we are already went to the trouble of setting up a whole dev environment
 for Erlang and Zig, we should just make another one for when we need to run
 builds and test suites on CI.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nix" data-lang="nix"><span class="line"><span class="cl">    <span class="c1"># `nix develop .#ci`</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># reduce the number of packages to the bare minimum needed for CI</span>
-</span></span><span class="line"><span class="cl">    <span class="n">ci</span> <span class="err">=</span> <span class="n">pkgs</span><span class="o">.</span><span class="n">mkShell</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="n">env</span> <span class="o">=</span> <span class="n">mkEnvVars</span> <span class="n">pkgs</span> <span class="n">erlangLatest</span> <span class="n">erlangLibs</span> <span class="n">raylib</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="n">buildInputs</span> <span class="o">=</span> <span class="k">with</span> <span class="n">pkgs</span><span class="p">;</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">        <span class="n">erlangLatest</span>
-</span></span><span class="line"><span class="cl">        <span class="n">heroku</span>
-</span></span><span class="line"><span class="cl">        <span class="n">just</span>
-</span></span><span class="line"><span class="cl">        <span class="n">rebar3</span>
-</span></span><span class="line"><span class="cl">        <span class="n">zigLatest</span>
-</span></span><span class="line"><span class="cl">      <span class="p">];</span>
-</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nix" data-lang="nix"><span class="line"><span class="cl">   <span class="c1"># `nix develop .#ci`</span>
+</span></span><span class="line"><span class="cl">   <span class="c1"># reduce the number of packages to the bare minimum needed for CI</span>
+</span></span><span class="line"><span class="cl">   <span class="n">ci</span> <span class="err">=</span> <span class="n">pkgs</span><span class="o">.</span><span class="n">mkShell</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="n">env</span> <span class="o">=</span> <span class="n">mkEnvVars</span> <span class="n">pkgs</span> <span class="n">erlangLatest</span> <span class="n">erlangLibs</span> <span class="n">raylib</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">     <span class="n">buildInputs</span> <span class="o">=</span> <span class="k">with</span> <span class="n">pkgs</span><span class="p">;</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">       <span class="n">erlangLatest</span>
+</span></span><span class="line"><span class="cl">       <span class="n">just</span>
+</span></span><span class="line"><span class="cl">       <span class="n">rebar3</span>
+</span></span><span class="line"><span class="cl">       <span class="n">rsync</span>
+</span></span><span class="line"><span class="cl">       <span class="n">zigLatest</span>
+</span></span><span class="line"><span class="cl">       <span class="n">raylib</span>
+</span></span><span class="line"><span class="cl">     <span class="p">];</span>
+</span></span><span class="line"><span class="cl">   <span class="p">};</span>
 </span></span></code></pre></div><p>If you use Github Actions, now you can leverage both the <a href="https://github.com/cachix/install-nix-action">Install Nix</a> and <a href="https://github.com/DeterminateSystems/magic-nix-cache">Magic
 Nix Cache</a> actions.</p>
 <h3 id="the-full-devshell">The full devshell</h3>
@@ -262,48 +255,19 @@ package this with the abstractions plain Nix already gives you:</p>
 </span></span><span class="line"><span class="cl">  <span class="c1"># nix build .#server</span>
 </span></span><span class="line"><span class="cl">  <span class="n">server</span> <span class="err">=</span>
 </span></span><span class="line"><span class="cl">    <span class="k">let</span>
-</span></span><span class="line"><span class="cl">      <span class="n">deps</span> <span class="o">=</span> <span class="kn">import</span> <span class="sr">./rebar-deps.nix</span> <span class="p">{</span> <span class="k">inherit</span> <span class="p">(</span><span class="n">pkgs</span><span class="p">)</span> <span class="n">fetchHex</span> <span class="n">fetchFromGitHub</span> <span class="n">fetchgit</span><span class="p">;</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">      <span class="n">deps</span> <span class="o">=</span> <span class="kn">import</span> <span class="sr">./server/rebar-deps.nix</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">inherit</span> <span class="p">(</span><span class="n">pkgs</span><span class="p">)</span> <span class="n">fetchHex</span> <span class="n">fetchFromGitHub</span> <span class="n">fetchgit</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">builder</span> <span class="o">=</span> <span class="n">pkgs</span><span class="o">.</span><span class="n">beamPackages</span><span class="o">.</span><span class="n">buildRebar3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">};</span>
 </span></span><span class="line"><span class="cl">    <span class="k">in</span>
-</span></span><span class="line"><span class="cl">    <span class="n">pkgs</span><span class="o">.</span><span class="n">stdenv</span><span class="o">.</span><span class="n">mkDerivation</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;server&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="n">version</span> <span class="o">=</span> <span class="s2">&#34;0.0.1&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="n">src</span> <span class="o">=</span> <span class="n">pkgs</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">cleanSource</span> <span class="sr">./.</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="n">buildInputs</span> <span class="o">=</span> <span class="k">with</span> <span class="n">pkgs</span><span class="p">;</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">        <span class="n">erlangLatest</span>
-</span></span><span class="line"><span class="cl">        <span class="n">pkgs</span><span class="o">.</span><span class="n">stdenv</span><span class="o">.</span><span class="n">cc</span><span class="o">.</span><span class="n">cc</span><span class="o">.</span><span class="n">lib</span>
-</span></span><span class="line"><span class="cl">        <span class="n">rebar3</span>
-</span></span><span class="line"><span class="cl">        <span class="n">just</span>
-</span></span><span class="line"><span class="cl">        <span class="n">gnutar</span>
-</span></span><span class="line"><span class="cl">      <span class="p">];</span>
-</span></span><span class="line"><span class="cl">      <span class="n">nativeBuildInputs</span> <span class="o">=</span> <span class="k">with</span> <span class="n">pkgs</span><span class="p">;</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">        <span class="n">autoPatchelfHook</span>
-</span></span><span class="line"><span class="cl">        <span class="n">coreutils</span>
-</span></span><span class="line"><span class="cl">        <span class="n">gawk</span>
-</span></span><span class="line"><span class="cl">        <span class="n">gnugrep</span>
-</span></span><span class="line"><span class="cl">        <span class="n">libz</span>
-</span></span><span class="line"><span class="cl">        <span class="n">ncurses</span>
-</span></span><span class="line"><span class="cl">        <span class="n">openssl</span>
-</span></span><span class="line"><span class="cl">        <span class="n">systemdLibs</span>
-</span></span><span class="line"><span class="cl">      <span class="p">];</span>
-</span></span><span class="line"><span class="cl">      <span class="n">buildPhase</span> <span class="o">=</span> <span class="s1">&#39;&#39;
-</span></span></span><span class="line"><span class="cl"><span class="s1">        mkdir -p _checkouts
-</span></span></span><span class="line"><span class="cl"><span class="s1">        # https://github.com/NixOS/nix/issues/670#issuecomment-1211700127
-</span></span></span><span class="line"><span class="cl"><span class="s1">        export HOME=$(pwd)
-</span></span></span><span class="line"><span class="cl"><span class="s1">        </span><span class="si">${</span><span class="nb">toString</span> <span class="p">(</span>
-</span></span><span class="line"><span class="cl">          <span class="n">pkgs</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">mapAttrsToList</span> <span class="p">(</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span><span class="p">:</span> <span class="s1">&#39;&#39;
-</span></span></span><span class="line"><span class="cl"><span class="s1">            cp -R --no-preserve=mode </span><span class="si">${</span><span class="n">v</span><span class="si">}</span><span class="s1"> _checkouts/</span><span class="si">${</span><span class="n">k</span><span class="si">}</span><span class="s1">
-</span></span></span><span class="line"><span class="cl"><span class="s1">          &#39;&#39;</span><span class="p">)</span> <span class="n">deps</span>
-</span></span><span class="line"><span class="cl">        <span class="p">)</span><span class="si">}</span><span class="s1">
-</span></span></span><span class="line"><span class="cl"><span class="s1">        just release-nix
-</span></span></span><span class="line"><span class="cl"><span class="s1">      &#39;&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="n">installPhase</span> <span class="o">=</span> <span class="s1">&#39;&#39;
-</span></span></span><span class="line"><span class="cl"><span class="s1">        mkdir -p $out
-</span></span></span><span class="line"><span class="cl"><span class="s1">        mkdir -p $out/database
-</span></span></span><span class="line"><span class="cl"><span class="s1">        # Add migrations to the output as well, otherwise the server
-</span></span></span><span class="line"><span class="cl"><span class="s1">        # breaks at runtime.
-</span></span></span><span class="line"><span class="cl"><span class="s1">        cp -r database/migrations $out/database
-</span></span></span><span class="line"><span class="cl"><span class="s1">        tar -xzf _build/prod/rel/*/*.tar.gz -C $out/
-</span></span></span><span class="line"><span class="cl"><span class="s1">      &#39;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pkgs</span><span class="o">.</span><span class="n">beamPackages</span><span class="o">.</span><span class="n">rebar3Relx</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">pname</span> <span class="o">=</span> <span class="n">erl_app</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">version</span> <span class="o">=</span> <span class="s2">&#34;0.1.0&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">root</span> <span class="o">=</span> <span class="sr">./server</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">src</span> <span class="o">=</span> <span class="n">pkgs</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">cleanSource</span> <span class="sr">./server</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">releaseType</span> <span class="o">=</span> <span class="s2">&#34;release&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">profile</span> <span class="o">=</span> <span class="s2">&#34;prod&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">beamDeps</span> <span class="o">=</span> <span class="nb">builtins</span><span class="o">.</span><span class="n">attrValues</span> <span class="n">deps</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">};</span>
 </span></span></code></pre></div><p>This is a derivation, a meta-package, a recipe containing every step and every
 dependecy I need to satisfy and properly build our server. Now, as for the
@@ -338,22 +302,38 @@ integration:</p>
 <strong><strong>simplest</strong></strong> one. This what a container for the backend looks like in Nix:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nix" data-lang="nix"><span class="line"><span class="cl">  <span class="c1"># nix build .#dockerImage</span>
 </span></span><span class="line"><span class="cl">  <span class="n">dockerImage</span> <span class="err">=</span> <span class="n">pkgs</span><span class="o">.</span><span class="n">dockerTools</span><span class="o">.</span><span class="n">buildLayeredImage</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;lyceum&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">name</span> <span class="o">=</span> <span class="n">erl_app</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">tag</span> <span class="o">=</span> <span class="s2">&#34;latest&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">created</span> <span class="o">=</span> <span class="s2">&#34;now&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># This will copy the erlang release derivation from the</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># previous step into to the image</span>
-</span></span><span class="line"><span class="cl">    <span class="n">contents</span> <span class="o">=</span> <span class="p">[</span> <span class="n">server</span> <span class="n">pkgs</span><span class="o">.</span><span class="n">coreutils</span> <span class="n">pkgs</span><span class="o">.</span><span class="n">gawk</span> <span class="n">pkgs</span><span class="o">.</span><span class="n">gnugrep</span> <span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># This will copy the compiled erlang release to the image</span>
+</span></span><span class="line"><span class="cl">    <span class="n">contents</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="n">server</span>
+</span></span><span class="line"><span class="cl">      <span class="n">pkgs</span><span class="o">.</span><span class="n">coreutils</span>
+</span></span><span class="line"><span class="cl">      <span class="n">pkgs</span><span class="o">.</span><span class="n">gawk</span>
+</span></span><span class="line"><span class="cl">      <span class="n">pkgs</span><span class="o">.</span><span class="n">gnugrep</span>
+</span></span><span class="line"><span class="cl">      <span class="n">pkgs</span><span class="o">.</span><span class="n">openssl</span>
+</span></span><span class="line"><span class="cl">    <span class="p">];</span>
 </span></span><span class="line"><span class="cl">    <span class="n">config</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">Volumes</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;/opt/</span><span class="si">${</span><span class="n">erl_app</span><span class="si">}</span><span class="s2">/etc&#34;</span> <span class="o">=</span> <span class="p">{};</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;/opt/</span><span class="si">${</span><span class="n">erl_app</span><span class="si">}</span><span class="s2">/data&#34;</span> <span class="o">=</span> <span class="p">{};</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;/opt/</span><span class="si">${</span><span class="n">erl_app</span><span class="si">}</span><span class="s2">/log&#34;</span> <span class="o">=</span> <span class="p">{};</span>
+</span></span><span class="line"><span class="cl">      <span class="p">};</span>
+</span></span><span class="line"><span class="cl">      <span class="n">WorkingDir</span> <span class="o">=</span> <span class="s2">&#34;/opt/</span><span class="si">${</span><span class="n">erl_app</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">      <span class="n">Cmd</span> <span class="o">=</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;</span><span class="si">${</span><span class="n">server</span><span class="si">}</span><span class="s2">/bin/server&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;</span><span class="si">${</span><span class="n">server</span><span class="si">}</span><span class="s2">/bin/</span><span class="si">${</span><span class="n">erl_app</span><span class="si">}</span><span class="s2">&#34;</span>
 </span></span><span class="line"><span class="cl">        <span class="s2">&#34;foreground&#34;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">];</span>
 </span></span><span class="line"><span class="cl">      <span class="n">Env</span> <span class="o">=</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;ERL_DIST_PORT=8001&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;ERL_DIST_PORT=8080&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;ERL_AFLAGS=</span><span class="se">\&#34;</span><span class="s2">-kernel shell_history enabled</span><span class="se">\&#34;</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;NODE_NAME=</span><span class="si">${</span><span class="n">erl_app</span><span class="si">}</span><span class="s2">&#34;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">];</span>
 </span></span><span class="line"><span class="cl">      <span class="n">ExposedPorts</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;8080/tcp&#34;</span> <span class="o">=</span> <span class="p">{</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;4369/tcp&#34;</span> <span class="o">=</span> <span class="p">{};</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;4369/ucp&#34;</span> <span class="o">=</span> <span class="p">{};</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;8080/tcp&#34;</span> <span class="o">=</span> <span class="p">{};</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;8080/udp&#34;</span> <span class="o">=</span> <span class="p">{};</span>
 </span></span><span class="line"><span class="cl">      <span class="p">};</span>
 </span></span><span class="line"><span class="cl">    <span class="p">};</span>
 </span></span><span class="line"><span class="cl">  <span class="p">};</span>
@@ -398,8 +378,6 @@ it), it makes my life dealing with Unix systems less painfull.</p>
 (<a href="#citeproc_bib_item_1">Cesarini and Vinoski 2016</a>) to my readlist.</li>
 <li><input disabled="" type="checkbox"> Properly build the client, it seems that <a href="https://github.com/nix-community/zon2nix">non2nix</a> breaks with the <a href="https://github.com/nix-community/zon2nix/issues/6">format for
 zon files</a>, I&rsquo;m not familiar with Zig toolig and ill take a look at this later</li>
-<li><input disabled="" type="checkbox"> We are still unsure where to deploy, but I really want to move away from
-Heroku and check what Nix has to offer to manage a fleet of VMs.</li>
 </ul>
 <h2 id="references">References</h2>
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">

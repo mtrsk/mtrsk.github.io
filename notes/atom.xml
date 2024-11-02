@@ -5,7 +5,7 @@
   
     <link href="https://mtrsk.github.io/notes/atom.xml" rel="self" type="application/atom+xml" />
   
-  <updated>2024-10-17T02:16:53Z</updated>
+  <updated>2024-11-02T23:26:56Z</updated>
   <author>
     
     
@@ -331,8 +331,15 @@ over any subset of \(X \times X\) is called a &amp;ldquo;Relation on \(X\)&amp;r
     <id>https://mtrsk.github.io/notes/2024/supervisor/</id>
     <published>2024-10-13T00:00:00Z</published>
     <updated>2024-10-13T00:00:00Z</updated>
-    <summary>:ID: 2daf1307-afb4-49e4-98cb-66ac7eb27cf0</summary>
+    <summary>:ID: 2daf1307-afb4-49e4-98cb-66ac7eb27cf0
+Supervisors are one of the most important features of Otp. They monitor other processes and take action if anything goes wrong, restarting the failed process or possibly escalating the problem to a higher level. Layering supervisors into supervision trees allows you to create highly fault-tolerant systems. (Logan, Merritt, and Carlsson 2010)</summary>
     <content type="html">&lt;p&gt;:ID:       2daf1307-afb4-49e4-98cb-66ac7eb27cf0&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Supervisors are one of the most important features of &lt;a href=&#34;/notes/2024/otp/&#34;&gt;Otp&lt;/a&gt;. They monitor other
+processes and take action if anything goes wrong, restarting the failed process
+or possibly escalating the problem to a higher level. Layering supervisors into
+supervision trees allows you to create highly fault-tolerant systems. (Logan, Merritt, and Carlsson 2010)&lt;/p&gt;
+&lt;/blockquote&gt;
 </content>
     
     <category term="OTP"/>
@@ -433,6 +440,15 @@ process if this one needs to be upgraded in place. (&lt;a href=&#34;#citeproc_bi
 &lt;p&gt;&lt;code&gt;gen_server&lt;/code&gt; is a generic server process that implements a standard set of
 interface functions and functionality for tracing and error reporting, it also
 fits an &lt;a href=&#34;/notes/2024/otp/&#34;&gt;Otp&lt;/a&gt; supervision tree.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;gen_server&lt;/code&gt; behaviour interface contains six functions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;init/1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;handle_call/3&lt;/code&gt;: Sends a synchronous message to a &lt;code&gt;gen_server&lt;/code&gt; process and waits for a reply.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;handle_cast/2&lt;/code&gt;: Sends an asynchronous message to a &lt;code&gt;gen_server&lt;/code&gt; process.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;handle_info/2&lt;/code&gt;: Handles messages sent to a &lt;code&gt;gen_server&lt;/code&gt; container that were not sent using one of the call or cast functions.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;terminate/2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;code_change/3&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
   &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Laurent, Simon St. 2017. &lt;i&gt;Introducing Erlang: Getting Started in Functional Programming&lt;/i&gt;. O’Reilly Media, Inc.&lt;/div&gt;

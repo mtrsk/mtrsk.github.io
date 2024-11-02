@@ -20,7 +20,7 @@
       <link>https://mtrsk.github.io/blog/2024/experiments-with-erlang-and-nix/</link>
       <pubDate>Sat, 07 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/blog/2024/experiments-with-erlang-and-nix/</guid>
-      <description>Recently I&amp;rsquo;ve been collaborating with friends on Lyceum, an MMO game with an Erlang backend and a Zig + Raylib client (as if erlang wasn&amp;rsquo;t a weird enough of a choice). Now, this is an unusual combination, but that&amp;rsquo;s the whole reason our pesky group exists in the first place (if you want to know more check my friend&amp;rsquo;s Lemos post).&#xA;There is also a couple of standards we try to follow when doing this project, all of the team works with microservices all day in their normal jobs, so whenever we want to do something we try follow some simple rules:</description>
+      <description>Updated at &amp;lt;2024-11-02 Sat&amp;gt;: I&amp;rsquo;ve changed the way we package our erlang project with Nix, mostly for the better.&#xA;Recently I&amp;rsquo;ve been collaborating with friends on Lyceum, an MMO game with an Erlang backend and a Zig + Raylib client (as if erlang wasn&amp;rsquo;t a weird enough of a choice). Now, this is an unusual combination, but that&amp;rsquo;s the whole reason our pesky group exists in the first place (if you want to know more check my friend&amp;rsquo;s Lemos post).</description>
     </item>
     <item>
       <title>How To Use Private Neovim Plugins On Nixos</title>

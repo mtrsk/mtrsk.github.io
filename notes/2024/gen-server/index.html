@@ -73,6 +73,15 @@ process if this one needs to be upgraded in place. (<a href="#citeproc_bib_item_
 <p><code>gen_server</code> is a generic server process that implements a standard set of
 interface functions and functionality for tracing and error reporting, it also
 fits an <a href="/notes/2024/otp/">Otp</a> supervision tree.</p>
+<p>The <code>gen_server</code> behaviour interface contains six functions:</p>
+<ul>
+<li><code>init/1</code></li>
+<li><code>handle_call/3</code>: Sends a synchronous message to a <code>gen_server</code> process and waits for a reply.</li>
+<li><code>handle_cast/2</code>: Sends an asynchronous message to a <code>gen_server</code> process.</li>
+<li><code>handle_info/2</code>: Handles messages sent to a <code>gen_server</code> container that were not sent using one of the call or cast functions.</li>
+<li><code>terminate/2</code></li>
+<li><code>code_change/3</code></li>
+</ul>
 <h2 id="references">References</h2>
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Laurent, Simon St. 2017. <i>Introducing Erlang: Getting Started in Functional Programming</i>. O’Reilly Media, Inc.</div>

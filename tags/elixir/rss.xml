@@ -34,7 +34,7 @@
       <link>https://mtrsk.github.io/notes/2024/otp/</link>
       <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mtrsk.github.io/notes/2024/otp/</guid>
-      <description>:ID: 6ed3a191-0128-453e-b0b6-37c48593a6f0 :ROAM_ALIAS: &amp;ldquo;Open Telecom Platform&amp;rdquo;&#xA;Otp is a domain-independent set of frameworks, principles, and patterns that guide and support the structure, design, implementation, and deployment of Erlang systems. Using OTP in your projects will help you avoid accidental complexity: things that are difficult because you picked inadequate tools. (Cesarini and Vinoski 2016, 20)&#xA;Behaviors Gen Server Supervisor gen_statem: State Machines gen_fsm: Finite State Machine gen_event References Cesarini, Francesco, and Steve Vinoski.</description>
+      <description>:ID: 6ed3a191-0128-453e-b0b6-37c48593a6f0 :ROAM_ALIAS: &amp;ldquo;Open Telecom Platform&amp;rdquo;&#xA;Otp is a domain-independent set of frameworks, principles, and patterns that guide and support the structure, design, implementation, and deployment of Erlang systems. Using OTP in your projects will help you avoid accidental complexity: things that are difficult because you picked inadequate tools. (Cesarini and Vinoski 2016, 20)&#xA;Behaviors Behaviours are a way of formalizing common patterns in process-oriented programming. For example, the concept of a server is general and includes a large portion of all processes you’ll ever need to write.</description>
     </item>
   </channel>
 </rss>
