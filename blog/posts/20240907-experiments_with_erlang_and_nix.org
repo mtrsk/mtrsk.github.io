@@ -1,7 +1,7 @@
 *Updated at <2024-11-02 Sat>: I've changed the way we package our erlang
 project with Nix, mostly for the better*.
 
--Recently I've been collaborating with friends on [[https://github.com/Dr-Nekoma/lyceum][Lyceum]], an MMO game with an
+Recently I've been collaborating with friends on [[https://github.com/Dr-Nekoma/lyceum][Lyceum]], an MMO game with an
 [[https://www.erlang.org/][Erlang]] backend and a [[https://ziglang.org/][Zig]] + [[https://www.raylib.com/][Raylib]] client (as if erlang wasn't a weird enough of
 a choice). Now, this is an unusual combination, but that's the whole reason [[https://github.com/Dr-Nekoma][our
 pesky group]] exists in the first place (if you want to know more check [[https://duing.dev/posts/beyondhackers/][my
