@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Benevides&#39; Blog</title>
-  <link href="https://mtrsk.github.io/blog/"/>
+  <link href="https://schonfinkel.github.io/blog/"/>
   
-    <link href="https://mtrsk.github.io/blog/atom.xml" rel="self" type="application/atom+xml" />
+    <link href="https://schonfinkel.github.io/blog/atom.xml" rel="self" type="application/atom+xml" />
   
-  <updated>2024-11-02T23:26:56Z</updated>
+  <updated>2024-11-29T23:50:18Z</updated>
   <author>
     
     
   </author>
   <generator>Hugo</generator>
-  <id>https://mtrsk.github.io/blog/</id>
+  <id>https://schonfinkel.github.io/blog/</id>
   
   <entry>
     <title>You Have 10 Seconds To Nixify Your Dotnet Project</title>
-    <link rel="alternate" href="https://mtrsk.github.io/blog/2024/you-have-10-seconds-to-nixify-your-dotnet-project/"/>
-    <id>https://mtrsk.github.io/blog/2024/you-have-10-seconds-to-nixify-your-dotnet-project/</id>
+    <link rel="alternate" href="https://schonfinkel.github.io/blog/2024/you-have-10-seconds-to-nixify-your-dotnet-project/"/>
+    <id>https://schonfinkel.github.io/blog/2024/you-have-10-seconds-to-nixify-your-dotnet-project/</id>
     <published>2024-09-16T00:00:00Z</published>
     <updated>2024-09-16T00:00:00Z</updated>
     <summary>Figure 1: Don &amp;ldquo;The Gun&amp;rdquo; Syme, now officially part of the &amp;ldquo;Nix Gang&amp;rdquo;.
@@ -180,8 +180,8 @@ as well and a container build into the Hello Example.&lt;/li&gt;
   
   <entry>
     <title>Experiments With Erlang And Nix</title>
-    <link rel="alternate" href="https://mtrsk.github.io/blog/2024/experiments-with-erlang-and-nix/"/>
-    <id>https://mtrsk.github.io/blog/2024/experiments-with-erlang-and-nix/</id>
+    <link rel="alternate" href="https://schonfinkel.github.io/blog/2024/experiments-with-erlang-and-nix/"/>
+    <id>https://schonfinkel.github.io/blog/2024/experiments-with-erlang-and-nix/</id>
     <published>2024-09-07T00:00:00Z</published>
     <updated>2024-09-07T00:00:00Z</updated>
     <summary>Updated at &amp;lt;2024-11-02 Sat&amp;gt;: I&amp;rsquo;ve changed the way we package our erlang project with Nix, mostly for the better.
@@ -519,8 +519,8 @@ zon files&lt;/a&gt;, I&amp;rsquo;m not familiar with Zig toolig and ill take a l
   
   <entry>
     <title>How To Use Private Neovim Plugins On Nixos</title>
-    <link rel="alternate" href="https://mtrsk.github.io/blog/2023/how-to-use-private-neovim-plugins-on-nixos/"/>
-    <id>https://mtrsk.github.io/blog/2023/how-to-use-private-neovim-plugins-on-nixos/</id>
+    <link rel="alternate" href="https://schonfinkel.github.io/blog/2023/how-to-use-private-neovim-plugins-on-nixos/"/>
+    <id>https://schonfinkel.github.io/blog/2023/how-to-use-private-neovim-plugins-on-nixos/</id>
     <published>2023-09-17T00:00:00Z</published>
     <updated>2023-09-17T00:00:00Z</updated>
     <summary>Over time my config changed a lot since the early days, as of now I&amp;rsquo;m using a combination of Flakes and home-manager to manage my workstations. I try not to overthink too much when it comes to Nix, my current Neovim setup is pretty simple, lua-based, yet, fully nixified.
@@ -663,8 +663,8 @@ take a look &lt;a href=&#34;https://github.com/mtrsk/nixos-config/tree/master/ho
   
   <entry>
     <title>Switching To Nixos</title>
-    <link rel="alternate" href="https://mtrsk.github.io/blog/2018/switching-to-nixos/"/>
-    <id>https://mtrsk.github.io/blog/2018/switching-to-nixos/</id>
+    <link rel="alternate" href="https://schonfinkel.github.io/blog/2018/switching-to-nixos/"/>
+    <id>https://schonfinkel.github.io/blog/2018/switching-to-nixos/</id>
     <published>2018-08-07T00:00:00Z</published>
     <updated>2018-08-07T00:00:00Z</updated>
     <summary>After quite some time being a Debian user I&amp;rsquo;ve decided to become a full time meme distro user. At first I was following some of the manuals in an attempt to recreate my config in virtualbox. A day later this distro seemed too cool not to try it out for real, so why not?

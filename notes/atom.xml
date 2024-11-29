@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Benevides&#39; Blog</title>
-  <link href="https://mtrsk.github.io/notes/"/>
+  <link href="https://schonfinkel.github.io/notes/"/>
   
-    <link href="https://mtrsk.github.io/notes/atom.xml" rel="self" type="application/atom+xml" />
+    <link href="https://schonfinkel.github.io/notes/atom.xml" rel="self" type="application/atom+xml" />
   
-  <updated>2024-11-02T23:26:56Z</updated>
+  <updated>2024-11-29T23:50:18Z</updated>
   <author>
     
     
   </author>
   <generator>Hugo</generator>
-  <id>https://mtrsk.github.io/notes/</id>
+  <id>https://schonfinkel.github.io/notes/</id>
   
   <entry>
     <title>Konig S Lemma</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/konig-s-lemma/"/>
-    <id>https://mtrsk.github.io/notes/2024/konig-s-lemma/</id>
+    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/konig-s-lemma/"/>
+    <id>https://schonfinkel.github.io/notes/2024/konig-s-lemma/</id>
     <published>2024-10-16T00:00:00Z</published>
     <updated>2024-10-16T00:00:00Z</updated>
     <summary>:ID: c3826363-989c-49d9-905f-f1349f5528b7
@@ -35,8 +35,8 @@ Definition A tree that is finitely branching but infinite must have an infinite 
   
   <entry>
     <title>Natural Deduction</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/natural-deduction/"/>
-    <id>https://mtrsk.github.io/notes/2024/natural-deduction/</id>
+    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/natural-deduction/"/>
+    <id>https://schonfinkel.github.io/notes/2024/natural-deduction/</id>
     <published>2024-10-16T00:00:00Z</published>
     <updated>2024-10-16T00:00:00Z</updated>
     <summary>:ID: 1db8ac56-b188-4797-80ed-21ac950a77b9
@@ -196,8 +196,8 @@ languages. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Huth and Ryan 2004, 12&
   
   <entry>
     <title>Tcp Ip</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/tcp-ip/"/>
-    <id>https://mtrsk.github.io/notes/2024/tcp-ip/</id>
+    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/tcp-ip/"/>
+    <id>https://schonfinkel.github.io/notes/2024/tcp-ip/</id>
     <published>2024-10-16T00:00:00Z</published>
     <updated>2024-10-16T00:00:00Z</updated>
     <summary>:ID: 3bdcfa3b-8fb6-4c4f-97d9-9abaf4aa4a8b
@@ -221,8 +221,8 @@ folded in a single layer.&lt;/p&gt;
   
   <entry>
     <title>Osi Model</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/osi-model/"/>
-    <id>https://mtrsk.github.io/notes/2024/osi-model/</id>
+    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/osi-model/"/>
+    <id>https://schonfinkel.github.io/notes/2024/osi-model/</id>
     <published>2024-10-15T00:00:00Z</published>
     <updated>2024-10-15T00:00:00Z</updated>
     <summary>:ID: e1a39e7c-50a7-4ad8-84f0-dfb7a8864e8b
@@ -274,8 +274,8 @@ correct order.&lt;/li&gt;
   
   <entry>
     <title>Partial Order</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/partial-order/"/>
-    <id>https://mtrsk.github.io/notes/2024/partial-order/</id>
+    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/partial-order/"/>
+    <id>https://schonfinkel.github.io/notes/2024/partial-order/</id>
     <published>2024-10-13T00:00:00Z</published>
     <updated>2024-10-13T00:00:00Z</updated>
     <summary>:ID: a7be7168-8d15-4fe0-a82c-9fd9348b3b93
@@ -296,8 +296,8 @@ A Relation \(R\) is said to be a reflexive partial order if its reflexive, antis
   
   <entry>
     <title>Relation</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/relation/"/>
-    <id>https://mtrsk.github.io/notes/2024/relation/</id>
+    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/relation/"/>
+    <id>https://schonfinkel.github.io/notes/2024/relation/</id>
     <published>2024-10-13T00:00:00Z</published>
     <updated>2024-10-13T00:00:00Z</updated>
     <summary>:ID: efd79527-1cfb-48da-868e-6286cff21c34
@@ -327,8 +327,8 @@ over any subset of \(X \times X\) is called a &amp;ldquo;Relation on \(X\)&amp;r
   
   <entry>
     <title>Supervisor</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/supervisor/"/>
-    <id>https://mtrsk.github.io/notes/2024/supervisor/</id>
+    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/supervisor/"/>
+    <id>https://schonfinkel.github.io/notes/2024/supervisor/</id>
     <published>2024-10-13T00:00:00Z</published>
     <updated>2024-10-13T00:00:00Z</updated>
     <summary>:ID: 2daf1307-afb4-49e4-98cb-66ac7eb27cf0
@@ -351,8 +351,8 @@ supervision trees allows you to create highly fault-tolerant systems. (Logan, Me
   
   <entry>
     <title>Dependent Types</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/dependent-types/"/>
-    <id>https://mtrsk.github.io/notes/2024/dependent-types/</id>
+    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/dependent-types/"/>
+    <id>https://schonfinkel.github.io/notes/2024/dependent-types/</id>
     <published>2024-10-11T00:00:00Z</published>
     <updated>2024-10-11T00:00:00Z</updated>
     <summary>:ID: 7580b45a-1dba-4690-bfbf-652fee25e1d9</summary>
@@ -366,8 +366,8 @@ supervision trees allows you to create highly fault-tolerant systems. (Logan, Me
   
   <entry>
     <title>Functional Programming</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/functional-programming/"/>
-    <id>https://mtrsk.github.io/notes/2024/functional-programming/</id>
+    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/functional-programming/"/>
+    <id>https://schonfinkel.github.io/notes/2024/functional-programming/</id>
     <published>2024-10-11T00:00:00Z</published>
     <updated>2024-10-11T00:00:00Z</updated>
     <summary>:ID: 171718cd-10fd-484b-8d77-0ffcffc29163
@@ -398,8 +398,8 @@ References Bragilevsky, Vitaly. 2021.</summary>
   
   <entry>
     <title>Erlang Ets</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/erlang-ets/"/>
-    <id>https://mtrsk.github.io/notes/2024/erlang-ets/</id>
+    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/erlang-ets/"/>
+    <id>https://schonfinkel.github.io/notes/2024/erlang-ets/</id>
     <published>2024-10-10T00:00:00Z</published>
     <updated>2024-10-10T00:00:00Z</updated>
     <summary>:ID: 37c6ea44-0c80-4c57-a36e-98d37e8a3413 :ROAM_ALIAS: &amp;ldquo;ETS&amp;rdquo;
@@ -423,8 +423,8 @@ built into &lt;a href=&#34;/notes/2024/otp/&#34;&gt;Otp&lt;/a&gt;.&lt;/p&gt;
   
   <entry>
     <title>Gen Server</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/gen-server/"/>
-    <id>https://mtrsk.github.io/notes/2024/gen-server/</id>
+    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/gen-server/"/>
+    <id>https://schonfinkel.github.io/notes/2024/gen-server/</id>
     <published>2024-10-10T00:00:00Z</published>
     <updated>2024-10-10T00:00:00Z</updated>
     <summary>:ID: 1cd8fd81-a7c4-44ea-8b7a-d803e9b491af
@@ -468,8 +468,8 @@ fits an &lt;a href=&#34;/notes/2024/otp/&#34;&gt;Otp&lt;/a&gt; supervision tree.
   
   <entry>
     <title>Relational Algebra</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/relational-algebra/"/>
-    <id>https://mtrsk.github.io/notes/2024/relational-algebra/</id>
+    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/relational-algebra/"/>
+    <id>https://schonfinkel.github.io/notes/2024/relational-algebra/</id>
     <published>2024-10-10T00:00:00Z</published>
     <updated>2024-10-10T00:00:00Z</updated>
     <summary>:ID: 11914357-b272-40fc-8bf6-a0ff98af0c99</summary>
@@ -485,8 +485,8 @@ fits an &lt;a href=&#34;/notes/2024/otp/&#34;&gt;Otp&lt;/a&gt; supervision tree.
   
   <entry>
     <title>Dializer</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/dializer/"/>
-    <id>https://mtrsk.github.io/notes/2024/dializer/</id>
+    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/dializer/"/>
+    <id>https://schonfinkel.github.io/notes/2024/dializer/</id>
     <published>2024-10-09T00:00:00Z</published>
     <updated>2024-10-09T00:00:00Z</updated>
     <summary>:ID: 54473599-719d-460b-92ba-3796dd951872
@@ -567,8 +567,8 @@ as much as possible.&lt;/li&gt;
   
   <entry>
     <title>Fallacies Of Distributed Computing</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/fallacies-of-distributed-computing/"/>
-    <id>https://mtrsk.github.io/notes/2024/fallacies-of-distributed-computing/</id>
+    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/fallacies-of-distributed-computing/"/>
+    <id>https://schonfinkel.github.io/notes/2024/fallacies-of-distributed-computing/</id>
     <published>2024-10-09T00:00:00Z</published>
     <updated>2024-10-09T00:00:00Z</updated>
     <summary>:ID: 5a3ae2dc-5a54-4ba1-a638-f6090502d8ae
@@ -608,8 +608,8 @@ day. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Perry 2020, 6&lt;/a&gt;)&lt;/
   
   <entry>
     <title>Immutable Architectures</title>
-    <link rel="alternate" href="https://mtrsk.github.io/notes/2024/immutable-architectures/"/>
-    <id>https://mtrsk.github.io/notes/2024/immutable-architectures/</id>
+    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/immutable-architectures/"/>
+    <id>https://schonfinkel.github.io/notes/2024/immutable-architectures/</id>
     <published>2024-10-09T00:00:00Z</published>
     <updated>2024-10-09T00:00:00Z</updated>
     <summary>:ID: 0fee39a3-5d70-4dfb-8603-7d50d8e4777e

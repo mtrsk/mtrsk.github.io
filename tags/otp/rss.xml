@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OTP on Benevides&#39; Blog</title>
-    <link>https://mtrsk.github.io/tags/otp/</link>
+    <link>https://schonfinkel.github.io/tags/otp/</link>
     <description>Recent content in OTP on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 13 Oct 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mtrsk.github.io/tags/otp/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://schonfinkel.github.io/tags/otp/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Supervisor</title>
-      <link>https://mtrsk.github.io/notes/2024/supervisor/</link>
+      <link>https://schonfinkel.github.io/notes/2024/supervisor/</link>
       <pubDate>Sun, 13 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/notes/2024/supervisor/</guid>
+      <guid>https://schonfinkel.github.io/notes/2024/supervisor/</guid>
       <description>:ID: 2daf1307-afb4-49e4-98cb-66ac7eb27cf0&#xA;Supervisors are one of the most important features of Otp. They monitor other processes and take action if anything goes wrong, restarting the failed process or possibly escalating the problem to a higher level. Layering supervisors into supervision trees allows you to create highly fault-tolerant systems. (Logan, Merritt, and Carlsson 2010)</description>
     </item>
     <item>
       <title>Erlang Ets</title>
-      <link>https://mtrsk.github.io/notes/2024/erlang-ets/</link>
+      <link>https://schonfinkel.github.io/notes/2024/erlang-ets/</link>
       <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/notes/2024/erlang-ets/</guid>
+      <guid>https://schonfinkel.github.io/notes/2024/erlang-ets/</guid>
       <description>:ID: 37c6ea44-0c80-4c57-a36e-98d37e8a3413 :ROAM_ALIAS: &amp;ldquo;ETS&amp;rdquo;&#xA;Erlang Term Storage, commonly referred to as ETS, is a powerful storage engine built into Otp.</description>
     </item>
     <item>
       <title>Gen Server</title>
-      <link>https://mtrsk.github.io/notes/2024/gen-server/</link>
+      <link>https://schonfinkel.github.io/notes/2024/gen-server/</link>
       <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/notes/2024/gen-server/</guid>
+      <guid>https://schonfinkel.github.io/notes/2024/gen-server/</guid>
       <description>:ID: 1cd8fd81-a7c4-44ea-8b7a-d803e9b491af&#xA;Much of the work you think of as the core of a program - calculating results, storing information, and preparing replies - will fit neatly into the gen_server behavior. It provides a core set of methods that let you set up a process, respond to requests, end the process gracefully, and even pass state to a new process if this one needs to be upgraded in place. (Laurent 2017, 148)</description>
     </item>
     <item>
       <title>Otp</title>
-      <link>https://mtrsk.github.io/notes/2024/otp/</link>
+      <link>https://schonfinkel.github.io/notes/2024/otp/</link>
       <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/notes/2024/otp/</guid>
+      <guid>https://schonfinkel.github.io/notes/2024/otp/</guid>
       <description>:ID: 6ed3a191-0128-453e-b0b6-37c48593a6f0 :ROAM_ALIAS: &amp;ldquo;Open Telecom Platform&amp;rdquo;&#xA;Otp is a domain-independent set of frameworks, principles, and patterns that guide and support the structure, design, implementation, and deployment of Erlang systems. Using OTP in your projects will help you avoid accidental complexity: things that are difficult because you picked inadequate tools. (Cesarini and Vinoski 2016, 20)&#xA;Behaviors Behaviours are a way of formalizing common patterns in process-oriented programming. For example, the concept of a server is general and includes a large portion of all processes you’ll ever need to write.</description>
     </item>
     <item>
       <title>Designing For Scalability With Erlang</title>
-      <link>https://mtrsk.github.io/notes/2024/designing-for-scalability-with-erlang/</link>
+      <link>https://schonfinkel.github.io/notes/2024/designing-for-scalability-with-erlang/</link>
       <pubDate>Tue, 09 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://mtrsk.github.io/notes/2024/designing-for-scalability-with-erlang/</guid>
+      <guid>https://schonfinkel.github.io/notes/2024/designing-for-scalability-with-erlang/</guid>
       <description>:ID: ffac18bd-4e44-4a7b-8a3a-a85552c9b076&#xA;Otp is said to consist of three building blocks that, when used together, provide a solid approach to designing and developing systems in the problem domain we’ve just described. They are Erlang itself, tools and libraries, and a set of design principles. (Cesarini and Vinoski 2016, 20)&#xA;References Cesarini, Francesco, and Steve Vinoski. 2016. Designing for Scalability with Erlang/Otp: Implement Robust, Fault-Tolerant Systems. O’Reilly Media, Inc. </description>
     </item>
   </channel>
