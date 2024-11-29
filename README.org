@@ -1,6 +1,6 @@
 * Blog
 #+html: <a href="https://builtwithnix.org"> <img alt="pipeline status" src="https://builtwithnix.org/badge.svg" /></a>
-#+html: <a href="https://github.com/mtrsk/mtrsk.github.io/actions/workflows/deploy.yml/badge.svg"> <img alt="pipeline status" src="https://github.com/mtrsk/mtrsk.github.io/actions/workflows/deploy.yml/badge.svg" /></a>
+#+html: <a href="https://github.com/schonfinkel/mtrsk.github.io/actions/workflows/deploy.yml/badge.svg"> <img alt="pipeline status" src="https://github.com/schonfinkel/mtrsk.github.io/actions/workflows/deploy.yml/badge.svg" /></a>
 
 An Org-based personal page and blog.
 
