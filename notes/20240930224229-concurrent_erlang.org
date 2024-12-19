@@ -91,7 +91,8 @@ end
 + Received messages are store in a process' mailbox.
 + Mailboxes are scanned sequentially.
 + If a message fails to be pattern matched, it's saved in a queue for later
-  processing and the process waits for the next message.
+  processing and the process waits for the next message. It is possible to
+  update a process with a new version of the code that retrieves those messages.
 
   The erlang shell (~erl~) is itself a process, you can test its message-passing
   functionalities by using the ~self~ keyword:

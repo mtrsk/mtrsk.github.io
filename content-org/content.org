@@ -120,6 +120,28 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 
 #+RESULTS: export-notes
 
+** Mnesia
+:PROPERTIES:
+:EXPORT_FILE_NAME: mnesia
+:EXPORT_DATE: 2024-12-17
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug mnesia
+:CUSTOM_ID: mnesia
+:END:
+
+#+INCLUDE: "../notes/20241217132913-mnesia.org"
+    
+
+** Erlang Interface
+:PROPERTIES:
+:EXPORT_FILE_NAME: erlang-interface
+:EXPORT_DATE: 2024-11-29
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug erlang-interface
+:CUSTOM_ID: erlang-interface
+:END:
+
+#+INCLUDE: "../notes/20241129191851-erlang_interface.org"
+    
+
 ** Natural Deduction
 :PROPERTIES:
 :EXPORT_FILE_NAME: natural-deduction
@@ -241,15 +263,15 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 #+INCLUDE: "../notes/20241010094109-gen_server.org"
     
 
-** Erlang Ets
+** Erlang Term Storage
 :PROPERTIES:
-:EXPORT_FILE_NAME: erlang-ets
+:EXPORT_FILE_NAME: erlang-term-storage
 :EXPORT_DATE: 2024-10-10
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug erlang-ets
-:CUSTOM_ID: erlang-ets
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug erlang-term-storage
+:CUSTOM_ID: erlang-term-storage
 :END:
 
-#+INCLUDE: "../notes/20241010093430-erlang_ets.org"
+#+INCLUDE: "../notes/20241010093430-erlang_term_storage.org"
     
 
 ** Relational Theory
@@ -933,3 +955,4 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 
 #+INCLUDE: "../notes/20211012215602-kubernetes.org"
     
+

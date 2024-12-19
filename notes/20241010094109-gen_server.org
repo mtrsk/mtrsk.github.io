@@ -22,7 +22,7 @@ The ~gen_server~ behaviour interface contains six functions:
 + ~handle_call/3~: Sends a synchronous message to a ~gen_server~ process and waits for a reply.
 + ~handle_cast/2~: Sends an asynchronous message to a ~gen_server~ process.
 + ~handle_info/2~: Handles messages sent to a ~gen_server~ container that were not sent using one of the call or cast functions.
-+ ~terminate/2~
++ ~terminate/2~: When a ~gen_server~ shuts down, this callback is raised to give you a chance to clean things up.
 + ~code_change/3~
 
 #+print_bibliography: 
