@@ -38,7 +38,6 @@
           let
             tooling = with pkgs; [
               just
-              hugo
               sqlite
 
               # To generate the Graph
@@ -127,7 +126,7 @@
                     ] ++ [ texenv ] ++ tooling;
 
                     env = {
-                      HUGO_ENVIRONMENT = "development";
+                      ENVIRONMENT = "dev";
                       DOTNET_ROOT = "${dotnet}";
                       DOTNET_CLI_TELEMETRY_OPTOUT = "1";
                       LANG = "en_US.UTF-8";
