@@ -10,7 +10,7 @@ Erlang Term Storage, commonly referred to as ETS, is a powerful storage engine
 built into [[id:6ed3a191-0128-453e-b0b6-37c48593a6f0][OTP]]. Every entry in an ETS table is a tuple (or corresponding
 record), and one piece of the tuple is designated the key.
 
-ETS can hold four kinds of collections [cite:@laurent2017, p.141]:
+ETS can hold four kinds of collections [cite:@laurent2017 p.141]:
 
 1. Sets (~set~): Can contain only one entry with a given key.
 2. Ordered Sets (~ordered_set~): Same as a set, but also maintains a traversal

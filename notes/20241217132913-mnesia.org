@@ -21,14 +21,14 @@ specify ~disc_copies~ (note the spelling), Mnesia will keep a copy of the databa
 on disk, but still use RAM for speed. You can also specify ~disc_only_copies~,
 which will be slow. (...) . By combining these options and (eventually) multiple
 nodes, you should be able to create fast and resilient
-systems. [cite:@laurent2017, p.152]
+systems. [cite:@laurent2017 p.152]
 #+end_quote
 
 #+begin_quote
 Your interactions with Mnesia should be contained in transactions, especially
 when your database is shared across multiple nodes. The main ~mnesia:write~,
 ~mnesia:read~, and ~mnesia:delete~ methods work only within transactions,
-period. [cite:@laurent2017, p.155]
+period. [cite:@laurent2017 p.155]
 #+end_quote
 
 #+print_bibliography:

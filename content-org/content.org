@@ -120,6 +120,39 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 
 #+RESULTS: export-notes
 
+** Otp Logging
+:PROPERTIES:
+:EXPORT_FILE_NAME: otp-logging
+:EXPORT_DATE: 2024-12-19
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug otp-logging
+:CUSTOM_ID: otp-logging
+:END:
+
+#+INCLUDE: "../notes/20241219210226-otp_logging.org"
+    
+
+** Gen Event
+:PROPERTIES:
+:EXPORT_FILE_NAME: gen-event
+:EXPORT_DATE: 2024-12-19
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug gen-event
+:CUSTOM_ID: gen-event
+:END:
+
+#+INCLUDE: "../notes/20241219134317-gen_event.org"
+    
+
+** Erlang Debugger
+:PROPERTIES:
+:EXPORT_FILE_NAME: erlang-debugger
+:EXPORT_DATE: 2024-12-18
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug erlang-debugger
+:CUSTOM_ID: erlang-debugger
+:END:
+
+#+INCLUDE: "../notes/20241218094425-erlang_debugger.org"
+    
+
 ** Mnesia
 :PROPERTIES:
 :EXPORT_FILE_NAME: mnesia
@@ -955,4 +988,3 @@ This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
 
 #+INCLUDE: "../notes/20211012215602-kubernetes.org"
     
-
