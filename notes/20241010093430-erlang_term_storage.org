@@ -1,0 +1,42 @@
+:PROPERTIES:
+:ID:       37c6ea44-0c80-4c57-a36e-98d37e8a3413
+:ROAM_ALIAS: "ETS"
+:END:
+#+title: Erlang Term Storage
+#+HUGO_CATEGORIES: "Functional Programming"
+#+HUGO_TAGS: "Erlang" "Elixir" "OTP"
+
+Erlang Term Storage, commonly referred to as ETS, is a powerful storage engine
+built into [[id:6ed3a191-0128-453e-b0b6-37c48593a6f0][OTP]]. Every entry in an ETS table is a tuple (or corresponding
+record), and one piece of the tuple is designated the key.
+
+ETS can hold four kinds of collections [cite:@laurent2017 p.141]:
+
+1. Sets (~set~): Can contain only one entry with a given key.
+2. Ordered Sets (~ordered_set~): Same as a set, but also maintains a traversal
+   order based on the keys. Great for anything you want to keep in alphabetic or
+   numeric order.
+3. Bags (~bag~): Lets you store more than one entry with a given key. However, if
+   you have multiple entries that have identical values, they get combined into
+   a single entry.
+4. Duplicate Bags (~duplicate_bag~): Not only lets you store more than one entry
+   with a given key, but also lets you store multiple entries with identical
+   values.
+
+* Creating and populating a table   
+
++ The ~ets:new/2~ function lets you create a table.
++ If you do specify ~named_table~, processes can reach the table as long as they
+  know the name, without needing access to that return value.
++ Using the ~keypos~ tuple lets you specify which record value should be the key.
+
+  #+begin_src erlang
+    rd(food, {name, calories, price, group}).
+    ets:new(food, [ordered_set, {keypos,#food.name}, named_table]).
+  #+end_src
+
+
+* Simple Queries
++ ~ets:lookup/2~
+
+#+print_bibliography: 
