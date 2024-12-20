@@ -3,12 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://schonfinkel.github.io/categories/</loc>
-    <lastmod>2024-10-16T00:00:00+00:00</lastmod>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://schonfinkel.github.io/tags/graph-theory/</loc>
-    <lastmod>2024-10-16T00:00:00+00:00</lastmod>
+    <loc>https://schonfinkel.github.io/tags/elixir/</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://schonfinkel.github.io/tags/erlang/</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://schonfinkel.github.io/categories/functional-programming/</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://schonfinkel.github.io/notes/2024/gen-event/</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://schonfinkel.github.io/</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://schonfinkel.github.io/tags/otp/</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://schonfinkel.github.io/notes/2024/otp-logging/</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://schonfinkel.github.io/tags/</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://schonfinkel.github.io/notes/2024/erlang-debugger/</loc>
+    <lastmod>2024-12-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://schonfinkel.github.io/notes/2024/mnesia/</loc>
+    <lastmod>2024-12-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://schonfinkel.github.io/notes/2024/erlang-interface/</loc>
+    <lastmod>2024-11-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://schonfinkel.github.io/tags/graph-theory/</loc>
     <lastmod>2024-10-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://schonfinkel.github.io/notes/2024/konig-s-lemma/</loc>
@@ -29,9 +59,6 @@
     <loc>https://schonfinkel.github.io/tags/sequent-calculus/</loc>
     <lastmod>2024-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://schonfinkel.github.io/tags/</loc>
-    <lastmod>2024-10-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://schonfinkel.github.io/notes/2024/tcp-ip/</loc>
     <lastmod>2024-10-16T00:00:00+00:00</lastmod>
   </url><url>
@@ -40,12 +67,6 @@
   </url><url>
     <loc>https://schonfinkel.github.io/notes/2024/osi-model/</loc>
     <lastmod>2024-10-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://schonfinkel.github.io/categories/functional-programming/</loc>
-    <lastmod>2024-10-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://schonfinkel.github.io/tags/otp/</loc>
-    <lastmod>2024-10-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://schonfinkel.github.io/notes/2024/partial-order/</loc>
     <lastmod>2024-10-13T00:00:00+00:00</lastmod>
@@ -71,13 +92,7 @@
     <loc>https://schonfinkel.github.io/categories/databases/</loc>
     <lastmod>2024-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://schonfinkel.github.io/tags/elixir/</loc>
-    <lastmod>2024-10-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://schonfinkel.github.io/tags/erlang/</loc>
-    <lastmod>2024-10-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://schonfinkel.github.io/notes/2024/erlang-ets/</loc>
+    <loc>https://schonfinkel.github.io/notes/2024/erlang-term-storage/</loc>
     <lastmod>2024-10-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://schonfinkel.github.io/notes/2024/gen-server/</loc>

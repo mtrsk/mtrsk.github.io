@@ -6,8 +6,15 @@
     <description>Recent content in Categories on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://schonfinkel.github.io/categories/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Functional Programming</title>
+      <link>https://schonfinkel.github.io/categories/functional-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://schonfinkel.github.io/categories/functional-programming/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Logic</title>
       <link>https://schonfinkel.github.io/categories/logic/</link>
@@ -27,13 +34,6 @@
       <link>https://schonfinkel.github.io/categories/networking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://schonfinkel.github.io/categories/networking/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Functional Programming</title>
-      <link>https://schonfinkel.github.io/categories/functional-programming/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://schonfinkel.github.io/categories/functional-programming/</guid>
       <description></description>
     </item>
     <item>

@@ -6,8 +6,43 @@
     <description>Recent content in homepage title on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://schonfinkel.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gen Event</title>
+      <link>https://schonfinkel.github.io/notes/2024/gen-event/</link>
+      <pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://schonfinkel.github.io/notes/2024/gen-event/</guid>
+      <description>:ID: 0372baa6-420e-483a-9621-7f80f1ad6974&#xA;Events are continuously being generated in the system, and Otp provides a framework for creating event streams and for hooking up handlers to act on the generated events. This framework is the foundation of the standard Otp Logging system. (Logan, Merritt, and Carlsson 2010, 170)&#xA;References Logan, Martin, Eric Merritt, and Richard Carlsson. 2010. Erlang and Otp in Action. Manning Publications Co. </description>
+    </item>
+    <item>
+      <title>Otp Logging</title>
+      <link>https://schonfinkel.github.io/notes/2024/otp-logging/</link>
+      <pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://schonfinkel.github.io/notes/2024/otp-logging/</guid>
+      <description>:ID: b9d1f9ae-ba8a-4290-b86a-ff8c812de23a</description>
+    </item>
+    <item>
+      <title>Erlang Debugger</title>
+      <link>https://schonfinkel.github.io/notes/2024/erlang-debugger/</link>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://schonfinkel.github.io/notes/2024/erlang-debugger/</guid>
+      <description>:ID: 1428d426-2004-43ac-8627-ca79ab5c23a2&#xA;To start the debugger, you can call debugger:start() from the Erlang Shell:&#xA;1&amp;gt; debugger:start(). </description>
+    </item>
+    <item>
+      <title>Mnesia</title>
+      <link>https://schonfinkel.github.io/notes/2024/mnesia/</link>
+      <pubDate>Tue, 17 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://schonfinkel.github.io/notes/2024/mnesia/</guid>
+      <description>:ID: 568e0595-4bf0-40b5-981f-fd0aa9312785&#xA;Mnesia is a database management system (DBMS) that comes with Erlang. It uses the Erlang Term Storage and DETS underneath, but provides many more features than those components.&#xA;Creating the initial Database mnesia:create_schema([node()]) By default, Mnesia will store your table in RAM only (ram_copies) on the current node. This is speedy, but it means the data vanishes if the node crashes. If you specify disc_copies (note the spelling), Mnesia will keep a copy of the database on disk, but still use RAM for speed.</description>
+    </item>
+    <item>
+      <title>Erlang Interface</title>
+      <link>https://schonfinkel.github.io/notes/2024/erlang-interface/</link>
+      <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://schonfinkel.github.io/notes/2024/erlang-interface/</guid>
+      <description>:ID: 6422d659-d57d-4672-a90a-0649b5cbe905</description>
+    </item>
     <item>
       <title>Konig S Lemma</title>
       <link>https://schonfinkel.github.io/notes/2024/konig-s-lemma/</link>
@@ -55,7 +90,7 @@
       <link>https://schonfinkel.github.io/notes/2024/supervisor/</link>
       <pubDate>Sun, 13 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://schonfinkel.github.io/notes/2024/supervisor/</guid>
-      <description>:ID: 2daf1307-afb4-49e4-98cb-66ac7eb27cf0&#xA;Supervisors are one of the most important features of Otp. They monitor other processes and take action if anything goes wrong, restarting the failed process or possibly escalating the problem to a higher level. Layering supervisors into supervision trees allows you to create highly fault-tolerant systems. (Logan, Merritt, and Carlsson 2010)</description>
+      <description>:ID: 2daf1307-afb4-49e4-98cb-66ac7eb27cf0&#xA;Supervisors are one of the most important features of Otp. They monitor other processes and take action if anything goes wrong, restarting the failed process or possibly escalating the problem to a higher level. Layering supervisors into supervision trees allows you to create highly fault-tolerant systems. (Logan, Merritt, and Carlsson 2010)&#xA;A simple-one-for-one supervisor hierarchy. All the child processes are of the same type and are added or removed dynamically.</description>
     </item>
     <item>
       <title>Dependent Types</title>
@@ -72,11 +107,11 @@
       <description>:ID: 171718cd-10fd-484b-8d77-0ffcffc29163&#xA;We often refer to the term functional programming, meaning the following programming techniques:&#xA;Composing functions for structuring programs and using recursion instead of loops. Purity, so that the result of a function is fully determined once its parameters have been fixed. Absence of side effects (doing literally nothing except evaluating the result). Immutability (the inability to change the value of a variable). (, Bragilevsky 2021)&#xA;References Bragilevsky, Vitaly. 2021.</description>
     </item>
     <item>
-      <title>Erlang Ets</title>
-      <link>https://schonfinkel.github.io/notes/2024/erlang-ets/</link>
+      <title>Erlang Term Storage</title>
+      <link>https://schonfinkel.github.io/notes/2024/erlang-term-storage/</link>
       <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://schonfinkel.github.io/notes/2024/erlang-ets/</guid>
-      <description>:ID: 37c6ea44-0c80-4c57-a36e-98d37e8a3413 :ROAM_ALIAS: &amp;ldquo;ETS&amp;rdquo;&#xA;Erlang Term Storage, commonly referred to as ETS, is a powerful storage engine built into Otp.</description>
+      <guid>https://schonfinkel.github.io/notes/2024/erlang-term-storage/</guid>
+      <description>:ID: 37c6ea44-0c80-4c57-a36e-98d37e8a3413 :ROAM_ALIAS: &amp;ldquo;ETS&amp;rdquo;&#xA;Erlang Term Storage, commonly referred to as ETS, is a powerful storage engine built into Otp. Every entry in an ETS table is a tuple (or corresponding record), and one piece of the tuple is designated the key.&#xA;ETS can hold four kinds of collections (Laurent 2017, 141):&#xA;Sets (set): Can contain only one entry with a given key. Ordered Sets (ordered_set): Same as a set, but also maintains a traversal order based on the keys.</description>
     </item>
     <item>
       <title>Gen Server</title>

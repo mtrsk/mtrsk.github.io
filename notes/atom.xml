@@ -5,13 +5,153 @@
   
     <link href="https://schonfinkel.github.io/notes/atom.xml" rel="self" type="application/atom+xml" />
   
-  <updated>2024-11-29T23:50:18Z</updated>
+  <updated>2024-12-20T01:59:32Z</updated>
   <author>
     
     
   </author>
   <generator>Hugo</generator>
   <id>https://schonfinkel.github.io/notes/</id>
+  
+  <entry>
+    <title>Gen Event</title>
+    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/gen-event/"/>
+    <id>https://schonfinkel.github.io/notes/2024/gen-event/</id>
+    <published>2024-12-19T00:00:00Z</published>
+    <updated>2024-12-19T00:00:00Z</updated>
+    <summary>:ID: 0372baa6-420e-483a-9621-7f80f1ad6974
+Events are continuously being generated in the system, and Otp provides a framework for creating event streams and for hooking up handlers to act on the generated events. This framework is the foundation of the standard Otp Logging system. (Logan, Merritt, and Carlsson 2010, 170)
+References Logan, Martin, Eric Merritt, and Richard Carlsson. 2010. Erlang and Otp in Action. Manning Publications Co. </summary>
+    <content type="html">&lt;p&gt;:ID:       0372baa6-420e-483a-9621-7f80f1ad6974&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Events are continuously being generated in the system, and &lt;a href=&#34;/notes/2024/otp/&#34;&gt;Otp&lt;/a&gt; provides a
+framework for creating event streams and for hooking up handlers to act on the
+generated events. This framework is the foundation of the standard &lt;a href=&#34;/notes/2024/otp-logging/&#34;&gt;Otp Logging&lt;/a&gt;
+system. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Logan, Merritt, and Carlsson 2010, 170&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Logan, Martin, Eric Merritt, and Richard Carlsson. 2010. &lt;i&gt;Erlang and Otp in Action&lt;/i&gt;. Manning Publications Co.&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    
+    <category term="Erlang"/>
+    
+    <category term="Elixir"/>
+    
+    <category term="OTP"/>
+    
+    
+    <category term="Functional Programming"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Otp Logging</title>
+    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/otp-logging/"/>
+    <id>https://schonfinkel.github.io/notes/2024/otp-logging/</id>
+    <published>2024-12-19T00:00:00Z</published>
+    <updated>2024-12-19T00:00:00Z</updated>
+    <summary>:ID: b9d1f9ae-ba8a-4290-b86a-ff8c812de23a</summary>
+    <content type="html">&lt;p&gt;:ID:       b9d1f9ae-ba8a-4290-b86a-ff8c812de23a&lt;/p&gt;
+</content>
+    
+    <category term="Erlang"/>
+    
+    <category term="Elixir"/>
+    
+    <category term="OTP"/>
+    
+    
+    <category term="Functional Programming"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Erlang Debugger</title>
+    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/erlang-debugger/"/>
+    <id>https://schonfinkel.github.io/notes/2024/erlang-debugger/</id>
+    <published>2024-12-18T00:00:00Z</published>
+    <updated>2024-12-18T00:00:00Z</updated>
+    <summary>:ID: 1428d426-2004-43ac-8627-ca79ab5c23a2
+To start the debugger, you can call debugger:start() from the Erlang Shell:
+1&amp;gt; debugger:start(). </summary>
+    <content type="html">&lt;p&gt;:ID:       1428d426-2004-43ac-8627-ca79ab5c23a2&lt;/p&gt;
+&lt;p&gt;To start the debugger, you can call &lt;code&gt;debugger:start()&lt;/code&gt; from the &lt;a href=&#34;/notes/2024/erlang-shell/&#34;&gt;Erlang Shell&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  1&amp;gt; debugger:start&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    
+    <category term="Erlang"/>
+    
+    
+    <category term="Functional Programming"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mnesia</title>
+    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/mnesia/"/>
+    <id>https://schonfinkel.github.io/notes/2024/mnesia/</id>
+    <published>2024-12-17T00:00:00Z</published>
+    <updated>2024-12-17T00:00:00Z</updated>
+    <summary>:ID: 568e0595-4bf0-40b5-981f-fd0aa9312785
+Mnesia is a database management system (DBMS) that comes with Erlang. It uses the Erlang Term Storage and DETS underneath, but provides many more features than those components.
+Creating the initial Database mnesia:create_schema([node()]) By default, Mnesia will store your table in RAM only (ram_copies) on the current node. This is speedy, but it means the data vanishes if the node crashes. If you specify disc_copies (note the spelling), Mnesia will keep a copy of the database on disk, but still use RAM for speed.</summary>
+    <content type="html">&lt;p&gt;:ID:       568e0595-4bf0-40b5-981f-fd0aa9312785&lt;/p&gt;
+&lt;p&gt;Mnesia is a database management system (DBMS) that comes with &lt;a href=&#34;/notes/2024/erlang/&#34;&gt;Erlang&lt;/a&gt;. It uses
+the &lt;a href=&#34;/notes/2024/erlang-term-storage/&#34;&gt;Erlang Term Storage&lt;/a&gt; and DETS underneath, but provides many more features
+than those components.&lt;/p&gt;
+&lt;h2 id=&#34;creating-the-initial-database&#34;&gt;Creating the initial Database&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nn&#34;&gt;mnesia&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;create_schema&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;node&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()])&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;By default, Mnesia will store your table in RAM only (&lt;code&gt;ram_copies&lt;/code&gt;) on the current
+node. This is speedy, but it means the data vanishes if the node crashes. If you
+specify &lt;code&gt;disc_copies&lt;/code&gt; (note the spelling), Mnesia will keep a copy of the database
+on disk, but still use RAM for speed. You can also specify &lt;code&gt;disc_only_copies&lt;/code&gt;,
+which will be slow. (&amp;hellip;) . By combining these options and (eventually) multiple
+nodes, you should be able to create fast and resilient
+systems. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Laurent 2017, 152&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!--quoteend--&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Your interactions with Mnesia should be contained in transactions, especially
+when your database is shared across multiple nodes. The main &lt;code&gt;mnesia:write&lt;/code&gt;,
+&lt;code&gt;mnesia:read&lt;/code&gt;, and &lt;code&gt;mnesia:delete&lt;/code&gt; methods work only within transactions,
+period. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Laurent 2017, 155&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
+  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Laurent, Simon St. 2017. &lt;i&gt;Introducing Erlang: Getting Started in Functional Programming&lt;/i&gt;. O’Reilly Media, Inc.&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    
+    <category term="Erlang"/>
+    
+    <category term="Elixir"/>
+    
+    <category term="OTP"/>
+    
+    
+    <category term="Functional Programming"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Erlang Interface</title>
+    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/erlang-interface/"/>
+    <id>https://schonfinkel.github.io/notes/2024/erlang-interface/</id>
+    <published>2024-11-29T00:00:00Z</published>
+    <updated>2024-11-29T00:00:00Z</updated>
+    <summary>:ID: 6422d659-d57d-4672-a90a-0649b5cbe905</summary>
+    <content type="html">&lt;p&gt;:ID:       6422d659-d57d-4672-a90a-0649b5cbe905&lt;/p&gt;
+</content>
+    
+    <category term="Erlang"/>
+    
+    
+    <category term="Functional Programming"/>
+    
+  </entry>
   
   <entry>
     <title>Konig S Lemma</title>
@@ -332,7 +472,8 @@ over any subset of \(X \times X\) is called a &amp;ldquo;Relation on \(X\)&amp;r
     <published>2024-10-13T00:00:00Z</published>
     <updated>2024-10-13T00:00:00Z</updated>
     <summary>:ID: 2daf1307-afb4-49e4-98cb-66ac7eb27cf0
-Supervisors are one of the most important features of Otp. They monitor other processes and take action if anything goes wrong, restarting the failed process or possibly escalating the problem to a higher level. Layering supervisors into supervision trees allows you to create highly fault-tolerant systems. (Logan, Merritt, and Carlsson 2010)</summary>
+Supervisors are one of the most important features of Otp. They monitor other processes and take action if anything goes wrong, restarting the failed process or possibly escalating the problem to a higher level. Layering supervisors into supervision trees allows you to create highly fault-tolerant systems. (Logan, Merritt, and Carlsson 2010)
+A simple-one-for-one supervisor hierarchy. All the child processes are of the same type and are added or removed dynamically.</summary>
     <content type="html">&lt;p&gt;:ID:       2daf1307-afb4-49e4-98cb-66ac7eb27cf0&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Supervisors are one of the most important features of &lt;a href=&#34;/notes/2024/otp/&#34;&gt;Otp&lt;/a&gt;. They monitor other
@@ -340,6 +481,8 @@ processes and take action if anything goes wrong, restarting the failed process
 or possibly escalating the problem to a higher level. Layering supervisors into
 supervision trees allows you to create highly fault-tolerant systems. (Logan, Merritt, and Carlsson 2010)&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;A simple-one-for-one supervisor hierarchy. All the child processes are of the
+same type and are added or removed dynamically. There can be any number of them.&lt;/p&gt;
 </content>
     
     <category term="OTP"/>
@@ -397,57 +540,46 @@ References Bragilevsky, Vitaly. 2021.</summary>
   </entry>
   
   <entry>
-    <title>Erlang Ets</title>
-    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/erlang-ets/"/>
-    <id>https://schonfinkel.github.io/notes/2024/erlang-ets/</id>
+    <title>Erlang Term Storage</title>
+    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/erlang-term-storage/"/>
+    <id>https://schonfinkel.github.io/notes/2024/erlang-term-storage/</id>
     <published>2024-10-10T00:00:00Z</published>
     <updated>2024-10-10T00:00:00Z</updated>
     <summary>:ID: 37c6ea44-0c80-4c57-a36e-98d37e8a3413 :ROAM_ALIAS: &amp;ldquo;ETS&amp;rdquo;
-Erlang Term Storage, commonly referred to as ETS, is a powerful storage engine built into Otp.</summary>
+Erlang Term Storage, commonly referred to as ETS, is a powerful storage engine built into Otp. Every entry in an ETS table is a tuple (or corresponding record), and one piece of the tuple is designated the key.
+ETS can hold four kinds of collections (Laurent 2017, 141):
+Sets (set): Can contain only one entry with a given key. Ordered Sets (ordered_set): Same as a set, but also maintains a traversal order based on the keys.</summary>
     <content type="html">&lt;p&gt;:ID:       37c6ea44-0c80-4c57-a36e-98d37e8a3413
 :ROAM_ALIAS: &amp;ldquo;ETS&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;Erlang Term Storage, commonly referred to as ETS, is a powerful storage engine
-built into &lt;a href=&#34;/notes/2024/otp/&#34;&gt;Otp&lt;/a&gt;.&lt;/p&gt;
-</content>
-    
-    <category term="Erlang"/>
-    
-    <category term="Elixir"/>
-    
-    <category term="OTP"/>
-    
-    
-    <category term="Functional Programming"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gen Server</title>
-    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/gen-server/"/>
-    <id>https://schonfinkel.github.io/notes/2024/gen-server/</id>
-    <published>2024-10-10T00:00:00Z</published>
-    <updated>2024-10-10T00:00:00Z</updated>
-    <summary>:ID: 1cd8fd81-a7c4-44ea-8b7a-d803e9b491af
-Much of the work you think of as the core of a program - calculating results, storing information, and preparing replies - will fit neatly into the gen_server behavior. It provides a core set of methods that let you set up a process, respond to requests, end the process gracefully, and even pass state to a new process if this one needs to be upgraded in place. (Laurent 2017, 148)</summary>
-    <content type="html">&lt;p&gt;:ID:       1cd8fd81-a7c4-44ea-8b7a-d803e9b491af&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Much of the work you think of as the core of a program - calculating results,
-storing information, and preparing replies - will fit neatly into the &lt;code&gt;gen_server&lt;/code&gt;
-behavior. It provides a core set of methods that let you set up a process,
-respond to requests, end the process gracefully, and even pass state to a new
-process if this one needs to be upgraded in place. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Laurent 2017, 148&lt;/a&gt;)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;code&gt;gen_server&lt;/code&gt; is a generic server process that implements a standard set of
-interface functions and functionality for tracing and error reporting, it also
-fits an &lt;a href=&#34;/notes/2024/otp/&#34;&gt;Otp&lt;/a&gt; supervision tree.&lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;gen_server&lt;/code&gt; behaviour interface contains six functions:&lt;/p&gt;
+built into &lt;a href=&#34;/notes/2024/otp/&#34;&gt;Otp&lt;/a&gt;. Every entry in an ETS table is a tuple (or corresponding
+record), and one piece of the tuple is designated the key.&lt;/p&gt;
+&lt;p&gt;ETS can hold four kinds of collections (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Laurent 2017, 141&lt;/a&gt;):&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Sets (&lt;code&gt;set&lt;/code&gt;): Can contain only one entry with a given key.&lt;/li&gt;
+&lt;li&gt;Ordered Sets (&lt;code&gt;ordered_set&lt;/code&gt;): Same as a set, but also maintains a traversal
+order based on the keys. Great for anything you want to keep in alphabetic or
+numeric order.&lt;/li&gt;
+&lt;li&gt;Bags (&lt;code&gt;bag&lt;/code&gt;): Lets you store more than one entry with a given key. However, if
+you have multiple entries that have identical values, they get combined into
+a single entry.&lt;/li&gt;
+&lt;li&gt;Duplicate Bags (&lt;code&gt;duplicate_bag&lt;/code&gt;): Not only lets you store more than one entry
+with a given key, but also lets you store multiple entries with identical
+values.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;creating-and-populating-a-table&#34;&gt;Creating and populating a table&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;init/1&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;handle_call/3&lt;/code&gt;: Sends a synchronous message to a &lt;code&gt;gen_server&lt;/code&gt; process and waits for a reply.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;handle_cast/2&lt;/code&gt;: Sends an asynchronous message to a &lt;code&gt;gen_server&lt;/code&gt; process.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;handle_info/2&lt;/code&gt;: Handles messages sent to a &lt;code&gt;gen_server&lt;/code&gt; container that were not sent using one of the call or cast functions.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;terminate/2&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;code_change/3&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;ets:new/2&lt;/code&gt; function lets you create a table.&lt;/li&gt;
+&lt;li&gt;If you do specify &lt;code&gt;named_table&lt;/code&gt;, processes can reach the table as long as they
+know the name, without needing access to that return value.&lt;/li&gt;
+&lt;li&gt;Using the &lt;code&gt;keypos&lt;/code&gt; tuple lets you specify which record value should be the key.
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;rd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;food&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;calories&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;price&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;group&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}).&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nn&#34;&gt;ets&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;food&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ordered_set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;keypos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;#food.name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;named_table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]).&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;simple-queries&#34;&gt;Simple Queries&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ets:lookup/2&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
@@ -463,203 +595,6 @@ fits an &lt;a href=&#34;/notes/2024/otp/&#34;&gt;Otp&lt;/a&gt; supervision tree.
     
     
     <category term="Functional Programming"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Relational Algebra</title>
-    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/relational-algebra/"/>
-    <id>https://schonfinkel.github.io/notes/2024/relational-algebra/</id>
-    <published>2024-10-10T00:00:00Z</published>
-    <updated>2024-10-10T00:00:00Z</updated>
-    <summary>:ID: 11914357-b272-40fc-8bf6-a0ff98af0c99</summary>
-    <content type="html">&lt;p&gt;:ID:       11914357-b272-40fc-8bf6-a0ff98af0c99&lt;/p&gt;
-</content>
-    
-    <category term="Relational Theory"/>
-    
-    
-    <category term="Databases"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Dializer</title>
-    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/dializer/"/>
-    <id>https://schonfinkel.github.io/notes/2024/dializer/</id>
-    <published>2024-10-09T00:00:00Z</published>
-    <updated>2024-10-09T00:00:00Z</updated>
-    <summary>:ID: 54473599-719d-460b-92ba-3796dd951872
-Dialyzer is a static analysis tool that identifies software discrepancies, such as definite type errors, code that is unreachable because of programming errors, and unnecessary tests in Erlang and Elixir modules or an entire codebases.
-Erlang Type Notation We can define a subset of Erlang types as follows:
-Type :: any() | none() | pid() | port() | reference() | [] | Atom | binary() | float() | Fun | Integer | [Type] | Tuple | Union | UserDefined Union :: Type1 | Type2 | .</summary>
-    <content type="html">&lt;p&gt;:ID:       54473599-719d-460b-92ba-3796dd951872&lt;/p&gt;
-&lt;p&gt;Dialyzer is a static analysis tool that identifies software discrepancies, such
-as definite type errors, code that is unreachable because of programming errors,
-and unnecessary tests in &lt;a href=&#34;/notes/2024/erlang/&#34;&gt;Erlang&lt;/a&gt; and &lt;a href=&#34;/notes/2024/elixir/&#34;&gt;Elixir&lt;/a&gt; modules or an entire codebases.&lt;/p&gt;
-&lt;h2 id=&#34;erlang-type-notation&#34;&gt;Erlang Type Notation&lt;/h2&gt;
-&lt;p&gt;We can define a subset of Erlang types as follows:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;Type ::
-      any()
-    | none()
-    | pid()
-    | port()
-    | reference()
-    | []
-    | Atom
-    | binary()
-    | float()
-    | Fun
-    | Integer
-    | [Type]
-    | Tuple
-    | Union
-    | UserDefined
-Union :: Type1 | Type2 | ...
-Atom :: atom() | Erlang_Atom
-Integer :: integer() | Min .. Max
-Fun :: fun() | fun((...) -&amp;gt; Type)
-Tuple :: tuple() | {T1, T2, ... Tn}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;New types can be defined with the following syntax:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;NewTypeName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;TVar1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TVar2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TVarN&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;specifying-the-input-and-output-types-of-a-function&#34;&gt;Specifying the Input and Output Types of a Function&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;ni&#34;&gt;spec&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;FileName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Modes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ok&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Handle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Why&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;when&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;FileName&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Modes&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Mode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Mode&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;read&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;write&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Handle&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;file_handle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;Why&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;error_term&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;exporting-types&#34;&gt;Exporting Types&lt;/h3&gt;
-&lt;p&gt;A module can export some types to declare that other modules are allowed to
-refer to them as remote types. This declaration has the following form:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-erlang&#34; data-lang=&#34;erlang&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;export_type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;T1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;A1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;...,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Tk&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Ak&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]).&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;opaque-types&#34;&gt;Opaque Types&lt;/h3&gt;
-&lt;p&gt;The main use case for opacity in Erlang is to hide the implementation of a data
-type, enabling evolving the API while minimizing the risk of breaking consumers.&lt;/p&gt;
-&lt;h2 id=&#34;running-dializer&#34;&gt;Running Dializer&lt;/h2&gt;
-&lt;h3 id=&#34;things-that-confuse-dializer&#34;&gt;Things that confuse Dializer&lt;/h3&gt;
-&lt;p&gt;The dialyzer can get easily confused. We can help prevent this by following a
-few simple rules. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Armstrong 2013, 151&lt;/a&gt;).&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Avoid using &lt;code&gt;-compile(export_all)&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Provide detailed type specifications for all the arguments to the &lt;strong&gt;exported&lt;/strong&gt;
-functions in the module.&lt;/li&gt;
-&lt;li&gt;Provide default arguments to all elements in a record definition. If you don&amp;rsquo;t
-provide a default, the atom &lt;code&gt;undefined&lt;/code&gt; is taken as the default.&lt;/li&gt;
-&lt;li&gt;Using anonymous variables in arguments to a function often results in types
-that are far less specific than you had intended; try to constrain variables
-as much as possible.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
-  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Armstrong, Joe. 2013. “Programming Erlang: Software for a Concurrent World.”&lt;/div&gt;
-&lt;/div&gt;
-</content>
-    
-    <category term="Erlang"/>
-    
-    <category term="Elixir"/>
-    
-    
-    <category term="Functional Programming"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Fallacies Of Distributed Computing</title>
-    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/fallacies-of-distributed-computing/"/>
-    <id>https://schonfinkel.github.io/notes/2024/fallacies-of-distributed-computing/</id>
-    <published>2024-10-09T00:00:00Z</published>
-    <updated>2024-10-09T00:00:00Z</updated>
-    <summary>:ID: 5a3ae2dc-5a54-4ba1-a638-f6090502d8ae
-Between 1991 and 1997, engineers at Sun Microsystems collected a list of mistakes that programmers commonly make when writing software for networked computers. Bill Joy, Dave Lyon, L Peter Deutsch, and James Gosling cataloged eight assumptions that developers commonly hold about Distributed Systems. These assumptions, while obviously incorrect when stated explicitly, nevertheless inform many of the decisions that the Sun engineers found in systems of the day. (Perry 2020, 6)</summary>
-    <content type="html">&lt;p&gt;:ID:       5a3ae2dc-5a54-4ba1-a638-f6090502d8ae&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Between 1991 and 1997, engineers at Sun Microsystems collected a list of
-mistakes that programmers commonly make when writing software for networked
-computers. Bill Joy, Dave Lyon, L Peter Deutsch, and James Gosling cataloged
-eight assumptions that developers commonly hold about &lt;a href=&#34;/notes/2021/distributed-systems/&#34;&gt;Distributed Systems&lt;/a&gt;. These
-assumptions, while obviously incorrect when stated explicitly, nevertheless
-inform many of the decisions that the Sun engineers found in systems of the
-day. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Perry 2020, 6&lt;/a&gt;)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;The network is reliable&lt;/li&gt;
-&lt;li&gt;Latency is zero&lt;/li&gt;
-&lt;li&gt;Bandwidth is infinite&lt;/li&gt;
-&lt;li&gt;The network is secure&lt;/li&gt;
-&lt;li&gt;Topology doesn&amp;rsquo;t change&lt;/li&gt;
-&lt;li&gt;There is one administrator&lt;/li&gt;
-&lt;li&gt;Transport cost is zero&lt;/li&gt;
-&lt;li&gt;The network is homogenous&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
-  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Perry, Michael L. 2020. &lt;i&gt;The Art of Immutable Architecture&lt;/i&gt;. Springer.&lt;/div&gt;
-&lt;/div&gt;
-</content>
-    
-    <category term="Fallacies"/>
-    
-    
-    <category term="Distributed Systems"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Immutable Architectures</title>
-    <link rel="alternate" href="https://schonfinkel.github.io/notes/2024/immutable-architectures/"/>
-    <id>https://schonfinkel.github.io/notes/2024/immutable-architectures/</id>
-    <published>2024-10-09T00:00:00Z</published>
-    <updated>2024-10-09T00:00:00Z</updated>
-    <summary>:ID: 0fee39a3-5d70-4dfb-8603-7d50d8e4777e
-Properties of a reliable application:
-Idempotence Immutability Local Independence Versioning In 2015, Pat Helland wrote &amp;ldquo;Immutability Changes Everything&amp;rdquo;, an analysis of several computing solutions based on immutability. It demonstrates that immutability solves many problems in several layers of computational abstraction. (&amp;hellip;) . This paper claims no new ideas but only serves to point out the common thread of immutability in all of these solutions. (Perry 2020)
-Forms of Immutable Architectures Name Definition Objects Things that change Records Things that do not change References Perry, Michael L.</summary>
-    <content type="html">&lt;p&gt;:ID:       0fee39a3-5d70-4dfb-8603-7d50d8e4777e&lt;/p&gt;
-&lt;p&gt;Properties of a reliable application:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Idempotence&lt;/li&gt;
-&lt;li&gt;Immutability&lt;/li&gt;
-&lt;li&gt;Local Independence&lt;/li&gt;
-&lt;li&gt;Versioning&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;In 2015, Pat Helland wrote &amp;ldquo;Immutability Changes Everything&amp;rdquo;, an analysis of
-several computing solutions based on immutability. It demonstrates that
-immutability solves many problems in several layers of computational
-abstraction. (&amp;hellip;) . This paper claims no new ideas but only serves to point out
-the common thread of immutability in all of these solutions. (&lt;a href=&#34;#citeproc_bib_item_1&#34;&gt;Perry 2020&lt;/a&gt;)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;forms-of-immutable-architectures&#34;&gt;Forms of Immutable Architectures&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Definition&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Objects&lt;/td&gt;
-&lt;td&gt;Things that change&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Records&lt;/td&gt;
-&lt;td&gt;Things that do not change&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-&lt;style&gt;.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}&lt;/style&gt;&lt;div class=&#34;csl-bib-body&#34;&gt;
-  &lt;div class=&#34;csl-entry&#34;&gt;&lt;a id=&#34;citeproc_bib_item_1&#34;&gt;&lt;/a&gt;Perry, Michael L. 2020. &lt;i&gt;The Art of Immutable Architecture&lt;/i&gt;. Springer.&lt;/div&gt;
-&lt;/div&gt;
-</content>
-    
-    <category term="Immutable Architectures"/>
-    
-    
-    <category term="Distributed Systems"/>
     
   </entry>
   

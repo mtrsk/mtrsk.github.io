@@ -79,7 +79,7 @@ fits an <a href="/notes/2024/otp/">Otp</a> supervision tree.</p>
 <li><code>handle_call/3</code>: Sends a synchronous message to a <code>gen_server</code> process and waits for a reply.</li>
 <li><code>handle_cast/2</code>: Sends an asynchronous message to a <code>gen_server</code> process.</li>
 <li><code>handle_info/2</code>: Handles messages sent to a <code>gen_server</code> container that were not sent using one of the call or cast functions.</li>
-<li><code>terminate/2</code></li>
+<li><code>terminate/2</code>: When a <code>gen_server</code> shuts down, this callback is raised to give you a chance to clean things up.</li>
 <li><code>code_change/3</code></li>
 </ul>
 <h2 id="references">References</h2>
@@ -88,6 +88,16 @@ fits an <a href="/notes/2024/otp/">Otp</a> supervision tree.</p>
 </div>
 
 
+
+   
+
+   
+
+   
+
+   
+
+   
 
    
 

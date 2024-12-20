@@ -6,8 +6,29 @@
     <description>Recent content in Tags on Benevides&#39; Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://schonfinkel.github.io/tags/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Elixir</title>
+      <link>https://schonfinkel.github.io/tags/elixir/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://schonfinkel.github.io/tags/elixir/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Erlang</title>
+      <link>https://schonfinkel.github.io/tags/erlang/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://schonfinkel.github.io/tags/erlang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OTP</title>
+      <link>https://schonfinkel.github.io/tags/otp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://schonfinkel.github.io/tags/otp/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Graph Theory</title>
       <link>https://schonfinkel.github.io/tags/graph-theory/</link>
@@ -30,31 +51,10 @@
       <description></description>
     </item>
     <item>
-      <title>OTP</title>
-      <link>https://schonfinkel.github.io/tags/otp/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://schonfinkel.github.io/tags/otp/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Set Theory</title>
       <link>https://schonfinkel.github.io/tags/set-theory/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://schonfinkel.github.io/tags/set-theory/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Elixir</title>
-      <link>https://schonfinkel.github.io/tags/elixir/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://schonfinkel.github.io/tags/elixir/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Erlang</title>
-      <link>https://schonfinkel.github.io/tags/erlang/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://schonfinkel.github.io/tags/erlang/</guid>
       <description></description>
     </item>
     <item>

@@ -125,7 +125,8 @@ construct is used for a process to read a message that has been sent:</p>
 </li>
 <li>
 <p>If a message fails to be pattern matched, it&rsquo;s saved in a queue for later
-processing and the process waits for the next message.</p>
+processing and the process waits for the next message. It is possible to
+update a process with a new version of the code that retrieves those messages.</p>
 <p>The erlang shell (<code>erl</code>) is itself a process, you can test its message-passing
 functionalities by using the <code>self</code> keyword:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">    1&gt; self<span class="o">()</span> ! hello.
@@ -211,6 +212,16 @@ executed. Otherwise, <code>expr02</code> will be executed.</li>
 </div>
 
 
+
+   
+
+   
+
+   
+
+   
+
+   
 
    
 
