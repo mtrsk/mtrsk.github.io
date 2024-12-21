@@ -81,7 +81,6 @@
               epkgs:
               with epkgs.melpaPackages;
               [
-                ox-hugo
                 citeproc
               ]
               ++ (with epkgs.elpaPackages; [
@@ -98,7 +97,7 @@
             # a custom package with just enough tools to generate the markdown
             # for org-roam.
             ci = pkgs.mkShell {
-              HUGO_ENVIRONMENT = "production";
+              ENVIRONMENT = "prod";
               DOTNET_ROOT = "${dotnet}";
               DOTNET_CLI_TELEMETRY_OPTOUT = "1";
               LANG = "en_US.UTF-8";
@@ -133,9 +132,7 @@
                     };
 
                     scripts = {
-                      build.exec = "just ci-build";
-                      publish.exec = "just public";
-                      run.exec = "just ci-run";
+                      build.exec = "just build";
                       graph.exec = "just graph";
                       clean.exec = "just clean";
                     };

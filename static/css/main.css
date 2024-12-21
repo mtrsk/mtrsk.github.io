@@ -445,13 +445,11 @@ footer {
   text-align: center;
 }
 
-.image {
-  width: 80%;
-}
 .image img {
   display: block;
   margin: 0.5rem auto;
-  max-width: 100%;
+  width: 50%;
+  max-width: 80%;
 }
 .image figure {
   margin: 0 20px 0 20px;

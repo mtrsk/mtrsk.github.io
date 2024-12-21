@@ -14,7 +14,6 @@ default:
 
 # Generate the Markdown files
 build: clean
-    # emacs $(pwd) --batch --load export.el
     emacs $(pwd) --batch --load publish.el
     #python fix-ref-links.py
 
@@ -37,12 +36,6 @@ run: build
 # Build for CI
 ci-build: clean
     nix develop .#ci --impure -c just build
-
-ci-publish: ci-build
-    nix develop .#ci --impure -c hugo
-
-ci-run:
-    nix develop .#ci --impure -c just run
 
 # Removes org backups
 remove-org:
