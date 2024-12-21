@@ -25,6 +25,10 @@
     (insert-file-contents filePath)
     (buffer-string)))
 
+(defun patch-string-with-path (str filePath n)
+  "Patch a STR with FILEPATH and do so N times."
+  (apply 'format str (make-list n filePath)))
+
 ;;; Project variables:
 ;;;; don't ask for confirmation before evaluating a code block
 (setq org-confirm-babel-evaluate nil)
@@ -35,6 +39,7 @@
 ;;;; Settings
 (setq-default root-dir (if (string= (getenv "ENVIRONMENT") "dev") (getenv "PWD") ""))
 (setq static-dir (concat root-dir "/static"))
+(setq static-html-dir (concat static-dir "/html"))
 (setq org-blog-dir (concat root-dir "/blog"))
 (setq org-roam-dir (concat root-dir "/notes"))
 
@@ -47,37 +52,20 @@
 (message (format "SETTING OUT DIR: %s" out-dir))
 
 ;;;; Customize the HTML output
-(setq-default website-html-head (concat "<script type=\"text/javascript\" src=\"https://d3js.org/d3.v7.min.js\"></script>\n"
-                                        "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js\"></script>\n"
-                                        "<script id=\"MathJax-script\" async src=\"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js\"></script>\n"
-                                        "<script>\n"
-                                        "  MathJax = {\n"
-                                        "    tex: {\n"
-                                        "       displayMath: [['\\[', '\\]'], ['$$', '$$']],\n"
-                                        "       inlineMath: [['\\(', '\\)']\n"
-                                        "    };\n"
-                                        "  };\n"
-                                        "</script>\n"
-                                        (format "<link href=\"%s/css/main.scss\" rel=\"stylesheet\">\n" out-dir)
-                                        "<link href=\"https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css\" rel=\"stylesheet\">\n"))
+(setq-default html-head-prefix-file (get-string-from-file (concat static-html-dir "/" "header.html")))
+(setq-default html-head-prefix (patch-string-with-path html-head-prefix-file out-dir 1))
+(message (format "HTML PREFIX: %s" html-head-prefix))
+(setq-default website-html-head html-head-prefix)
 
-(setq-default website-html-preamble (concat (format "<nav><img src=\"%s/img/logo.png\" alt=\"logo\" width=\"128\" height=\"128\" />\n" out-dir)
-                                            "<div><h1>Benevides' Blog</h1>"
-                                            "<p>\"Writing is nothing more than a guided dream\"</p></div>\n"
-                                            "<ul>\n"
-                                            "<li><a href='/'>Home</a></li>\n"
-                                            "  <li><a href='/blog'>Blog</a></li>\n"
-                                            "  <li><a href='/notes'>Notes</a></li>\n"
-                                            "  <li><a href='/blogroll'>BlogRoll</a></li>\n"
-                                            "</ul></nav>\n"))
+(setq-default html-nav-file (get-string-from-file (concat static-html-dir "/" "nav.html")))
+(setq-default html-nav (patch-string-with-path html-nav-file out-dir 5))
+(message (format "HTML NAV: %s" html-nav))
+(setq-default website-html-preamble html-nav)
 
-(setq-default website-html-postamble (concat "<footer></br>\n"
-                                             "<p>Built with <a href=https://orgmode.org/>Orgmode</a>, <a href=https://www.gnu.org/software/emacs/>Emacs</a> and <a href=https://nixos.org/>Nix</a>, source code availiable <a href=https://github.com/mtrsk/mtrsk.github.io>here</a>.</p>\n"
-                                             "</footer>"))
-
+(setq-default html-footer (get-string-from-file (concat static-html-dir "/" "footer.html")))
+(setq-default website-html-postamble html-footer)
 
 ;;; Code:
-
 (setq org-publish-project-alist
       `(("blog"
          :base-directory ,root-dir
@@ -85,15 +73,16 @@
          :publishing-directory ,out-dir
          :publishing-function org-html-publish-to-html
 
+         :title "Benevides' Blog"
          :author "Marcos Benevides"
-         :email "(concat \"marcos.schonfinkel\" at \"gmail.com\")"
-         :with-creator t
+         :email "(concat \"marcos.schonfinkel\" \"@\" \"gmail.com\")"
          :recursive t
+         :with-creator t
+         :with-title nil
 
          :export-with-tags nil
          :exclude-tags ("todo" "noexport")
          :exclude "level-.*\\|.*\.draft\.org"
-         :with-title t
          :section-numbers nil
          :headline-levels 5
          :with-toc nil
@@ -114,7 +103,7 @@
 
         ("static"
          :base-directory ,static-dir
-         :base-extension "scss\\|css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|json"
+         :base-extension "scss\\|css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|json\\|html"
          :publishing-directory ,out-dir
          :recursive t
          :publishing-function org-publish-attachment)

@@ -16,7 +16,7 @@ Here's a non-exaustive list of my current interests:
 #+CAPTION: btw, I use [[https://nixos.org/][NixOS]]...
 #+NAME: nixos fig:
 #+ATTR_HTML: :width 25% :height 25%
-[[./static/img/nixos.gif]]
+[[./public/img/nixos.gif]]
 
 * Contact me
 
