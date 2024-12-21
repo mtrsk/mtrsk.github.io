@@ -1,0 +1,9 @@
+Here you'll find my latest content, projects, tutorials and ramblings.
+
+#+header: :exports results
+#+header: :results raw
+#+header: :output drawer
+#+NAME: export-posts
+#+BEGIN_SRC shell
+  dotnet fsi posts.fsx
+#+END_SRC
