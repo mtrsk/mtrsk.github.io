@@ -1,0 +1,9 @@
+This is the place where I dump my [[https://www.orgroam.com/][Org ROAM]] notes.
+
+#+header: :exports both
+#+header: :results raw
+#+header: :output drawer
+#+NAME: export-notes
+#+BEGIN_SRC shell
+  dotnet fsi notes.fsx
+#+END_SRC

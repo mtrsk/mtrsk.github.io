@@ -103,7 +103,7 @@
 
         ("static"
          :base-directory ,static-dir
-         :base-extension "scss\\|css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|json\\|html"
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|json\\|html"
          :publishing-directory ,out-dir
          :recursive t
          :publishing-function org-publish-attachment)
