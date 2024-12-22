@@ -10,15 +10,7 @@ let createNote (fileName: String) =
     let title = Shared.capitalize name
 
     $"
-** {title}
-:PROPERTIES:
-:EXPORT_FILE_NAME: {slug}
-:EXPORT_DATE: {date}
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :slug {slug}
-:CUSTOM_ID: {slug}
-:END:
-
-#+INCLUDE: \"../notes/{fileName}\"
++ [[./blog/{fileName}][{title}]]
     "
 
 let org = Shared.notes |> List.map (createNote) |> (fun s -> String.Join("\n", s))
